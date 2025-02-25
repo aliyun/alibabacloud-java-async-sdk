@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNodeResponseBody} extends {@link TeaModel}
  *
  * <p>GetNodeResponseBody</p>
  */
 public class GetNodeResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetNodeResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetNodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the node.
+         * <p>The details of the node.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+         * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The connection string.
+         * <p>The connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetNode**.
+         * <p>The operation that you want to perform. Set the value to <strong>GetNode</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Other parameters.
+         * <p>Other parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the workflow.
+         * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,79 +171,108 @@ public class GetNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNodeResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("CronExpress")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("DeployDate")
+        private Long deployDate;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DqcDescription")
+        @com.aliyun.core.annotation.NameInMap("DqcDescription")
         private String dqcDescription;
 
-        @NameInMap("DqcType")
+        @com.aliyun.core.annotation.NameInMap("DqcType")
         private Integer dqcType;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileId")
+        private Long fileId;
+
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Integer fileType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("FileVersion")
+        private Integer fileVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
+        private Long modifyTime;
+
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("ParamValues")
+        @com.aliyun.core.annotation.NameInMap("ParamValues")
         private String paramValues;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("RelatedFlowId")
+        @com.aliyun.core.annotation.NameInMap("RelatedFlowId")
         private Long relatedFlowId;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
-        @NameInMap("Repeatability")
+        @com.aliyun.core.annotation.NameInMap("RepeatMode")
+        private Integer repeatMode;
+
+        @com.aliyun.core.annotation.NameInMap("Repeatability")
         private String repeatability;
 
-        @NameInMap("ResGroupIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ResGroupIdentifier")
         private String resGroupIdentifier;
 
-        @NameInMap("ResGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResGroupName")
         private String resGroupName;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private Data(Builder builder) {
             this.baselineId = builder.baselineId;
             this.businessId = builder.businessId;
             this.connection = builder.connection;
+            this.createTime = builder.createTime;
             this.cronExpress = builder.cronExpress;
+            this.deployDate = builder.deployDate;
             this.description = builder.description;
             this.dqcDescription = builder.dqcDescription;
             this.dqcType = builder.dqcType;
+            this.fileId = builder.fileId;
             this.fileType = builder.fileType;
+            this.fileVersion = builder.fileVersion;
+            this.modifyTime = builder.modifyTime;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
             this.ownerId = builder.ownerId;
@@ -233,6 +282,7 @@ public class GetNodeResponseBody extends TeaModel {
             this.projectId = builder.projectId;
             this.relatedFlowId = builder.relatedFlowId;
             this.repeatInterval = builder.repeatInterval;
+            this.repeatMode = builder.repeatMode;
             this.repeatability = builder.repeatability;
             this.resGroupIdentifier = builder.resGroupIdentifier;
             this.resGroupName = builder.resGroupName;
@@ -269,10 +319,24 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return cronExpress
          */
         public String getCronExpress() {
             return this.cronExpress;
+        }
+
+        /**
+         * @return deployDate
+         */
+        public Long getDeployDate() {
+            return this.deployDate;
         }
 
         /**
@@ -297,10 +361,31 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileId
+         */
+        public Long getFileId() {
+            return this.fileId;
+        }
+
+        /**
          * @return fileType
          */
         public Integer getFileType() {
             return this.fileType;
+        }
+
+        /**
+         * @return fileVersion
+         */
+        public Integer getFileVersion() {
+            return this.fileVersion;
+        }
+
+        /**
+         * @return modifyTime
+         */
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         /**
@@ -367,6 +452,13 @@ public class GetNodeResponseBody extends TeaModel {
         }
 
         /**
+         * @return repeatMode
+         */
+        public Integer getRepeatMode() {
+            return this.repeatMode;
+        }
+
+        /**
          * @return repeatability
          */
         public String getRepeatability() {
@@ -398,11 +490,16 @@ public class GetNodeResponseBody extends TeaModel {
             private Long baselineId; 
             private Long businessId; 
             private String connection; 
+            private Long createTime; 
             private String cronExpress; 
+            private Long deployDate; 
             private String description; 
             private String dqcDescription; 
             private Integer dqcType; 
+            private Long fileId; 
             private Integer fileType; 
+            private Integer fileVersion; 
+            private Long modifyTime; 
             private Long nodeId; 
             private String nodeName; 
             private String ownerId; 
@@ -412,13 +509,17 @@ public class GetNodeResponseBody extends TeaModel {
             private Long projectId; 
             private Long relatedFlowId; 
             private Long repeatInterval; 
+            private Integer repeatMode; 
             private String repeatability; 
             private String resGroupIdentifier; 
             private String resGroupName; 
             private String schedulerType; 
 
             /**
-             * The description of the node.
+             * <p>The description of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -426,7 +527,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **GetNode**.
+             * <p>The operation that you want to perform. Set the value to <strong>GetNode</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -434,7 +538,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The environment of the workspace. Valid values: PROD and DEV.
+             * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first_dev</p>
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -442,7 +549,21 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The environment of the workspace. Valid values: PROD and DEV.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727280000000</p>
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -450,7 +571,21 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The deployment date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727280000000</p>
+             */
+            public Builder deployDate(Long deployDate) {
+                this.deployDate = deployDate;
+                return this;
+            }
+
+            /**
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +593,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the node ID.
+             * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;projectName&quot;:&quot;test_0923001&quot;,&quot;tableName&quot;:&quot;test_table_001&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyymmdd]&quot;},{&quot;projectName&quot;:&quot;test_0923001&quot;,&quot;tableName&quot;:&quot;test_table_002&quot;,&quot;partition&quot;:&quot;NOTAPARTITIONTABLE&quot;}]</p>
              */
             public Builder dqcDescription(String dqcDescription) {
                 this.dqcDescription = dqcDescription;
@@ -466,7 +604,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dqcType(Integer dqcType) {
                 this.dqcType = dqcType;
@@ -474,7 +615,21 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
+             */
+            public Builder fileId(Long fileId) {
+                this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * <p>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
@@ -482,7 +637,32 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code returned.
+             * <p>The version of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder fileVersion(Integer fileVersion) {
+                this.fileVersion = fileVersion;
+                return this;
+            }
+
+            /**
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727280000000</p>
+             */
+            public Builder modifyTime(Long modifyTime) {
+                this.modifyTime = modifyTime;
+                return this;
+            }
+
+            /**
+             * <p>The HTTP status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -490,13 +670,16 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling type of the node. Valid values:
-             * <p>
+             * <p>The scheduling type of the node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The node is an auto triggered node.</li>
+             * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</li>
+             * <li>PAUSE: The node is a paused node.</li>
+             * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+             * </ul>
              * 
-             * *   NORMAL: The node is an auto triggered node.
-             * *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.
-             * *   PAUSE: The node is a paused node.
-             * *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+             * <strong>example:</strong>
+             * <p>The ID of the baseline.</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -504,7 +687,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17366294****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -512,7 +698,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression returned.
+             * <p>The CRON expression returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a=b</p>
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -520,7 +709,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code returned.
+             * <p>The HTTP status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -528,7 +720,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owner of the node.
+             * <p>The ID of the owner of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -536,7 +731,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node can be rerun.
+             * <p>Indicates whether the node can be rerun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -544,7 +742,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.
+             * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder relatedFlowId(Long relatedFlowId) {
                 this.relatedFlowId = relatedFlowId;
@@ -552,7 +753,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workflow to which the node belongs.
+             * <p>The ID of the workflow to which the node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -560,7 +764,21 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>Rerun mode. 0 indicates that you can rerun only if you fail, 1 indicates that you can rerun in all cases, and 2 indicates that you cannot rerun in all cases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder repeatMode(Integer repeatMode) {
+                this.repeatMode = repeatMode;
+                return this;
+            }
+
+            /**
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder repeatability(String repeatability) {
                 this.repeatability = repeatability;
@@ -568,7 +786,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ResGroupIdentifier.
+             * <p>The unique identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_123</p>
              */
             public Builder resGroupIdentifier(String resGroupIdentifier) {
                 this.resGroupIdentifier = resGroupIdentifier;
@@ -576,7 +797,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+             * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
              */
             public Builder resGroupName(String resGroupName) {
                 this.resGroupName = resGroupName;
@@ -584,7 +808,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleDetailResponseBody</p>
  */
 public class GetRuleDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleDetailResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Anchor extends TeaModel {
-        @NameInMap("AnchorCid")
+        @com.aliyun.core.annotation.NameInMap("AnchorCid")
         private String anchorCid;
 
-        @NameInMap("HitTime")
+        @com.aliyun.core.annotation.NameInMap("HitTime")
         private Integer hitTime;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private Anchor(Builder builder) {
@@ -212,11 +223,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Range extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
         private Range(Builder builder) {
@@ -273,17 +290,23 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class CheckRange extends TeaModel {
-        @NameInMap("Absolute")
+        @com.aliyun.core.annotation.NameInMap("Absolute")
         private Boolean absolute;
 
-        @NameInMap("Anchor")
+        @com.aliyun.core.annotation.NameInMap("Anchor")
         private Anchor anchor;
 
-        @NameInMap("Range")
+        @com.aliyun.core.annotation.NameInMap("Range")
         private Range range;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
         private CheckRange(Builder builder) {
@@ -374,9 +397,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class AntModelInfo extends TeaModel {
-        @NameInMap("AntModelInfo")
-        private java.util.List < String > antModelInfo;
+        @com.aliyun.core.annotation.NameInMap("AntModelInfo")
+        private java.util.List<String> antModelInfo;
 
         private AntModelInfo(Builder builder) {
             this.antModelInfo = builder.antModelInfo;
@@ -393,17 +422,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return antModelInfo
          */
-        public java.util.List < String > getAntModelInfo() {
+        public java.util.List<String> getAntModelInfo() {
             return this.antModelInfo;
         }
 
         public static final class Builder {
-            private java.util.List < String > antModelInfo; 
+            private java.util.List<String> antModelInfo; 
 
             /**
              * AntModelInfo.
              */
-            public Builder antModelInfo(java.util.List < String > antModelInfo) {
+            public Builder antModelInfo(java.util.List<String> antModelInfo) {
                 this.antModelInfo = antModelInfo;
                 return this;
             }
@@ -415,9 +444,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Excludes extends TeaModel {
-        @NameInMap("Excludes")
-        private java.util.List < String > excludes;
+        @com.aliyun.core.annotation.NameInMap("Excludes")
+        private java.util.List<String> excludes;
 
         private Excludes(Builder builder) {
             this.excludes = builder.excludes;
@@ -434,17 +469,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return excludes
          */
-        public java.util.List < String > getExcludes() {
+        public java.util.List<String> getExcludes() {
             return this.excludes;
         }
 
         public static final class Builder {
-            private java.util.List < String > excludes; 
+            private java.util.List<String> excludes; 
 
             /**
              * Excludes.
              */
-            public Builder excludes(java.util.List < String > excludes) {
+            public Builder excludes(java.util.List<String> excludes) {
                 this.excludes = excludes;
                 return this;
             }
@@ -456,9 +491,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class OperKeyWords extends TeaModel {
-        @NameInMap("OperKeyWord")
-        private java.util.List < String > operKeyWord;
+        @com.aliyun.core.annotation.NameInMap("OperKeyWord")
+        private java.util.List<String> operKeyWord;
 
         private OperKeyWords(Builder builder) {
             this.operKeyWord = builder.operKeyWord;
@@ -475,17 +516,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return operKeyWord
          */
-        public java.util.List < String > getOperKeyWord() {
+        public java.util.List<String> getOperKeyWord() {
             return this.operKeyWord;
         }
 
         public static final class Builder {
-            private java.util.List < String > operKeyWord; 
+            private java.util.List<String> operKeyWord; 
 
             /**
              * OperKeyWord.
              */
-            public Builder operKeyWord(java.util.List < String > operKeyWord) {
+            public Builder operKeyWord(java.util.List<String> operKeyWord) {
                 this.operKeyWord = operKeyWord;
                 return this;
             }
@@ -497,9 +538,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Pvalues extends TeaModel {
-        @NameInMap("Pvalues")
-        private java.util.List < String > pvalues;
+        @com.aliyun.core.annotation.NameInMap("Pvalues")
+        private java.util.List<String> pvalues;
 
         private Pvalues(Builder builder) {
             this.pvalues = builder.pvalues;
@@ -516,17 +563,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return pvalues
          */
-        public java.util.List < String > getPvalues() {
+        public java.util.List<String> getPvalues() {
             return this.pvalues;
         }
 
         public static final class Builder {
-            private java.util.List < String > pvalues; 
+            private java.util.List<String> pvalues; 
 
             /**
              * Pvalues.
              */
-            public Builder pvalues(java.util.List < String > pvalues) {
+            public Builder pvalues(java.util.List<String> pvalues) {
                 this.pvalues = pvalues;
                 return this;
             }
@@ -538,9 +585,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class References extends TeaModel {
-        @NameInMap("Reference")
-        private java.util.List < String > reference;
+        @com.aliyun.core.annotation.NameInMap("Reference")
+        private java.util.List<String> reference;
 
         private References(Builder builder) {
             this.reference = builder.reference;
@@ -557,17 +610,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return reference
          */
-        public java.util.List < String > getReference() {
+        public java.util.List<String> getReference() {
             return this.reference;
         }
 
         public static final class Builder {
-            private java.util.List < String > reference; 
+            private java.util.List<String> reference; 
 
             /**
              * Reference.
              */
-            public Builder reference(java.util.List < String > reference) {
+            public Builder reference(java.util.List<String> reference) {
                 this.reference = reference;
                 return this;
             }
@@ -579,9 +632,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class SimilarlySentences extends TeaModel {
-        @NameInMap("SimilarlySentence")
-        private java.util.List < String > similarlySentence;
+        @com.aliyun.core.annotation.NameInMap("SimilarlySentence")
+        private java.util.List<String> similarlySentence;
 
         private SimilarlySentences(Builder builder) {
             this.similarlySentence = builder.similarlySentence;
@@ -598,17 +657,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return similarlySentence
          */
-        public java.util.List < String > getSimilarlySentence() {
+        public java.util.List<String> getSimilarlySentence() {
             return this.similarlySentence;
         }
 
         public static final class Builder {
-            private java.util.List < String > similarlySentence; 
+            private java.util.List<String> similarlySentence; 
 
             /**
              * SimilarlySentence.
              */
-            public Builder similarlySentence(java.util.List < String > similarlySentence) {
+            public Builder similarlySentence(java.util.List<String> similarlySentence) {
                 this.similarlySentence = similarlySentence;
                 return this;
             }
@@ -620,98 +679,104 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Param extends TeaModel {
-        @NameInMap("AntModelInfo")
+        @com.aliyun.core.annotation.NameInMap("AntModelInfo")
         private AntModelInfo antModelInfo;
 
-        @NameInMap("Average")
+        @com.aliyun.core.annotation.NameInMap("Average")
         private Boolean average;
 
-        @NameInMap("BeginType")
+        @com.aliyun.core.annotation.NameInMap("BeginType")
         private String beginType;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("CompareOperator")
+        @com.aliyun.core.annotation.NameInMap("CompareOperator")
         private String compareOperator;
 
-        @NameInMap("ContextChatMatch")
+        @com.aliyun.core.annotation.NameInMap("ContextChatMatch")
         private Boolean contextChatMatch;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Integer delayTime;
 
-        @NameInMap("DifferentRole")
+        @com.aliyun.core.annotation.NameInMap("DifferentRole")
         private Boolean differentRole;
 
-        @NameInMap("Excludes")
+        @com.aliyun.core.annotation.NameInMap("Excludes")
         private Excludes excludes;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("FromEnd")
+        @com.aliyun.core.annotation.NameInMap("FromEnd")
         private Boolean fromEnd;
 
-        @NameInMap("HitTime")
+        @com.aliyun.core.annotation.NameInMap("HitTime")
         private Integer hitTime;
 
-        @NameInMap("InSentence")
+        @com.aliyun.core.annotation.NameInMap("InSentence")
         private Boolean inSentence;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("KeywordExtension")
+        @com.aliyun.core.annotation.NameInMap("KeywordExtension")
         private Boolean keywordExtension;
 
-        @NameInMap("KeywordMatchSize")
+        @com.aliyun.core.annotation.NameInMap("KeywordMatchSize")
         private Integer keywordMatchSize;
 
-        @NameInMap("MaxEmotionChangeValue")
+        @com.aliyun.core.annotation.NameInMap("MaxEmotionChangeValue")
         private Integer maxEmotionChangeValue;
 
-        @NameInMap("MinWordSize")
+        @com.aliyun.core.annotation.NameInMap("MinWordSize")
         private Integer minWordSize;
 
-        @NameInMap("NotRegex")
+        @com.aliyun.core.annotation.NameInMap("NotRegex")
         private String notRegex;
 
-        @NameInMap("OperKeyWords")
+        @com.aliyun.core.annotation.NameInMap("OperKeyWords")
         private OperKeyWords operKeyWords;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private String phrase;
 
-        @NameInMap("Pvalues")
+        @com.aliyun.core.annotation.NameInMap("Pvalues")
         private Pvalues pvalues;
 
-        @NameInMap("References")
+        @com.aliyun.core.annotation.NameInMap("References")
         private References references;
 
-        @NameInMap("Regex")
+        @com.aliyun.core.annotation.NameInMap("Regex")
         private String regex;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Similarity_threshold")
+        @com.aliyun.core.annotation.NameInMap("Similarity_threshold")
         private Float similarityThreshold;
 
-        @NameInMap("SimilarlySentences")
+        @com.aliyun.core.annotation.NameInMap("SimilarlySentences")
         private SimilarlySentences similarlySentences;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Integer target;
 
-        @NameInMap("TargetRole")
+        @com.aliyun.core.annotation.NameInMap("TargetRole")
         private String targetRole;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("VelocityInMint")
+        @com.aliyun.core.annotation.NameInMap("VelocityInMint")
         private Integer velocityInMint;
 
         private Param(Builder builder) {
@@ -1261,17 +1326,23 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class OperatorBasicInfo extends TeaModel {
-        @NameInMap("Oid")
+        @com.aliyun.core.annotation.NameInMap("Oid")
         private String oid;
 
-        @NameInMap("OperName")
+        @com.aliyun.core.annotation.NameInMap("OperName")
         private String operName;
 
-        @NameInMap("Param")
+        @com.aliyun.core.annotation.NameInMap("Param")
         private Param param;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OperatorBasicInfo(Builder builder) {
@@ -1362,9 +1433,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Operators extends TeaModel {
-        @NameInMap("OperatorBasicInfo")
-        private java.util.List < OperatorBasicInfo> operatorBasicInfo;
+        @com.aliyun.core.annotation.NameInMap("OperatorBasicInfo")
+        private java.util.List<OperatorBasicInfo> operatorBasicInfo;
 
         private Operators(Builder builder) {
             this.operatorBasicInfo = builder.operatorBasicInfo;
@@ -1381,17 +1458,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return operatorBasicInfo
          */
-        public java.util.List < OperatorBasicInfo> getOperatorBasicInfo() {
+        public java.util.List<OperatorBasicInfo> getOperatorBasicInfo() {
             return this.operatorBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < OperatorBasicInfo> operatorBasicInfo; 
+            private java.util.List<OperatorBasicInfo> operatorBasicInfo; 
 
             /**
              * OperatorBasicInfo.
              */
-            public Builder operatorBasicInfo(java.util.List < OperatorBasicInfo> operatorBasicInfo) {
+            public Builder operatorBasicInfo(java.util.List<OperatorBasicInfo> operatorBasicInfo) {
                 this.operatorBasicInfo = operatorBasicInfo;
                 return this;
             }
@@ -1403,17 +1480,23 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class ConditionBasicInfo extends TeaModel {
-        @NameInMap("CheckRange")
+        @com.aliyun.core.annotation.NameInMap("CheckRange")
         private CheckRange checkRange;
 
-        @NameInMap("ConditionInfoCid")
+        @com.aliyun.core.annotation.NameInMap("ConditionInfoCid")
         private String conditionInfoCid;
 
-        @NameInMap("OperLambda")
+        @com.aliyun.core.annotation.NameInMap("OperLambda")
         private String operLambda;
 
-        @NameInMap("Operators")
+        @com.aliyun.core.annotation.NameInMap("Operators")
         private Operators operators;
 
         private ConditionBasicInfo(Builder builder) {
@@ -1504,9 +1587,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
-        @NameInMap("ConditionBasicInfo")
-        private java.util.List < ConditionBasicInfo> conditionBasicInfo;
+        @com.aliyun.core.annotation.NameInMap("ConditionBasicInfo")
+        private java.util.List<ConditionBasicInfo> conditionBasicInfo;
 
         private Conditions(Builder builder) {
             this.conditionBasicInfo = builder.conditionBasicInfo;
@@ -1523,17 +1612,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return conditionBasicInfo
          */
-        public java.util.List < ConditionBasicInfo> getConditionBasicInfo() {
+        public java.util.List<ConditionBasicInfo> getConditionBasicInfo() {
             return this.conditionBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ConditionBasicInfo> conditionBasicInfo; 
+            private java.util.List<ConditionBasicInfo> conditionBasicInfo; 
 
             /**
              * ConditionBasicInfo.
              */
-            public Builder conditionBasicInfo(java.util.List < ConditionBasicInfo> conditionBasicInfo) {
+            public Builder conditionBasicInfo(java.util.List<ConditionBasicInfo> conditionBasicInfo) {
                 this.conditionBasicInfo = conditionBasicInfo;
                 return this;
             }
@@ -1545,14 +1634,20 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class BusinessCategoryBasicInfo extends TeaModel {
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private Integer bid;
 
-        @NameInMap("BusinessName")
+        @com.aliyun.core.annotation.NameInMap("BusinessName")
         private String businessName;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private Integer serviceType;
 
         private BusinessCategoryBasicInfo(Builder builder) {
@@ -1626,9 +1721,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class BusinessCategories extends TeaModel {
-        @NameInMap("BusinessCategoryBasicInfo")
-        private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo;
+        @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfo")
+        private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo;
 
         private BusinessCategories(Builder builder) {
             this.businessCategoryBasicInfo = builder.businessCategoryBasicInfo;
@@ -1645,17 +1746,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return businessCategoryBasicInfo
          */
-        public java.util.List < BusinessCategoryBasicInfo> getBusinessCategoryBasicInfo() {
+        public java.util.List<BusinessCategoryBasicInfo> getBusinessCategoryBasicInfo() {
             return this.businessCategoryBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
+            private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
 
             /**
              * BusinessCategoryBasicInfo.
              */
-            public Builder businessCategoryBasicInfo(java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo) {
+            public Builder businessCategoryBasicInfo(java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo) {
                 this.businessCategoryBasicInfo = businessCategoryBasicInfo;
                 return this;
             }
@@ -1667,9 +1768,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Triggers extends TeaModel {
-        @NameInMap("Trigger")
-        private java.util.List < String > trigger;
+        @com.aliyun.core.annotation.NameInMap("Trigger")
+        private java.util.List<String> trigger;
 
         private Triggers(Builder builder) {
             this.trigger = builder.trigger;
@@ -1686,17 +1793,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return trigger
          */
-        public java.util.List < String > getTrigger() {
+        public java.util.List<String> getTrigger() {
             return this.trigger;
         }
 
         public static final class Builder {
-            private java.util.List < String > trigger; 
+            private java.util.List<String> trigger; 
 
             /**
              * Trigger.
              */
-            public Builder trigger(java.util.List < String > trigger) {
+            public Builder trigger(java.util.List<String> trigger) {
                 this.trigger = trigger;
                 return this;
             }
@@ -1708,17 +1815,23 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class RuleBasicInfo extends TeaModel {
-        @NameInMap("BusinessCategories")
+        @com.aliyun.core.annotation.NameInMap("BusinessCategories")
         private BusinessCategories businessCategories;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
-        @NameInMap("RuleLambda")
+        @com.aliyun.core.annotation.NameInMap("RuleLambda")
         private String ruleLambda;
 
-        @NameInMap("Triggers")
+        @com.aliyun.core.annotation.NameInMap("Triggers")
         private Triggers triggers;
 
         private RuleBasicInfo(Builder builder) {
@@ -1809,9 +1922,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("RuleBasicInfo")
-        private java.util.List < RuleBasicInfo> ruleBasicInfo;
+        @com.aliyun.core.annotation.NameInMap("RuleBasicInfo")
+        private java.util.List<RuleBasicInfo> ruleBasicInfo;
 
         private Rules(Builder builder) {
             this.ruleBasicInfo = builder.ruleBasicInfo;
@@ -1828,17 +1947,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         /**
          * @return ruleBasicInfo
          */
-        public java.util.List < RuleBasicInfo> getRuleBasicInfo() {
+        public java.util.List<RuleBasicInfo> getRuleBasicInfo() {
             return this.ruleBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleBasicInfo> ruleBasicInfo; 
+            private java.util.List<RuleBasicInfo> ruleBasicInfo; 
 
             /**
              * RuleBasicInfo.
              */
-            public Builder ruleBasicInfo(java.util.List < RuleBasicInfo> ruleBasicInfo) {
+            public Builder ruleBasicInfo(java.util.List<RuleBasicInfo> ruleBasicInfo) {
                 this.ruleBasicInfo = ruleBasicInfo;
                 return this;
             }
@@ -1850,20 +1969,26 @@ public class GetRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private Conditions conditions;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
         private Data(Builder builder) {

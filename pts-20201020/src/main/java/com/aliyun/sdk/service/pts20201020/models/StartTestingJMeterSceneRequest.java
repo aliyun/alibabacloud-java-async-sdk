@@ -55,7 +55,7 @@ public class StartTestingJMeterSceneRequest extends Request {
         } 
 
         /**
-         * 场景id
+         * SceneId.
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

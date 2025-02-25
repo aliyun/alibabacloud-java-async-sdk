@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDedicatedHostAutoReleaseTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDedicatedHostAutoReleaseTimeRequest</p>
  */
 public class ModifyDedicatedHostAutoReleaseTimeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AutoReleaseTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
     private String autoReleaseTime;
 
-    @Query
-    @NameInMap("DedicatedHostId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedHostId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDedicatedHostAutoReleaseTimeRequest(Builder builder) {
@@ -163,13 +168,16 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-         * <p>
+         * <p>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * <ul>
+         * <li>The automatic release time must be at least 30 minutes later than the current time.</li>
+         * <li>The automatic release time can be up to 3 years earlier than the current time.</li>
+         * <li>If the value of the seconds (ss) is not 00, it is automatically set to 00.</li>
+         * <li>If <code>AutoReleaseTime</code> is not configured, the automatic release feature is disabled, and the dedicated host will not be automatically released.</li>
+         * </ul>
          * 
-         * *   The automatic release time must be at least 30 minutes later than the current time.
-         * *   The automatic release time can be up to 3 years earlier than the current time.
-         * *   If the value of the seconds (ss) is not 00, it is automatically set to 00.
-         * *   If `AutoReleaseTime` is not configured, the automatic release feature is disabled, and the dedicated host will not be automatically released.
+         * <strong>example:</strong>
+         * <p>2019-06-04T13:35:00Z</p>
          */
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
@@ -178,7 +186,11 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host.
+         * <p>The ID of the dedicated host.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp165p6xk2tlw61e****</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -205,7 +217,11 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

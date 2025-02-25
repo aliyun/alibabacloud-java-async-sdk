@@ -195,20 +195,20 @@ public class ModifyClusterServiceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyClusterServiceConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.comment = response.comment;
-            this.configParams = response.configParams;
-            this.configType = response.configType;
-            this.customConfigParams = response.customConfigParams;
-            this.gatewayClusterIdList = response.gatewayClusterIdList;
-            this.groupId = response.groupId;
-            this.hostInstanceId = response.hostInstanceId;
-            this.refreshHostConfig = response.refreshHostConfig;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(ModifyClusterServiceConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.comment = request.comment;
+            this.configParams = request.configParams;
+            this.configType = request.configType;
+            this.customConfigParams = request.customConfigParams;
+            this.gatewayClusterIdList = request.gatewayClusterIdList;
+            this.groupId = request.groupId;
+            this.hostInstanceId = request.hostInstanceId;
+            this.refreshHostConfig = request.refreshHostConfig;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

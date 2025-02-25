@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDbProxyInstanceSslResponseBody} extends {@link TeaModel}
  *
  * <p>GetDbProxyInstanceSslResponseBody</p>
  */
 public class GetDbProxyInstanceSslResponseBody extends TeaModel {
-    @NameInMap("DbProxyCertListItems")
+    @com.aliyun.core.annotation.NameInMap("DbProxyCertListItems")
     private DbProxyCertListItems dbProxyCertListItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDbProxyInstanceSslResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of SSL encryption settings.
+         * <p>An array that consists of SSL encryption settings.</p>
          */
         public Builder dbProxyCertListItems(DbProxyCertListItems dbProxyCertListItems) {
             this.dbProxyCertListItems = dbProxyCertListItems;
@@ -58,7 +63,10 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D330E60C-8AAA-4D63-8F64-5B78F4692F98</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDbProxyInstanceSslResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbProxyInstanceSslResponseBody</p>
+     */
     public static class DbProxyCertListItemsDbProxyCertListItems extends TeaModel {
-        @NameInMap("CertCommonName")
+        @com.aliyun.core.annotation.NameInMap("CertCommonName")
         private String certCommonName;
 
-        @NameInMap("DbInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceName")
         private String dbInstanceName;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("SslExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("SslExpiredTime")
         private String sslExpiredTime;
 
         private DbProxyCertListItemsDbProxyCertListItems(Builder builder) {
@@ -146,7 +160,10 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             private String sslExpiredTime; 
 
             /**
-             * The dedicated proxy endpoint for which SSL encryption is enabled.
+             * <p>The dedicated proxy endpoint for which SSL encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1234.rwlb.rds.aliyuncs.com</p>
              */
             public Builder certCommonName(String certCommonName) {
                 this.certCommonName = certCommonName;
@@ -154,7 +171,10 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-t4n3axxxxx</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -162,7 +182,10 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated proxy endpoint.
+             * <p>The ID of the dedicated proxy endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>buxxxxxxx</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -170,7 +193,10 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * The default identifier of the dedicated proxy endpoint. The value is fixed as **RWSplit**.
+             * <p>The default identifier of the dedicated proxy endpoint. The value is fixed as <strong>RWSplit</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RWSplit</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -178,7 +204,10 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate expires.
+             * <p>The time at which the certificate expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-16T08:43:20Z</p>
              */
             public Builder sslExpiredTime(String sslExpiredTime) {
                 this.sslExpiredTime = sslExpiredTime;
@@ -192,9 +221,15 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDbProxyInstanceSslResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbProxyInstanceSslResponseBody</p>
+     */
     public static class DbProxyCertListItems extends TeaModel {
-        @NameInMap("DbProxyCertListItems")
-        private java.util.List < DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems;
+        @com.aliyun.core.annotation.NameInMap("DbProxyCertListItems")
+        private java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems;
 
         private DbProxyCertListItems(Builder builder) {
             this.dbProxyCertListItems = builder.dbProxyCertListItems;
@@ -211,17 +246,17 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         /**
          * @return dbProxyCertListItems
          */
-        public java.util.List < DbProxyCertListItemsDbProxyCertListItems> getDbProxyCertListItems() {
+        public java.util.List<DbProxyCertListItemsDbProxyCertListItems> getDbProxyCertListItems() {
             return this.dbProxyCertListItems;
         }
 
         public static final class Builder {
-            private java.util.List < DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems; 
+            private java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems; 
 
             /**
-             * An array that consists of SSL encryption settings.
+             * <p>An array that consists of SSL encryption settings.</p>
              */
-            public Builder dbProxyCertListItems(java.util.List < DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems) {
+            public Builder dbProxyCertListItems(java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems) {
                 this.dbProxyCertListItems = dbProxyCertListItems;
                 return this;
             }

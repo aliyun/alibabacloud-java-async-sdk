@@ -138,6 +138,9 @@ public class QueryRecordResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private String endTime;
 
+        @NameInMap("EventType")
+        private Integer eventType;
+
         @NameInMap("FileName")
         private String fileName;
 
@@ -159,6 +162,7 @@ public class QueryRecordResponseBody extends TeaModel {
         private List(Builder builder) {
             this.beginTime = builder.beginTime;
             this.endTime = builder.endTime;
+            this.eventType = builder.eventType;
             this.fileName = builder.fileName;
             this.fileSize = builder.fileSize;
             this.recordType = builder.recordType;
@@ -187,6 +191,13 @@ public class QueryRecordResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return eventType
+         */
+        public Integer getEventType() {
+            return this.eventType;
         }
 
         /**
@@ -234,6 +245,7 @@ public class QueryRecordResponseBody extends TeaModel {
         public static final class Builder {
             private String beginTime; 
             private String endTime; 
+            private Integer eventType; 
             private String fileName; 
             private Integer fileSize; 
             private Integer recordType; 
@@ -254,6 +266,14 @@ public class QueryRecordResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * EventType.
+             */
+            public Builder eventType(Integer eventType) {
+                this.eventType = eventType;
                 return this;
             }
 

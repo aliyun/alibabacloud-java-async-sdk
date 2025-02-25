@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InviteAccountToResourceDirectoryRequest} extends {@link RequestModel}
  *
  * <p>InviteAccountToResourceDirectoryRequest</p>
  */
 public class InviteAccountToResourceDirectoryRequest extends Request {
-    @Query
-    @NameInMap("Note")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Note")
     private String note;
 
-    @Query
-    @NameInMap("ParentFolderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentFolderId")
     private String parentFolderId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TargetEntity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetEntity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetEntity;
 
-    @Query
-    @NameInMap("TargetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetType;
 
     private InviteAccountToResourceDirectoryRequest(Builder builder) {
@@ -73,7 +78,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -94,7 +99,7 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
     public static final class Builder extends Request.Builder<InviteAccountToResourceDirectoryRequest, Builder> {
         private String note; 
         private String parentFolderId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetEntity; 
         private String targetType; 
 
@@ -112,10 +117,11 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         } 
 
         /**
-         * The description of the invitation.
-         * <p>
+         * <p>The description of the invitation.</p>
+         * <p>The description can be up to 1,024 characters in length.</p>
          * 
-         * The description can be up to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>Welcome</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -124,7 +130,10 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder.
+         * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-b1****</p>
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -133,16 +142,20 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID or logon email address of the account that you want to invite.
+         * <p>The ID or logon email address of the account that you want to invite.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder targetEntity(String targetEntity) {
             this.putQueryParameter("TargetEntity", targetEntity);
@@ -151,11 +164,15 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The type of the invited account. Valid values:
-         * <p>
+         * <p>The type of the invited account. Valid values:</p>
+         * <ul>
+         * <li>Account: indicates the ID of the account.</li>
+         * <li>Email: indicates the logon email address of the account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Account: indicates the ID of the account.
-         * *   Email: indicates the logon email address of the account.
+         * <strong>example:</strong>
+         * <p>Email</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -170,11 +187,17 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InviteAccountToResourceDirectoryRequest} extends {@link TeaModel}
+     *
+     * <p>InviteAccountToResourceDirectoryRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -209,7 +232,10 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -217,7 +243,10 @@ public class InviteAccountToResourceDirectoryRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

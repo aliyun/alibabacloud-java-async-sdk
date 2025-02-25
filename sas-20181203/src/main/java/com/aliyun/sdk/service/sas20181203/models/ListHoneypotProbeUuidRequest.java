@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotProbeUuidRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotProbeUuidRequest</p>
  */
 public class ListHoneypotProbeUuidRequest extends Request {
-    @Query
-    @NameInMap("ControlNodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlNodeId")
     private String controlNodeId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ProbeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeType")
     private String probeType;
 
     private ListHoneypotProbeUuidRequest(Builder builder) {
@@ -82,10 +87,13 @@ public class ListHoneypotProbeUuidRequest extends Request {
         } 
 
         /**
-         * The ID of the management node.
-         * <p>
+         * <p>The ID of the management node.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
          */
         public Builder controlNodeId(String controlNodeId) {
             this.putQueryParameter("ControlNodeId", controlNodeId);
@@ -94,11 +102,14 @@ public class ListHoneypotProbeUuidRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,11 +118,14 @@ public class ListHoneypotProbeUuidRequest extends Request {
         }
 
         /**
-         * The type of the probe. Valid values:
-         * <p>
+         * <p>The type of the probe. Valid values:</p>
+         * <ul>
+         * <li><strong>host_probe</strong>: host probe</li>
+         * <li><strong>vpc_black_hole_probe</strong>: virtual private cloud (VPC) probe</li>
+         * </ul>
          * 
-         * *   **host_probe**: host probe
-         * *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
+         * <strong>example:</strong>
+         * <p>host_probe</p>
          */
         public Builder probeType(String probeType) {
             this.putQueryParameter("ProbeType", probeType);

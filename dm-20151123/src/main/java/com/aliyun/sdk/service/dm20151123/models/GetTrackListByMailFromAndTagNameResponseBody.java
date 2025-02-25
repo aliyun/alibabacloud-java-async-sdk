@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrackListByMailFromAndTagNameResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrackListByMailFromAndTagNameResponseBody</p>
  */
 public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
-    @NameInMap("OffsetCreateTime")
+    @com.aliyun.core.annotation.NameInMap("OffsetCreateTime")
     private String offsetCreateTime;
 
-    @NameInMap("OffsetCreateTimeDesc")
+    @com.aliyun.core.annotation.NameInMap("OffsetCreateTimeDesc")
     private String offsetCreateTimeDesc;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
-    @NameInMap("TrackList")
+    @com.aliyun.core.annotation.NameInMap("TrackList")
     private TrackList trackList;
 
     private GetTrackListByMailFromAndTagNameResponseBody(Builder builder) {
@@ -171,35 +176,41 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTrackListByMailFromAndTagNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrackListByMailFromAndTagNameResponseBody</p>
+     */
     public static class Stat extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("RcptClickCount")
+        @com.aliyun.core.annotation.NameInMap("RcptClickCount")
         private String rcptClickCount;
 
-        @NameInMap("RcptClickRate")
+        @com.aliyun.core.annotation.NameInMap("RcptClickRate")
         private String rcptClickRate;
 
-        @NameInMap("RcptOpenCount")
+        @com.aliyun.core.annotation.NameInMap("RcptOpenCount")
         private String rcptOpenCount;
 
-        @NameInMap("RcptOpenRate")
+        @com.aliyun.core.annotation.NameInMap("RcptOpenRate")
         private String rcptOpenRate;
 
-        @NameInMap("RcptUniqueClickCount")
+        @com.aliyun.core.annotation.NameInMap("RcptUniqueClickCount")
         private String rcptUniqueClickCount;
 
-        @NameInMap("RcptUniqueClickRate")
+        @com.aliyun.core.annotation.NameInMap("RcptUniqueClickRate")
         private String rcptUniqueClickRate;
 
-        @NameInMap("RcptUniqueOpenCount")
+        @com.aliyun.core.annotation.NameInMap("RcptUniqueOpenCount")
         private String rcptUniqueOpenCount;
 
-        @NameInMap("RcptUniqueOpenRate")
+        @com.aliyun.core.annotation.NameInMap("RcptUniqueOpenRate")
         private String rcptUniqueOpenRate;
 
-        @NameInMap("TotalNumber")
+        @com.aliyun.core.annotation.NameInMap("TotalNumber")
         private String totalNumber;
 
         private Stat(Builder builder) {
@@ -392,9 +403,15 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrackListByMailFromAndTagNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrackListByMailFromAndTagNameResponseBody</p>
+     */
     public static class TrackList extends TeaModel {
-        @NameInMap("Stat")
-        private java.util.List < Stat> stat;
+        @com.aliyun.core.annotation.NameInMap("Stat")
+        private java.util.List<Stat> stat;
 
         private TrackList(Builder builder) {
             this.stat = builder.stat;
@@ -411,17 +428,17 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
         /**
          * @return stat
          */
-        public java.util.List < Stat> getStat() {
+        public java.util.List<Stat> getStat() {
             return this.stat;
         }
 
         public static final class Builder {
-            private java.util.List < Stat> stat; 
+            private java.util.List<Stat> stat; 
 
             /**
              * Stat.
              */
-            public Builder stat(java.util.List < Stat> stat) {
+            public Builder stat(java.util.List<Stat> stat) {
                 this.stat = stat;
                 return this;
             }

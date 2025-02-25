@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportWarningResponseBody} extends {@link TeaModel}
  *
  * <p>ExportWarningResponseBody</p>
  */
 public class ExportWarningResponseBody extends TeaModel {
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ExportWarningResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class ExportWarningResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the file that contains exported baseline check results.
+         * <p>The name of the file that contains exported baseline check results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>health_check_export_20220407</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -70,10 +78,13 @@ public class ExportWarningResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task to export baseline check results.
-         * <p>
+         * <p>The ID of the task to export baseline check results.</p>
+         * <blockquote>
+         * <p>You can call use the value of this parameter to call the <a href="~~DescribeHcExportInfo~~">DescribeHcExportInfo</a> operation to query the export progress.</p>
+         * </blockquote>
          * 
-         * > You can call use the value of this parameter to call the [DescribeHcExportInfo](~~DescribeHcExportInfo~~) operation to query the export progress.
+         * <strong>example:</strong>
+         * <p>439316</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -81,7 +92,10 @@ public class ExportWarningResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7FC828B-C242-1005-9736-C7CC5DC09FF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

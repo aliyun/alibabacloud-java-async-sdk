@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnabledPrivilegesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnabledPrivilegesResponseBody</p>
  */
 public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnabledPrivilegesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The queried permission level and permissions.
+         * <p>The queried permission level and permissions.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>246F42E0-A475-15FF-96D2-8DC47FC2F289</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnabledPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnabledPrivilegesResponseBody</p>
+     */
     public static class Privileges extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Privileges(Builder builder) {
@@ -110,7 +124,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The description of the permission.
+             * <p>The description of the permission.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +132,10 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission.
+             * <p>The name of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -132,17 +149,23 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnabledPrivilegesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnabledPrivilegesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Description")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Description")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String description;
 
-        @NameInMap("Privileges")
-        @Validation(required = true)
-        private java.util.List < Privileges> privileges;
+        @com.aliyun.core.annotation.NameInMap("Privileges")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<Privileges> privileges;
 
-        @NameInMap("Scope")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Scope")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String scope;
 
         private Data(Builder builder) {
@@ -169,7 +192,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         /**
          * @return privileges
          */
-        public java.util.List < Privileges> getPrivileges() {
+        public java.util.List<Privileges> getPrivileges() {
             return this.privileges;
         }
 
@@ -182,11 +205,12 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < Privileges> privileges; 
+            private java.util.List<Privileges> privileges; 
             private String scope; 
 
             /**
-             * The description of the permission level.
+             * <p>The description of the permission level.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -194,15 +218,20 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * The queried permissions.
+             * <p>The queried permissions.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder privileges(java.util.List < Privileges> privileges) {
+            public Builder privileges(java.util.List<Privileges> privileges) {
                 this.privileges = privileges;
                 return this;
             }
 
             /**
-             * The permission level.
+             * <p>The permission level.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;

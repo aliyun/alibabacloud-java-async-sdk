@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateTemplateByScratchResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateTemplateByScratchResponseBody</p>
  */
 public class GenerateTemplateByScratchResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourcesToImport")
+    @com.aliyun.core.annotation.NameInMap("ResourcesToImport")
     private java.util.List < ResourcesToImport> resourcesToImport;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
     private GenerateTemplateByScratchResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         private String templateBody; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D22C1D13-D74E-558C-AF68-1B4C05FA6F1A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,10 +73,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that you want to import into a stack in the scenario.
-         * <p>
-         * 
-         * > This parameter is returned only if the scenario is of the Resource Management type.
+         * <p>The resources that you want to import into a stack in the resource management scenario.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for a resource management scenario.</p>
+         * </blockquote>
          */
         public Builder resourcesToImport(java.util.List < ResourcesToImport> resourcesToImport) {
             this.resourcesToImport = resourcesToImport;
@@ -81,7 +84,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The template content of the scenario.
+         * <p>The template content of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;, &quot;Resources&quot;: {&quot;ECSVPC_001&quot;: {&quot;DeletionPolicy&quot;: &quot;Retain&quot;, &quot;Type&quot;: &quot;ALIYUN::ECS::VPC&quot;, &quot;Properties&quot;: {&quot;CidrBlock&quot;: &quot;172.16.0.0/12&quot;, &quot;VpcName&quot;: &quot;MyTestVpc&quot;, &quot;EnableIpv6&quot;: false}}}}</p>
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -94,14 +100,20 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateTemplateByScratchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateTemplateByScratchResponseBody</p>
+     */
     public static class ResourcesToImport extends TeaModel {
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("ResourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ResourceIdentifier")
         private java.util.Map < String, ? > resourceIdentifier;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ResourcesToImport(Builder builder) {
@@ -145,7 +157,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The logical ID of the resource.
+             * <p>The logical ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECSVPC_001</p>
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -153,9 +168,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.\
-             * <p>
-             * A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and `vpc-bp1m6fww66xbntjyc****"` is a value that is assigned to VpcId.
+             * <p>The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.<br>A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and <code>vpc-bp1m6fww66xbntjyc****&quot;</code> is a value that is assigned to VpcId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VpcId&quot;: &quot;vpc-bp1m6fww66xbntjyc****&quot; }</p>
              */
             public Builder resourceIdentifier(java.util.Map < String, ? > resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
@@ -163,7 +179,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

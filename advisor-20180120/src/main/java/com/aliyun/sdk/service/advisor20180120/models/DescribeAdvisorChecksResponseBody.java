@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdvisorChecksResponseBody</p>
  */
 public class DescribeAdvisorChecksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAdvisorChecksResponseBody(Builder builder) {
@@ -91,38 +96,44 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvisorChecksResponseBody</p>
+     */
     public static class AdvisorCheck extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OperateColumn")
+        @com.aliyun.core.annotation.NameInMap("OperateColumn")
         private String operateColumn;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tips")
+        @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
 
-        @NameInMap("ViewColumn")
+        @com.aliyun.core.annotation.NameInMap("ViewColumn")
         private String viewColumn;
 
         private AdvisorCheck(Builder builder) {
@@ -332,9 +343,15 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvisorChecksResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AdvisorCheck")
-        private java.util.List < AdvisorCheck> advisorCheck;
+        @com.aliyun.core.annotation.NameInMap("AdvisorCheck")
+        private java.util.List<AdvisorCheck> advisorCheck;
 
         private Data(Builder builder) {
             this.advisorCheck = builder.advisorCheck;
@@ -351,17 +368,17 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         /**
          * @return advisorCheck
          */
-        public java.util.List < AdvisorCheck> getAdvisorCheck() {
+        public java.util.List<AdvisorCheck> getAdvisorCheck() {
             return this.advisorCheck;
         }
 
         public static final class Builder {
-            private java.util.List < AdvisorCheck> advisorCheck; 
+            private java.util.List<AdvisorCheck> advisorCheck; 
 
             /**
              * AdvisorCheck.
              */
-            public Builder advisorCheck(java.util.List < AdvisorCheck> advisorCheck) {
+            public Builder advisorCheck(java.util.List<AdvisorCheck> advisorCheck) {
                 this.advisorCheck = advisorCheck;
                 return this;
             }

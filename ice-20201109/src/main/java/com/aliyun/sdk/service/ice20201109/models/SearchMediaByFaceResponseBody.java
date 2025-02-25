@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByFaceResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMediaByFaceResponseBody</p>
  */
 public class SearchMediaByFaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("MediaInfoList")
-    private java.util.List < MediaInfoList> mediaInfoList;
+    @com.aliyun.core.annotation.NameInMap("MediaInfoList")
+    private java.util.List<MediaInfoList> mediaInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private SearchMediaByFaceResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
     /**
      * @return mediaInfoList
      */
-    public java.util.List < MediaInfoList> getMediaInfoList() {
+    public java.util.List<MediaInfoList> getMediaInfoList() {
         return this.mediaInfoList;
     }
 
@@ -80,13 +85,16 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaInfoList> mediaInfoList; 
+        private java.util.List<MediaInfoList> mediaInfoList; 
         private String requestId; 
         private String success; 
         private Long total; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +102,18 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * MediaInfoList.
+         * <p>The media assets that meet the conditions.</p>
          */
-        public Builder mediaInfoList(java.util.List < MediaInfoList> mediaInfoList) {
+        public Builder mediaInfoList(java.util.List<MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CA7D615-CFB1-5437-9A12-2D185C3EE6CB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +121,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -118,7 +132,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of data records that meet the specified filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -131,8 +148,14 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMediaByFaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByFaceResponseBody</p>
+     */
     public static class MediaInfoList extends TeaModel {
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaInfoList(Builder builder) {
@@ -158,7 +181,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
             private String mediaId; 
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b187b3620c8490886cfc2a9578c****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

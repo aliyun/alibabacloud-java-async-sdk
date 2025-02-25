@@ -1,69 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSimpleOfficeSiteRequest} extends {@link RequestModel}
  *
  * <p>CreateSimpleOfficeSiteRequest</p>
  */
 public class CreateSimpleOfficeSiteRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("CenOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenOwnerId")
     private Long cenOwnerId;
 
-    @Query
-    @NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
     private String cidrBlock;
 
-    @Query
-    @NameInMap("CloudBoxOfficeSite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudBoxOfficeSite")
     private Boolean cloudBoxOfficeSite;
 
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("EnableInternetAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInternetAccess")
     private Boolean enableInternetAccess;
 
-    @Query
-    @NameInMap("NeedVerifyZeroDevice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedVerifyZeroDevice")
     private Boolean needVerifyZeroDevice;
 
-    @Query
-    @NameInMap("OfficeSiteName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
     private String officeSiteName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    private java.util.List < String > vSwitchId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private java.util.List<String> vSwitchId;
 
-    @Query
-    @NameInMap("VerifyCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyCode")
     private String verifyCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcType")
+    private String vpcType;
 
     private CreateSimpleOfficeSiteRequest(Builder builder) {
         super(builder);
@@ -80,6 +89,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         this.regionId = builder.regionId;
         this.vSwitchId = builder.vSwitchId;
         this.verifyCode = builder.verifyCode;
+        this.vpcType = builder.vpcType;
     }
 
     public static Builder builder() {
@@ -175,7 +185,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
@@ -184,6 +194,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
      */
     public String getVerifyCode() {
         return this.verifyCode;
+    }
+
+    /**
+     * @return vpcType
+     */
+    public String getVpcType() {
+        return this.vpcType;
     }
 
     public static final class Builder extends Request.Builder<CreateSimpleOfficeSiteRequest, Builder> {
@@ -198,8 +215,9 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         private Boolean needVerifyZeroDevice; 
         private String officeSiteName; 
         private String regionId; 
-        private java.util.List < String > vSwitchId; 
+        private java.util.List<String> vSwitchId; 
         private String verifyCode; 
+        private String vpcType; 
 
         private Builder() {
             super();
@@ -220,10 +238,14 @@ public class CreateSimpleOfficeSiteRequest extends Request {
             this.regionId = request.regionId;
             this.vSwitchId = request.vSwitchId;
             this.verifyCode = request.verifyCode;
+            this.vpcType = request.vpcType;
         } 
 
         /**
-         * Specifies whether to enable trusted device verification.
+         * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set <code>EnableInternetAccess</code> to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -232,10 +254,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
-         * <p>
+         * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
+         * <blockquote>
+         * <p> If you want end users to connect to cloud computers from Alibaba Cloud Workspace clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.</p>
+         * </blockquote>
          * 
-         * > If you want to connect to your cloud desktops over a VPC, you can attach the network of the workspace to the CEN instance. The CEN instance is connected to the on-premises network over VPN Gateway or Express Connect.
+         * <strong>example:</strong>
+         * <p>cen-3gwy16dojz1m65****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -244,7 +269,14 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
+         * <ul>
+         * <li>If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</li>
+         * <li>If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>118272523431****</p>
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -253,7 +285,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether the workspace is a CloudBox-based workspace.
+         * <p>The IPv4 CIDR block that you want the office network to use in the virtual private cloud (VPC) of the office network. The system automatically creates a VPC for the office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:</p>
+         * <ul>
+         * <li><code>10.0.0.0/12</code> (subnet mask range: 12 to 14 bits)</li>
+         * <li><code>172.16.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
+         * <li><code>192.168.0.0/16</code> (subnet mask range: 16 to 24 bits)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/12</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -262,7 +302,26 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Creates a workspace of the convenience account type.
+         * <p>Specifies whether to create a CloudBox-based office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder cloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
             this.putQueryParameter("CloudBoxOfficeSite", cloudBoxOfficeSite);
@@ -271,7 +330,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+         * <blockquote>
+         * <p> The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -280,7 +345,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -289,7 +362,26 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.
+         * <p>Specifies whether to enable Internet access.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false (default)</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.putQueryParameter("EnableInternetAccess", enableInternetAccess);
@@ -298,11 +390,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.
-         * <p>
+         * <p>Specifies whether to enable trusted device verification.</p>
          * 
-         * *   If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.
-         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needVerifyZeroDevice(Boolean needVerifyZeroDevice) {
             this.putQueryParameter("NeedVerifyZeroDevice", needVerifyZeroDevice);
@@ -311,7 +402,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set `EnableInternetAccess` to `true`.
+         * <p>The office network name. The name must be 2 to 255 characters in length. It can contain digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOfficeSite_Simple</p>
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -320,7 +414,11 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -329,20 +427,40 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.</p>
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
             return this;
         }
 
         /**
-         * The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the [SendVerifyCode](~~335132~~) operation to obtain the verification code.
+         * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/335132.html">SendVerifyCode</a> operation to obtain the verification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);
             this.verifyCode = verifyCode;
+            return this;
+        }
+
+        /**
+         * <p>The network type of the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard: advanced</li>
+         * <li>basic: basic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
+        public Builder vpcType(String vpcType) {
+            this.putQueryParameter("VpcType", vpcType);
+            this.vpcType = vpcType;
             return this;
         }
 

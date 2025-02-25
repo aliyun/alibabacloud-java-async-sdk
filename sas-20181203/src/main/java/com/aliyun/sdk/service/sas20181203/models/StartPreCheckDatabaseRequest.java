@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartPreCheckDatabaseRequest} extends {@link RequestModel}
  *
  * <p>StartPreCheckDatabaseRequest</p>
  */
 public class StartPreCheckDatabaseRequest extends Request {
-    @Query
-    @NameInMap("DatabaseType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseType;
 
-    @Query
-    @NameInMap("InstanceUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceUuid;
 
-    @Query
-    @NameInMap("UniRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uniRegionId;
 
     private StartPreCheckDatabaseRequest(Builder builder) {
@@ -85,12 +90,16 @@ public class StartPreCheckDatabaseRequest extends Request {
         } 
 
         /**
-         * The type of the database. Valid values:
-         * <p>
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>MYSQL</strong></li>
+         * <li><strong>MSSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MYSQL**
-         * *   **MSSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -99,10 +108,14 @@ public class StartPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * The UUID of the agent that is used to back up the data of the database.
-         * <p>
+         * <p>The UUID of the agent that is used to back up the data of the database.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>ec1c0ba21d2911ed800000163e0e****</p>
          */
         public Builder instanceUuid(String instanceUuid) {
             this.putQueryParameter("InstanceUuid", instanceUuid);
@@ -111,7 +124,11 @@ public class StartPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * The region ID of the server that hosts the database.
+         * <p>The region ID of the server that hosts the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);

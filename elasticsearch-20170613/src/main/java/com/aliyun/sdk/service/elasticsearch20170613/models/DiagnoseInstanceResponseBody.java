@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DiagnoseInstanceResponseBody</p>
  */
 public class DiagnoseInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DiagnoseInstanceResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the report.
+         * <p>The ID of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
+         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,17 +74,23 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DiagnoseInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DiagnoseInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("reportId")
+        @com.aliyun.core.annotation.NameInMap("reportId")
         private String reportId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Result(Builder builder) {
@@ -134,7 +143,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the diagnostic instance.
+             * <p>The ID of the diagnostic instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1535745731000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;

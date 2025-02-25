@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAclEntriesRequest} extends {@link RequestModel}
  *
  * <p>ModifyAclEntriesRequest</p>
  */
 public class ModifyAclEntriesRequest extends Request {
-    @Query
-    @NameInMap("Policy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policy;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SourceId")
-    @Validation(required = true)
-    private java.util.List < String > sourceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> sourceId;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
     private ModifyAclEntriesRequest(Builder builder) {
@@ -70,7 +75,7 @@ public class ModifyAclEntriesRequest extends Request {
     /**
      * @return sourceId
      */
-    public java.util.List < String > getSourceId() {
+    public java.util.List<String> getSourceId() {
         return this.sourceId;
     }
 
@@ -84,7 +89,7 @@ public class ModifyAclEntriesRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyAclEntriesRequest, Builder> {
         private String policy; 
         private String regionId; 
-        private java.util.List < String > sourceId; 
+        private java.util.List<String> sourceId; 
         private String sourceType; 
 
         private Builder() {
@@ -100,7 +105,18 @@ public class ModifyAclEntriesRequest extends Request {
         } 
 
         /**
-         * Policy.
+         * <p>The Internet access control policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>allow: allows access to the Internet.</p>
+         * </li>
+         * <li><p>disable: forbids access to the Internet.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allow</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -109,7 +125,11 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,16 +138,28 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder sourceId(java.util.List < String > sourceId) {
+        public Builder sourceId(java.util.List<String> sourceId) {
             this.putQueryParameter("SourceId", sourceId);
             this.sourceId = sourceId;
             return this;
         }
 
         /**
-         * SourceType.
+         * <p>The granularity to which the Internet access control policy is applicable.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>desktop: cloud computer granularity.</p>
+         * </li>
+         * <li><p>vpc: office network granularity.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

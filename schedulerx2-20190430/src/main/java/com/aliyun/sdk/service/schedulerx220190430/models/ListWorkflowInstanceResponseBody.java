@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkflowInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkflowInstanceResponseBody</p>
  */
 public class ListWorkflowInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListWorkflowInstanceResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -41,6 +45,13 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
 
     public static ListWorkflowInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,6 +90,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
@@ -86,7 +98,18 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about workflow instances.
+         * <p>The information about workflow instances.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workflowId=xxx is not existed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +136,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +147,14 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,26 +167,199 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkflowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowInstanceResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWorkflowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowInstanceResponseBody</p>
+     */
     public static class WfInstanceInfos extends TeaModel {
-        @NameInMap("DataTime")
+        @com.aliyun.core.annotation.NameInMap("DataTime")
         private String dataTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WfInstanceId")
+        @com.aliyun.core.annotation.NameInMap("WfInstanceId")
         private Long wfInstanceId;
 
-        @NameInMap("WorkflowId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private Long workflowId;
 
         private WfInstanceInfos(Builder builder) {
@@ -234,7 +439,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * The data timestamp of the workflow instance.
+             * <p>The data timestamp of the workflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:00</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -242,7 +450,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow instance stopped running.
+             * <p>The time when the workflow instance stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:21</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -250,7 +461,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow instance was scheduled to run.
+             * <p>The time when the workflow instance was scheduled to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:00</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -258,7 +472,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workflow instance started to run.
+             * <p>The time when the workflow instance started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-03 18:00:01</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -266,14 +483,17 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the workflow instance. Valid values:
-             * <p>
+             * <p>The state of the workflow instance. Valid values:</p>
+             * <ul>
+             * <li>1: pending</li>
+             * <li>2: preparing</li>
+             * <li>3: running</li>
+             * <li>4: successful</li>
+             * <li>5: failed</li>
+             * </ul>
              * 
-             * *   1: pending
-             * *   2: preparing
-             * *   3: running
-             * *   4: successful
-             * *   5: failed
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -281,7 +501,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The workflow instance ID.
+             * <p>The workflow instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder wfInstanceId(Long wfInstanceId) {
                 this.wfInstanceId = wfInstanceId;
@@ -289,7 +512,10 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The workflow ID.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -303,8 +529,14 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkflowInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("WfInstanceInfos")
+        @com.aliyun.core.annotation.NameInMap("WfInstanceInfos")
         private java.util.List < WfInstanceInfos> wfInstanceInfos;
 
         private Data(Builder builder) {
@@ -330,7 +562,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
             private java.util.List < WfInstanceInfos> wfInstanceInfos; 
 
             /**
-             * The workflow instances.
+             * <p>The workflow instances.</p>
              */
             public Builder wfInstanceInfos(java.util.List < WfInstanceInfos> wfInstanceInfos) {
                 this.wfInstanceInfos = wfInstanceInfos;

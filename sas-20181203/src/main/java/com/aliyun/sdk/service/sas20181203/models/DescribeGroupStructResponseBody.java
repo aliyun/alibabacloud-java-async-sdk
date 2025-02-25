@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupStructResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupStructResponseBody</p>
  */
 public class DescribeGroupStructResponseBody extends TeaModel {
-    @NameInMap("GroupFather")
+    @com.aliyun.core.annotation.NameInMap("GroupFather")
     private Integer groupFather;
 
-    @NameInMap("GroupFlag")
+    @com.aliyun.core.annotation.NameInMap("GroupFlag")
     private Integer groupFlag;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @NameInMap("GroupIndex")
+    @com.aliyun.core.annotation.NameInMap("GroupIndex")
     private Integer groupIndex;
 
-    @NameInMap("GroupLevel")
+    @com.aliyun.core.annotation.NameInMap("GroupLevel")
     private Integer groupLevel;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("Groups")
-    private java.util.List < String > groups;
+    @com.aliyun.core.annotation.NameInMap("Groups")
+    private java.util.List<String> groups;
 
-    @NameInMap("MachineNum")
+    @com.aliyun.core.annotation.NameInMap("MachineNum")
     private Integer machineNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupStructResponseBody(Builder builder) {
@@ -104,7 +109,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < String > getGroups() {
+    public java.util.List<String> getGroups() {
         return this.groups;
     }
 
@@ -129,12 +134,15 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         private Integer groupIndex; 
         private Integer groupLevel; 
         private String groupName; 
-        private java.util.List < String > groups; 
+        private java.util.List<String> groups; 
         private Integer machineNum; 
         private String requestId; 
 
         /**
-         * The parent node of the group.
+         * <p>The parent node of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>958****</p>
          */
         public Builder groupFather(Integer groupFather) {
             this.groupFather = groupFather;
@@ -142,11 +150,14 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the server group. Valid values:
-         * <p>
+         * <p>The type of the server group. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the default group</li>
+         * <li><strong>1</strong>: other groups</li>
+         * </ul>
          * 
-         * *   **0**: the default group
-         * *   **1**: other groups
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder groupFlag(Integer groupFlag) {
             this.groupFlag = groupFlag;
@@ -154,7 +165,10 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the server group.
+         * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>958****</p>
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
@@ -162,7 +176,10 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The sequence number.
+         * <p>The sequence number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder groupIndex(Integer groupIndex) {
             this.groupIndex = groupIndex;
@@ -170,7 +187,10 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The level of the application group.
+         * <p>The level of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder groupLevel(Integer groupLevel) {
             this.groupLevel = groupLevel;
@@ -178,7 +198,10 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the server group.
+         * <p>The name of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroupName</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -186,15 +209,18 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of child groups.
+         * <p>An array that consists of child groups.</p>
          */
-        public Builder groups(java.util.List < String > groups) {
+        public Builder groups(java.util.List<String> groups) {
             this.groups = groups;
             return this;
         }
 
         /**
-         * The number of servers in the group.
+         * <p>The number of servers in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder machineNum(Integer machineNum) {
             this.machineNum = machineNum;
@@ -202,7 +228,10 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBC6E47-7508-58C9-9E76-528E118C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveRecordFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLiveRecordFilesResponseBody</p>
  */
 public class DeleteLiveRecordFilesResponseBody extends TeaModel {
-    @NameInMap("DeleteFileInfoList")
-    private java.util.List < DeleteFileInfoList> deleteFileInfoList;
+    @com.aliyun.core.annotation.NameInMap("DeleteFileInfoList")
+    private java.util.List<DeleteFileInfoList> deleteFileInfoList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteLiveRecordFilesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
     /**
      * @return deleteFileInfoList
      */
-    public java.util.List < DeleteFileInfoList> getDeleteFileInfoList() {
+    public java.util.List<DeleteFileInfoList> getDeleteFileInfoList() {
         return this.deleteFileInfoList;
     }
 
@@ -57,20 +62,23 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeleteFileInfoList> deleteFileInfoList; 
+        private java.util.List<DeleteFileInfoList> deleteFileInfoList; 
         private String message; 
         private String requestId; 
 
         /**
-         * DeleteFileInfoList.
+         * <p>The list of files deleted.</p>
          */
-        public Builder deleteFileInfoList(java.util.List < DeleteFileInfoList> deleteFileInfoList) {
+        public Builder deleteFileInfoList(java.util.List<DeleteFileInfoList> deleteFileInfoList) {
             this.deleteFileInfoList = deleteFileInfoList;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The description of the state returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +86,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13cbb83e-043c-4728-ac35-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +102,20 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLiveRecordFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLiveRecordFilesResponseBody</p>
+     */
     public static class DeleteFileInfoList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
         private DeleteFileInfoList(Builder builder) {
@@ -142,7 +159,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
             private String recordId; 
 
             /**
-             * Code.
+             * <p>The code that identifies the result of the deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -150,7 +170,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The result of deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -158,7 +181,10 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The ID of the deleted recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13cbb83e-043c-4728-ac35-*****</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;

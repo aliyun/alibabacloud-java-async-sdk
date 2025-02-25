@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoLiveStreamRuleRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoLiveStreamRuleRequest</p>
  */
 public class DescribeAutoLiveStreamRuleRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DescribeAutoLiveStreamRuleRequest(Builder builder) {
@@ -62,14 +67,17 @@ public class DescribeAutoLiveStreamRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoLiveStreamRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeAutoLiveStreamRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eo85****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

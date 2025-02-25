@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckMaxYearOfServerLockRequest} extends {@link RequestModel}
  *
  * <p>CheckMaxYearOfServerLockRequest</p>
  */
 public class CheckMaxYearOfServerLockRequest extends Request {
-    @Query
-    @NameInMap("CheckAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkAction;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private CheckMaxYearOfServerLockRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         } 
 
         /**
-         * CheckAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>activate</p>
          */
         public Builder checkAction(String checkAction) {
             this.putQueryParameter("CheckAction", checkAction);
@@ -107,7 +110,10 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

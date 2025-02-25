@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteNetworkPathResponseBody</p>
  */
 public class DeleteNetworkPathResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Boolean data;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteNetworkPathResponseBody(Builder builder) {
+        this.data = builder.data;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +31,13 @@ public class DeleteNetworkPathResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Boolean getData() {
+        return this.data;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +45,20 @@ public class DeleteNetworkPathResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean data; 
         private String requestId; 
+
+        /**
+         * Result of operation.
+         * <p>
+         * 
+         * - **true**: Delete Success.
+         * - **false**: Delete Fail.
+         */
+        public Builder data(Boolean data) {
+            this.data = data;
+            return this;
+        }
 
         /**
          * The request ID.

@@ -1,69 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderListQueryRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderListQueryRequest</p>
  */
 public class HotelOrderListQueryRequest extends Request {
-    @Query
-    @NameInMap("all_apply")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("all_apply")
     private Boolean allApply;
 
-    @Query
-    @NameInMap("apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apply_id")
     private Long applyId;
 
-    @Query
-    @NameInMap("depart_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    private Integer category;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("depart_id")
     private String departId;
 
-    @Query
-    @NameInMap("end_time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("end_time")
     private String endTime;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("start_time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("start_time")
     private String startTime;
 
-    @Query
-    @NameInMap("thirdpart_apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
     private String thirdpartApplyId;
 
-    @Query
-    @NameInMap("update_end_time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("update_end_time")
     private String updateEndTime;
 
-    @Query
-    @NameInMap("update_start_time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("update_start_time")
     private String updateStartTime;
 
-    @Query
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private HotelOrderListQueryRequest(Builder builder) {
         super(builder);
         this.allApply = builder.allApply;
         this.applyId = builder.applyId;
+        this.category = builder.category;
         this.departId = builder.departId;
         this.endTime = builder.endTime;
         this.page = builder.page;
@@ -101,6 +111,13 @@ public class HotelOrderListQueryRequest extends Request {
      */
     public Long getApplyId() {
         return this.applyId;
+    }
+
+    /**
+     * @return category
+     */
+    public Integer getCategory() {
+        return this.category;
     }
 
     /**
@@ -176,6 +193,7 @@ public class HotelOrderListQueryRequest extends Request {
     public static final class Builder extends Request.Builder<HotelOrderListQueryRequest, Builder> {
         private Boolean allApply; 
         private Long applyId; 
+        private Integer category; 
         private String departId; 
         private String endTime; 
         private Integer page; 
@@ -195,6 +213,7 @@ public class HotelOrderListQueryRequest extends Request {
             super(request);
             this.allApply = request.allApply;
             this.applyId = request.applyId;
+            this.category = request.category;
             this.departId = request.departId;
             this.endTime = request.endTime;
             this.page = request.page;
@@ -222,6 +241,15 @@ public class HotelOrderListQueryRequest extends Request {
         public Builder applyId(Long applyId) {
             this.putQueryParameter("apply_id", applyId);
             this.applyId = applyId;
+            return this;
+        }
+
+        /**
+         * category.
+         */
+        public Builder category(Integer category) {
+            this.putQueryParameter("category", category);
+            this.category = category;
             return this;
         }
 

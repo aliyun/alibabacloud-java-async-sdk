@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBasicAccelerateIpEndpointRelationsResponseBody</p>
  */
 public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel {
-    @NameInMap("AccelerateIpEndpointRelations")
+    @com.aliyun.core.annotation.NameInMap("AccelerateIpEndpointRelations")
     private java.util.List < AccelerateIpEndpointRelations> accelerateIpEndpointRelations;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListBasicAccelerateIpEndpointRelationsResponseBody(Builder builder) {
@@ -136,37 +135,37 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
     } 
 
     public static class AccelerateIpEndpointRelations extends TeaModel {
-        @NameInMap("AccelerateIpId")
+        @com.aliyun.core.annotation.NameInMap("AccelerateIpId")
         private String accelerateIpId;
 
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("EndpointAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointAddress")
         private String endpointAddress;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("EndpointSubAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointSubAddress")
         private String endpointSubAddress;
 
-        @NameInMap("EndpointSubAddressType")
+        @com.aliyun.core.annotation.NameInMap("EndpointSubAddressType")
         private String endpointSubAddressType;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("EndpointZoneId")
+        @com.aliyun.core.annotation.NameInMap("EndpointZoneId")
         private String endpointZoneId;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private AccelerateIpEndpointRelations(Builder builder) {

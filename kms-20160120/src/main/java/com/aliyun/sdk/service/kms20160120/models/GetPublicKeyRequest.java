@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPublicKeyRequest</p>
  */
 public class GetPublicKeyRequest extends Request {
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("KeyVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyVersionId;
 
     private GetPublicKeyRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.keyId = builder.keyId;
         this.keyVersionId = builder.keyVersionId;
     }
@@ -42,6 +46,13 @@ public class GetPublicKeyRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return keyId
      */
     public String getKeyId() {
@@ -56,6 +67,7 @@ public class GetPublicKeyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetPublicKeyRequest, Builder> {
+        private String dryRun; 
         private String keyId; 
         private String keyVersionId; 
 
@@ -65,9 +77,19 @@ public class GetPublicKeyRequest extends Request {
 
         private Builder(GetPublicKeyRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.keyId = request.keyId;
             this.keyVersionId = request.keyVersionId;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](~~68522~~).

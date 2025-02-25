@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceVpcAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceVpcAttributeRequest</p>
  */
 public class ModifyInstanceVpcAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    private java.util.List < String > securityGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private java.util.List<String> securityGroupId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ModifyInstanceVpcAttributeRequest(Builder builder) {
@@ -133,7 +138,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     /**
      * @return securityGroupId
      */
-    public java.util.List < String > getSecurityGroupId() {
+    public java.util.List<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
 
@@ -159,7 +164,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         private String privateIpAddress; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > securityGroupId; 
+        private java.util.List<String> securityGroupId; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -191,7 +196,11 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1iudwa5b1tqag1****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,12 +227,14 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * The new private IP address of the instance.
-         * <p>
+         * <p>The new private IP address of the instance.</p>
+         * <blockquote>
+         * <p>The value of <code>PrivateIpAddress</code> depends on the value of <code>VSwitchId</code>. The specified IP address must be within the CIDR block of the specified vSwitch.</p>
+         * </blockquote>
+         * <p>By default, if this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</p>
          * 
-         * > The value of `PrivateIpAddress` depends on the value of `VSwitchId`. The specified IP address must be within the CIDR block of the specified vSwitch.
-         * 
-         * By default, if this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.
+         * <strong>example:</strong>
+         * <p><code>172.17.**.**</code></p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -250,26 +261,33 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * The ID of security group N to which the instance belongs after the VPC is changed. This parameter is required only when the `VpcId` parameter is specified.
-         * <p>
+         * <p>The ID of security group N to which the instance belongs after the VPC is changed. This parameter is required only when the <code>VpcId</code> parameter is specified.</p>
+         * <ul>
+         * <li>The specified security groups must be of the same type.</li>
+         * <li>You can specify one or more security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</li>
+         * <li>The specified security groups must belong to the VPC specified by the <code>VpcId</code> parameter.</li>
+         * </ul>
          * 
-         * *   The specified security groups must be of the same type.
-         * *   You can specify one or more security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).
-         * *   The specified security groups must belong to the VPC specified by the `VpcId` parameter.
+         * <strong>example:</strong>
+         * <p>sg-o6w9l8bc8dgmkw87****</p>
          */
-        public Builder securityGroupId(java.util.List < String > securityGroupId) {
+        public Builder securityGroupId(java.util.List<String> securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
             return this;
         }
 
         /**
-         * The ID of the vSwitch.
-         * <p>
+         * <p>The ID of the vSwitch.</p>
+         * <ul>
+         * <li>If this parameter is set to the ID of the current vSwitch, the vSwitch of the instance remains unchanged.</li>
+         * <li>If this parameter is set to the ID of a different vSwitch and the <code>VpcId</code> parameter is not specified, the new vSwitch must belong to the same zone and VPC as the current vSwitch.</li>
+         * <li>If the <code>VpcId</code> parameter is specified, the vSwitch specified by this parameter must belong to the specified VPC and the same zone as the current vSwitch.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If this parameter is set to the ID of the current vSwitch, the vSwitch of the instance remains unchanged.
-         * *   If this parameter is set to the ID of a different vSwitch and the `VpcId` parameter is not specified, the new vSwitch must belong to the same zone and VPC as the current vSwitch.
-         * *   If the `VpcId` parameter is specified, the vSwitch specified by this parameter must belong to the specified VPC and the same zone as the current vSwitch.
+         * <strong>example:</strong>
+         * <p>vsw-bp1s5fnvk4gn3tw12****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -278,7 +296,10 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the new VPC.
+         * <p>The ID of the new VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1vwnn14rqpyiczj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

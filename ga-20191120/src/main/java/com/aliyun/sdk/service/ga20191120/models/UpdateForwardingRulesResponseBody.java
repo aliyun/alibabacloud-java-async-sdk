@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateForwardingRulesResponseBody</p>
  */
 public class UpdateForwardingRulesResponseBody extends TeaModel {
-    @NameInMap("ForwardingRules")
+    @com.aliyun.core.annotation.NameInMap("ForwardingRules")
     private java.util.List < ForwardingRules> forwardingRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateForwardingRulesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class UpdateForwardingRulesResponseBody extends TeaModel {
     } 
 
     public static class ForwardingRules extends TeaModel {
-        @NameInMap("ForwardingRuleId")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleId")
         private String forwardingRuleId;
 
         private ForwardingRules(Builder builder) {

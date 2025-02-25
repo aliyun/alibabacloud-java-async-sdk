@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetaCollectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMetaCollectionsResponseBody</p>
  */
 public class ListMetaCollectionsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListMetaCollectionsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The token that is used for the next query.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Collection.NotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The object returned.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E25887B7-579C-54A5-9C4F-83A0DE367DDE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,14 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +175,17 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMetaCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMetaCollectionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CollectionList")
-        private java.util.List < Collection > collectionList;
+        @com.aliyun.core.annotation.NameInMap("CollectionList")
+        private java.util.List<Collection> collectionList;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -174,7 +204,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         /**
          * @return collectionList
          */
-        public java.util.List < Collection > getCollectionList() {
+        public java.util.List<Collection> getCollectionList() {
             return this.collectionList;
         }
 
@@ -186,23 +216,22 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Collection > collectionList; 
+            private java.util.List<Collection> collectionList; 
             private String nextToken; 
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
-             * 
-             * *   true: The request was successful.
-             * *   false: The request failed.
+             * <p>The collections.</p>
              */
-            public Builder collectionList(java.util.List < Collection > collectionList) {
+            public Builder collectionList(java.util.List<Collection> collectionList) {
                 this.collectionList = collectionList;
                 return this;
             }
 
             /**
-             * The collections.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37ae2053d87d380f28ce0dc0853ca51e</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

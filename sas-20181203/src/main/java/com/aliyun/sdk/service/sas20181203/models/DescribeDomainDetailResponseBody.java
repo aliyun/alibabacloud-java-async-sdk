@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainDetailResponseBody</p>
  */
 public class DescribeDomainDetailResponseBody extends TeaModel {
-    @NameInMap("AlarmCount")
+    @com.aliyun.core.annotation.NameInMap("AlarmCount")
     private Integer alarmCount;
 
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @NameInMap("DomainDetailItems")
-    private java.util.List < DomainDetailItems> domainDetailItems;
+    @com.aliyun.core.annotation.NameInMap("DomainDetailItems")
+    private java.util.List<DomainDetailItems> domainDetailItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RootDomain")
+    @com.aliyun.core.annotation.NameInMap("RootDomain")
     private String rootDomain;
 
-    @NameInMap("VulCount")
+    @com.aliyun.core.annotation.NameInMap("VulCount")
     private Integer vulCount;
 
     private DescribeDomainDetailResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     /**
      * @return domainDetailItems
      */
-    public java.util.List < DomainDetailItems> getDomainDetailItems() {
+    public java.util.List<DomainDetailItems> getDomainDetailItems() {
         return this.domainDetailItems;
     }
 
@@ -92,13 +97,16 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Integer alarmCount; 
         private String domain; 
-        private java.util.List < DomainDetailItems> domainDetailItems; 
+        private java.util.List<DomainDetailItems> domainDetailItems; 
         private String requestId; 
         private String rootDomain; 
         private Integer vulCount; 
 
         /**
-         * The total number of alerts in your website assets.
+         * <p>The total number of alerts in your website assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder alarmCount(Integer alarmCount) {
             this.alarmCount = alarmCount;
@@ -106,7 +114,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -114,15 +125,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the domain asset.
+         * <p>An array that consists of the details about the domain asset.</p>
          */
-        public Builder domainDetailItems(java.util.List < DomainDetailItems> domainDetailItems) {
+        public Builder domainDetailItems(java.util.List<DomainDetailItems> domainDetailItems) {
             this.domainDetailItems = domainDetailItems;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A85CFCF-05C8-451A-9E41-C0D5E96BA407</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the root domain that corresponds to the domain.
+         * <p>The name of the root domain that corresponds to the domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder rootDomain(String rootDomain) {
             this.rootDomain = rootDomain;
@@ -138,7 +155,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerabilities in your website assets.
+         * <p>The total number of vulnerabilities in your website assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder vulCount(Integer vulCount) {
             this.vulCount = vulCount;
@@ -151,23 +171,29 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailResponseBody</p>
+     */
     public static class DomainDetailItems extends TeaModel {
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private DomainDetailItems(Builder builder) {
@@ -238,14 +264,17 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The type of the domain asset. Valid values:
-             * <p>
+             * <p>The type of the domain asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an Elastic Compute Service (ECS) instance</li>
+             * <li><strong>1</strong>: a Server Load Balancer (SLB) instance</li>
+             * <li><strong>2</strong>: a Network Address Translation (NAT) gateway</li>
+             * <li><strong>3</strong>: an ApsaraDB RDS instance</li>
+             * <li><strong>4</strong>: an ApsaraDB for MongoDB instance</li>
+             * </ul>
              * 
-             * *   **0**: an Elastic Compute Service (ECS) instance
-             * *   **1**: a Server Load Balancer (SLB) instance
-             * *   **2**: a Network Address Translation (NAT) gateway
-             * *   **3**: an ApsaraDB RDS instance
-             * *   **4**: an ApsaraDB for MongoDB instance
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -253,7 +282,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the asset.
+             * <p>The instance ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5e6w7dzsktt6mz4***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -261,7 +293,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZm5e6w7dzsktt6mz4yimeZ-6****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -269,7 +304,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the asset.
+             * <p>The public IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -277,7 +315,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the asset.
+             * <p>The private IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -285,7 +326,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance UUID of the domain asset.
+             * <p>The instance UUID of the domain asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1g9dohoyin9cjhn6****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

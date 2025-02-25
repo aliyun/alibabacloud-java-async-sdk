@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceInternetPortResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceInternetPortResponseBody</p>
  */
 public class GetDeviceInternetPortResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("NetworkInfo")
-    private java.util.List < NetworkInfo> networkInfo;
+    @com.aliyun.core.annotation.NameInMap("NetworkInfo")
+    private java.util.List<NetworkInfo> networkInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDeviceInternetPortResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
     /**
      * @return networkInfo
      */
-    public java.util.List < NetworkInfo> getNetworkInfo() {
+    public java.util.List<NetworkInfo> getNetworkInfo() {
         return this.networkInfo;
     }
 
@@ -58,11 +63,14 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
 
     public static final class Builder {
         private String instanceId; 
-        private java.util.List < NetworkInfo> networkInfo; 
+        private java.util.List<NetworkInfo> networkInfo; 
         private String requestId; 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance. The value is the ID of the server or container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5sadvk2xnylvra9kyejcnevi6</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,15 +78,18 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkInfo.
+         * <p>The network mapping information about the instance.</p>
          */
-        public Builder networkInfo(java.util.List < NetworkInfo> networkInfo) {
+        public Builder networkInfo(java.util.List<NetworkInfo> networkInfo) {
             this.networkInfo = networkInfo;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36311833-83FC-57C3-A7DD-768F61F65555</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,23 +102,29 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceInternetPortResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceInternetPortResponseBody</p>
+     */
     public static class NetworkInfo extends TeaModel {
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
 
-        @NameInMap("ExternalPort")
+        @com.aliyun.core.annotation.NameInMap("ExternalPort")
         private String externalPort;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("InternalIp")
+        @com.aliyun.core.annotation.NameInMap("InternalIp")
         private String internalIp;
 
-        @NameInMap("InternalPort")
+        @com.aliyun.core.annotation.NameInMap("InternalPort")
         private String internalPort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NetworkInfo(Builder builder) {
@@ -178,7 +195,10 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ExternalIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.105.62.120</p>
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -186,7 +206,10 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalPort.
+             * <p>The external port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -194,7 +217,10 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * ISP.
+             * <p>The Internet service provider (ISP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -202,7 +228,10 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * InternalIp.
+             * <p>The internal IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.49</p>
              */
             public Builder internalIp(String internalIp) {
                 this.internalIp = internalIp;
@@ -210,7 +239,10 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * <p>The internal port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020/2025</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -218,7 +250,10 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the external port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

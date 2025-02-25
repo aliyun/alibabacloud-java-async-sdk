@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPredefinedScopesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPredefinedScopesResponseBody</p>
  */
 public class ListPredefinedScopesResponseBody extends TeaModel {
-    @NameInMap("PredefinedScopes")
+    @com.aliyun.core.annotation.NameInMap("PredefinedScopes")
     private PredefinedScopes predefinedScopes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPredefinedScopesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of application permissions.
+         * <p>The information about application permissions.</p>
          */
         public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
             this.predefinedScopes = predefinedScopes;
@@ -58,7 +63,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>955C096D-EC99-480B-AF37-3921109107D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPredefinedScopesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPredefinedScopesResponseBody</p>
+     */
     public static class PredefinedScope extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private PredefinedScope(Builder builder) {
@@ -110,7 +124,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the permission scope.
+             * <p>The description of the permission scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +135,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scope.
+             * <p>The name of the permission scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openid</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -132,9 +152,15 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPredefinedScopesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPredefinedScopesResponseBody</p>
+     */
     public static class PredefinedScopes extends TeaModel {
-        @NameInMap("PredefinedScope")
-        private java.util.List < PredefinedScope> predefinedScope;
+        @com.aliyun.core.annotation.NameInMap("PredefinedScope")
+        private java.util.List<PredefinedScope> predefinedScope;
 
         private PredefinedScopes(Builder builder) {
             this.predefinedScope = builder.predefinedScope;
@@ -151,17 +177,17 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         /**
          * @return predefinedScope
          */
-        public java.util.List < PredefinedScope> getPredefinedScope() {
+        public java.util.List<PredefinedScope> getPredefinedScope() {
             return this.predefinedScope;
         }
 
         public static final class Builder {
-            private java.util.List < PredefinedScope> predefinedScope; 
+            private java.util.List<PredefinedScope> predefinedScope; 
 
             /**
              * PredefinedScope.
              */
-            public Builder predefinedScope(java.util.List < PredefinedScope> predefinedScope) {
+            public Builder predefinedScope(java.util.List<PredefinedScope> predefinedScope) {
                 this.predefinedScope = predefinedScope;
                 return this;
             }

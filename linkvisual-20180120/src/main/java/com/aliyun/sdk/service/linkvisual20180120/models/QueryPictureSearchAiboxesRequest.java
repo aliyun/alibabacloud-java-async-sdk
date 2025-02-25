@@ -90,12 +90,12 @@ public class QueryPictureSearchAiboxesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPictureSearchAiboxesRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryPictureSearchAiboxesRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -75,15 +75,15 @@ public class DescribeDrdsTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsTasksRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.taskType = response.taskType;
+        private Builder(DescribeDrdsTasksRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -92,7 +92,7 @@ public class DescribeDrdsTasksRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -101,7 +101,7 @@ public class DescribeDrdsTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of tasks.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

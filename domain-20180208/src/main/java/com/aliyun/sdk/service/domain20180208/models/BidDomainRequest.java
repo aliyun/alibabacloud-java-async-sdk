@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BidDomainRequest} extends {@link RequestModel}
  *
  * <p>BidDomainRequest</p>
  */
 public class BidDomainRequest extends Request {
-    @Body
-    @NameInMap("AuctionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuctionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auctionId;
 
-    @Body
-    @NameInMap("Currency")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Currency")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currency;
 
-    @Body
-    @NameInMap("MaxBid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxBid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float maxBid;
 
     private BidDomainRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class BidDomainRequest extends Request {
         } 
 
         /**
-         * AuctionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder auctionId(String auctionId) {
             this.putBodyParameter("AuctionId", auctionId);
@@ -94,7 +102,10 @@ public class BidDomainRequest extends Request {
         }
 
         /**
-         * Currency.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RMB</p>
          */
         public Builder currency(String currency) {
             this.putBodyParameter("Currency", currency);
@@ -103,7 +114,10 @@ public class BidDomainRequest extends Request {
         }
 
         /**
-         * MaxBid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxBid(Float maxBid) {
             this.putBodyParameter("MaxBid", maxBid);

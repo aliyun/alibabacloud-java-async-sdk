@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListKmsInstancesResponseBody</p>
  */
 public class ListKmsInstancesResponseBody extends TeaModel {
-    @NameInMap("KmsInstances")
+    @com.aliyun.core.annotation.NameInMap("KmsInstances")
     private KmsInstances kmsInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListKmsInstancesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * KmsInstances.
+         * A list of KMS instances.
          */
         public Builder kmsInstances(KmsInstances kmsInstances) {
             this.kmsInstances = kmsInstances;
@@ -94,7 +93,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +101,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +109,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of KMS instances.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -132,10 +131,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
     } 
 
     public static class KmsInstance extends TeaModel {
-        @NameInMap("KmsInstanceArn")
+        @com.aliyun.core.annotation.NameInMap("KmsInstanceArn")
         private String kmsInstanceArn;
 
-        @NameInMap("KmsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
         private String kmsInstanceId;
 
         private KmsInstance(Builder builder) {
@@ -170,7 +169,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             private String kmsInstanceId; 
 
             /**
-             * KmsInstanceArn.
+             * The ARN of the KMS instance.
              */
             public Builder kmsInstanceArn(String kmsInstanceArn) {
                 this.kmsInstanceArn = kmsInstanceArn;
@@ -178,7 +177,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KmsInstanceId.
+             * The ID of the KMS instance.
              */
             public Builder kmsInstanceId(String kmsInstanceId) {
                 this.kmsInstanceId = kmsInstanceId;
@@ -193,7 +192,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
 
     }
     public static class KmsInstances extends TeaModel {
-        @NameInMap("KmsInstance")
+        @com.aliyun.core.annotation.NameInMap("KmsInstance")
         private java.util.List < KmsInstance> kmsInstance;
 
         private KmsInstances(Builder builder) {

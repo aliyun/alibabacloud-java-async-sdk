@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateYouhuiForOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateYouhuiForOrderRequest</p>
  */
 public class CreateYouhuiForOrderRequest extends Request {
-    @Query
-    @NameInMap("ActivityId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActivityId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long activityId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PromotionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
-    private String resourceOwnerId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private CreateYouhuiForOrderRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class CreateYouhuiForOrderRequest extends Request {
     /**
      * @return resourceOwnerId
      */
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
@@ -110,7 +115,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         private Long promotionId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private String resourceOwnerId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -127,7 +132,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         } 
 
         /**
-         * The activity ID.
+         * <p>The activity ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1711510887******</p>
          */
         public Builder activityId(Long activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -145,7 +154,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.
+         * <p>The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000001******</p>
          */
         public Builder promotionId(Long promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -154,7 +167,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +191,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         /**
          * ResourceOwnerId.
          */
-        public Builder resourceOwnerId(String resourceOwnerId) {
+        public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
             return this;

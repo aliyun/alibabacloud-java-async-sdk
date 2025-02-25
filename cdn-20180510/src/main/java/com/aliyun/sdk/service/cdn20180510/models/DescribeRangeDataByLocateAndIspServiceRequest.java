@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRangeDataByLocateAndIspServiceRequest} extends {@link RequestModel}
  *
  * <p>DescribeRangeDataByLocateAndIspServiceRequest</p>
  */
 public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("IspNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspNames")
     private String ispNames;
 
-    @Query
-    @NameInMap("LocationNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNames")
     private String locationNames;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeRangeDataByLocateAndIspServiceRequest(Builder builder) {
@@ -113,7 +113,11 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -122,12 +126,15 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time. The maximum time range that can be specified is 1 hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > The end time must be later than the start time. The maximum time range that can be specified is 1 hour.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,10 +143,11 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The name of the ISP. You can specify only one ISP name in each call.
-         * <p>
+         * <p>The name of the ISP. You can specify only one ISP name in each call.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query ISPs.</p>
          * 
-         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNames(String ispNames) {
             this.putQueryParameter("IspNames", ispNames);
@@ -148,10 +156,11 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The names of the regions. Separate multiple region names with commas (,).
-         * <p>
+         * <p>The names of the regions. Separate multiple region names with commas (,).</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>liaoning,guangxi</p>
          */
         public Builder locationNames(String locationNames) {
             this.putQueryParameter("LocationNames", locationNames);
@@ -160,10 +169,12 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:33:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

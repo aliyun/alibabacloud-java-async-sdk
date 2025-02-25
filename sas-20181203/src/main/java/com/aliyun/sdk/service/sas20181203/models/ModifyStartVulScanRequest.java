@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStartVulScanRequest} extends {@link RequestModel}
  *
  * <p>ModifyStartVulScanRequest</p>
  */
 public class ModifyStartVulScanRequest extends Request {
-    @Query
-    @NameInMap("Types")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Types")
     private String types;
 
-    @Query
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
     private ModifyStartVulScanRequest(Builder builder) {
@@ -68,18 +73,22 @@ public class ModifyStartVulScanRequest extends Request {
         } 
 
         /**
-         * The types of vulnerabilities that can be detected. Valid values:
-         * <p>
+         * <p>The types of vulnerabilities that can be detected. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerabilities</li>
+         * <li><strong>sys</strong>: Windows system vulnerabilities</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
+         * <li><strong>app</strong>: application vulnerabilities</li>
+         * <li><strong>emg</strong>: urgent vulnerabilities</li>
+         * <li><strong>image</strong>: container image vulnerabilities</li>
+         * <li><strong>sca</strong>: vulnerabilities that are detected based on software component analysis</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you leave this parameter empty, all types of vulnerabilities can be detected.</p>
+         * </blockquote>
          * 
-         * *   **cve**: Linux software vulnerabilities
-         * *   **sys**: Windows system vulnerabilities
-         * *   **cms**: Web-CMS vulnerabilities
-         * *   **app**: application vulnerabilities
-         * *   **emg**: urgent vulnerabilities
-         * *   **image**: container image vulnerabilities
-         * *   **sca**: vulnerabilities that are detected based on software component analysis
-         * 
-         * > If you leave this parameter empty, all types of vulnerabilities can be detected.
+         * <strong>example:</strong>
+         * <p>&quot;cve,sys,cms,app,emg&quot;</p>
          */
         public Builder types(String types) {
             this.putQueryParameter("Types", types);
@@ -88,7 +97,10 @@ public class ModifyStartVulScanRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers.
+         * <p>The UUIDs of servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;i-sdada-xxxxx&quot;,&quot;i-ifaedada-sfsasdxxx&quot;}</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

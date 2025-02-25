@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupsResponseBody</p>
  */
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroups")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroups")
     private SecurityGroups securityGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSecurityGroupsResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.
+         * <p>A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9cc11</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -118,10 +126,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <blockquote>
+         * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -129,10 +140,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <blockquote>
+         * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -140,7 +154,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the security group.
+         * <p>The region ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -148,7 +165,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +176,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the security groups.
+         * <p>The information about the security groups.</p>
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -164,7 +184,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of security groups returned. If `MaxResults` and `NextToken` are specified in the request, the value of this parameter is not returned.
+         * <p>The total number of security groups returned. If <code>MaxResults</code> and <code>NextToken</code> are specified in the request, the value of this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -177,11 +200,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -216,7 +245,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the security group.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +256,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the security group.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -238,9 +273,15 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -257,17 +298,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -279,41 +320,53 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
     public static class SecurityGroup extends TeaModel {
-        @NameInMap("AvailableInstanceAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceAmount")
         private Integer availableInstanceAmount;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EcsCount")
+        @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Integer ecsCount;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupToGroupRuleCount")
+        private Integer groupToGroupRuleCount;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
+        private Integer ruleCount;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
         private String securityGroupName;
 
-        @NameInMap("SecurityGroupType")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupType")
         private String securityGroupType;
 
-        @NameInMap("ServiceID")
+        @com.aliyun.core.annotation.NameInMap("ServiceID")
         private Long serviceID;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SecurityGroup(Builder builder) {
@@ -321,7 +374,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.ecsCount = builder.ecsCount;
+            this.groupToGroupRuleCount = builder.groupToGroupRuleCount;
             this.resourceGroupId = builder.resourceGroupId;
+            this.ruleCount = builder.ruleCount;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupName = builder.securityGroupName;
             this.securityGroupType = builder.securityGroupType;
@@ -368,10 +423,24 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupToGroupRuleCount
+         */
+        public Integer getGroupToGroupRuleCount() {
+            return this.groupToGroupRuleCount;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return ruleCount
+         */
+        public Integer getRuleCount() {
+            return this.ruleCount;
         }
 
         /**
@@ -428,7 +497,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private Integer ecsCount; 
+            private Integer groupToGroupRuleCount; 
             private String resourceGroupId; 
+            private Integer ruleCount; 
             private String securityGroupId; 
             private String securityGroupName; 
             private String securityGroupType; 
@@ -438,7 +509,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * <p>The number of private IP addresses that can be added to the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</p>
+             * <p>If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -446,7 +524,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the security group was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+             * <p>The time when the security group was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-31T03:12:29Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -454,7 +535,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security group.
+             * <p>The description of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -462,7 +546,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * <p>The number of private IP addresses that are contained in the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</p>
+             * <p>If you set IsQueryEcsCount to True, the return value of EcsCount is valid.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -470,7 +561,21 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the security group belongs.
+             * <p>The number of rules that reference security groups in the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder groupToGroupRuleCount(Integer groupToGroupRuleCount) {
+                this.groupToGroupRuleCount = groupToGroupRuleCount;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group to which the security group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -478,7 +583,21 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * <p>The number of rules in the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder ruleCount(Integer ruleCount) {
+                this.ruleCount = ruleCount;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxazb4p****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -486,7 +605,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security group.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SGTestName</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -494,11 +616,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the security group. Valid values:
-             * <p>
+             * <p>The type of the security group. Valid values:</p>
+             * <ul>
+             * <li>normal: basic security group</li>
+             * <li>enterprise: advanced security group</li>
+             * </ul>
              * 
-             * *   normal: basic security group
-             * *   enterprise: advanced security group
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;
@@ -506,7 +631,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the distributor to which the security group belongs.
+             * <p>The ID of the distributor to which the security group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678910</p>
              */
             public Builder serviceID(Long serviceID) {
                 this.serviceID = serviceID;
@@ -514,7 +642,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.
+             * <p>Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -522,7 +653,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the security groups.
+             * <p>The tags of the security group.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -530,7 +661,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the security group belongs.
+             * <p>The ID of the VPC to which the security group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp67acfmxazb4p****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -544,9 +678,15 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsResponseBody</p>
+     */
     public static class SecurityGroups extends TeaModel {
-        @NameInMap("SecurityGroup")
-        private java.util.List < SecurityGroup> securityGroup;
+        @com.aliyun.core.annotation.NameInMap("SecurityGroup")
+        private java.util.List<SecurityGroup> securityGroup;
 
         private SecurityGroups(Builder builder) {
             this.securityGroup = builder.securityGroup;
@@ -563,17 +703,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         /**
          * @return securityGroup
          */
-        public java.util.List < SecurityGroup> getSecurityGroup() {
+        public java.util.List<SecurityGroup> getSecurityGroup() {
             return this.securityGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SecurityGroup> securityGroup; 
+            private java.util.List<SecurityGroup> securityGroup; 
 
             /**
              * SecurityGroup.
              */
-            public Builder securityGroup(java.util.List < SecurityGroup> securityGroup) {
+            public Builder securityGroup(java.util.List<SecurityGroup> securityGroup) {
                 this.securityGroup = securityGroup;
                 return this;
             }

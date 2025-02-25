@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDiskResponseBody</p>
  */
 public class CreateDiskResponseBody extends TeaModel {
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDiskResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class CreateDiskResponseBody extends TeaModel {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -57,20 +62,26 @@ public class CreateDiskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String orderId; 
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the instances.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order. Multiple IDs are separated by commas (,).</p>
+         * <blockquote>
+         * <p> This parameter is not returned for the pay-as-you-go billing method.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>21127020370****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +89,10 @@ public class CreateDiskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7030AB96-57CF-1C68-9FEE-D60E547FD79C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

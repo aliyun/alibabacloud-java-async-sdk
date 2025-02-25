@@ -1,58 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMaintenanceActionRequest} extends {@link RequestModel}
  *
  * <p>DescribeMaintenanceActionRequest</p>
  */
 public class DescribeMaintenanceActionRequest extends Request {
-    @Query
-    @NameInMap("IsHistory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsHistory")
     private Integer isHistory;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private DescribeMaintenanceActionRequest(Builder builder) {
@@ -183,13 +183,15 @@ public class DescribeMaintenanceActionRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the information about pending or historical O\&M events. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information about pending or historical O&amp;M events. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: returns the information about pending O&amp;M event.</li>
+         * <li><strong>1</strong>: returns the information about historical O&amp;M event.</li>
+         * </ul>
+         * <p>If you do not specify this parameter, the information about pending O&amp;M event are returned.</p>
          * 
-         * *   **0**: returns the information about pending O\&M event.
-         * *   **1**: returns the information about historical O\&M event.
-         * 
-         * If you do not specify this parameter, the information about pending O\&M event are returned.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -216,7 +218,10 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +230,10 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **30**, **50**, and **100**. Default value: 30.
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,11 +242,15 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The region ID. Valid values:
-         * <p>
+         * <p>The region ID. Valid values:</p>
+         * <ul>
+         * <li>The ID of the region where the O&amp;M event occurs. Example: <code>cn-hangzhou</code>. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</li>
+         * <li>You can also set Region to <code>all</code> to query the O&amp;M events in all regions. If you set <code>Region</code> to <code>all</code>, you must set <code>TaskType</code> to <code>all</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The ID of the region where the O\&M event occurs. Example: `cn-hangzhou`. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
-         * *   You can also set Region to `all` to query the O\&M events in all regions. If you set `Region` to `all`, you must set `TaskType` to `all`.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -247,10 +259,14 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The ID of the region where the O\&M event occurs.
-         * <p>
+         * <p>The ID of the region where the O&amp;M event occurs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,11 +293,15 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * The type of the O\&M event. Valid values:
-         * <p>
+         * <p>The type of the O&amp;M event. Valid values:</p>
+         * <ul>
+         * <li><strong>rds_apsaradb_upgrade</strong>: database software upgrades.</li>
+         * <li><strong>all</strong>: all the O&amp;M events in all regions within the current account. If you set <code>Region</code> to <code>all</code>, you must set <code>TaskType</code> to <code>all</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **rds_apsaradb_upgrade**: database software upgrades.
-         * *   **all**: all the O\&M events in all regions within the current account. If you set `Region` to `all`, you must set `TaskType` to `all`.
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

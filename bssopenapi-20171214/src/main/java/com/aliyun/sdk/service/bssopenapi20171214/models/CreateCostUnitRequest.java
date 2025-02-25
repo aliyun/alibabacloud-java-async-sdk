@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCostUnitRequest} extends {@link RequestModel}
  *
  * <p>CreateCostUnitRequest</p>
  */
 public class CreateCostUnitRequest extends Request {
-    @Query
-    @NameInMap("UnitEntityList")
-    private java.util.List < UnitEntityList> unitEntityList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnitEntityList")
+    private java.util.List<UnitEntityList> unitEntityList;
 
     private CreateCostUnitRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class CreateCostUnitRequest extends Request {
     /**
      * @return unitEntityList
      */
-    public java.util.List < UnitEntityList> getUnitEntityList() {
+    public java.util.List<UnitEntityList> getUnitEntityList() {
         return this.unitEntityList;
     }
 
     public static final class Builder extends Request.Builder<CreateCostUnitRequest, Builder> {
-        private java.util.List < UnitEntityList> unitEntityList; 
+        private java.util.List<UnitEntityList> unitEntityList; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class CreateCostUnitRequest extends Request {
         } 
 
         /**
-         * The list of cost centers.
+         * <p>The list of cost centers.</p>
          */
-        public Builder unitEntityList(java.util.List < UnitEntityList> unitEntityList) {
+        public Builder unitEntityList(java.util.List<UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
             this.unitEntityList = unitEntityList;
             return this;
@@ -69,17 +74,23 @@ public class CreateCostUnitRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCostUnitRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCostUnitRequest</p>
+     */
     public static class UnitEntityList extends TeaModel {
-        @NameInMap("OwnerUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long ownerUid;
 
-        @NameInMap("ParentUnitId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParentUnitId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long parentUnitId;
 
-        @NameInMap("UnitName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UnitName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String unitName;
 
         private UnitEntityList(Builder builder) {
@@ -123,7 +134,11 @@ public class CreateCostUnitRequest extends Request {
             private String unitName; 
 
             /**
-             * The user ID of the owner of the cost center.
+             * <p>The user ID of the owner of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>982375623</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -131,7 +146,11 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * The ID of the parent cost center. A value of -1 indicates the root cost center.
+             * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -139,7 +158,11 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * The name of the cost center.
+             * <p>The name of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;

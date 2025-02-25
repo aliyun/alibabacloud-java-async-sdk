@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagKeysResponseBody</p>
  */
 public class DescribeTagKeysResponseBody extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagKeys")
-    private java.util.List < String > tagKeys;
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
+    private java.util.List<String> tagKeys;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTagKeysResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     /**
      * @return tagKeys
      */
-    public java.util.List < String > getTagKeys() {
+    public java.util.List<String> getTagKeys() {
         return this.tagKeys;
     }
 
@@ -94,11 +99,14 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < String > tagKeys; 
+        private java.util.List<String> tagKeys; 
         private Integer totalCount; 
 
         /**
-         * The type of the tag.
+         * <p>The type of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -106,7 +114,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The start page of the returned pages.
+         * <p>The start page of the returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +125,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of tags returned per page.
+         * <p>The number of tags returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +136,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD110813-9AD6-5F07-BFC8-4C841309****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,15 +147,18 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the tag.
+         * <p>The key of the tag.</p>
          */
-        public Builder tagKeys(java.util.List < String > tagKeys) {
+        public Builder tagKeys(java.util.List<String> tagKeys) {
             this.tagKeys = tagKeys;
             return this;
         }
 
         /**
-         * The total number of returned tag keys.
+         * <p>The total number of returned tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

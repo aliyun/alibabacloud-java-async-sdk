@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
  */
 public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterAccessWhiteListResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information of IP whitelists.
+         * <p>The queried IP address whitelists.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
+     */
     public static class IPArray extends TeaModel {
-        @NameInMap("DBClusterIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
 
-        @NameInMap("DBClusterIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayName")
         private String DBClusterIPArrayName;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
         private IPArray(Builder builder) {
@@ -122,10 +131,13 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * The attribute of the whitelist group. It is empty by default.
-             * <p>
+             * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
+             * <blockquote>
+             * <p> The IP address whitelists that have the <strong>hidden</strong> attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB-X.</p>
+             * </blockquote>
              * 
-             * >  The groups with hidden attribute are not displayed in the console. The groups with hidden attribute are used to access DTS and PolarDB-X.
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -133,11 +145,14 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address whitelist.
-             * <p>
+             * <p>The name of the IP address whitelist.</p>
+             * <ul>
+             * <li>The name of an IP address whitelist must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (_). The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
+             * <li>Each cluster supports up to 50 IP address whitelists.</li>
+             * </ul>
              * 
-             * *   The name of the IP address whitelist group must be 2 to 32 characters in length and can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a digit or lowercase letter.
-             * *   You can create up to 50 whitelists for a cluster.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -145,7 +160,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in an IP address whitelist. A maximum of 1,000 IP addresses can be returned. These addresses are separated with commas (,).
+             * <p>The IP addresses in the IP address whitelist. Up to 1,000 IP addresses can be returned. Multiple IP addresses are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -159,8 +177,14 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("IPArray")
+        @com.aliyun.core.annotation.NameInMap("IPArray")
         private java.util.List < IPArray> IPArray;
 
         private Items(Builder builder) {

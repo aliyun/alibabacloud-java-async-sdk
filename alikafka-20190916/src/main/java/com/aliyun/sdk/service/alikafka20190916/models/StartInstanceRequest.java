@@ -1,99 +1,108 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartInstanceRequest} extends {@link RequestModel}
  *
  * <p>StartInstanceRequest</p>
  */
 public class StartInstanceRequest extends Request {
-    @Query
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Query
-    @NameInMap("CrossZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossZone")
     private Boolean crossZone;
 
-    @Query
-    @NameInMap("DeployModule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployModule")
     private String deployModule;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsEipInner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsEipInner")
     private Boolean isEipInner;
 
-    @Query
-    @NameInMap("IsForceSelectedZones")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsForceSelectedZones")
     private Boolean isForceSelectedZones;
 
-    @Query
-    @NameInMap("IsSetUserAndPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSetUserAndPassword")
     private Boolean isSetUserAndPassword;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Notifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Notifier")
     private String notifier;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SecurityGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroup")
     private String securityGroup;
 
-    @Query
-    @NameInMap("SelectedZones")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedZones")
     private String selectedZones;
 
-    @Query
-    @NameInMap("ServiceVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceVersion")
     private String serviceVersion;
 
-    @Query
-    @NameInMap("UserPhoneNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPhoneNum")
     private String userPhoneNum;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private StartInstanceRequest(Builder builder) {
@@ -116,6 +125,7 @@ public class StartInstanceRequest extends Request {
         this.userPhoneNum = builder.userPhoneNum;
         this.username = builder.username;
         this.vSwitchId = builder.vSwitchId;
+        this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
     }
@@ -260,6 +270,13 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
+     * @return vSwitchIds
+     */
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -292,6 +309,7 @@ public class StartInstanceRequest extends Request {
         private String userPhoneNum; 
         private String username; 
         private String vSwitchId; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
         private String zoneId; 
 
@@ -319,31 +337,41 @@ public class StartInstanceRequest extends Request {
             this.userPhoneNum = request.userPhoneNum;
             this.username = request.username;
             this.vSwitchId = request.vSwitchId;
+            this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * The initial configuration of the instance. The value must be a valid JSON string.
-         * <p>
+         * <p>The initial configurations of the ApsaraMQ for Kafka instance. The values must be valid JSON strings. If you do not specify this parameter, it is left empty.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You cannot configure this parameter when you deploy an ApsaraMQ for Confluent instance.</li>
+         * <li>You cannot configure enable.acl for instances whose versions are earlier than 2.2.0.</li>
+         * </ul>
+         * </blockquote>
+         * <p>The <strong>Config</strong> parameter supports the following parameters:</p>
+         * <ul>
+         * <li><p><strong>enable.vpc_sasl_ssl</strong>: specifies whether to enable VPC transmission encryption. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables VPC transmission encryption. If you enable VPC transmission encryption, you must also enable access control list (ACL).</li>
+         * <li><strong>false</strong>: disables VPC transmission encryption. This is the default value.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>enable.acl</strong>: specifies whether to enable ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables ACL.</li>
+         * <li><strong>false</strong>: disables the ACL feature. This is the default value.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>kafka.log.retention.hours</strong>: the maximum message retention period when the disk capacity is sufficient. Unit: hours. Valid values: 24 to 480. Default value: <strong>72</strong>. When the disk usage reaches 85%, the disk capacity is insufficient. In this case, the system deletes the earliest stored messages to ensure service availability.</p>
+         * </li>
+         * <li><p><strong>kafka.message.max.bytes</strong>: the maximum size of a message that can be sent and received by ApsaraMQ for Kafka. Unit: bytes. Valid values: 1048576 to 10485760. Default value: <strong>1048576</strong>. Before you change the maximum message size to a new value, make sure that the new value matches the configurations of the producers and consumers.</p>
+         * </li>
+         * </ul>
          * 
-         * If you do not specify a value for this parameter, the value is left empty by default.
-         * 
-         * The following parameters can be configured for **Config**:
-         * 
-         * *   **enable.vpc_sasl_ssl**: specifies whether to enable VPC transmission encryption. Valid values:
-         * 
-         *     *   **true**: enables VPC transmission encryption. If VPC transmission encryption is enabled, you must also enable the access control list (ACL) feature.
-         *     *   **false**: disables VPC transmission encryption. This is the default value.
-         * 
-         * *   **enable.acl**: specifies whether to enable ACL. Valid values:
-         * 
-         *     *   **true**: enables the ACL feature.
-         *     *   **false**: disables the ACL feature. This is the default value.
-         * 
-         * *   **kafka.log.retention.hours**: the maximum period for which messages can be retained when the remaining disk space is sufficient. Unit: hours. Valid values: 24 to 480. Default value: **72**. When the disk usage reaches 85%, the system deletes messages in the order in which they are stored, starting from the earliest stored message. This ensures that the performance of the service is not degraded.
-         * 
-         * *   **kafka.message.max.bytes**: the maximum size of messages that Message Queue for Apache Kafka can send and receive. Unit: bytes. Valid values: 1048576 to 10485760. Default value: **1048576**. Before you change the maximum message size to a new value, make sure that the new value matches the configuration on the producers and consumers in the instance.
+         * <strong>example:</strong>
+         * <p>{&quot;kafka.log.retention.hours&quot;:&quot;33&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -352,7 +380,15 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * CrossZone.
+         * <p>Specifies whether cross-zone deployment is required. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder crossZone(Boolean crossZone) {
             this.putQueryParameter("CrossZone", crossZone);
@@ -361,13 +397,15 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The deployment mode of the instance. Valid values:
-         * <p>
+         * <p>The deployment mode. If the instance is an ApsaraMQ for Kafka V2 instance, this parameter is required. If the instance is an ApsaraMQ for Kafka V3 instance or an ApsaraMQ for Confluent instance, this parameter is optional. Valid values:</p>
+         * <ul>
+         * <li><strong>vpc</strong>: deploys the instance in a virtual private cloud (VPC).</li>
+         * <li><strong>eip</strong>: deploys the instance over the Internet and in the VPC.</li>
+         * </ul>
+         * <p>The deployment mode of the ApsaraMQ for Kafka instance must be consistent with the instance type. If the instance is a VPC-connected instance, set this parameter to <strong>vpc</strong>. If the instance is an Internet- and VPC-connected instance, set this parameter to <strong>eip</strong>.</p>
          * 
-         * *   **vpc**: deploys the instance that allows access only from a VPC.
-         * *   **eip**: deploys the instance that allows access from the Internet and a VPC.
-         * 
-         * The deployment mode of the instance must match the type of the instance. If the instance allows access only from a VPC, set the value to **vpc**. If the instance allows access from the Internet and a VPC, set the value to **eip**.
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder deployModule(String deployModule) {
             this.putQueryParameter("DeployModule", deployModule);
@@ -376,7 +414,11 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -385,13 +427,15 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance supports elastic IP addresses (EIPs). Valid values:
-         * <p>
+         * <p>Specifies whether the instance supports elastic IP addresses (EIPs). Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: supports EIPs and allows access from the Internet and a VPC.</li>
+         * <li><strong>false</strong>: does not support EIPs and allows access only from a VPC.</li>
+         * </ul>
+         * <p>The value of this parameter must match the type of the instance. For example, if the instance allows access only from a VPC, set this parameter to <strong>false</strong>.</p>
          * 
-         * *   **true**: supports EIPs and allows access from the Internet and a VPC.
-         * *   **false**: does not support EIPs and allows access only from a VPC.
-         * 
-         * The value of this parameter must match the type of the instance. For example, if the instance allows access only from a VPC, set this parameter to **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isEipInner(Boolean isEipInner) {
             this.putQueryParameter("IsEipInner", isEipInner);
@@ -400,7 +444,10 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly deploy the instance in the selected zones.
+         * <p>Specifies whether to forcibly deploy the instance in the selected zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isForceSelectedZones(Boolean isForceSelectedZones) {
             this.putQueryParameter("IsForceSelectedZones", isForceSelectedZones);
@@ -409,13 +456,15 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to set a new username and password. Valid values:
-         * <p>
+         * <p>Specifies whether to set a new username and password. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sets a new username and password.</li>
+         * <li><strong>false</strong>: does not set a new username or password.</li>
+         * </ul>
+         * <p>This parameter is available only if you deploy an instance that allows access from the Internet and a VPC.</p>
          * 
-         * *   **true**: sets a new username and password.
-         * *   **false**: does not set a new username or password.
-         * 
-         * This parameter is available only if you deploy an instance that allows access from the Internet and a VPC.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSetUserAndPassword(Boolean isSetUserAndPassword) {
             this.putQueryParameter("IsSetUserAndPassword", isSetUserAndPassword);
@@ -424,10 +473,14 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the key that is used for disk encryption in the region where the instance is deployed. You can obtain the ID of the key in the [Key Management Service (KMS) console](https://kms.console.aliyun.com/?spm=a2c4g.11186623.2.5.336745b8hfiU21) or create a key. For more information, see [Manage CMKs](~~181610~~).
-         * <p>
+         * <p>The ID of the key that is used for disk encryption in the region where the instance is deployed. You can obtain the ID of the key in the <a href="https://kms.console.aliyun.com/?spm=a2c4g.11186623.2.5.336745b8hfiU21">Key Management Service (KMS) console</a> or create a key. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Manage CMKs</a>.</p>
+         * <p>If this parameter is configured, disk encryption is enabled for the instance. You cannot disable disk encryption after disk encryption is enabled. When you call this operation, the system checks whether the AliyunServiceRoleForAlikafkaInstanceEncryption service-linked role is created. If the role is not created, the system automatically creates the role. For more information, see <a href="https://help.aliyun.com/document_detail/190460.html">Service-linked roles</a>.</p>
+         * <blockquote>
+         * <p>When you deploy a serverless ApsaraMQ for Kafka V3 instance, you cannot configure this parameter.</p>
+         * </blockquote>
          * 
-         * If this parameter is configured, disk encryption is enabled for the instance. You cannot disable disk encryption after disk encryption is enabled. When you call this operation, the system checks whether the AliyunServiceRoleForAlikafkaInstanceEncryption service-linked role is created. If the role is not created, the system automatically creates the role. For more information, see [Service-linked roles](~~190460~~).
+         * <strong>example:</strong>
+         * <p>0d24xxxx-da7b-4786-b981-9a164dxxxxxx</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -436,10 +489,13 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
-         * <p>
+         * <p>The name of the instance.</p>
+         * <blockquote>
+         * <p> If you specify a value for this parameter, make sure that the specified value is unique in the region of the instance.</p>
+         * </blockquote>
          * 
-         * >  If you specify a value for this parameter, make sure that the specified value is unique in the region of the instance.
+         * <strong>example:</strong>
+         * <p>newInstanceName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -448,7 +504,10 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The alert contact.
+         * <p>The alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mr. Wang</p>
          */
         public Builder notifier(String notifier) {
             this.putQueryParameter("Notifier", notifier);
@@ -457,10 +516,14 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The password that corresponds to the username.
-         * <p>
+         * <p>The instance password.</p>
+         * <ul>
+         * <li>This parameter is available only for Internet- and VPC- connected ApsaraMQ for Kafka V2 and V3 instances.</li>
+         * <li>If the instance is an ApsaraMQ for Confluent instance, this parameter is required. The value of this parameter must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: ! @ # $ % ^ &amp; * () _ + - =</li>
+         * </ul>
          * 
-         * This parameter is available only if you deploy an instance that allows access from the Internet and a VPC.
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -469,7 +532,11 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -478,10 +545,11 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The security group of the instance.
-         * <p>
+         * <p>The security group of the instance.</p>
+         * <p>If you do not specify this parameter, ApsaraMQ for Kafka automatically configures a security group for your instance. If you specify this parameter, you must create a security group in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25468.html">Create a security group</a>.</p>
          * 
-         * If you do not configure this parameter, Message Queue for Apache Kafka automatically configures a security group for the instance. If you want to configure this parameter, you must create a security group for the instance in advance. For more information, see [Create a security group](~~25468~~).
+         * <strong>example:</strong>
+         * <p>sg-bp13wfx7kz9pko****</p>
          */
         public Builder securityGroup(String securityGroup) {
             this.putQueryParameter("SecurityGroup", securityGroup);
@@ -490,7 +558,19 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The zones among which you want to deploy the instance.
+         * <p>The two-dimensional arrays that consist of the candidate set for primary zones and the candidate set for secondary zones. Custom code in the <code>zone {zone}</code> format and standard code in the <code>cn-RegionID-{zone}</code> format are supported.</p>
+         * <ul>
+         * <li>If you set CrossZone to true and specify Zone H and Zone F as the candidate set for primary zones and Zone K as the candidate set for secondary zones, set this parameter to <code>[[&quot;zoneh&quot;,&quot;zonef&quot;],[&quot;zonek&quot;]]</code>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you specify multiple zones as the primary or secondary zones, the system deploys the instance in one of the zones without prioritizing them. For example, if you set this parameter to <code>[[&quot;zoneh&quot;,&quot;zonef&quot;],[&quot;zonek&quot;]]</code>, the primary zone in which the instance is deployed can be Zone H or Zone F, and the secondary zone is Zone K.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If you set CrossZone to false and want to deploy the instance in Zone K, set this parameter to <code>[[&quot;zonek&quot;],[]]</code>. In this case, the value of this parameter must still be two-dimensional arrays, but the array that specifies the candidate for secondary zones is left empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[[&quot;zonel&quot;],[&quot;zonek&quot;]]</p>
          */
         public Builder selectedZones(String selectedZones) {
             this.putQueryParameter("SelectedZones", selectedZones);
@@ -499,7 +579,23 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The version number of the instance. Valid values: 0.10.2 and 2.2.0.
+         * <p>The version of the ApsaraMQ for Kafka instance. Valid values:</p>
+         * <ul>
+         * <li>ApsaraMQ for Kafka V2 instances: 2.2.0 and 2.6.2.</li>
+         * <li>ApsaraMQ for Kafka V3 instances: 3.3.1.</li>
+         * <li>ApsaraMQ for Confluent instances: 7.4.0.</li>
+         * </ul>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>ApsaraMQ for Kafka V2 instances: 2.2.0.</li>
+         * <li>ApsaraMQ for Kafka V3 instances: 3.3.1.</li>
+         * <li>ApsaraMQ for Confluent instances: 7.4.0.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraMQ for Kafka V2 instances: 2.2.0
+         * ApsaraMQ for Kafka V3 instances: 3.3.1
+         * ApsaraMQ for Confluent instances: 7.4.0</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -508,7 +604,10 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The mobile phone number of the alert contact.
+         * <p>The mobile phone number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581234****</p>
          */
         public Builder userPhoneNum(String userPhoneNum) {
             this.putQueryParameter("UserPhoneNum", userPhoneNum);
@@ -517,10 +616,15 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The username that is used to access the instance.
-         * <p>
+         * <p>The instance username.</p>
+         * <ul>
+         * <li>This parameter is available only for Internet- and VPC- connected ApsaraMQ for Kafka V2 and V3 instances.</li>
+         * <li>If the instance is an ApsaraMQ for Confluent instance, set this parameter to root or leave this parameter empty.</li>
+         * </ul>
+         * <p>Default value for ApsaraMQ for Kafka V2 and V3 instances: username. Default value for ApsaraMQ for Confluent instances: root.</p>
          * 
-         * This parameter is available only if you deploy an instance that allows access from the Internet and a VPC.
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -529,7 +633,11 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which you want to connect the instance.
+         * <p>The ID of the vSwitch to which you want to connect the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1j3sg5979fstnpl****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -538,7 +646,20 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) in which you want to deploy the instance.
+         * <p>The IDs of the vSwitches with which the instance is associated. If the instance is an ApsaraMQ for Kafka V2 or V3 instance, this parameter is required. If the instance is an ApsaraMQ for Confluent instance, you must configure one of VSwitchIds and VSwitchId. If you configure both of the parameters, the value of VSwitchIds takes effect.</p>
+         */
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+            this.putQueryParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the virtual private cloud (VPC) in which you want to deploy the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1r4eg3yrxmygv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -547,11 +668,17 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which you want to deploy the instance.
-         * <p>
+         * <p>The ID of the zone where you want to deploy the ApsaraMQ for Kafka instance.</p>
+         * <ul>
+         * <li>The zone ID of the ApsaraMQ for Kafka instance must be the same as that of the vSwitch.</li>
+         * <li>The value must be in the zoneX or Region ID-X format. Examples: zonea and cn-hangzhou-k.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If resources in the specified zone is insufficient, the instance may be deployed in another zone.</p>
+         * </blockquote>
          * 
-         * *   The zone ID of the instance must be the same as that of the vSwitch.
-         * *   The value must be in the format of zoneX or Region ID-X. For example, you can set this parameter to zonea or cn-hangzhou-k.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

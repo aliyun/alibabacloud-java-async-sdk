@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrganizationalUnitRequest} extends {@link RequestModel}
  *
  * <p>CreateOrganizationalUnitRequest</p>
  */
 public class CreateOrganizationalUnitRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrganizationalUnitExternalId")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitExternalId")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String organizationalUnitExternalId;
 
-    @Query
-    @NameInMap("OrganizationalUnitName")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String organizationalUnitName;
 
-    @Query
-    @NameInMap("ParentId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String parentId;
 
     private CreateOrganizationalUnitRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The description of the organization. The value can be up to 256 characters in length.
+         * <p>The description of the organization. The value can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -147,7 +155,11 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +168,10 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The external ID of the organization, which can be used to associate the organization with an external system. By default, the external ID is the organization ID. The value can be up to 64 characters in length.
+         * <p>The external ID of the organization, which can be used to associate the organization with an external system. By default, the external ID is the organization ID. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
             this.putQueryParameter("OrganizationalUnitExternalId", organizationalUnitExternalId);
@@ -165,7 +180,11 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The name of the organization. The name can be up to 64 characters in length.
+         * <p>The name of the organization. The name can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_ou_name</p>
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putQueryParameter("OrganizationalUnitName", organizationalUnitName);
@@ -174,7 +193,11 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The parent organization ID.
+         * <p>The parent organization ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CustomDNS} extends {@link TeaModel}
  *
  * <p>CustomDNS</p>
  */
 public class CustomDNS extends TeaModel {
-    @NameInMap("dnsOptions")
+    @com.aliyun.core.annotation.NameInMap("dnsOptions")
     private java.util.List < DNSOption > dnsOptions;
 
-    @NameInMap("nameServers")
+    @com.aliyun.core.annotation.NameInMap("nameServers")
     private java.util.List < String > nameServers;
 
-    @NameInMap("searches")
+    @com.aliyun.core.annotation.NameInMap("searches")
     private java.util.List < String > searches;
 
     private CustomDNS(Builder builder) {

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableMetricRequest} extends {@link RequestModel}
  *
  * <p>EnableMetricRequest</p>
  */
 public class EnableMetricRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DropMetric")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DropMetric")
     private String dropMetric;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private EnableMetricRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class EnableMetricRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccfa5e34a5c1f4ce6b916a40a12151d88</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +102,10 @@ public class EnableMetricRequest extends Request {
         }
 
         /**
-         * Enable metric name.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube_pod_container_status_ready</p>
          */
         public Builder dropMetric(String dropMetric) {
             this.putQueryParameter("DropMetric", dropMetric);
@@ -102,7 +114,11 @@ public class EnableMetricRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

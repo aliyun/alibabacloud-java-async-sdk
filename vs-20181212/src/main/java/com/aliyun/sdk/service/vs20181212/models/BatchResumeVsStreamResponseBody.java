@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchResumeVsStreamResponseBody} extends {@link TeaModel}
  *
  * <p>BatchResumeVsStreamResponseBody</p>
  */
 public class BatchResumeVsStreamResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResumeResult")
+    @com.aliyun.core.annotation.NameInMap("ResumeResult")
     private ResumeResult resumeResult;
 
     private BatchResumeVsStreamResponseBody(Builder builder) {
@@ -71,9 +76,15 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchResumeVsStreamResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchResumeVsStreamResponseBody</p>
+     */
     public static class Channels extends TeaModel {
-        @NameInMap("Channel")
-        private java.util.List < String > channel;
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private java.util.List<String> channel;
 
         private Channels(Builder builder) {
             this.channel = builder.channel;
@@ -90,17 +101,17 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         /**
          * @return channel
          */
-        public java.util.List < String > getChannel() {
+        public java.util.List<String> getChannel() {
             return this.channel;
         }
 
         public static final class Builder {
-            private java.util.List < String > channel; 
+            private java.util.List<String> channel; 
 
             /**
              * Channel.
              */
-            public Builder channel(java.util.List < String > channel) {
+            public Builder channel(java.util.List<String> channel) {
                 this.channel = channel;
                 return this;
             }
@@ -112,17 +123,23 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchResumeVsStreamResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchResumeVsStreamResponseBody</p>
+     */
     public static class ResumeResultInfo extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
         private ResumeResultInfo(Builder builder) {
@@ -213,9 +230,15 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchResumeVsStreamResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchResumeVsStreamResponseBody</p>
+     */
     public static class ResumeResult extends TeaModel {
-        @NameInMap("ResumeResultInfo")
-        private java.util.List < ResumeResultInfo> resumeResultInfo;
+        @com.aliyun.core.annotation.NameInMap("ResumeResultInfo")
+        private java.util.List<ResumeResultInfo> resumeResultInfo;
 
         private ResumeResult(Builder builder) {
             this.resumeResultInfo = builder.resumeResultInfo;
@@ -232,17 +255,17 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         /**
          * @return resumeResultInfo
          */
-        public java.util.List < ResumeResultInfo> getResumeResultInfo() {
+        public java.util.List<ResumeResultInfo> getResumeResultInfo() {
             return this.resumeResultInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ResumeResultInfo> resumeResultInfo; 
+            private java.util.List<ResumeResultInfo> resumeResultInfo; 
 
             /**
              * ResumeResultInfo.
              */
-            public Builder resumeResultInfo(java.util.List < ResumeResultInfo> resumeResultInfo) {
+            public Builder resumeResultInfo(java.util.List<ResumeResultInfo> resumeResultInfo) {
                 this.resumeResultInfo = resumeResultInfo;
                 return this;
             }

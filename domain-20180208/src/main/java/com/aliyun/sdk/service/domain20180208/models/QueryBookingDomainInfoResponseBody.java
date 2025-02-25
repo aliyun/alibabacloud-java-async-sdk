@@ -1,36 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBookingDomainInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBookingDomainInfoResponseBody</p>
  */
 public class QueryBookingDomainInfoResponseBody extends TeaModel {
-    @NameInMap("AuctionId")
+    @com.aliyun.core.annotation.NameInMap("AuctionId")
     private Integer auctionId;
 
-    @NameInMap("BookEndTime")
+    @com.aliyun.core.annotation.NameInMap("BookEndTime")
     private Long bookEndTime;
 
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("MaxBid")
+    @com.aliyun.core.annotation.NameInMap("MaxBid")
     private Float maxBid;
 
-    @NameInMap("PartnerType")
+    @com.aliyun.core.annotation.NameInMap("PartnerType")
     private String partnerType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TransferInPrice")
+    @com.aliyun.core.annotation.NameInMap("SnatchNo")
+    private String snatchNo;
+
+    @com.aliyun.core.annotation.NameInMap("TransferInPrice")
     private Float transferInPrice;
 
     private QueryBookingDomainInfoResponseBody(Builder builder) {
@@ -40,6 +48,7 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
         this.maxBid = builder.maxBid;
         this.partnerType = builder.partnerType;
         this.requestId = builder.requestId;
+        this.snatchNo = builder.snatchNo;
         this.transferInPrice = builder.transferInPrice;
     }
 
@@ -94,6 +103,13 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return snatchNo
+     */
+    public String getSnatchNo() {
+        return this.snatchNo;
+    }
+
+    /**
      * @return transferInPrice
      */
     public Float getTransferInPrice() {
@@ -107,6 +123,7 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
         private Float maxBid; 
         private String partnerType; 
         private String requestId; 
+        private String snatchNo; 
         private Float transferInPrice; 
 
         /**
@@ -154,6 +171,14 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SnatchNo.
+         */
+        public Builder snatchNo(String snatchNo) {
+            this.snatchNo = snatchNo;
             return this;
         }
 

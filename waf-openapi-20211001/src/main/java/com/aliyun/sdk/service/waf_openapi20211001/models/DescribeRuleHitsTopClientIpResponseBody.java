@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRuleHitsTopClientIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRuleHitsTopClientIpResponseBody</p>
  */
 public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleHitsTopClientIp")
-    private java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp;
+    @com.aliyun.core.annotation.NameInMap("RuleHitsTopClientIp")
+    private java.util.List<RuleHitsTopClientIp> ruleHitsTopClientIp;
 
     private DescribeRuleHitsTopClientIpResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     /**
      * @return ruleHitsTopClientIp
      */
-    public java.util.List < RuleHitsTopClientIp> getRuleHitsTopClientIp() {
+    public java.util.List<RuleHitsTopClientIp> getRuleHitsTopClientIp() {
         return this.ruleHitsTopClientIp;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp; 
+        private java.util.List<RuleHitsTopClientIp> ruleHitsTopClientIp; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F0F9AD6-62E2-50BB-A3E5-30FFB9410262</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         }
 
         /**
-         * The array of the top 10 IP addresses from which attacks are initiated.
+         * <p>The array of the top 10 IP addresses from which attacks are initiated.</p>
          */
-        public Builder ruleHitsTopClientIp(java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp) {
+        public Builder ruleHitsTopClientIp(java.util.List<RuleHitsTopClientIp> ruleHitsTopClientIp) {
             this.ruleHitsTopClientIp = ruleHitsTopClientIp;
             return this;
         }
@@ -71,11 +79,17 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRuleHitsTopClientIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRuleHitsTopClientIpResponseBody</p>
+     */
     public static class RuleHitsTopClientIp extends TeaModel {
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
         private RuleHitsTopClientIp(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * The IP address of the service client.
+             * <p>The IP address of the service client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.3.XX.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -118,7 +135,10 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
             }
 
             /**
-             * The number of attacks that are initiated from the IP address.
+             * <p>The number of attacks that are initiated from the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>531</p>
              */
             public Builder count(Long count) {
                 this.count = count;

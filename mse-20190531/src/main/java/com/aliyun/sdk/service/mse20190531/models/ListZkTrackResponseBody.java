@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListZkTrackResponseBody} extends {@link TeaModel}
  *
  * <p>ListZkTrackResponseBody</p>
  */
 public class ListZkTrackResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Traces")
-    private java.util.List < Traces> traces;
+    @com.aliyun.core.annotation.NameInMap("Traces")
+    private java.util.List<Traces> traces;
 
     private ListZkTrackResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -118,7 +123,7 @@ public class ListZkTrackResponseBody extends TeaModel {
     /**
      * @return traces
      */
-    public java.util.List < Traces> getTraces() {
+    public java.util.List<Traces> getTraces() {
         return this.traces;
     }
 
@@ -131,10 +136,13 @@ public class ListZkTrackResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
-        private java.util.List < Traces> traces; 
+        private java.util.List<Traces> traces; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +150,10 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -150,7 +161,10 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +172,10 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +183,10 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -174,7 +194,10 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,11 +205,14 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +220,10 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -202,9 +231,9 @@ public class ListZkTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The track data.
+         * <p>The track data.</p>
          */
-        public Builder traces(java.util.List < Traces> traces) {
+        public Builder traces(java.util.List<Traces> traces) {
             this.traces = traces;
             return this;
         }
@@ -215,47 +244,53 @@ public class ListZkTrackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListZkTrackResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListZkTrackResponseBody</p>
+     */
     public static class Traces extends TeaModel {
-        @NameInMap("Acl")
+        @com.aliyun.core.annotation.NameInMap("Acl")
         private String acl;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Finished")
+        @com.aliyun.core.annotation.NameInMap("Finished")
         private Boolean finished;
 
-        @NameInMap("LogDate")
+        @com.aliyun.core.annotation.NameInMap("LogDate")
         private String logDate;
 
-        @NameInMap("MultiSize")
+        @com.aliyun.core.annotation.NameInMap("MultiSize")
         private Long multiSize;
 
-        @NameInMap("OpType")
+        @com.aliyun.core.annotation.NameInMap("OpType")
         private String opType;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("TraceType")
+        @com.aliyun.core.annotation.NameInMap("TraceType")
         private String traceType;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Long ttl;
 
-        @NameInMap("Watch")
+        @com.aliyun.core.annotation.NameInMap("Watch")
         private Boolean watch;
 
         private Traces(Builder builder) {
@@ -398,7 +433,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             private Boolean watch; 
 
             /**
-             * The access control list (ACL).
+             * <p>The access control list (ACL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>world:anyone:cdrwa</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -406,11 +444,14 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The data type. Valid values:
-             * <p>
+             * <p>The data type. Valid values:</p>
+             * <ul>
+             * <li>persist</li>
+             * <li>ephemeral</li>
+             * </ul>
              * 
-             * *   persist
-             * *   ephemeral
+             * <strong>example:</strong>
+             * <p>persist</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -418,13 +459,16 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. For trajectory of the Notify type:
-             * <p>
+             * <p>The type of the event. For trajectory of the Notify type:</p>
+             * <ul>
+             * <li>NodeCreated</li>
+             * <li>NodeDeleted</li>
+             * <li>NodeDataChanged</li>
+             * <li>NodeChildrenChanged</li>
+             * </ul>
              * 
-             * *   NodeCreated
-             * *   NodeDeleted
-             * *   NodeDataChanged
-             * *   NodeChildrenChanged
+             * <strong>example:</strong>
+             * <p>NodeCreated</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -432,7 +476,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the transaction ended.
+             * <p>Indicates whether the transaction ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder finished(Boolean finished) {
                 this.finished = finished;
@@ -440,7 +487,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The logging time.
+             * <p>The logging time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-28 15:09:15,606</p>
              */
             public Builder logDate(String logDate) {
                 this.logDate = logDate;
@@ -448,7 +498,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction size.
+             * <p>The transaction size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder multiSize(Long multiSize) {
                 this.multiSize = multiSize;
@@ -456,20 +509,23 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operation. For trajectory of the Push type:
-             * <p>
+             * <p>The type of the operation. For trajectory of the Push type:</p>
+             * <ul>
+             * <li>Create</li>
+             * <li>Update</li>
+             * <li>Delete</li>
+             * <li>SetAcl</li>
+             * <li>Multi</li>
+             * </ul>
+             * <p>For trajectory of the Pull type:</p>
+             * <ul>
+             * <li>GetData</li>
+             * <li>GetChild</li>
+             * <li>GetStat</li>
+             * </ul>
              * 
-             * *   Create
-             * *   Update
-             * *   Delete
-             * *   SetAcl
-             * *   Multi
-             * 
-             * For trajectory of the Pull type:
-             * 
-             * *   GetData
-             * *   GetChild
-             * *   GetStat
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -477,7 +533,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -485,7 +544,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -493,7 +555,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The session ID.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x301fdfbdbf00***</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -501,7 +566,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp. It is not available.
+             * <p>The timestamp. It is not available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669619383000</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -509,12 +577,15 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the trajectory. Valid values:
-             * <p>
+             * <p>The type of the trajectory. Valid values:</p>
+             * <ul>
+             * <li>Push</li>
+             * <li>Pull</li>
+             * <li>Notify</li>
+             * </ul>
              * 
-             * *   Push
-             * *   Pull
-             * *   Notify
+             * <strong>example:</strong>
+             * <p>Push</p>
              */
             public Builder traceType(String traceType) {
                 this.traceType = traceType;
@@ -522,7 +593,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The time to live (TTL).
+             * <p>The time to live (TTL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -530,7 +604,10 @@ public class ListZkTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitoring feature is enabled.
+             * <p>Indicates whether the monitoring feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder watch(Boolean watch) {
                 this.watch = watch;

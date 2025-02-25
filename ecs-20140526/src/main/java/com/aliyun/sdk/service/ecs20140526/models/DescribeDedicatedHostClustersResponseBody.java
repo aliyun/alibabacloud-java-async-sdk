@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedHostClustersResponseBody</p>
  */
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostClusters")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusters")
     private DedicatedHostClusters dedicatedHostClusters;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDedicatedHostClustersResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the dedicated host clusters.
+         * <p>An array consisting of host group information.</p>
          */
         public Builder dedicatedHostClusters(DedicatedHostClusters dedicatedHostClusters) {
             this.dedicatedHostClusters = dedicatedHostClusters;
@@ -94,7 +99,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>214A2187-B06F-4E49-A081-4D053466A8C7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of dedicated host clusters.
+         * <p>The total number of dedicated host clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class AvailableInstanceType extends TeaModel {
-        @NameInMap("AvailableInstanceCapacity")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceCapacity")
         private Integer availableInstanceCapacity;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private AvailableInstanceType(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * The available capacity of the ECS instance type.
+             * <p>The available capacity of the ECS instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder availableInstanceCapacity(Integer availableInstanceCapacity) {
                 this.availableInstanceCapacity = availableInstanceCapacity;
@@ -178,7 +204,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance type.
+             * <p>The ECS instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c6.26xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -192,9 +221,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class AvailableInstanceTypes extends TeaModel {
-        @NameInMap("AvailableInstanceType")
-        private java.util.List < AvailableInstanceType> availableInstanceType;
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceType")
+        private java.util.List<AvailableInstanceType> availableInstanceType;
 
         private AvailableInstanceTypes(Builder builder) {
             this.availableInstanceType = builder.availableInstanceType;
@@ -211,17 +246,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return availableInstanceType
          */
-        public java.util.List < AvailableInstanceType> getAvailableInstanceType() {
+        public java.util.List<AvailableInstanceType> getAvailableInstanceType() {
             return this.availableInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableInstanceType> availableInstanceType; 
+            private java.util.List<AvailableInstanceType> availableInstanceType; 
 
             /**
              * AvailableInstanceType.
              */
-            public Builder availableInstanceType(java.util.List < AvailableInstanceType> availableInstanceType) {
+            public Builder availableInstanceType(java.util.List<AvailableInstanceType> availableInstanceType) {
                 this.availableInstanceType = availableInstanceType;
                 return this;
             }
@@ -233,14 +268,20 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class LocalStorageCapacity extends TeaModel {
-        @NameInMap("AvailableDisk")
+        @com.aliyun.core.annotation.NameInMap("AvailableDisk")
         private Integer availableDisk;
 
-        @NameInMap("DataDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
         private String dataDiskCategory;
 
-        @NameInMap("TotalDisk")
+        @com.aliyun.core.annotation.NameInMap("TotalDisk")
         private Integer totalDisk;
 
         private LocalStorageCapacity(Builder builder) {
@@ -284,7 +325,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             private Integer totalDisk; 
 
             /**
-             * The available capacity of the local disk. Unit: GiB.
+             * <p>The available capacity of the local disk. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder availableDisk(Integer availableDisk) {
                 this.availableDisk = availableDisk;
@@ -292,14 +336,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the data disk. Valid values:
-             * <p>
+             * <p>The category of data disks. Valid values:</p>
+             * <ul>
+             * <li>cloud: basic disk</li>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>ephemeral_ssd: local SSD</li>
+             * <li>cloud_essd: Enterprise SSD (ESSD)</li>
+             * </ul>
              * 
-             * - cloud: basic disk
-             * - cloud_efficiency: ultra disk
-             * - cloud_ssd: standard SSD
-             * - ephemeral_ssd: local SSD
-             * - cloud_essd: enhanced SSD (ESSD)
+             * <strong>example:</strong>
+             * <p>cloud</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -307,7 +354,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the local disk. Unit: GiB.
+             * <p>The total capacity of the local disk. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder totalDisk(Integer totalDisk) {
                 this.totalDisk = totalDisk;
@@ -321,9 +371,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class LocalStorageCapacities extends TeaModel {
-        @NameInMap("LocalStorageCapacity")
-        private java.util.List < LocalStorageCapacity> localStorageCapacity;
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCapacity")
+        private java.util.List<LocalStorageCapacity> localStorageCapacity;
 
         private LocalStorageCapacities(Builder builder) {
             this.localStorageCapacity = builder.localStorageCapacity;
@@ -340,17 +396,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return localStorageCapacity
          */
-        public java.util.List < LocalStorageCapacity> getLocalStorageCapacity() {
+        public java.util.List<LocalStorageCapacity> getLocalStorageCapacity() {
             return this.localStorageCapacity;
         }
 
         public static final class Builder {
-            private java.util.List < LocalStorageCapacity> localStorageCapacity; 
+            private java.util.List<LocalStorageCapacity> localStorageCapacity; 
 
             /**
              * LocalStorageCapacity.
              */
-            public Builder localStorageCapacity(java.util.List < LocalStorageCapacity> localStorageCapacity) {
+            public Builder localStorageCapacity(java.util.List<LocalStorageCapacity> localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
                 return this;
             }
@@ -362,23 +418,29 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class DedicatedHostClusterCapacity extends TeaModel {
-        @NameInMap("AvailableInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceTypes")
         private AvailableInstanceTypes availableInstanceTypes;
 
-        @NameInMap("AvailableMemory")
+        @com.aliyun.core.annotation.NameInMap("AvailableMemory")
         private Integer availableMemory;
 
-        @NameInMap("AvailableVcpus")
+        @com.aliyun.core.annotation.NameInMap("AvailableVcpus")
         private Integer availableVcpus;
 
-        @NameInMap("LocalStorageCapacities")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCapacities")
         private LocalStorageCapacities localStorageCapacities;
 
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Integer totalMemory;
 
-        @NameInMap("TotalVcpus")
+        @com.aliyun.core.annotation.NameInMap("TotalVcpus")
         private Integer totalVcpus;
 
         private DedicatedHostClusterCapacity(Builder builder) {
@@ -449,7 +511,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             private Integer totalVcpus; 
 
             /**
-             * The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.
+             * <p>The available capacity of ECS instances in the host group.</p>
              */
             public Builder availableInstanceTypes(AvailableInstanceTypes availableInstanceTypes) {
                 this.availableInstanceTypes = availableInstanceTypes;
@@ -457,7 +519,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The size of available memory. Unit: GiB.
+             * <p>The size of available memory. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder availableMemory(Integer availableMemory) {
                 this.availableMemory = availableMemory;
@@ -465,7 +530,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available vCPUs.
+             * <p>The number of available vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder availableVcpus(Integer availableVcpus) {
                 this.availableVcpus = availableVcpus;
@@ -473,7 +541,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The local storage capacity.
+             * <p>The local storage capacity.</p>
              */
             public Builder localStorageCapacities(LocalStorageCapacities localStorageCapacities) {
                 this.localStorageCapacities = localStorageCapacities;
@@ -481,7 +549,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total memory size. Unit: GiB.
+             * <p>The total memory size. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalMemory(Integer totalMemory) {
                 this.totalMemory = totalMemory;
@@ -489,7 +560,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vCPUs.
+             * <p>The total number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalVcpus(Integer totalVcpus) {
                 this.totalVcpus = totalVcpus;
@@ -503,9 +577,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class DedicatedHostIds extends TeaModel {
-        @NameInMap("DedicatedHostId")
-        private java.util.List < String > dedicatedHostId;
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
+        private java.util.List<String> dedicatedHostId;
 
         private DedicatedHostIds(Builder builder) {
             this.dedicatedHostId = builder.dedicatedHostId;
@@ -522,17 +602,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return dedicatedHostId
          */
-        public java.util.List < String > getDedicatedHostId() {
+        public java.util.List<String> getDedicatedHostId() {
             return this.dedicatedHostId;
         }
 
         public static final class Builder {
-            private java.util.List < String > dedicatedHostId; 
+            private java.util.List<String> dedicatedHostId; 
 
             /**
              * DedicatedHostId.
              */
-            public Builder dedicatedHostId(java.util.List < String > dedicatedHostId) {
+            public Builder dedicatedHostId(java.util.List<String> dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
                 return this;
             }
@@ -544,11 +624,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -583,7 +669,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the dedicated host cluster.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -591,7 +680,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the dedicated host cluster.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -605,9 +697,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -624,17 +722,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -646,32 +744,38 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class DedicatedHostCluster extends TeaModel {
-        @NameInMap("DedicatedHostClusterCapacity")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterCapacity")
         private DedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
-        @NameInMap("DedicatedHostClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
 
-        @NameInMap("DedicatedHostClusterName")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterName")
         private String dedicatedHostClusterName;
 
-        @NameInMap("DedicatedHostIds")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostIds")
         private DedicatedHostIds dedicatedHostIds;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DedicatedHostCluster(Builder builder) {
@@ -769,7 +873,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The capacity of the dedicated host cluster.
+             * <p>The capacity of the host group.</p>
              */
             public Builder dedicatedHostClusterCapacity(DedicatedHostClusterCapacity dedicatedHostClusterCapacity) {
                 this.dedicatedHostClusterCapacity = dedicatedHostClusterCapacity;
@@ -777,7 +881,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated host cluster.
+             * <p>The ID of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-bp12wlf6am0vz9v2****</p>
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -785,7 +892,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated host cluster.
+             * <p>The name of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myDDHCluster</p>
              */
             public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
                 this.dedicatedHostClusterName = dedicatedHostClusterName;
@@ -793,7 +903,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of dedicated hosts in the dedicated host cluster.
+             * <p>The IDs of dedicated hosts in the host group.</p>
              */
             public Builder dedicatedHostIds(DedicatedHostIds dedicatedHostIds) {
                 this.dedicatedHostIds = dedicatedHostIds;
@@ -801,7 +911,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the dedicated host cluster.
+             * <p>The description of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This-is-my-DDHCluster</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -809,7 +922,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the dedicated host cluster.
+             * <p>The region ID of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -817,7 +933,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the dedicated host cluster belongs.
+             * <p>The resource group ID of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -825,7 +944,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the dedicated host cluster.
+             * <p>The tags of the host group.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -833,7 +952,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the dedicated host cluster.
+             * <p>The zone ID of the host group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-f</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -847,9 +969,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersResponseBody</p>
+     */
     public static class DedicatedHostClusters extends TeaModel {
-        @NameInMap("DedicatedHostCluster")
-        private java.util.List < DedicatedHostCluster> dedicatedHostCluster;
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostCluster")
+        private java.util.List<DedicatedHostCluster> dedicatedHostCluster;
 
         private DedicatedHostClusters(Builder builder) {
             this.dedicatedHostCluster = builder.dedicatedHostCluster;
@@ -866,17 +994,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return dedicatedHostCluster
          */
-        public java.util.List < DedicatedHostCluster> getDedicatedHostCluster() {
+        public java.util.List<DedicatedHostCluster> getDedicatedHostCluster() {
             return this.dedicatedHostCluster;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHostCluster> dedicatedHostCluster; 
+            private java.util.List<DedicatedHostCluster> dedicatedHostCluster; 
 
             /**
              * DedicatedHostCluster.
              */
-            public Builder dedicatedHostCluster(java.util.List < DedicatedHostCluster> dedicatedHostCluster) {
+            public Builder dedicatedHostCluster(java.util.List<DedicatedHostCluster> dedicatedHostCluster) {
                 this.dedicatedHostCluster = dedicatedHostCluster;
                 return this;
             }

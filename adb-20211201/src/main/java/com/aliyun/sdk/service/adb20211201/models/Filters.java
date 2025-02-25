@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Filters} extends {@link TeaModel}
  *
  * <p>Filters</p>
  */
 public class Filters extends TeaModel {
-    @NameInMap("AppIdRegex")
+    @com.aliyun.core.annotation.NameInMap("AppIdRegex")
     private String appIdRegex;
 
-    @NameInMap("AppNameRegex")
+    @com.aliyun.core.annotation.NameInMap("AppNameRegex")
     private String appNameRegex;
 
-    @NameInMap("AppState")
+    @com.aliyun.core.annotation.NameInMap("AppState")
     private String appState;
 
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @NameInMap("ExecutionTimeRange")
+    @com.aliyun.core.annotation.NameInMap("ExecutionTimeRange")
     private ExecutionTimeRange executionTimeRange;
 
-    @NameInMap("SubmitTimeRange")
+    @com.aliyun.core.annotation.NameInMap("SubmitTimeRange")
     private SubmitTimeRange submitTimeRange;
 
-    @NameInMap("TermiatedTimeRange")
+    @com.aliyun.core.annotation.NameInMap("TermiatedTimeRange")
     private TermiatedTimeRange termiatedTimeRange;
 
     private Filters(Builder builder) {
@@ -171,11 +176,17 @@ public class Filters extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Filters} extends {@link TeaModel}
+     *
+     * <p>Filters</p>
+     */
     public static class ExecutionTimeRange extends TeaModel {
-        @NameInMap("MaxTimeInSeconds")
+        @com.aliyun.core.annotation.NameInMap("MaxTimeInSeconds")
         private Long maxTimeInSeconds;
 
-        @NameInMap("MinTimeInSeconds")
+        @com.aliyun.core.annotation.NameInMap("MinTimeInSeconds")
         private Long minTimeInSeconds;
 
         private ExecutionTimeRange(Builder builder) {
@@ -232,11 +243,17 @@ public class Filters extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Filters} extends {@link TeaModel}
+     *
+     * <p>Filters</p>
+     */
     public static class SubmitTimeRange extends TeaModel {
-        @NameInMap("MaxTimeInMills")
+        @com.aliyun.core.annotation.NameInMap("MaxTimeInMills")
         private Long maxTimeInMills;
 
-        @NameInMap("MinTimeInMills")
+        @com.aliyun.core.annotation.NameInMap("MinTimeInMills")
         private Long minTimeInMills;
 
         private SubmitTimeRange(Builder builder) {
@@ -293,11 +310,17 @@ public class Filters extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Filters} extends {@link TeaModel}
+     *
+     * <p>Filters</p>
+     */
     public static class TermiatedTimeRange extends TeaModel {
-        @NameInMap("MaxTimeInMills")
+        @com.aliyun.core.annotation.NameInMap("MaxTimeInMills")
         private Long maxTimeInMills;
 
-        @NameInMap("MinTimeInMills")
+        @com.aliyun.core.annotation.NameInMap("MinTimeInMills")
         private Long minTimeInMills;
 
         private TermiatedTimeRange(Builder builder) {

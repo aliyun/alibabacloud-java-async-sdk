@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateOnceTaskRequest} extends {@link RequestModel}
  *
  * <p>GenerateOnceTaskRequest</p>
  */
 public class GenerateOnceTaskRequest extends Request {
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String param;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private GenerateOnceTaskRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class GenerateOnceTaskRequest extends Request {
         } 
 
         /**
-         * The additional information.
+         * <p>The additional information.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;mode&quot;:1,&quot;problemType&quot;:&quot;offline&quot;,&quot;uuids&quot;:&quot;inet-795dcad1-360f-49d2-b01e-b7da7f1c****&quot;}</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -108,7 +117,10 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * The source of the scan task.
+         * <p>The source of the scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -117,12 +129,16 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * The name of the scan task. Valid values:
-         * <p>
+         * <p>The name of the scan task. Valid values:</p>
+         * <ul>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a client diagnosis task</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: an O&amp;M task of Cloud Assistant</li>
+         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
-         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+         * <strong>example:</strong>
+         * <p>CLIENT_PROBLEM_CHECK</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -131,12 +147,16 @@ public class GenerateOnceTaskRequest extends Request {
         }
 
         /**
-         * The type of the scan task. Valid values:
-         * <p>
+         * <p>The type of the scan task. Valid values:</p>
+         * <ul>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a client diagnosis task</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: an O&amp;M task of Cloud Assistant</li>
+         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task
-         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+         * <strong>example:</strong>
+         * <p>CLIENT_PROBLEM_CHECK</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

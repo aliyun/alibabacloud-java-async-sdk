@@ -1,77 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFilesRequest} extends {@link RequestModel}
  *
  * <p>ListFilesRequest</p>
  */
 public class ListFilesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ExactFileName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExactFileName")
     private String exactFileName;
 
-    @Body
-    @NameInMap("FileFolderPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileFolderPath")
     private String fileFolderPath;
 
-    @Body
-    @NameInMap("FileIdIn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileIdIn")
     private String fileIdIn;
 
-    @Body
-    @NameInMap("FileTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileTypes")
     private String fileTypes;
 
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("NeedAbsoluteFolderPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedAbsoluteFolderPath")
     private Boolean needAbsoluteFolderPath;
 
-    @Body
-    @NameInMap("NeedContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedContent")
     private Boolean needContent;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private Long nodeId;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Body
-    @NameInMap("UseType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseType")
     private String useType;
 
     private ListFilesRequest(Builder builder) {
@@ -252,7 +256,7 @@ public class ListFilesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -261,7 +265,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * ExactFileName.
+         * <p>The exact matching file name. The file name of the query result is exactly the same as this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods_create.sql</p>
          */
         public Builder exactFileName(String exactFileName) {
             this.putBodyParameter("ExactFileName", exactFileName);
@@ -270,7 +277,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The path of the files.
+         * <p>The path of the files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -279,7 +289,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * FileIdIn.
+         * <p>The file ID list. The File ID set of the query result can only be a subset of the list. You can specify up to 50 fileids at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78237,816123</p>
          */
         public Builder fileIdIn(String fileIdIn) {
             this.putBodyParameter("FileIdIn", fileIdIn);
@@ -288,10 +301,11 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The types of the code in the files.
-         * <p>
+         * <p>The types of the code in the files.</p>
+         * <p>Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3).</p>
          * 
-         * Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3).
+         * <strong>example:</strong>
+         * <p>10,23</p>
          */
         public Builder fileTypes(String fileTypes) {
             this.putBodyParameter("FileTypes", fileTypes);
@@ -300,7 +314,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The keyword in the file names. The keyword is used to perform a fuzzy match. You can specify a keyword to query all files whose names contain the keyword.
+         * <p>The keyword in the file names. The keyword is used to perform a fuzzy match. You can specify a keyword to query all files whose names contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -309,7 +326,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * NeedAbsoluteFolderPath.
+         * <p>Whether the query result contains the path of the folder where the file is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needAbsoluteFolderPath(Boolean needAbsoluteFolderPath) {
             this.putBodyParameter("NeedAbsoluteFolderPath", needAbsoluteFolderPath);
@@ -318,7 +338,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * NeedContent.
+         * <p>Whether the query results contain file content (for files with more content, there may be a long network transmission delay).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needContent(Boolean needContent) {
             this.putBodyParameter("NeedContent", needContent);
@@ -327,7 +350,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The ID of the node that is scheduled. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.
+         * <p>The ID of the node that is scheduled. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123541234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -336,7 +362,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The owner of the files.
+         * <p>The owner of the files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3726346****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -345,7 +374,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -354,7 +386,10 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -363,10 +398,11 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
-         * <p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</p>
+         * <p>You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -375,10 +411,11 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.
-         * <p>
+         * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace name.</p>
+         * <p>You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);
@@ -387,15 +424,18 @@ public class ListFilesRequest extends Request {
         }
 
         /**
-         * The module to which the files belong. Valid values:
-         * <p>
+         * <p>The module to which the files belong. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: The files are used for DataStudio.</li>
+         * <li>MANUAL: The files are used for manually triggered nodes.</li>
+         * <li>MANUAL_BIZ: The files are used for manually triggered workflows.</li>
+         * <li>SKIP: The files are used for dry-run nodes in DataStudio.</li>
+         * <li>ADHOCQUERY: The files are used for ad hoc queries.</li>
+         * <li>COMPONENT: The files are used for snippets.</li>
+         * </ul>
          * 
-         * *   NORMAL: The files are used for DataStudio.
-         * *   MANUAL: The files are used for manually triggered nodes.
-         * *   MANUAL_BIZ: The files are used for manually triggered workflows.
-         * *   SKIP: The files are used for dry-run nodes in DataStudio.
-         * *   ADHOCQUERY: The files are used for ad hoc queries.
-         * *   COMPONENT: The files are used for snippets.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder useType(String useType) {
             this.putBodyParameter("UseType", useType);

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyCoordinationForMonitoringRequest} extends {@link RequestModel}
  *
  * <p>ApplyCoordinationForMonitoringRequest</p>
  */
 public class ApplyCoordinationForMonitoringRequest extends Request {
-    @Query
-    @NameInMap("CoordinatePolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoordinatePolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String coordinatePolicyType;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("InitiatorType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitiatorType")
     private String initiatorType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceCandidates")
-    @Validation(required = true)
-    private java.util.List < ResourceCandidates> resourceCandidates;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceCandidates")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ResourceCandidates> resourceCandidates;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private ApplyCoordinationForMonitoringRequest(Builder builder) {
@@ -94,7 +99,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
     /**
      * @return resourceCandidates
      */
-    public java.util.List < ResourceCandidates> getResourceCandidates() {
+    public java.util.List<ResourceCandidates> getResourceCandidates() {
         return this.resourceCandidates;
     }
 
@@ -110,7 +115,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         private String endUserId; 
         private String initiatorType; 
         private String regionId; 
-        private java.util.List < ResourceCandidates> resourceCandidates; 
+        private java.util.List<ResourceCandidates> resourceCandidates; 
         private String uuid; 
 
         private Builder() {
@@ -128,7 +133,20 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         } 
 
         /**
-         * CoordinatePolicyType.
+         * <p>The coordination policy.</p>
+         * <p>Set the value to FULL_CONTROL.</p>
+         * <ul>
+         * <li><p>The value FULL_CONTROL specifies that the cloud desktop is shared and remote access to the cloud desktop is allowed.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FULL_CONTROL</p>
          */
         public Builder coordinatePolicyType(String coordinatePolicyType) {
             this.putQueryParameter("CoordinatePolicyType", coordinatePolicyType);
@@ -137,7 +155,10 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The ID of the end user who initiates the stream collaboration. If the initiator is the administrator, do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -146,7 +167,19 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * InitiatorType.
+         * <p>The type of the initiator.</p>
+         * <p>Set the value to ADMIN_INITIATE.</p>
+         * <ul>
+         * <li><p>The value ADMIN_INITIATE specifies that the administrator initiates the coordination request.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ADMIN_INITIATE</p>
          */
         public Builder initiatorType(String initiatorType) {
             this.putQueryParameter("InitiatorType", initiatorType);
@@ -155,7 +188,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,16 +201,21 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * ResourceCandidates.
+         * <p>The list of cloud desktops that run the collaboration task at the same time.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceCandidates(java.util.List < ResourceCandidates> resourceCandidates) {
+        public Builder resourceCandidates(java.util.List<ResourceCandidates> resourceCandidates) {
             this.putQueryParameter("ResourceCandidates", resourceCandidates);
             this.resourceCandidates = resourceCandidates;
             return this;
         }
 
         /**
-         * Uuid.
+         * <p>The universally unique identifier (UUID) of the device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62f2f1f252f04e0e9d8bc****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -188,31 +230,37 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyCoordinationForMonitoringRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyCoordinationForMonitoringRequest</p>
+     */
     public static class ResourceCandidates extends TeaModel {
-        @NameInMap("OwnerAliUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OwnerAliUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long ownerAliUid;
 
-        @NameInMap("OwnerEndUserId")
+        @com.aliyun.core.annotation.NameInMap("OwnerEndUserId")
         private String ownerEndUserId;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceName;
 
-        @NameInMap("ResourceProperties")
+        @com.aliyun.core.annotation.NameInMap("ResourceProperties")
         private String resourceProperties;
 
-        @NameInMap("ResourceRegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceRegionId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private ResourceCandidates(Builder builder) {
@@ -292,7 +340,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             private String resourceType; 
 
             /**
-             * OwnerAliUid.
+             * <p>The ID of the Alibaba Cloud account to which the current cloud desktop belongs.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130247021517****</p>
              */
             public Builder ownerAliUid(Long ownerAliUid) {
                 this.ownerAliUid = ownerAliUid;
@@ -300,7 +352,10 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * OwnerEndUserId.
+             * <p>The ID of the current end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder ownerEndUserId(String ownerEndUserId) {
                 this.ownerEndUserId = ownerEndUserId;
@@ -308,7 +363,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the cloud desktop.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-08zhejm3h7ilr****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -316,7 +375,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceName.
+             * <p>The name of the cloud desktop.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestDesktop</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -324,7 +387,10 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceProperties.
+             * <p>The properties of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestProperty</p>
              */
             public Builder resourceProperties(String resourceProperties) {
                 this.resourceProperties = resourceProperties;
@@ -332,7 +398,11 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The region where the resource resides.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -340,7 +410,20 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * <p>Set the value to CLOUD_DESKTOP.</p>
+             * <ul>
+             * <li><p>The value CLOUD_DESKTOP specifies that the resource is a cloud desktop.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD_DESKTOP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

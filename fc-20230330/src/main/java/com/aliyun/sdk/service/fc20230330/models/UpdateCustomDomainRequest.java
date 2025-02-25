@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomDomainRequest</p>
  */
 public class UpdateCustomDomainRequest extends Request {
-    @Path
-    @NameInMap("domainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("domainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UpdateCustomDomainInput body;
 
     private UpdateCustomDomainRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class UpdateCustomDomainRequest extends Request {
         } 
 
         /**
-         * domainName.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo.bar.com</p>
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);
@@ -79,7 +83,8 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The information about the custom domain name.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(UpdateCustomDomainInput body) {
             this.putBodyParameter("body", body);

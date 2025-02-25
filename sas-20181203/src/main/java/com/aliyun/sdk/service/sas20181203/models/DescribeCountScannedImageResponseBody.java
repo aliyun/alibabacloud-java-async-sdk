@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCountScannedImageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCountScannedImageResponseBody</p>
  */
 public class DescribeCountScannedImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScannedCount")
+    @com.aliyun.core.annotation.NameInMap("ScannedCount")
     private Integer scannedCount;
 
     private DescribeCountScannedImageResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeCountScannedImageResponseBody extends TeaModel {
         private Integer scannedCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F4236AB-7070-538D-85EB-98EBFE6C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class DescribeCountScannedImageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of images that are scanned.
+         * <p>The number of images that are scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder scannedCount(Integer scannedCount) {
             this.scannedCount = scannedCount;

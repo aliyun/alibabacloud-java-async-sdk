@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMetricRuleTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateMetricRuleTemplateRequest</p>
  */
 public class CreateMetricRuleTemplateRequest extends Request {
-    @Query
-    @NameInMap("AlertTemplates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertTemplates")
     private java.util.List < AlertTemplates> alertTemplates;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private CreateMetricRuleTemplateRequest(Builder builder) {
@@ -92,7 +92,10 @@ public class CreateMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The description of the alert template.
+         * <p>The description of the alert template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Template1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -101,7 +104,11 @@ public class CreateMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The name of the alert template.
+         * <p>The name of the alert template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,20 +123,26 @@ public class CreateMetricRuleTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMetricRuleTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMetricRuleTemplateRequest</p>
+     */
     public static class Critical extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Critical(Builder builder) {
@@ -237,20 +250,26 @@ public class CreateMetricRuleTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMetricRuleTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMetricRuleTemplateRequest</p>
+     */
     public static class Info extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Info(Builder builder) {
@@ -358,20 +377,26 @@ public class CreateMetricRuleTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMetricRuleTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMetricRuleTemplateRequest</p>
+     */
     public static class Warn extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Warn(Builder builder) {
@@ -479,17 +504,23 @@ public class CreateMetricRuleTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMetricRuleTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMetricRuleTemplateRequest</p>
+     */
     public static class Escalations extends TeaModel {
-        @NameInMap("Critical")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Critical")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Critical critical;
 
-        @NameInMap("Info")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Info")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Info info;
 
-        @NameInMap("Warn")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Warn")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Warn warn;
 
         private Escalations(Builder builder) {
@@ -563,34 +594,40 @@ public class CreateMetricRuleTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMetricRuleTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMetricRuleTemplateRequest</p>
+     */
     public static class AlertTemplates extends TeaModel {
-        @NameInMap("Escalations")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Escalations")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("RuleName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleName;
 
-        @NameInMap("Selector")
+        @com.aliyun.core.annotation.NameInMap("Selector")
         private String selector;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private AlertTemplates(Builder builder) {
@@ -687,10 +724,12 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
-             * <p>
+             * <p>The abbreviation of the Alibaba Cloud service name.</p>
+             * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+             * <p>This parameter is required.</p>
              * 
-             * To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -698,10 +737,14 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * The name of the metric. Valid values of N: 1 to 200.
-             * <p>
+             * <p>The name of the metric. Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -709,10 +752,14 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * The namespace of the cloud service. Valid values of N: 1 to 200.
-             * <p>
+             * <p>The namespace of the cloud service. Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+             * <strong>example:</strong>
+             * <p>acs_ecs_dashboard</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -720,12 +767,12 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * The aggregation period of monitoring data. Unit: seconds.
-             * <p>
+             * <p>The aggregation period of monitoring data. Unit: seconds.</p>
+             * <p>The default value is the minimum aggregation period. Generally, you do not need to specify the minimum aggregation period.</p>
+             * <p>Valid values of N: 1 to 200.</p>
              * 
-             * The default value is the minimum aggregation period. Generally, you do not need to specify the minimum aggregation period.
-             * 
-             * Valid values of N: 1 to 200.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -733,7 +780,8 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * The name of the alert rule. Valid values of N: 1 to 200.
+             * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -741,7 +789,10 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * The extended field selectors. Valid values of N: 1 to 200.
+             * <p>The extended field selectors. Valid values of N: 1 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;disk&quot;:&quot;/&quot;}</p>
              */
             public Builder selector(String selector) {
                 this.selector = selector;
@@ -749,7 +800,10 @@ public class CreateMetricRuleTemplateRequest extends Request {
             }
 
             /**
-             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+             * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ww.aliyun.com">http://ww.aliyun.com</a></p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

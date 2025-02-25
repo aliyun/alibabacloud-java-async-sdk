@@ -39,20 +39,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
-    @Override
-    public CompletableFuture<AddRtcAccountResponse> addRtcAccount(AddRtcAccountRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRtcAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRtcAccountResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddRtcAccountResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 200 times per second per account.</p>
+     * 
+     * @param request the request parameters of AddVirtualNumberRelation  AddVirtualNumberRelationRequest
+     * @return AddVirtualNumberRelationResponse
+     */
     @Override
     public CompletableFuture<AddVirtualNumberRelationResponse> addVirtualNumberRelation(AddVirtualNumberRelationRequest request) {
         try {
@@ -67,6 +61,25 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.</p>
+     * <ul>
+     * <li>The BatchRobotSmartCall operation is used to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console.</li>
+     * </ul>
+     * <h2>Prerequisites</h2>
+     * <ul>
+     * <li>You have passed the real-name verification for an enterprise user and passed the enterprise qualification review.</li>
+     * <li>You have purchased numbers in the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/number/normal">Voice Messaging Service console</a>.</li>
+     * <li>You have added communication scripts on the <a href="https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list">Communication script management</a> page, and the communication scripts have been approved.<blockquote>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://www.aliyun.com/price/product#/vms/detail">billing</a> of Voice Messaging Service (VMS).</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of BatchRobotSmartCall  BatchRobotSmartCallRequest
+     * @return BatchRobotSmartCallResponse
+     */
     @Override
     public CompletableFuture<BatchRobotSmartCallResponse> batchRobotSmartCall(BatchRobotSmartCallRequest request) {
         try {
@@ -81,20 +94,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CancelCallResponse> cancelCall(CancelCallRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelCall").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelCallResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CancelCallResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of CancelOrderRobotTask  CancelOrderRobotTaskRequest
+     * @return CancelOrderRobotTaskResponse
+     */
     @Override
     public CompletableFuture<CancelOrderRobotTaskResponse> cancelOrderRobotTask(CancelOrderRobotTaskRequest request) {
         try {
@@ -109,6 +116,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Only a task in progress can be terminated by calling the CancelRobotTask operation, and the task cannot be resumed after it is terminated.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of CancelRobotTask  CancelRobotTaskRequest
+     * @return CancelRobotTaskResponse
+     */
     @Override
     public CompletableFuture<CancelRobotTaskResponse> cancelRobotTask(CancelRobotTaskRequest request) {
         try {
@@ -123,20 +139,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeMediaType  ChangeMediaTypeRequest
+     * @return ChangeMediaTypeResponse
+     */
     @Override
-    public CompletableFuture<ClickToDialResponse> clickToDial(ClickToDialRequest request) {
+    public CompletableFuture<ChangeMediaTypeResponse> changeMediaType(ChangeMediaTypeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ClickToDial").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ClickToDialResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeMediaType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeMediaTypeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ClickToDialResponse> future = new CompletableFuture<>();
+            CompletableFuture<ChangeMediaTypeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can create up to 1,000 voice notifications for each task.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of CreateCallTask  CreateCallTaskRequest
+     * @return CreateCallTaskResponse
+     */
     @Override
     public CompletableFuture<CreateCallTaskResponse> createCallTask(CreateCallTaskRequest request) {
         try {
@@ -151,6 +180,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console. In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of CreateRobotTask  CreateRobotTaskRequest
+     * @return CreateRobotTaskResponse
+     */
     @Override
     public CompletableFuture<CreateRobotTaskResponse> createRobotTask(CreateRobotTaskRequest request) {
         try {
@@ -165,6 +203,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DegradeVideoFile  DegradeVideoFileRequest
+     * @return DegradeVideoFileResponse
+     */
+    @Override
+    public CompletableFuture<DegradeVideoFileResponse> degradeVideoFile(DegradeVideoFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DegradeVideoFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DegradeVideoFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DegradeVideoFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to delete only tasks that are not started, that are completed, and that are terminated.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of DeleteRobotTask  DeleteRobotTaskRequest
+     * @return DeleteRobotTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteRobotTaskResponse> deleteRobotTask(DeleteRobotTaskRequest request) {
         try {
@@ -179,6 +244,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of ExecuteCallTask  ExecuteCallTaskRequest
+     * @return ExecuteCallTaskResponse
+     */
     @Override
     public CompletableFuture<ExecuteCallTaskResponse> executeCallTask(ExecuteCallTaskRequest request) {
         try {
@@ -193,20 +266,50 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCallMediaType  GetCallMediaTypeRequest
+     * @return GetCallMediaTypeResponse
+     */
     @Override
-    public CompletableFuture<GetCallInfoResponse> getCallInfo(GetCallInfoRequest request) {
+    public CompletableFuture<GetCallMediaTypeResponse> getCallMediaType(GetCallMediaTypeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCallInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCallInfoResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCallMediaType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCallMediaTypeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<GetCallInfoResponse> future = new CompletableFuture<>();
+            CompletableFuture<GetCallMediaTypeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of GetCallProgress  GetCallProgressRequest
+     * @return GetCallProgressResponse
+     */
+    @Override
+    public CompletableFuture<GetCallProgressResponse> getCallProgress(GetCallProgressRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCallProgress").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCallProgressResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCallProgressResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of GetHotlineQualificationByOrder  GetHotlineQualificationByOrderRequest
+     * @return GetHotlineQualificationByOrderResponse
+     */
     @Override
     public CompletableFuture<GetHotlineQualificationByOrderResponse> getHotlineQualificationByOrder(GetHotlineQualificationByOrderRequest request) {
         try {
@@ -221,34 +324,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTemporaryFileUrl  GetTemporaryFileUrlRequest
+     * @return GetTemporaryFileUrlResponse
+     */
     @Override
-    public CompletableFuture<GetMqttTokenResponse> getMqttToken(GetMqttTokenRequest request) {
+    public CompletableFuture<GetTemporaryFileUrlResponse> getTemporaryFileUrl(GetTemporaryFileUrlRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMqttToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMqttTokenResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTemporaryFileUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTemporaryFileUrlResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<GetMqttTokenResponse> future = new CompletableFuture<>();
+            CompletableFuture<GetTemporaryFileUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
-    @Override
-    public CompletableFuture<GetRtcTokenResponse> getRtcToken(GetRtcTokenRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRtcToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRtcTokenResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetRtcTokenResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to five times per second per account.</p>
+     * 
+     * @param request the request parameters of GetToken  GetTokenRequest
+     * @return GetTokenResponse
+     */
     @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
@@ -263,6 +364,37 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVideoFieldUrl  GetVideoFieldUrlRequest
+     * @return GetVideoFieldUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetVideoFieldUrlResponse> getVideoFieldUrl(GetVideoFieldUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetVideoFieldUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVideoFieldUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVideoFieldUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Your enterprise qualification is approved. For more information, see <a href="https://help.aliyun.com/document_detail/149795.html">Submit enterprise qualifications</a>.</p>
+     * <ul>
+     * <li>Voice numbers are purchased. For more information, see <a href="https://help.aliyun.com/document_detail/149794.html">Purchase numbers</a>.</li>
+     * <li>When the subscriber answers the call, the subscriber hears a voice that instructs the subscriber to press a key as needed. If the <a href="https://help.aliyun.com/document_detail/112503.html">message receipt</a> feature is enabled, the Voice Messaging Service (VMS) platform returns the information about the key pressed by the subscriber to the business system. The key information includes the order confirmation, questionnaire survey, and satisfaction survey completed by the subscriber.</li>
+     * </ul>
+     * <h2>QPS limits</h2>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of IvrCall  IvrCallRequest
+     * @return IvrCallResponse
+     */
     @Override
     public CompletableFuture<IvrCallResponse> ivrCall(IvrCallRequest request) {
         try {
@@ -277,6 +409,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of ListCallTask  ListCallTaskRequest
+     * @return ListCallTaskResponse
+     */
     @Override
     public CompletableFuture<ListCallTaskResponse> listCallTask(ListCallTaskRequest request) {
         try {
@@ -291,6 +431,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of ListCallTaskDetail  ListCallTaskDetailRequest
+     * @return ListCallTaskDetailResponse
+     */
     @Override
     public CompletableFuture<ListCallTaskDetailResponse> listCallTaskDetail(ListCallTaskDetailRequest request) {
         try {
@@ -305,6 +453,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of ListHotlineTransferNumber  ListHotlineTransferNumberRequest
+     * @return ListHotlineTransferNumberResponse
+     */
     @Override
     public CompletableFuture<ListHotlineTransferNumberResponse> listHotlineTransferNumber(ListHotlineTransferNumberRequest request) {
         try {
@@ -319,6 +475,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of ListHotlineTransferRegisterFile  ListHotlineTransferRegisterFileRequest
+     * @return ListHotlineTransferRegisterFileResponse
+     */
     @Override
     public CompletableFuture<ListHotlineTransferRegisterFileResponse> listHotlineTransferRegisterFile(ListHotlineTransferRegisterFileRequest request) {
         try {
@@ -333,6 +497,51 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PauseVideoFile  PauseVideoFileRequest
+     * @return PauseVideoFileResponse
+     */
+    @Override
+    public CompletableFuture<PauseVideoFileResponse> pauseVideoFile(PauseVideoFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PauseVideoFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PauseVideoFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PauseVideoFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PlayVideoFile  PlayVideoFileRequest
+     * @return PlayVideoFileResponse
+     */
+    @Override
+    public CompletableFuture<PlayVideoFileResponse> playVideoFile(PlayVideoFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PlayVideoFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PlayVideoFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PlayVideoFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>QueryCallDetailByCallId is a common query operation. You can call this operation to query the details of a voice notification, voice verification code, interactive voice response (IVR), intelligent inbound voice call, intelligent outbound voice call, or intelligent robocall.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryCallDetailByCallId  QueryCallDetailByCallIdRequest
+     * @return QueryCallDetailByCallIdResponse
+     */
     @Override
     public CompletableFuture<QueryCallDetailByCallIdResponse> queryCallDetailByCallId(QueryCallDetailByCallIdRequest request) {
         try {
@@ -347,6 +556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCallDetailByTaskId  QueryCallDetailByTaskIdRequest
+     * @return QueryCallDetailByTaskIdResponse
+     */
     @Override
     public CompletableFuture<QueryCallDetailByTaskIdResponse> queryCallDetailByTaskId(QueryCallDetailByTaskIdRequest request) {
         try {
@@ -361,6 +574,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryCallInPoolTransferConfig  QueryCallInPoolTransferConfigRequest
+     * @return QueryCallInPoolTransferConfigResponse
+     */
     @Override
     public CompletableFuture<QueryCallInPoolTransferConfigResponse> queryCallInPoolTransferConfig(QueryCallInPoolTransferConfigRequest request) {
         try {
@@ -375,6 +596,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryCallInTransferRecord  QueryCallInTransferRecordRequest
+     * @return QueryCallInTransferRecordResponse
+     */
     @Override
     public CompletableFuture<QueryCallInTransferRecordResponse> queryCallInTransferRecord(QueryCallInTransferRecordRequest request) {
         try {
@@ -389,6 +618,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRobotInfoList  QueryRobotInfoListRequest
+     * @return QueryRobotInfoListResponse
+     */
     @Override
     public CompletableFuture<QueryRobotInfoListResponse> queryRobotInfoList(QueryRobotInfoListRequest request) {
         try {
@@ -403,6 +636,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryRobotTaskCallDetail  QueryRobotTaskCallDetailRequest
+     * @return QueryRobotTaskCallDetailResponse
+     */
     @Override
     public CompletableFuture<QueryRobotTaskCallDetailResponse> queryRobotTaskCallDetail(QueryRobotTaskCallDetailRequest request) {
         try {
@@ -417,6 +658,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryRobotTaskCallList  QueryRobotTaskCallListRequest
+     * @return QueryRobotTaskCallListResponse
+     */
     @Override
     public CompletableFuture<QueryRobotTaskCallListResponse> queryRobotTaskCallList(QueryRobotTaskCallListRequest request) {
         try {
@@ -431,6 +680,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryRobotTaskDetail  QueryRobotTaskDetailRequest
+     * @return QueryRobotTaskDetailResponse
+     */
     @Override
     public CompletableFuture<QueryRobotTaskDetailResponse> queryRobotTaskDetail(QueryRobotTaskDetailRequest request) {
         try {
@@ -445,6 +702,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryRobotTaskList  QueryRobotTaskListRequest
+     * @return QueryRobotTaskListResponse
+     */
     @Override
     public CompletableFuture<QueryRobotTaskListResponse> queryRobotTaskList(QueryRobotTaskListRequest request) {
         try {
@@ -459,6 +724,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryRobotv2AllList  QueryRobotv2AllListRequest
+     * @return QueryRobotv2AllListResponse
+     */
     @Override
     public CompletableFuture<QueryRobotv2AllListResponse> queryRobotv2AllList(QueryRobotv2AllListRequest request) {
         try {
@@ -473,6 +746,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryVideoPlayProgress  QueryVideoPlayProgressRequest
+     * @return QueryVideoPlayProgressResponse
+     */
+    @Override
+    public CompletableFuture<QueryVideoPlayProgressResponse> queryVideoPlayProgress(QueryVideoPlayProgressRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryVideoPlayProgress").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryVideoPlayProgressResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryVideoPlayProgressResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryVirtualNumber  QueryVirtualNumberRequest
+     * @return QueryVirtualNumberResponse
+     */
     @Override
     public CompletableFuture<QueryVirtualNumberResponse> queryVirtualNumber(QueryVirtualNumberRequest request) {
         try {
@@ -487,6 +786,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 200 times per second per account.</p>
+     * 
+     * @param request the request parameters of QueryVirtualNumberRelation  QueryVirtualNumberRelationRequest
+     * @return QueryVirtualNumberRelationResponse
+     */
     @Override
     public CompletableFuture<QueryVirtualNumberRelationResponse> queryVirtualNumberRelation(QueryVirtualNumberRelationRequest request) {
         try {
@@ -501,6 +808,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryVoiceFileAuditInfo  QueryVoiceFileAuditInfoRequest
+     * @return QueryVoiceFileAuditInfoResponse
+     */
     @Override
     public CompletableFuture<QueryVoiceFileAuditInfoResponse> queryVoiceFileAuditInfo(QueryVoiceFileAuditInfoRequest request) {
         try {
@@ -515,20 +826,68 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecoverCallInConfig  RecoverCallInConfigRequest
+     * @return RecoverCallInConfigResponse
+     */
     @Override
-    public CompletableFuture<RefreshMqttTokenResponse> refreshMqttToken(RefreshMqttTokenRequest request) {
+    public CompletableFuture<RecoverCallInConfigResponse> recoverCallInConfig(RecoverCallInConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshMqttToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshMqttTokenResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RecoverCallInConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RecoverCallInConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<RefreshMqttTokenResponse> future = new CompletableFuture<>();
+            CompletableFuture<RecoverCallInConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ResumeVideoFile  ResumeVideoFileRequest
+     * @return ResumeVideoFileResponse
+     */
+    @Override
+    public CompletableFuture<ResumeVideoFileResponse> resumeVideoFile(ResumeVideoFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResumeVideoFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumeVideoFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumeVideoFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SeekVideoFile  SeekVideoFileRequest
+     * @return SeekVideoFileResponse
+     */
+    @Override
+    public CompletableFuture<SeekVideoFileResponse> seekVideoFile(SeekVideoFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SeekVideoFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SeekVideoFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SeekVideoFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of SendVerification  SendVerificationRequest
+     * @return SendVerificationResponse
+     */
     @Override
     public CompletableFuture<SendVerificationResponse> sendVerification(SendVerificationRequest request) {
         try {
@@ -543,6 +902,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of SetTransferCalleePoolConfig  SetTransferCalleePoolConfigRequest
+     * @return SetTransferCalleePoolConfigResponse
+     */
     @Override
     public CompletableFuture<SetTransferCalleePoolConfigResponse> setTransferCalleePoolConfig(SetTransferCalleePoolConfigRequest request) {
         try {
@@ -557,6 +924,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.</p>
+     * <ul>
+     * <li>For more information about voice plans or voice service billing, see <a href="https://help.aliyun.com/document_detail/150083.html">Pricing of VMS on China site (aliyun.com)</a>.</li>
+     * </ul>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account.</p>
+     * 
+     * @param request the request parameters of SingleCallByTts  SingleCallByTtsRequest
+     * @return SingleCallByTtsResponse
+     */
     @Override
     public CompletableFuture<SingleCallByTtsResponse> singleCallByTts(SingleCallByTtsRequest request) {
         try {
@@ -571,6 +950,36 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SingleCallByVideo  SingleCallByVideoRequest
+     * @return SingleCallByVideoResponse
+     */
+    @Override
+    public CompletableFuture<SingleCallByVideoResponse> singleCallByVideo(SingleCallByVideoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SingleCallByVideo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SingleCallByVideoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SingleCallByVideoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
+     * You can call the <a href="https://help.aliyun.com/document_detail/393519.html">SingleCallByTts</a> operation to send voice notifications with variables.</p>
+     * </blockquote>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 1,200 times per second per account.</p>
+     * 
+     * @param request the request parameters of SingleCallByVoice  SingleCallByVoiceRequest
+     * @return SingleCallByVoiceResponse
+     */
     @Override
     public CompletableFuture<SingleCallByVoiceResponse> singleCallByVoice(SingleCallByVoiceRequest request) {
         try {
@@ -585,6 +994,36 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SkipVideoFile  SkipVideoFileRequest
+     * @return SkipVideoFileResponse
+     */
+    @Override
+    public CompletableFuture<SkipVideoFileResponse> skipVideoFile(SkipVideoFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SkipVideoFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SkipVideoFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SkipVideoFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  The SmartCall operation must be used together with the <a href="https://help.aliyun.com/document_detail/112703.html">intelligent outbound HTTP operation</a>. After the call initiated by the Voice Messaging Service (VMS) platform is connected, the VMS platform sends the text converted from speech back to the business side, and the business side then returns the follow-up action to the VMS platform.</p>
+     * <ul>
+     * <li>The SmartCall operation does not support the following characters: <code>@ = : &quot;&quot; $ { } ^ * ￥</code>.</li>
+     * </ul>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 1,000 times per second per account.</p>
+     * 
+     * @param request the request parameters of SmartCall  SmartCallRequest
+     * @return SmartCallResponse
+     */
     @Override
     public CompletableFuture<SmartCallResponse> smartCall(SmartCallRequest request) {
         try {
@@ -599,6 +1038,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to initiate a specified action on the called number of an outbound robocall when the call is transferred to an agent of the call center.</p>
+     * <blockquote>
+     * <p>You can only initiate the action of bridging a called number and an agent of the call center.</p>
+     * </blockquote>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of SmartCallOperate  SmartCallOperateRequest
+     * @return SmartCallOperateResponse
+     */
     @Override
     public CompletableFuture<SmartCallOperateResponse> smartCallOperate(SmartCallOperateRequest request) {
         try {
@@ -613,6 +1064,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of StartRobotTask  StartRobotTaskRequest
+     * @return StartRobotTaskResponse
+     */
     @Override
     public CompletableFuture<StartRobotTaskResponse> startRobotTask(StartRobotTaskRequest request) {
         try {
@@ -627,6 +1086,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopCallInConfig  StopCallInConfigRequest
+     * @return StopCallInConfigResponse
+     */
+    @Override
+    public CompletableFuture<StopCallInConfigResponse> stopCallInConfig(StopCallInConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopCallInConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopCallInConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopCallInConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After you stop a robocall task, you can call the <a href="~~StartRobotTask~~">StartRobotTask</a> operation to start it again.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of StopRobotTask  StopRobotTaskRequest
+     * @return StopRobotTaskResponse
+     */
     @Override
     public CompletableFuture<StopRobotTaskResponse> stopRobotTask(StopRobotTaskRequest request) {
         try {
@@ -641,6 +1127,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of SubmitHotlineTransferRegister  SubmitHotlineTransferRegisterRequest
+     * @return SubmitHotlineTransferRegisterResponse
+     */
     @Override
     public CompletableFuture<SubmitHotlineTransferRegisterResponse> submitHotlineTransferRegister(SubmitHotlineTransferRegisterRequest request) {
         try {
@@ -655,6 +1149,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeVideoFile  UpgradeVideoFileRequest
+     * @return UpgradeVideoFileResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeVideoFileResponse> upgradeVideoFile(UpgradeVideoFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeVideoFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeVideoFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeVideoFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>QPS limits</h3>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of UploadRobotTaskCalledFile  UploadRobotTaskCalledFileRequest
+     * @return UploadRobotTaskCalledFileResponse
+     */
     @Override
     public CompletableFuture<UploadRobotTaskCalledFileResponse> uploadRobotTaskCalledFile(UploadRobotTaskCalledFileRequest request) {
         try {

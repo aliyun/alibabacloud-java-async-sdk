@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDedicatedBlockStorageClusterAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDedicatedBlockStorageClusterAttributeResponseBody</p>
  */
 public class ModifyDedicatedBlockStorageClusterAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDedicatedBlockStorageClusterAttributeResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyDedicatedBlockStorageClusterAttributeResponseBody extends Tea
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11B55F58-D3A4-4A9B-9596-342420D0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

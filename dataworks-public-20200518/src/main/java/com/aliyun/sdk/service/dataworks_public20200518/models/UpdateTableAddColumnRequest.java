@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableAddColumnRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableAddColumnRequest</p>
  */
 public class UpdateTableAddColumnRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Column")
-    @Validation(required = true)
-    private java.util.List < Column> column;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Column")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Column> column;
 
-    @Query
-    @NameInMap("TableGuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableGuid;
 
     private UpdateTableAddColumnRequest(Builder builder) {
@@ -57,7 +61,7 @@ public class UpdateTableAddColumnRequest extends Request {
     /**
      * @return column
      */
-    public java.util.List < Column> getColumn() {
+    public java.util.List<Column> getColumn() {
         return this.column;
     }
 
@@ -70,7 +74,7 @@ public class UpdateTableAddColumnRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTableAddColumnRequest, Builder> {
         private String regionId; 
-        private java.util.List < Column> column; 
+        private java.util.List<Column> column; 
         private String tableGuid; 
 
         private Builder() {
@@ -85,7 +89,7 @@ public class UpdateTableAddColumnRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,16 +98,21 @@ public class UpdateTableAddColumnRequest extends Request {
         }
 
         /**
-         * Column.
+         * <p>The fields.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder column(java.util.List < Column> column) {
+        public Builder column(java.util.List<Column> column) {
             this.putBodyParameter("Column", column);
             this.column = column;
             return this;
         }
 
         /**
-         * The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.
+         * <p>The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -118,19 +127,25 @@ public class UpdateTableAddColumnRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTableAddColumnRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTableAddColumnRequest</p>
+     */
     public static class Column extends TeaModel {
-        @NameInMap("ColumnName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnName;
 
-        @NameInMap("ColumnNameCn")
+        @com.aliyun.core.annotation.NameInMap("ColumnNameCn")
         private String columnNameCn;
 
-        @NameInMap("ColumnType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
         private Column(Builder builder) {
@@ -183,7 +198,11 @@ public class UpdateTableAddColumnRequest extends Request {
             private String comment; 
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -191,7 +210,10 @@ public class UpdateTableAddColumnRequest extends Request {
             }
 
             /**
-             * The display name of the field.
+             * <p>The display name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chinese</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -199,7 +221,11 @@ public class UpdateTableAddColumnRequest extends Request {
             }
 
             /**
-             * The type of the field. For more information, see MaxCompute field types.
+             * <p>The type of the field. For more information, see MaxCompute field types.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -207,7 +233,10 @@ public class UpdateTableAddColumnRequest extends Request {
             }
 
             /**
-             * The comment of the field.
+             * <p>The comment of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remarks</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

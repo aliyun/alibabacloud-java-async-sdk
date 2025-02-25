@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConditionBasicInfo} extends {@link TeaModel}
  *
  * <p>ConditionBasicInfo</p>
  */
 public class ConditionBasicInfo extends TeaModel {
-    @NameInMap("Check_range")
+    @com.aliyun.core.annotation.NameInMap("Check_range")
     private CheckRange checkRange;
 
-    @NameInMap("Cid")
+    @com.aliyun.core.annotation.NameInMap("Cid")
     private String cid;
 
-    @NameInMap("Exclusion")
+    @com.aliyun.core.annotation.NameInMap("Exclusion")
     private Integer exclusion;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Lambda")
+    @com.aliyun.core.annotation.NameInMap("Lambda")
     private String lambda;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Operators")
-    private java.util.List < OperatorBasicInfo > operators;
+    @com.aliyun.core.annotation.NameInMap("Operators")
+    private java.util.List<OperatorBasicInfo> operators;
 
-    @NameInMap("Rid")
+    @com.aliyun.core.annotation.NameInMap("Rid")
     private String rid;
 
-    @NameInMap("UserGroup")
+    @com.aliyun.core.annotation.NameInMap("UserGroup")
     private String userGroup;
 
     private ConditionBasicInfo(Builder builder) {
@@ -104,7 +109,7 @@ public class ConditionBasicInfo extends TeaModel {
     /**
      * @return operators
      */
-    public java.util.List < OperatorBasicInfo > getOperators() {
+    public java.util.List<OperatorBasicInfo> getOperators() {
         return this.operators;
     }
 
@@ -129,7 +134,7 @@ public class ConditionBasicInfo extends TeaModel {
         private Long id; 
         private String lambda; 
         private String name; 
-        private java.util.List < OperatorBasicInfo > operators; 
+        private java.util.List<OperatorBasicInfo> operators; 
         private String rid; 
         private String userGroup; 
 
@@ -184,7 +189,7 @@ public class ConditionBasicInfo extends TeaModel {
         /**
          * Operators.
          */
-        public Builder operators(java.util.List < OperatorBasicInfo > operators) {
+        public Builder operators(java.util.List<OperatorBasicInfo> operators) {
             this.operators = operators;
             return this;
         }
@@ -211,14 +216,20 @@ public class ConditionBasicInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ConditionBasicInfo} extends {@link TeaModel}
+     *
+     * <p>ConditionBasicInfo</p>
+     */
     public static class Anchor extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
 
-        @NameInMap("Hit_time")
+        @com.aliyun.core.annotation.NameInMap("Hit_time")
         private Integer hitTime;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private Anchor(Builder builder) {
@@ -292,11 +303,17 @@ public class ConditionBasicInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ConditionBasicInfo} extends {@link TeaModel}
+     *
+     * <p>ConditionBasicInfo</p>
+     */
     public static class Range extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
         private Range(Builder builder) {
@@ -353,23 +370,29 @@ public class ConditionBasicInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ConditionBasicInfo} extends {@link TeaModel}
+     *
+     * <p>ConditionBasicInfo</p>
+     */
     public static class CheckRange extends TeaModel {
-        @NameInMap("Absolute")
+        @com.aliyun.core.annotation.NameInMap("Absolute")
         private Boolean absolute;
 
-        @NameInMap("AllSentencesSatisfy")
+        @com.aliyun.core.annotation.NameInMap("AllSentencesSatisfy")
         private Boolean allSentencesSatisfy;
 
-        @NameInMap("Anchor")
+        @com.aliyun.core.annotation.NameInMap("Anchor")
         private Anchor anchor;
 
-        @NameInMap("Range")
+        @com.aliyun.core.annotation.NameInMap("Range")
         private Range range;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private Integer roleId;
 
         private CheckRange(Builder builder) {

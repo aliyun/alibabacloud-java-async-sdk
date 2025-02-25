@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogReportListResponseBody</p>
  */
 public class DescribeSQLLogReportListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSQLLogReportListResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of SQL log reports.
+         * <p>An array that consists of SQL log reports.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of SQL log reports on the current page.
+         * <p>The number of SQL log reports on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,14 +148,20 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class LatencyTopNItem extends TeaModel {
-        @NameInMap("AvgLatency")
+        @com.aliyun.core.annotation.NameInMap("AvgLatency")
         private Long avgLatency;
 
-        @NameInMap("SQLExecuteTimes")
+        @com.aliyun.core.annotation.NameInMap("SQLExecuteTimes")
         private Long SQLExecuteTimes;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
         private LatencyTopNItem(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * The average time that is required to execute the SQL statement. Unit: milliseconds.
+             * <p>The average time that is required to execute the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder avgLatency(Long avgLatency) {
                 this.avgLatency = avgLatency;
@@ -190,7 +216,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the SQL statement is executed.
+             * <p>The number of times that the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder SQLExecuteTimes(Long SQLExecuteTimes) {
                 this.SQLExecuteTimes = SQLExecuteTimes;
@@ -198,10 +227,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
-             * <p>
+             * <p>The SQL statement.</p>
+             * <blockquote>
+             * <p> Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.</p>
+             * </blockquote>
              * 
-             * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.
+             * <strong>example:</strong>
+             * <p>SELECT * FROM table_name;</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -215,9 +247,15 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class LatencyTopNItems extends TeaModel {
-        @NameInMap("LatencyTopNItem")
-        private java.util.List < LatencyTopNItem> latencyTopNItem;
+        @com.aliyun.core.annotation.NameInMap("LatencyTopNItem")
+        private java.util.List<LatencyTopNItem> latencyTopNItem;
 
         private LatencyTopNItems(Builder builder) {
             this.latencyTopNItem = builder.latencyTopNItem;
@@ -234,17 +272,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         /**
          * @return latencyTopNItem
          */
-        public java.util.List < LatencyTopNItem> getLatencyTopNItem() {
+        public java.util.List<LatencyTopNItem> getLatencyTopNItem() {
             return this.latencyTopNItem;
         }
 
         public static final class Builder {
-            private java.util.List < LatencyTopNItem> latencyTopNItem; 
+            private java.util.List<LatencyTopNItem> latencyTopNItem; 
 
             /**
              * LatencyTopNItem.
              */
-            public Builder latencyTopNItem(java.util.List < LatencyTopNItem> latencyTopNItem) {
+            public Builder latencyTopNItem(java.util.List<LatencyTopNItem> latencyTopNItem) {
                 this.latencyTopNItem = latencyTopNItem;
                 return this;
             }
@@ -256,11 +294,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class QPSTopNItem extends TeaModel {
-        @NameInMap("SQLExecuteTimes")
+        @com.aliyun.core.annotation.NameInMap("SQLExecuteTimes")
         private Long SQLExecuteTimes;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
         private QPSTopNItem(Builder builder) {
@@ -295,7 +339,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * The number of times that the SQL statement is executed.
+             * <p>The number of times that the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder SQLExecuteTimes(Long SQLExecuteTimes) {
                 this.SQLExecuteTimes = SQLExecuteTimes;
@@ -303,10 +350,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
-             * <p>
+             * <p>The SQL statement.</p>
+             * <blockquote>
+             * <p> Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.</p>
+             * </blockquote>
              * 
-             * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.
+             * <strong>example:</strong>
+             * <p>SELECT * FROM table_name;</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -320,9 +370,15 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class QPSTopNItems extends TeaModel {
-        @NameInMap("QPSTopNItem")
-        private java.util.List < QPSTopNItem> QPSTopNItem;
+        @com.aliyun.core.annotation.NameInMap("QPSTopNItem")
+        private java.util.List<QPSTopNItem> QPSTopNItem;
 
         private QPSTopNItems(Builder builder) {
             this.QPSTopNItem = builder.QPSTopNItem;
@@ -339,17 +395,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         /**
          * @return QPSTopNItem
          */
-        public java.util.List < QPSTopNItem> getQPSTopNItem() {
+        public java.util.List<QPSTopNItem> getQPSTopNItem() {
             return this.QPSTopNItem;
         }
 
         public static final class Builder {
-            private java.util.List < QPSTopNItem> QPSTopNItem; 
+            private java.util.List<QPSTopNItem> QPSTopNItem; 
 
             /**
              * QPSTopNItem.
              */
-            public Builder QPSTopNItem(java.util.List < QPSTopNItem> QPSTopNItem) {
+            public Builder QPSTopNItem(java.util.List<QPSTopNItem> QPSTopNItem) {
                 this.QPSTopNItem = QPSTopNItem;
                 return this;
             }
@@ -361,14 +417,20 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("LatencyTopNItems")
+        @com.aliyun.core.annotation.NameInMap("LatencyTopNItems")
         private LatencyTopNItems latencyTopNItems;
 
-        @NameInMap("QPSTopNItems")
+        @com.aliyun.core.annotation.NameInMap("QPSTopNItems")
         private QPSTopNItems QPSTopNItems;
 
-        @NameInMap("ReportTime")
+        @com.aliyun.core.annotation.NameInMap("ReportTime")
         private String reportTime;
 
         private Item(Builder builder) {
@@ -412,7 +474,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             private String reportTime; 
 
             /**
-             * An array that consists of SQL statements executed with the highest latency.
+             * <p>An array that consists of SQL statements executed with the highest latency.</p>
              */
             public Builder latencyTopNItems(LatencyTopNItems latencyTopNItems) {
                 this.latencyTopNItems = latencyTopNItems;
@@ -420,7 +482,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of SQL statements executed the most frequently.
+             * <p>An array that consists of SQL statements executed the most frequently.</p>
              */
             public Builder QPSTopNItems(QPSTopNItems QPSTopNItems) {
                 this.QPSTopNItems = QPSTopNItems;
@@ -428,7 +490,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the report was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the report was generated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-27T16:00:00Z</p>
              */
             public Builder reportTime(String reportTime) {
                 this.reportTime = reportTime;
@@ -442,9 +507,15 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogReportListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
         private Items(Builder builder) {
             this.item = builder.item;
@@ -461,17 +532,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

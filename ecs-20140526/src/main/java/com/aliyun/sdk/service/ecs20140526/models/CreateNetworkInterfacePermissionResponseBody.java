@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkInterfacePermissionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNetworkInterfacePermissionResponseBody</p>
  */
 public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
-    @NameInMap("NetworkInterfacePermission")
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermission")
     private NetworkInterfacePermission networkInterfacePermission;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNetworkInterfacePermissionResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The permission on the ENI.
+         * <p>Details about permissions on the ENI.</p>
          */
         public Builder networkInterfacePermission(NetworkInterfacePermission networkInterfacePermission) {
             this.networkInterfacePermission = networkInterfacePermission;
@@ -58,7 +63,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Details about permissions on ENIs.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FCD3DEF-63D3-4605-A818-805C8BD7DB87</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNetworkInterfacePermissionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkInterfacePermissionResponseBody</p>
+     */
     public static class NetworkInterfacePermission extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfacePermissionId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermissionId")
         private String networkInterfacePermissionId;
 
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private String permission;
 
-        @NameInMap("PermissionState")
+        @com.aliyun.core.annotation.NameInMap("PermissionState")
         private String permissionState;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private NetworkInterfacePermission(Builder builder) {
@@ -158,7 +172,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The ID of the permission on the ENI.
+             * <p>The ID of the Alibaba Cloud partner (a certified ISV).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -166,7 +183,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud partner (a certified ISV).
+             * <p>The ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp14v2sdd3v8htln****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -174,7 +194,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud service.
+             * <p>The ID of the permission on the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-perm-bp1cs4lwn56lfb****</p>
              */
             public Builder networkInterfacePermissionId(String networkInterfacePermissionId) {
                 this.networkInterfacePermissionId = networkInterfacePermissionId;
@@ -182,7 +205,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI.
+             * <p>The permission on the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceAttach</p>
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -190,7 +216,16 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionState.
+             * <p>The state of the permission on the ENI. Valid values:</p>
+             * <ul>
+             * <li>Pending: The permission is being granted.</li>
+             * <li>Granted: The permission is granted.</li>
+             * <li>Revoking: The permission is being revoked.</li>
+             * <li>Revoked: The permission is revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Granted</p>
              */
             public Builder permissionState(String permissionState) {
                 this.permissionState = permissionState;
@@ -198,13 +233,10 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the permission on the ENI. Valid values:
-             * <p>
+             * <p>The name of the Alibaba Cloud service.</p>
              * 
-             * *   Pending: The permission is being granted.
-             * *   Granted: The permission is granted.
-             * *   Revoking: The permission is being revoked.
-             * *   Revoked: The permission is revoked.
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

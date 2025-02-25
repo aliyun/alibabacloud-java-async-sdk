@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDtsServiceLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDtsServiceLogResponseBody</p>
  */
 public class DescribeDtsServiceLogResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceLogContexts")
-    private java.util.List < ServiceLogContexts> serviceLogContexts;
+    @com.aliyun.core.annotation.NameInMap("ServiceLogContexts")
+    private java.util.List<ServiceLogContexts> serviceLogContexts;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeDtsServiceLogResponseBody(Builder builder) {
@@ -126,7 +131,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     /**
      * @return serviceLogContexts
      */
-    public java.util.List < ServiceLogContexts> getServiceLogContexts() {
+    public java.util.List<ServiceLogContexts> getServiceLogContexts() {
         return this.serviceLogContexts;
     }
 
@@ -153,12 +158,15 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
-        private java.util.List < ServiceLogContexts> serviceLogContexts; 
+        private java.util.List<ServiceLogContexts> serviceLogContexts; 
         private Boolean success; 
         private Long totalRecordCount; 
 
         /**
-         * The dynamic error code. This parameter will be removed soon.
+         * <p>The dynamic error code. This parameter will be removed soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -166,7 +174,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -174,7 +185,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -182,7 +196,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -190,7 +207,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -198,7 +218,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -206,7 +229,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of log entries returned per page.
+         * <p>The number of log entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -214,7 +240,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F87DF250-952C-47FE-8A02-69414FAA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,15 +251,18 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the logs.
+         * <p>The details of the logs.</p>
          */
-        public Builder serviceLogContexts(java.util.List < ServiceLogContexts> serviceLogContexts) {
+        public Builder serviceLogContexts(java.util.List<ServiceLogContexts> serviceLogContexts) {
             this.serviceLogContexts = serviceLogContexts;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +270,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of logs that meet the query conditions.
+         * <p>The total number of logs that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -251,14 +286,20 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDtsServiceLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsServiceLogResponseBody</p>
+     */
     public static class ServiceLogContexts extends TeaModel {
-        @NameInMap("Context")
+        @com.aliyun.core.annotation.NameInMap("Context")
         private String context;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private ServiceLogContexts(Builder builder) {
@@ -302,7 +343,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * The log content.
+             * <p>The log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Statistics: generator = 369173; collector = 470109; replicator = 2470; ping = 2/2/2; execute = 29/29/29; rt = 29/29/29; state = IDLE; queries = -1; exceptions = {connects = 0, replicates = 0}; infos = {}</p>
              */
             public Builder context(String context) {
                 this.context = context;
@@ -310,7 +354,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             }
 
             /**
-             * The log level.
+             * <p>The log level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -318,7 +365,10 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the logs were collected. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the logs were collected. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-13T09:13:39.443+00:00</p>
              */
             public Builder time(String time) {
                 this.time = time;

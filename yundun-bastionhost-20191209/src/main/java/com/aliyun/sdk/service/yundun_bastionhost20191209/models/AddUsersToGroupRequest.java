@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUsersToGroupRequest} extends {@link RequestModel}
  *
  * <p>AddUsersToGroupRequest</p>
  */
 public class AddUsersToGroupRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
-    @Query
-    @NameInMap("UserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userIds;
 
     private AddUsersToGroupRequest(Builder builder) {
@@ -99,10 +99,14 @@ public class AddUsersToGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the user that you want to add to the user group. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).
-         * <p>
+         * <p>The ID of the bastion host for which you want to add users to the user group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListUsers](~~204522~~) operation to query the IDs of users.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -111,7 +115,13 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * <p>The region ID of the bastion host for which you want to add users to the user group.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -120,22 +130,14 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * The return code that indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>The ID of the user group to which you want to add users.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **OK**: The call was successful.
-         * 
-         * *   **UNEXPECTED**: An unknown error occurred.
-         * 
-         * *   **INVALID_ARGUMENT**: A request parameter is invalid.
-         * 
-         * > Make sure that the request parameters are valid and call the operation again.
-         * 
-         * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
-         * 
-         * > Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.
-         * 
-         * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
+         * <strong>example:</strong>
+         * <p>１</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -144,7 +146,14 @@ public class AddUsersToGroupRequest extends Request {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the user that you want to add to the user group. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the ID of the user.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]</p>
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

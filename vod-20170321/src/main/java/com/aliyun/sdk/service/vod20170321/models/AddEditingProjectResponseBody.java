@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddEditingProjectResponseBody} extends {@link TeaModel}
  *
  * <p>AddEditingProjectResponseBody</p>
  */
 public class AddEditingProjectResponseBody extends TeaModel {
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.NameInMap("Project")
     private Project project;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddEditingProjectResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the online editing project. For more information about the structure, see [EditingProject](~~52839~~).
+         * <p>The information about the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">EditingProject</a>.</p>
          */
         public Builder project(Project project) {
             this.project = project;
@@ -58,7 +63,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class AddEditingProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddEditingProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddEditingProjectResponseBody</p>
+     */
     public static class Project extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Project(Builder builder) {
@@ -158,7 +172,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-11T12:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -166,7 +183,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the online editing project.
+             * <p>The description of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testtimeline001desciption</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +194,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the online editing project was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-11T13:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -182,7 +205,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the online editing project.
+             * <p>The ID of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fb2101bf24bf4df34c4cb3187****</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -190,13 +216,16 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the online editing project. Valid values:
-             * <p>
+             * <p>The status of the online editing project. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: the online editing project is in draft.</li>
+             * <li><strong>Producing</strong>: the video is being produced.</li>
+             * <li><strong>Produced</strong>: the video is produced.</li>
+             * <li><strong>ProduceFailed</strong>: the video failed to be produced.</li>
+             * </ul>
              * 
-             * - **Normal**: indicates that the online editing project is in draft.
-             * - **Producing**: indicates that the video is being produced.
-             * - **Produced**: indicates that the video was produced.
-             * - **ProduceFailed**: indicates that the video failed to be produced.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -204,7 +233,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the online editing project.
+             * <p>The title of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testtimeline</p>
              */
             public Builder title(String title) {
                 this.title = title;

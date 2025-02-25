@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSyntheticTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>GetSyntheticTaskListResponseBody</p>
  */
 public class GetSyntheticTaskListResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSyntheticTaskListResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * <p>The query results.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -58,7 +63,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSyntheticTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyntheticTaskListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("MonitorNumber")
+        @com.aliyun.core.annotation.NameInMap("MonitorNumber")
         private Long monitorNumber;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Long taskType;
 
-        @NameInMap("TaskTypeName")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeName")
         private String taskTypeName;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Usable")
+        @com.aliyun.core.annotation.NameInMap("Usable")
         private Float usable;
 
         private List(Builder builder) {
@@ -194,7 +208,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private Float usable; 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634005438000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -202,7 +219,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorNumber.
+             * <p>The number of detection points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder monitorNumber(Long monitorNumber) {
                 this.monitorNumber = monitorNumber;
@@ -210,7 +230,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the synthetic monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2118709</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -218,7 +241,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>net-test</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -226,7 +252,15 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task is stopped.</li>
+             * <li><strong>1</strong>: The task is started.</li>
+             * <li><strong>9</strong>: The task is ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -234,7 +268,17 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The type of the task. Valid values:</p>
+             * <ol>
+             * <li>3: web page performance - IE</li>
+             * <li>34: web page performance - Chrome</li>
+             * <li>0: network quality</li>
+             * <li>40: file download</li>
+             * <li>7: API performance</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskType(Long taskType) {
                 this.taskType = taskType;
@@ -242,7 +286,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeName.
+             * <p>The name of the task type.</p>
              */
             public Builder taskTypeName(String taskTypeName) {
                 this.taskTypeName = taskTypeName;
@@ -250,7 +294,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL for synthetic monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -258,7 +305,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Usable.
+             * <p>The availability. Only the data of the last day is counted. If no data is available for the last day, an empty value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.80</p>
              */
             public Builder usable(Float usable) {
                 this.usable = usable;
@@ -272,44 +322,50 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSyntheticTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyntheticTaskListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("HasNextPage")
+        @com.aliyun.core.annotation.NameInMap("HasNextPage")
         private String hasNextPage;
 
-        @NameInMap("HasPreviousPage")
+        @com.aliyun.core.annotation.NameInMap("HasPreviousPage")
         private Boolean hasPreviousPage;
 
-        @NameInMap("IsFirstPage")
+        @com.aliyun.core.annotation.NameInMap("IsFirstPage")
         private Boolean isFirstPage;
 
-        @NameInMap("IsLastPage")
+        @com.aliyun.core.annotation.NameInMap("IsLastPage")
         private Boolean isLastPage;
 
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("NavigateFirstPage")
+        @com.aliyun.core.annotation.NameInMap("NavigateFirstPage")
         private String navigateFirstPage;
 
-        @NameInMap("NavigateLastPage")
+        @com.aliyun.core.annotation.NameInMap("NavigateLastPage")
         private String navigateLastPage;
 
-        @NameInMap("NavigatePageNums")
+        @com.aliyun.core.annotation.NameInMap("NavigatePageNums")
         private String navigatePageNums;
 
-        @NameInMap("NextPage")
+        @com.aliyun.core.annotation.NameInMap("NextPage")
         private String nextPage;
 
-        @NameInMap("Pages")
+        @com.aliyun.core.annotation.NameInMap("Pages")
         private String pages;
 
-        @NameInMap("Prepage")
+        @com.aliyun.core.annotation.NameInMap("Prepage")
         private String prepage;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageInfo(Builder builder) {
@@ -367,7 +423,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -432,7 +488,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private Boolean hasPreviousPage; 
             private Boolean isFirstPage; 
             private Boolean isLastPage; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private String navigateFirstPage; 
             private String navigateLastPage; 
             private String navigatePageNums; 
@@ -443,7 +499,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * HasNextPage.
+             * <p>Indicates whether the current page is followed by a page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasNextPage(String hasNextPage) {
                 this.hasNextPage = hasNextPage;
@@ -451,7 +510,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * HasPreviousPage.
+             * <p>Indicates whether a previous page exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPreviousPage(Boolean hasPreviousPage) {
                 this.hasPreviousPage = hasPreviousPage;
@@ -459,7 +521,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * IsFirstPage.
+             * <p>Indicates whether the page is the first page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFirstPage(Boolean isFirstPage) {
                 this.isFirstPage = isFirstPage;
@@ -467,7 +532,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * IsLastPage.
+             * <p>Indicates whether the page is the last page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLastPage(Boolean isLastPage) {
                 this.isLastPage = isLastPage;
@@ -475,15 +543,18 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * <p>The task information.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * NavigateFirstPage.
+             * <p>The first page on the navigation bar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder navigateFirstPage(String navigateFirstPage) {
                 this.navigateFirstPage = navigateFirstPage;
@@ -491,7 +562,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NavigateLastPage.
+             * <p>The last page on the navigation bar.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder navigateLastPage(String navigateLastPage) {
                 this.navigateLastPage = navigateLastPage;
@@ -499,7 +573,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NavigatePageNums.
+             * <p>All navigation page numbers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3</p>
              */
             public Builder navigatePageNums(String navigatePageNums) {
                 this.navigatePageNums = navigatePageNums;
@@ -507,7 +584,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>The next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder nextPage(String nextPage) {
                 this.nextPage = nextPage;
@@ -515,7 +595,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Pages.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pages(String pages) {
                 this.pages = pages;
@@ -523,7 +606,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Prepage.
+             * <p>The previous page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder prepage(String prepage) {
                 this.prepage = prepage;
@@ -531,7 +617,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -539,7 +628,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder total(Long total) {
                 this.total = total;

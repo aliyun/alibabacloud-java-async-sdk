@@ -1,58 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartTerminalSessionRequest} extends {@link RequestModel}
  *
  * <p>StartTerminalSessionRequest</p>
  */
 public class StartTerminalSessionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("CommandLine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandLine")
     private String commandLine;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PortNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortNumber")
     private Integer portNumber;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TargetServer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetServer")
     private String targetServer;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    private String username;
 
     private StartTerminalSessionRequest(Builder builder) {
         super(builder);
@@ -66,6 +75,7 @@ public class StartTerminalSessionRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.targetServer = builder.targetServer;
+        this.username = builder.username;
     }
 
     public static Builder builder() {
@@ -98,7 +108,7 @@ public class StartTerminalSessionRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -151,10 +161,17 @@ public class StartTerminalSessionRequest extends Request {
         return this.targetServer;
     }
 
+    /**
+     * @return username
+     */
+    public String getUsername() {
+        return this.username;
+    }
+
     public static final class Builder extends Request.Builder<StartTerminalSessionRequest, Builder> {
         private String sourceRegionId; 
         private String commandLine; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer portNumber; 
@@ -162,6 +179,7 @@ public class StartTerminalSessionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String targetServer; 
+        private String username; 
 
         private Builder() {
             super();
@@ -179,6 +197,7 @@ public class StartTerminalSessionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.targetServer = request.targetServer;
+            this.username = request.username;
         } 
 
         /**
@@ -191,10 +210,13 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * If you set this parameter to the IP address of an instance, the PortNumber parameter specifies the port number of the instance.
-         * <p>
+         * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
+         * <blockquote>
+         * <p> If you specify the <code>CommandLine</code> parameter, you cannot specify the <code>PortNumber</code> or <code>TargetServer</code> parameter.</p>
+         * </blockquote>
          * 
-         * >If you specify `CommandLine`, you do not need to specify `PortNumber` or `TargetServer`.
+         * <strong>example:</strong>
+         * <p>ssh <a href="mailto:root@192.168.0.246">root@192.168.0.246</a></p>
          */
         public Builder commandLine(String commandLine) {
             this.putQueryParameter("CommandLine", commandLine);
@@ -203,9 +225,10 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The instance IDs.
+         * <p>The instance IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -230,10 +253,11 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The port number of the instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port for forwarding. Example: 22.
-         * <p>
+         * <p>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</p>
+         * <p>This parameter is empty by default, which indicates that no port is configured to forward data.</p>
          * 
-         * This parameter is empty by default, which indicates that no port is configured to forward data.
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder portNumber(Integer portNumber) {
             this.putQueryParameter("PortNumber", portNumber);
@@ -242,7 +266,11 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -269,14 +297,29 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The IP address of the instance.
-         * <p>
+         * <p>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</p>
+         * <blockquote>
+         * <p> If this parameter is not empty, <code>PortNumber</code> specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
+         * </blockquote>
          * 
-         * >If you set this parameter to the IP address of an instance, the `PortNumber` parameter specifies the port number of the instance.
+         * <strong>example:</strong>
+         * <p>192.168.0.246</p>
          */
         public Builder targetServer(String targetServer) {
             this.putQueryParameter("TargetServer", targetServer);
             this.targetServer = targetServer;
+            return this;
+        }
+
+        /**
+         * <p>The username used for connection establishment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
+         */
+        public Builder username(String username) {
+            this.putQueryParameter("Username", username);
+            this.username = username;
             return this;
         }
 

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeAlarmSeverityRequest} extends {@link RequestModel}
  *
  * <p>ChangeAlarmSeverityRequest</p>
  */
 public class ChangeAlarmSeverityRequest extends Request {
-    @Query
-    @NameInMap("AlarmId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long alarmId;
 
-    @Query
-    @NameInMap("HandlerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandlerId")
     private Long handlerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Severity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Severity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String severity;
 
     private ChangeAlarmSeverityRequest(Builder builder) {
@@ -99,7 +104,12 @@ public class ChangeAlarmSeverityRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * <p>The ID of the alert.</p>
+         * <p>For more information about how to obtain the ID of an alert, see <a href="https://help.aliyun.com/document_detail/2612346.html">ListAlertEvents</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155</p>
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -108,7 +118,10 @@ public class ChangeAlarmSeverityRequest extends Request {
         }
 
         /**
-         * HandlerId.
+         * <p>The ID of the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2046076</p>
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -117,7 +130,11 @@ public class ChangeAlarmSeverityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +143,11 @@ public class ChangeAlarmSeverityRequest extends Request {
         }
 
         /**
-         * Severity.
+         * <p>The severity level of the alert. Valid values: P1, P2, P3, and P4. P4 indicates the lowest severity, whereas P1 indicates the highest severity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P1</p>
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);

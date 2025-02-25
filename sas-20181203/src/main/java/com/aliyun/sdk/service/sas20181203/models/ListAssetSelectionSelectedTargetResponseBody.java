@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssetSelectionSelectedTargetResponseBody} extends {@link TeaModel}
  *
  * <p>ListAssetSelectionSelectedTargetResponseBody</p>
  */
 public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAssetSelectionSelectedTargetResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EB12F73-6828-59D2-9FBF-F3713FD55128</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAssetSelectionSelectedTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssetSelectionSelectedTargetResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
         private Data(Builder builder) {
@@ -110,7 +124,10 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             private String targetName; 
 
             /**
-             * The ID of the asset.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -118,7 +135,10 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jen****</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;

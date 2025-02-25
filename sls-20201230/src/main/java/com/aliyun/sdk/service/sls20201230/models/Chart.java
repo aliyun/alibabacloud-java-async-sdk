@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Chart} extends {@link TeaModel}
  *
  * <p>Chart</p>
  */
 public class Chart extends TeaModel {
-    @NameInMap("action")
-    @Validation(required = true)
-    private java.util.Map < String, ? > action;
+    @com.aliyun.core.annotation.NameInMap("action")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> action;
 
-    @NameInMap("display")
-    @Validation(required = true)
-    private java.util.Map < String, ? > display;
+    @com.aliyun.core.annotation.NameInMap("display")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> display;
 
-    @NameInMap("search")
-    @Validation(required = true)
-    private java.util.Map < String, ? > search;
+    @com.aliyun.core.annotation.NameInMap("search")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> search;
 
-    @NameInMap("title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private Chart(Builder builder) {
@@ -51,21 +56,21 @@ public class Chart extends TeaModel {
     /**
      * @return action
      */
-    public java.util.Map < String, ? > getAction() {
+    public java.util.Map<String, ?> getAction() {
         return this.action;
     }
 
     /**
      * @return display
      */
-    public java.util.Map < String, ? > getDisplay() {
+    public java.util.Map<String, ?> getDisplay() {
         return this.display;
     }
 
     /**
      * @return search
      */
-    public java.util.Map < String, ? > getSearch() {
+    public java.util.Map<String, ?> getSearch() {
         return this.search;
     }
 
@@ -84,38 +89,41 @@ public class Chart extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > action; 
-        private java.util.Map < String, ? > display; 
-        private java.util.Map < String, ? > search; 
+        private java.util.Map<String, ?> action; 
+        private java.util.Map<String, ?> display; 
+        private java.util.Map<String, ?> search; 
         private String title; 
         private String type; 
 
         /**
-         * action.
+         * <p>This parameter is required.</p>
          */
-        public Builder action(java.util.Map < String, ? > action) {
+        public Builder action(java.util.Map<String, ?> action) {
             this.action = action;
             return this;
         }
 
         /**
-         * display.
+         * <p>This parameter is required.</p>
          */
-        public Builder display(java.util.Map < String, ? > display) {
+        public Builder display(java.util.Map<String, ?> display) {
             this.display = display;
             return this;
         }
 
         /**
-         * search.
+         * <p>This parameter is required.</p>
          */
-        public Builder search(java.util.Map < String, ? > search) {
+        public Builder search(java.util.Map<String, ?> search) {
             this.search = search;
             return this;
         }
 
         /**
-         * title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-chart</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -123,7 +131,10 @@ public class Chart extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linepro</p>
          */
         public Builder type(String type) {
             this.type = type;

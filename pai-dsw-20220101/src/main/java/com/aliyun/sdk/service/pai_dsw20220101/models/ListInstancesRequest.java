@@ -1,71 +1,140 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @Query
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
+    private String createUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuType")
+    private String gpuType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    private String imageName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map<String, ?> labels;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxCpu")
+    private String maxCpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxGpu")
+    private String maxGpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxGpuMemory")
+    private String maxGpuMemory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxMemory")
+    private String maxMemory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinCpu")
+    private String minCpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinGpu")
+    private String minGpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinGpuMemory")
+    private String minGpuMemory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinMemory")
+    private String minMemory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
+        this.createUserId = builder.createUserId;
+        this.gpuType = builder.gpuType;
+        this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
+        this.labels = builder.labels;
+        this.maxCpu = builder.maxCpu;
+        this.maxGpu = builder.maxGpu;
+        this.maxGpuMemory = builder.maxGpuMemory;
+        this.maxMemory = builder.maxMemory;
+        this.minCpu = builder.minCpu;
+        this.minGpu = builder.minGpu;
+        this.minGpuMemory = builder.minGpuMemory;
+        this.minMemory = builder.minMemory;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -73,6 +142,7 @@ public class ListInstancesRequest extends Request {
         this.resourceId = builder.resourceId;
         this.sortBy = builder.sortBy;
         this.status = builder.status;
+        this.tag = builder.tag;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -104,6 +174,27 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return createUserId
+     */
+    public String getCreateUserId() {
+        return this.createUserId;
+    }
+
+    /**
+     * @return gpuType
+     */
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
+    /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -115,6 +206,69 @@ public class ListInstancesRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.Map<String, ?> getLabels() {
+        return this.labels;
+    }
+
+    /**
+     * @return maxCpu
+     */
+    public String getMaxCpu() {
+        return this.maxCpu;
+    }
+
+    /**
+     * @return maxGpu
+     */
+    public String getMaxGpu() {
+        return this.maxGpu;
+    }
+
+    /**
+     * @return maxGpuMemory
+     */
+    public String getMaxGpuMemory() {
+        return this.maxGpuMemory;
+    }
+
+    /**
+     * @return maxMemory
+     */
+    public String getMaxMemory() {
+        return this.maxMemory;
+    }
+
+    /**
+     * @return minCpu
+     */
+    public String getMinCpu() {
+        return this.minCpu;
+    }
+
+    /**
+     * @return minGpu
+     */
+    public String getMinGpu() {
+        return this.minGpu;
+    }
+
+    /**
+     * @return minGpuMemory
+     */
+    public String getMinGpuMemory() {
+        return this.minGpuMemory;
+    }
+
+    /**
+     * @return minMemory
+     */
+    public String getMinMemory() {
+        return this.minMemory;
     }
 
     /**
@@ -167,6 +321,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -176,8 +337,20 @@ public class ListInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String acceleratorType; 
         private String accessibility; 
+        private String createUserId; 
+        private String gpuType; 
+        private String imageName; 
         private String instanceId; 
         private String instanceName; 
+        private java.util.Map<String, ?> labels; 
+        private String maxCpu; 
+        private String maxGpu; 
+        private String maxGpuMemory; 
+        private String maxMemory; 
+        private String minCpu; 
+        private String minGpu; 
+        private String minGpuMemory; 
+        private String minMemory; 
         private String order; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -185,6 +358,7 @@ public class ListInstancesRequest extends Request {
         private String resourceId; 
         private String sortBy; 
         private String status; 
+        private java.util.List<Tag> tag; 
         private String workspaceId; 
 
         private Builder() {
@@ -195,8 +369,20 @@ public class ListInstancesRequest extends Request {
             super(request);
             this.acceleratorType = request.acceleratorType;
             this.accessibility = request.accessibility;
+            this.createUserId = request.createUserId;
+            this.gpuType = request.gpuType;
+            this.imageName = request.imageName;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
+            this.labels = request.labels;
+            this.maxCpu = request.maxCpu;
+            this.maxGpu = request.maxGpu;
+            this.maxGpuMemory = request.maxGpuMemory;
+            this.maxMemory = request.maxMemory;
+            this.minCpu = request.minCpu;
+            this.minGpu = request.minGpu;
+            this.minGpuMemory = request.minGpuMemory;
+            this.minMemory = request.minMemory;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -204,6 +390,7 @@ public class ListInstancesRequest extends Request {
             this.resourceId = request.resourceId;
             this.sortBy = request.sortBy;
             this.status = request.status;
+            this.tag = request.tag;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -226,6 +413,33 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * CreateUserId.
+         */
+        public Builder createUserId(String createUserId) {
+            this.putQueryParameter("CreateUserId", createUserId);
+            this.createUserId = createUserId;
+            return this;
+        }
+
+        /**
+         * GpuType.
+         */
+        public Builder gpuType(String gpuType) {
+            this.putQueryParameter("GpuType", gpuType);
+            this.gpuType = gpuType;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
+            return this;
+        }
+
+        /**
          * InstanceId.
          */
         public Builder instanceId(String instanceId) {
@@ -240,6 +454,88 @@ public class ListInstancesRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.Map<String, ?> labels) {
+            String labelsShrink = shrink(labels, "Labels", "json");
+            this.putQueryParameter("Labels", labelsShrink);
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * MaxCpu.
+         */
+        public Builder maxCpu(String maxCpu) {
+            this.putQueryParameter("MaxCpu", maxCpu);
+            this.maxCpu = maxCpu;
+            return this;
+        }
+
+        /**
+         * MaxGpu.
+         */
+        public Builder maxGpu(String maxGpu) {
+            this.putQueryParameter("MaxGpu", maxGpu);
+            this.maxGpu = maxGpu;
+            return this;
+        }
+
+        /**
+         * MaxGpuMemory.
+         */
+        public Builder maxGpuMemory(String maxGpuMemory) {
+            this.putQueryParameter("MaxGpuMemory", maxGpuMemory);
+            this.maxGpuMemory = maxGpuMemory;
+            return this;
+        }
+
+        /**
+         * MaxMemory.
+         */
+        public Builder maxMemory(String maxMemory) {
+            this.putQueryParameter("MaxMemory", maxMemory);
+            this.maxMemory = maxMemory;
+            return this;
+        }
+
+        /**
+         * MinCpu.
+         */
+        public Builder minCpu(String minCpu) {
+            this.putQueryParameter("MinCpu", minCpu);
+            this.minCpu = minCpu;
+            return this;
+        }
+
+        /**
+         * MinGpu.
+         */
+        public Builder minGpu(String minGpu) {
+            this.putQueryParameter("MinGpu", minGpu);
+            this.minGpu = minGpu;
+            return this;
+        }
+
+        /**
+         * MinGpuMemory.
+         */
+        public Builder minGpuMemory(String minGpuMemory) {
+            this.putQueryParameter("MinGpuMemory", minGpuMemory);
+            this.minGpuMemory = minGpuMemory;
+            return this;
+        }
+
+        /**
+         * MinMemory.
+         */
+        public Builder minMemory(String minMemory) {
+            this.putQueryParameter("MinMemory", minMemory);
+            this.minMemory = minMemory;
             return this;
         }
 
@@ -307,6 +603,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
@@ -322,4 +628,71 @@ public class ListInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstancesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

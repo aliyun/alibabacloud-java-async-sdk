@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotsResponseBody</p>
  */
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
+    private java.util.List<Snapshots> snapshots;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
 
         /**
          * NextToken.
@@ -80,7 +85,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * Snapshots.
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }
@@ -91,38 +96,50 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("RestorePointId")
+        private String restorePointId;
+
+        @com.aliyun.core.annotation.NameInMap("RestorePointName")
+        private String restorePointName;
+
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
-        @NameInMap("SnapshotType")
+        @com.aliyun.core.annotation.NameInMap("SnapshotType")
         private String snapshotType;
 
-        @NameInMap("SourceDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskSize")
         private String sourceDiskSize;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Snapshots(Builder builder) {
@@ -131,6 +148,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.desktopId = builder.desktopId;
             this.progress = builder.progress;
             this.remainTime = builder.remainTime;
+            this.restorePointId = builder.restorePointId;
+            this.restorePointName = builder.restorePointName;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
             this.snapshotType = builder.snapshotType;
@@ -183,6 +202,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return restorePointId
+         */
+        public String getRestorePointId() {
+            return this.restorePointId;
+        }
+
+        /**
+         * @return restorePointName
+         */
+        public String getRestorePointName() {
+            return this.restorePointName;
+        }
+
+        /**
          * @return snapshotId
          */
         public String getSnapshotId() {
@@ -230,6 +263,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String desktopId; 
             private String progress; 
             private Integer remainTime; 
+            private String restorePointId; 
+            private String restorePointName; 
             private String snapshotId; 
             private String snapshotName; 
             private String snapshotType; 
@@ -274,6 +309,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
+                return this;
+            }
+
+            /**
+             * RestorePointId.
+             */
+            public Builder restorePointId(String restorePointId) {
+                this.restorePointId = restorePointId;
+                return this;
+            }
+
+            /**
+             * RestorePointName.
+             */
+            public Builder restorePointName(String restorePointName) {
+                this.restorePointName = restorePointName;
                 return this;
             }
 

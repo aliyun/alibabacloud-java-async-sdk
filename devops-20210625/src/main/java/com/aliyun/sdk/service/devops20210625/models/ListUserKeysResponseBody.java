@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserKeysResponseBody</p>
  */
 public class ListUserKeysResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListUserKeysResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListUserKeysResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -82,7 +87,7 @@ public class ListUserKeysResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -112,7 +117,7 @@ public class ListUserKeysResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,30 +136,36 @@ public class ListUserKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserKeysResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("expireTime")
+        @com.aliyun.core.annotation.NameInMap("expireTime")
         private String expireTime;
 
-        @NameInMap("fingerPrint")
+        @com.aliyun.core.annotation.NameInMap("fingerPrint")
         private String fingerPrint;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("keyScope")
+        @com.aliyun.core.annotation.NameInMap("keyScope")
         private String keyScope;
 
-        @NameInMap("lastUsedTime")
+        @com.aliyun.core.annotation.NameInMap("lastUsedTime")
         private String lastUsedTime;
 
-        @NameInMap("publicKey")
+        @com.aliyun.core.annotation.NameInMap("publicKey")
         private String publicKey;
 
-        @NameInMap("tittle")
-        private String tittle;
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
 
         private Result(Builder builder) {
             this.createdAt = builder.createdAt;
@@ -164,7 +175,7 @@ public class ListUserKeysResponseBody extends TeaModel {
             this.keyScope = builder.keyScope;
             this.lastUsedTime = builder.lastUsedTime;
             this.publicKey = builder.publicKey;
-            this.tittle = builder.tittle;
+            this.title = builder.title;
         }
 
         public static Builder builder() {
@@ -225,10 +236,10 @@ public class ListUserKeysResponseBody extends TeaModel {
         }
 
         /**
-         * @return tittle
+         * @return title
          */
-        public String getTittle() {
-            return this.tittle;
+        public String getTitle() {
+            return this.title;
         }
 
         public static final class Builder {
@@ -239,7 +250,7 @@ public class ListUserKeysResponseBody extends TeaModel {
             private String keyScope; 
             private String lastUsedTime; 
             private String publicKey; 
-            private String tittle; 
+            private String title; 
 
             /**
              * createdAt.
@@ -298,10 +309,10 @@ public class ListUserKeysResponseBody extends TeaModel {
             }
 
             /**
-             * tittle.
+             * title.
              */
-            public Builder tittle(String tittle) {
-                this.tittle = tittle;
+            public Builder title(String title) {
+                this.title = title;
                 return this;
             }
 

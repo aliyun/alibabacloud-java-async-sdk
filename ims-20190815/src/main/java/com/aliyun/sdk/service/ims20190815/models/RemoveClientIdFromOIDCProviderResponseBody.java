@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveClientIdFromOIDCProviderResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveClientIdFromOIDCProviderResponseBody</p>
  */
 public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
-    @NameInMap("OIDCProvider")
+    @com.aliyun.core.annotation.NameInMap("OIDCProvider")
     private OIDCProvider OIDCProvider;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RemoveClientIdFromOIDCProviderResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the OIDC IdP.
+         * <p>The information about the OIDC IdP.</p>
          */
         public Builder OIDCProvider(OIDCProvider OIDCProvider) {
             this.OIDCProvider = OIDCProvider;
@@ -58,7 +63,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9A8F3B-AFA5-5C8F-999D-F97BC7CF1FC5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveClientIdFromOIDCProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveClientIdFromOIDCProviderResponseBody</p>
+     */
     public static class OIDCProvider extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("ClientIds")
+        @com.aliyun.core.annotation.NameInMap("ClientIds")
         private String clientIds;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Fingerprints")
+        @com.aliyun.core.annotation.NameInMap("Fingerprints")
         private String fingerprints;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IssuanceLimitTime")
+        @com.aliyun.core.annotation.NameInMap("IssuanceLimitTime")
         private Long issuanceLimitTime;
 
-        @NameInMap("IssuerUrl")
+        @com.aliyun.core.annotation.NameInMap("IssuerUrl")
         private String issuerUrl;
 
-        @NameInMap("OIDCProviderName")
+        @com.aliyun.core.annotation.NameInMap("OIDCProviderName")
         private String OIDCProviderName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private OIDCProvider(Builder builder) {
@@ -218,7 +232,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:oidc-provider/TestOIDCProvider</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -226,7 +243,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).
+             * <p>The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>598469743454717****</p>
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
@@ -234,7 +254,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the OIDC IdP was created. The time is displayed in UTC.
+             * <p>The time when the OIDC IdP was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-11T06:56:03Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -242,7 +265,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the OIDC IdP.
+             * <p>The description of the OIDC IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a new OIDC Provider.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,7 +276,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).
+             * <p>The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>
              */
             public Builder fingerprints(String fingerprints) {
                 this.fingerprints = fingerprints;
@@ -258,7 +287,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the OIDC IdP was created.
+             * <p>The timestamp when the OIDC IdP was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636613763000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -266,7 +298,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the OIDC IdP was modified.
+             * <p>The timestamp when the OIDC IdP was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636706309000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -274,7 +309,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.
+             * <p>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder issuanceLimitTime(Long issuanceLimitTime) {
                 this.issuanceLimitTime = issuanceLimitTime;
@@ -282,7 +320,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the issuer.
+             * <p>The URL of the issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
              */
             public Builder issuerUrl(String issuerUrl) {
                 this.issuerUrl = issuerUrl;
@@ -290,7 +331,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OIDC IdP.
+             * <p>The name of the OIDC IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestOIDCProvider</p>
              */
             public Builder OIDCProviderName(String OIDCProviderName) {
                 this.OIDCProviderName = OIDCProviderName;
@@ -298,7 +342,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the OIDC IdP was modified. The time is displayed in UTC.
+             * <p>The time when the OIDC IdP was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-12T08:38:29Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

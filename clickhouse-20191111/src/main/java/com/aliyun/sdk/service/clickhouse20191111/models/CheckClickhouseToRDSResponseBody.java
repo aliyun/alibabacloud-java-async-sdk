@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckClickhouseToRDSResponseBody} extends {@link TeaModel}
  *
  * <p>CheckClickhouseToRDSResponseBody</p>
  */
 public class CheckClickhouseToRDSResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
     private CheckClickhouseToRDSResponseBody(Builder builder) {
@@ -62,7 +67,13 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * ErrorCode.
+         * <ul>
+         * <li>When the value <strong>true</strong> is returned for the <strong>Status</strong> parameter, the system does not return the ErrorCode parameter.</li>
+         * <li>When the value <strong>false</strong> is returned for the <strong>Status</strong> parameter, the system returns for the ErrorCode parameter the reason why the ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NotSameVpc</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -70,7 +81,10 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A82758F8-E793-5610-BE11-0E46664305C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +92,14 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: The ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>false</strong>: The ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

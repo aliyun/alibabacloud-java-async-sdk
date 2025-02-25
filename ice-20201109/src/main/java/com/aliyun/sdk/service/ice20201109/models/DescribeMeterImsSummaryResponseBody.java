@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMeterImsSummaryResponseBody</p>
  */
 public class DescribeMeterImsSummaryResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMeterImsSummaryResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The usage statistics of IMS.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,35 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMeterImsSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeterImsSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EditingDuration")
+        @com.aliyun.core.annotation.NameInMap("EditingDuration")
         private String editingDuration;
 
-        @NameInMap("LiveEditDuration")
+        @com.aliyun.core.annotation.NameInMap("LiveEditDuration")
         private String liveEditDuration;
 
-        @NameInMap("LiveRecordDuration")
+        @com.aliyun.core.annotation.NameInMap("LiveRecordDuration")
         private String liveRecordDuration;
 
-        @NameInMap("LiveSnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("LiveSnapshotCount")
         private String liveSnapshotCount;
 
-        @NameInMap("LiveTranscodeDuration")
+        @com.aliyun.core.annotation.NameInMap("LiveTranscodeDuration")
         private Long liveTranscodeDuration;
 
-        @NameInMap("MpsAiDuration")
+        @com.aliyun.core.annotation.NameInMap("MpsAiDuration")
         private Long mpsAiDuration;
 
-        @NameInMap("MpsTranscodeDuration")
+        @com.aliyun.core.annotation.NameInMap("MpsTranscodeDuration")
         private Long mpsTranscodeDuration;
 
-        @NameInMap("MpsTranscodeUHDDuration")
+        @com.aliyun.core.annotation.NameInMap("MpsTranscodeUHDDuration")
         private Long mpsTranscodeUHDDuration;
 
         private Data(Builder builder) {
@@ -182,7 +196,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             private Long mpsTranscodeUHDDuration; 
 
             /**
-             * EditingDuration.
+             * <p>The duration of video editing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8722</p>
              */
             public Builder editingDuration(String editingDuration) {
                 this.editingDuration = editingDuration;
@@ -190,7 +207,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * LiveEditDuration.
+             * <p>The duration of live editing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder liveEditDuration(String liveEditDuration) {
                 this.liveEditDuration = liveEditDuration;
@@ -198,7 +218,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * LiveRecordDuration.
+             * <p>The duration of live stream recording.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder liveRecordDuration(String liveRecordDuration) {
                 this.liveRecordDuration = liveRecordDuration;
@@ -206,7 +229,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * LiveSnapshotCount.
+             * <p>The number of live stream snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder liveSnapshotCount(String liveSnapshotCount) {
                 this.liveSnapshotCount = liveSnapshotCount;
@@ -214,7 +240,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * LiveTranscodeDuration.
+             * <p>The duration of live stream transcoding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12356</p>
              */
             public Builder liveTranscodeDuration(Long liveTranscodeDuration) {
                 this.liveTranscodeDuration = liveTranscodeDuration;
@@ -222,7 +251,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MpsAiDuration.
+             * <p>The duration of AI processing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mpsAiDuration(Long mpsAiDuration) {
                 this.mpsAiDuration = mpsAiDuration;
@@ -230,7 +262,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MpsTranscodeDuration.
+             * <p>The duration of video-on-demand (VOD) transcoding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17337</p>
              */
             public Builder mpsTranscodeDuration(Long mpsTranscodeDuration) {
                 this.mpsTranscodeDuration = mpsTranscodeDuration;
@@ -238,7 +273,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MpsTranscodeUHDDuration.
+             * <p>The duration of audio and video enhancement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder mpsTranscodeUHDDuration(Long mpsTranscodeUHDDuration) {
                 this.mpsTranscodeUHDDuration = mpsTranscodeUHDDuration;

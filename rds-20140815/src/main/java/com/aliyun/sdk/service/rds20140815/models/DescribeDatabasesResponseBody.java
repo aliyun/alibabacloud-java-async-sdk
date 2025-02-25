@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatabasesResponseBody</p>
  */
 public class DescribeDatabasesResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private Databases databases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDatabasesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about databases.
+         * <p>The information about the databases.</p>
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -58,7 +63,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2603CA96-B17D-4903-BC04-61A2C829CD94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class AccountPrivilegeInfo extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("AccountPrivilege")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
         private String accountPrivilege;
 
-        @NameInMap("AccountPrivilegeDetail")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilegeDetail")
         private String accountPrivilegeDetail;
 
         private AccountPrivilegeInfo(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String accountPrivilegeDetail; 
 
             /**
-             * The username of the account.
+             * <p>The account username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -130,13 +147,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions that the account has on the database. Valid values:
-             * <p>
+             * <p>The permissions that the account has on the database. Valid values:</p>
+             * <ul>
+             * <li><strong>ReadWrite</strong>: read and write permissions</li>
+             * <li><strong>ReadOnly</strong>: read-only permissions</li>
+             * <li><strong>DMLOnly</strong>: DML-only permissions</li>
+             * <li><strong>DDLOnly</strong>: DDL-only permissions</li>
+             * </ul>
              * 
-             * *   **ReadWrite**: read and write permissions
-             * *   **ReadOnly**: read-only permissions
-             * *   **DMLOnly**: DML-only permissions
-             * *   **DDLOnly**: DDL-only permissions
+             * <strong>example:</strong>
+             * <p>DMLOnly</p>
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -144,7 +164,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the permissions that the account has on the database.
+             * <p>The permission that the account has on the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder accountPrivilegeDetail(String accountPrivilegeDetail) {
                 this.accountPrivilegeDetail = accountPrivilegeDetail;
@@ -158,9 +181,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
-        @NameInMap("AccountPrivilegeInfo")
-        private java.util.List < AccountPrivilegeInfo> accountPrivilegeInfo;
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilegeInfo")
+        private java.util.List<AccountPrivilegeInfo> accountPrivilegeInfo;
 
         private Accounts(Builder builder) {
             this.accountPrivilegeInfo = builder.accountPrivilegeInfo;
@@ -177,17 +206,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return accountPrivilegeInfo
          */
-        public java.util.List < AccountPrivilegeInfo> getAccountPrivilegeInfo() {
+        public java.util.List<AccountPrivilegeInfo> getAccountPrivilegeInfo() {
             return this.accountPrivilegeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AccountPrivilegeInfo> accountPrivilegeInfo; 
+            private java.util.List<AccountPrivilegeInfo> accountPrivilegeInfo; 
 
             /**
              * AccountPrivilegeInfo.
              */
-            public Builder accountPrivilegeInfo(java.util.List < AccountPrivilegeInfo> accountPrivilegeInfo) {
+            public Builder accountPrivilegeInfo(java.util.List<AccountPrivilegeInfo> accountPrivilegeInfo) {
                 this.accountPrivilegeInfo = accountPrivilegeInfo;
                 return this;
             }
@@ -199,9 +228,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class AdvancedInfo extends TeaModel {
-        @NameInMap("AdvancedDbProperty")
-        private java.util.List < java.util.Map<String, ?>> advancedDbProperty;
+        @com.aliyun.core.annotation.NameInMap("AdvancedDbProperty")
+        private java.util.List<java.util.Map<String, ?>> advancedDbProperty;
 
         private AdvancedInfo(Builder builder) {
             this.advancedDbProperty = builder.advancedDbProperty;
@@ -218,17 +253,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return advancedDbProperty
          */
-        public java.util.List < java.util.Map<String, ?>> getAdvancedDbProperty() {
+        public java.util.List<java.util.Map<String, ?>> getAdvancedDbProperty() {
             return this.advancedDbProperty;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> advancedDbProperty; 
+            private java.util.List<java.util.Map<String, ?>> advancedDbProperty; 
 
             /**
              * AdvancedDbProperty.
              */
-            public Builder advancedDbProperty(java.util.List < java.util.Map<String, ?>> advancedDbProperty) {
+            public Builder advancedDbProperty(java.util.List<java.util.Map<String, ?>> advancedDbProperty) {
                 this.advancedDbProperty = advancedDbProperty;
                 return this;
             }
@@ -240,9 +275,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class BasicInfo extends TeaModel {
-        @NameInMap("BasicDbProperty")
-        private java.util.List < java.util.Map<String, ?>> basicDbProperty;
+        @com.aliyun.core.annotation.NameInMap("BasicDbProperty")
+        private java.util.List<java.util.Map<String, ?>> basicDbProperty;
 
         private BasicInfo(Builder builder) {
             this.basicDbProperty = builder.basicDbProperty;
@@ -259,17 +300,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return basicDbProperty
          */
-        public java.util.List < java.util.Map<String, ?>> getBasicDbProperty() {
+        public java.util.List<java.util.Map<String, ?>> getBasicDbProperty() {
             return this.basicDbProperty;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> basicDbProperty; 
+            private java.util.List<java.util.Map<String, ?>> basicDbProperty; 
 
             /**
              * BasicDbProperty.
              */
-            public Builder basicDbProperty(java.util.List < java.util.Map<String, ?>> basicDbProperty) {
+            public Builder basicDbProperty(java.util.List<java.util.Map<String, ?>> basicDbProperty) {
                 this.basicDbProperty = basicDbProperty;
                 return this;
             }
@@ -281,9 +322,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class RuntimeInfo extends TeaModel {
-        @NameInMap("RuntimeDbProperty")
-        private java.util.List < java.util.Map<String, ?>> runtimeDbProperty;
+        @com.aliyun.core.annotation.NameInMap("RuntimeDbProperty")
+        private java.util.List<java.util.Map<String, ?>> runtimeDbProperty;
 
         private RuntimeInfo(Builder builder) {
             this.runtimeDbProperty = builder.runtimeDbProperty;
@@ -300,17 +347,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return runtimeDbProperty
          */
-        public java.util.List < java.util.Map<String, ?>> getRuntimeDbProperty() {
+        public java.util.List<java.util.Map<String, ?>> getRuntimeDbProperty() {
             return this.runtimeDbProperty;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> runtimeDbProperty; 
+            private java.util.List<java.util.Map<String, ?>> runtimeDbProperty; 
 
             /**
              * RuntimeDbProperty.
              */
-            public Builder runtimeDbProperty(java.util.List < java.util.Map<String, ?>> runtimeDbProperty) {
+            public Builder runtimeDbProperty(java.util.List<java.util.Map<String, ?>> runtimeDbProperty) {
                 this.runtimeDbProperty = runtimeDbProperty;
                 return this;
             }
@@ -322,59 +369,62 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Database extends TeaModel {
-        @NameInMap("Accounts")
+        @com.aliyun.core.annotation.NameInMap("Accounts")
         private Accounts accounts;
 
-        @NameInMap("AdvancedInfo")
+        @com.aliyun.core.annotation.NameInMap("AdvancedInfo")
         private AdvancedInfo advancedInfo;
 
-        @NameInMap("BasicInfo")
+        @com.aliyun.core.annotation.NameInMap("BasicInfo")
         private BasicInfo basicInfo;
 
-        @NameInMap("CharacterSetName")
+        @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private String characterSetName;
 
-        @NameInMap("Collate")
+        @com.aliyun.core.annotation.NameInMap("Collate")
         private String collate;
 
-        @NameInMap("ConnLimit")
+        @com.aliyun.core.annotation.NameInMap("ConnLimit")
         private String connLimit;
 
-        @NameInMap("Ctype")
+        @com.aliyun.core.annotation.NameInMap("Ctype")
         private String ctype;
 
-        @NameInMap("DBDescription")
+        @com.aliyun.core.annotation.NameInMap("DBDescription")
         private String DBDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBStatus")
+        @com.aliyun.core.annotation.NameInMap("DBStatus")
         private String DBStatus;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
-        @NameInMap("RuntimeInfo")
+        @com.aliyun.core.annotation.NameInMap("RuntimeInfo")
         private RuntimeInfo runtimeInfo;
 
-        @NameInMap("Tablespace")
+        @com.aliyun.core.annotation.NameInMap("Tablespace")
         private String tablespace;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Database(Builder builder) {
@@ -392,7 +442,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
-            this.resourceGroupId = builder.resourceGroupId;
             this.runtimeInfo = builder.runtimeInfo;
             this.tablespace = builder.tablespace;
             this.totalCount = builder.totalCount;
@@ -505,13 +554,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
          * @return runtimeInfo
          */
         public RuntimeInfo getRuntimeInfo() {
@@ -547,13 +589,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String engine; 
             private Integer pageNumber; 
             private Integer pageSize; 
-            private String resourceGroupId; 
             private RuntimeInfo runtimeInfo; 
             private String tablespace; 
             private Integer totalCount; 
 
             /**
-             * An array that consists of the details of the accounts. Each account has specific permissions on the database.
+             * <p>The information about the account. Each account has specific permissions on the database.</p>
              */
             public Builder accounts(Accounts accounts) {
                 this.accounts = accounts;
@@ -561,10 +602,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced information about the database.
-             * <p>
-             * 
-             * > This parameter is returned only for instances that run SQL Server.
+             * <p>The advanced information about the database.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run SQL Server.</p>
+             * </blockquote>
              */
             public Builder advancedInfo(AdvancedInfo advancedInfo) {
                 this.advancedInfo = advancedInfo;
@@ -572,10 +613,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The basic information of the database.
-             * <p>
-             * 
-             * > This parameter is returned only for instances that run SQL Server.
+             * <p>The basic information about the database.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run SQL Server.</p>
+             * </blockquote>
              */
             public Builder basicInfo(BasicInfo basicInfo) {
                 this.basicInfo = basicInfo;
@@ -583,7 +624,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the character set.
+             * <p>The name of the character set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
@@ -591,10 +635,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The collation of the character set. The example value C stands for localization.
-             * <p>
+             * <p>The collation of the character set. The example value C indicates localization.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>C</p>
              */
             public Builder collate(String collate) {
                 this.collate = collate;
@@ -602,10 +649,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.
-             * <p>
+             * <p>The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder connLimit(String connLimit) {
                 this.connLimit = connLimit;
@@ -613,10 +663,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the character set.
-             * <p>
+             * <p>The type of the character set.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>en_US.utf8</p>
              */
             public Builder ctype(String ctype) {
                 this.ctype = ctype;
@@ -624,7 +677,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the database.
+             * <p>The description of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder DBDescription(String DBDescription) {
                 this.DBDescription = DBDescription;
@@ -632,7 +688,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the database belongs.
+             * <p>The ID of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -640,7 +699,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDB01</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -648,12 +710,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database. Valid values:
-             * <p>
+             * <p>The database status. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Cold</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Running**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
@@ -661,7 +727,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -669,7 +738,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>The page number of the page to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -677,7 +749,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -685,18 +760,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The running of the database.
-             * <p>
-             * 
-             * > This parameter is returned only for instances that run SQL Server.
+             * <p>The runtime information about the database.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run SQL Server.</p>
+             * </blockquote>
              */
             public Builder runtimeInfo(RuntimeInfo runtimeInfo) {
                 this.runtimeInfo = runtimeInfo;
@@ -704,10 +771,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The tablespace of the database.
-             * <p>
+             * <p>The database tablespace.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>pg_default</p>
              */
             public Builder tablespace(String tablespace) {
                 this.tablespace = tablespace;
@@ -715,7 +785,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run SQL Server.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -729,9 +805,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("Database")
-        private java.util.List < Database> database;
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private java.util.List<Database> database;
 
         private Databases(Builder builder) {
             this.database = builder.database;
@@ -748,17 +830,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return database
          */
-        public java.util.List < Database> getDatabase() {
+        public java.util.List<Database> getDatabase() {
             return this.database;
         }
 
         public static final class Builder {
-            private java.util.List < Database> database; 
+            private java.util.List<Database> database; 
 
             /**
              * Database.
              */
-            public Builder database(java.util.List < Database> database) {
+            public Builder database(java.util.List<Database> database) {
                 this.database = database;
                 return this;
             }

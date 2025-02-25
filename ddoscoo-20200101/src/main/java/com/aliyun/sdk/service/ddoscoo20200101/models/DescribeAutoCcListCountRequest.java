@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoCcListCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoCcListCountRequest</p>
  */
 public class DescribeAutoCcListCountRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private String queryType;
 
     private DescribeAutoCcListCountRequest(Builder builder) {
@@ -92,10 +97,14 @@ public class DescribeAutoCcListCountRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeInstanceIds</strong> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the **DescribeInstanceIds** operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,11 +113,14 @@ public class DescribeAutoCcListCountRequest extends Request {
         }
 
         /**
-         * The mode of how an IP address is added to the whitelist or blacklist. Valid values:
-         * <p>
+         * <p>The mode of how an IP address is added to the whitelist or blacklist. Valid values:</p>
+         * <ul>
+         * <li><strong>manual</strong>: manually added</li>
+         * <li><strong>auto</strong>: automatically added</li>
+         * </ul>
          * 
-         * *   **manual**: manually added
-         * *   **auto**: automatically added
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);

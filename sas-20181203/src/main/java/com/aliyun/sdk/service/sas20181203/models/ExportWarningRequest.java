@@ -1,81 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportWarningRequest} extends {@link RequestModel}
  *
  * <p>ExportWarningRequest</p>
  */
 public class ExportWarningRequest extends Request {
-    @Query
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Query
-    @NameInMap("ExportType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportType")
     private String exportType;
 
-    @Query
-    @NameInMap("IsCleartextPwd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    private Long groupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsCleartextPwd")
     private Integer isCleartextPwd;
 
-    @Query
-    @NameInMap("IsSummaryExport")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSummaryExport")
     private Integer isSummaryExport;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RiskIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskIds")
     private String riskIds;
 
-    @Query
-    @NameInMap("RiskLevels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevels")
     private String riskLevels;
 
-    @Query
-    @NameInMap("RiskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskName")
     private String riskName;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("StatusList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusList")
     private String statusList;
 
-    @Query
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private Long strategyId;
 
-    @Query
-    @NameInMap("SubTypeNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubTypeNames")
     private String subTypeNames;
 
-    @Query
-    @NameInMap("TypeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TypeName")
     private String typeName;
 
-    @Query
-    @NameInMap("TypeNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TypeNames")
     private String typeNames;
 
-    @Query
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
     private ExportWarningRequest(Builder builder) {
         super(builder);
         this.dealed = builder.dealed;
         this.exportType = builder.exportType;
+        this.groupId = builder.groupId;
         this.isCleartextPwd = builder.isCleartextPwd;
         this.isSummaryExport = builder.isSummaryExport;
         this.lang = builder.lang;
@@ -116,6 +126,13 @@ public class ExportWarningRequest extends Request {
      */
     public String getExportType() {
         return this.exportType;
+    }
+
+    /**
+     * @return groupId
+     */
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     /**
@@ -212,6 +229,7 @@ public class ExportWarningRequest extends Request {
     public static final class Builder extends Request.Builder<ExportWarningRequest, Builder> {
         private String dealed; 
         private String exportType; 
+        private Long groupId; 
         private Integer isCleartextPwd; 
         private Integer isSummaryExport; 
         private String lang; 
@@ -234,6 +252,7 @@ public class ExportWarningRequest extends Request {
             super(request);
             this.dealed = request.dealed;
             this.exportType = request.exportType;
+            this.groupId = request.groupId;
             this.isCleartextPwd = request.isCleartextPwd;
             this.isSummaryExport = request.isSummaryExport;
             this.lang = request.lang;
@@ -250,11 +269,14 @@ public class ExportWarningRequest extends Request {
         } 
 
         /**
-         * Specifies whether the baseline risks are handled. Valid values:
-         * <p>
+         * <p>Specifies whether the baseline risks are handled. Valid values:</p>
+         * <ul>
+         * <li><strong>Y</strong>: yes</li>
+         * <li><strong>N</strong>: no</li>
+         * </ul>
          * 
-         * *   **Y**: yes
-         * *   **N**: no
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -263,7 +285,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The type of the export task. Set the value to **hc_check_warning**, which indicates tasks to export baseline check results.
+         * <p>The type of the export task. Set the value to <strong>hc_check_warning</strong>, which indicates tasks to export baseline check results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_check_warning</p>
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
@@ -272,11 +297,29 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The export method of the results for the weak password baseline check. Valid values:
-         * <p>
+         * <p>The ID of the server group.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * </blockquote>
          * 
-         * *   **0**: exports the check results after it is masked.
-         * *   **1**: exports the check results in plaintext.
+         * <strong>example:</strong>
+         * <p>13007754</p>
+         */
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * <p>The export method of the results for the weak password baseline check. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: exports the check results after it is masked.</li>
+         * <li><strong>1</strong>: exports the check results in plaintext.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isCleartextPwd(Integer isCleartextPwd) {
             this.putQueryParameter("IsCleartextPwd", isCleartextPwd);
@@ -285,11 +328,14 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * Specifies whether the baseline check results are aggregated and exported. Valid values:
-         * <p>
+         * <p>Specifies whether the baseline check results are aggregated and exported. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isSummaryExport(Integer isSummaryExport) {
             this.putQueryParameter("IsSummaryExport", isSummaryExport);
@@ -298,11 +344,14 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -311,7 +360,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The ID of the risk item in the baseline check results. Separate multiple IDs with commas (,).
+         * <p>The ID of the risk item in the baseline check results. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,124</p>
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -320,12 +372,15 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The severity of the baseline check item. Separate multiple severities with commas (,). Valid values:
-         * <p>
+         * <p>The severity of the baseline check item. Separate multiple severities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
          * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <strong>example:</strong>
+         * <p>high,medium</p>
          */
         public Builder riskLevels(String riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -334,7 +389,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The name of the baseline.
+         * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Standard - Windows 2016/2019  Security Baseline</p>
          */
         public Builder riskName(String riskName) {
             this.putQueryParameter("RiskName", riskName);
@@ -343,7 +401,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -352,11 +413,14 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The status of the check item in the baseline check results. Separate multiple statuses with commas (,). Valid values:
-         * <p>
+         * <p>The status of the check item in the baseline check results. Separate multiple statuses with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: passed</li>
+         * <li><strong>1</strong>: failed</li>
+         * </ul>
          * 
-         * *   **3**: passed
-         * *   **1**: failed
+         * <strong>example:</strong>
+         * <p>1,3</p>
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -365,7 +429,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
+         * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -374,10 +441,13 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The subtypes of the baselines based on which baseline checks are performed. Separate multiple subtypes with commas (,).
-         * <p>
+         * <p>The subtypes of the baselines based on which baseline checks are performed. Separate multiple subtypes with commas (,).</p>
+         * <blockquote>
+         * <p>You must set the value of this parameter to the value of the <strong>TypeName</strong> parameter that is contained in the <strong>SubTypes</strong> parameter. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the value of the TypeName parameter.</p>
+         * </blockquote>
          * 
-         * > You must set the value of this parameter to the value of the **TypeName** parameter that is contained in the **SubTypes** parameter. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to obtain the value of the TypeName parameter.
+         * <strong>example:</strong>
+         * <p>hc_middleware_ack_master</p>
          */
         public Builder subTypeNames(String subTypeNames) {
             this.putQueryParameter("SubTypeNames", subTypeNames);
@@ -386,10 +456,13 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The type of the baseline based on which baseline checks are performed.
-         * <p>
+         * <p>The type of the baseline based on which baseline checks are performed.</p>
+         * <blockquote>
+         * <p>You must set the value of this parameter to the value of the <strong>TypeName</strong> parameter that is returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both the <strong>TypeName</strong> and <strong>TypeNames</strong> parameters are specified, only the <strong>TypeName</strong> parameter takes effect.</p>
+         * </blockquote>
          * 
-         * > You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
+         * <strong>example:</strong>
+         * <p>hc_container</p>
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -398,10 +471,13 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The types of the baselines based on which baseline checks are performed. Separate multiple types with commas (,).
-         * <p>
+         * <p>The types of the baselines based on which baseline checks are performed. Separate multiple types with commas (,).</p>
+         * <blockquote>
+         * <p>You must set the value of this parameter to the value of the <strong>TypeName</strong> parameter that is returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both the <strong>TypeName</strong> and <strong>TypeNames</strong> parameters are specified, only the <strong>TypeName</strong> parameter takes effect.</p>
+         * </blockquote>
          * 
-         * > You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
+         * <strong>example:</strong>
+         * <p>hc_container,cis</p>
          */
         public Builder typeNames(String typeNames) {
             this.putQueryParameter("TypeNames", typeNames);
@@ -410,7 +486,10 @@ public class ExportWarningRequest extends Request {
         }
 
         /**
-         * The UUID of the server whose baseline check results you want to export. Separate multiple UUIDs with commas (,).
+         * <p>The UUID of the server whose baseline check results you want to export. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-7c676676-06fa-442e-90fb-b802e****,inet-7c676676-06fa-442e-90fb-b****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

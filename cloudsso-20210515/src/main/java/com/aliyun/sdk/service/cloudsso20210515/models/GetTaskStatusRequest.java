@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskStatusRequest} extends {@link RequestModel}
  *
  * <p>GetTaskStatusRequest</p>
  */
 public class GetTaskStatusRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private GetTaskStatusRequest(Builder builder) {
@@ -68,7 +68,10 @@ public class GetTaskStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +80,10 @@ public class GetTaskStatusRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-shfqw1u1edszvxw5****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

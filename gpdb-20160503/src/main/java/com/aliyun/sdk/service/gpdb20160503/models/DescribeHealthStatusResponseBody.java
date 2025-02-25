@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHealthStatusResponseBody</p>
  */
 public class DescribeHealthStatusResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Status status;
 
     private DescribeHealthStatusResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         private Status status; 
 
         /**
-         * The ID of instance.
+         * <p>The ID of instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +78,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D97B4191-104D-10CE-8BC5-53**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +89,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The queried performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by **Key**. For example, if you set **Key** to **adbpg_status**, only the metric information of **adbpg_status** is returned.
-         * <p>
+         * <p>The queried performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by <strong>Key</strong>. For example, if you set <strong>Key</strong> to <strong>adbpg_status</strong>, only the metric information of <strong>adbpg_status</strong> is returned.</p>
+         * <p>For more information about performance parameters, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
          * 
-         * For more information about performance parameters, see [Performance parameters](~~86943~~).
+         * <strong>example:</strong>
+         * <p>{&quot;node_master_connection_status&quot;:{&quot;Status&quot;:&quot;healthy&quot;,&quot;Value&quot;:1.6}}</p>
          */
         public Builder status(Status status) {
             this.status = status;
@@ -94,11 +106,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbgpSegmentDiskUsagePercentMax extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbgpSegmentDiskUsagePercentMax(Builder builder) {
@@ -133,12 +151,15 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The status corresponding to the maximum storage usage among all compute nodes. Valid values:
-             * <p>
+             * <p>The status corresponding to the maximum storage usage among all compute nodes. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The compute node storage usage is greater than or equal to 90%. In this case, the instance is locked.</li>
+             * <li><strong>warning</strong>: The compute node storage usage is greater than or equal to 80% and less than 90%.</li>
+             * <li><strong>healthy</strong>: The compute node storage usage is less than 80%.</li>
+             * </ul>
              * 
-             * *   **critical**: The compute node storage usage is greater than or equal to 90%. In this case, the instance is locked.
-             * *   **warning**: The compute node storage usage is greater than or equal to 80% and less than 90%.
-             * *   **healthy**: The compute node storage usage is less than 80%.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -146,10 +167,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of maximum compute node storage usage.
-             * <p>
+             * <p>The metric value of maximum compute node storage usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>1.52</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -163,11 +185,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgConnectionStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgConnectionStatus(Builder builder) {
@@ -202,14 +230,18 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The connection health status of the instance. Valid values:
-             * <p>
+             * <p>The connection health status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The instance connection usage is greater than 95%. In this case, this metric is marked in red in the console.</li>
+             * <li><strong>warning</strong>: The instance connection usage is greater than 90% and less than or equal to 95%. In this case, this metric is marked in yellow in the console.</li>
+             * <li><strong>healthy</strong>: The instance connection usage is less than or equal to 90%. In this case, this metric is marked in green in the console.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The instance connection usage is the maximum connection usage among all the coordinator and compute nodes.</p>
+             * </blockquote>
              * 
-             * *   **critical**: The instance connection usage is greater than 95%. In this case, this metric is marked in red in the console.
-             * *   **warning**: The instance connection usage is greater than 90% and less than or equal to 95%. In this case, this metric is marked in yellow in the console.
-             * *   **healthy**: The instance connection usage is less than or equal to 90%. In this case, this metric is marked in green in the console.
-             * 
-             * >  The instance connection usage is the maximum connection usage among all the coordinator and compute nodes.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -217,10 +249,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of instance connection usage.
-             * <p>
+             * <p>The metric value of instance connection usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>1.71</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -234,11 +267,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgDiskStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgDiskStatus(Builder builder) {
@@ -273,14 +312,18 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The storage status of the instance. Valid values:
-             * <p>
+             * <p>The storage status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The instance storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.</li>
+             * <li><strong>warning</strong>: The instance storage usage is greater than or equal to 70% and less than 90%. In this case, this metric is marked in yellow in the console.</li>
+             * <li><strong>healthy</strong>: The instance storage usage is less than 70%. In this case, this metric is marked in green in the console.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The instance storage usage is the average storage usage of all compute nodes.</p>
+             * </blockquote>
              * 
-             * *   **critical**: The instance storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.
-             * *   **warning**: The instance storage usage is greater than or equal to 70% and less than 90%. In this case, this metric is marked in yellow in the console.
-             * *   **healthy**: The instance storage usage is less than 70%. In this case, this metric is marked in green in the console.
-             * 
-             * >  The instance storage usage is the average storage usage of all compute nodes.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -288,10 +331,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
+             * <p>The metric value of instance storage usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>1.52</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -305,11 +349,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgDiskUsagePercent extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgDiskUsagePercent(Builder builder) {
@@ -344,14 +394,18 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The status corresponding to the storage usage of the instance. Valid values:
-             * <p>
+             * <p>The status corresponding to the storage usage of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The instance storage usage is greater than or equal to 90%. In this case, the instance is locked.</li>
+             * <li><strong>warning</strong>: The instance storage usage is greater than or equal to 70% and less than 90%.</li>
+             * <li><strong>healthy</strong>: The instance storage usage is less than 70%.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The instance storage usage is the average storage usage of all compute nodes.</p>
+             * </blockquote>
              * 
-             * *   **critical**: The instance storage usage is greater than or equal to 90%. In this case, the instance is locked.
-             * *   **warning**: The instance storage usage is greater than or equal to 70% and less than 90%.
-             * *   **healthy**: The instance storage usage is less than 70%.
-             * 
-             * >  The instance storage usage is the average storage usage of all compute nodes.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,10 +413,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
+             * <p>The metric value of instance storage usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>1.52</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -376,8 +431,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgInstanceColdDataGb extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgInstanceColdDataGb(Builder builder) {
@@ -403,10 +464,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
+             * <p>The total amount of cold data storage. Unit: GB.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -420,8 +481,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgInstanceHotDataGb extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgInstanceHotDataGb(Builder builder) {
@@ -447,10 +514,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
+             * <p>The total amount of hot data storage. Unit: GB.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>4.1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -464,8 +531,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgInstanceTotalDataGb extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgInstanceTotalDataGb(Builder builder) {
@@ -491,10 +564,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
+             * <p>The total amount of data storage of the instance. Unit: GB.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>4.1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -508,11 +581,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgMasterDiskUsagePercentMax extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgMasterDiskUsagePercentMax(Builder builder) {
@@ -547,12 +626,15 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The status corresponding to the maximum storage usage of the coordinator node. Valid values:
-             * <p>
+             * <p>The status corresponding to the maximum storage usage of the coordinator node. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The coordinator node storage usage is greater than or equal to 90%. In this case, the instance is locked.</li>
+             * <li><strong>warning</strong>: The coordinator node storage usage is greater than or equal to 70% and less than 90%.</li>
+             * <li><strong>healthy</strong>: The coordinator node storage usage is less than 70%.</li>
+             * </ul>
              * 
-             * *   **critical**: The coordinator node storage usage is greater than or equal to 90%. In this case, the instance is locked.
-             * *   **warning**: The coordinator node storage usage is greater than or equal to 70% and less than 90%.
-             * *   **healthy**: The coordinator node storage usage is less than 70%.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -560,10 +642,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of maximum coordinator node storage usage.
-             * <p>
+             * <p>The metric value of maximum coordinator node storage usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>1.34</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -577,11 +660,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgMasterStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgMasterStatus(Builder builder) {
@@ -616,12 +705,15 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The availability status of the coordinator node. Valid values:
-             * <p>
+             * <p>The availability status of the coordinator node. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: Both the primary and standby coordinator nodes are unavailable. In this case, this metric is marked in red in the console.</li>
+             * <li><strong>warning</strong>: The primary or standby coordinator node is unavailable. In this case, this metric is marked in yellow in the console.</li>
+             * <li><strong>healthy</strong>: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.</li>
+             * </ul>
              * 
-             * *   **critical**: Both the primary and standby coordinator nodes are unavailable. In this case, this metric is marked in red in the console.
-             * *   **warning**: The primary or standby coordinator node is unavailable. In this case, this metric is marked in yellow in the console.
-             * *   **healthy**: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -629,7 +721,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of coordinator node availability status. Valid values:
+             * <p>The metric value of coordinator node availability status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -643,11 +738,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgSegmentStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgSegmentStatus(Builder builder) {
@@ -682,12 +783,15 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The availability status of compute nodes. Valid values:
-             * <p>
+             * <p>The availability status of compute nodes. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: All the primary and secondary compute nodes are unavailable. In this case, this metric is marked in red in the console.</li>
+             * <li><strong>warning</strong>: Fifty percent or more than fifty percent of compute nodes are unavailable. In this case, this metric is marked in yellow in the console.</li>
+             * <li><strong>healthy</strong>: All compute nodes are available. In this case, this metric is marked in green in the console.</li>
+             * </ul>
              * 
-             * *   **critical**: All the primary and secondary compute nodes are unavailable. In this case, this metric is marked in red in the console.
-             * *   **warning**: Fifty percent or more than fifty percent of compute nodes are unavailable. In this case, this metric is marked in yellow in the console.
-             * *   **healthy**: All compute nodes are available. In this case, this metric is marked in green in the console.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -695,7 +799,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of compute node availability status.
+             * <p>The metric value of compute node availability status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -709,11 +816,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class AdbpgStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgStatus(Builder builder) {
@@ -748,11 +861,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The health status of the instance. Valid values:
-             * <p>
+             * <p>The health status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The coordinator node or a compute node is unavailable. In this case, this metric is marked in red in the console.</li>
+             * <li><strong>healthy</strong>: All nodes are available. In this case, this metric is marked in green in the console.</li>
+             * </ul>
              * 
-             * *   **critical**: The coordinator node or a compute node is unavailable. In this case, this metric is marked in red in the console.
-             * *   **healthy**: All nodes are available. In this case, this metric is marked in green in the console.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -760,11 +876,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of instance health status. Valid values:
-             * <p>
+             * <p>The metric value of instance health status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: healthy</li>
+             * <li><strong>0</strong>: critical</li>
+             * </ul>
              * 
-             * *   **1**: healthy
-             * *   **0**: critical
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -778,11 +897,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class NodeMasterConnectionStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeMasterConnectionStatus(Builder builder) {
@@ -817,14 +942,18 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The connection health status of the coordinator node. Valid values:
-             * <p>
+             * <p>The connection health status of the coordinator node. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The coordinator node connection usage is greater than 95%. In this case, this metric is marked in red in the console.</li>
+             * <li><strong>warning</strong>: The coordinator node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.</li>
+             * <li><strong>healthy</strong>: The coordinator node connection usage is less than 90%. In this case, this metric is marked in green in the console.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The coordinator node connection usage is the maximum connection usage of the coordinator node.</p>
+             * </blockquote>
              * 
-             * *   **critical**: The coordinator node connection usage is greater than 95%. In this case, this metric is marked in red in the console.
-             * *   **warning**: The coordinator node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.
-             * *   **healthy**: The coordinator node connection usage is less than 90%. In this case, this metric is marked in green in the console.
-             * 
-             * >  The coordinator node connection usage is the maximum connection usage of the coordinator node.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -832,10 +961,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of coordinator node connection usage.
-             * <p>
+             * <p>The metric value of coordinator node connection usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>1.71</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -849,11 +979,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class NodeMasterStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeMasterStatus(Builder builder) {
@@ -888,11 +1024,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The health status of the coordinator node. Valid values:
-             * <p>
+             * <p>The health status of the coordinator node. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The primary or standby coordinator node is unavailable. In this case, this metric is marked in red in the console.</li>
+             * <li><strong>healthy</strong>: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.</li>
+             * </ul>
              * 
-             * *   **critical**: The primary or standby coordinator node is unavailable. In this case, this metric is marked in red in the console.
-             * *   **healthy**: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -900,11 +1039,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of coordinator node health status. Valid values:
-             * <p>
+             * <p>The metric value of coordinator node health status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: healthy</li>
+             * <li><strong>0</strong>: critical</li>
+             * </ul>
              * 
-             * *   **1**: healthy
-             * *   **0**: critical
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -918,11 +1060,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class NodeSegmentConnectionStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeSegmentConnectionStatus(Builder builder) {
@@ -957,14 +1105,18 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The connection health status of compute nodes. Valid values:
-             * <p>
+             * <p>The connection health status of compute nodes. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The compute node connection usage is greater than or equal to 95%. In this case, this metric is marked in red in the console.</li>
+             * <li><strong>warning</strong>: The compute node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.</li>
+             * <li><strong>healthy</strong>: The compute node connection usage is less than 90%. In this case, this metric is marked in green in the console.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The compute node connection usage is the maximum connection usage among all compute nodes.</p>
+             * </blockquote>
              * 
-             * *   **critical**: The compute node connection usage is greater than or equal to 95%. In this case, this metric is marked in red in the console.
-             * *   **warning**: The compute node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.
-             * *   **healthy**: The compute node connection usage is less than 90%. In this case, this metric is marked in green in the console.
-             * 
-             * >  The compute node connection usage is the maximum connection usage among all compute nodes.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -972,10 +1124,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of maximum compute node connection usage.
-             * <p>
+             * <p>The metric value of maximum compute node connection usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>0.48</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -989,11 +1142,17 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class NodeSegmentDiskStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeSegmentDiskStatus(Builder builder) {
@@ -1028,14 +1187,18 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The storage status of compute nodes. Valid values:
-             * <p>
+             * <p>The storage status of compute nodes. Valid values:</p>
+             * <ul>
+             * <li><strong>critical</strong>: The compute node storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.</li>
+             * <li><strong>warning</strong>: The compute node storage usage is greater than or equal to 80% and less than 90%. In this case, this metric is marked in yellow in the console.</li>
+             * <li><strong>healthy</strong>: The compute node storage usage is less than 80%. In this case, this metric is marked in green in the console.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The compute node storage usage is the maximum storage usage among all compute nodes.</p>
+             * </blockquote>
              * 
-             * *   **critical**: The compute node storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.
-             * *   **warning**: The compute node storage usage is greater than or equal to 80% and less than 90%. In this case, this metric is marked in yellow in the console.
-             * *   **healthy**: The compute node storage usage is less than 80%. In this case, this metric is marked in green in the console.
-             * 
-             * >  The compute node storage usage is the maximum storage usage among all compute nodes.
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1043,10 +1206,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value of maximum compute node storage usage.
-             * <p>
+             * <p>The metric value of maximum compute node storage usage.</p>
+             * <p>Unit: %.</p>
              * 
-             * Unit: %.
+             * <strong>example:</strong>
+             * <p>1.52</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1060,50 +1224,56 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthStatusResponseBody</p>
+     */
     public static class Status extends TeaModel {
-        @NameInMap("adbgp_segment_disk_usage_percent_max")
+        @com.aliyun.core.annotation.NameInMap("adbgp_segment_disk_usage_percent_max")
         private AdbgpSegmentDiskUsagePercentMax adbgpSegmentDiskUsagePercentMax;
 
-        @NameInMap("adbpg_connection_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_connection_status")
         private AdbpgConnectionStatus adbpgConnectionStatus;
 
-        @NameInMap("adbpg_disk_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_disk_status")
         private AdbpgDiskStatus adbpgDiskStatus;
 
-        @NameInMap("adbpg_disk_usage_percent")
+        @com.aliyun.core.annotation.NameInMap("adbpg_disk_usage_percent")
         private AdbpgDiskUsagePercent adbpgDiskUsagePercent;
 
-        @NameInMap("adbpg_instance_cold_data_gb")
+        @com.aliyun.core.annotation.NameInMap("adbpg_instance_cold_data_gb")
         private AdbpgInstanceColdDataGb adbpgInstanceColdDataGb;
 
-        @NameInMap("adbpg_instance_hot_data_gb")
+        @com.aliyun.core.annotation.NameInMap("adbpg_instance_hot_data_gb")
         private AdbpgInstanceHotDataGb adbpgInstanceHotDataGb;
 
-        @NameInMap("adbpg_instance_total_data_gb")
+        @com.aliyun.core.annotation.NameInMap("adbpg_instance_total_data_gb")
         private AdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb;
 
-        @NameInMap("adbpg_master_disk_usage_percent_max")
+        @com.aliyun.core.annotation.NameInMap("adbpg_master_disk_usage_percent_max")
         private AdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax;
 
-        @NameInMap("adbpg_master_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_master_status")
         private AdbpgMasterStatus adbpgMasterStatus;
 
-        @NameInMap("adbpg_segment_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_segment_status")
         private AdbpgSegmentStatus adbpgSegmentStatus;
 
-        @NameInMap("adbpg_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_status")
         private AdbpgStatus adbpgStatus;
 
-        @NameInMap("node_master_connection_status")
+        @com.aliyun.core.annotation.NameInMap("node_master_connection_status")
         private NodeMasterConnectionStatus nodeMasterConnectionStatus;
 
-        @NameInMap("node_master_status")
+        @com.aliyun.core.annotation.NameInMap("node_master_status")
         private NodeMasterStatus nodeMasterStatus;
 
-        @NameInMap("node_segment_connection_status")
+        @com.aliyun.core.annotation.NameInMap("node_segment_connection_status")
         private NodeSegmentConnectionStatus nodeSegmentConnectionStatus;
 
-        @NameInMap("node_segment_disk_status")
+        @com.aliyun.core.annotation.NameInMap("node_segment_disk_status")
         private NodeSegmentDiskStatus nodeSegmentDiskStatus;
 
         private Status(Builder builder) {
@@ -1255,10 +1425,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private NodeSegmentDiskStatus nodeSegmentDiskStatus; 
 
             /**
-             * The information of maximum compute node storage usage.
-             * <p>
-             * 
-             * >  This parameter value is returned only for instances in elastic storage mode.
+             * <p>The information of maximum compute node storage usage.</p>
+             * <blockquote>
+             * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+             * </blockquote>
              */
             public Builder adbgpSegmentDiskUsagePercentMax(AdbgpSegmentDiskUsagePercentMax adbgpSegmentDiskUsagePercentMax) {
                 this.adbgpSegmentDiskUsagePercentMax = adbgpSegmentDiskUsagePercentMax;
@@ -1266,7 +1436,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of instance connection health status.
+             * <p>The information of instance connection health status.</p>
              */
             public Builder adbpgConnectionStatus(AdbpgConnectionStatus adbpgConnectionStatus) {
                 this.adbpgConnectionStatus = adbpgConnectionStatus;
@@ -1274,10 +1444,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of instance storage status.
-             * <p>
-             * 
-             * >  This parameter value is returned only for instances in elastic storage mode.
+             * <p>The information of instance storage status.</p>
+             * <blockquote>
+             * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+             * </blockquote>
              */
             public Builder adbpgDiskStatus(AdbpgDiskStatus adbpgDiskStatus) {
                 this.adbpgDiskStatus = adbpgDiskStatus;
@@ -1285,10 +1455,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of instance storage usage.
-             * <p>
-             * 
-             * >  This parameter value is returned only for instances in elastic storage mode.
+             * <p>The information of instance storage usage.</p>
+             * <blockquote>
+             * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+             * </blockquote>
              */
             public Builder adbpgDiskUsagePercent(AdbpgDiskUsagePercent adbpgDiskUsagePercent) {
                 this.adbpgDiskUsagePercent = adbpgDiskUsagePercent;
@@ -1296,7 +1466,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_instance_cold_data_gb.
+             * <p>The total amount of cold data storage.</p>
              */
             public Builder adbpgInstanceColdDataGb(AdbpgInstanceColdDataGb adbpgInstanceColdDataGb) {
                 this.adbpgInstanceColdDataGb = adbpgInstanceColdDataGb;
@@ -1304,7 +1474,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_instance_hot_data_gb.
+             * <p>The total amount of hot data storage.</p>
              */
             public Builder adbpgInstanceHotDataGb(AdbpgInstanceHotDataGb adbpgInstanceHotDataGb) {
                 this.adbpgInstanceHotDataGb = adbpgInstanceHotDataGb;
@@ -1312,7 +1482,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_instance_total_data_gb.
+             * <p>The total amount of data storage of the instance.</p>
              */
             public Builder adbpgInstanceTotalDataGb(AdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb) {
                 this.adbpgInstanceTotalDataGb = adbpgInstanceTotalDataGb;
@@ -1320,10 +1490,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of maximum coordinator node storage usage.
-             * <p>
-             * 
-             * >  This parameter value is returned only for instances in elastic storage mode.
+             * <p>The information of maximum coordinator node storage usage.</p>
+             * <blockquote>
+             * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+             * </blockquote>
              */
             public Builder adbpgMasterDiskUsagePercentMax(AdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax) {
                 this.adbpgMasterDiskUsagePercentMax = adbpgMasterDiskUsagePercentMax;
@@ -1331,7 +1501,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of coordinator node availability status.
+             * <p>The information of coordinator node availability status.</p>
              */
             public Builder adbpgMasterStatus(AdbpgMasterStatus adbpgMasterStatus) {
                 this.adbpgMasterStatus = adbpgMasterStatus;
@@ -1339,7 +1509,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of compute node availability status.
+             * <p>The information of compute node availability status.</p>
              */
             public Builder adbpgSegmentStatus(AdbpgSegmentStatus adbpgSegmentStatus) {
                 this.adbpgSegmentStatus = adbpgSegmentStatus;
@@ -1347,7 +1517,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of instance health status.
+             * <p>The information of instance health status.</p>
              */
             public Builder adbpgStatus(AdbpgStatus adbpgStatus) {
                 this.adbpgStatus = adbpgStatus;
@@ -1355,7 +1525,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of coordinator node connection health status.
+             * <p>The information of coordinator node connection health status.</p>
              */
             public Builder nodeMasterConnectionStatus(NodeMasterConnectionStatus nodeMasterConnectionStatus) {
                 this.nodeMasterConnectionStatus = nodeMasterConnectionStatus;
@@ -1363,7 +1533,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of coordinator node health status.
+             * <p>The information of coordinator node health status.</p>
              */
             public Builder nodeMasterStatus(NodeMasterStatus nodeMasterStatus) {
                 this.nodeMasterStatus = nodeMasterStatus;
@@ -1371,7 +1541,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of compute node connection health status.
+             * <p>The information of compute node connection health status.</p>
              */
             public Builder nodeSegmentConnectionStatus(NodeSegmentConnectionStatus nodeSegmentConnectionStatus) {
                 this.nodeSegmentConnectionStatus = nodeSegmentConnectionStatus;
@@ -1379,10 +1549,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information of compute node storage status.
-             * <p>
-             * 
-             * >  This parameter value is returned only for instances in elastic storage mode.
+             * <p>The information of compute node storage status.</p>
+             * <blockquote>
+             * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+             * </blockquote>
              */
             public Builder nodeSegmentDiskStatus(NodeSegmentDiskStatus nodeSegmentDiskStatus) {
                 this.nodeSegmentDiskStatus = nodeSegmentDiskStatus;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNetInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterNetInfoResponseBody</p>
  */
 public class DescribeClusterNetInfoResponseBody extends TeaModel {
-    @NameInMap("ClusterNetworkType")
+    @com.aliyun.core.annotation.NameInMap("ClusterNetworkType")
     private String clusterNetworkType;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterNetInfoResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The network type of the cluster. Only the Virtual Private Cloud (VPC) network type is supported. **VPC** is returned.
+         * <p>The network type of the cluster. Only the Virtual Private Cloud (VPC) network type is supported. <strong>VPC</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -70,7 +78,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network information about the cluster.
+         * <p>The queried network information about the cluster.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +86,10 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69A29B65-CD0C-52B1-BE42-8B454569747F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,26 +102,161 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
 
     } 
 
-    public static class Address extends TeaModel {
-        @NameInMap("ConnectionString")
-        private String connectionString;
-
-        @NameInMap("ConnectionStringPrefix")
-        private String connectionStringPrefix;
-
-        @NameInMap("IPAddress")
-        private String IPAddress;
-
-        @NameInMap("NetType")
-        private String netType;
-
-        @NameInMap("Port")
+    /**
+     * 
+     * {@link DescribeClusterNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNetInfoResponseBody</p>
+     */
+    public static class Ports extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private Ports(Builder builder) {
+            this.port = builder.port;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ports create() {
+            return builder().build();
+        }
+
+        /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String port; 
+            private String protocol; 
+
+            /**
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>http</strong></li>
+             * <li><strong>https</strong></li>
+             * <li><strong>mysql</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public Ports build() {
+                return new Ports(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNetInfoResponseBody</p>
+     */
+    public static class AddressPorts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ports")
+        private java.util.List<Ports> ports;
+
+        private AddressPorts(Builder builder) {
+            this.ports = builder.ports;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddressPorts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ports
+         */
+        public java.util.List<Ports> getPorts() {
+            return this.ports;
+        }
+
+        public static final class Builder {
+            private java.util.List<Ports> ports; 
+
+            /**
+             * ports.
+             */
+            public Builder ports(java.util.List<Ports> ports) {
+                this.ports = ports;
+                return this;
+            }
+
+            public AddressPorts build() {
+                return new AddressPorts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNetInfoResponseBody</p>
+     */
+    public static class Address extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
+        private String connectionString;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
+        private String connectionStringPrefix;
+
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
+        private String IPAddress;
+
+        @com.aliyun.core.annotation.NameInMap("NetType")
+        private String netType;
+
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private String port;
+
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private AddressPorts ports;
+
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private Address(Builder builder) {
@@ -119,6 +265,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
             this.port = builder.port;
+            this.ports = builder.ports;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -167,6 +314,13 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return ports
+         */
+        public AddressPorts getPorts() {
+            return this.ports;
+        }
+
+        /**
          * @return VPCId
          */
         public String getVPCId() {
@@ -186,15 +340,19 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             private String IPAddress; 
             private String netType; 
             private String port; 
+            private AddressPorts ports; 
             private String VPCId; 
             private String vSwitchId; 
 
             /**
-             * The endpoint of the cluster.
-             * <p>
+             * <p>The endpoint of the cluster.</p>
+             * <ul>
+             * <li>If NetType is set to VPC, the VPC endpoint of the cluster is returned.</li>
+             * <li>If NetType is set to Public, the public endpoint of the cluster is returned.</li>
+             * </ul>
              * 
-             * *   If the network type of the cluster is VPC, the VPC endpoint of the cluster is returned.
-             * *   If the network type of the cluster is Public, the public endpoint of the cluster is returned.
+             * <strong>example:</strong>
+             * <p>amv-wz9dqvn0o7****.ads.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -202,11 +360,14 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the endpoint.
-             * <p>
+             * <p>The prefix of the endpoint.</p>
+             * <ul>
+             * <li>If NetType is set to VPC, the prefix of the VPC endpoint is returned.</li>
+             * <li>If NetType is set to Public, the prefix of the public endpoint is returned.</li>
+             * </ul>
              * 
-             * *   If the network type of the cluster is VPC, the prefix of the private endpoint is returned.
-             * *   If the network type of the cluster is Public, the prefix of the public endpoint is returned.
+             * <strong>example:</strong>
+             * <p>amv-wz9dqvn0o7****</p>
              */
             public Builder connectionStringPrefix(String connectionStringPrefix) {
                 this.connectionStringPrefix = connectionStringPrefix;
@@ -214,11 +375,14 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the endpoint.
-             * <p>
+             * <p>The IP address of the endpoint.</p>
+             * <ul>
+             * <li>If NetType is set to VPC, the private IP address of the cluster is returned.</li>
+             * <li>If NetType is set to Public, the public IP address of the cluster is returned.</li>
+             * </ul>
              * 
-             * *   If the network type of the cluster is VPC, the IP address of the private endpoint is returned.
-             * *   If the network type of the cluster is Public, the IP address of the public endpoint is returned.
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -226,11 +390,14 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the cluster. Valid values:
-             * <p>
+             * <p>The network type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: Internet.</li>
+             * <li><strong>VPC</strong>: VPC.</li>
+             * </ul>
              * 
-             * *   **Public**: Internet.
-             * *   **VPC**: VPC.
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -238,7 +405,10 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the cluster. **3306** is returned.
+             * <p>The port number that is used to connect to the cluster. <strong>3306</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -246,10 +416,21 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
-             * <p>
+             * <p>The ports.</p>
+             */
+            public Builder ports(AddressPorts ports) {
+                this.ports = ports;
+                return this;
+            }
+
+            /**
+             * <p>The VPC ID.</p>
+             * <blockquote>
+             * <p> If NetType is set to Public, an empty string is returned.</p>
+             * </blockquote>
              * 
-             * > If NetType is set to Public, an empty string is returned for this parameter.
+             * <strong>example:</strong>
+             * <p>vpc-8vbhucmd5b****</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -257,10 +438,13 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the cluster.
-             * <p>
+             * <p>The vSwitch ID of the cluster.</p>
+             * <blockquote>
+             * <p> If NetType is set to Public, an empty string is returned.</p>
+             * </blockquote>
              * 
-             * > If NetType is set to Public, an empty string is returned for this parameter.
+             * <strong>example:</strong>
+             * <p>vsw-bp1syh8vvw8yec****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -274,9 +458,15 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterNetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNetInfoResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Address")
-        private java.util.List < Address> address;
+        @com.aliyun.core.annotation.NameInMap("Address")
+        private java.util.List<Address> address;
 
         private Items(Builder builder) {
             this.address = builder.address;
@@ -293,17 +483,17 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         /**
          * @return address
          */
-        public java.util.List < Address> getAddress() {
+        public java.util.List<Address> getAddress() {
             return this.address;
         }
 
         public static final class Builder {
-            private java.util.List < Address> address; 
+            private java.util.List<Address> address; 
 
             /**
              * Address.
              */
-            public Builder address(java.util.List < Address> address) {
+            public Builder address(java.util.List<Address> address) {
                 this.address = address;
                 return this;
             }

@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaCoverResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMediaCoverResponseBody</p>
  */
 public class UpdateMediaCoverResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateMediaCoverResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class UpdateMediaCoverResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DC39B9E-13D4-40BA-AE76-CFF9BD64239D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPerRequestLogsInput} extends {@link TeaModel}
  *
  * <p>GetPerRequestLogsInput</p>
  */
 public class GetPerRequestLogsInput extends TeaModel {
-    @NameInMap("endTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @NameInMap("errorType")
+    @com.aliyun.core.annotation.NameInMap("errorType")
     private String errorType;
 
-    @NameInMap("forwardLine")
+    @com.aliyun.core.annotation.NameInMap("forwardLine")
     private Long forwardLine;
 
-    @NameInMap("instanceID")
+    @com.aliyun.core.annotation.NameInMap("instanceID")
     private String instanceID;
 
-    @NameInMap("isColdStart")
+    @com.aliyun.core.annotation.NameInMap("isColdStart")
     private Boolean isColdStart;
 
-    @NameInMap("requestID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("requestID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestID;
 
-    @NameInMap("startTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @NameInMap("timestamp")
+    @com.aliyun.core.annotation.NameInMap("timestamp")
     private String timestamp;
 
     private GetPerRequestLogsInput(Builder builder) {
@@ -125,7 +130,7 @@ public class GetPerRequestLogsInput extends TeaModel {
         private String timestamp; 
 
         /**
-         * endTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -165,7 +170,7 @@ public class GetPerRequestLogsInput extends TeaModel {
         }
 
         /**
-         * requestID.
+         * <p>This parameter is required.</p>
          */
         public Builder requestID(String requestID) {
             this.requestID = requestID;
@@ -173,7 +178,7 @@ public class GetPerRequestLogsInput extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

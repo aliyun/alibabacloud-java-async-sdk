@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushStatByMsgResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPushStatByMsgResponseBody</p>
  */
 public class QueryPushStatByMsgResponseBody extends TeaModel {
-    @NameInMap("PushStats")
+    @com.aliyun.core.annotation.NameInMap("PushStats")
     private PushStats pushStats;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryPushStatByMsgResponseBody(Builder builder) {
@@ -71,38 +71,44 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPushStatByMsgResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushStatByMsgResponseBody</p>
+     */
     public static class PushStat extends TeaModel {
-        @NameInMap("AcceptCount")
+        @com.aliyun.core.annotation.NameInMap("AcceptCount")
         private Long acceptCount;
 
-        @NameInMap("DeletedCount")
+        @com.aliyun.core.annotation.NameInMap("DeletedCount")
         private Long deletedCount;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
-        @NameInMap("OpenedCount")
+        @com.aliyun.core.annotation.NameInMap("OpenedCount")
         private Long openedCount;
 
-        @NameInMap("ReceivedCount")
+        @com.aliyun.core.annotation.NameInMap("ReceivedCount")
         private Long receivedCount;
 
-        @NameInMap("SentCount")
+        @com.aliyun.core.annotation.NameInMap("SentCount")
         private Long sentCount;
 
-        @NameInMap("SmsFailedCount")
+        @com.aliyun.core.annotation.NameInMap("SmsFailedCount")
         private Long smsFailedCount;
 
-        @NameInMap("SmsReceiveFailedCount")
+        @com.aliyun.core.annotation.NameInMap("SmsReceiveFailedCount")
         private Long smsReceiveFailedCount;
 
-        @NameInMap("SmsReceiveSuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SmsReceiveSuccessCount")
         private Long smsReceiveSuccessCount;
 
-        @NameInMap("SmsSentCount")
+        @com.aliyun.core.annotation.NameInMap("SmsSentCount")
         private Long smsSentCount;
 
-        @NameInMap("SmsSkipCount")
+        @com.aliyun.core.annotation.NameInMap("SmsSkipCount")
         private Long smsSkipCount;
 
         private PushStat(Builder builder) {
@@ -312,8 +318,14 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushStatByMsgResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushStatByMsgResponseBody</p>
+     */
     public static class PushStats extends TeaModel {
-        @NameInMap("PushStat")
+        @com.aliyun.core.annotation.NameInMap("PushStat")
         private java.util.List < PushStat> pushStat;
 
         private PushStats(Builder builder) {

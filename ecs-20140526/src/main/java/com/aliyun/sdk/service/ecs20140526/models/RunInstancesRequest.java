@@ -1,328 +1,337 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunInstancesRequest} extends {@link RequestModel}
  *
  * <p>RunInstancesRequest</p>
  */
 public class RunInstancesRequest extends Request {
-    @Query
-    @NameInMap("CpuOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOptions")
     private CpuOptions cpuOptions;
 
-    @Query
-    @NameInMap("HibernationOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HibernationOptions")
     private HibernationOptions hibernationOptions;
 
-    @Query
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Query
-    @NameInMap("SchedulerOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
     private SchedulerOptions schedulerOptions;
 
-    @Query
-    @NameInMap("SecurityOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityOptions")
     private SecurityOptions securityOptions;
 
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Affinity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Affinity")
     private String affinity;
 
-    @Query
-    @NameInMap("Amount")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer amount;
 
-    @Query
-    @NameInMap("Arn")
-    private java.util.List < Arn> arn;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
+    private java.util.List<Arn> arn;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoReleaseTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
     private String autoReleaseTime;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CreditSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreditSpecification")
     private String creditSpecification;
 
-    @Query
-    @NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisk")
+    private java.util.List<DataDisk> dataDisk;
 
-    @Query
-    @NameInMap("DedicatedHostId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
     private String dedicatedHostId;
 
-    @Query
-    @NameInMap("DeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
     private Boolean deletionProtection;
 
-    @Query
-    @NameInMap("DeploymentSetGroupNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetGroupNo")
     private Integer deploymentSetGroupNo;
 
-    @Query
-    @NameInMap("DeploymentSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("HostNames")
-    private java.util.List < String > hostNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostNames")
+    private java.util.List<String> hostNames;
 
-    @Query
-    @NameInMap("HpcClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HpcClusterId")
     private String hpcClusterId;
 
-    @Query
-    @NameInMap("HttpEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpEndpoint")
     private String httpEndpoint;
 
-    @Query
-    @NameInMap("HttpPutResponseHopLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPutResponseHopLimit")
     private Integer httpPutResponseHopLimit;
 
-    @Query
-    @NameInMap("HttpTokens")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpTokens")
     private String httpTokens;
 
-    @Query
-    @NameInMap("ImageFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOptions")
     private ImageOptions imageOptions;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthIn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
     private Integer internetMaxBandwidthIn;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
     private Integer internetMaxBandwidthOut;
 
-    @Query
-    @NameInMap("IoOptimized")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoOptimized")
     private String ioOptimized;
 
-    @Query
-    @NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Address")
+    private java.util.List<String> ipv6Address;
 
-    @Query
-    @NameInMap("Ipv6AddressCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
     private Integer ipv6AddressCount;
 
-    @Query
-    @NameInMap("Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @Query
-    @NameInMap("LaunchTemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateName")
     private String launchTemplateName;
 
-    @Query
-    @NameInMap("LaunchTemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
     private Long launchTemplateVersion;
 
-    @Query
-    @NameInMap("MinAmount")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAmount")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer minAmount;
 
-    @Query
-    @NameInMap("NetworkInterface")
-    private java.util.List < NetworkInterface> networkInterface;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterface")
+    private java.util.List<NetworkInterface> networkInterface;
 
-    @Query
-    @NameInMap("NetworkInterfaceQueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceQueueNumber")
     private Integer networkInterfaceQueueNumber;
 
-    @Query
-    @NameInMap("NetworkOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkOptions")
     private NetworkOptions networkOptions;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordInherit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInherit")
     private Boolean passwordInherit;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateDnsNameOptions")
+    private PrivateDnsNameOptions privateDnsNameOptions;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityEnhancementStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+    private java.util.List<String> securityGroupIds;
 
-    @Query
-    @NameInMap("SpotDuration")
-    @Validation(maximum = 6)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 720)
     private Integer spotDuration;
 
-    @Query
-    @NameInMap("SpotInterruptionBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInterruptionBehavior")
     private String spotInterruptionBehavior;
 
-    @Query
-    @NameInMap("SpotPriceLimit")
-    @Validation(maximum = 999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.Validation(maximum = 999999)
     private Float spotPriceLimit;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @Query
-    @NameInMap("StorageSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSetId")
     private String storageSetId;
 
-    @Query
-    @NameInMap("StorageSetPartitionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
     private Integer storageSetPartitionNumber;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("Tenancy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tenancy")
     private String tenancy;
 
-    @Query
-    @NameInMap("UniqueSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniqueSuffix")
     private Boolean uniqueSuffix;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private RunInstancesRequest(Builder builder) {
@@ -383,6 +392,7 @@ public class RunInstancesRequest extends Request {
         this.passwordInherit = builder.passwordInherit;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.privateDnsNameOptions = builder.privateDnsNameOptions;
         this.privateIpAddress = builder.privateIpAddress;
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
@@ -485,7 +495,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return arn
      */
-    public java.util.List < Arn> getArn() {
+    public java.util.List<Arn> getArn() {
         return this.arn;
     }
 
@@ -534,7 +544,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -590,7 +600,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return hostNames
      */
-    public java.util.List < String > getHostNames() {
+    public java.util.List<String> getHostNames() {
         return this.hostNames;
     }
 
@@ -695,7 +705,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return ipv6Address
      */
-    public java.util.List < String > getIpv6Address() {
+    public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
@@ -751,7 +761,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return networkInterface
      */
-    public java.util.List < NetworkInterface> getNetworkInterface() {
+    public java.util.List<NetworkInterface> getNetworkInterface() {
         return this.networkInterface;
     }
 
@@ -809,6 +819,13 @@ public class RunInstancesRequest extends Request {
      */
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    /**
+     * @return privateDnsNameOptions
+     */
+    public PrivateDnsNameOptions getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
     }
 
     /**
@@ -870,7 +887,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -919,7 +936,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -968,14 +985,14 @@ public class RunInstancesRequest extends Request {
         private String sourceRegionId; 
         private String affinity; 
         private Integer amount; 
-        private java.util.List < Arn> arn; 
+        private java.util.List<Arn> arn; 
         private Boolean autoPay; 
         private String autoReleaseTime; 
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String clientToken; 
         private String creditSpecification; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private String dedicatedHostId; 
         private Boolean deletionProtection; 
         private Integer deploymentSetGroupNo; 
@@ -983,7 +1000,7 @@ public class RunInstancesRequest extends Request {
         private String description; 
         private Boolean dryRun; 
         private String hostName; 
-        private java.util.List < String > hostNames; 
+        private java.util.List<String> hostNames; 
         private String hpcClusterId; 
         private String httpEndpoint; 
         private Integer httpPutResponseHopLimit; 
@@ -998,7 +1015,7 @@ public class RunInstancesRequest extends Request {
         private Integer internetMaxBandwidthIn; 
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
-        private java.util.List < String > ipv6Address; 
+        private java.util.List<String> ipv6Address; 
         private Integer ipv6AddressCount; 
         private String isp; 
         private String keyPairName; 
@@ -1006,7 +1023,7 @@ public class RunInstancesRequest extends Request {
         private String launchTemplateName; 
         private Long launchTemplateVersion; 
         private Integer minAmount; 
-        private java.util.List < NetworkInterface> networkInterface; 
+        private java.util.List<NetworkInterface> networkInterface; 
         private Integer networkInterfaceQueueNumber; 
         private NetworkOptions networkOptions; 
         private String ownerAccount; 
@@ -1015,6 +1032,7 @@ public class RunInstancesRequest extends Request {
         private Boolean passwordInherit; 
         private Integer period; 
         private String periodUnit; 
+        private PrivateDnsNameOptions privateDnsNameOptions; 
         private String privateIpAddress; 
         private String ramRoleName; 
         private String regionId; 
@@ -1023,14 +1041,14 @@ public class RunInstancesRequest extends Request {
         private Long resourceOwnerId; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private Integer spotDuration; 
         private String spotInterruptionBehavior; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
         private String storageSetId; 
         private Integer storageSetPartitionNumber; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String tenancy; 
         private Boolean uniqueSuffix; 
         private String userData; 
@@ -1099,6 +1117,7 @@ public class RunInstancesRequest extends Request {
             this.passwordInherit = request.passwordInherit;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.privateDnsNameOptions = request.privateDnsNameOptions;
             this.privateIpAddress = request.privateIpAddress;
             this.ramRoleName = request.ramRoleName;
             this.regionId = request.regionId;
@@ -1186,13 +1205,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to associate an instance on a dedicated host with the dedicated host. Valid values:
-         * <p>
+         * <p>Specifies whether to associate an instance on a dedicated host with the dedicated host. Valid values:</p>
+         * <ul>
+         * <li>default: does not associate the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool if the available resources of the original dedicated host are insufficient.</li>
+         * <li>host: associates the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance remains on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance cannot be started.</li>
+         * </ul>
+         * <p>Default value: default.</p>
          * 
-         * *   default: does not associate the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool if the available resources of the original dedicated host are insufficient.
-         * *   host: associates the instance with the dedicated host. When you start an instance that was stopped in economical mode, the instance remains on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance cannot be started.
-         * 
-         * Default value: default.
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder affinity(String affinity) {
             this.putQueryParameter("Affinity", affinity);
@@ -1201,10 +1222,23 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The number of instances that you want to create. Valid values: 1 to 100.
-         * <p>
+         * <p>The desired number of ECS instances that you want to create. Valid values: 1 to 100.</p>
+         * <p>The number of ECS instances that can be created varies based on the Amount and MinAmount values.</p>
+         * <ul>
+         * <li><p>If you do not specify MinAmount, the RunInstances operation creates ECS instances based on the Amount value. If the available resources are insufficient to create the desired number of ECS instances, the RunInstances operation returns an error response and no ECS instances are created.</p>
+         * </li>
+         * <li><p>If you specify MinAmount, take note of the following items:</p>
+         * <ul>
+         * <li>If the available resources are insufficient to create the minimum number of ECS instances, no ECS instances are created and the RunInstances operation returns an error response.</li>
+         * <li>If the available resources are insufficient to create the desired number of ECS instances but are sufficient to create the minimum number of ECS instances, the RunInstances operation uses the available resources to create ECS instances and returns a success response. In this case, the number of ECS instances that can be created is less than the desired number of ECS instances.</li>
+         * <li>If the available resources are sufficient to create the desired number of ECS instances, the RunInstances operation uses the available resources to create the desired number of ECS instances and returns a success response.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -1213,25 +1247,32 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          */
-        public Builder arn(java.util.List < Arn> arn) {
+        public Builder arn(java.util.List<Arn> arn) {
             this.putQueryParameter("Arn", arn);
             this.arn = arn;
             return this;
         }
 
         /**
-         * Specifies whether to automatically complete the payment for instance creation. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically complete the payment for instance creation. Valid values:</p>
+         * <ul>
+         * <li><p>true: The payment is automatically completed.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+         * </li>
+         * <li><p>false: An order is generated but no payment is made.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> When <code>InstanceChargeType</code> is set to <code>PostPaid</code>, <code>AutoPay</code> cannot be set to <code>false</code>.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * - true: The payment is automatically completed.true: The payment is automatically completed.
-         *   >Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
-         * 
-         * - false: An order is generated but no payment is made.
-         *   >When `InstanceChargeType` is set to `PostPaid`, `AutoPay` cannot be set to `false`.
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -1240,12 +1281,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The time when to automatically release the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <ul>
+         * <li>If the value of seconds (<code>ss</code>) is not <code>00</code>, the start time is automatically rounded to the nearest minute based on the value of minutes (<code>mm</code>).</li>
+         * <li>The specified time must be at least 30 minutes later than the current time.</li>
+         * <li>The specified time can be at most three years later than the current time.</li>
+         * </ul>
          * 
-         * *   If the value of seconds (`ss`) is not `00`, the time is automatically rounded to the nearest minute based on the value of minutes (`mm`).
-         * *   The specified time must be at least 30 minutes later than the current time.
-         * *   The specified time can be at most three years from the current time.
+         * <strong>example:</strong>
+         * <p>2018-01-01T12:05:00Z</p>
          */
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
@@ -1254,13 +1298,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PrePaid`. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li>true: enables auto-renewal.</li>
+         * <li>false: does not enable auto-renewal.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: enables auto-renewal.
-         * *   false: does not enable auto-renewal.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -1269,13 +1315,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the instance. Valid values:
-         * <p>
+         * <p>The auto-renewal period of the instance. Valid values:</p>
+         * <ul>
+         * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3.</li>
+         * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
          * 
-         * *   Valid values when PeriodUnit is set to Week: 1, 2, and 3.
-         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -1284,7 +1332,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -1293,11 +1344,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The performance mode of the burstable instance. Valid values:
-         * <p>
+         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <ul>
+         * <li>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</li>
+         * </ul>
          * 
-         * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).
-         * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
@@ -1306,19 +1360,20 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Details about the data disks.
+         * <p>The data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
         }
 
         /**
-         * The ID of the dedicated host on which to create the instance. If you set the `DedicatedHostId` parameter, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.
-         * <p>
+         * <p>The ID of the dedicated host on which to create the instance. Preemptible instances cannot be created on dedicated hosts. If you specify <code>DedicatedHostId</code>, <code>SpotStrategy</code> and <code>SpotPriceLimit</code> are ignored.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the list of dedicated host IDs.</p>
          * 
-         * You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs.
+         * <strong>example:</strong>
+         * <p>dh-bp67acfmxazb4p****</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -1327,15 +1382,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance. Valid values:</p>
+         * <ul>
+         * <li>true: enables release protection for the instance.</li>
+         * <li>false: disables release protection for the instance.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p>This parameter is applicable to only pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.</p>
+         * </blockquote>
          * 
-         * *   true: enables release protection for the instance.
-         * *   false: disables release protection for the instance.
-         * 
-         * Default value: false.
-         * 
-         * > This parameter is applicable to only pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -1344,7 +1402,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The number of the deployment set group to which to deploy the instance. If the deployment set specified by the DeploymentSetId parameter uses the high availability group strategy (AvailabilityGroup), you can use the DeploymentSetGroupNo parameter to specify a deployment set group in the deployment set. Valid values: 1 to 7.
+         * <p>The number of the deployment set group to which to deploy the instance. If the deployment set specified by the DeploymentSetId parameter uses the high availability group strategy (AvailabilityGroup), you can use the DeploymentSetGroupNo parameter to specify a deployment set group in the deployment set. Valid values: 1 to 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder deploymentSetGroupNo(Integer deploymentSetGroupNo) {
             this.putQueryParameter("DeploymentSetGroupNo", deploymentSetGroupNo);
@@ -1353,7 +1414,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set to which to deploy the instance.
+         * <p>The ID of the deployment set to which to deploy the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1brhwhoqinyjd6****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -1362,7 +1426,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The description of the instance. The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <p>The description of the instance. The description must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance_Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -1371,11 +1438,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: The validity of the request is checked but the request is not made. Check items include whether required parameters are specified, the request format, service limits, and available ECS resources. If the check fails, the corresponding error code is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: The validity of the request is checked, and the request is made if the check succeeds.</li>
+         * </ul>
          * 
-         * *   true: The validity of the request is checked but the request is not made. Check items include whether required parameters are specified, the request format, service limits, and available ECS resources. If the check fails, the corresponding error code is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-         * *   false: The validity of the request is checked, and the request is made if the check succeeds.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -1384,22 +1454,27 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The hostname of the instance. Take note of the following items:
-         * <p>
+         * <p>The hostname of the instance. Take note of the following items:</p>
+         * <ul>
+         * <li><p>The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</p>
+         * </li>
+         * <li><p>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</p>
+         * </li>
+         * <li><p>For instances that run other operating systems such as Linux, take note of the following items:</p>
+         * <ul>
+         * <li>The hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+         * <li>You can use the <code>${instance_id}</code> placeholder to pass instance IDs into the hostname specified by <code>HostName</code>. For example, if you set <code>HostName</code> to k8s-${instance_id} and the instance is assigned an ID of <code>i-123abc****</code>, the hostname of the instance is <code>k8s-i-123abc****</code>.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>When you create multiple instances, you can perform the following operations:</p>
+         * <ul>
+         * <li>Batch configure sequential hostnames for the instances. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</li>
+         * <li>Use the <code>HostNames.N</code> parameter to configure different hostnames for instances. You cannot specify both the <code>HostName</code> and <code>HostNames.N</code> parameters.</li>
+         * </ul>
          * 
-         * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
-         * 
-         * *   For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
-         * 
-         * *   For instances that run other operating systems such as Linux, take note of the following items:
-         * 
-         *     *   The hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
-         *     *   You can use the `${instance_id}` placeholder to pass instance IDs into the hostname specified by `HostName`. For example, if you set `HostName` to k8s-${instance_id} and the instance is assigned an ID of `i-123abc****`, the hostname of the instance is `k8s-i-123abc****`.
-         * 
-         * When you create multiple instances, you can perform the following operations:
-         * 
-         * *   Batch configure sequential hostnames for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
-         * *   Use the `HostNames.N` parameter to configure different hostnames for instances. You cannot specify both the `HostName` and `HostNames.N` parameters.
+         * <strong>example:</strong>
+         * <p>k8s-node-[1,4]-ecshost</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -1408,16 +1483,23 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The hostname of instance N. You can use this parameter to specify different hostnames for multiple instances.
+         * <p>The hostname of instance N. You can use this parameter to specify different hostnames for multiple instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-host-01</p>
          */
-        public Builder hostNames(java.util.List < String > hostNames) {
+        public Builder hostNames(java.util.List<String> hostNames) {
             this.putQueryParameter("HostNames", hostNames);
             this.hostNames = hostNames;
             return this;
         }
 
         /**
-         * The ID of the Elastic High Performance Computing (E-HPC) cluster to which to assign the instance.
+         * <p>The ID of the high performance computing (HPC) cluster to which the instance belongs.</p>
+         * <p>This parameter is required when you create instances of a Supper Computing Cluster (SCC) instance type. For information about how to create an HPC cluster, see <a href="https://help.aliyun.com/document_detail/109138.html">CreateHpcCluster</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hpc-bp67acfmxazb4p****</p>
          */
         public Builder hpcClusterId(String hpcClusterId) {
             this.putQueryParameter("HpcClusterId", hpcClusterId);
@@ -1426,15 +1508,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the access channel for instance metadata. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
+         * <blockquote>
+         * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of ECS instance metadata</a>.</p>
+         * </blockquote>
          * 
-         * *   enabled
-         * *   disabled
-         * 
-         * Default value: enabled.
-         * 
-         * > For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -1443,10 +1528,12 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The HTTP PUT response hop limit for accessing instance metadata. Valid values: 1 to 64.
-         * <p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -1455,15 +1542,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
+         * <ul>
+         * <li>optional: does not forcefully use the security-enhanced mode (IMDSv2).</li>
+         * <li>required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * </ul>
+         * <p>Default value: optional.</p>
+         * <blockquote>
+         * <p>For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access mode of instance metadata</a>.</p>
+         * </blockquote>
          * 
-         * *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
-         * *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
-         * 
-         * Default value: optional.
-         * 
-         * > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+         * <strong>example:</strong>
+         * <p>optional</p>
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);
@@ -1472,13 +1562,21 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create instances.
-         * <p>
+         * <p>The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create instances.</p>
+         * <p>The name must be 2 to 128 characters in length. The name cannot start with a digit, a special character, http://, or https://. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>If you specify <code>ImageId</code>, you cannot specify ImageFamily.</li>
+         * <li>If you do not specify <code>ImageId</code> but use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template that has <code>ImageId</code> specified, you cannot specify ImageFamily.</li>
+         * <li>If you do not specify <code>ImageId</code> but use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template that does not have <code>ImageId</code> specified, you can specify ImageFamily.</li>
+         * <li>If you do not specify <code>ImageId</code>, <code>LaunchTemplateId</code>, or <code>LaunchTemplateName</code>, you can specify ImageFamily.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For information about image families that are associated with Alibaba Cloud official images, see <a href="https://help.aliyun.com/document_detail/108393.html">Overview of public images</a>.</p>
+         * </blockquote>
          * 
-         * *   If you set the `ImageId` parameter, you cannot set the ImageFamily parameter.
-         * *   If you do not set the `ImageId` parameter but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that has the `ImageId` parameter set, you cannot set the ImageFamily parameter.
-         * *   If you do not set the `ImageId` parameter but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that does not have the `ImageId` parameter set, you can set the ImageFamily parameter.
-         * *   If you do not set the `ImageId`, `LaunchTemplateId`, or `LaunchTemplateName` parameter, you can set the ImageFamily parameter.
+         * <strong>example:</strong>
+         * <p>hangzhou-daily-update</p>
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -1487,7 +1585,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the image to use to create the instance. You can call the [DescribeImages](~~25534~~) operation to query available images. If you do not use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template and do not set the `ImageFamily` parameter to obtain the latest available custom image from the specified image family, you must specify the `ImageId` parameter.
+         * <p>The ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you do not use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template and do not set <code>ImageFamily</code> to obtain the latest available custom image from a specified image family, you must specify <code>ImageId</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200324.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -1496,7 +1597,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 镜像相关属性信息。
+         * <p>Details about the image options.</p>
          */
         public Builder imageOptions(ImageOptions imageOptions) {
             this.putQueryParameter("ImageOptions", imageOptions);
@@ -1505,15 +1606,16 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
+         * <p>If you set this parameter to PrePaid, make sure that your account has sufficient balance or credit. Otherwise, an <code>InvalidPayMethod</code> error is returned.</p>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid.
-         * 
-         * If you set this parameter to PrePaid, make sure that your account has sufficient balance or credit. Otherwise, an `InvalidPayMethod` error is returned.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -1522,10 +1624,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
-         * <p>
+         * <p>The name of the ECS instance. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <code>InstanceId</code> value.</p>
+         * <p>When you batch create instances, you can batch configure sequential names for the instances. The sequential names can contain brackets ([ ]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
          * 
-         * When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
+         * <strong>example:</strong>
+         * <p>k8s-node-[1,4]-alibabacloud</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -1534,11 +1637,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The instance type. If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must set the `InstanceType` parameter.
-         * <p>
+         * <p>The instance type. If you do not use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template, you must set the <code>InstanceType</code> parameter.</p>
+         * <ul>
+         * <li>Select an instance type. See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the performance data of an instance type, or see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn about how to select instance types.</li>
+         * <li>Query available resources. Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query available resources in a specific region or zone.</li>
+         * </ul>
          * 
-         * *   Select an instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.
-         * *   Query available resources. Call the [DescribeAvailableResource](~~66186~~) operation to query available resources in a specific region or zone.
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -1547,15 +1653,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The billing method for network usage. Valid values:
-         * <p>
+         * <p>The billing method for network usage. Valid values:</p>
+         * <ul>
+         * <li>PayByBandwidth: pay-by-bandwidth</li>
+         * <li>PayByTraffic: pay-by-traffic</li>
+         * </ul>
+         * <p>Default value: PayByTraffic.</p>
+         * <blockquote>
+         * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
          * 
-         * *   PayByBandwidth: pay-by-bandwidth
-         * *   PayByTraffic: pay-by-traffic
-         * 
-         * Default value: PayByTraffic.
-         * 
-         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -1564,11 +1673,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
-         * <p>
+         * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+         * <ul>
+         * <li>When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of InternetMaxBandwidthIn are 1 to 10, and the default value is 10.</li>
+         * <li>When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</li>
+         * </ul>
          * 
-         * *   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of InternetMaxBandwidthIn are 1 to 10, and the default value is 10.
-         * *   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -1577,10 +1689,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
-         * <p>
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+         * <p>Default value: 0.</p>
          * 
-         * Default value: 0.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -1589,11 +1702,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is I/O optimized. For instances of [retired instance types](~~55263~~), the default value is none. For instances of other instance types, the default value is optimized. Valid values:
-         * <p>
+         * <p>Specifies whether the instance is I/O optimized. For instances of <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, the default value is none. For instances of other instance types, the default value is optimized. Valid values:</p>
+         * <ul>
+         * <li>none: The instance is not I/O optimized.</li>
+         * <li>optimized: The instance is I/O optimized.</li>
+         * </ul>
          * 
-         * *   none: The instance is not I/O optimized.
-         * *   optimized: The instance is I/O optimized.
+         * <strong>example:</strong>
+         * <p>optimized</p>
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -1602,30 +1718,33 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * IPv6 address N to be assigned to the primary ENI. Valid values of N: 1 to 10.
-         * <p>
+         * <p>IPv6 address N to be assigned to the primary ENI. Valid values of N: 1 to 10.</p>
+         * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::***</code>.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>If the <code>Ipv6Address.N</code> parameter is specified, you must set the <code>Amount</code> parameter to 1 and leave the <code>Ipv6AddressCount</code> parameter empty.</li>
+         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot set <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code> and must set <code>NetworkInterface.N.Ipv6Addresses.N</code> or <code>NetworkInterface.N.Ipv6AddressCount</code>.</li>
+         * </ul>
          * 
-         * Example: `Ipv6Address.1=2001:db8:1234:1a00::***`.
-         * 
-         * Take note of the following items:
-         * 
-         * *   If the `Ipv6Address.N` parameter is specified, you must set the `Amount` parameter to 1 and leave the `Ipv6AddressCount` parameter empty.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot set `Ipv6Addresses.N` or `Ipv6AddressCount` and must set `NetworkInterface.N.Ipv6Addresses.N` or `NetworkInterface.N.Ipv6AddressCount`.
+         * <strong>example:</strong>
+         * <p>Ipv6Address.1=2001:db8:1234:1a00::***</p>
          */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+        public Builder ipv6Address(java.util.List<String> ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
             return this;
         }
 
         /**
-         * The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.
-         * <p>
+         * <p>The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>You cannot specify both the <code>Ipv6Addresses.N</code> and <code>Ipv6AddressCount</code> parameters.</li>
+         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>Ipv6Address.N</code> or <code>Ipv6AddressCount</code> but can specify <code>NetworkInterface.N.Ipv6Address.N</code> or <code>NetworkInterface.N.Ipv6AddressCount</code>.</li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   You cannot specify both the `Ipv6Addresses.N` and `Ipv6AddressCount` parameters.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `Ipv6Address.N` or `Ipv6AddressCount` but can specify `NetworkInterface.N.Ipv6Address.N` or `NetworkInterface.N.Ipv6AddressCount`.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -1634,7 +1753,12 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -1643,10 +1767,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
-         * <p>
+         * <p>The name of the key pair.</p>
+         * <blockquote>
+         * <p>For Windows instances, this parameter is ignored. This parameter is empty by default. The <code>Password</code> parameter takes effect even if the KeyPairName parameter is specified.</p>
+         * </blockquote>
          * 
-         * > For Windows instances, this parameter is ignored. This parameter is empty by default. The `Password` parameter takes effect even if the KeyPairName parameter is specified.
+         * <strong>example:</strong>
+         * <p>KeyPair_Name</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -1655,10 +1782,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).
-         * <p>
+         * <p>The ID of the launch template. For more information, call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation.</p>
+         * <p>To use a launch template to create an instance, you must use the <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> parameter to specify the launch template.</p>
          * 
-         * To use a launch template to create an instance, you must use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify the launch template.
+         * <strong>example:</strong>
+         * <p>lt-bp1apo0bbbkuy0rj****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -1667,10 +1795,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the launch template.
-         * <p>
+         * <p>The name of the launch template.</p>
+         * <p>To use a launch template to create an instance, you must use the <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> parameter to specify the launch template.</p>
          * 
-         * To use a launch template to create an instance, you must use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify the launch template.
+         * <strong>example:</strong>
+         * <p>LaunchTemplate_Name</p>
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -1679,7 +1808,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The version of the launch template. If you set the `LaunchTemplateId` or `LaunchTemplateName` parameter but do not set the version number of the launch template, the default template version is used.
+         * <p>The version of the launch template. If you set the <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> parameter but do not set the version number of the launch template, the default template version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder launchTemplateVersion(Long launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -1688,11 +1820,22 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The minimum number of instances that can be created. Valid values: 1 to 100.
-         * <p>
+         * <p>The minimum number of ECS instances that you want to create. Valid values: 1 to 100.</p>
+         * <p>The number of ECS instances that can be created varies based on the Amount and MinAmount values.</p>
+         * <ul>
+         * <li><p>If you do not specify MinAmount, the RunInstances operation creates ECS instances based on the Amount value. If the available resources are insufficient to create the desired number of ECS instances, the RunInstances operation returns an error response and no ECS instances are created.</p>
+         * </li>
+         * <li><p>If you specify MinAmount, take note of the following items:</p>
+         * <ul>
+         * <li>If the available resources are insufficient to create the minimum number of ECS instances, no ECS instances are created and the RunInstances operation returns an error response.</li>
+         * <li>If the available resources are insufficient to create the desired number of ECS instances but are sufficient to create the minimum number of ECS instances, the RunInstances operation uses the available resources to create ECS instances and returns a success response. In this case, the number of ECS instances that can be created is less than the desired number of ECS instances.</li>
+         * <li>If the available resources are sufficient to create the desired number of ECS instances, the RunInstances operation uses the available resources to create the desired number of ECS instances and returns a success response.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   If the number of instances that available resources are sufficient to create is smaller than the MinAmount value, instances cannot be created.
-         * *   If the number of ECS instances that available resources are sufficient to create is greater than or equal to the MinAmount value, instances are created based on the number of available resources.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minAmount(Integer minAmount) {
             this.putQueryParameter("MinAmount", minAmount);
@@ -1701,21 +1844,24 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The information of the ENI.
+         * <p>The information of the elastic network interfaces (ENIs).</p>
          */
-        public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
+        public Builder networkInterface(java.util.List<NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
             this.networkInterface = networkInterface;
             return this;
         }
 
         /**
-         * The number of queues supported by the primary ENI. Take note of the following items:
-         * <p>
+         * <p>The number of queues supported by the primary ENI. Take note of the following items:</p>
+         * <ul>
+         * <li>The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.</li>
+         * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values.</li>
+         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>NetworkInterfaceQueueNumber</code> but can specify <code>NetworkInterface.N.QueueNumber</code>.</li>
+         * </ul>
          * 
-         * *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
-         * *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `NetworkInterfaceQueueNumber` but can specify `NetworkInterface.N.QueueNumber`.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder networkInterfaceQueueNumber(Integer networkInterfaceQueueNumber) {
             this.putQueryParameter("NetworkInterfaceQueueNumber", networkInterfaceQueueNumber);
@@ -1724,7 +1870,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 网络相关属性参数。
+         * <p>Details about network options.</p>
          */
         public Builder networkOptions(NetworkOptions networkOptions) {
             this.putQueryParameter("NetworkOptions", networkOptions);
@@ -1751,14 +1897,16 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-         * <p>
+         * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+         * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
+         * </code></pre>
+         * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
+         * <blockquote>
+         * <p>If the <code>Password</code> parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+         * </blockquote>
          * 
-         *     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
-         * 
-         * For Windows instances, the password cannot start with a forward slash (/).
-         * 
-         * > If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.
+         * <strong>example:</strong>
+         * <p>EcsV587!</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -1767,15 +1915,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the password preset in the image. Valid values:
-         * <p>
+         * <p>Specifies whether to use the password preset in the image. Valid values:</p>
+         * <ul>
+         * <li>true: uses the preset password.</li>
+         * <li>false: does not use the preset password.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p>If you set this parameter to true, make sure that you leave the Password parameter empty and the selected image has a preset password.</p>
+         * </blockquote>
          * 
-         * *   true: uses the preset password.
-         * *   false: does not use the preset password.
-         * 
-         * Default value: false.
-         * 
-         * > If you set this parameter to true, make sure that you leave the Password parameter empty and the selected image has a preset password.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -1784,11 +1935,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. The unit is specified by the `PeriodUnit` parameter. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. If the `DedicatedHostId` parameter is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:
-         * <p>
+         * <p>The subscription period of the instance. The unit is specified by the <code>PeriodUnit</code> parameter. This parameter is valid and required only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. If the <code>DedicatedHostId</code> parameter is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:</p>
+         * <ul>
+         * <li>Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.</li>
+         * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+         * </ul>
          * 
-         * *   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.
-         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -1797,11 +1951,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period. Default value: Month. Valid values:
-         * <p>
+         * <p>The unit of the subscription period. Default value: Month. Valid values:</p>
+         * <ul>
+         * <li>Week</li>
+         * <li>Month</li>
+         * </ul>
          * 
-         * *   Week
-         * *   Month
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -1810,17 +1967,35 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The private IP address to assign to the instance. To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.
-         * <p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         */
+        public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
+            this.putQueryParameter("PrivateDnsNameOptions", privateDnsNameOptions);
+            this.privateDnsNameOptions = privateDnsNameOptions;
+            return this;
+        }
+
+        /**
+         * <p>The private IP address to assign to the instance. To assign a private IP address to an instance that resides in a VPC, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by <code>VSwitchId</code>.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li><p>If <code>PrivateIpAddress</code> is specified, take note of the following items:</p>
+         * <ul>
+         * <li>If <code>Amount</code> is set to 1, a single instance is created and the specified private IP address is assigned to the instance.</li>
+         * <li>If <code>Amount</code> is set to a numeric value greater than 1, the specified number of instances are created and consecutive private IP addresses starting from the specified one are assigned to the instances. In this case, you cannot specify parameters that start with <code>NetworkInterface.N</code> to attach secondary ENIs to the instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>PrivateIpAddress</code> but can specify <code>NetworkInterface.N.PrimaryIpAddress</code>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.</p>
+         * </blockquote>
          * 
-         * Take note of the following items:
-         * 
-         * *   If the `PrivateIpAddress` parameter is specified, take note of the following items:
-         * 
-         *     *   If `Amount` is set to 1, a single instance is created and the specified private IP address is assigned to the instance.
-         *     *   If `Amount` is set to a numeric value greater than 1, the specified number of instances are created and consecutive private IP addresses starting from the specified one are assigned to the instances. In this case, you cannot specify parameters that start with `NetworkInterface.N` to bind secondary ENIs to the instances.
-         * 
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `PrivateIpAddress` but can specify `NetworkInterface.N.PrimaryIpAddress`.
+         * <strong>example:</strong>
+         * <p><code>10.1.**.**</code></p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -1829,7 +2004,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.
+         * <p>The name of the Resource Access Management (RAM) role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM_Name</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -1838,7 +2016,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region in which to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1847,7 +2029,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the instance.
+         * <p>The ID of the resource group to which to assign the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1874,11 +2059,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable security hardening. Valid values:
-         * <p>
+         * <p>Specifies whether to enable security hardening. Valid values:</p>
+         * <ul>
+         * <li>Active: enables security hardening. This value is applicable only to public images.</li>
+         * <li>Deactive: does not enable security hardening. This value is applicable to all images.</li>
+         * </ul>
          * 
-         * *   Active: enables security hardening. This value is applicable only to public images.
-         * *   Deactive: does not enable security hardening. This value is applicable to all images.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -1887,15 +2075,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances that a security group can contain depends on the type of the security group. For more information, see the "Security group limits" section in [Limits](~~25412~~).
-         * <p>
+         * <p>The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the &quot;Security group limits&quot; section in <a href="~~25412#SecurityGroupQuota~~">Limits and quotas</a>.</p>
+         * <blockquote>
+         * <p> The network type of the new instance is the same as the network type of the security group specified by <code>SecurityGroupId</code>. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify <code>VSwitchId</code>.</p>
+         * </blockquote>
+         * <p>If you do not use <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template, you must specify a security group ID. When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>You can set <code>SecurityGroupId</code> to specify a single security group or set <code>SecurityGroupIds.N</code> to specify one or more security groups. However, you cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> in the same request.</li>
+         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but can specify <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
+         * </ul>
          * 
-         * > The network type of the new instance must be the same as that of the security group specified by the `SecurityGroupId` parameter. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify the `VSwitchId` parameter.
-         * 
-         * If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must set the SecurityGroupId parameter. Take note of the following items:
-         * 
-         * *   You can set `SecurityGroupId` to specify a single security group or set `SecurityGroupIds.N` to specify one or more security groups. However, you cannot specify both `SecurityGroupId` and `SecurityGroupIds.N`.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify only `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.
+         * <strong>example:</strong>
+         * <p>sg-bp15ed6xe1yxeycg7****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1904,28 +2095,32 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~101348~~).
-         * <p>
+         * <p>The IDs of security groups to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a> section of the &quot;Limits&quot; topic.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> in the same request.</li>
+         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but can specify <code>NetworkInterface.N.SecurityGroupId</code> or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.
+         * <strong>example:</strong>
+         * <p>sg-bp15ed6xe1yxeycg7****</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
-         * <p>
+         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * </ul>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
          * 
-         * *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
-         * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1934,7 +2129,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies to release the instance.
+         * <p>The interruption mode of the preemptible instance. Valid values:</p>
+         * <ul>
+         * <li><p>Terminate: The instance is released.</p>
+         * </li>
+         * <li><p>Stop: The instance is stopped in economical mode.</p>
+         * <p>For information about the economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: Terminate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminate</p>
          */
         public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
             this.putQueryParameter("SpotInterruptionBehavior", spotInterruptionBehavior);
@@ -1943,7 +2149,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when the `SpotStrategy` parameter is set to `SpotWithPriceLimit`.
+         * <p>The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when the <code>SpotStrategy</code> parameter is set to <code>SpotWithPriceLimit</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.97</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -1952,14 +2161,16 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:
-         * <p>
+         * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instance is created as a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1968,7 +2179,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the storage set.
+         * <p>The ID of the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-bp67acfmxazb4p****</p>
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -1977,7 +2191,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The maximum number of partitions in the storage set. Valid values: greater than or equal to 2.
+         * <p>The maximum number of partitions in the storage set. Valid values: greater than or equal to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);
@@ -1986,22 +2203,24 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance, disks, and primary ENI. You can specify up to 20 tags.
+         * <p>The tags to add to the instance, disks, and primary ENI.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * Specifies whether to create the instance on a dedicated host. Valid values:
-         * <p>
+         * <p>Specifies whether to create the instance on a dedicated host. Valid values:</p>
+         * <ul>
+         * <li>default: creates the instance on a non-dedicated host.</li>
+         * <li>host: creates the instance on a dedicated host. If you do not set the <code>DedicatedHostId</code> parameter, Alibaba Cloud selects a dedicated host for the instance.</li>
+         * </ul>
+         * <p>Default value: default.</p>
          * 
-         * *   default: creates the instance on a non-dedicated host.
-         * *   host: creates the instance on a dedicated host. If you do not set the `DedicatedHostId` parameter, Alibaba Cloud selects a dedicated host for the instance.
-         * 
-         * Default value: default.
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder tenancy(String tenancy) {
             this.putQueryParameter("Tenancy", tenancy);
@@ -2010,17 +2229,17 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically append incremental suffixes to the hostname specified by the `HostName` parameter and to the instance name specified by the `InstanceName` parameter when you batch create instances. The incremental suffixes can range from 001 to 999. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically append incremental suffixes to the hostname specified by the <code>HostName</code> parameter and to the instance name specified by the <code>InstanceName</code> parameter when you batch create instances. The incremental suffixes can range from 001 to 999. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>When the <code>HostName</code> or <code>InstanceName</code> value is set in the <code>name_prefix[begin_number,bits]</code> format without <code>name_suffix</code>, the <code>UniqueSuffix</code> parameter does not take effect. The names are sorted in the specified sequence.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * When the `HostName` or `InstanceName` value is set in the `name_prefix[begin_number,bits]` format without `name_suffix`, the `UniqueSuffix` parameter does not take effect. The names are sorted in the specified sequence.
-         * 
-         * For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder uniqueSuffix(Boolean uniqueSuffix) {
             this.putQueryParameter("UniqueSuffix", uniqueSuffix);
@@ -2029,10 +2248,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The user data of the instance. The user data must be encoded in Base64. The raw data can be up to 16 KB in size.
-         * <p>
+         * <p>The user data of the instance. You must specify Base64-encoded data. The instance user data cannot exceed 32 KB in size before Base64 encoding.</p>
+         * <p>For information about the limits, formats, and running frequencies of instance user data, see <a href="https://help.aliyun.com/document_detail/49121.html">Instance user data</a>.</p>
+         * <blockquote>
+         * <p> To ensure security, we recommend that you do not use plaintext to pass in confidential information, such as passwords or private keys, as user data. If you need to pass in confidential information, we recommend that you encrypt and encode the information in Base64 and then decode and decrypt the information in the same manner in the instance.</p>
+         * </blockquote>
          * 
-         * > If the instance type supports [user data](~~~49121~), you can use the UserData parameter to pass in user data. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt UserData values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64, and then decode and decrypt the information in the same way within the instance.
+         * <strong>example:</strong>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -2041,13 +2264,15 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which to connect to the instance. You must set this parameter when you create an instance of the VPC type. The specified vSwitch and security group must belong to the same VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
-         * <p>
+         * <p>The ID of the vSwitch to which to connect to the instance. You must set this parameter when you create an instance of the VPC type. The specified vSwitch and security group must belong to the same VPC. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query available vSwitches.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>If you specify the <code>VSwitchId</code> parameter, the zone specified by the <code>ZoneId</code> parameter must be the zone where the specified vSwitch is located. You can also leave the <code>ZoneId</code> parameter empty. Then, the system selects the zone where the specified vSwitch resides.</li>
+         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you cannot specify <code>VSwitchId</code> but can specify <code>NetworkInterface.N.VSwitchId</code>.</li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   If you specify the `VSwitchId` parameter, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch resides.
-         * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `VSwitchId` but can specify `NetworkInterface.N.VSwitchId`.
+         * <strong>example:</strong>
+         * <p>vsw-bp1s5fnvk4gn2tws0****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -2056,12 +2281,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which to create the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
-         * <p>
+         * <p>The ID of the zone in which to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <blockquote>
+         * <p>If you specify the <code>VSwitchId</code> parameter, the zone specified by the <code>ZoneId</code> parameter must be the zone where the vSwitch is located. You can also leave the <code>ZoneId</code> parameter empty. Then, the system selects the zone where the specified vSwitch is located.</p>
+         * </blockquote>
+         * <p>This parameter is empty by default.</p>
          * 
-         * > If you specify the `VSwitchId` parameter, the zone specified by the `ZoneId` parameter must be the zone where the vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.
-         * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -2076,20 +2303,30 @@ public class RunInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class CpuOptions extends TeaModel {
-        @NameInMap("Core")
+        @com.aliyun.core.annotation.NameInMap("Core")
         private Integer core;
 
-        @NameInMap("Numa")
+        @com.aliyun.core.annotation.NameInMap("Numa")
         private String numa;
 
-        @NameInMap("ThreadsPerCore")
+        @com.aliyun.core.annotation.NameInMap("ThreadsPerCore")
         private Integer threadsPerCore;
+
+        @com.aliyun.core.annotation.NameInMap("TopologyType")
+        private String topologyType;
 
         private CpuOptions(Builder builder) {
             this.core = builder.core;
             this.numa = builder.numa;
             this.threadsPerCore = builder.threadsPerCore;
+            this.topologyType = builder.topologyType;
         }
 
         public static Builder builder() {
@@ -2121,16 +2358,25 @@ public class RunInstancesRequest extends Request {
             return this.threadsPerCore;
         }
 
+        /**
+         * @return topologyType
+         */
+        public String getTopologyType() {
+            return this.topologyType;
+        }
+
         public static final class Builder {
             private Integer core; 
             private String numa; 
             private Integer threadsPerCore; 
+            private String topologyType; 
 
             /**
-             * The number of CPU cores. This parameter cannot be specified but only uses its default value.
-             * <p>
+             * <p>The number of CPU cores. This parameter cannot be specified but only uses its default value.</p>
+             * <p>For information about the default value, see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
              * 
-             * For information about the default value, see [Customize CPU options](~~145895~~).
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -2138,7 +2384,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * This parameter is no longer used.
+             * <p>This parameter is no longer used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder numa(String numa) {
                 this.numa = numa;
@@ -2146,16 +2395,36 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: `CpuOptions.Core` value × `CpuOptions.ThreadPerCore` value.
-             * <p>
+             * <p>The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: <code>CpuOptions.Core</code> value × <code>CpuOptions.ThreadsPerCore</code> value.</p>
+             * <ul>
+             * <li>If <code>CpuOptionsThreadPerCore</code> is set to 1, Hyper-Threading (HT) is disabled.</li>
+             * <li>This parameter is applicable only to specific instance types.</li>
+             * </ul>
              * 
-             * *   The following formula is used to calculate the number of vCPUs of the instance: `CpuOptions.Core` value × CpuOptions.ThreadPerCore value.
-             * *   This parameter is applicable only to specific instance types.
-             * 
-             * For information about valid values and the default value, see [Customize CPU options](~~145895~~).
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;
+                return this;
+            }
+
+            /**
+             * <p>The CPU topology type of the instance. Valid values:</p>
+             * <ul>
+             * <li>ContinuousCoreToHTMapping: The HT technology allows continuous threads to run on the same core in the CPU topology of the instance.``</li>
+             * <li>DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.``</li>
+             * </ul>
+             * <p>This parameter is empty by default.</p>
+             * <blockquote>
+             * <p> This parameter is supported only for specific instance families. For more information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify the CPU topology</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>DiscreteCoreToHTMapping</p>
+             */
+            public Builder topologyType(String topologyType) {
+                this.topologyType = topologyType;
                 return this;
             }
 
@@ -2166,8 +2435,14 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class HibernationOptions extends TeaModel {
-        @NameInMap("Configured")
+        @com.aliyun.core.annotation.NameInMap("Configured")
         private Boolean configured;
 
         private HibernationOptions(Builder builder) {
@@ -2193,7 +2468,12 @@ public class RunInstancesRequest extends Request {
             private Boolean configured; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <blockquote>
+             * <p>This parameter is in invitational preview and is unavailable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder configured(Boolean configured) {
                 this.configured = configured;
@@ -2207,11 +2487,17 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("MatchCriteria")
         private String matchCriteria;
 
         private PrivatePoolOptions(Builder builder) {
@@ -2246,7 +2532,10 @@ public class RunInstancesRequest extends Request {
             private String matchCriteria; 
 
             /**
-             * The ID of the private pool. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.
+             * <p>The ID of the private pool. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2254,20 +2543,22 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The type of the private pool to use to create the instance. A private pool is generated after an elasticity assurance or a capacity reservation takes effect. You can select the private pool when you start an instance. Valid values:
-             * <p>
+             * <p>The type of the private pool to use to create the instance. A private pool is generated after an elasticity assurance or a capacity reservation takes effect. You can select the private pool when you start an instance. Valid values:</p>
+             * <ul>
+             * <li>Open: open private pool. The system selects a matching open private pool to create the instance. If no matching open private pools are found, resources in the public pool are used. When you set this parameter to Open, you can leave the <code>PrivatePoolOptions.Id</code> parameter empty.</li>
+             * <li>Target: specified private pool. The system uses the capacity in a specified private pool to create the instance. If the specified private pool is unavailable, the instance cannot be created. If you set this parameter to Target, you must specify the <code>PrivatePoolOptions.Id</code> parameter.</li>
+             * <li>None: no private pool. The capacity in private pools is not used.</li>
+             * </ul>
+             * <p>Default value: None.</p>
+             * <p>In the following scenarios, the PrivatePoolOptions.MatchCriteria parameter can be set only to <code>None</code> or left empty:</p>
+             * <ul>
+             * <li>A preemptible instance is created.</li>
+             * <li>The instance is created in the classic network.</li>
+             * <li>The instance is created on a dedicated host.</li>
+             * </ul>
              * 
-             * *   Open: open private pool. The system selects a matching open private pool to create the instance. If no matching open private pools are found, resources in the public pool are used. When you set this parameter to Open, you can leave the `PrivatePoolOptions.Id` parameter empty.
-             * *   Target: specified private pool. The system uses the capacity in a specified private pool to create the instance. If the specified private pool is unavailable, the instance cannot be created. If you set this parameter to Target, you must specify the `PrivatePoolOptions.Id` parameter.
-             * *   None: no private pool. The capacity in private pools is not used.
-             * 
-             * Default value: None.
-             * 
-             * In the following scenarios, the PrivatePoolOptions.MatchCriteria parameter can be set only to `None` or left empty:
-             * 
-             * *   A preemptible instance is created.
-             * *   The instance is created in the classic network.
-             * *   The instance is created on a dedicated host.
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;
@@ -2281,8 +2572,14 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class SchedulerOptions extends TeaModel {
-        @NameInMap("DedicatedHostClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
 
         private SchedulerOptions(Builder builder) {
@@ -2308,17 +2605,19 @@ public class RunInstancesRequest extends Request {
             private String dedicatedHostClusterId; 
 
             /**
-             * The ID of the dedicated host cluster in which to create the instance. After this parameter is specified, the system selects one dedicated host from the specified cluster to create the instance.
-             * <p>
+             * <p>The ID of the dedicated host cluster in which to create the instance. After this parameter is specified, the system selects one dedicated host from the specified cluster to create the instance.</p>
+             * <blockquote>
+             * <p>This parameter is valid only when the <code>Tenancy</code> parameter is set to <code>host</code>.</p>
+             * </blockquote>
+             * <p>When you specify both the <code>DedicatedHostId</code> and <code>SchedulerOptions.DedicatedHostClusterId</code> parameters, take note of the following items:</p>
+             * <ul>
+             * <li>If the specified dedicated host belongs to the specified dedicated host cluster, the instance is preferentially deployed on the specified dedicated host.</li>
+             * <li>If the specified dedicated host does not belong to the specified dedicated host cluster, the instance cannot be created.</li>
+             * </ul>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/184145.html">DescribeDedicatedHostClusters</a> operation to query the list of dedicated host cluster IDs.</p>
              * 
-             * > This parameter is valid only when the `Tenancy` parameter is set to `host`.
-             * 
-             * When you specify both the `DedicatedHostId` and `SchedulerOptions.DedicatedHostClusterId` parameters, take note of the following items:
-             * 
-             * *   If the specified dedicated host belongs to the specified dedicated host cluster, the instance is preferentially deployed on the specified dedicated host.
-             * *   If the specified dedicated host does not belong to the specified dedicated host cluster, the instance cannot be created.
-             * 
-             * You can call the [DescribeDedicatedHostClusters](~~184145~~) operation to query the list of dedicated host cluster IDs.
+             * <strong>example:</strong>
+             * <p>dc-bp12wlf6am0vz9v2****</p>
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -2332,11 +2631,17 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class SecurityOptions extends TeaModel {
-        @NameInMap("ConfidentialComputingMode")
+        @com.aliyun.core.annotation.NameInMap("ConfidentialComputingMode")
         private String confidentialComputingMode;
 
-        @NameInMap("TrustedSystemMode")
+        @com.aliyun.core.annotation.NameInMap("TrustedSystemMode")
         private String trustedSystemMode;
 
         private SecurityOptions(Builder builder) {
@@ -2371,16 +2676,17 @@ public class RunInstancesRequest extends Request {
             private String trustedSystemMode; 
 
             /**
-             * The confidential computing mode. Set the value to Enclave.
-             * <p>
+             * <p>The confidential computing mode. Set the value to Enclave.</p>
+             * <p>A value of Enclave indicates that an enclave-based confidential computing environment is built on the instance. When you call the <code>RunInstances</code> operation, you can set this parameter only for c7, g7, or r7 instances to use enclave-based confidential computing. Take note of the following items:</p>
+             * <ul>
+             * <li>The confidential computing feature is in invitational preview.</li>
+             * <li>When you use the ECS API to create instances that support enclave-based confidential computing, you can call only the <code>RunInstances</code> operation. The <code>CreateInstance</code> operation does not support the <code>SecurityOptions.ConfidentialComputingMode</code> parameter.</li>
+             * <li>Enclave-based confidential computing is implemented based on Alibaba Cloud Trusted System (vTPM). When you build a confidential computing environment on an instance by using Enclave, Alibaba Cloud Trusted System is enabled for the instance. If you set <code>SecurityOptions.ConfidentialComputingMode</code> to Enclave when you call this operation, the created instances use enclave-based confidential computing and Alibaba Cloud Trusted System regardless of whether <code>SecurityOptions.TrustedSystemMode</code> is set to vTPM.</li>
+             * </ul>
+             * <p>For more information about confidential computing, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</p>
              * 
-             * A value of Enclave indicates that an enclave-based confidential computing environment is built on the instance. When you call the `RunInstances` operation, you can set this parameter only for c7, g7, or r7 instances to use enclave-based confidential computing. Take note of the following items:
-             * 
-             * *   The confidential computing feature is in invitational preview. To use this feature, submit a ticket.
-             * *   When you use the ECS API to create instances that support enclave-based confidential computing, you can call only the `RunInstances` operation. The `CreateInstance` operation does not support the `SecurityOptions.ConfidentialComputingMode` parameter.
-             * *   Enclave-based confidential computing is implemented based on the Alibaba Cloud trusted system (vTPM). When you build a confidential computing environment on an instance by using Enclave, the Alibaba Cloud trusted system is enabled for the instance. Therefore, if you set `SecurityOptions.ConfidentialComputingMode` to Enclave when you call this operation, the created instances use enclave-based confidential computing and the Alibaba Cloud trusted system regardless of whether `SecurityOptions.TrustedSystemMode` is set to vTPM.
-             * 
-             * For more information about confidential computing, see [Build a confidential computing environment by using Enclave](~~203433~~).
+             * <strong>example:</strong>
+             * <p>Enclave</p>
              */
             public Builder confidentialComputingMode(String confidentialComputingMode) {
                 this.confidentialComputingMode = confidentialComputingMode;
@@ -2388,23 +2694,25 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The trusted system mode. Set the value to vTPM.
-             * <p>
+             * <p>The trusted system mode. Set the value to vTPM.</p>
+             * <p>The trusted system mode supports the following instance families:</p>
+             * <ul>
+             * <li>g7, c7, and r7</li>
+             * <li>Security-enhanced instance families: g7t, c7t, and r7t</li>
+             * </ul>
+             * <p>When you create instances of the preceding instance families, you must set this parameter. Take note of the following items:</p>
+             * <ul>
+             * <li>To use the Alibaba Cloud trusted system, set this parameter to vTPM. Then, the Alibaba Cloud trusted system performs trust verifications when the instances start.</li>
+             * <li>If you do not want to use the Alibaba Cloud trusted system, leave this parameter empty. Note that if your created instances use an enclave-based confidential computing environment (with <code>SecurityOptions.ConfidentialComputingMode</code> set to Enclave), the Alibaba Cloud trusted system is enabled for the instances.</li>
+             * <li>When you use the ECS API to create instances that use the trusted system, you can call only the <code>RunInstances</code> operation. The <code>CreateInstance</code> operation does not support the <code>SecurityOptions.TrustedSystemMode</code> parameter.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If you have configured an instance as a trusted one when you created the instance, you can use only an image that support the trusted system to replace the system disk of the instance.</p>
+             * </blockquote>
+             * <p>For more information about the trusted system, see <a href="https://help.aliyun.com/document_detail/201394.html">Overview</a>.</p>
              * 
-             * The trusted system mode supports the following instance families:
-             * 
-             * *   g7, c7, and r7
-             * *   Security-enhanced instance families: g7t, c7t, and r7t
-             * 
-             * When you create instances of the preceding instance families, you must set this parameter. Take note of the following items:
-             * 
-             * *   To use the Alibaba Cloud trusted system, set this parameter to vTPM. Then, the Alibaba Cloud trusted system performs trust verifications when the instances start.
-             * *   If you do not want to use the Alibaba Cloud trusted system, leave this parameter empty. Note that if your created instances use an enclave-based confidential computing environment (with `SecurityOptions.ConfidentialComputingMode` set to Enclave), the Alibaba Cloud trusted system is enabled for the instances.
-             * *   When you use the ECS API to create instances that use the trusted system, you can call only the `RunInstances` operation. The `CreateInstance` operation does not support the `SecurityOptions.TrustedSystemMode` parameter.
-             * 
-             * > If you have configured an instance as a trusted one when you created the instance, you can use only an image that support the trusted system to replace the system disk of the instance.
-             * 
-             * For more information about the trusted system, see [Overview](~~201394~~).
+             * <strong>example:</strong>
+             * <p>vTPM</p>
              */
             public Builder trustedSystemMode(String trustedSystemMode) {
                 this.trustedSystemMode = trustedSystemMode;
@@ -2418,41 +2726,48 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("EncryptAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
         private String encryptAlgorithm;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String KMSKeyId;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("StorageClusterId")
+        @com.aliyun.core.annotation.NameInMap("StorageClusterId")
         private String storageClusterId;
 
         private SystemDisk(Builder builder) {
@@ -2577,7 +2892,10 @@ public class RunInstancesRequest extends Request {
             private String storageClusterId; 
 
             /**
-             * The ID of the automatic snapshot policy to apply to the system disk.
+             * <p>The ID of the automatic snapshot policy to apply to the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-bp67acfmxazb4p****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -2585,16 +2903,22 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The category of the system disk. Valid values:
-             * <p>
+             * <p>The category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: utra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: enhanced SSD (ESSD)</li>
+             * <li>cloud: basic disk</li>
+             * <li>cloud_auto: ESSD AutoPL disk</li>
+             * <li>cloud_essd_entry: ESSD Entry disk</li>
+             * </ul>
+             * <blockquote>
+             * <p> The value of this parameter can be <code>cloud_essd_entry</code> only when <code>InstanceType</code> is set to <code>ecs.u1</code> or <code>ecs.e</code>. ecs.u1 indicates the u1 universal instance family and ecs.e indicates the e economy instance family. For information about the u1 and e instance families, see the <a href="https://help.aliyun.com/document_detail/457079.html">u1, universal instance family</a> section in the &quot;Universal instance families&quot; topic and the <a href="https://help.aliyun.com/document_detail/108489.html">e, economy instance family</a> section in the &quot;Shared instance families&quot; topic.</p>
+             * </blockquote>
+             * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
-             * *   cloud: basic disk
-             * *   cloud_auto: ESSD AutoPL disk
-             * 
-             * For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2602,7 +2926,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`.
+             * <p>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SystemDisk_Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2610,7 +2937,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+             * <p>The name of the system disk. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssdSystem</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -2618,15 +2948,17 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as the system disk. Default value: PL1. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD to use as the system disk. Default value: PL1. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -2634,12 +2966,28 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The size of the system disk. Unit: GiB. Valid values: 20 to 500.
-             * <p>
+             * <p>The size of the system disk. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li><p>Basic disk: 20 to 500.</p>
+             * </li>
+             * <li><p>ESSD: Valid values vary based on the performance level of the ESSD.</p>
+             * <ul>
+             * <li>PL0 ESSD: 1 to 2048.</li>
+             * <li>PL1 ESSD: 20 to 2048.</li>
+             * <li>PL2 ESSD: 461 to 2048.</li>
+             * <li>PL3 ESSD: 1261 to 2048.</li>
+             * </ul>
+             * </li>
+             * <li><p>ESSD AutoPL disk: 1 to 2048.</p>
+             * </li>
+             * <li><p>Other disk categories: 20 to 2048.</p>
+             * </li>
+             * </ul>
+             * <p>The value of this parameter must be at least 1 and greater than or equal to the image size.</p>
+             * <p>Default value: 40 or the image size, whichever is greater.</p>
              * 
-             * The value of this parameter must be at least 20 and greater than or equal to the image size.
-             * 
-             * Default value: 40 or the image size, whichever is greater.
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -2647,13 +2995,17 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the burst feature for the system disk. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
+             * <ul>
+             * <li>true: enables the performance burst feature for the system disk.</li>
+             * <li>false: disables the performance burst feature for the system disk.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if you set <code>SystemDisk.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
              * 
-             * *   true
-             * *   false
-             * 
-             * > This parameter is available only if you set `SystemDisk.Category` to `cloud_auto`.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -2661,13 +3013,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The algorithm to use to encrypt the system disk. Valid values:
-             * <p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   ase-256
-             * *   sm4-128
-             * 
-             * Default value: ase-256.
+             * <strong>example:</strong>
+             * <p>ase-256</p>
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -2675,15 +3026,18 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the system disk. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+             * <ul>
+             * <li>true: encrypts the system disk.</li>
+             * <li>false: does not encrypt the system disk.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <blockquote>
+             * <p> The system disks of instances cannot be encrypted during instance creation in Hong Kong Zone D or Singapore Zone A.</p>
+             * </blockquote>
              * 
-             * *   true: encrypts the data disk.
-             * *   false: does not encrypt the data disk.
-             * 
-             * Default value: false.
-             * 
-             * > The system disks of instances cannot be encrypted during instance creation in Hong Kong Zone D or Singapore Zone A.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -2691,7 +3045,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the KMS key to use for the system disk.
+             * <p>The ID of the KMS key to use for the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -2699,12 +3056,14 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
-             * <p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+             * <blockquote>
+             * <p> This parameter is available only if you set <code>SystemDisk.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
              * 
-             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
-             * 
-             * > This parameter is available only if you set the SystemDisk.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+             * <strong>example:</strong>
+             * <p>40000</p>
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -2712,7 +3071,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+             * <p>The ID of the dedicated block storage cluster to which the system disk belongs. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbsc-j5e1sf2vaf5he8m2****</p>
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -2726,14 +3088,20 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -2777,7 +3145,12 @@ public class RunInstancesRequest extends Request {
             private String rolearn; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -2785,7 +3158,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -2793,7 +3171,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -2807,50 +3190,57 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class DataDisk extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("EncryptAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
         private String encryptAlgorithm;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String KMSKeyId;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("StorageClusterId")
+        @com.aliyun.core.annotation.NameInMap("StorageClusterId")
         private String storageClusterId;
 
         private DataDisk(Builder builder) {
@@ -3002,7 +3392,10 @@ public class RunInstancesRequest extends Request {
             private String storageClusterId; 
 
             /**
-             * The ID of the automatic snapshot policy to apply to data disk N.
+             * <p>The ID of the automatic snapshot policy to apply to data disk N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-bp67acfmxazb4p****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -3010,7 +3403,17 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -3018,16 +3421,31 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The category of data disk N. Valid values:
-             * <p>
+             * <p>The category of data disk N. Valid values:</p>
+             * <ul>
+             * <li><p>cloud_efficiency: ultra disk</p>
+             * </li>
+             * <li><p>cloud_ssd: standard SSD</p>
+             * </li>
+             * <li><p>cloud_essd: ESSD</p>
+             * </li>
+             * <li><p>cloud: basic disk</p>
+             * </li>
+             * <li><p>cloud_auto: ESSD AutoPL disk</p>
+             * </li>
+             * <li><p>cloud_essd_entry: ESSD Entry disk</p>
+             * <p>**</p>
+             * <p><strong>Note</strong> This parameter can be set to <code>cloud_essd_entry</code> only when <code>InstanceType</code> is set to <code>ecs.u1</code> or <code>ecs.e</code>.</p>
+             * </li>
+             * <li><p>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</p>
+             * </li>
+             * <li><p>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</p>
+             * </li>
+             * </ul>
+             * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
-             * *   cloud_auto: ESSD AutoPL disk
-             * 
-             * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -3035,13 +3453,15 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to release data disk N when the instance is released. Valid values:
-             * <p>
+             * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true: releases data disk N when the instance is released.
-             * *   false: does not release data disk N when the instance is released.
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -3049,7 +3469,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+             * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataDisk_Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3057,10 +3480,17 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The mount point of data disk N.
-             * <p>
+             * <p>The mount point of data disk N. The mount points are named based on the number of data disks:</p>
+             * <ul>
+             * <li>1st to 25th data disks: /dev/xvd<code>[b-z]</code>.</li>
+             * <li>From the 26th data disk on: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify the <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the category and size of data disk N created based on the image.</p>
+             * </blockquote>
              * 
-             * > This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.
+             * <strong>example:</strong>
+             * <p>/dev/xvdb</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -3068,7 +3498,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of data disk N. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+             * <p>The name of data disk N. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssdData</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -3076,13 +3509,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The algorithm to use to encrypt data disk N. Valid values:
-             * <p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   aes-256
-             * *   sm4-128
-             * 
-             * Default value: aes-256.
+             * <strong>example:</strong>
+             * <p>aes-256</p>
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -3090,13 +3522,15 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt data disk N. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt data disk N. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
-             * *   true: encrypts the data disk.
-             * *   false: does not encrypt the data disk.
-             * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -3104,7 +3538,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used for the data disk.
+             * <p>The ID of the Key Management Service (KMS) key to use for data disk N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -3112,15 +3549,17 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</li>
+             * </ul>
+             * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -3128,7 +3567,14 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+             * <blockquote>
+             * <p> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>40000</p>
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -3136,25 +3582,33 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values of this parameter:
-             * <p>
+             * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of <code>DataDisk.N.PerformanceLevel</code>.</p>
+             * <ul>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 65536.</li>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 65536.</li>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 65536.</li>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 65536.</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+             * </li>
+             * <li><p>Valid values when DiskCategory is set to cloud_auto: 1 to 65536.</p>
+             * </li>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>DataDisk.N.SnapshotId</code>.</p>
+             * </blockquote>
              * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.
-             * 
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_auto: 40 to 32768.
-             * 
-             * The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -3162,10 +3616,11 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
-             * <p>
+             * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
+             * <p>When the <code>DataDisk.N.SnapshotId</code> parameter is specified, the <code>DataDisk.N.Size</code> parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
              * 
-             * If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * <strong>example:</strong>
+             * <p>s-bp17441ohwka0yuh****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -3173,7 +3628,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as data disk N when you create instances, you must specify this parameter.
+             * <p>The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbsc-j5e1sf2vaf5he8m2****</p>
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -3187,8 +3645,14 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class ImageOptions extends TeaModel {
-        @NameInMap("LoginAsNonRoot")
+        @com.aliyun.core.annotation.NameInMap("LoginAsNonRoot")
         private Boolean loginAsNonRoot;
 
         private ImageOptions(Builder builder) {
@@ -3214,12 +3678,14 @@ public class RunInstancesRequest extends Request {
             private Boolean loginAsNonRoot; 
 
             /**
-             * 使用该镜像的实例是否支持使用ecs-user用户登录。可能值：
-             * <p>
+             * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true：是
-             * 
-             * - false：否
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -3233,50 +3699,65 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class NetworkInterface extends TeaModel {
-        @NameInMap("DeleteOnRelease")
+        @com.aliyun.core.annotation.NameInMap("DeleteOnRelease")
         private Boolean deleteOnRelease;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ipv6Address")
-        private java.util.List < String > ipv6Address;
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
+        private java.util.List<String> ipv6Address;
 
-        @NameInMap("Ipv6AddressCount")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Long ipv6AddressCount;
 
-        @NameInMap("NetworkCardIndex")
+        @com.aliyun.core.annotation.NameInMap("NetworkCardIndex")
         private Integer networkCardIndex;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
 
-        @NameInMap("NetworkInterfaceTrafficMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
 
-        @NameInMap("PrimaryIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
 
-        @NameInMap("QueueNumber")
+        @com.aliyun.core.annotation.NameInMap("QueueNumber")
         private Integer queueNumber;
 
-        @NameInMap("QueuePairNumber")
+        @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
         private Long queuePairNumber;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("RxQueueSize")
+        private Integer rxQueueSize;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+        private java.util.List<String> securityGroupIds;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
+        private Boolean sourceDestCheck;
+
+        @com.aliyun.core.annotation.NameInMap("TxQueueSize")
+        private Integer txQueueSize;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkInterface(Builder builder) {
@@ -3292,8 +3773,11 @@ public class RunInstancesRequest extends Request {
             this.primaryIpAddress = builder.primaryIpAddress;
             this.queueNumber = builder.queueNumber;
             this.queuePairNumber = builder.queuePairNumber;
+            this.rxQueueSize = builder.rxQueueSize;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.sourceDestCheck = builder.sourceDestCheck;
+            this.txQueueSize = builder.txQueueSize;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -3329,7 +3813,7 @@ public class RunInstancesRequest extends Request {
         /**
          * @return ipv6Address
          */
-        public java.util.List < String > getIpv6Address() {
+        public java.util.List<String> getIpv6Address() {
             return this.ipv6Address;
         }
 
@@ -3390,6 +3874,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
+         * @return rxQueueSize
+         */
+        public Integer getRxQueueSize() {
+            return this.rxQueueSize;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -3399,8 +3890,22 @@ public class RunInstancesRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        /**
+         * @return sourceDestCheck
+         */
+        public Boolean getSourceDestCheck() {
+            return this.sourceDestCheck;
+        }
+
+        /**
+         * @return txQueueSize
+         */
+        public Integer getTxQueueSize() {
+            return this.txQueueSize;
         }
 
         /**
@@ -3414,7 +3919,7 @@ public class RunInstancesRequest extends Request {
             private Boolean deleteOnRelease; 
             private String description; 
             private String instanceType; 
-            private java.util.List < String > ipv6Address; 
+            private java.util.List<String> ipv6Address; 
             private Long ipv6AddressCount; 
             private Integer networkCardIndex; 
             private String networkInterfaceId; 
@@ -3423,12 +3928,26 @@ public class RunInstancesRequest extends Request {
             private String primaryIpAddress; 
             private Integer queueNumber; 
             private Long queuePairNumber; 
+            private Integer rxQueueSize; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
+            private Boolean sourceDestCheck; 
+            private Integer txQueueSize; 
             private String vSwitchId; 
 
             /**
-             * DeleteOnRelease.
+             * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only for secondary ENIs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteOnRelease(Boolean deleteOnRelease) {
                 this.deleteOnRelease = deleteOnRelease;
@@ -3436,14 +3955,16 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The description of ENI N.
-             * <p>
+             * <p>The description of ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+             * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you do not need to specify this parameter.</li>
+             * </ul>
              * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to set this parameter.
+             * <strong>example:</strong>
+             * <p>Network_Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3451,15 +3972,16 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * <p>
+             * <p>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Primary</li>
+             * <li>Secondary</li>
+             * </ul>
+             * <p>Default value: Secondary.</p>
              * 
-             * Valid values:
-             * 
-             * *   Primary
-             * *   Secondary
-             * 
-             * Default value: Secondary.
+             * <strong>example:</strong>
+             * <p>Secondary</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -3467,29 +3989,29 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * IPv6 address N to assign to the primary ENI. Up to 10 IPv6 addresses can be assigned to the primary ENI. Valid values of the second N: 1 to 10.
-             * <p>
-             * 
-             * Example: `Ipv6Address.1=2001:db8:1234:1a00::***`.
-             * 
-             * Take note of the following items:
-             * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
-             * *   If you specify this parameter, you must set `Amount` to 1. You cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6AddressCount`.
+             * <p>The IPv6 addresses to assign to the primary ENI. You can assign up to 10 IPv6 addresses to the primary ENI. Valid values of the second N: 1 to 10.</p>
+             * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::***</code>.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>This parameter takes effect only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
+             * <li>If you specify this parameter, you must set <code>Amount</code> to 1 and cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6AddressCount</code>.</li>
+             * </ul>
              */
-            public Builder ipv6Address(java.util.List < String > ipv6Address) {
+            public Builder ipv6Address(java.util.List<String> ipv6Address) {
                 this.ipv6Address = ipv6Address;
                 return this;
             }
 
             /**
-             * The number of IPv6 addresses that the system randomly generates for the primary ENI. Valid values: 1 to 10.
-             * <p>
+             * <p>The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>This parameter takes effect only when <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>. If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</li>
+             * <li>If you specify this parameter, you cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6Address.N</code>.</li>
+             * </ul>
              * 
-             * Take note of the following items:
-             * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
-             * *   If you specify this parameter, you cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6Address.N`.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ipv6AddressCount(Long ipv6AddressCount) {
                 this.ipv6AddressCount = ipv6AddressCount;
@@ -3497,13 +4019,16 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * 网卡指定的物理网卡索引。
-             * <p>
+             * <p>The index of the network card for ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>You can specify network card indexes only for instances of specific instance types.</li>
+             * <li>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</li>
+             * <li>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+             * </ul>
              * 
-             * 您需要注意：
-             * - 只有特定实例规格支持指定物理网卡索引。
-             * - NetworkInterface.N.InstanceType取值为Primary时，对于支持物理网卡的实例规格，如果设置此参数，只能设置为0。
-             * - NetworkInterface.N.InstanceType取值为Secondary或者空值，对于支持物理网卡的实例规格，此参数可以依据实例规格设置。更多信息，请参见[实例规格族](~~25378~~)。
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -3511,7 +4036,14 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * NetworkInterfaceId.
+             * <p>The ID of the ENI to attach to the instance.</p>
+             * <p>If you specify this parameter, you must set <code>Amount</code> to 1.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot specify other ENI creation parameters.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp1gn106np8jhxhj****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -3519,13 +4051,15 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of ENI N.
-             * <p>
+             * <p>The name of ENI N. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you do not need to specify this parameter.</li>
+             * </ul>
              * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to set this parameter.
+             * <strong>example:</strong>
+             * <p>Network_Name</p>
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -3533,16 +4067,18 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The communication mode of primary ENI N. Valid values:
-             * <p>
+             * <p>The communication mode of ENI N. Valid values:</p>
+             * <ul>
+             * <li>Standard: uses the TCP communication mode.</li>
+             * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+             * </ul>
+             * <p>Default value: Standard.</p>
+             * <blockquote>
+             * <p> The number of ERIs on an instance cannot exceed the maximum number of ERIs that the instance type supports. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+             * </blockquote>
              * 
-             * *   Standard: uses the TCP communication mode.
-             * *   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
-             * 
-             * Take note of the following items:
-             * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
-             * *   If you set this parameter to HighPerformance, you can create instances only of the c7re RDMA-enhanced instance family. The maximum number of ENIs in RDMA mode that can be bound to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Instance family](~~25378~~).
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -3550,21 +4086,28 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The primary IP address to assign to ENI N.
-             * <p>
+             * <p>The primary IP address to assign to ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li><p>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
+             * <ul>
+             * <li>If the value of N is 1, you can configure a primary or secondary ENI. If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified IP address are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</li>
+             * <li>If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <code>NetworkInterface.2.InstanceType</code> to Secondary to attach a secondary ENI.</li>
+             * </ul>
+             * </li>
+             * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify this parameter and <code>PrivateIpAddress</code> in the same request.</p>
+             * </li>
+             * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the following IP addresses are reserved: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
+             * </ul>
              * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2.
-             * 
-             *     *   If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot bind secondary ENIs to the instances.
-             *     *   If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot specify `NetworkInterface.2.InstanceType` to Secondary to bind a secondary ENI.
-             * 
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress` and you cannot specify both NetworkInterface.N.PrimaryIpAddress and `PrivateIpAddress`.
-             * 
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.
-             * 
-             * > You can bind only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to bind more secondary ENIs.
+             * <strong>example:</strong>
+             * <p><code>172.16.**.**</code></p>
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -3572,15 +4115,17 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The number of queues supported by ENI N.
-             * <p>
+             * <p>The number of queues supported by ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+             * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</li>
+             * <li>The total number of queues for all ENIs on an instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
+             * <li>If you specify this parameter and set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you cannot specify <code>NetworkInterfaceQueueNumber</code>.</li>
+             * </ul>
              * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can set a primary or secondary ENI. If the value of N is 2, you can set a primary ENI and a secondary ENI.
-             * *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the specified instance type.
-             * *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.
-             * *   If this parameter is set and `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot set the `NetworkInterfaceQueueNumber` parameter.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder queueNumber(Integer queueNumber) {
                 this.queueNumber = queueNumber;
@@ -3588,7 +4133,14 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <p>The number of queue pairs (QPs) supported by the ERI.</p>
+             * <p>If you want to attach multiple ERIs to a created instance, we recommend that you specify QueuePairNumber for each ERI based on the value of <code>QueuePairNumber</code> supported by the instance type and the number of ERIs that you want to use. Make sure that the total number of QPs of all ERIs does not exceed the maximum number of QPs supported by the instance type. For information about the maximum number of QPs supported by an instance type, see <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</p>
+             * <blockquote>
+             * <p> If you do not specify QueuePairNumber for an ERI, the maximum number of QPs supported by the instance type is used as the number of QPs supported by the ERI. In this case, you cannot attach an additional ERI to the instance. However, you can attach other types of ENIs to the instance.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queuePairNumber(Long queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -3596,14 +4148,32 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which to assign secondary ENI N.
-             * <p>
+             * <p>The receive (Rx) queue depth of ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+             * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+             * </ul>
              * 
-             * Take note of the following items:
+             * <strong>example:</strong>
+             * <p>8192</p>
+             */
+            public Builder rxQueueSize(Integer rxQueueSize) {
+                this.rxQueueSize = rxQueueSize;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group to which to assign ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
+             * </ul>
              * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxazb4p****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -3611,31 +4181,65 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of security group N to which to assign ENI N.
-             * <p>
+             * <p>The IDs of security groups to which to assign ENI N.</p>
+             * <ul>
+             * <li>The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+             * <li>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+             * </ul>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. In this case, this parameter is equivalent to <code>SecurityGroupIds.N</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
+             * </ul>
              * 
-             * *   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
-             * 
-             * Take note of the following items:
-             * 
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N` and you cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the ECS instance.
+             * <strong>example:</strong>
+             * <p>sg-bp15ed6xe1yxeycg7****</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
 
             /**
-             * The ID of the vSwitch to which to connect to ENI N.
-             * <p>
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              * 
-             * Take note of the following items:
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder sourceDestCheck(Boolean sourceDestCheck) {
+                this.sourceDestCheck = sourceDestCheck;
+                return this;
+            }
+
+            /**
+             * <p>The Tx queue depth of ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+             * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+             * </ul>
              * 
-             * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `VSwitchId` and you cannot specify `VSwitchId`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the vSwitch to which to connect to the instance.
+             * <strong>example:</strong>
+             * <p>8192</p>
+             */
+            public Builder txQueueSize(Integer txQueueSize) {
+                this.txQueueSize = txQueueSize;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch to which to connect ENI N.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>VSwitchId</code>. You cannot specify both NetworkInterface.N.VSwitchId and <code>VSwitchId</code> in the same request.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the VSwitchId value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp67acfmxazb4p****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -3649,8 +4253,14 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class NetworkOptions extends TeaModel {
-        @NameInMap("EnableJumboFrame")
+        @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
         private Boolean enableJumboFrame;
 
         private NetworkOptions(Builder builder) {
@@ -3676,16 +4286,18 @@ public class RunInstancesRequest extends Request {
             private Boolean enableJumboFrame; 
 
             /**
-             * 实例是否开启Jumbo frame特性。参数取值范围：
-             * <p>
+             * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
+             * <ul>
+             * <li>false: does not enable the Jumbo Frames feature for the instance. The maximum transmission unit (MTU) value of all ENIs on the instance is set to 1500.</li>
+             * <li>true: enables the Jumbo Frames feature for the instance. The MTU value of all ENIs on the instance is set to 8500.</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * <blockquote>
+             * <p> The Jumbo Frames feature is supported by only 8th-generation or later instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</p>
+             * </blockquote>
              * 
-             * - false：不开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）MTU取值为1500。
-             * 
-             * - true：开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）的MTU取值为8500。
-             * 
-             * 默认值：true。
-             * 
-             * >只有八代以上部分实例规格支持开启Jumbo frame特性，更多信息，请参见[ECS实例MTU](~~200512~~)。
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableJumboFrame(Boolean enableJumboFrame) {
                 this.enableJumboFrame = enableJumboFrame;
@@ -3699,11 +4311,169 @@ public class RunInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
+    public static class PrivateDnsNameOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableInstanceIdDnsAAAARecord")
+        private Boolean enableInstanceIdDnsAAAARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableInstanceIdDnsARecord")
+        private Boolean enableInstanceIdDnsARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIpDnsARecord")
+        private Boolean enableIpDnsARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIpDnsPtrRecord")
+        private Boolean enableIpDnsPtrRecord;
+
+        @com.aliyun.core.annotation.NameInMap("HostnameType")
+        private String hostnameType;
+
+        private PrivateDnsNameOptions(Builder builder) {
+            this.enableInstanceIdDnsAAAARecord = builder.enableInstanceIdDnsAAAARecord;
+            this.enableInstanceIdDnsARecord = builder.enableInstanceIdDnsARecord;
+            this.enableIpDnsARecord = builder.enableIpDnsARecord;
+            this.enableIpDnsPtrRecord = builder.enableIpDnsPtrRecord;
+            this.hostnameType = builder.hostnameType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateDnsNameOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableInstanceIdDnsAAAARecord
+         */
+        public Boolean getEnableInstanceIdDnsAAAARecord() {
+            return this.enableInstanceIdDnsAAAARecord;
+        }
+
+        /**
+         * @return enableInstanceIdDnsARecord
+         */
+        public Boolean getEnableInstanceIdDnsARecord() {
+            return this.enableInstanceIdDnsARecord;
+        }
+
+        /**
+         * @return enableIpDnsARecord
+         */
+        public Boolean getEnableIpDnsARecord() {
+            return this.enableIpDnsARecord;
+        }
+
+        /**
+         * @return enableIpDnsPtrRecord
+         */
+        public Boolean getEnableIpDnsPtrRecord() {
+            return this.enableIpDnsPtrRecord;
+        }
+
+        /**
+         * @return hostnameType
+         */
+        public String getHostnameType() {
+            return this.hostnameType;
+        }
+
+        public static final class Builder {
+            private Boolean enableInstanceIdDnsAAAARecord; 
+            private Boolean enableInstanceIdDnsARecord; 
+            private Boolean enableIpDnsARecord; 
+            private Boolean enableIpDnsPtrRecord; 
+            private String hostnameType; 
+
+            /**
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
+                this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
+                return this;
+            }
+
+            /**
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder enableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
+                this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
+                return this;
+            }
+
+            /**
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enableIpDnsARecord(Boolean enableIpDnsARecord) {
+                this.enableIpDnsARecord = enableIpDnsARecord;
+                return this;
+            }
+
+            /**
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder enableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
+                this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
+                return this;
+            }
+
+            /**
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
+             */
+            public Builder hostnameType(String hostnameType) {
+                this.hostnameType = hostnameType;
+                return this;
+            }
+
+            public PrivateDnsNameOptions build() {
+                return new PrivateDnsNameOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -3738,10 +4508,10 @@ public class RunInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag of the instance, disks, and primary ENI.
-             * <p>
+             * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
-             * The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3749,10 +4519,10 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag of the instance, disks, and primary ENI.
-             * <p>
+             * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

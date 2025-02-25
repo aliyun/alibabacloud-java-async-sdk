@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSecretParameterResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSecretParameterResponseBody</p>
  */
 public class UpdateSecretParameterResponseBody extends TeaModel {
-    @NameInMap("Parameter")
+    @com.aliyun.core.annotation.NameInMap("Parameter")
     private Parameter parameter;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateSecretParameterResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the parameter.
+         * <p>The information about the parameter.</p>
          */
         public Builder parameter(Parameter parameter) {
             this.parameter = parameter;
@@ -58,7 +63,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B419FF3-ABC6-4DF0-95E5-636DC8CBB8AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,47 +79,53 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSecretParameterResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSecretParameterResponseBody</p>
+     */
     public static class Parameter extends TeaModel {
-        @NameInMap("Constraints")
+        @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
 
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterVersion")
+        @com.aliyun.core.annotation.NameInMap("ParameterVersion")
         private Integer parameterVersion;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
         private Parameter(Builder builder) {
@@ -254,7 +268,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The constraints of the parameter.
+             * <p>The constraints of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;&quot;AllowedValues&quot;:[&quot;secretparameter&quot;],&quot;AllowedPattern&quot;:&quot;.*&quot;,&quot;MinLength&quot;:0,&quot;MaxLength&quot;:20}&quot;</p>
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -262,7 +279,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the parameter.
+             * <p>The user who created the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -270,7 +290,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the parameter was created.
+             * <p>The time when the parameter was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-01T09:30:36Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -278,7 +301,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SecretParameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,7 +312,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parameter.
+             * <p>The ID of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-0b0fff9919c946xxxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -294,7 +323,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of customer master key (CMK) of Key Management Service (KMS) that is used for encryption.
+             * <p>The ID of customer master key (CMK) of Key Management Service (KMS) that is used for encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80e9409f-78fa-42ab-84bd-83f40c******</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -302,7 +334,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyParameter</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +345,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the parameter.
+             * <p>The version number of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -318,7 +356,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxsn4m4******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -326,7 +367,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the parameter.
+             * <p>The share type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -334,7 +378,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the parameter.
+             * <p>The tags of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -342,7 +389,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * <p>The type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Secret</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -350,7 +400,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The user who updated the parameter.
+             * <p>The user who updated the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -358,7 +411,10 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the parameter was updated.
+             * <p>The time when the parameter was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-01T09:33:11Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

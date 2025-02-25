@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiscoveredResourceCountsGroupByRegionResponseBody} extends {@link TeaModel}
  *
  * <p>GetDiscoveredResourceCountsGroupByRegionResponseBody</p>
  */
 public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaModel {
-    @NameInMap("DiscoveredResourceCountsSummary")
-    private java.util.List < DiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
+    @com.aliyun.core.annotation.NameInMap("DiscoveredResourceCountsSummary")
+    private java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDiscoveredResourceCountsGroupByRegionResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
     /**
      * @return discoveredResourceCountsSummary
      */
-    public java.util.List < DiscoveredResourceCountsSummary> getDiscoveredResourceCountsSummary() {
+    public java.util.List<DiscoveredResourceCountsSummary> getDiscoveredResourceCountsSummary() {
         return this.discoveredResourceCountsSummary;
     }
 
@@ -46,19 +51,22 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
     }
 
     public static final class Builder {
-        private java.util.List < DiscoveredResourceCountsSummary> discoveredResourceCountsSummary; 
+        private java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary; 
         private String requestId; 
 
         /**
-         * The statistics on the resources.
+         * <p>The statistics on the resources.</p>
          */
-        public Builder discoveredResourceCountsSummary(java.util.List < DiscoveredResourceCountsSummary> discoveredResourceCountsSummary) {
+        public Builder discoveredResourceCountsSummary(java.util.List<DiscoveredResourceCountsSummary> discoveredResourceCountsSummary) {
             this.discoveredResourceCountsSummary = discoveredResourceCountsSummary;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>399BD94C-D20C-4D27-88D4-89E8D75C0595</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link GetDiscoveredResourceCountsGroupByRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDiscoveredResourceCountsGroupByRegionResponseBody</p>
+     */
     public static class DiscoveredResourceCountsSummary extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Long resourceCount;
 
         private DiscoveredResourceCountsSummary(Builder builder) {
@@ -122,10 +136,13 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
             private Long resourceCount; 
 
             /**
-             * The dimension by which statistics are collected.
-             * <p>
+             * <p>The dimension by which statistics are collected.</p>
+             * <blockquote>
+             * <p> In most cases, the <code>Region</code> parameter instead of the GroupName parameter is returned.</p>
+             * </blockquote>
              * 
-             * >  In most cases, the `Region` parameter instead of the GroupName parameter is returned.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -133,7 +150,10 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the region by which statistics are collected.
+             * <p>The ID of the region by which statistics are collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -141,7 +161,10 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
             }
 
             /**
-             * The total number of resources.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder resourceCount(Long resourceCount) {
                 this.resourceCount = resourceCount;

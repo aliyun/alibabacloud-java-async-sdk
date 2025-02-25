@@ -1,119 +1,124 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesRequest</p>
  */
 public class DescribeDBInstancesRequest extends Request {
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ConnectionDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionDomain")
     private String connectionDomain;
 
-    @Query
-    @NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
     private String DBInstanceStatus;
 
-    @Query
-    @NameInMap("DBInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceType")
     private String DBInstanceType;
 
-    @Query
-    @NameInMap("DBNodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeType")
     private String DBNodeType;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @Query
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private String expired;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicationFactor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicationFactor")
     private String replicationFactor;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeDBInstancesRequest(Builder builder) {
@@ -316,7 +321,7 @@ public class DescribeDBInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -364,7 +369,7 @@ public class DescribeDBInstancesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -404,11 +409,14 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -417,7 +425,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The endpoint of the node. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the endpoint of the node.
+         * <p>The endpoint of the node. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the endpoint of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1ea17b41abecf43****.mongodb.rds.aliyuncs.com</p>
          */
         public Builder connectionDomain(String connectionDomain) {
             this.putQueryParameter("ConnectionDomain", connectionDomain);
@@ -426,7 +437,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The instance type. For more information about valid values, see [Instance types](~~57141~~).
+         * <p>The instance type. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.mongo.mid</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -435,12 +449,15 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the instance. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must start with a letter.</li>
+         * <li>It can contain digits, letters, underscores (_), and hyphens (-).</li>
+         * <li>It must be 2 to 256 characters in length.</li>
+         * </ul>
          * 
-         * *   The name must start with a letter.
-         * *   It can contain digits, letters, underscores (\_), and hyphens (-).
-         * *   It must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>Test database</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -449,7 +466,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp199659b178****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -458,7 +478,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The state of the instance. For more information about valid values, see [Instance states](~~63870~~).
+         * <p>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBInstanceStatus(String DBInstanceStatus) {
             this.putQueryParameter("DBInstanceStatus", DBInstanceStatus);
@@ -467,11 +490,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The architecture of the instance. Valid values:
-         * <p>
+         * <p>The architecture of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * </ul>
          * 
-         * *   **sharding**: sharded cluster instance
-         * *   **replicate**: replica set or standalone instance
+         * <strong>example:</strong>
+         * <p>sharding</p>
          */
         public Builder DBInstanceType(String DBInstanceType) {
             this.putQueryParameter("DBInstanceType", DBInstanceType);
@@ -480,12 +506,15 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The type of the node in the instance. This parameter is used to filter standard or test instance.
-         * <p>
+         * <p>The type of the node in the instance. This parameter is used to filter standard or test instance.</p>
+         * <ol>
+         * <li>Valid value for a standalone or DBFS instance.</li>
+         * <li>Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard</li>
+         * <li>Valid value when all instances are displayed: default</li>
+         * </ol>
          * 
-         * 1.  Valid value for a standalone or DBFS instance.
-         * 2.  Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard
-         * 3.  Valid value when all instances are displayed: default
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder DBNodeType(String DBNodeType) {
             this.putQueryParameter("DBNodeType", DBNodeType);
@@ -494,7 +523,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to **MongoDB**.
+         * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -503,14 +535,18 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values:
-         * <p>
+         * <p>The database engine version of the instance.</p>
+         * <ul>
+         * <li><strong>6.0</strong></li>
+         * <li><strong>5.0</strong></li>
+         * <li><strong>4.4</strong></li>
+         * <li><strong>4.2</strong></li>
+         * <li><strong>4.0</strong></li>
+         * <li><strong>3.4</strong></li>
+         * </ul>
          * 
-         * *   **5.0**
-         * *   **4.4**
-         * *   **4.2**
-         * *   **4.0**
-         * *   **3.4**
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -519,7 +555,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The time when the instance expires.
+         * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-26T16:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -528,11 +567,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance has expired. Valid values:
-         * <p>
+         * <p>Specifies whether the instance has expired. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -541,11 +583,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Classic</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
          * 
-         * *   **Classic**
-         * *   **VPC**
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -572,7 +617,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -581,12 +629,15 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -595,7 +646,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -604,12 +658,15 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of nodes in the replica set instance. Valid values:
-         * <p>
+         * <p>The number of nodes in the replica set instance. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong></li>
+         * <li><strong>5</strong></li>
+         * <li><strong>7</strong></li>
+         * </ul>
          * 
-         * *   **3**
-         * *   **5**
-         * *   **7**
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder replicationFactor(String replicationFactor) {
             this.putQueryParameter("ReplicationFactor", replicationFactor);
@@ -618,7 +675,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -645,16 +705,19 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The tags of the instance.
+         * <p>The tags of the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The vSwitch ID of the instance.
+         * <p>The vSwitch ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1vj604nj5a9zz74****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -663,7 +726,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The VPC ID of the instance.
+         * <p>The VPC ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1n3i15v90el48nx****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -672,7 +738,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -687,11 +756,17 @@ public class DescribeDBInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -726,12 +801,15 @@ public class DescribeDBInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the instance. Valid values of N: **1** to **20**.
-             * <p>
+             * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <ul>
+             * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>It can be up to 64 characters in length.</li>
+             * <li>It cannot be an empty string.</li>
+             * </ul>
              * 
-             * *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-             * *   It can be up to 64 characters in length.
-             * *   It cannot be an empty string.
+             * <strong>example:</strong>
+             * <p>testdatabase</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -739,12 +817,15 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * The tag value of the instance. Valid values of N: **1** to **20**.
-             * <p>
+             * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <ul>
+             * <li>The value cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+             * <li>The value can be up to 128 characters in length.</li>
+             * <li>It can be an empty string.</li>
+             * </ul>
              * 
-             * *   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-             * *   The value can be up to 128 characters in length.
-             * *   It can be an empty string.
+             * <strong>example:</strong>
+             * <p>apitest</p>
              */
             public Builder value(String value) {
                 this.value = value;

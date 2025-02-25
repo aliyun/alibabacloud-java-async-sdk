@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainRequest</p>
  */
 public class DeleteDomainRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
     private DeleteDomainRequest(Builder builder) {
@@ -62,10 +67,10 @@ public class DeleteDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDomainRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.domainName = response.domainName;
+        private Builder(DeleteDomainRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.domainName = request.domainName;
         } 
 
         /**
@@ -78,7 +83,10 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

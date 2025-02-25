@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEventStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyEventStatusRequest</p>
  */
 public class ModifyEventStatusRequest extends Request {
-    @Query
-    @NameInMap("Backed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Backed")
     private Boolean backed;
 
-    @Query
-    @NameInMap("DealReason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DealReason")
     private String dealReason;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
     private ModifyEventStatusRequest(Builder builder) {
@@ -112,7 +117,14 @@ public class ModifyEventStatusRequest extends Request {
         } 
 
         /**
-         * Backed.
+         * <p>Specifies whether to enhance the detection of anomalous events. If you enhance the detection of anomalous events, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder backed(Boolean backed) {
             this.putQueryParameter("Backed", backed);
@@ -121,7 +133,10 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * DealReason.
+         * <p>The reason why the anomalous event is handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anomaly confirmed</p>
          */
         public Builder dealReason(String dealReason) {
             this.putQueryParameter("DealReason", dealReason);
@@ -130,7 +145,14 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the anomalous event.</p>
+         * <blockquote>
+         * <p>You can call the <strong>DescribeEvents</strong> operation to query the ID of the anomalous event.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -139,7 +161,14 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -148,7 +177,15 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The method to handle the anomalous event. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: marks the anomalous event as a false positive.</li>
+         * <li><strong>2</strong>: confirms and handles the anomalous event.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

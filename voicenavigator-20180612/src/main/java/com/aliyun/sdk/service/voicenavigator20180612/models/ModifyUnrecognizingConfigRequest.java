@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUnrecognizingConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyUnrecognizingConfigRequest</p>
  */
 public class ModifyUnrecognizingConfigRequest extends Request {
-    @Query
-    @NameInMap("FinalAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinalAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String finalAction;
 
-    @Query
-    @NameInMap("FinalActionParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinalActionParams")
     private String finalActionParams;
 
-    @Query
-    @NameInMap("FinalPrompt")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinalPrompt")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String finalPrompt;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Prompt")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prompt")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String prompt;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer threshold;
 
     private ModifyUnrecognizingConfigRequest(Builder builder) {
@@ -129,7 +134,10 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         } 
 
         /**
-         * FinalAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TransferToAgent</p>
          */
         public Builder finalAction(String finalAction) {
             this.putQueryParameter("FinalAction", finalAction);
@@ -147,7 +155,7 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
-         * FinalPrompt.
+         * <p>This parameter is required.</p>
          */
         public Builder finalPrompt(String finalPrompt) {
             this.putQueryParameter("FinalPrompt", finalPrompt);
@@ -156,7 +164,10 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f407b22cbe4890ac595f09985848d5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -165,7 +176,7 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -174,7 +185,10 @@ public class ModifyUnrecognizingConfigRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);

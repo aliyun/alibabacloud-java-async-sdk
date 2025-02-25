@@ -1,106 +1,110 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTableRequest} extends {@link RequestModel}
  *
  * <p>CreateTableRequest</p>
  */
 public class CreateTableRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppGuid")
     private String appGuid;
 
-    @Query
-    @NameInMap("CategoryId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long categoryId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Columns")
-    @Validation(required = true)
-    private java.util.List < Columns> columns;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Columns")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Columns> columns;
 
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Body
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @Body
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private Integer envType;
 
-    @Query
-    @NameInMap("ExternalTableType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalTableType")
     private String externalTableType;
 
-    @Query
-    @NameInMap("HasPart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasPart")
     private Integer hasPart;
 
-    @Query
-    @NameInMap("IsView")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsView")
     private Integer isView;
 
-    @Query
-    @NameInMap("LifeCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifeCycle")
     private Integer lifeCycle;
 
-    @Query
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Query
-    @NameInMap("LogicalLevelId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalLevelId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long logicalLevelId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PhysicsLevelId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicsLevelId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long physicsLevelId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long projectId;
 
-    @Query
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
-    @Body
-    @NameInMap("Themes")
-    private java.util.List < Themes> themes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Themes")
+    private java.util.List<Themes> themes;
 
-    @Query
-    @NameInMap("Visibility")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
     private Integer visibility;
 
     private CreateTableRequest(Builder builder) {
@@ -172,7 +176,7 @@ public class CreateTableRequest extends Request {
     /**
      * @return columns
      */
-    public java.util.List < Columns> getColumns() {
+    public java.util.List<Columns> getColumns() {
         return this.columns;
     }
 
@@ -277,7 +281,7 @@ public class CreateTableRequest extends Request {
     /**
      * @return themes
      */
-    public java.util.List < Themes> getThemes() {
+    public java.util.List<Themes> getThemes() {
         return this.themes;
     }
 
@@ -293,7 +297,7 @@ public class CreateTableRequest extends Request {
         private String appGuid; 
         private Long categoryId; 
         private String clientToken; 
-        private java.util.List < Columns> columns; 
+        private java.util.List<Columns> columns; 
         private String comment; 
         private String endpoint; 
         private Integer envType; 
@@ -308,7 +312,7 @@ public class CreateTableRequest extends Request {
         private Long projectId; 
         private String schema; 
         private String tableName; 
-        private java.util.List < Themes> themes; 
+        private java.util.List<Themes> themes; 
         private Integer visibility; 
 
         private Builder() {
@@ -341,7 +345,7 @@ public class CreateTableRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -350,7 +354,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The comment.
+         * <p>The ID of the MaxCompute project. Specify the ID in the odps.{projectName} format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test</p>
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -359,7 +366,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The ID of the logical level.
+         * <p>The ID of the associated category. You can call the <a href="https://help.aliyun.com/document_detail/173932.html">GetMetaCategory</a> operation to query the IDs of all categories that can be associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -368,7 +378,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reserved</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -377,19 +390,20 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Columns.
+         * <p>The list of fields. A maximum of 1,000 fields are supported.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder columns(java.util.List < Columns> columns) {
+        public Builder columns(java.util.List<Columns> columns) {
             this.putBodyParameter("Columns", columns);
             this.columns = columns;
             return this;
         }
 
         /**
-         * Specifies whether the MaxCompute table is a partitioned table. Valid values: 1 and 0. The value 1 indicates that the MaxCompute table is a partitioned table. The value 0 indicates that the MaxCompute table is not a partitioned table. This parameter is deprecated. Do not use this parameter.
-         * <p>
+         * <p>The comment.</p>
          * 
-         * The Column.N.isPartitionCol parameter is used to specify whether the MaxCompute table is a partitioned table. If the Column.N.isPartitionCol parameter is set to true, the MaxCompute table is a partitioned table.
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -398,11 +412,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The environment of the DataWorks workspace. Valid values:
-         * <p>
+         * <p>The endpoint of MaxCompute.</p>
          * 
-         * *   0: development environment
-         * *   1: production environment
+         * <strong>example:</strong>
+         * <p>odps://abc</p>
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -411,7 +424,14 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.
+         * <p>The environment type of the DataWorks workspace. Valid values:</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putBodyParameter("EnvType", envType);
@@ -420,7 +440,16 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The storage location of the external table.
+         * <p>The storage type of the external table. Valid values:</p>
+         * <ul>
+         * <li>0: Object Storage Service (OSS)</li>
+         * <li>1: Tablestore</li>
+         * <li>2: Volume</li>
+         * <li>3: MySQL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder externalTableType(String externalTableType) {
             this.putQueryParameter("ExternalTableType", externalTableType);
@@ -429,7 +458,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>Specifies whether to create a MaxCompute partitioned table. Valid values: 1 and 0. The value 1 indicates a partitioned table. The value 0 indicates a non-partitioned table. This parameter is deprecated. Do not use this parameter. The Column.N.isPartitionCol parameter is used to specify whether to create a MaxCompute partitioned table. If the Column.N.isPartitionCol parameter is set to true, a MaxCompute partitioned table is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder hasPart(Integer hasPart) {
             this.putQueryParameter("HasPart", hasPart);
@@ -438,12 +470,14 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Specifies whether the table or workspace is visible:
-         * <p>
+         * <p>Specifies whether to create a view or table. Valid values:</p>
+         * <ul>
+         * <li>0: Create a table.</li>
+         * <li>1: Create a view.</li>
+         * </ul>
          * 
-         * *   0: Both the table and workspace are not visible.
-         * *   1: The table and workspace are visible.
-         * *   2: Only the workspace is visible.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isView(Integer isView) {
             this.putQueryParameter("IsView", isView);
@@ -452,7 +486,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The ID of the associated category. You can call the [GetMetaCategory](~~173932~~) operation to query the ID of the category that can be associated.
+         * <p>The lifecycle of the table. Unit: days. By default, this parameter is left empty, which indicates that the table is permanently stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder lifeCycle(Integer lifeCycle) {
             this.putQueryParameter("LifeCycle", lifeCycle);
@@ -461,7 +498,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The storage location of the external table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>location</p>
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -470,7 +510,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The ID of the physical level.
+         * <p>The ID of the logical level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder logicalLevelId(Long logicalLevelId) {
             this.putQueryParameter("LogicalLevelId", logicalLevelId);
@@ -488,13 +531,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The storage type of the external table. Valid values:
-         * <p>
+         * <p>The ID of the physical level.</p>
          * 
-         * *   0: Object Storage Service (OSS)
-         * *   1: Tablestore
-         * *   2: Volume
-         * *   3: MySQL
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder physicsLevelId(Long physicsLevelId) {
             this.putQueryParameter("PhysicsLevelId", physicsLevelId);
@@ -503,7 +543,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -512,7 +555,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The display name of the field.
+         * <p>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -521,7 +567,11 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * The endpoint of MaxCompute.
+         * <p>The name of the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName1</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -530,16 +580,24 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * Themes.
+         * <p>The list of themes.</p>
          */
-        public Builder themes(java.util.List < Themes> themes) {
+        public Builder themes(java.util.List<Themes> themes) {
             this.putBodyParameter("Themes", themes);
             this.themes = themes;
             return this;
         }
 
         /**
-         * The lifecycle of the table. Unit: days. By default, this parameter is left empty, which indicates that the table is permanently stored.
+         * <p>Specifies whether the table or workspace is visible. Valid values:</p>
+         * <ul>
+         * <li>0: Both the table and workspace are invisible.</li>
+         * <li>1: Both the table and workspace are visible.</li>
+         * <li>2: Only the workspace is visible.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder visibility(Integer visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -554,28 +612,34 @@ public class CreateTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnName;
 
-        @NameInMap("ColumnNameCn")
+        @com.aliyun.core.annotation.NameInMap("ColumnNameCn")
         private String columnNameCn;
 
-        @NameInMap("ColumnType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("IsPartitionCol")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionCol")
         private Boolean isPartitionCol;
 
-        @NameInMap("Length")
+        @com.aliyun.core.annotation.NameInMap("Length")
         private Integer length;
 
-        @NameInMap("SeqNumber")
+        @com.aliyun.core.annotation.NameInMap("SeqNumber")
         private Integer seqNumber;
 
         private Columns(Builder builder) {
@@ -655,7 +719,11 @@ public class CreateTableRequest extends Request {
             private Integer seqNumber; 
 
             /**
-             * The comment of the field.
+             * <p>The name of the field. You can configure a maximum of 1,000 fields when you call the CreateTable operation to create a table.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>columnName1</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -663,10 +731,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The name of the field.
-             * <p>
+             * <p>The display name of the field.</p>
              * 
-             * You can call the CreateTable operation to configure a maximum of 1,000 fields.
+             * <strong>example:</strong>
+             * <p>columnName in chinese</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -674,10 +742,11 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The sequence number of the field. You can use this parameter to specify how fields are sorted in a table. By default, fields are sorted in the order in which requests are created.
-             * <p>
+             * <p>The data type of the field. For information about supported data types, see <a href="https://help.aliyun.com/document_detail/27821.html">Data type editions</a> in MaxCompute documentation.</p>
+             * <p>This parameter is required.</p>
              * 
-             * If the field is a partition field, this parameter is not supported.
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -685,7 +754,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The data type of the field.
+             * <p>The comment of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -693,7 +765,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The ID of the topic.
+             * <p>Specifies whether the field is a partition field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPartitionCol(Boolean isPartitionCol) {
                 this.isPartitionCol = isPartitionCol;
@@ -701,7 +776,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * Specifies whether the current field is a partition field.
+             * <p>The length of the field. For more information, see <a href="https://help.aliyun.com/document_detail/159541.html">MaxCompute data type editions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -709,7 +787,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The length of the field. For more information, see [MaxCompute V2.0 data type edition](~~159541#concept-2454988~~).
+             * <p>The sequence number of the field. You can use this parameter to specify how fields are sorted in a table. By default, fields are sorted based on the order in which requests are created. If the field is a partition field, this parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNumber(Integer seqNumber) {
                 this.seqNumber = seqNumber;
@@ -723,12 +804,18 @@ public class CreateTableRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTableRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTableRequest</p>
+     */
     public static class Themes extends TeaModel {
-        @NameInMap("ThemeId")
-        @Validation(minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ThemeId")
+        @com.aliyun.core.annotation.Validation(minimum = 1)
         private Long themeId;
 
-        @NameInMap("ThemeLevel")
+        @com.aliyun.core.annotation.NameInMap("ThemeLevel")
         private Integer themeLevel;
 
         private Themes(Builder builder) {
@@ -763,7 +850,10 @@ public class CreateTableRequest extends Request {
             private Integer themeLevel; 
 
             /**
-             * The level that corresponds to the topic ID.
+             * <p>The theme ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -771,7 +861,10 @@ public class CreateTableRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * <p>The level that corresponds to the theme ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder themeLevel(Integer themeLevel) {
                 this.themeLevel = themeLevel;

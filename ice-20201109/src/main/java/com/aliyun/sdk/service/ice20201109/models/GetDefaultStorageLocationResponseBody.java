@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDefaultStorageLocationResponseBody} extends {@link TeaModel}
  *
  * <p>GetDefaultStorageLocationResponseBody</p>
  */
 public class GetDefaultStorageLocationResponseBody extends TeaModel {
-    @NameInMap("Bucket")
+    @com.aliyun.core.annotation.NameInMap("Bucket")
     private String bucket;
 
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
     private GetDefaultStorageLocationResponseBody(Builder builder) {

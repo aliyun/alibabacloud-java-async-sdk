@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDomainResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDomainResponseBody</p>
  */
 public class ModifyDomainResponseBody extends TeaModel {
-    @NameInMap("DomainInfo")
+    @com.aliyun.core.annotation.NameInMap("DomainInfo")
     private DomainInfo domainInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDomainResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ModifyDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the domain name.
+         * <p>The information about the domain name.</p>
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -58,7 +63,10 @@ public class ModifyDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class ModifyDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDomainResponseBody</p>
+     */
     public static class DomainInfo extends TeaModel {
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
         private DomainInfo(Builder builder) {
@@ -122,7 +136,10 @@ public class ModifyDomainResponseBody extends TeaModel {
             private String domainId; 
 
             /**
-             * The CNAME that is assigned by WAF to the domain name.
+             * <p>The CNAME that is assigned by WAF to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxcvdaf.****.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -130,7 +147,10 @@ public class ModifyDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name whose access configurations you modified.
+             * <p>The domain name whose access configurations you modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +158,10 @@ public class ModifyDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name.
+             * <p>The ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;

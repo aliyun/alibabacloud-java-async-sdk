@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpnRouteEntryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpnRouteEntryResponseBody</p>
  */
 public class CreateVpnRouteEntryResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("NextHop")
+    @com.aliyun.core.annotation.NameInMap("NextHop")
     private String nextHop;
 
-    @NameInMap("OverlayMode")
+    @com.aliyun.core.annotation.NameInMap("OverlayMode")
     private String overlayMode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteDest")
+    @com.aliyun.core.annotation.NameInMap("RouteDest")
     private String routeDest;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("VpnInstanceId")
+    @com.aliyun.core.annotation.NameInMap("VpnInstanceId")
     private String vpnInstanceId;
 
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
     private CreateVpnRouteEntryResponseBody(Builder builder) {
@@ -134,10 +139,11 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         private Integer weight; 
 
         /**
-         * The timestamp when the destination-based route was created. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp when the destination-based route was created. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1492747187000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -145,7 +151,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the destination-based route.
+         * <p>The description of the destination-based route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -153,7 +162,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The next hop of the destination-based route.
+         * <p>The next hop of the destination-based route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp15oes1py4i66rmd****</p>
          */
         public Builder nextHop(String nextHop) {
             this.nextHop = nextHop;
@@ -161,7 +173,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.
+         * <p>The tunneling protocol. The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipsec</p>
          */
         public Builder overlayMode(String overlayMode) {
             this.overlayMode = overlayMode;
@@ -169,7 +184,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +195,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The destination CIDR block of the destination-based route.
+         * <p>The destination CIDR block of the destination-based route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder routeDest(String routeDest) {
             this.routeDest = routeDest;
@@ -185,11 +206,14 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the destination-based route.
-         * <p>
+         * <p>The status of the destination-based route.</p>
+         * <ul>
+         * <li><strong>published</strong>: advertised to the VPC route table.</li>
+         * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
+         * </ul>
          * 
-         * *   **published**: advertised to the VPC route table.
-         * *   **normal**: not advertised to the VPC route table.
+         * <strong>example:</strong>
+         * <p>published</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -197,7 +221,10 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1a3kqjiiq9legfx****</p>
          */
         public Builder vpnInstanceId(String vpnInstanceId) {
             this.vpnInstanceId = vpnInstanceId;
@@ -205,11 +232,14 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The weight of the destination-based route. Valid values:
-         * <p>
+         * <p>The weight of the destination-based route. Valid values:</p>
+         * <ul>
+         * <li><strong>100</strong>: a high priority</li>
+         * <li><strong>0</strong>: a low priority</li>
+         * </ul>
          * 
-         * *   **100**: a high priority
-         * *   **0**: a low priority
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

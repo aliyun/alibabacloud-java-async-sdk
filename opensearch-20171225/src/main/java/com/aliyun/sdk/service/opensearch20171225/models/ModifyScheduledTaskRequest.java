@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyScheduledTaskRequest</p>
  */
 public class ModifyScheduledTaskRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("taskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("taskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private Object body;
 
     private ModifyScheduledTaskRequest(Builder builder) {
@@ -84,7 +83,7 @@ public class ModifyScheduledTaskRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * The application name or ID.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +92,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * "2f12c585-5873-11ea-974a-7cd30ad3e268"
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -102,7 +101,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * 请求参数。
+         * The request parameters.
          */
         public Builder body(Object body) {
             this.putBodyParameter("body", body);

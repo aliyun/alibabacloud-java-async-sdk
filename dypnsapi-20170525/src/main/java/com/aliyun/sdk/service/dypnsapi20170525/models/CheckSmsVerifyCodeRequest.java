@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSmsVerifyCodeRequest} extends {@link RequestModel}
  *
  * <p>CheckSmsVerifyCodeRequest</p>
  */
 public class CheckSmsVerifyCodeRequest extends Request {
-    @Query
-    @NameInMap("CaseAuthPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseAuthPolicy")
     private Long caseAuthPolicy;
 
-    @Query
-    @NameInMap("CountryCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryCode")
     private String countryCode;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SchemeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeName")
     private String schemeName;
 
-    @Query
-    @NameInMap("VerifyCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifyCode;
 
     private CheckSmsVerifyCodeRequest(Builder builder) {
@@ -168,7 +168,14 @@ public class CheckSmsVerifyCodeRequest extends Request {
         } 
 
         /**
-         * CaseAuthPolicy.
+         * <p>The verification policy for uppercase and lowercase letters of the verification code. Valid values:</p>
+         * <ul>
+         * <li>1: The verification policy does not distinguish uppercase and lowercase letters.</li>
+         * <li>2: The verification policy distinguishes uppercase and lowercase letters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder caseAuthPolicy(Long caseAuthPolicy) {
             this.putQueryParameter("CaseAuthPolicy", caseAuthPolicy);
@@ -177,7 +184,10 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * CountryCode.
+         * <p>The country code of the phone number. Default value: 86.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -186,7 +196,10 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The external ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12123231</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -204,7 +217,11 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18653529399</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -231,7 +248,10 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * SchemeName.
+         * <p>The verification service name. If this parameter is not specified, the default service is used. The name can be up to 20 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);
@@ -240,7 +260,11 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * VerifyCode.
+         * <p>The verification code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

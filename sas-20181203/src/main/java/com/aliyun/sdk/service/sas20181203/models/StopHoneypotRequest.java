@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopHoneypotRequest} extends {@link RequestModel}
  *
  * <p>StopHoneypotRequest</p>
  */
 public class StopHoneypotRequest extends Request {
-    @Query
-    @NameInMap("HoneypotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String honeypotId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private StopHoneypotRequest(Builder builder) {
@@ -69,10 +74,14 @@ public class StopHoneypotRequest extends Request {
         } 
 
         /**
-         * The honeypot ID.
-         * <p>
+         * <p>The honeypot ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain IDs of honeypots.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain IDs of honeypots.
+         * <strong>example:</strong>
+         * <p>444c699ac151b183b04b562b1dc02639d504c9d097246a322de75c963fe*****</p>
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -81,11 +90,14 @@ public class StopHoneypotRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

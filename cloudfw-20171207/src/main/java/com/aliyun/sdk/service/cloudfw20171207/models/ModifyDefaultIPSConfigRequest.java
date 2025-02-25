@@ -1,72 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefaultIPSConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyDefaultIPSConfigRequest</p>
  */
 public class ModifyDefaultIPSConfigRequest extends Request {
-    @Query
-    @NameInMap("AiRules")
-    private String aiRules;
-
-    @Query
-    @NameInMap("BasicRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BasicRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String basicRules;
 
-    @Query
-    @NameInMap("CtiRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CtiRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ctiRules;
 
-    @Query
-    @NameInMap("EnableAllPatch")
-    private String enableAllPatch;
-
-    @Query
-    @NameInMap("EnableDefault")
-    private String enableDefault;
-
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PatchRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSdl")
+    private Long maxSdl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchRules")
     private String patchRules;
 
-    @Query
-    @NameInMap("RuleClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleClass")
     private String ruleClass;
 
-    @Query
-    @NameInMap("RunMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runMode;
-
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
 
     private ModifyDefaultIPSConfigRequest(Builder builder) {
         super(builder);
-        this.aiRules = builder.aiRules;
         this.basicRules = builder.basicRules;
         this.ctiRules = builder.ctiRules;
-        this.enableAllPatch = builder.enableAllPatch;
-        this.enableDefault = builder.enableDefault;
         this.lang = builder.lang;
+        this.maxSdl = builder.maxSdl;
         this.patchRules = builder.patchRules;
         this.ruleClass = builder.ruleClass;
         this.runMode = builder.runMode;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -80,13 +70,6 @@ public class ModifyDefaultIPSConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return aiRules
-     */
-    public String getAiRules() {
-        return this.aiRules;
     }
 
     /**
@@ -104,24 +87,17 @@ public class ModifyDefaultIPSConfigRequest extends Request {
     }
 
     /**
-     * @return enableAllPatch
-     */
-    public String getEnableAllPatch() {
-        return this.enableAllPatch;
-    }
-
-    /**
-     * @return enableDefault
-     */
-    public String getEnableDefault() {
-        return this.enableDefault;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return maxSdl
+     */
+    public Long getMaxSdl() {
+        return this.maxSdl;
     }
 
     /**
@@ -145,24 +121,14 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         return this.runMode;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDefaultIPSConfigRequest, Builder> {
-        private String aiRules; 
         private String basicRules; 
         private String ctiRules; 
-        private String enableAllPatch; 
-        private String enableDefault; 
         private String lang; 
+        private Long maxSdl; 
         private String patchRules; 
         private String ruleClass; 
         private String runMode; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -170,29 +136,25 @@ public class ModifyDefaultIPSConfigRequest extends Request {
 
         private Builder(ModifyDefaultIPSConfigRequest request) {
             super(request);
-            this.aiRules = request.aiRules;
             this.basicRules = request.basicRules;
             this.ctiRules = request.ctiRules;
-            this.enableAllPatch = request.enableAllPatch;
-            this.enableDefault = request.enableDefault;
             this.lang = request.lang;
+            this.maxSdl = request.maxSdl;
             this.patchRules = request.patchRules;
             this.ruleClass = request.ruleClass;
             this.runMode = request.runMode;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * AiRules.
-         */
-        public Builder aiRules(String aiRules) {
-            this.putQueryParameter("AiRules", aiRules);
-            this.aiRules = aiRules;
-            return this;
-        }
-
-        /**
-         * BasicRules.
+         * <p>Specifies whether to enable basic protection. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder basicRules(String basicRules) {
             this.putQueryParameter("BasicRules", basicRules);
@@ -201,7 +163,15 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * CtiRules.
+         * <p>Specifies whether to enable threat intelligence. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ctiRules(String ctiRules) {
             this.putQueryParameter("CtiRules", ctiRules);
@@ -210,25 +180,14 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * EnableAllPatch.
-         */
-        public Builder enableAllPatch(String enableAllPatch) {
-            this.putQueryParameter("EnableAllPatch", enableAllPatch);
-            this.enableAllPatch = enableAllPatch;
-            return this;
-        }
-
-        /**
-         * EnableDefault.
-         */
-        public Builder enableDefault(String enableDefault) {
-            this.putQueryParameter("EnableDefault", enableDefault);
-            this.enableDefault = enableDefault;
-            return this;
-        }
-
-        /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -237,7 +196,23 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * PatchRules.
+         * MaxSdl.
+         */
+        public Builder maxSdl(Long maxSdl) {
+            this.putQueryParameter("MaxSdl", maxSdl);
+            this.maxSdl = maxSdl;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable virtual patching. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder patchRules(String patchRules) {
             this.putQueryParameter("PatchRules", patchRules);
@@ -246,7 +221,15 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * RuleClass.
+         * <p>The level of the rule group for the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: loose</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: strict</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleClass(String ruleClass) {
             this.putQueryParameter("RuleClass", ruleClass);
@@ -255,20 +238,19 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * RunMode.
+         * <p>The mode of the IPS. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: block mode</li>
+         * <li><strong>0</strong>: monitor mode</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder runMode(String runMode) {
             this.putQueryParameter("RunMode", runMode);
             this.runMode = runMode;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

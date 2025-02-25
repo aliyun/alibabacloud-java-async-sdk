@@ -1,84 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPageSmartShortUrlLogRequest} extends {@link RequestModel}
  *
  * <p>QueryPageSmartShortUrlLogRequest</p>
  */
 public class QueryPageSmartShortUrlLogRequest extends Request {
-    @Query
-    @NameInMap("ClickState")
-    private Long clickState;
-
-    @Query
-    @NameInMap("CreateDateEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateDateEnd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long createDateEnd;
 
-    @Query
-    @NameInMap("CreateDateStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateDateStart")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long createDateStart;
 
-    @Query
-    @NameInMap("EndId")
-    private Long endId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ShortName")
-    private String shortName;
-
-    @Query
-    @NameInMap("ShortUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShortUrl")
     private String shortUrl;
-
-    @Query
-    @NameInMap("StartId")
-    private Long startId;
 
     private QueryPageSmartShortUrlLogRequest(Builder builder) {
         super(builder);
-        this.clickState = builder.clickState;
         this.createDateEnd = builder.createDateEnd;
         this.createDateStart = builder.createDateStart;
-        this.endId = builder.endId;
         this.ownerId = builder.ownerId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.phoneNumber = builder.phoneNumber;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.shortName = builder.shortName;
         this.shortUrl = builder.shortUrl;
-        this.startId = builder.startId;
     }
 
     public static Builder builder() {
@@ -95,13 +84,6 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
     }
 
     /**
-     * @return clickState
-     */
-    public Long getClickState() {
-        return this.clickState;
-    }
-
-    /**
      * @return createDateEnd
      */
     public Long getCreateDateEnd() {
@@ -113,13 +95,6 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
      */
     public Long getCreateDateStart() {
         return this.createDateStart;
-    }
-
-    /**
-     * @return endId
-     */
-    public Long getEndId() {
-        return this.endId;
     }
 
     /**
@@ -165,40 +140,22 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
     }
 
     /**
-     * @return shortName
-     */
-    public String getShortName() {
-        return this.shortName;
-    }
-
-    /**
      * @return shortUrl
      */
     public String getShortUrl() {
         return this.shortUrl;
     }
 
-    /**
-     * @return startId
-     */
-    public Long getStartId() {
-        return this.startId;
-    }
-
     public static final class Builder extends Request.Builder<QueryPageSmartShortUrlLogRequest, Builder> {
-        private Long clickState; 
         private Long createDateEnd; 
         private Long createDateStart; 
-        private Long endId; 
         private Long ownerId; 
         private Long pageNo; 
         private Long pageSize; 
         private String phoneNumber; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String shortName; 
         private String shortUrl; 
-        private Long startId; 
 
         private Builder() {
             super();
@@ -206,32 +163,22 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
 
         private Builder(QueryPageSmartShortUrlLogRequest request) {
             super(request);
-            this.clickState = request.clickState;
             this.createDateEnd = request.createDateEnd;
             this.createDateStart = request.createDateStart;
-            this.endId = request.endId;
             this.ownerId = request.ownerId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.phoneNumber = request.phoneNumber;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.shortName = request.shortName;
             this.shortUrl = request.shortUrl;
-            this.startId = request.startId;
         } 
 
         /**
-         * ClickState.
-         */
-        public Builder clickState(Long clickState) {
-            this.putQueryParameter("ClickState", clickState);
-            this.clickState = clickState;
-            return this;
-        }
-
-        /**
-         * CreateDateEnd.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20181225</p>
          */
         public Builder createDateEnd(Long createDateEnd) {
             this.putQueryParameter("CreateDateEnd", createDateEnd);
@@ -240,20 +187,14 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         }
 
         /**
-         * CreateDateStart.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20181225</p>
          */
         public Builder createDateStart(Long createDateStart) {
             this.putQueryParameter("CreateDateStart", createDateStart);
             this.createDateStart = createDateStart;
-            return this;
-        }
-
-        /**
-         * EndId.
-         */
-        public Builder endId(Long endId) {
-            this.putQueryParameter("EndId", endId);
-            this.endId = endId;
             return this;
         }
 
@@ -267,7 +208,10 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -276,7 +220,10 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -312,29 +259,11 @@ public class QueryPageSmartShortUrlLogRequest extends Request {
         }
 
         /**
-         * ShortName.
-         */
-        public Builder shortName(String shortName) {
-            this.putQueryParameter("ShortName", shortName);
-            this.shortName = shortName;
-            return this;
-        }
-
-        /**
          * ShortUrl.
          */
         public Builder shortUrl(String shortUrl) {
             this.putQueryParameter("ShortUrl", shortUrl);
             this.shortUrl = shortUrl;
-            return this;
-        }
-
-        /**
-         * StartId.
-         */
-        public Builder startId(Long startId) {
-            this.putQueryParameter("StartId", startId);
-            this.startId = startId;
             return this;
         }
 

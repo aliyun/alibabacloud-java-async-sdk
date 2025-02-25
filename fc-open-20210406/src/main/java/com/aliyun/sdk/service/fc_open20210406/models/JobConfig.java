@@ -50,7 +50,7 @@ public class JobConfig extends TeaModel {
         private Long triggerInterval; 
 
         /**
-         * maxRetryTime
+         * maxRetryTime.
          */
         public Builder maxRetryTime(Long maxRetryTime) {
             this.maxRetryTime = maxRetryTime;
@@ -58,7 +58,7 @@ public class JobConfig extends TeaModel {
         }
 
         /**
-         * triggerInterval
+         * triggerInterval.
          */
         public Builder triggerInterval(Long triggerInterval) {
             this.triggerInterval = triggerInterval;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDirectoryOrFilePropertiesResponseBody} extends {@link TeaModel}
  *
  * <p>GetDirectoryOrFilePropertiesResponseBody</p>
  */
 public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
-    @NameInMap("Entry")
+    @com.aliyun.core.annotation.NameInMap("Entry")
     private Entry entry;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDirectoryOrFilePropertiesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Entry.
+         * <p>The details about the files or directories.</p>
          */
         public Builder entry(Entry entry) {
             this.entry = entry;
@@ -58,7 +63,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D69A58F-345C-4FDE-88E4-BF518948****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,43 +79,53 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDirectoryOrFilePropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDirectoryOrFilePropertiesResponseBody</p>
+     */
     public static class Entry extends TeaModel {
-        @NameInMap("ATime")
-        private String ATime;
+        @com.aliyun.core.annotation.NameInMap("ATime")
+        private String aTime;
 
-        @NameInMap("CTime")
-        private String CTime;
+        @com.aliyun.core.annotation.NameInMap("CTime")
+        private String cTime;
 
-        @NameInMap("HasInfrequentAccessFile")
+        @com.aliyun.core.annotation.NameInMap("HasArchiveFile")
+        private Boolean hasArchiveFile;
+
+        @com.aliyun.core.annotation.NameInMap("HasInfrequentAccessFile")
         private Boolean hasInfrequentAccessFile;
 
-        @NameInMap("Inode")
+        @com.aliyun.core.annotation.NameInMap("Inode")
         private String inode;
 
-        @NameInMap("MTime")
-        private String MTime;
+        @com.aliyun.core.annotation.NameInMap("MTime")
+        private String mTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RetrieveTime")
+        @com.aliyun.core.annotation.NameInMap("RetrieveTime")
         private String retrieveTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Entry(Builder builder) {
-            this.ATime = builder.ATime;
-            this.CTime = builder.CTime;
+            this.aTime = builder.aTime;
+            this.cTime = builder.cTime;
+            this.hasArchiveFile = builder.hasArchiveFile;
             this.hasInfrequentAccessFile = builder.hasInfrequentAccessFile;
             this.inode = builder.inode;
-            this.MTime = builder.MTime;
+            this.mTime = builder.mTime;
             this.name = builder.name;
             this.retrieveTime = builder.retrieveTime;
             this.size = builder.size;
@@ -124,17 +142,24 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ATime
+         * @return aTime
          */
         public String getATime() {
-            return this.ATime;
+            return this.aTime;
         }
 
         /**
-         * @return CTime
+         * @return cTime
          */
         public String getCTime() {
-            return this.CTime;
+            return this.cTime;
+        }
+
+        /**
+         * @return hasArchiveFile
+         */
+        public Boolean getHasArchiveFile() {
+            return this.hasArchiveFile;
         }
 
         /**
@@ -152,10 +177,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         /**
-         * @return MTime
+         * @return mTime
          */
         public String getMTime() {
-            return this.MTime;
+            return this.mTime;
         }
 
         /**
@@ -194,11 +219,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String ATime; 
-            private String CTime; 
+            private String aTime; 
+            private String cTime; 
+            private Boolean hasArchiveFile; 
             private Boolean hasInfrequentAccessFile; 
             private String inode; 
-            private String MTime; 
+            private String mTime; 
             private String name; 
             private String retrieveTime; 
             private Long size; 
@@ -206,23 +232,59 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ATime.
+             * <p>The time when the file was queried.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-01T10:08:08Z</p>
              */
-            public Builder ATime(String ATime) {
-                this.ATime = ATime;
+            public Builder aTime(String aTime) {
+                this.aTime = aTime;
                 return this;
             }
 
             /**
-             * CTime.
+             * <p>The time when the raw data was modified.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-11T10:08:10Z</p>
              */
-            public Builder CTime(String CTime) {
-                this.CTime = CTime;
+            public Builder cTime(String cTime) {
+                this.cTime = cTime;
                 return this;
             }
 
             /**
-             * HasInfrequentAccessFile.
+             * <p>Indicates whether the directory contains files stored in the Archive storage class.</p>
+             * <p>This parameter is returned only if the Type parameter is set to Directory.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: The directory contains files stored in the Archive storage class.</li>
+             * <li>false: The directory does not contain files stored in the Archive storage class.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder hasArchiveFile(Boolean hasArchiveFile) {
+                this.hasArchiveFile = hasArchiveFile;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the directory contains files stored in the IA storage medium.</p>
+             * <p>This parameter is returned only if the value of the Type parameter is Directory.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: The directory contains files stored in the IA storage medium.</li>
+             * <li>false: The directory does not contain files stored in the IA storage medium.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasInfrequentAccessFile(Boolean hasInfrequentAccessFile) {
                 this.hasInfrequentAccessFile = hasInfrequentAccessFile;
@@ -230,7 +292,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * Inode.
+             * <p>The file or directory inode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder inode(String inode) {
                 this.inode = inode;
@@ -238,15 +303,23 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * MTime.
+             * <p>The time when the file was modified.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-11T10:08:08Z</p>
              */
-            public Builder MTime(String MTime) {
-                this.MTime = MTime;
+            public Builder mTime(String mTime) {
+                this.mTime = mTime;
                 return this;
             }
 
             /**
-             * Name.
+             * <p>The name of the file or directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file.txt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +327,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * RetrieveTime.
+             * <p>The time when the last data retrieval task was run.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-11T10:08:08Z</p>
              */
             public Builder retrieveTime(String retrieveTime) {
                 this.retrieveTime = retrieveTime;
@@ -262,7 +340,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the file.</p>
+             * <p>Unit: bytes.</p>
+             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -270,7 +353,16 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type of the file.</p>
+             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>standard: General-purpose NAS file system</li>
+             * <li>InfrequentAccess: IA storage medium</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InfrequentAccess</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -278,7 +370,15 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the query result.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>File</li>
+             * <li>Directory</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>File</p>
              */
             public Builder type(String type) {
                 this.type = type;

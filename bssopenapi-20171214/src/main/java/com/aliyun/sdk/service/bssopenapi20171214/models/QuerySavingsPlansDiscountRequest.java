@@ -1,59 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansDiscountRequest} extends {@link RequestModel}
  *
  * <p>QuerySavingsPlansDiscountRequest</p>
  */
 public class QuerySavingsPlansDiscountRequest extends Request {
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("Cycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cycle;
 
-    @Query
-    @NameInMap("Locale")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locale")
     private String locale;
 
-    @Query
-    @NameInMap("ModuleCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleCode")
     private String moduleCode;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PayMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payMode;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @Query
-    @NameInMap("SpnType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpnCommodityCode")
+    private String spnCommodityCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpnType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spnType;
 
     private QuerySavingsPlansDiscountRequest(Builder builder) {
@@ -67,6 +76,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         this.payMode = builder.payMode;
         this.region = builder.region;
         this.spec = builder.spec;
+        this.spnCommodityCode = builder.spnCommodityCode;
         this.spnType = builder.spnType;
     }
 
@@ -147,6 +157,13 @@ public class QuerySavingsPlansDiscountRequest extends Request {
     }
 
     /**
+     * @return spnCommodityCode
+     */
+    public String getSpnCommodityCode() {
+        return this.spnCommodityCode;
+    }
+
+    /**
      * @return spnType
      */
     public String getSpnType() {
@@ -163,6 +180,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         private String payMode; 
         private String region; 
         private String spec; 
+        private String spnCommodityCode; 
         private String spnType; 
 
         private Builder() {
@@ -180,11 +198,16 @@ public class QuerySavingsPlansDiscountRequest extends Request {
             this.payMode = request.payMode;
             this.region = request.region;
             this.spec = request.spec;
+            this.spnCommodityCode = request.spnCommodityCode;
             this.spnType = request.spnType;
         } 
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -193,7 +216,11 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The cycle based on which queries are performed.
+         * <p>The cycle based on which queries are performed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1:Year</p>
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);
@@ -202,7 +229,15 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The identifier of the language.
+         * <p>The identifier of the language.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>EN: English.</li>
+         * <li>ZH: Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ZH</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -211,7 +246,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The code of the pricing module.
+         * <p>The code of the pricing module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_type</p>
          */
         public Builder moduleCode(String moduleCode) {
             this.putQueryParameter("ModuleCode", moduleCode);
@@ -220,7 +258,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -229,7 +270,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +282,11 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The payment mode.
+         * <p>The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>total</p>
          */
         public Builder payMode(String payMode) {
             this.putQueryParameter("PayMode", payMode);
@@ -247,7 +295,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -256,7 +307,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -265,7 +319,20 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The type of the savings plan.
+         * SpnCommodityCode.
+         */
+        public Builder spnCommodityCode(String spnCommodityCode) {
+            this.putQueryParameter("SpnCommodityCode", spnCommodityCode);
+            this.spnCommodityCode = spnCommodityCode;
+            return this;
+        }
+
+        /**
+         * <p>The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>universal</p>
          */
         public Builder spnType(String spnType) {
             this.putQueryParameter("SpnType", spnType);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScalingAnalyzeResult} extends {@link TeaModel}
  *
  * <p>ScalingAnalyzeResult</p>
  */
 public class ScalingAnalyzeResult extends TeaModel {
-    @NameInMap("ActualUsage")
+    @com.aliyun.core.annotation.NameInMap("ActualUsage")
     private Float actualUsage;
 
-    @NameInMap("IdealUsage")
+    @com.aliyun.core.annotation.NameInMap("IdealUsage")
     private Float idealUsage;
 
-    @NameInMap("ReleaseCores")
+    @com.aliyun.core.annotation.NameInMap("ReleaseCores")
     private Integer releaseCores;
 
-    @NameInMap("ReservedCores")
+    @com.aliyun.core.annotation.NameInMap("ReservedCores")
     private Integer reservedCores;
 
     private ScalingAnalyzeResult(Builder builder) {
@@ -74,7 +79,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         private Integer reservedCores; 
 
         /**
-         * 实际资源利用率。
+         * <p>实际资源利用率。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12</p>
          */
         public Builder actualUsage(Float actualUsage) {
             this.actualUsage = actualUsage;
@@ -82,7 +90,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         }
 
         /**
-         * 理想资源用量。
+         * <p>理想资源用量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12</p>
          */
         public Builder idealUsage(Float idealUsage) {
             this.idealUsage = idealUsage;
@@ -90,7 +101,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         }
 
         /**
-         * 固定资源释放核数（非master）core。
+         * <p>固定资源释放核数（非master）core。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder releaseCores(Integer releaseCores) {
             this.releaseCores = releaseCores;
@@ -98,7 +112,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         }
 
         /**
-         * 固定资源保留核数（非master）core。
+         * <p>固定资源保留核数（非master）core。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reservedCores(Integer reservedCores) {
             this.reservedCores = reservedCores;

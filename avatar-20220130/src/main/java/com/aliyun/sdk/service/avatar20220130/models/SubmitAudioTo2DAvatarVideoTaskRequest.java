@@ -18,6 +18,10 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
     private App app;
 
     @Query
+    @NameInMap("AudioInfo")
+    private AudioInfo audioInfo;
+
+    @Query
     @NameInMap("AvatarInfo")
     private AvatarInfo avatarInfo;
 
@@ -55,6 +59,7 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
     private SubmitAudioTo2DAvatarVideoTaskRequest(Builder builder) {
         super(builder);
         this.app = builder.app;
+        this.audioInfo = builder.audioInfo;
         this.avatarInfo = builder.avatarInfo;
         this.callback = builder.callback;
         this.callbackParams = builder.callbackParams;
@@ -83,6 +88,13 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
      */
     public App getApp() {
         return this.app;
+    }
+
+    /**
+     * @return audioInfo
+     */
+    public AudioInfo getAudioInfo() {
+        return this.audioInfo;
     }
 
     /**
@@ -143,6 +155,7 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitAudioTo2DAvatarVideoTaskRequest, Builder> {
         private App app; 
+        private AudioInfo audioInfo; 
         private AvatarInfo avatarInfo; 
         private Boolean callback; 
         private String callbackParams; 
@@ -159,6 +172,7 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
         private Builder(SubmitAudioTo2DAvatarVideoTaskRequest request) {
             super(request);
             this.app = request.app;
+            this.audioInfo = request.audioInfo;
             this.avatarInfo = request.avatarInfo;
             this.callback = request.callback;
             this.callbackParams = request.callbackParams;
@@ -176,6 +190,16 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
             String appShrink = shrink(app, "App", "json");
             this.putQueryParameter("App", appShrink);
             this.app = app;
+            return this;
+        }
+
+        /**
+         * AudioInfo.
+         */
+        public Builder audioInfo(AudioInfo audioInfo) {
+            String audioInfoShrink = shrink(audioInfo, "AudioInfo", "json");
+            this.putQueryParameter("AudioInfo", audioInfoShrink);
+            this.audioInfo = audioInfo;
             return this;
         }
 
@@ -297,6 +321,47 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
 
             public App build() {
                 return new App(this);
+            } 
+
+        } 
+
+    }
+    public static class AudioInfo extends TeaModel {
+        @NameInMap("SampleRate")
+        private Integer sampleRate;
+
+        private AudioInfo(Builder builder) {
+            this.sampleRate = builder.sampleRate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AudioInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sampleRate
+         */
+        public Integer getSampleRate() {
+            return this.sampleRate;
+        }
+
+        public static final class Builder {
+            private Integer sampleRate; 
+
+            /**
+             * SampleRate.
+             */
+            public Builder sampleRate(Integer sampleRate) {
+                this.sampleRate = sampleRate;
+                return this;
+            }
+
+            public AudioInfo build() {
+                return new AudioInfo(this);
             } 
 
         } 

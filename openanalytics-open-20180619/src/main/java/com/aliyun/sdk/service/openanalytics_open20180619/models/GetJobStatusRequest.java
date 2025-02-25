@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobStatusRequest} extends {@link RequestModel}
  *
  * <p>GetJobStatusRequest</p>
  */
 public class GetJobStatusRequest extends Request {
-    @Body
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Body
-    @NameInMap("VcName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VcName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vcName;
 
     private GetJobStatusRequest(Builder builder) {
@@ -63,14 +63,17 @@ public class GetJobStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetJobStatusRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.vcName = response.vcName;
+        private Builder(GetJobStatusRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.vcName = request.vcName;
         } 
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j202011031935hangzhouf742a4330003667</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -79,7 +82,10 @@ public class GetJobStatusRequest extends Request {
         }
 
         /**
-         * VcName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyCluster</p>
          */
         public Builder vcName(String vcName) {
             this.putBodyParameter("VcName", vcName);

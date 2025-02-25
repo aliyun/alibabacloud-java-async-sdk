@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePlaybookResponseBody</p>
  */
 public class CreatePlaybookResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePlaybookResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class CreatePlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class CreatePlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B09B40B2-F11E-512C-B755-423F2056C17B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +74,14 @@ public class CreatePlaybookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePlaybookResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePlaybookResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PlaybookUuid")
+        @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
         private Data(Builder builder) {
@@ -98,7 +107,10 @@ public class CreatePlaybookResponseBody extends TeaModel {
             private String playbookUuid; 
 
             /**
-             * PlaybookUuid.
+             * <p>The UUID of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9e38111e-9794-4784-9ca8-xxxxxxx</p>
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

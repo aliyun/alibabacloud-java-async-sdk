@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNamespaceChangeOrdersRequest} extends {@link RequestModel}
  *
  * <p>ListNamespaceChangeOrdersRequest</p>
  */
 public class ListNamespaceChangeOrdersRequest extends Request {
-    @Query
-    @NameInMap("CoStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoStatus")
     private String coStatus;
 
-    @Query
-    @NameInMap("CoType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoType")
     private String coType;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListNamespaceChangeOrdersRequest(Builder builder) {
@@ -125,7 +130,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         } 
 
         /**
-         * 2
+         * <p>2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder coStatus(String coStatus) {
             this.putQueryParameter("CoStatus", coStatus);
@@ -134,7 +142,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * CoBatchStartApplication
+         * <p>CoBatchStartApplication</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CoBatchStartApplication</p>
          */
         public Builder coType(String coType) {
             this.putQueryParameter("CoType", coType);
@@ -143,7 +154,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,7 +166,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * test
+         * <p>test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -161,7 +178,11 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * cn-shanghai:test
+         * <p>cn-shanghai:test</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -170,7 +191,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

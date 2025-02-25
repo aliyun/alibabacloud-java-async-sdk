@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTopicListResponseBody} extends {@link TeaModel}
  *
  * <p>OnsTopicListResponseBody</p>
  */
 public class OnsTopicListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsTopicListResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsTopicListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the topics.
+         * <p>The information about the topics.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A978869-7681-4529-B470-107E1379****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class OnsTopicListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicListResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -110,7 +119,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CartService</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +130,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SrviceA</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,8 +147,14 @@ public class OnsTopicListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -173,38 +194,44 @@ public class OnsTopicListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicListResponseBody</p>
+     */
     public static class PublishInfoDo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("IndependentNaming")
+        @com.aliyun.core.annotation.NameInMap("IndependentNaming")
         private Boolean independentNaming;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MessageType")
+        @com.aliyun.core.annotation.NameInMap("MessageType")
         private Integer messageType;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private Integer relation;
 
-        @NameInMap("RelationName")
+        @com.aliyun.core.annotation.NameInMap("RelationName")
         private String relationName;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private Integer serviceStatus;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private PublishInfoDo(Builder builder) {
@@ -320,7 +347,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The point in time when the topic was created.
+             * <p>The time when the topic was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570700947000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -328,11 +358,14 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance that contains the topic uses a namespace. Valid values:
-             * <p>
+             * <p>Indicates whether the instance that contains the topic uses a namespace. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.</li>
+             * <li><strong>false</strong>: The instance does not use a separate namespace. The name of each resource must be globally unique within an instance and across all instances.</li>
+             * </ul>
              * 
-             * *   **true**: The instance uses a separate namespace. The name of each resource must be unique in the instance. The names of resources in different instances can be the same.
-             * *   **false**: The instance does not use a separate namespace. The name of each resource must be globally unique within and across all instances.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder independentNaming(Boolean independentNaming) {
                 this.independentNaming = independentNaming;
@@ -340,7 +373,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that contains the topic.
+             * <p>The ID of the instance that contains the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_188077086902****_BXSuW61e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -348,14 +384,17 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the messages. Valid values:
-             * <p>
+             * <p>The message type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: normal messages</li>
+             * <li><strong>1</strong>: partitionally ordered messages</li>
+             * <li><strong>2</strong>: globally ordered messages</li>
+             * <li><strong>4</strong>: transactional messages</li>
+             * <li><strong>5</strong>: scheduled or delayed messages</li>
+             * </ul>
              * 
-             * *   **0**: normal messages
-             * *   **1**: partitionally ordered messages
-             * *   **2**: globally ordered messages
-             * *   **4**: transactional messages
-             * *   **5**: scheduled or delayed messages
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder messageType(Integer messageType) {
                 this.messageType = messageType;
@@ -363,7 +402,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the topic owner.
+             * <p>The user ID of the topic owner. The value of this parameter is an Alibaba account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138015630679****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -371,13 +413,16 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the relationship between the current account and the topic. Valid values:
-             * <p>
+             * <p>Indicates the relationship between the current account and the topic. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The current account is the owner of the topic.</li>
+             * <li><strong>2</strong>: The current account can publish messages to the topic.</li>
+             * <li><strong>4</strong>: The current account can subscribe to the topic.</li>
+             * <li><strong>6</strong>: The current account can publish messages to and subscribe to the topic.</li>
+             * </ul>
              * 
-             * *   **1**: The current account is the owner of the topic.
-             * *   **2**: The current account can publish messages to the topic.
-             * *   **4**: The current account can subscribe to the topic.
-             * *   **6**: The current account can publish messages to and subscribe to the topic.
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder relation(Integer relation) {
                 this.relation = relation;
@@ -385,7 +430,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the relationship between the current account and the topic. The value of this parameter indicates that the current account is the owner of the topic, the current account can publish messages to the topic, the current account can subscribe to the topic, or the current account can publish messages to and subscribe to the topic.
+             * <p>The relationship between the current account and the topic. The value of this parameter indicates whether the current account is the owner of the topic, and whether the current account can subscribe or publish messages to the topic. the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Publish and subscribe</p>
              */
             public Builder relationName(String relationName) {
                 this.relationName = relationName;
@@ -393,7 +441,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the topic.
+             * <p>The description of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -401,11 +452,14 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the topic. Valid values:
-             * <p>
+             * <p>The status of the topic that is asynchronously created. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The topic is being created.</li>
+             * <li><strong>1</strong>: The topic is being used.</li>
+             * </ul>
              * 
-             * *   **0**: The topic is being created.
-             * *   **1**: The topic is being used.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -413,7 +467,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the topic.
+             * <p>The tags that are attached to the topic.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -421,7 +475,10 @@ public class OnsTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -435,8 +492,14 @@ public class OnsTopicListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PublishInfoDo")
+        @com.aliyun.core.annotation.NameInMap("PublishInfoDo")
         private java.util.List < PublishInfoDo> publishInfoDo;
 
         private Data(Builder builder) {

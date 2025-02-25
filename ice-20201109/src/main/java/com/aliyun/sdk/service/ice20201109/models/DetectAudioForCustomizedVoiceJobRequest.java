@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectAudioForCustomizedVoiceJobRequest} extends {@link RequestModel}
  *
  * <p>DetectAudioForCustomizedVoiceJobRequest</p>
  */
 public class DetectAudioForCustomizedVoiceJobRequest extends Request {
-    @Query
-    @NameInMap("AudioRecordId")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioRecordId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer audioRecordId;
 
-    @Query
-    @NameInMap("RecordUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordUrl;
 
-    @Query
-    @NameInMap("VoiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voiceId;
 
     private DetectAudioForCustomizedVoiceJobRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class DetectAudioForCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * AudioRecordId.
+         * <p>The sequence number of the recording file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder audioRecordId(Integer audioRecordId) {
             this.putQueryParameter("AudioRecordId", audioRecordId);
@@ -94,7 +103,17 @@ public class DetectAudioForCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * RecordUrl.
+         * <p>The URL of the recording file.</p>
+         * <blockquote>
+         * <p>: The URL must be an Object Storage Service (OSS) URL within your Alibaba Cloud account. The OSS bucket must be in the same region in which IMS is activated.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>: The audio file must be in the WAV or PCM format and must be a 16-bit mono audio file at 48000 Hz.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/record1.wav">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/record1.wav</a></p>
          */
         public Builder recordUrl(String recordUrl) {
             this.putQueryParameter("RecordUrl", recordUrl);
@@ -103,7 +122,11 @@ public class DetectAudioForCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * VoiceId.
+         * <p>The voice ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);

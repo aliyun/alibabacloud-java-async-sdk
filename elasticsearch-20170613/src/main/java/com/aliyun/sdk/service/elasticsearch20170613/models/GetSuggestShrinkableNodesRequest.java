@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSuggestShrinkableNodesRequest} extends {@link RequestModel}
  *
  * <p>GetSuggestShrinkableNodesRequest</p>
  */
 public class GetSuggestShrinkableNodesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("count")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("count")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer count;
 
-    @Query
-    @NameInMap("ignoreStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ignoreStatus")
     private Boolean ignoreStatus;
 
-    @Query
-    @NameInMap("nodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeType;
 
     private GetSuggestShrinkableNodesRequest(Builder builder) {
@@ -99,7 +99,11 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -108,7 +112,11 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * The number of nodes that you want to remove.
+         * <p>The number of nodes that you want to remove.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("count", count);
@@ -117,7 +125,10 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to ignore the instance status. Default value: false.
+         * <p>Specifies whether to ignore the instance status. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreStatus(Boolean ignoreStatus) {
             this.putQueryParameter("ignoreStatus", ignoreStatus);
@@ -126,7 +137,11 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.
+         * <p>The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKER</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);

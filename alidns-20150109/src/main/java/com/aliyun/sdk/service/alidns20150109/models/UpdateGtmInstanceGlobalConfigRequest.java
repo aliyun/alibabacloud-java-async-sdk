@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmInstanceGlobalConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmInstanceGlobalConfigRequest</p>
  */
 public class UpdateGtmInstanceGlobalConfigRequest extends Request {
-    @Query
-    @NameInMap("AlertGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertGroup")
     private String alertGroup;
 
-    @Query
-    @NameInMap("CnameCustomDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameCustomDomainName")
     private String cnameCustomDomainName;
 
-    @Query
-    @NameInMap("CnameMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameMode")
     private String cnameMode;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LbaStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LbaStrategy")
     private String lbaStrategy;
 
-    @Query
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @Query
-    @NameInMap("UserDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDomainName")
     private String userDomainName;
 
     private UpdateGtmInstanceGlobalConfigRequest(Builder builder) {
@@ -167,10 +172,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         } 
 
         /**
-         * The alert group of the GTM instance. Currently, only one alert group is supported.
-         * <p>
-         * 
-         * >  This parameter is required for the first update, but is optional for later updates.
+         * <p>The alert group. Only one alert group is supported.</p>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          */
         public Builder alertGroup(String alertGroup) {
             this.putQueryParameter("AlertGroup", alertGroup);
@@ -179,7 +184,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The CNAME record of a domain name, which must be the primary domain name. When **CnameMode** is **CUSTOM**, this parameter is required for access.
+         * <p>If you set <strong>CnameMode</strong> to <strong>CUSTOM</strong>, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder cnameCustomDomainName(String cnameCustomDomainName) {
             this.putQueryParameter("CnameCustomDomainName", cnameCustomDomainName);
@@ -188,11 +196,14 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether the CNAME record is user-defined or automatically assigned by the system. Valid values:
-         * <p>
+         * <p>Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:</p>
+         * <ul>
+         * <li><strong>SYSTEM_ASSIGN</strong>: system-assigned CNAME</li>
+         * <li><strong>CUSTOM</strong>: custom CNAME</li>
+         * </ul>
          * 
-         * *   **SYSTEM_ASSIGN**: Assigned by the system
-         * *   **CUSTOM**: User-defined
+         * <strong>example:</strong>
+         * <p>SYSTEM_ASSIGN</p>
          */
         public Builder cnameMode(String cnameMode) {
             this.putQueryParameter("CnameMode", cnameMode);
@@ -201,7 +212,11 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The ID of the GTM instance whose configuration you want to modify.
+         * <p>The ID of the GTM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -210,10 +225,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The name of the GTM instance.
-         * <p>
-         * 
-         * >  This parameter is required for the first update, but is not required for later updates.
+         * <p>The name of the GTM instance.</p>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -222,7 +237,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -231,14 +249,17 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The load balancing policy. Valid values:
-         * <p>
+         * <p>The balancing policy. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL_RR</strong>: load balancing</li>
+         * <li><strong>RATIO</strong>: weighted round-robin</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          * 
-         * *   **ALL_RR**: Load balancing
-         * 
-         * *   **RATIO**: Weighted round robin
-         * 
-         * > This parameter is required for the first update, but is optional for later updates.
+         * <strong>example:</strong>
+         * <p>RATIO</p>
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.putQueryParameter("LbaStrategy", lbaStrategy);
@@ -247,7 +268,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The time when the modification takes effect.
+         * <p>The global time-to-live (TTL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -256,10 +280,13 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The primary domain name.
-         * <p>
+         * <p>The primary domain name.</p>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required for the first update, but is optional for later updates.
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder userDomainName(String userDomainName) {
             this.putQueryParameter("UserDomainName", userDomainName);

@@ -1,48 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateUserAccessTokenRequest} extends {@link RequestModel}
  *
  * <p>GenerateUserAccessTokenRequest</p>
  */
 public class GenerateUserAccessTokenRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String email;
 
-    @Query
-    @NameInMap("ExpireTime")
-    @Validation(maximum = 3600)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.Validation(maximum = 3600)
     private Integer expireTime;
 
-    @Query
-    @NameInMap("ExtraInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
     private String extraInfo;
 
-    @Query
-    @NameInMap("ForeignId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForeignId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String foreignId;
 
-    @Query
-    @NameInMap("Nick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nick")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String nick;
 
-    @Query
-    @NameInMap("Telephone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Telephone")
+    @com.aliyun.core.annotation.Validation(maxLength = 30)
     private String telephone;
 
     private GenerateUserAccessTokenRequest(Builder builder) {
@@ -198,7 +202,10 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
-         * ForeignId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8882022040000000171</p>
          */
         public Builder foreignId(String foreignId) {
             this.putQueryParameter("ForeignId", foreignId);
@@ -207,7 +214,7 @@ public class GenerateUserAccessTokenRequest extends Request {
         }
 
         /**
-         * Nick.
+         * <p>This parameter is required.</p>
          */
         public Builder nick(String nick) {
             this.putQueryParameter("Nick", nick);

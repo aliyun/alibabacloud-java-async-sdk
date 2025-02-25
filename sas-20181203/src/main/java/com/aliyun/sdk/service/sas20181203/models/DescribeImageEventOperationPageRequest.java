@@ -1,44 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageEventOperationPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageEventOperationPageRequest</p>
  */
 public class DescribeImageEventOperationPageRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EventKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventKey")
     private String eventKey;
 
-    @Query
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
 
     private DescribeImageEventOperationPageRequest(Builder builder) {
         super(builder);
@@ -49,6 +58,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         this.id = builder.id;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -113,6 +123,13 @@ public class DescribeImageEventOperationPageRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageEventOperationPageRequest, Builder> {
         private Integer currentPage; 
         private String eventKey; 
@@ -121,6 +138,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         private Long id; 
         private String lang; 
         private Integer pageSize; 
+        private String source; 
 
         private Builder() {
             super();
@@ -135,10 +153,14 @@ public class DescribeImageEventOperationPageRequest extends Request {
             this.id = request.id;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.source = request.source;
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +169,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The keyword of the alert item.
+         * <p>The keyword of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         public Builder eventKey(String eventKey) {
             this.putQueryParameter("EventKey", eventKey);
@@ -156,7 +181,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The name of the alert item.
+         * <p>The name of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -165,10 +193,13 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The alert type.
-         * <p>
+         * <p>The alert type.</p>
+         * <ul>
+         * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+         * </ul>
          * 
-         * *   Set the value to **sensitiveFile**.
+         * <strong>example:</strong>
+         * <p>sensitiveFile</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -177,7 +208,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The ID of the alert handling rule.
+         * <p>The ID of the alert handling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49616</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -186,11 +220,14 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -199,11 +236,30 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The source of the alert handling rule. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: image.</li>
+         * <li><strong>agentless</strong>: agentless detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

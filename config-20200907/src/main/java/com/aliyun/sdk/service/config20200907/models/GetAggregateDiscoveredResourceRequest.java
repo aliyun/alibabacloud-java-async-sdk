@@ -1,49 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateDiscoveredResourceRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateDiscoveredResourceRequest</p>
  */
 public class GetAggregateDiscoveredResourceRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceOption")
+    private Integer complianceOption;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("ResourceAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
     private Long resourceAccountId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     @Deprecated
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private GetAggregateDiscoveredResourceRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
+        this.complianceOption = builder.complianceOption;
         this.region = builder.region;
         this.resourceAccountId = builder.resourceAccountId;
         this.resourceId = builder.resourceId;
@@ -69,6 +79,13 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
      */
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    /**
+     * @return complianceOption
+     */
+    public Integer getComplianceOption() {
+        return this.complianceOption;
     }
 
     /**
@@ -108,6 +125,7 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAggregateDiscoveredResourceRequest, Builder> {
         private String aggregatorId; 
+        private Integer complianceOption; 
         private String region; 
         private Long resourceAccountId; 
         private String resourceId; 
@@ -121,6 +139,7 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         private Builder(GetAggregateDiscoveredResourceRequest request) {
             super(request);
             this.aggregatorId = request.aggregatorId;
+            this.complianceOption = request.complianceOption;
             this.region = request.region;
             this.resourceAccountId = request.resourceAccountId;
             this.resourceId = request.resourceId;
@@ -129,10 +148,12 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-5885626622af0008****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -141,10 +162,28 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource resides.
-         * <p>
+         * <p>Specifies whether to query the compliance results of the resource. Valid values:</p>
+         * <ul>
+         * <li>0 (default): does not query the compliance results of the resource.</li>
+         * <li>1: queries the compliance results of the resource.</li>
+         * </ul>
          * 
-         * For more information about how to query the ID of a region in which the resource resides, see [ListAggregateDiscoveredResources](~~411691~~).
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder complianceOption(Integer complianceOption) {
+            this.putQueryParameter("ComplianceOption", complianceOption);
+            this.complianceOption = complianceOption;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the region in which the resource resides.</p>
+         * <p>For more information about how to query the ID of a region in which the resource resides, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -153,9 +192,10 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * 账号组内待查询资源所属的阿里云账号ID。 
-         * <p>
-         * > 参数ResourceAccountId和ResourceOwnerId必须设置其中一个，推荐使用本参数。
+         * <p>The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);
@@ -164,10 +204,12 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The resource ID.
-         * <p>
+         * <p>The resource ID.</p>
+         * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
+         * <strong>example:</strong>
+         * <p>new-bucket</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -185,10 +227,12 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
+         * <strong>example:</strong>
+         * <p>ACS::OSS::Bucket</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

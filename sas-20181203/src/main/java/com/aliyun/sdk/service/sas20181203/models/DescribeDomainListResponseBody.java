@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainListResponseBody</p>
  */
 public class DescribeDomainListResponseBody extends TeaModel {
-    @NameInMap("DomainListResponseList")
-    private java.util.List < DomainListResponseList> domainListResponseList;
+    @com.aliyun.core.annotation.NameInMap("DomainListResponseList")
+    private java.util.List<DomainListResponseList> domainListResponseList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDomainListResponseBody extends TeaModel {
     /**
      * @return domainListResponseList
      */
-    public java.util.List < DomainListResponseList> getDomainListResponseList() {
+    public java.util.List<DomainListResponseList> getDomainListResponseList() {
         return this.domainListResponseList;
     }
 
@@ -57,20 +62,20 @@ public class DescribeDomainListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainListResponseList> domainListResponseList; 
+        private java.util.List<DomainListResponseList> domainListResponseList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * An array that consists of the information about domain names.
+         * <p>An array that consists of the information about domain names.</p>
          */
-        public Builder domainListResponseList(java.util.List < DomainListResponseList> domainListResponseList) {
+        public Builder domainListResponseList(java.util.List<DomainListResponseList> domainListResponseList) {
             this.domainListResponseList = domainListResponseList;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +99,17 @@ public class DescribeDomainListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainListResponseBody</p>
+     */
     public static class DomainListResponseList extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("IpList")
+        @com.aliyun.core.annotation.NameInMap("IpList")
         private String ipList;
 
         private DomainListResponseList(Builder builder) {
@@ -130,7 +144,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
             private String ipList; 
 
             /**
-             * The name of the domain or website.
+             * <p>The name of the domain or website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +155,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the domain name.
+             * <p>The IP addresses of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.XX.XX,1.0.XX.XX</p>
              */
             public Builder ipList(String ipList) {
                 this.ipList = ipList;
@@ -152,17 +172,23 @@ public class DescribeDomainListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -215,7 +241,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -223,7 +252,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -231,7 +263,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -239,7 +274,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

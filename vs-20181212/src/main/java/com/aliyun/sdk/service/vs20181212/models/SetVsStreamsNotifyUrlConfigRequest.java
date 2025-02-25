@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetVsStreamsNotifyUrlConfigRequest} extends {@link RequestModel}
  *
  * <p>SetVsStreamsNotifyUrlConfigRequest</p>
  */
 public class SetVsStreamsNotifyUrlConfigRequest extends Request {
-    @Query
-    @NameInMap("AuthKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthKey")
     private String authKey;
 
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("NotifyUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notifyUrl;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private SetVsStreamsNotifyUrlConfigRequest(Builder builder) {
@@ -102,13 +107,13 @@ public class SetVsStreamsNotifyUrlConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetVsStreamsNotifyUrlConfigRequest response) {
-            super(response);
-            this.authKey = response.authKey;
-            this.authType = response.authType;
-            this.domainName = response.domainName;
-            this.notifyUrl = response.notifyUrl;
-            this.ownerId = response.ownerId;
+        private Builder(SetVsStreamsNotifyUrlConfigRequest request) {
+            super(request);
+            this.authKey = request.authKey;
+            this.authType = request.authType;
+            this.domainName = request.domainName;
+            this.notifyUrl = request.notifyUrl;
+            this.ownerId = request.ownerId;
         } 
 
         /**
@@ -130,7 +135,10 @@ public class SetVsStreamsNotifyUrlConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -139,7 +147,10 @@ public class SetVsStreamsNotifyUrlConfigRequest extends Request {
         }
 
         /**
-         * NotifyUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.com/xx">http://xxx.com/xx</a></p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putQueryParameter("NotifyUrl", notifyUrl);

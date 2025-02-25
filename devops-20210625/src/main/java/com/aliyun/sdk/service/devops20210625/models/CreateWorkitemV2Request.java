@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkitemV2Request} extends {@link RequestModel}
  *
  * <p>CreateWorkitemV2Request</p>
  */
 public class CreateWorkitemV2Request extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("assignedTo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignedTo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String assignedTo;
 
-    @Body
-    @NameInMap("category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("fieldValueList")
-    private java.util.List < FieldValueList> fieldValueList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fieldValueList")
+    private java.util.List<FieldValueList> fieldValueList;
 
-    @Body
-    @NameInMap("parentIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parentIdentifier")
     private String parentIdentifier;
 
-    @Body
-    @NameInMap("participants")
-    private java.util.List < String > participants;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("participants")
+    private java.util.List<String> participants;
 
-    @Body
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Body
-    @NameInMap("sprintIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sprintIdentifier")
     private String sprintIdentifier;
 
-    @Body
-    @NameInMap("subject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
-    @Body
-    @NameInMap("tags")
-    private java.util.List < String > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<String> tags;
 
-    @Body
-    @NameInMap("trackers")
-    private java.util.List < String > trackers;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trackers")
+    private java.util.List<String> trackers;
 
-    @Body
-    @NameInMap("verifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("verifier")
     private String verifier;
 
-    @Body
-    @NameInMap("versions")
-    private java.util.List < String > versions;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("versions")
+    private java.util.List<String> versions;
 
-    @Body
-    @NameInMap("workitemTypeIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workitemTypeIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemTypeIdentifier;
 
     private CreateWorkitemV2Request(Builder builder) {
@@ -141,7 +146,7 @@ public class CreateWorkitemV2Request extends Request {
     /**
      * @return fieldValueList
      */
-    public java.util.List < FieldValueList> getFieldValueList() {
+    public java.util.List<FieldValueList> getFieldValueList() {
         return this.fieldValueList;
     }
 
@@ -155,7 +160,7 @@ public class CreateWorkitemV2Request extends Request {
     /**
      * @return participants
      */
-    public java.util.List < String > getParticipants() {
+    public java.util.List<String> getParticipants() {
         return this.participants;
     }
 
@@ -183,14 +188,14 @@ public class CreateWorkitemV2Request extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
     /**
      * @return trackers
      */
-    public java.util.List < String > getTrackers() {
+    public java.util.List<String> getTrackers() {
         return this.trackers;
     }
 
@@ -204,7 +209,7 @@ public class CreateWorkitemV2Request extends Request {
     /**
      * @return versions
      */
-    public java.util.List < String > getVersions() {
+    public java.util.List<String> getVersions() {
         return this.versions;
     }
 
@@ -220,16 +225,16 @@ public class CreateWorkitemV2Request extends Request {
         private String assignedTo; 
         private String category; 
         private String description; 
-        private java.util.List < FieldValueList> fieldValueList; 
+        private java.util.List<FieldValueList> fieldValueList; 
         private String parentIdentifier; 
-        private java.util.List < String > participants; 
+        private java.util.List<String> participants; 
         private String spaceIdentifier; 
         private String sprintIdentifier; 
         private String subject; 
-        private java.util.List < String > tags; 
-        private java.util.List < String > trackers; 
+        private java.util.List<String> tags; 
+        private java.util.List<String> trackers; 
         private String verifier; 
-        private java.util.List < String > versions; 
+        private java.util.List<String> versions; 
         private String workitemTypeIdentifier; 
 
         private Builder() {
@@ -256,7 +261,10 @@ public class CreateWorkitemV2Request extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -265,7 +273,10 @@ public class CreateWorkitemV2Request extends Request {
         }
 
         /**
-         * assignedTo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19xxxx31947xxxx</p>
          */
         public Builder assignedTo(String assignedTo) {
             this.putBodyParameter("assignedTo", assignedTo);
@@ -274,7 +285,10 @@ public class CreateWorkitemV2Request extends Request {
         }
 
         /**
-         * category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Req</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("category", category);
@@ -294,7 +308,7 @@ public class CreateWorkitemV2Request extends Request {
         /**
          * fieldValueList.
          */
-        public Builder fieldValueList(java.util.List < FieldValueList> fieldValueList) {
+        public Builder fieldValueList(java.util.List<FieldValueList> fieldValueList) {
             this.putBodyParameter("fieldValueList", fieldValueList);
             this.fieldValueList = fieldValueList;
             return this;
@@ -312,14 +326,17 @@ public class CreateWorkitemV2Request extends Request {
         /**
          * participants.
          */
-        public Builder participants(java.util.List < String > participants) {
+        public Builder participants(java.util.List<String> participants) {
             this.putBodyParameter("participants", participants);
             this.participants = participants;
             return this;
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asd345xxxxx9q9845xxxxx34</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putBodyParameter("spaceIdentifier", spaceIdentifier);
@@ -337,7 +354,7 @@ public class CreateWorkitemV2Request extends Request {
         }
 
         /**
-         * subject.
+         * <p>This parameter is required.</p>
          */
         public Builder subject(String subject) {
             this.putBodyParameter("subject", subject);
@@ -348,7 +365,7 @@ public class CreateWorkitemV2Request extends Request {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -357,7 +374,7 @@ public class CreateWorkitemV2Request extends Request {
         /**
          * trackers.
          */
-        public Builder trackers(java.util.List < String > trackers) {
+        public Builder trackers(java.util.List<String> trackers) {
             this.putBodyParameter("trackers", trackers);
             this.trackers = trackers;
             return this;
@@ -375,14 +392,17 @@ public class CreateWorkitemV2Request extends Request {
         /**
          * versions.
          */
-        public Builder versions(java.util.List < String > versions) {
+        public Builder versions(java.util.List<String> versions) {
             this.putBodyParameter("versions", versions);
             this.versions = versions;
             return this;
         }
 
         /**
-         * workitemTypeIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9uy29901re573f561d69jn40</p>
          */
         public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
             this.putBodyParameter("workitemTypeIdentifier", workitemTypeIdentifier);
@@ -397,11 +417,17 @@ public class CreateWorkitemV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWorkitemV2Request} extends {@link TeaModel}
+     *
+     * <p>CreateWorkitemV2Request</p>
+     */
     public static class FieldValueList extends TeaModel {
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private FieldValueList(Builder builder) {

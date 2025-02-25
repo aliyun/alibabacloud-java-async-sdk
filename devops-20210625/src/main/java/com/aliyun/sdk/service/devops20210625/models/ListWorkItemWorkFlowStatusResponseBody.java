@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkItemWorkFlowStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkItemWorkFlowStatusResponseBody</p>
  */
 public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("statuses")
-    private java.util.List < Statuses> statuses;
+    @com.aliyun.core.annotation.NameInMap("statuses")
+    private java.util.List<Statuses> statuses;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListWorkItemWorkFlowStatusResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
     /**
      * @return statuses
      */
-    public java.util.List < Statuses> getStatuses() {
+    public java.util.List<Statuses> getStatuses() {
         return this.statuses;
     }
 
@@ -82,7 +87,7 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Statuses> statuses; 
+        private java.util.List<Statuses> statuses; 
         private Boolean success; 
 
         /**
@@ -112,7 +117,7 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
         /**
          * statuses.
          */
-        public Builder statuses(java.util.List < Statuses> statuses) {
+        public Builder statuses(java.util.List<Statuses> statuses) {
             this.statuses = statuses;
             return this;
         }
@@ -131,38 +136,44 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkItemWorkFlowStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkItemWorkFlowStatusResponseBody</p>
+     */
     public static class Statuses extends TeaModel {
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("workflowStageIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workflowStageIdentifier")
         private String workflowStageIdentifier;
 
-        @NameInMap("workflowStageName")
+        @com.aliyun.core.annotation.NameInMap("workflowStageName")
         private String workflowStageName;
 
         private Statuses(Builder builder) {

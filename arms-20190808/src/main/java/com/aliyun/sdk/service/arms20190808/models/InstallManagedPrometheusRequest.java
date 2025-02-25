@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallManagedPrometheusRequest} extends {@link RequestModel}
  *
  * <p>InstallManagedPrometheusRequest</p>
  */
 public class InstallManagedPrometheusRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("GrafanaInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrafanaInstanceId")
     private String grafanaInstanceId;
 
-    @Query
-    @NameInMap("KubeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KubeConfig")
     private String kubeConfig;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private InstallManagedPrometheusRequest(Builder builder) {
@@ -184,7 +189,10 @@ public class InstallManagedPrometheusRequest extends Request {
         } 
 
         /**
-         * The ID of the ACK cluster.
+         * <p>The ID of the ASK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -193,7 +201,10 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.
+         * <p>The name of the cluster. This parameter is required if the ClusterType parameter is set to ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prd-ecs</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -202,7 +213,18 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The type of the monitoring object. Valid values: ask and ecs.
+         * <p>The cluster type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ecs: ECS</li>
+         * <li>one: ACK One</li>
+         * <li>ask: ASK</li>
+         * <li>pro: Container Monitoring Pro</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ask</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -211,7 +233,10 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.
+         * <p>The ID of the managed Grafana workspace that is associated with the cluster. If you set this parameter to free or leave this parameter empty, the cluster is associated with a shared Grafana workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-bp1*****</p>
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -220,7 +245,12 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * This parameter is not supported.
+         * <p>This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -229,7 +259,10 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +271,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Prometheus instance belongs.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -247,7 +280,11 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The security group of the ASK cluster or ECS instance.
+         * <p>The ID of the security group to which the cluster belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1********</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -256,7 +293,11 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The vSwitch used by the ASK cluster or ECS instance.
+         * <p>The ID of the vSwitch that is used by the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1*********</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -265,7 +306,11 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.
+         * <p>The virtual private cloud (VPC) where the cluster resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

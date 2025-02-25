@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomBlockRecordRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomBlockRecordRequest</p>
  */
 public class CreateCustomBlockRecordRequest extends Request {
-    @Query
-    @NameInMap("BlockIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlockIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blockIp;
 
-    @Query
-    @NameInMap("Bound")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bound")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bound;
 
-    @Query
-    @NameInMap("ExpireTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long expireTime;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Uuids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuids;
 
     private CreateCustomBlockRecordRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class CreateCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that you want to specify in the policy.
+         * <p>The IP address that you want to specify in the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -123,11 +132,15 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that you want to specify in the policy. Valid values:
-         * <p>
+         * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -136,7 +149,11 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The expiration time of the policy.
+         * <p>The expiration time of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1859094550000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -154,7 +171,11 @@ public class CreateCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71c846d6-5c84-4714-acfc-58265bc3****,5013b5e8-1613-43a8-b4de-651db318****,df53f0ad-b3ba-4fe0-9ec7-f42a2ae2****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

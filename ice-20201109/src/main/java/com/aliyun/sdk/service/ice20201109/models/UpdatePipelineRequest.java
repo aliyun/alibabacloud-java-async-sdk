@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePipelineRequest} extends {@link RequestModel}
  *
  * <p>UpdatePipelineRequest</p>
  */
 public class UpdatePipelineRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pipelineId;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private UpdatePipelineRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class UpdatePipelineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pipeline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,7 +114,11 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The ID of the MPS queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -115,7 +127,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the MPS queue. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -124,7 +139,15 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the MPS queue.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Paused</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Paused</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

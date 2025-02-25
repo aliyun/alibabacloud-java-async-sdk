@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceResponseBody} extends {@link TeaModel}
  *
  * <p>GetTraceResponseBody</p>
  */
 public class GetTraceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Spans")
-    private java.util.List < Spans> spans;
+    @com.aliyun.core.annotation.NameInMap("Spans")
+    private java.util.List<Spans> spans;
 
     private GetTraceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class GetTraceResponseBody extends TeaModel {
     /**
      * @return spans
      */
-    public java.util.List < Spans> getSpans() {
+    public java.util.List<Spans> getSpans() {
         return this.spans;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Spans> spans; 
+        private java.util.List<Spans> spans; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the trace.
+         * <p>The details of the trace.</p>
          */
-        public Builder spans(java.util.List < Spans> spans) {
+        public Builder spans(java.util.List<Spans> spans) {
             this.spans = spans;
             return this;
         }
@@ -71,11 +79,17 @@ public class GetTraceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class TagEntryList extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagEntryList(Builder builder) {
@@ -110,7 +124,10 @@ public class GetTraceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.status.code</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +135,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,11 +152,17 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class LogEventList extends TeaModel {
-        @NameInMap("TagEntryList")
-        private java.util.List < TagEntryList> tagEntryList;
+        @com.aliyun.core.annotation.NameInMap("TagEntryList")
+        private java.util.List<TagEntryList> tagEntryList;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private LogEventList(Builder builder) {
@@ -155,7 +181,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return tagEntryList
          */
-        public java.util.List < TagEntryList> getTagEntryList() {
+        public java.util.List<TagEntryList> getTagEntryList() {
             return this.tagEntryList;
         }
 
@@ -167,19 +193,22 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TagEntryList> tagEntryList; 
+            private java.util.List<TagEntryList> tagEntryList; 
             private Long timestamp; 
 
             /**
-             * The tags of the trace.
+             * <p>The tags of the trace.</p>
              */
-            public Builder tagEntryList(java.util.List < TagEntryList> tagEntryList) {
+            public Builder tagEntryList(java.util.List<TagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
                 return this;
             }
 
             /**
-             * The timestamp when the log event was generated.
+             * <p>The timestamp when the log event was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590388651</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -193,11 +222,17 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class SpansTagEntryList extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SpansTagEntryList(Builder builder) {
@@ -232,7 +267,10 @@ public class GetTraceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.status.code</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -240,7 +278,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -254,50 +295,56 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class Spans extends TeaModel {
-        @NameInMap("Children")
-        private java.util.List < java.util.Map<String, ?>> children;
+        @com.aliyun.core.annotation.NameInMap("Children")
+        private java.util.List<java.util.Map<String, ?>> children;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("HaveStack")
+        @com.aliyun.core.annotation.NameInMap("HaveStack")
         private Boolean haveStack;
 
-        @NameInMap("LogEventList")
-        private java.util.List < LogEventList> logEventList;
+        @com.aliyun.core.annotation.NameInMap("LogEventList")
+        private java.util.List<LogEventList> logEventList;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("ParentSpanId")
+        @com.aliyun.core.annotation.NameInMap("ParentSpanId")
         private String parentSpanId;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
-        @NameInMap("RpcId")
+        @com.aliyun.core.annotation.NameInMap("RpcId")
         private String rpcId;
 
-        @NameInMap("RpcType")
+        @com.aliyun.core.annotation.NameInMap("RpcType")
         private Integer rpcType;
 
-        @NameInMap("ServiceIp")
+        @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("SpanId")
+        @com.aliyun.core.annotation.NameInMap("SpanId")
         private String spanId;
 
-        @NameInMap("TagEntryList")
-        private java.util.List < SpansTagEntryList> tagEntryList;
+        @com.aliyun.core.annotation.NameInMap("TagEntryList")
+        private java.util.List<SpansTagEntryList> tagEntryList;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TraceID")
+        @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
 
         private Spans(Builder builder) {
@@ -329,7 +376,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < java.util.Map<String, ?>> getChildren() {
+        public java.util.List<java.util.Map<String, ?>> getChildren() {
             return this.children;
         }
 
@@ -350,7 +397,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return logEventList
          */
-        public java.util.List < LogEventList> getLogEventList() {
+        public java.util.List<LogEventList> getLogEventList() {
             return this.logEventList;
         }
 
@@ -413,7 +460,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return tagEntryList
          */
-        public java.util.List < SpansTagEntryList> getTagEntryList() {
+        public java.util.List<SpansTagEntryList> getTagEntryList() {
             return this.tagEntryList;
         }
 
@@ -432,10 +479,10 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> children; 
+            private java.util.List<java.util.Map<String, ?>> children; 
             private Long duration; 
             private Boolean haveStack; 
-            private java.util.List < LogEventList> logEventList; 
+            private java.util.List<LogEventList> logEventList; 
             private String operationName; 
             private String parentSpanId; 
             private String resultCode; 
@@ -444,20 +491,23 @@ public class GetTraceResponseBody extends TeaModel {
             private String serviceIp; 
             private String serviceName; 
             private String spanId; 
-            private java.util.List < SpansTagEntryList> tagEntryList; 
+            private java.util.List<SpansTagEntryList> tagEntryList; 
             private Long timestamp; 
             private String traceID; 
 
             /**
-             * The child spans of the current span.
+             * <p>The child spans of the current span.</p>
              */
-            public Builder children(java.util.List < java.util.Map<String, ?>> children) {
+            public Builder children(java.util.List<java.util.Map<String, ?>> children) {
                 this.children = children;
                 return this;
             }
 
             /**
-             * The amount of time consumed by the trace. Unit: milliseconds.
+             * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -465,11 +515,14 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a method stack was provided.
-             * <p>
+             * <p>Indicates whether a method stack was provided.</p>
+             * <ul>
+             * <li><code>true</code>: A method stack was provided.</li>
+             * <li><code>false</code>: No method stack was provided.</li>
+             * </ul>
              * 
-             * *   `true`: A method stack was provided.
-             * *   `false`: No method stack was provided.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder haveStack(Boolean haveStack) {
                 this.haveStack = haveStack;
@@ -477,15 +530,18 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The log events in the trace.
+             * <p>The log events in the trace.</p>
              */
-            public Builder logEventList(java.util.List < LogEventList> logEventList) {
+            public Builder logEventList(java.util.List<LogEventList> logEventList) {
                 this.logEventList = logEventList;
                 return this;
             }
 
             /**
-             * The name of the traced span.
+             * <p>The name of the traced span.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/demo</p>
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -493,7 +549,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent span.
+             * <p>The ID of the parent span.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder parentSpanId(String parentSpanId) {
                 this.parentSpanId = parentSpanId;
@@ -501,7 +560,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The status code.
+             * <p>The status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -509,7 +571,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RPC mode.
+             * <p>The ID of the RPC mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rpcId(String rpcId) {
                 this.rpcId = rpcId;
@@ -517,70 +582,34 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the remote procedure call (RPC) mode.
-             * <p>
+             * <p>The type of the remote procedure call (RPC) mode.</p>
+             * <ul>
+             * <li>0: HTTP entry</li>
+             * <li>25: HTTP call</li>
+             * <li>1: High-speed Service Framework (HSF) call</li>
+             * <li>2: HSF provision</li>
+             * <li>40: on-premises API call</li>
+             * <li>60: MySQL call</li>
+             * <li>62: Oracle call</li>
+             * <li>63: PostgreSQL call</li>
+             * <li>70: Redis call</li>
+             * <li>4: Taobao Distributed Data Layer (TDDL) call</li>
+             * <li>5: Tair call</li>
+             * <li>13: MetaQ message sending</li>
+             * <li>252: MetaQ message receiving</li>
+             * <li>3: notification sending</li>
+             * <li>254: notification receiving</li>
+             * <li>7: Apache Dubbo call</li>
+             * <li>8: Apache Dubbo provision</li>
+             * <li>19: SOFARPC call</li>
+             * <li>18: SOFARPC provision</li>
+             * <li>11: Distributed Service Framework (DSF) call</li>
+             * <li>12: DSF provision</li>
+             * <li>-1: unknown call</li>
+             * </ul>
              * 
-             * - 0 http
-             * - 25 http_client
-             * - 1 hsf_client
-             * - 2 hsf
-             * - 40 local
-             * - 41 async
-             * - 52 DB2
-             * - 53 Informix
-             * - 54 SequoiaDB
-             * - 55 Gbase
-             * - 56 GaussDB
-             * - 57 KingBase
-             * - 58 infuxdb
-             * - 59 clickhouse
-             * - 60 mysql
-             * - 61 mysql
-             * - 62 oracle
-             * - 63 postgresql
-             * - 64 mongodb
-             * - 65 ppas
-             * - 66 sqlserver
-             * - 67 mariadb
-             * - 68 dmdb
-             * - 69 oceanbase
-             * - 70 redis
-             * - 71 memcached
-             * - 72 elasticsearch
-             * - 73 kudu
-             * - 4 tddl
-             * - 5 tair
-             * - 13 mq_client
-             * - 252 mq
-             * - 23 kafka_client
-             * - 256 kafka
-             * - 3 notify_client
-             * - 254 notify
-             * - 7 dubbo_client
-             * - 8 dubbo
-             * - 11 dsf_client
-             * - 12 dsf
-             * - 9 grpc
-             * - 10 grpc_client
-             * - 16 thrift
-             * - 17 thrift_client
-             * - 18 sofa
-             * - 19 sofa_client
-             * - -1 unknown
-             * - 98 user_method
-             * - 100 root
-             * - 101 client
-             * - 102 server
-             * - 103 producer
-             * - 104 consumer
-             * - 105 db
-             * - 106 xtrace_other
-             * - 1301 schedulerx
-             * - 1302 XXL_Job
-             * - 1303 Spring_Scheduled
-             * - 1304 Quartz
-             * - 1305 ElasticJob
-             * - 1308 Jdk_Timer
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rpcType(Integer rpcType) {
                 this.rpcType = rpcType;
@@ -588,7 +617,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host where the application resides.
+             * <p>The IP address of the host where the application resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.20.XX.XX</p>
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -596,7 +628,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-demo</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -604,7 +639,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The span ID.
+             * <p>The span ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder spanId(String spanId) {
                 this.spanId = spanId;
@@ -612,15 +650,18 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the trace.
+             * <p>The tags of the trace.</p>
              */
-            public Builder tagEntryList(java.util.List < SpansTagEntryList> tagEntryList) {
+            public Builder tagEntryList(java.util.List<SpansTagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
                 return this;
             }
 
             /**
-             * The timestamp generated when the span was generated.
+             * <p>The timestamp generated when the span was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590388651</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -628,7 +669,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The trace ID.
+             * <p>The trace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac14001a15954493811405707d****</p>
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;

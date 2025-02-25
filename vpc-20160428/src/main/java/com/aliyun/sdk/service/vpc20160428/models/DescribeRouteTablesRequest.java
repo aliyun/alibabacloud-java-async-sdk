@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteTablesRequest} extends {@link RequestModel}
  *
  * <p>DescribeRouteTablesRequest</p>
  */
 public class DescribeRouteTablesRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
     private String routeTableId;
 
-    @Query
-    @NameInMap("RouteTableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableName")
     private String routeTableName;
 
-    @Query
-    @NameInMap("RouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterId")
     private String routerId;
 
-    @Query
-    @NameInMap("RouterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterType")
     private String routerType;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("VRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VRouterId")
     private String vRouterId;
 
     private DescribeRouteTablesRequest(Builder builder) {
@@ -255,7 +260,10 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,7 +272,10 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,10 +284,11 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC to which the route table belongs.
-         * <p>
+         * <p>The region ID of the VPC to which the route table belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -285,7 +297,10 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the route table to be queried belongs.
+         * <p>The ID of the resource group to which the route table to be queried belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazccb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -312,7 +327,10 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the route table that you want to query.
+         * <p>The ID of the route table that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtb-bp12mw1f8k3jgygk9****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -321,10 +339,11 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The name of the route table that you want to query.
-         * <p>
+         * <p>The name of the route table that you want to query.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>RouteTable-1</p>
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -333,7 +352,10 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the router to which the route table belongs.
+         * <p>The ID of the router to which the route table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1krxxzp0c29fmon****</p>
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -342,11 +364,14 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The type of the router to which the route table belongs. Valid values:
-         * <p>
+         * <p>The type of the router to which the route table belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>VRouter</strong> (default)</li>
+         * <li><strong>VBR</strong></li>
+         * </ul>
          * 
-         * *   **VRouter** (default)
-         * *   **VBR**
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -355,13 +380,16 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The route type. Valid values:
-         * <p>
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li><strong>Custom</strong></li>
+         * <li><strong>System</strong></li>
+         * <li><strong>BGP</strong></li>
+         * <li><strong>CEN</strong></li>
+         * </ul>
          * 
-         * *   **Custom**
-         * *   **System**
-         * *   **BGP**
-         * *   **CEN**
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -370,7 +398,10 @@ public class DescribeRouteTablesRequest extends Request {
         }
 
         /**
-         * The ID of the vRouter.
+         * <p>The ID of the vRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1krxxzp0c29fmon****</p>
          */
         public Builder vRouterId(String vRouterId) {
             this.putQueryParameter("VRouterId", vRouterId);

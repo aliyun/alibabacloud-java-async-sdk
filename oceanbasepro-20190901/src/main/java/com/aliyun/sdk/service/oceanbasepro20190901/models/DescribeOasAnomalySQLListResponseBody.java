@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOasAnomalySQLListResponseBody</p>
  */
 public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeOasAnomalySQLListResponseBody(Builder builder) {
@@ -92,55 +91,64 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
     } 
 
     public static class SqlList extends TeaModel {
-        @NameInMap("AvgCpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
 
-        @NameInMap("AvgDbTime")
+        @com.aliyun.core.annotation.NameInMap("AvgDbTime")
         private Double avgDbTime;
 
-        @NameInMap("AvgElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("AvgElapsedTime")
         private Double avgElapsedTime;
 
-        @NameInMap("AvgGetPlanTime")
+        @com.aliyun.core.annotation.NameInMap("AvgGetPlanTime")
         private Double avgGetPlanTime;
 
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgLogicalReads")
+        private Float avgLogicalReads;
+
+        @com.aliyun.core.annotation.NameInMap("AvgRetryCount")
+        private Float avgRetryCount;
+
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Double cpuTime;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DiagTypes")
+        @com.aliyun.core.annotation.NameInMap("DiagTypes")
         private java.util.List < String > diagTypes;
 
-        @NameInMap("Diagnosis")
+        @com.aliyun.core.annotation.NameInMap("Diagnosis")
         private String diagnosis;
 
-        @NameInMap("Executions")
+        @com.aliyun.core.annotation.NameInMap("Executions")
         private Double executions;
 
-        @NameInMap("LastExecutedTime")
+        @com.aliyun.core.annotation.NameInMap("LastExecutedTime")
         private Double lastExecutedTime;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlTextShort")
+        @com.aliyun.core.annotation.NameInMap("SqlTextShort")
         private String sqlTextShort;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("SumDbTime")
+        @com.aliyun.core.annotation.NameInMap("SumDbTime")
         private Double sumDbTime;
 
-        @NameInMap("SumElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("SumElapsedTime")
         private String sumElapsedTime;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("SumRetryCount")
+        private Float sumRetryCount;
+
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SqlList(Builder builder) {
@@ -148,6 +156,8 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             this.avgDbTime = builder.avgDbTime;
             this.avgElapsedTime = builder.avgElapsedTime;
             this.avgGetPlanTime = builder.avgGetPlanTime;
+            this.avgLogicalReads = builder.avgLogicalReads;
+            this.avgRetryCount = builder.avgRetryCount;
             this.cpuTime = builder.cpuTime;
             this.dbName = builder.dbName;
             this.diagTypes = builder.diagTypes;
@@ -160,6 +170,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             this.suggestion = builder.suggestion;
             this.sumDbTime = builder.sumDbTime;
             this.sumElapsedTime = builder.sumElapsedTime;
+            this.sumRetryCount = builder.sumRetryCount;
             this.userName = builder.userName;
         }
 
@@ -197,6 +208,20 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          */
         public Double getAvgGetPlanTime() {
             return this.avgGetPlanTime;
+        }
+
+        /**
+         * @return avgLogicalReads
+         */
+        public Float getAvgLogicalReads() {
+            return this.avgLogicalReads;
+        }
+
+        /**
+         * @return avgRetryCount
+         */
+        public Float getAvgRetryCount() {
+            return this.avgRetryCount;
         }
 
         /**
@@ -284,6 +309,13 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sumRetryCount
+         */
+        public Float getSumRetryCount() {
+            return this.sumRetryCount;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -295,6 +327,8 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private Double avgDbTime; 
             private Double avgElapsedTime; 
             private Double avgGetPlanTime; 
+            private Float avgLogicalReads; 
+            private Float avgRetryCount; 
             private Double cpuTime; 
             private String dbName; 
             private java.util.List < String > diagTypes; 
@@ -307,6 +341,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private String suggestion; 
             private Double sumDbTime; 
             private String sumElapsedTime; 
+            private Float sumRetryCount; 
             private String userName; 
 
             /**
@@ -338,6 +373,22 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
              */
             public Builder avgGetPlanTime(Double avgGetPlanTime) {
                 this.avgGetPlanTime = avgGetPlanTime;
+                return this;
+            }
+
+            /**
+             * AvgLogicalReads.
+             */
+            public Builder avgLogicalReads(Float avgLogicalReads) {
+                this.avgLogicalReads = avgLogicalReads;
+                return this;
+            }
+
+            /**
+             * AvgRetryCount.
+             */
+            public Builder avgRetryCount(Float avgRetryCount) {
+                this.avgRetryCount = avgRetryCount;
                 return this;
             }
 
@@ -438,6 +489,14 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
+             * SumRetryCount.
+             */
+            public Builder sumRetryCount(Float sumRetryCount) {
+                this.sumRetryCount = sumRetryCount;
+                return this;
+            }
+
+            /**
              * UserName.
              */
             public Builder userName(String userName) {
@@ -453,61 +512,70 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AvgCpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
 
-        @NameInMap("AvgDbTime")
+        @com.aliyun.core.annotation.NameInMap("AvgDbTime")
         private Double avgDbTime;
 
-        @NameInMap("AvgElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("AvgElapsedTime")
         private Double avgElapsedTime;
 
-        @NameInMap("AvgGetPlanTime")
+        @com.aliyun.core.annotation.NameInMap("AvgGetPlanTime")
         private Double avgGetPlanTime;
 
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgLogicalReads")
+        private Float avgLogicalReads;
+
+        @com.aliyun.core.annotation.NameInMap("AvgRetryCount")
+        private Float avgRetryCount;
+
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Double cpuTime;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DiagTypes")
+        @com.aliyun.core.annotation.NameInMap("DiagTypes")
         private java.util.List < String > diagTypes;
 
-        @NameInMap("Diagnosis")
+        @com.aliyun.core.annotation.NameInMap("Diagnosis")
         private String diagnosis;
 
-        @NameInMap("DynamicSql")
+        @com.aliyun.core.annotation.NameInMap("DynamicSql")
         private Boolean dynamicSql;
 
-        @NameInMap("Executions")
+        @com.aliyun.core.annotation.NameInMap("Executions")
         private Double executions;
 
-        @NameInMap("LastExecutedTime")
+        @com.aliyun.core.annotation.NameInMap("LastExecutedTime")
         private Double lastExecutedTime;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlList")
+        @com.aliyun.core.annotation.NameInMap("SqlList")
         private java.util.List < SqlList> sqlList;
 
-        @NameInMap("SqlTextShort")
+        @com.aliyun.core.annotation.NameInMap("SqlTextShort")
         private String sqlTextShort;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("SumDbTime")
+        @com.aliyun.core.annotation.NameInMap("SumDbTime")
         private Double sumDbTime;
 
-        @NameInMap("SumElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("SumElapsedTime")
         private String sumElapsedTime;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("SumRetryCount")
+        private Float sumRetryCount;
+
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Data(Builder builder) {
@@ -515,6 +583,8 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             this.avgDbTime = builder.avgDbTime;
             this.avgElapsedTime = builder.avgElapsedTime;
             this.avgGetPlanTime = builder.avgGetPlanTime;
+            this.avgLogicalReads = builder.avgLogicalReads;
+            this.avgRetryCount = builder.avgRetryCount;
             this.cpuTime = builder.cpuTime;
             this.dbName = builder.dbName;
             this.diagTypes = builder.diagTypes;
@@ -529,6 +599,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             this.suggestion = builder.suggestion;
             this.sumDbTime = builder.sumDbTime;
             this.sumElapsedTime = builder.sumElapsedTime;
+            this.sumRetryCount = builder.sumRetryCount;
             this.userName = builder.userName;
         }
 
@@ -566,6 +637,20 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          */
         public Double getAvgGetPlanTime() {
             return this.avgGetPlanTime;
+        }
+
+        /**
+         * @return avgLogicalReads
+         */
+        public Float getAvgLogicalReads() {
+            return this.avgLogicalReads;
+        }
+
+        /**
+         * @return avgRetryCount
+         */
+        public Float getAvgRetryCount() {
+            return this.avgRetryCount;
         }
 
         /**
@@ -667,6 +752,13 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sumRetryCount
+         */
+        public Float getSumRetryCount() {
+            return this.sumRetryCount;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -678,6 +770,8 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private Double avgDbTime; 
             private Double avgElapsedTime; 
             private Double avgGetPlanTime; 
+            private Float avgLogicalReads; 
+            private Float avgRetryCount; 
             private Double cpuTime; 
             private String dbName; 
             private java.util.List < String > diagTypes; 
@@ -692,6 +786,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private String suggestion; 
             private Double sumDbTime; 
             private String sumElapsedTime; 
+            private Float sumRetryCount; 
             private String userName; 
 
             /**
@@ -723,6 +818,22 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
              */
             public Builder avgGetPlanTime(Double avgGetPlanTime) {
                 this.avgGetPlanTime = avgGetPlanTime;
+                return this;
+            }
+
+            /**
+             * AvgLogicalReads.
+             */
+            public Builder avgLogicalReads(Float avgLogicalReads) {
+                this.avgLogicalReads = avgLogicalReads;
+                return this;
+            }
+
+            /**
+             * AvgRetryCount.
+             */
+            public Builder avgRetryCount(Float avgRetryCount) {
+                this.avgRetryCount = avgRetryCount;
                 return this;
             }
 
@@ -835,6 +946,14 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
              */
             public Builder sumElapsedTime(String sumElapsedTime) {
                 this.sumElapsedTime = sumElapsedTime;
+                return this;
+            }
+
+            /**
+             * SumRetryCount.
+             */
+            public Builder sumRetryCount(Float sumRetryCount) {
+                this.sumRetryCount = sumRetryCount;
                 return this;
             }
 

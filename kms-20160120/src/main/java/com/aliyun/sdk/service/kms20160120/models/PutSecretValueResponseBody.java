@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutSecretValueResponseBody</p>
  */
 public class PutSecretValueResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecretName")
+    @com.aliyun.core.annotation.NameInMap("SecretName")
     private String secretName;
 
-    @NameInMap("VersionId")
+    @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
-    @NameInMap("VersionStages")
+    @com.aliyun.core.annotation.NameInMap("VersionStages")
     private VersionStages versionStages;
 
     private PutSecretValueResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class PutSecretValueResponseBody extends TeaModel {
     } 
 
     public static class VersionStages extends TeaModel {
-        @NameInMap("VersionStage")
+        @com.aliyun.core.annotation.NameInMap("VersionStage")
         private java.util.List < String > versionStage;
 
         private VersionStages(Builder builder) {

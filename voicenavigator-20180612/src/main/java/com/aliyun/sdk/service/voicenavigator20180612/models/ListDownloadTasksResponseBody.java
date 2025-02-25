@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListDownloadTasksResponseBody</p>
  */
 public class ListDownloadTasksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DownloadTasks")
+    @com.aliyun.core.annotation.NameInMap("DownloadTasks")
     private DownloadTasks downloadTasks;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDownloadTasksResponseBody(Builder builder) {
@@ -151,17 +156,23 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDownloadTasksResponseBody</p>
+     */
     public static class DownloadTaskFiles extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private DownloadTaskFiles(Builder builder) {
@@ -252,20 +263,26 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDownloadTasksResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("DownloadTaskFiles")
-        private java.util.List < DownloadTaskFiles> downloadTaskFiles;
+        @com.aliyun.core.annotation.NameInMap("DownloadTaskFiles")
+        private java.util.List<DownloadTaskFiles> downloadTaskFiles;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private List(Builder builder) {
@@ -287,7 +304,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         /**
          * @return downloadTaskFiles
          */
-        public java.util.List < DownloadTaskFiles> getDownloadTaskFiles() {
+        public java.util.List<DownloadTaskFiles> getDownloadTaskFiles() {
             return this.downloadTaskFiles;
         }
 
@@ -320,7 +337,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DownloadTaskFiles> downloadTaskFiles; 
+            private java.util.List<DownloadTaskFiles> downloadTaskFiles; 
             private Long expireTime; 
             private String status; 
             private String taskId; 
@@ -329,7 +346,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             /**
              * DownloadTaskFiles.
              */
-            public Builder downloadTaskFiles(java.util.List < DownloadTaskFiles> downloadTaskFiles) {
+            public Builder downloadTaskFiles(java.util.List<DownloadTaskFiles> downloadTaskFiles) {
                 this.downloadTaskFiles = downloadTaskFiles;
                 return this;
             }
@@ -373,17 +390,23 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDownloadTasksResponseBody</p>
+     */
     public static class DownloadTasks extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DownloadTasks(Builder builder) {
@@ -404,7 +427,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -430,7 +453,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -438,7 +461,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

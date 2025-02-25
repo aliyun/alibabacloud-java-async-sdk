@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveUsersResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveUsersResponseBody</p>
  */
 public class RemoveUsersResponseBody extends TeaModel {
-    @NameInMap("RemoveUsersResult")
+    @com.aliyun.core.annotation.NameInMap("RemoveUsersResult")
     private RemoveUsersResult removeUsersResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RemoveUsersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class RemoveUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RemoveUsersResult.
+         * <p>The result of removing the convenience user.</p>
          */
         public Builder removeUsersResult(RemoveUsersResult removeUsersResult) {
             this.removeUsersResult = removeUsersResult;
@@ -58,7 +63,10 @@ public class RemoveUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class RemoveUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveUsersResponseBody</p>
+     */
     public static class FailedUsers extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
         private FailedUsers(Builder builder) {
@@ -122,7 +136,10 @@ public class RemoveUsersResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * EndUserId.
+             * <p>The ID of the convenience user that failed to be removed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -130,7 +147,10 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidUsername</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -138,7 +158,10 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2 is an invalid username.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -152,12 +175,18 @@ public class RemoveUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveUsersResponseBody</p>
+     */
     public static class RemoveUsersResult extends TeaModel {
-        @NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        @com.aliyun.core.annotation.NameInMap("FailedUsers")
+        private java.util.List<FailedUsers> failedUsers;
 
-        @NameInMap("RemovedUsers")
-        private java.util.List < String > removedUsers;
+        @com.aliyun.core.annotation.NameInMap("RemovedUsers")
+        private java.util.List<String> removedUsers;
 
         private RemoveUsersResult(Builder builder) {
             this.failedUsers = builder.failedUsers;
@@ -175,33 +204,33 @@ public class RemoveUsersResponseBody extends TeaModel {
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         /**
          * @return removedUsers
          */
-        public java.util.List < String > getRemovedUsers() {
+        public java.util.List<String> getRemovedUsers() {
             return this.removedUsers;
         }
 
         public static final class Builder {
-            private java.util.List < FailedUsers> failedUsers; 
-            private java.util.List < String > removedUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
+            private java.util.List<String> removedUsers; 
 
             /**
-             * FailedUsers.
+             * <p>The convenience users that failed to be removed.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }
 
             /**
-             * RemovedUsers.
+             * <p>The convenience users that were removed.</p>
              */
-            public Builder removedUsers(java.util.List < String > removedUsers) {
+            public Builder removedUsers(java.util.List<String> removedUsers) {
                 this.removedUsers = removedUsers;
                 return this;
             }

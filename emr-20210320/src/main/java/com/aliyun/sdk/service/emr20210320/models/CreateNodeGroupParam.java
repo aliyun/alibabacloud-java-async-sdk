@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNodeGroupParam} extends {@link TeaModel}
  *
  * <p>CreateNodeGroupParam</p>
  */
 public class CreateNodeGroupParam extends TeaModel {
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private Integer autoRenewDuration;
 
-    @NameInMap("AutoRenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDurationUnit")
     private String autoRenewDurationUnit;
 
-    @NameInMap("DataDisks")
-    private java.util.List < DiskInfo > dataDisks;
+    @com.aliyun.core.annotation.NameInMap("DataDisks")
+    private java.util.List<DiskInfo> dataDisks;
 
-    @NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+    private java.util.List<String> instanceTypes;
 
-    @NameInMap("NodeCount")
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
     private Integer nodeCount;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
-    @NameInMap("NodeGroupType")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupType")
     private String nodeGroupType;
 
-    @NameInMap("NodeKeyPairName")
+    @com.aliyun.core.annotation.NameInMap("NodeKeyPairName")
     private String nodeKeyPairName;
 
-    @NameInMap("NodeRamRole")
+    @com.aliyun.core.annotation.NameInMap("NodeRamRole")
     private String nodeRamRole;
 
-    @NameInMap("NodeRootPassword")
+    @com.aliyun.core.annotation.NameInMap("NodeRootPassword")
     private String nodeRootPassword;
 
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private Integer paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDiskParam systemDisk;
 
-    @NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
 
-    @NameInMap("WithPublicIp")
+    @com.aliyun.core.annotation.NameInMap("WithPublicIp")
     private Boolean withPublicIp;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateNodeGroupParam(Builder builder) {
@@ -127,14 +132,14 @@ public class CreateNodeGroupParam extends TeaModel {
     /**
      * @return dataDisks
      */
-    public java.util.List < DiskInfo > getDataDisks() {
+    public java.util.List<DiskInfo> getDataDisks() {
         return this.dataDisks;
     }
 
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -225,7 +230,7 @@ public class CreateNodeGroupParam extends TeaModel {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -247,8 +252,8 @@ public class CreateNodeGroupParam extends TeaModel {
         private Boolean autoRenew; 
         private Integer autoRenewDuration; 
         private String autoRenewDurationUnit; 
-        private java.util.List < DiskInfo > dataDisks; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<DiskInfo> dataDisks; 
+        private java.util.List<String> instanceTypes; 
         private Integer nodeCount; 
         private String nodeGroupName; 
         private String nodeGroupType; 
@@ -261,7 +266,7 @@ public class CreateNodeGroupParam extends TeaModel {
         private String securityGroupId; 
         private String spotStrategy; 
         private SystemDiskParam systemDisk; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private Boolean withPublicIp; 
         private String zoneId; 
 
@@ -292,7 +297,7 @@ public class CreateNodeGroupParam extends TeaModel {
         /**
          * DataDisks.
          */
-        public Builder dataDisks(java.util.List < DiskInfo > dataDisks) {
+        public Builder dataDisks(java.util.List<DiskInfo> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
@@ -300,7 +305,7 @@ public class CreateNodeGroupParam extends TeaModel {
         /**
          * InstanceTypes.
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
@@ -404,7 +409,7 @@ public class CreateNodeGroupParam extends TeaModel {
         /**
          * VSwitchIds.
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }

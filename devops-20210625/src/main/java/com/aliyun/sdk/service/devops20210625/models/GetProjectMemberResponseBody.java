@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectMemberResponseBody} extends {@link TeaModel}
  *
  * <p>GetProjectMemberResponseBody</p>
  */
 public class GetProjectMemberResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetProjectMemberResponseBody(Builder builder) {
@@ -131,22 +136,32 @@ public class GetProjectMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProjectMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectMemberResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("email")
+        private String email;
+
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {
             this.accessLevel = builder.accessLevel;
             this.avatarUrl = builder.avatarUrl;
+            this.email = builder.email;
             this.id = builder.id;
             this.name = builder.name;
         }
@@ -174,6 +189,13 @@ public class GetProjectMemberResponseBody extends TeaModel {
         }
 
         /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -190,6 +212,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessLevel; 
             private String avatarUrl; 
+            private String email; 
             private Long id; 
             private String name; 
 
@@ -206,6 +229,14 @@ public class GetProjectMemberResponseBody extends TeaModel {
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
+                return this;
+            }
+
+            /**
+             * email.
+             */
+            public Builder email(String email) {
+                this.email = email;
                 return this;
             }
 

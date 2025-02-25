@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSparkLogAnalyzeTaskResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitSparkLogAnalyzeTaskResponseBody</p>
  */
 public class SubmitSparkLogAnalyzeTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private SparkAnalyzeLogTask data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitSparkLogAnalyzeTaskResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SubmitSparkLogAnalyzeTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the Spark log analysis task.
+         * <p>The information about the Spark log analysis task.</p>
          */
         public Builder data(SparkAnalyzeLogTask data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class SubmitSparkLogAnalyzeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DF5AF5B-C803-1861-A0FF-63666A557709</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

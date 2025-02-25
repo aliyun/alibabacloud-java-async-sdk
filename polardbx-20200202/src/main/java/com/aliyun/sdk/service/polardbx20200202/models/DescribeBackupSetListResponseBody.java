@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSetListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupSetListResponseBody</p>
  */
 public class DescribeBackupSetListResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupSetListResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -111,26 +116,32 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupSetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSetListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BackupModel")
+        @com.aliyun.core.annotation.NameInMap("BackupModel")
         private Integer backupModel;
 
-        @NameInMap("BackupSetId")
-        private Long backupSetId;
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
+        private String backupSetId;
 
-        @NameInMap("BackupSetSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSetSize")
         private Long backupSetSize;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private Integer backupType;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
@@ -161,7 +172,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         /**
          * @return backupSetId
          */
-        public Long getBackupSetId() {
+        public String getBackupSetId() {
             return this.backupSetId;
         }
 
@@ -202,7 +213,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer backupModel; 
-            private Long backupSetId; 
+            private String backupSetId; 
             private Long backupSetSize; 
             private Integer backupType; 
             private Long beginTime; 
@@ -220,7 +231,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             /**
              * BackupSetId.
              */
-            public Builder backupSetId(Long backupSetId) {
+            public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
                 return this;
             }

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallHybridProxyRequest} extends {@link RequestModel}
  *
  * <p>InstallHybridProxyRequest</p>
  */
 public class InstallHybridProxyRequest extends Request {
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("InstallCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstallCode")
     private String installCode;
 
-    @Query
-    @NameInMap("YundunUuids")
-    private java.util.List < String > yundunUuids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("YundunUuids")
+    private java.util.List<String> yundunUuids;
 
     private InstallHybridProxyRequest(Builder builder) {
         super(builder);
@@ -61,14 +66,14 @@ public class InstallHybridProxyRequest extends Request {
     /**
      * @return yundunUuids
      */
-    public java.util.List < String > getYundunUuids() {
+    public java.util.List<String> getYundunUuids() {
         return this.yundunUuids;
     }
 
     public static final class Builder extends Request.Builder<InstallHybridProxyRequest, Builder> {
         private String clusterName; 
         private String installCode; 
-        private java.util.List < String > yundunUuids; 
+        private java.util.List<String> yundunUuids; 
 
         private Builder() {
             super();
@@ -82,7 +87,10 @@ public class InstallHybridProxyRequest extends Request {
         } 
 
         /**
-         * The cluster name.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -91,7 +99,10 @@ public class InstallHybridProxyRequest extends Request {
         }
 
         /**
-         * The installation code.
+         * <p>The installation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Z9c8SA</p>
          */
         public Builder installCode(String installCode) {
             this.putQueryParameter("InstallCode", installCode);
@@ -100,9 +111,9 @@ public class InstallHybridProxyRequest extends Request {
         }
 
         /**
-         * The UUIDs of the proxy servers.
+         * <p>The UUIDs of the proxy servers.</p>
          */
-        public Builder yundunUuids(java.util.List < String > yundunUuids) {
+        public Builder yundunUuids(java.util.List<String> yundunUuids) {
             this.putQueryParameter("YundunUuids", yundunUuids);
             this.yundunUuids = yundunUuids;
             return this;

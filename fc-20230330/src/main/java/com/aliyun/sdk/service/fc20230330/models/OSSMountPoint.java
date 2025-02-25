@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OSSMountPoint} extends {@link TeaModel}
  *
  * <p>OSSMountPoint</p>
  */
 public class OSSMountPoint extends TeaModel {
-    @NameInMap("bucketName")
-    @Validation(maxLength = 64, minLength = 3)
+    @com.aliyun.core.annotation.NameInMap("bucketName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 3)
     private String bucketName;
 
-    @NameInMap("bucketPath")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("bucketPath")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String bucketPath;
 
-    @NameInMap("endpoint")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("endpoint")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String endpoint;
 
-    @NameInMap("mountDir")
-    @Validation(maxLength = 64, minLength = 2)
+    @com.aliyun.core.annotation.NameInMap("mountDir")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 2)
     private String mountDir;
 
-    @NameInMap("readOnly")
+    @com.aliyun.core.annotation.NameInMap("readOnly")
     private Boolean readOnly;
 
     private OSSMountPoint(Builder builder) {

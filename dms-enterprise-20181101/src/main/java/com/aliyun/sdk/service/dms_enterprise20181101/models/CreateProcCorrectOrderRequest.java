@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProcCorrectOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateProcCorrectOrderRequest</p>
  */
 public class CreateProcCorrectOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Param param;
 
-    @Query
-    @NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
+    private java.util.List<Long> relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateProcCorrectOrderRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class CreateProcCorrectOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -109,7 +114,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         private String attachmentKey; 
         private String comment; 
         private Param param; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -145,7 +150,10 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,7 +162,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         }
 
         /**
-         * Param.
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -166,7 +174,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         /**
          * RelatedUserList.
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -189,13 +197,19 @@ public class CreateProcCorrectOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProcCorrectOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProcCorrectOrderRequest</p>
+     */
     public static class DbItemList extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("Logic")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Logic")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean logic;
 
         private DbItemList(Builder builder) {
@@ -230,7 +244,10 @@ public class CreateProcCorrectOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * DbId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19721978</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -238,7 +255,10 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * Logic.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -252,28 +272,34 @@ public class CreateProcCorrectOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProcCorrectOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProcCorrectOrderRequest</p>
+     */
     public static class Param extends TeaModel {
-        @NameInMap("Classify")
+        @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
 
-        @NameInMap("DbItemList")
-        @Validation(required = true)
-        private java.util.List < DbItemList> dbItemList;
+        @com.aliyun.core.annotation.NameInMap("DbItemList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<DbItemList> dbItemList;
 
-        @NameInMap("ExecMode")
+        @com.aliyun.core.annotation.NameInMap("ExecMode")
         private String execMode;
 
-        @NameInMap("ExecSQL")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ExecSQL")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String execSQL;
 
-        @NameInMap("RollbackAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("RollbackAttachmentName")
         private String rollbackAttachmentName;
 
-        @NameInMap("RollbackSQL")
+        @com.aliyun.core.annotation.NameInMap("RollbackSQL")
         private String rollbackSQL;
 
-        @NameInMap("RollbackSqlType")
+        @com.aliyun.core.annotation.NameInMap("RollbackSqlType")
         private String rollbackSqlType;
 
         private Param(Builder builder) {
@@ -304,7 +330,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         /**
          * @return dbItemList
          */
-        public java.util.List < DbItemList> getDbItemList() {
+        public java.util.List<DbItemList> getDbItemList() {
             return this.dbItemList;
         }
 
@@ -345,7 +371,7 @@ public class CreateProcCorrectOrderRequest extends Request {
 
         public static final class Builder {
             private String classify; 
-            private java.util.List < DbItemList> dbItemList; 
+            private java.util.List<DbItemList> dbItemList; 
             private String execMode; 
             private String execSQL; 
             private String rollbackAttachmentName; 
@@ -361,9 +387,9 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * DbItemList.
+             * <p>This parameter is required.</p>
              */
-            public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
+            public Builder dbItemList(java.util.List<DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
                 return this;
             }
@@ -377,7 +403,14 @@ public class CreateProcCorrectOrderRequest extends Request {
             }
 
             /**
-             * ExecSQL.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELIMITER ///
+             * CREATE PROCEDURE GetAllProducts()
+             * BEGIN
+             * SELECT *  FROM base_user;
+             * END ///</p>
              */
             public Builder execSQL(String execSQL) {
                 this.execSQL = execSQL;

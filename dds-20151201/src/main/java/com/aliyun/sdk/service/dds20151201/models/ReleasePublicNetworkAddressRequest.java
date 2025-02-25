@@ -1,49 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleasePublicNetworkAddressRequest} extends {@link RequestModel}
  *
  * <p>ReleasePublicNetworkAddressRequest</p>
  */
 public class ReleasePublicNetworkAddressRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionType")
+    private String connectionType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ReleasePublicNetworkAddressRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.connectionType = builder.connectionType;
         this.DBInstanceId = builder.DBInstanceId;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
@@ -70,6 +80,13 @@ public class ReleasePublicNetworkAddressRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return connectionType
+     */
+    public String getConnectionType() {
+        return this.connectionType;
     }
 
     /**
@@ -116,6 +133,7 @@ public class ReleasePublicNetworkAddressRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReleasePublicNetworkAddressRequest, Builder> {
         private String regionId; 
+        private String connectionType; 
         private String DBInstanceId; 
         private String nodeId; 
         private String ownerAccount; 
@@ -130,6 +148,7 @@ public class ReleasePublicNetworkAddressRequest extends Request {
         private Builder(ReleasePublicNetworkAddressRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.connectionType = request.connectionType;
             this.DBInstanceId = request.DBInstanceId;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
@@ -148,10 +167,33 @@ public class ReleasePublicNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The public endpoint type. Valid values:</p>
+         * <ul>
+         * <li><strong>SRV</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only when you want to release an SRV endpoint.</p>
+         * </blockquote>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>SRV</p>
+         */
+        public Builder connectionType(String connectionType) {
+            this.putQueryParameter("ConnectionType", connectionType);
+            this.connectionType = connectionType;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2235****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -160,11 +202,16 @@ public class ReleasePublicNetworkAddressRequest extends Request {
         }
 
         /**
-         * A sharded cluster instance consists of three components: mongos, shard, and Configserver.
-         * <p>
+         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > * This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
-         * > * You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the mongos, shard, or Configserver node.
+         * <strong>example:</strong>
+         * <p>s-bp2235****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

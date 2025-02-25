@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMseServiceApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMseServiceApplicationResponseBody</p>
  */
 public class CreateMseServiceApplicationResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CreateMseServiceApplicationResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The data structure.
+         * <p>The data structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +87,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +98,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>904F6C04-1284-****-8ED2-FFC57E507A72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +109,14 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -115,41 +129,47 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMseServiceApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMseServiceApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private String extraInfo;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("LicenseKey")
+        @com.aliyun.core.annotation.NameInMap("LicenseKey")
         private String licenseKey;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -274,7 +294,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx@xxxxxxxxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -282,7 +305,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -290,7 +316,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631001140913</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -298,7 +327,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -306,7 +338,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The programming language of the application.
+             * <p>The programming language of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JAVA</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -314,7 +349,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The license key in use.
+             * <p>The license key in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx@xxxxxxxxxx</p>
              */
             public Builder licenseKey(String licenseKey) {
                 this.licenseKey = licenseKey;
@@ -322,7 +360,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -330,7 +371,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edasmsc</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -338,7 +382,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values: 1: available; 2: deleted.
+             * <p>The status. Valid values: 1: available; 2: deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -346,7 +393,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632979237663</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -354,7 +404,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -362,7 +415,10 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The version information.
+             * <p>The version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

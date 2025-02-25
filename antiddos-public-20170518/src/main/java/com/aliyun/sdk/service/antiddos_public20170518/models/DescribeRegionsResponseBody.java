@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * An array consisting of regions in which Anti-DDoS Origin Basic is available.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +57,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,16 +71,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Region extends TeaModel {
-        @NameInMap("RegionEnName")
+        @com.aliyun.core.annotation.NameInMap("RegionEnName")
         private String regionEnName;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("RegionNoAlias")
+        @com.aliyun.core.annotation.NameInMap("RegionNoAlias")
         private String regionNoAlias;
 
         private Region(Builder builder) {
@@ -134,7 +133,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionNoAlias; 
 
             /**
-             * RegionEnName.
+             * The English name of the region.
              */
             public Builder regionEnName(String regionEnName) {
                 this.regionEnName = regionEnName;
@@ -142,7 +141,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The Chinese name of the region.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -150,7 +149,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * The code of the region.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -158,7 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNoAlias.
+             * The ID of the region.
              */
             public Builder regionNoAlias(String regionNoAlias) {
                 this.regionNoAlias = regionNoAlias;
@@ -173,7 +172,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;
 
         private Regions(Builder builder) {

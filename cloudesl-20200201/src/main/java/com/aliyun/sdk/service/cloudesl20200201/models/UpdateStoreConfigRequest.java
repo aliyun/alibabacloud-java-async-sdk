@@ -33,6 +33,10 @@ public class UpdateStoreConfigRequest extends Request {
     @Validation(required = true)
     private String storeId;
 
+    @Body
+    @NameInMap("SubscribeContents")
+    private String subscribeContents;
+
     private UpdateStoreConfigRequest(Builder builder) {
         super(builder);
         this.enableNotification = builder.enableNotification;
@@ -40,6 +44,7 @@ public class UpdateStoreConfigRequest extends Request {
         this.notificationSilentTimes = builder.notificationSilentTimes;
         this.notificationWebHook = builder.notificationWebHook;
         this.storeId = builder.storeId;
+        this.subscribeContents = builder.subscribeContents;
     }
 
     public static Builder builder() {
@@ -90,24 +95,33 @@ public class UpdateStoreConfigRequest extends Request {
         return this.storeId;
     }
 
+    /**
+     * @return subscribeContents
+     */
+    public String getSubscribeContents() {
+        return this.subscribeContents;
+    }
+
     public static final class Builder extends Request.Builder<UpdateStoreConfigRequest, Builder> {
         private Boolean enableNotification; 
         private String extraParams; 
         private String notificationSilentTimes; 
         private String notificationWebHook; 
         private String storeId; 
+        private String subscribeContents; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateStoreConfigRequest response) {
-            super(response);
-            this.enableNotification = response.enableNotification;
-            this.extraParams = response.extraParams;
-            this.notificationSilentTimes = response.notificationSilentTimes;
-            this.notificationWebHook = response.notificationWebHook;
-            this.storeId = response.storeId;
+        private Builder(UpdateStoreConfigRequest request) {
+            super(request);
+            this.enableNotification = request.enableNotification;
+            this.extraParams = request.extraParams;
+            this.notificationSilentTimes = request.notificationSilentTimes;
+            this.notificationWebHook = request.notificationWebHook;
+            this.storeId = request.storeId;
+            this.subscribeContents = request.subscribeContents;
         } 
 
         /**
@@ -152,6 +166,15 @@ public class UpdateStoreConfigRequest extends Request {
         public Builder storeId(String storeId) {
             this.putBodyParameter("StoreId", storeId);
             this.storeId = storeId;
+            return this;
+        }
+
+        /**
+         * SubscribeContents.
+         */
+        public Builder subscribeContents(String subscribeContents) {
+            this.putBodyParameter("SubscribeContents", subscribeContents);
+            this.subscribeContents = subscribeContents;
             return this;
         }
 

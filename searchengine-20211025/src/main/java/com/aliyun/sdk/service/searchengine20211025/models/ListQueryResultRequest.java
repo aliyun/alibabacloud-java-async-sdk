@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueryResultRequest} extends {@link RequestModel}
  *
  * <p>ListQueryResultRequest</p>
  */
 public class ListQueryResultRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
-    @Query
-    @NameInMap("sql")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sql")
     private String sql;
 
     private ListQueryResultRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class ListQueryResultRequest extends Request {
         } 
 
         /**
-         * Queries the query result.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-i7m2olkw201</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +101,10 @@ public class ListQueryResultRequest extends Request {
         }
 
         /**
-         * 353490
+         * <p>The query statement</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query%3D1%26%26config%3Dstart%3A0%2Chit%3A10%2Cformat%3Ajson%26%26cluster%3Dgeneral</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -101,7 +113,10 @@ public class ListQueryResultRequest extends Request {
         }
 
         /**
-         * sql.
+         * <p>The SQL statement that is executed in the query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query%3Dselect%20max(content_id)%20from%20generation</p>
          */
         public Builder sql(String sql) {
             this.putQueryParameter("sql", sql);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainDetailDataByLayerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainDetailDataByLayerResponseBody</p>
  */
 public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainDetailDataByLayerResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of IPv6 requests per second.
+         * <p>The number of IPv6 requests per second.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The number of queries per second.
+         * <p>The number of queries per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +74,44 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainDetailDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailDataByLayerResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Float bps;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
-        @NameInMap("Ipv6Acc")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Acc")
         private Long ipv6Acc;
 
-        @NameInMap("Ipv6Bps")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Bps")
         private Float ipv6Bps;
 
-        @NameInMap("Ipv6Qps")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Qps")
         private Float ipv6Qps;
 
-        @NameInMap("Ipv6Traf")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Traf")
         private Long ipv6Traf;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Float qps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Traf")
+        @com.aliyun.core.annotation.NameInMap("Traf")
         private Long traf;
 
         private DataModule(Builder builder) {
@@ -218,7 +227,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             private Long traf; 
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -226,7 +238,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of IPv6 requests. Unit: bit/s.
+             * <p>The bandwidth of IPv6 requests. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21060178715.146667</p>
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -234,7 +249,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -242,19 +260,43 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * - You can call this operation up to 20 times per second per account.
-             * <p>
-             * - If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+             * <ul>
+             * <li>You can call this operation up to 20 times per second per account.</li>
+             * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+             * </ul>
+             * <p><strong>Time granularity</strong></p>
+             * <p>The following table describes the time granularity, the time period within which historical data is available, and the data delay, which vary with the maximum time range per query. </p>
+             * <table>
+             * <thead>
+             * <tr>
+             * <th>Time granularity</th>
+             * <th>Maximum time range per query</th>
+             * <th>Historical data available</th>
+             * <th>Data delay</th>
+             * </tr>
+             * </thead>
+             * <tbody><tr>
+             * <td>5 minutes</td>
+             * <td>3 days</td>
+             * <td>93 days</td>
+             * <td>15 minutes</td>
+             * </tr>
+             * <tr>
+             * <td>1 hour</td>
+             * <td>31 days</td>
+             * <td>186 days</td>
+             * <td>4 hours</td>
+             * </tr>
+             * <tr>
+             * <td>1 days</td>
+             * <td>366 days</td>
+             * <td>366 days</td>
+             * <td>04:00 on the next day</td>
+             * </tr>
+             * </tbody></table>
              * 
-             * **Time granularity**
-             * 
-             * The following table describes the time granularity, the time period within which historical data is available, and the data delay, which vary with the maximum time range per query. 
-             * 
-             * | Time granularity | Maximum time range per query | Historical data available | Data delay |
-             * | ---------------- | ---------------------------- | ------------------------- | ---------- |
-             * | 5 minutes | 3 days | 93 days | 15 minutes |
-             * | 1 hour | 31 days | 186 days | 4 hours |
-             * | 1 days | 366 days | 366 days | 04:00 on the next day |
+             * <strong>example:</strong>
+             * <p>200:44349|206:1753719|304:45|403:1095|416:1|499:332</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -262,7 +304,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth. Unit: bit/s.
+             * <p>The bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ipv6Acc(Long ipv6Acc) {
                 this.ipv6Acc = ipv6Acc;
@@ -270,7 +315,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6 requests.
+             * <p>The number of IPv6 requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipv6Bps(Float ipv6Bps) {
                 this.ipv6Bps = ipv6Bps;
@@ -278,7 +326,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of network traffic generated by IPv6 requests. Unit: bytes.
+             * <p>The amount of network traffic generated by IPv6 requests. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipv6Qps(Float ipv6Qps) {
                 this.ipv6Qps = ipv6Qps;
@@ -286,7 +337,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The proportions of HTTP status codes.
+             * <p>The proportions of HTTP status codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141718944482</p>
              */
             public Builder ipv6Traf(Long ipv6Traf) {
                 this.ipv6Traf = ipv6Traf;
@@ -294,7 +348,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5998.47</p>
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -302,7 +359,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-05T22:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -310,7 +370,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of IPv6 requests. Unit: bit/s.
+             * <p>The bandwidth of IPv6 requests. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>789756701818</p>
              */
             public Builder traf(Long traf) {
                 this.traf = traf;
@@ -324,8 +387,14 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainDetailDataByLayerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainDetailDataByLayerResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private Data(Builder builder) {

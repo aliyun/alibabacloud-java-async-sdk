@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserDevicesResponseBody</p>
  */
 public class ListUserDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
-    private java.util.List < Devices> devices;
+    @com.aliyun.core.annotation.NameInMap("Devices")
+    private java.util.List<Devices> devices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private ListUserDevicesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
     /**
      * @return devices
      */
-    public java.util.List < Devices> getDevices() {
+    public java.util.List<Devices> getDevices() {
         return this.devices;
     }
 
@@ -57,14 +62,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Devices> devices; 
+        private java.util.List<Devices> devices; 
         private String requestId; 
         private Long totalNum; 
 
         /**
          * Devices.
          */
-        public Builder devices(java.util.List < Devices> devices) {
+        public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
             return this;
         }
@@ -91,80 +96,159 @@ public class ListUserDevicesResponseBody extends TeaModel {
 
     } 
 
-    public static class Devices extends TeaModel {
-        @NameInMap("AppStatus")
-        private String appStatus;
-
-        @NameInMap("AppVersion")
-        private String appVersion;
-
-        @NameInMap("CPU")
-        private String CPU;
-
-        @NameInMap("CreateTime")
-        private String createTime;
-
-        @NameInMap("Department")
-        private String department;
-
-        @NameInMap("DeviceBelong")
-        private String deviceBelong;
-
-        @NameInMap("DeviceModel")
-        private String deviceModel;
-
-        @NameInMap("DeviceStatus")
-        private String deviceStatus;
-
-        @NameInMap("DeviceTag")
-        private String deviceTag;
-
-        @NameInMap("DeviceType")
-        private String deviceType;
-
-        @NameInMap("DeviceVersion")
-        private String deviceVersion;
-
-        @NameInMap("Disk")
-        private String disk;
-
-        @NameInMap("DlpStatus")
-        private String dlpStatus;
-
-        @NameInMap("Hostname")
-        private String hostname;
-
-        @NameInMap("IaStatus")
-        private String iaStatus;
-
-        @NameInMap("InnerIP")
-        private String innerIP;
-
-        @NameInMap("Mac")
+    /**
+     * 
+     * {@link ListUserDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDevicesResponseBody</p>
+     */
+    public static class NetInterfaceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private NetInterfaceInfo(Builder builder) {
+            this.mac = builder.mac;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetInterfaceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mac
+         */
+        public String getMac() {
+            return this.mac;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String mac; 
+            private String name; 
+
+            /**
+             * Mac.
+             */
+            public Builder mac(String mac) {
+                this.mac = mac;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public NetInterfaceInfo build() {
+                return new NetInterfaceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListUserDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDevicesResponseBody</p>
+     */
+    public static class Devices extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppStatus")
+        private String appStatus;
+
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
+        private String appVersion;
+
+        @com.aliyun.core.annotation.NameInMap("CPU")
+        private String CPU;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Department")
+        private String department;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceBelong")
+        private String deviceBelong;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceModel")
+        private String deviceModel;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceStatus")
+        private String deviceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceTag")
+        private String deviceTag;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
+        private String deviceType;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceVersion")
+        private String deviceVersion;
+
+        @com.aliyun.core.annotation.NameInMap("Disk")
+        private String disk;
+
+        @com.aliyun.core.annotation.NameInMap("DlpStatus")
+        private String dlpStatus;
+
+        @com.aliyun.core.annotation.NameInMap("EdrStatus")
+        private String edrStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Hostname")
+        private String hostname;
+
+        @com.aliyun.core.annotation.NameInMap("IaStatus")
+        private String iaStatus;
+
+        @com.aliyun.core.annotation.NameInMap("InnerIP")
+        private String innerIP;
+
+        @com.aliyun.core.annotation.NameInMap("Mac")
+        private String mac;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("NacStatus")
+        @com.aliyun.core.annotation.NameInMap("NacStatus")
         private String nacStatus;
 
-        @NameInMap("PaStatus")
+        @com.aliyun.core.annotation.NameInMap("NetInterfaceInfo")
+        private java.util.List<NetInterfaceInfo> netInterfaceInfo;
+
+        @com.aliyun.core.annotation.NameInMap("PaStatus")
         private String paStatus;
 
-        @NameInMap("SaseUserId")
+        @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
 
-        @NameInMap("SharingStatus")
+        @com.aliyun.core.annotation.NameInMap("SharingStatus")
         private Boolean sharingStatus;
 
-        @NameInMap("SrcIP")
+        @com.aliyun.core.annotation.NameInMap("SrcIP")
         private String srcIP;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Devices(Builder builder) {
@@ -181,12 +265,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
             this.deviceVersion = builder.deviceVersion;
             this.disk = builder.disk;
             this.dlpStatus = builder.dlpStatus;
+            this.edrStatus = builder.edrStatus;
             this.hostname = builder.hostname;
             this.iaStatus = builder.iaStatus;
             this.innerIP = builder.innerIP;
             this.mac = builder.mac;
             this.memory = builder.memory;
             this.nacStatus = builder.nacStatus;
+            this.netInterfaceInfo = builder.netInterfaceInfo;
             this.paStatus = builder.paStatus;
             this.saseUserId = builder.saseUserId;
             this.sharingStatus = builder.sharingStatus;
@@ -295,6 +381,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return edrStatus
+         */
+        public String getEdrStatus() {
+            return this.edrStatus;
+        }
+
+        /**
          * @return hostname
          */
         public String getHostname() {
@@ -334,6 +427,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
          */
         public String getNacStatus() {
             return this.nacStatus;
+        }
+
+        /**
+         * @return netInterfaceInfo
+         */
+        public java.util.List<NetInterfaceInfo> getNetInterfaceInfo() {
+            return this.netInterfaceInfo;
         }
 
         /**
@@ -392,12 +492,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
             private String deviceVersion; 
             private String disk; 
             private String dlpStatus; 
+            private String edrStatus; 
             private String hostname; 
             private String iaStatus; 
             private String innerIP; 
             private String mac; 
             private String memory; 
             private String nacStatus; 
+            private java.util.List<NetInterfaceInfo> netInterfaceInfo; 
             private String paStatus; 
             private String saseUserId; 
             private Boolean sharingStatus; 
@@ -510,6 +612,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
             }
 
             /**
+             * EdrStatus.
+             */
+            public Builder edrStatus(String edrStatus) {
+                this.edrStatus = edrStatus;
+                return this;
+            }
+
+            /**
              * Hostname.
              */
             public Builder hostname(String hostname) {
@@ -554,6 +664,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
              */
             public Builder nacStatus(String nacStatus) {
                 this.nacStatus = nacStatus;
+                return this;
+            }
+
+            /**
+             * NetInterfaceInfo.
+             */
+            public Builder netInterfaceInfo(java.util.List<NetInterfaceInfo> netInterfaceInfo) {
+                this.netInterfaceInfo = netInterfaceInfo;
                 return this;
             }
 

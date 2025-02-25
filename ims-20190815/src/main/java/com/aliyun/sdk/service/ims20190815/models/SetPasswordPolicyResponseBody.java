@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>SetPasswordPolicyResponseBody</p>
  */
 public class SetPasswordPolicyResponseBody extends TeaModel {
-    @NameInMap("PasswordPolicy")
+    @com.aliyun.core.annotation.NameInMap("PasswordPolicy")
     private PasswordPolicy passwordPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetPasswordPolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the password policy.
+         * <p>The details of the password policy.</p>
          */
         public Builder passwordPolicy(PasswordPolicy passwordPolicy) {
             this.passwordPolicy = passwordPolicy;
@@ -58,7 +63,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FB5551F-B2ED-40D4-8392-1E4AC2384EFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetPasswordPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetPasswordPolicyResponseBody</p>
+     */
     public static class PasswordPolicy extends TeaModel {
-        @NameInMap("HardExpire")
+        @com.aliyun.core.annotation.NameInMap("HardExpire")
         private Boolean hardExpire;
 
-        @NameInMap("MaxLoginAttemps")
+        @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
         private Integer maxLoginAttemps;
 
-        @NameInMap("MaxPasswordAge")
+        @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
         private Integer maxPasswordAge;
 
-        @NameInMap("MinimumPasswordDifferentCharacter")
+        @com.aliyun.core.annotation.NameInMap("MinimumPasswordDifferentCharacter")
         private Integer minimumPasswordDifferentCharacter;
 
-        @NameInMap("MinimumPasswordLength")
+        @com.aliyun.core.annotation.NameInMap("MinimumPasswordLength")
         private Integer minimumPasswordLength;
 
-        @NameInMap("PasswordNotContainUserName")
+        @com.aliyun.core.annotation.NameInMap("PasswordNotContainUserName")
         private Boolean passwordNotContainUserName;
 
-        @NameInMap("PasswordReusePrevention")
+        @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
         private Integer passwordReusePrevention;
 
-        @NameInMap("RequireLowercaseCharacters")
+        @com.aliyun.core.annotation.NameInMap("RequireLowercaseCharacters")
         private Boolean requireLowercaseCharacters;
 
-        @NameInMap("RequireNumbers")
+        @com.aliyun.core.annotation.NameInMap("RequireNumbers")
         private Boolean requireNumbers;
 
-        @NameInMap("RequireSymbols")
+        @com.aliyun.core.annotation.NameInMap("RequireSymbols")
         private Boolean requireSymbols;
 
-        @NameInMap("RequireUppercaseCharacters")
+        @com.aliyun.core.annotation.NameInMap("RequireUppercaseCharacters")
         private Boolean requireUppercaseCharacters;
 
         private PasswordPolicy(Builder builder) {
@@ -218,7 +232,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             private Boolean requireUppercaseCharacters; 
 
             /**
-             * Indicates whether to disable logon after the password expires.
+             * <p>Indicates whether to disable logon after the password expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hardExpire(Boolean hardExpire) {
                 this.hardExpire = hardExpire;
@@ -226,7 +243,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of password retries.
+             * <p>The maximum number of password retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxLoginAttemps(Integer maxLoginAttemps) {
                 this.maxLoginAttemps = maxLoginAttemps;
@@ -234,7 +254,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the password.
+             * <p>The validity period of the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxPasswordAge(Integer maxPasswordAge) {
                 this.maxPasswordAge = maxPasswordAge;
@@ -242,7 +265,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of unique characters in the password.
+             * <p>The minimum number of unique characters in the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minimumPasswordDifferentCharacter(Integer minimumPasswordDifferentCharacter) {
                 this.minimumPasswordDifferentCharacter = minimumPasswordDifferentCharacter;
@@ -250,7 +276,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of characters in the password.
+             * <p>The minimum number of characters in the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder minimumPasswordLength(Integer minimumPasswordLength) {
                 this.minimumPasswordLength = minimumPasswordLength;
@@ -258,7 +287,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to exclude the username from the password.
+             * <p>Indicates whether to exclude the username from the password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder passwordNotContainUserName(Boolean passwordNotContainUserName) {
                 this.passwordNotContainUserName = passwordNotContainUserName;
@@ -266,7 +298,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The policy for password history check.
+             * <p>The policy for password history check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder passwordReusePrevention(Integer passwordReusePrevention) {
                 this.passwordReusePrevention = passwordReusePrevention;
@@ -274,7 +309,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password must contain lowercase letters.
+             * <p>Indicates whether the password must contain lowercase letters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
                 this.requireLowercaseCharacters = requireLowercaseCharacters;
@@ -282,7 +320,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password must contain digits.
+             * <p>Indicates whether the password must contain digits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder requireNumbers(Boolean requireNumbers) {
                 this.requireNumbers = requireNumbers;
@@ -290,7 +331,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password must contain special characters.
+             * <p>Indicates whether the password must contain special characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder requireSymbols(Boolean requireSymbols) {
                 this.requireSymbols = requireSymbols;
@@ -298,7 +342,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password must contain uppercase letters.
+             * <p>Indicates whether the password must contain uppercase letters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
                 this.requireUppercaseCharacters = requireUppercaseCharacters;

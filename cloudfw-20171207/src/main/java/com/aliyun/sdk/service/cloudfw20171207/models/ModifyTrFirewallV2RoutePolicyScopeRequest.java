@@ -1,35 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTrFirewallV2RoutePolicyScopeRequest} extends {@link RequestModel}
  *
  * <p>ModifyTrFirewallV2RoutePolicyScopeRequest</p>
  */
 public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
-    @Query
-    @NameInMap("DestCandidateList")
-    private java.util.List < DestCandidateList> destCandidateList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestCandidateList")
+    private java.util.List<DestCandidateList> destCandidateList;
 
-    @Query
-    @NameInMap("FirewallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String firewallId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SrcCandidateList")
-    private java.util.List < SrcCandidateList> srcCandidateList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldRecover")
+    private String shouldRecover;
 
-    @Query
-    @NameInMap("TrFirewallRoutePolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcCandidateList")
+    private java.util.List<SrcCandidateList> srcCandidateList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trFirewallRoutePolicyId;
 
     private ModifyTrFirewallV2RoutePolicyScopeRequest(Builder builder) {
@@ -37,6 +48,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         this.destCandidateList = builder.destCandidateList;
         this.firewallId = builder.firewallId;
         this.lang = builder.lang;
+        this.shouldRecover = builder.shouldRecover;
         this.srcCandidateList = builder.srcCandidateList;
         this.trFirewallRoutePolicyId = builder.trFirewallRoutePolicyId;
     }
@@ -57,7 +69,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     /**
      * @return destCandidateList
      */
-    public java.util.List < DestCandidateList> getDestCandidateList() {
+    public java.util.List<DestCandidateList> getDestCandidateList() {
         return this.destCandidateList;
     }
 
@@ -76,9 +88,16 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     }
 
     /**
+     * @return shouldRecover
+     */
+    public String getShouldRecover() {
+        return this.shouldRecover;
+    }
+
+    /**
      * @return srcCandidateList
      */
-    public java.util.List < SrcCandidateList> getSrcCandidateList() {
+    public java.util.List<SrcCandidateList> getSrcCandidateList() {
         return this.srcCandidateList;
     }
 
@@ -90,10 +109,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTrFirewallV2RoutePolicyScopeRequest, Builder> {
-        private java.util.List < DestCandidateList> destCandidateList; 
+        private java.util.List<DestCandidateList> destCandidateList; 
         private String firewallId; 
         private String lang; 
-        private java.util.List < SrcCandidateList> srcCandidateList; 
+        private String shouldRecover; 
+        private java.util.List<SrcCandidateList> srcCandidateList; 
         private String trFirewallRoutePolicyId; 
 
         private Builder() {
@@ -105,14 +125,15 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             this.destCandidateList = request.destCandidateList;
             this.firewallId = request.firewallId;
             this.lang = request.lang;
+            this.shouldRecover = request.shouldRecover;
             this.srcCandidateList = request.srcCandidateList;
             this.trFirewallRoutePolicyId = request.trFirewallRoutePolicyId;
         } 
 
         /**
-         * DestCandidateList.
+         * <p>The secondary traffic redirection instances.</p>
          */
-        public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
+        public Builder destCandidateList(java.util.List<DestCandidateList> destCandidateList) {
             String destCandidateListShrink = shrink(destCandidateList, "DestCandidateList", "json");
             this.putQueryParameter("DestCandidateList", destCandidateListShrink);
             this.destCandidateList = destCandidateList;
@@ -120,7 +141,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * FirewallId.
+         * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-6520de0253bc4669bbd9</p>
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -129,7 +154,14 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,9 +170,25 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * SrcCandidateList.
+         * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+         * <ul>
+         * <li>true: roll back</li>
+         * <li>false: withdraw</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
-        public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
+        public Builder shouldRecover(String shouldRecover) {
+            this.putQueryParameter("ShouldRecover", shouldRecover);
+            this.shouldRecover = shouldRecover;
+            return this;
+        }
+
+        /**
+         * <p>The primary traffic redirection instances.</p>
+         */
+        public Builder srcCandidateList(java.util.List<SrcCandidateList> srcCandidateList) {
             String srcCandidateListShrink = shrink(srcCandidateList, "SrcCandidateList", "json");
             this.putQueryParameter("SrcCandidateList", srcCandidateListShrink);
             this.srcCandidateList = srcCandidateList;
@@ -148,7 +196,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * <p>The ID of the routing policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-4d724d0139df48f18091</p>
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);
@@ -163,11 +215,17 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTrFirewallV2RoutePolicyScopeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTrFirewallV2RoutePolicyScopeRequest</p>
+     */
     public static class DestCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private DestCandidateList(Builder builder) {
@@ -202,7 +260,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * <p>The ID of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9epancaw8t4shajuzi</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -210,7 +271,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             }
 
             /**
-             * CandidateType.
+             * <p>The type of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -224,11 +288,17 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyTrFirewallV2RoutePolicyScopeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTrFirewallV2RoutePolicyScopeRequest</p>
+     */
     public static class SrcCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private SrcCandidateList(Builder builder) {
@@ -263,7 +333,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * <p>The ID of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9epancaw8t4shajuzi</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -271,7 +344,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             }
 
             /**
-             * CandidateType.
+             * <p>The type of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;

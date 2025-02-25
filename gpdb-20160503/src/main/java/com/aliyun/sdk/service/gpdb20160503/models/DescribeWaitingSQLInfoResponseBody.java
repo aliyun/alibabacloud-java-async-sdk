@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWaitingSQLInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWaitingSQLInfoResponseBody</p>
  */
 public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWaitingSQLInfoResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -58,11 +63,14 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private String database; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -70,15 +78,18 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The queried lock-waiting query.
+         * <p>The queried lock-waiting query.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,35 +102,41 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWaitingSQLInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWaitingSQLInfoResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Application")
+        @com.aliyun.core.annotation.NameInMap("Application")
         private String application;
 
-        @NameInMap("BlockedByApplication")
+        @com.aliyun.core.annotation.NameInMap("BlockedByApplication")
         private String blockedByApplication;
 
-        @NameInMap("BlockedByPID")
+        @com.aliyun.core.annotation.NameInMap("BlockedByPID")
         private String blockedByPID;
 
-        @NameInMap("BlockedBySQLStmt")
+        @com.aliyun.core.annotation.NameInMap("BlockedBySQLStmt")
         private String blockedBySQLStmt;
 
-        @NameInMap("BlockedByUser")
+        @com.aliyun.core.annotation.NameInMap("BlockedByUser")
         private String blockedByUser;
 
-        @NameInMap("GrantLocks")
+        @com.aliyun.core.annotation.NameInMap("GrantLocks")
         private String grantLocks;
 
-        @NameInMap("NotGrantLocks")
+        @com.aliyun.core.annotation.NameInMap("NotGrantLocks")
         private String notGrantLocks;
 
-        @NameInMap("PID")
+        @com.aliyun.core.annotation.NameInMap("PID")
         private String PID;
 
-        @NameInMap("SQLStmt")
+        @com.aliyun.core.annotation.NameInMap("SQLStmt")
         private String SQLStmt;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Items(Builder builder) {
@@ -226,7 +243,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The application that sent the query.
+             * <p>The application that sent the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataGrip 2022.1.5</p>
              */
             public Builder application(String application) {
                 this.application = application;
@@ -234,7 +254,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The application that sent the blocking query.
+             * <p>The application that sent the blocking query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataGrip 2022.1.5</p>
              */
             public Builder blockedByApplication(String blockedByApplication) {
                 this.blockedByApplication = blockedByApplication;
@@ -242,7 +265,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID of the blocking query.
+             * <p>The process ID of the blocking query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110</p>
              */
             public Builder blockedByPID(String blockedByPID) {
                 this.blockedByPID = blockedByPID;
@@ -250,7 +276,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement of the blocking query.
+             * <p>The SQL statement of the blocking query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Select * from t1;</p>
              */
             public Builder blockedBySQLStmt(String blockedBySQLStmt) {
                 this.blockedBySQLStmt = blockedBySQLStmt;
@@ -258,7 +287,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The database account that is used to perform the blocking query.
+             * <p>The database account that is used to perform the blocking query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser1</p>
              */
             public Builder blockedByUser(String blockedByUser) {
                 this.blockedByUser = blockedByUser;
@@ -266,7 +298,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The authorized locks.
+             * <p>The authorized locks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ShareLock,AccessExclusiveLock</p>
              */
             public Builder grantLocks(String grantLocks) {
                 this.grantLocks = grantLocks;
@@ -274,7 +309,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The unauthorized locks.
+             * <p>The unauthorized locks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessShareLock</p>
              */
             public Builder notGrantLocks(String notGrantLocks) {
                 this.notGrantLocks = notGrantLocks;
@@ -282,7 +320,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process that uniquely identifies the query.
+             * <p>The ID of the process that uniquely identifies the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder PID(String PID) {
                 this.PID = PID;
@@ -290,7 +331,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement of the query.
+             * <p>The SQL statement of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Select * from t1,t2 where t1.id=t2.id;</p>
              */
             public Builder SQLStmt(String SQLStmt) {
                 this.SQLStmt = SQLStmt;
@@ -298,7 +342,10 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The database account that is used to perform the query.
+             * <p>The database account that is used to perform the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder user(String user) {
                 this.user = user;

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserMFAInfoRequest} extends {@link RequestModel}
  *
  * <p>GetUserMFAInfoRequest</p>
  */
 public class GetUserMFAInfoRequest extends Request {
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private GetUserMFAInfoRequest(Builder builder) {
@@ -48,13 +53,16 @@ public class GetUserMFAInfoRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserMFAInfoRequest response) {
-            super(response);
-            this.userName = response.userName;
+        private Builder(GetUserMFAInfoRequest request) {
+            super(request);
+            this.userName = request.userName;
         } 
 
         /**
-         * UserName.
+         * <p>The username of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

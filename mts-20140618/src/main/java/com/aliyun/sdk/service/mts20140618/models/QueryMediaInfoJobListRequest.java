@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaInfoJobListRequest} extends {@link RequestModel}
  *
  * <p>QueryMediaInfoJobListRequest</p>
  */
 public class QueryMediaInfoJobListRequest extends Request {
-    @Query
-    @NameInMap("MediaInfoJobIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaInfoJobIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaInfoJobIds;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QueryMediaInfoJobListRequest(Builder builder) {
@@ -111,7 +111,18 @@ public class QueryMediaInfoJobListRequest extends Request {
         } 
 
         /**
-         * MediaInfoJobIds.
+         * <p>The IDs of the media information analysis jobs.</p>
+         * <ul>
+         * <li>You can query up to 10 jobs at a time. Separate multiple IDs with commas (,).</li>
+         * <li>You can obtain the details from the response parameters of the <a href="https://help.aliyun.com/document_detail/602827.html">SubmitMediaInfoJob</a> operation.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify the JobIds parameter, the <strong>InvalidParameter</strong> error code is returned.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23ca1d184c0e4341e5b665e2a12****</p>
          */
         public Builder mediaInfoJobIds(String mediaInfoJobIds) {
             this.putQueryParameter("MediaInfoJobIds", mediaInfoJobIds);

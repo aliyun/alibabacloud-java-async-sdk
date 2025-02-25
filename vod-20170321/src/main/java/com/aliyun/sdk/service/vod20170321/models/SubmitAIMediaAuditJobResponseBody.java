@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIMediaAuditJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitAIMediaAuditJobResponseBody</p>
  */
 public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitAIMediaAuditJobResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the task.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdbc266af6893943a70176d92e99****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +78,10 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the video.
+         * <p>The ID of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe028d09441afffb138cd7ee****</p>
          */
         public Builder mediaId(String mediaId) {
             this.mediaId = mediaId;
@@ -78,7 +89,10 @@ public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4631053-8D9F-42B2-4A67281DB88E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

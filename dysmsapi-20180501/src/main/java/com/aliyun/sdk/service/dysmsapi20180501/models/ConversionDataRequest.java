@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConversionDataRequest} extends {@link RequestModel}
  *
  * <p>ConversionDataRequest</p>
  */
 public class ConversionDataRequest extends Request {
-    @Body
-    @NameInMap("ConversionRate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConversionRate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String conversionRate;
 
-    @Body
-    @NameInMap("ReportTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReportTime")
     private Long reportTime;
 
     private ConversionDataRequest(Builder builder) {
@@ -69,10 +69,14 @@ public class ConversionDataRequest extends Request {
         } 
 
         /**
-         * Conversion rate monitoring return value.
-         * <p>
+         * <p>Conversion rate monitoring return value.</p>
+         * <blockquote>
+         * <p> The value of this parameter is of type double, and the value is between [0,1].</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The value of this parameter is of type double, and the value is between \[0,1].
+         * <strong>example:</strong>
+         * <p>0.53</p>
          */
         public Builder conversionRate(String conversionRate) {
             this.putBodyParameter("ConversionRate", conversionRate);
@@ -81,10 +85,13 @@ public class ConversionDataRequest extends Request {
         }
 
         /**
-         * Timestamp of the conversion rate observation should be a Unix timestamp, millisecond-level long integer.
-         * <p>
+         * <p>Timestamp of the conversion rate observation should be a Unix timestamp, a millisecond-level long integer.</p>
+         * <blockquote>
+         * <p> If this field is not specified: the current timestamp is the default.</p>
+         * </blockquote>
          * 
-         * >  If this field is not specified: the current timestamp is the default.
+         * <strong>example:</strong>
+         * <p>1349055900000</p>
          */
         public Builder reportTime(Long reportTime) {
             this.putBodyParameter("ReportTime", reportTime);

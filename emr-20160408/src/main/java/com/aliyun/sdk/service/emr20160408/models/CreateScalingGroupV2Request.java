@@ -117,14 +117,14 @@ public class CreateScalingGroupV2Request extends Request {
             super();
         } 
 
-        private Builder(CreateScalingGroupV2Request response) {
-            super(response);
-            this.description = response.description;
-            this.hostGroupId = response.hostGroupId;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateScalingGroupV2Request request) {
+            super(request);
+            this.description = request.description;
+            this.hostGroupId = request.hostGroupId;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

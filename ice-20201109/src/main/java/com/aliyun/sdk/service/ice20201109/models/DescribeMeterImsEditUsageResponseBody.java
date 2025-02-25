@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsEditUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMeterImsEditUsageResponseBody</p>
  */
 public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMeterImsEditUsageResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The usage statistics of IMS on VOD editing.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F3AE2C6-5CC6-5712-BAC5-5A735A157687</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMeterImsEditUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeterImsEditUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private Data(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * Duration.
+             * <p>The usage duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.23</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -130,7 +147,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The video profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080P</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -138,7 +158,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656950400</p>
              */
             public Builder time(Long time) {
                 this.time = time;

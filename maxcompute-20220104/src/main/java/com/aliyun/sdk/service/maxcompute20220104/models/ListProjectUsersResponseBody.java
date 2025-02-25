@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectUsersResponseBody</p>
  */
 public class ListProjectUsersResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListProjectUsersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListProjectUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ListProjectUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7b316643495896551555e855b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class ListProjectUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Users(Builder builder) {
@@ -98,7 +112,10 @@ public class ListProjectUsersResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the user.
+             * <p>The name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -112,9 +129,15 @@ public class ListProjectUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectUsersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("users")
-        private java.util.List < Users> users;
+        @com.aliyun.core.annotation.NameInMap("users")
+        private java.util.List<Users> users;
 
         private Data(Builder builder) {
             this.users = builder.users;
@@ -131,17 +154,17 @@ public class ListProjectUsersResponseBody extends TeaModel {
         /**
          * @return users
          */
-        public java.util.List < Users> getUsers() {
+        public java.util.List<Users> getUsers() {
             return this.users;
         }
 
         public static final class Builder {
-            private java.util.List < Users> users; 
+            private java.util.List<Users> users; 
 
             /**
-             * An array that contains users.
+             * <p>An array that contains users.</p>
              */
-            public Builder users(java.util.List < Users> users) {
+            public Builder users(java.util.List<Users> users) {
                 this.users = users;
                 return this;
             }

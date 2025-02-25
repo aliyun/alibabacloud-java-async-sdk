@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddBusinessCategory  AddBusinessCategoryRequest
+     * @return AddBusinessCategoryResponse
+     */
     @Override
     public CompletableFuture<AddBusinessCategoryResponse> addBusinessCategory(AddBusinessCategoryRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddRuleCategory  AddRuleCategoryRequest
+     * @return AddRuleCategoryResponse
+     */
     @Override
     public CompletableFuture<AddRuleCategoryResponse> addRuleCategory(AddRuleCategoryRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddRuleV4  AddRuleV4Request
+     * @return AddRuleV4Response
+     */
     @Override
     public CompletableFuture<AddRuleV4Response> addRuleV4(AddRuleV4Request request) {
         try {
@@ -81,20 +93,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyWsToken  ApplyWsTokenRequest
+     * @return ApplyWsTokenResponse
+     */
     @Override
-    public CompletableFuture<AddThesaurusForApiResponse> addThesaurusForApi(AddThesaurusForApiRequest request) {
+    public CompletableFuture<ApplyWsTokenResponse> applyWsToken(ApplyWsTokenRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddThesaurusForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddThesaurusForApiResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ApplyWsToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApplyWsTokenResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<AddThesaurusForApiResponse> future = new CompletableFuture<>();
+            CompletableFuture<ApplyWsTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of AssignReviewer  AssignReviewerRequest
+     * @return AssignReviewerResponse
+     */
     @Override
     public CompletableFuture<AssignReviewerResponse> assignReviewer(AssignReviewerRequest request) {
         try {
@@ -109,6 +129,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI AssignReviewerBySessionGroup is deprecated  * @param request  the request parameters of AssignReviewerBySessionGroup  AssignReviewerBySessionGroupRequest
+     * @return AssignReviewerBySessionGroupResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<AssignReviewerBySessionGroupResponse> assignReviewerBySessionGroup(AssignReviewerBySessionGroupRequest request) {
         try {
@@ -123,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchSubmitReviewInfo  BatchSubmitReviewInfoRequest
+     * @return BatchSubmitReviewInfoResponse
+     */
     @Override
     public CompletableFuture<BatchSubmitReviewInfoResponse> batchSubmitReviewInfo(BatchSubmitReviewInfoRequest request) {
         try {
@@ -137,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAsrVocab  CreateAsrVocabRequest
+     * @return CreateAsrVocabResponse
+     */
     @Override
     public CompletableFuture<CreateAsrVocabResponse> createAsrVocab(CreateAsrVocabRequest request) {
         try {
@@ -151,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCheckTypeToScheme  CreateCheckTypeToSchemeRequest
+     * @return CreateCheckTypeToSchemeResponse
+     */
     @Override
     public CompletableFuture<CreateCheckTypeToSchemeResponse> createCheckTypeToScheme(CreateCheckTypeToSchemeRequest request) {
         try {
@@ -165,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateQualityCheckScheme  CreateQualityCheckSchemeRequest
+     * @return CreateQualityCheckSchemeResponse
+     */
     @Override
     public CompletableFuture<CreateQualityCheckSchemeResponse> createQualityCheckScheme(CreateQualityCheckSchemeRequest request) {
         try {
@@ -179,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSchemeTaskConfig  CreateSchemeTaskConfigRequest
+     * @return CreateSchemeTaskConfigResponse
+     */
     @Override
     public CompletableFuture<CreateSchemeTaskConfigResponse> createSchemeTaskConfig(CreateSchemeTaskConfigRequest request) {
         try {
@@ -193,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSkillGroupConfig  CreateSkillGroupConfigRequest
+     * @return CreateSkillGroupConfigResponse
+     */
     @Override
     public CompletableFuture<CreateSkillGroupConfigResponse> createSkillGroupConfig(CreateSkillGroupConfigRequest request) {
         try {
@@ -207,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTaskAssignRule  CreateTaskAssignRuleRequest
+     * @return CreateTaskAssignRuleResponse
+     */
     @Override
     public CompletableFuture<CreateTaskAssignRuleResponse> createTaskAssignRule(CreateTaskAssignRuleRequest request) {
         try {
@@ -221,20 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateUserResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateUserResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateWarningConfig  CreateWarningConfigRequest
+     * @return CreateWarningConfigResponse
+     */
     @Override
     public CompletableFuture<CreateWarningConfigResponse> createWarningConfig(CreateWarningConfigRequest request) {
         try {
@@ -249,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWarningStrategyConfig  CreateWarningStrategyConfigRequest
+     * @return CreateWarningStrategyConfigResponse
+     */
     @Override
     public CompletableFuture<CreateWarningStrategyConfigResponse> createWarningStrategyConfig(CreateWarningStrategyConfigRequest request) {
         try {
@@ -263,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DelRuleCategory  DelRuleCategoryRequest
+     * @return DelRuleCategoryResponse
+     */
     @Override
     public CompletableFuture<DelRuleCategoryResponse> delRuleCategory(DelRuleCategoryRequest request) {
         try {
@@ -277,20 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DelThesaurusForApiResponse> delThesaurusForApi(DelThesaurusForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DelThesaurusForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DelThesaurusForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DelThesaurusForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteAsrVocab  DeleteAsrVocabRequest
+     * @return DeleteAsrVocabResponse
+     */
     @Override
     public CompletableFuture<DeleteAsrVocabResponse> deleteAsrVocab(DeleteAsrVocabRequest request) {
         try {
@@ -305,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBusinessCategory  DeleteBusinessCategoryRequest
+     * @return DeleteBusinessCategoryResponse
+     */
     @Override
     public CompletableFuture<DeleteBusinessCategoryResponse> deleteBusinessCategory(DeleteBusinessCategoryRequest request) {
         try {
@@ -319,6 +364,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCheckTypeToScheme  DeleteCheckTypeToSchemeRequest
+     * @return DeleteCheckTypeToSchemeResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCheckTypeToSchemeResponse> deleteCheckTypeToScheme(DeleteCheckTypeToSchemeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCheckTypeToScheme").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCheckTypeToSchemeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCheckTypeToSchemeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteCustomizationConfig  DeleteCustomizationConfigRequest
+     * @return DeleteCustomizationConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomizationConfigResponse> deleteCustomizationConfig(DeleteCustomizationConfigRequest request) {
         try {
@@ -333,6 +400,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI DeleteDataSet is deprecated  * @param request  the request parameters of DeleteDataSet  DeleteDataSetRequest
+     * @return DeleteDataSetResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteDataSetResponse> deleteDataSet(DeleteDataSetRequest request) {
         try {
@@ -347,6 +419,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePrecisionTask  DeletePrecisionTaskRequest
+     * @return DeletePrecisionTaskResponse
+     */
     @Override
     public CompletableFuture<DeletePrecisionTaskResponse> deletePrecisionTask(DeletePrecisionTaskRequest request) {
         try {
@@ -361,6 +437,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteQualityCheckScheme  DeleteQualityCheckSchemeRequest
+     * @return DeleteQualityCheckSchemeResponse
+     */
     @Override
     public CompletableFuture<DeleteQualityCheckSchemeResponse> deleteQualityCheckScheme(DeleteQualityCheckSchemeRequest request) {
         try {
@@ -375,6 +455,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI DeleteRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.  * @param request  the request parameters of DeleteRule  DeleteRuleRequest
+     * @return DeleteRuleResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request) {
         try {
@@ -389,6 +474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRuleV4  DeleteRuleV4Request
+     * @return DeleteRuleV4Response
+     */
     @Override
     public CompletableFuture<DeleteRuleV4Response> deleteRuleV4(DeleteRuleV4Request request) {
         try {
@@ -403,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSchemeTaskConfig  DeleteSchemeTaskConfigRequest
+     * @return DeleteSchemeTaskConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteSchemeTaskConfigResponse> deleteSchemeTaskConfig(DeleteSchemeTaskConfigRequest request) {
         try {
@@ -417,20 +510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteScoreForApiResponse> deleteScoreForApi(DeleteScoreForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteScoreForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteScoreForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteScoreForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteSkillGroupConfig  DeleteSkillGroupConfigRequest
+     * @return DeleteSkillGroupConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteSkillGroupConfigResponse> deleteSkillGroupConfig(DeleteSkillGroupConfigRequest request) {
         try {
@@ -445,20 +528,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteSubScoreForApiResponse> deleteSubScoreForApi(DeleteSubScoreForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSubScoreForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSubScoreForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteSubScoreForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteTaskAssignRule  DeleteTaskAssignRuleRequest
+     * @return DeleteTaskAssignRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteTaskAssignRuleResponse> deleteTaskAssignRule(DeleteTaskAssignRuleRequest request) {
         try {
@@ -473,20 +546,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUserResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteUserResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteWarningConfig  DeleteWarningConfigRequest
+     * @return DeleteWarningConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteWarningConfigResponse> deleteWarningConfig(DeleteWarningConfigRequest request) {
         try {
@@ -501,6 +564,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWarningStrategyConfig  DeleteWarningStrategyConfigRequest
+     * @return DeleteWarningStrategyConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteWarningStrategyConfigResponse> deleteWarningStrategyConfig(DeleteWarningStrategyConfigRequest request) {
         try {
@@ -515,20 +582,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<EditThesaurusForApiResponse> editThesaurusForApi(EditThesaurusForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EditThesaurusForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EditThesaurusForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<EditThesaurusForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetAsrVocab  GetAsrVocabRequest
+     * @return GetAsrVocabResponse
+     */
     @Override
     public CompletableFuture<GetAsrVocabResponse> getAsrVocab(GetAsrVocabRequest request) {
         try {
@@ -543,6 +600,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBusinessCategoryList  GetBusinessCategoryListRequest
+     * @return GetBusinessCategoryListResponse
+     */
     @Override
     public CompletableFuture<GetBusinessCategoryListResponse> getBusinessCategoryList(GetBusinessCategoryListRequest request) {
         try {
@@ -557,6 +618,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomizationConfigList  GetCustomizationConfigListRequest
+     * @return GetCustomizationConfigListResponse
+     */
     @Override
     public CompletableFuture<GetCustomizationConfigListResponse> getCustomizationConfigList(GetCustomizationConfigListRequest request) {
         try {
@@ -571,20 +636,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetHitResultResponse> getHitResult(GetHitResultRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetHitResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetHitResultResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetHitResultResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetNextResultToVerify  GetNextResultToVerifyRequest
+     * @return GetNextResultToVerifyResponse
+     */
     @Override
     public CompletableFuture<GetNextResultToVerifyResponse> getNextResultToVerify(GetNextResultToVerifyRequest request) {
         try {
@@ -599,6 +654,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPrecisionTask  GetPrecisionTaskRequest
+     * @return GetPrecisionTaskResponse
+     */
     @Override
     public CompletableFuture<GetPrecisionTaskResponse> getPrecisionTask(GetPrecisionTaskRequest request) {
         try {
@@ -613,6 +672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetQualityCheckScheme  GetQualityCheckSchemeRequest
+     * @return GetQualityCheckSchemeResponse
+     */
     @Override
     public CompletableFuture<GetQualityCheckSchemeResponse> getQualityCheckScheme(GetQualityCheckSchemeRequest request) {
         try {
@@ -627,6 +690,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResult  GetResultRequest
+     * @return GetResultResponse
+     */
     @Override
     public CompletableFuture<GetResultResponse> getResult(GetResultRequest request) {
         try {
@@ -641,20 +708,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetResultCallbackResponse> getResultCallback(GetResultCallbackRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetResultCallback").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetResultCallbackResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetResultCallbackResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetResultToReview  GetResultToReviewRequest
+     * @return GetResultToReviewResponse
+     */
     @Override
     public CompletableFuture<GetResultToReviewResponse> getResultToReview(GetResultToReviewRequest request) {
         try {
@@ -669,6 +726,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetRule is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.  * @param request  the request parameters of GetRule  GetRuleRequest
+     * @return GetRuleResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request) {
         try {
@@ -683,6 +745,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetRuleById is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.  * @param request  the request parameters of GetRuleById  GetRuleByIdRequest
+     * @return GetRuleByIdResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetRuleByIdResponse> getRuleById(GetRuleByIdRequest request) {
         try {
@@ -697,6 +764,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRuleCategory  GetRuleCategoryRequest
+     * @return GetRuleCategoryResponse
+     */
     @Override
     public CompletableFuture<GetRuleCategoryResponse> getRuleCategory(GetRuleCategoryRequest request) {
         try {
@@ -711,6 +782,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetRuleDetail is deprecated, please use Qualitycheck::2019-01-15::GetRuleV4 instead.  * @param request  the request parameters of GetRuleDetail  GetRuleDetailRequest
+     * @return GetRuleDetailResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetRuleDetailResponse> getRuleDetail(GetRuleDetailRequest request) {
         try {
@@ -725,6 +801,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRuleV4  GetRuleV4Request
+     * @return GetRuleV4Response
+     */
     @Override
     public CompletableFuture<GetRuleV4Response> getRuleV4(GetRuleV4Request request) {
         try {
@@ -740,23 +820,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @param request the request parameters of GetRulesCountList  GetRulesCountListRequest
+     * @return GetRulesCountListResponse
      */
-    @Override
-    public CompletableFuture<GetRuleV4StrResponse> getRuleV4Str(GetRuleV4StrRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRuleV4Str").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRuleV4StrResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetRuleV4StrResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<GetRulesCountListResponse> getRulesCountList(GetRulesCountListRequest request) {
         try {
@@ -771,6 +837,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetScoreInfo is deprecated  * @param request  the request parameters of GetScoreInfo  GetScoreInfoRequest
+     * @return GetScoreInfoResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetScoreInfoResponse> getScoreInfo(GetScoreInfoRequest request) {
         try {
@@ -785,6 +856,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSkillGroupConfig  GetSkillGroupConfigRequest
+     * @return GetSkillGroupConfigResponse
+     */
     @Override
     public CompletableFuture<GetSkillGroupConfigResponse> getSkillGroupConfig(GetSkillGroupConfigRequest request) {
         try {
@@ -799,6 +874,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI GetSyncResult is deprecated, please use Qualitycheck::2019-01-15::GetResult instead.  * @param request  the request parameters of GetSyncResult  GetSyncResultRequest
+     * @return GetSyncResultResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<GetSyncResultResponse> getSyncResult(GetSyncResultRequest request) {
         try {
@@ -813,20 +893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetThesaurusBySynonymForApiResponse> getThesaurusBySynonymForApi(GetThesaurusBySynonymForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetThesaurusBySynonymForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetThesaurusBySynonymForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetThesaurusBySynonymForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GetWarningStrategyConfig  GetWarningStrategyConfigRequest
+     * @return GetWarningStrategyConfigResponse
+     */
     @Override
     public CompletableFuture<GetWarningStrategyConfigResponse> getWarningStrategyConfig(GetWarningStrategyConfigRequest request) {
         try {
@@ -841,6 +911,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HandleComplaint  HandleComplaintRequest
+     * @return HandleComplaintResponse
+     */
     @Override
     public CompletableFuture<HandleComplaintResponse> handleComplaint(HandleComplaintRequest request) {
         try {
@@ -855,34 +929,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<InsertScoreForApiResponse> insertScoreForApi(InsertScoreForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InsertScoreForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InsertScoreForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<InsertScoreForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<InsertSubScoreForApiResponse> insertSubScoreForApi(InsertSubScoreForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InsertSubScoreForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InsertSubScoreForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<InsertSubScoreForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @deprecated OpenAPI InvalidRule is deprecated, please use Qualitycheck::2019-01-15::DeleteRuleV4 instead.  * @param request  the request parameters of InvalidRule  InvalidRuleRequest
+     * @return InvalidRuleResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<InvalidRuleResponse> invalidRule(InvalidRuleRequest request) {
         try {
@@ -897,6 +948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAsrVocab  ListAsrVocabRequest
+     * @return ListAsrVocabResponse
+     */
     @Override
     public CompletableFuture<ListAsrVocabResponse> listAsrVocab(ListAsrVocabRequest request) {
         try {
@@ -912,23 +967,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ListDataSet is deprecated  * @param request  the request parameters of ListDataSet  ListDataSetRequest
+     * @return ListDataSetResponse
      */
-    @Override
-    public CompletableFuture<ListBusinessSpacesResponse> listBusinessSpaces(ListBusinessSpacesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBusinessSpaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBusinessSpacesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListBusinessSpacesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    @Deprecated
     @Override
     public CompletableFuture<ListDataSetResponse> listDataSet(ListDataSetRequest request) {
         try {
@@ -943,20 +985,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<ListHotWordsTasksResponse> listHotWordsTasks(ListHotWordsTasksRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListHotWordsTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListHotWordsTasksResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListHotWordsTasksResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of ListPrecisionTask  ListPrecisionTaskRequest
+     * @return ListPrecisionTaskResponse
+     */
     @Override
     public CompletableFuture<ListPrecisionTaskResponse> listPrecisionTask(ListPrecisionTaskRequest request) {
         try {
@@ -971,6 +1003,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQualityCheckScheme  ListQualityCheckSchemeRequest
+     * @return ListQualityCheckSchemeResponse
+     */
     @Override
     public CompletableFuture<ListQualityCheckSchemeResponse> listQualityCheckScheme(ListQualityCheckSchemeRequest request) {
         try {
@@ -985,20 +1021,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRoles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRolesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListRolesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @deprecated OpenAPI ListRules is deprecated, please use Qualitycheck::2019-01-15::ListRulesV4 instead.  * @param request  the request parameters of ListRules  ListRulesRequest
+     * @return ListRulesResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<ListRulesResponse> listRules(ListRulesRequest request) {
         try {
@@ -1013,6 +1040,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRulesV4  ListRulesV4Request
+     * @return ListRulesV4Response
+     */
     @Override
     public CompletableFuture<ListRulesV4Response> listRulesV4(ListRulesV4Request request) {
         try {
@@ -1027,6 +1058,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSchemeTaskConfig  ListSchemeTaskConfigRequest
+     * @return ListSchemeTaskConfigResponse
+     */
     @Override
     public CompletableFuture<ListSchemeTaskConfigResponse> listSchemeTaskConfig(ListSchemeTaskConfigRequest request) {
         try {
@@ -1041,6 +1076,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI ListSessionGroup is deprecated  * @param request  the request parameters of ListSessionGroup  ListSessionGroupRequest
+     * @return ListSessionGroupResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<ListSessionGroupResponse> listSessionGroup(ListSessionGroupRequest request) {
         try {
@@ -1055,6 +1095,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSkillGroupConfig  ListSkillGroupConfigRequest
+     * @return ListSkillGroupConfigResponse
+     */
     @Override
     public CompletableFuture<ListSkillGroupConfigResponse> listSkillGroupConfig(ListSkillGroupConfigRequest request) {
         try {
@@ -1069,6 +1113,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskAssignRules  ListTaskAssignRulesRequest
+     * @return ListTaskAssignRulesResponse
+     */
     @Override
     public CompletableFuture<ListTaskAssignRulesResponse> listTaskAssignRules(ListTaskAssignRulesRequest request) {
         try {
@@ -1083,6 +1131,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -1097,6 +1149,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWarningConfig  ListWarningConfigRequest
+     * @return ListWarningConfigResponse
+     */
     @Override
     public CompletableFuture<ListWarningConfigResponse> listWarningConfig(ListWarningConfigRequest request) {
         try {
@@ -1111,6 +1167,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWarningStrategyConfig  ListWarningStrategyConfigRequest
+     * @return ListWarningStrategyConfigResponse
+     */
     @Override
     public CompletableFuture<ListWarningStrategyConfigResponse> listWarningStrategyConfig(ListWarningStrategyConfigRequest request) {
         try {
@@ -1125,20 +1185,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<RestartAsrTaskResponse> restartAsrTask(RestartAsrTaskRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartAsrTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartAsrTaskResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RestartAsrTaskResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of RevertAssignedSession  RevertAssignedSessionRequest
+     * @return RevertAssignedSessionResponse
+     */
     @Override
     public CompletableFuture<RevertAssignedSessionResponse> revertAssignedSession(RevertAssignedSessionRequest request) {
         try {
@@ -1153,6 +1203,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI RevertAssignedSessionGroup is deprecated  * @param request  the request parameters of RevertAssignedSessionGroup  RevertAssignedSessionGroupRequest
+     * @return RevertAssignedSessionGroupResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<RevertAssignedSessionGroupResponse> revertAssignedSessionGroup(RevertAssignedSessionGroupRequest request) {
         try {
@@ -1167,6 +1222,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI SaveConfigDataSet is deprecated  * @param request  the request parameters of SaveConfigDataSet  SaveConfigDataSetRequest
+     * @return SaveConfigDataSetResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<SaveConfigDataSetResponse> saveConfigDataSet(SaveConfigDataSetRequest request) {
         try {
@@ -1181,6 +1241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitComplaint  SubmitComplaintRequest
+     * @return SubmitComplaintResponse
+     */
     @Override
     public CompletableFuture<SubmitComplaintResponse> submitComplaint(SubmitComplaintRequest request) {
         try {
@@ -1195,6 +1259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitPrecisionTask  SubmitPrecisionTaskRequest
+     * @return SubmitPrecisionTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitPrecisionTaskResponse> submitPrecisionTask(SubmitPrecisionTaskRequest request) {
         try {
@@ -1209,6 +1277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitQualityCheckTask  SubmitQualityCheckTaskRequest
+     * @return SubmitQualityCheckTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitQualityCheckTaskResponse> submitQualityCheckTask(SubmitQualityCheckTaskRequest request) {
         try {
@@ -1223,6 +1295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitReviewInfo  SubmitReviewInfoRequest
+     * @return SubmitReviewInfoResponse
+     */
     @Override
     public CompletableFuture<SubmitReviewInfoResponse> submitReviewInfo(SubmitReviewInfoRequest request) {
         try {
@@ -1237,6 +1313,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncQualityCheck  SyncQualityCheckRequest
+     * @return SyncQualityCheckResponse
+     */
     @Override
     public CompletableFuture<SyncQualityCheckResponse> syncQualityCheck(SyncQualityCheckRequest request) {
         try {
@@ -1251,6 +1331,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TestRuleV4  TestRuleV4Request
+     * @return TestRuleV4Response
+     */
     @Override
     public CompletableFuture<TestRuleV4Response> testRuleV4(TestRuleV4Request request) {
         try {
@@ -1265,6 +1349,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAsrVocab  UpdateAsrVocabRequest
+     * @return UpdateAsrVocabResponse
+     */
     @Override
     public CompletableFuture<UpdateAsrVocabResponse> updateAsrVocab(UpdateAsrVocabRequest request) {
         try {
@@ -1279,6 +1367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCheckTypeToScheme  UpdateCheckTypeToSchemeRequest
+     * @return UpdateCheckTypeToSchemeResponse
+     */
     @Override
     public CompletableFuture<UpdateCheckTypeToSchemeResponse> updateCheckTypeToScheme(UpdateCheckTypeToSchemeRequest request) {
         try {
@@ -1293,6 +1385,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateQualityCheckData  UpdateQualityCheckDataRequest
+     * @return UpdateQualityCheckDataResponse
+     */
     @Override
     public CompletableFuture<UpdateQualityCheckDataResponse> updateQualityCheckData(UpdateQualityCheckDataRequest request) {
         try {
@@ -1307,6 +1403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateQualityCheckScheme  UpdateQualityCheckSchemeRequest
+     * @return UpdateQualityCheckSchemeResponse
+     */
     @Override
     public CompletableFuture<UpdateQualityCheckSchemeResponse> updateQualityCheckScheme(UpdateQualityCheckSchemeRequest request) {
         try {
@@ -1321,6 +1421,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI UpdateRule is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.  * @param request  the request parameters of UpdateRule  UpdateRuleRequest
+     * @return UpdateRuleResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateRuleResponse> updateRule(UpdateRuleRequest request) {
         try {
@@ -1335,6 +1440,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI UpdateRuleById is deprecated, please use Qualitycheck::2019-01-15::UpdateRuleV4 instead.  * @param request  the request parameters of UpdateRuleById  UpdateRuleByIdRequest
+     * @return UpdateRuleByIdResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateRuleByIdResponse> updateRuleById(UpdateRuleByIdRequest request) {
         try {
@@ -1349,6 +1459,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRuleToScheme  UpdateRuleToSchemeRequest
+     * @return UpdateRuleToSchemeResponse
+     */
     @Override
     public CompletableFuture<UpdateRuleToSchemeResponse> updateRuleToScheme(UpdateRuleToSchemeRequest request) {
         try {
@@ -1363,6 +1477,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRuleV4  UpdateRuleV4Request
+     * @return UpdateRuleV4Response
+     */
     @Override
     public CompletableFuture<UpdateRuleV4Response> updateRuleV4(UpdateRuleV4Request request) {
         try {
@@ -1377,6 +1495,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSchemeTaskConfig  UpdateSchemeTaskConfigRequest
+     * @return UpdateSchemeTaskConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateSchemeTaskConfigResponse> updateSchemeTaskConfig(UpdateSchemeTaskConfigRequest request) {
         try {
@@ -1391,20 +1513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<UpdateScoreForApiResponse> updateScoreForApi(UpdateScoreForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateScoreForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateScoreForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateScoreForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of UpdateSkillGroupConfig  UpdateSkillGroupConfigRequest
+     * @return UpdateSkillGroupConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateSkillGroupConfigResponse> updateSkillGroupConfig(UpdateSkillGroupConfigRequest request) {
         try {
@@ -1419,20 +1531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<UpdateSubScoreForApiResponse> updateSubScoreForApi(UpdateSubScoreForApiRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateSubScoreForApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSubScoreForApiResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateSubScoreForApiResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of UpdateSyncQualityCheckData  UpdateSyncQualityCheckDataRequest
+     * @return UpdateSyncQualityCheckDataResponse
+     */
     @Override
     public CompletableFuture<UpdateSyncQualityCheckDataResponse> updateSyncQualityCheckData(UpdateSyncQualityCheckDataRequest request) {
         try {
@@ -1447,6 +1549,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTaskAssignRule  UpdateTaskAssignRuleRequest
+     * @return UpdateTaskAssignRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateTaskAssignRuleResponse> updateTaskAssignRule(UpdateTaskAssignRuleRequest request) {
         try {
@@ -1461,6 +1567,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {
@@ -1475,20 +1585,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<UpdateUserConfigResponse> updateUserConfig(UpdateUserConfigRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateUserConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateUserConfigResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateUserConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of UpdateWarningConfig  UpdateWarningConfigRequest
+     * @return UpdateWarningConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateWarningConfigResponse> updateWarningConfig(UpdateWarningConfigRequest request) {
         try {
@@ -1503,6 +1603,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWarningStrategyConfig  UpdateWarningStrategyConfigRequest
+     * @return UpdateWarningStrategyConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateWarningStrategyConfigResponse> updateWarningStrategyConfig(UpdateWarningStrategyConfigRequest request) {
         try {
@@ -1517,6 +1621,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadAudioData  UploadAudioDataRequest
+     * @return UploadAudioDataResponse
+     */
     @Override
     public CompletableFuture<UploadAudioDataResponse> uploadAudioData(UploadAudioDataRequest request) {
         try {
@@ -1532,9 +1640,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI UploadData is deprecated, please use Qualitycheck::2019-01-15::UploadDataV4 instead.  * @param request  the request parameters of UploadData  UploadDataRequest
+     * @return UploadDataResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UploadDataResponse> uploadData(UploadDataRequest request) {
         try {
@@ -1549,6 +1658,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadDataSync  UploadDataSyncRequest
+     * @return UploadDataSyncResponse
+     */
     @Override
     public CompletableFuture<UploadDataSyncResponse> uploadDataSync(UploadDataSyncRequest request) {
         try {
@@ -1563,6 +1676,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadDataV4  UploadDataV4Request
+     * @return UploadDataV4Response
+     */
     @Override
     public CompletableFuture<UploadDataV4Response> uploadDataV4(UploadDataV4Request request) {
         try {
@@ -1577,6 +1694,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadRule  UploadRuleRequest
+     * @return UploadRuleResponse
+     */
     @Override
     public CompletableFuture<UploadRuleResponse> uploadRule(UploadRuleRequest request) {
         try {
@@ -1591,6 +1712,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyFile  VerifyFileRequest
+     * @return VerifyFileResponse
+     */
     @Override
     public CompletableFuture<VerifyFileResponse> verifyFile(VerifyFileRequest request) {
         try {
@@ -1605,6 +1730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifySentence  VerifySentenceRequest
+     * @return VerifySentenceResponse
+     */
     @Override
     public CompletableFuture<VerifySentenceResponse> verifySentence(VerifySentenceRequest request) {
         try {

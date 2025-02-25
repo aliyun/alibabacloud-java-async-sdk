@@ -1,47 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserProvisioningRequest} extends {@link RequestModel}
  *
  * <p>CreateUserProvisioningRequest</p>
  */
 public class CreateUserProvisioningRequest extends Request {
-    @Query
-    @NameInMap("DeletionStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionStrategy")
     private String deletionStrategy;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("DuplicationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DuplicationStrategy")
     private String duplicationStrategy;
 
-    @Query
-    @NameInMap("PrincipalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalId")
     private String principalId;
 
-    @Query
-    @NameInMap("PrincipalType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
     private String principalType;
 
-    @Query
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private CreateUserProvisioningRequest(Builder builder) {
@@ -152,7 +152,14 @@ public class CreateUserProvisioningRequest extends Request {
         } 
 
         /**
-         * DeletionStrategy.
+         * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
+         * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Delete</p>
          */
         public Builder deletionStrategy(String deletionStrategy) {
             this.putQueryParameter("DeletionStrategy", deletionStrategy);
@@ -161,7 +168,10 @@ public class CreateUserProvisioningRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a user provisioning.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -170,7 +180,10 @@ public class CreateUserProvisioningRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -179,7 +192,14 @@ public class CreateUserProvisioningRequest extends Request {
         }
 
         /**
-         * DuplicationStrategy.
+         * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
+         * <ul>
+         * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
+         * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KeepBoth</p>
          */
         public Builder duplicationStrategy(String duplicationStrategy) {
             this.putQueryParameter("DuplicationStrategy", duplicationStrategy);
@@ -188,7 +208,14 @@ public class CreateUserProvisioningRequest extends Request {
         }
 
         /**
-         * PrincipalId.
+         * <p>The identity ID of the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>If you set the <code>PrincipalType</code> parameter to <code>Group</code>, the value of this parameter is the ID of a CloudSSO user group (g-********).</li>
+         * <li>If you set the <code>PrincipalType</code> parameter to <code>User</code>, the value of this parameter is the ID of a CloudSSO user (u-********).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>g-02ha881d*****</p>
          */
         public Builder principalId(String principalId) {
             this.putQueryParameter("PrincipalId", principalId);
@@ -197,7 +224,14 @@ public class CreateUserProvisioningRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * <p>The identity type of the RAM user provisioning. Valid values:</p>
+         * <ul>
+         * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
+         * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Group</p>
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -206,7 +240,10 @@ public class CreateUserProvisioningRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * <p>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743382******</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -215,7 +252,10 @@ public class CreateUserProvisioningRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

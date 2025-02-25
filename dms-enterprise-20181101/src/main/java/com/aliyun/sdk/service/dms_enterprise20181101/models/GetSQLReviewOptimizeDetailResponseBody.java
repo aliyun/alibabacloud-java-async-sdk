@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSQLReviewOptimizeDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetSQLReviewOptimizeDetailResponseBody</p>
  */
 public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OptimizeDetail")
+    @com.aliyun.core.annotation.NameInMap("OptimizeDetail")
     private OptimizeDetail optimizeDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSQLReviewOptimizeDetailResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of optimization suggestions for SQL statements.
+         * <p>The details of optimization suggestions for SQL statements.</p>
          */
         public Builder optimizeDetail(OptimizeDetail optimizeDetail) {
             this.optimizeDetail = optimizeDetail;
@@ -110,7 +121,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +148,20 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSQLReviewOptimizeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSQLReviewOptimizeDetailResponseBody</p>
+     */
     public static class Scripts extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("OpType")
+        @com.aliyun.core.annotation.NameInMap("OpType")
         private String opType;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Scripts(Builder builder) {
@@ -182,7 +205,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The content of the SQL script.
+             * <p>The content of the SQL script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alter table xxx add index idx_xx(yyy);</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -190,7 +216,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the SQL script. The value is set to AddIndex.
+             * <p>The purpose of the SQL script. The value is set to AddIndex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddIndex</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -198,7 +227,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -212,24 +244,30 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSQLReviewOptimizeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSQLReviewOptimizeDetailResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("Feedback")
+        @com.aliyun.core.annotation.NameInMap("Feedback")
         private String feedback;
 
-        @NameInMap("Messages")
-        private java.util.List < String > messages;
+        @com.aliyun.core.annotation.NameInMap("Messages")
+        private java.util.List<String> messages;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Scripts")
-        private java.util.List < Scripts> scripts;
+        @com.aliyun.core.annotation.NameInMap("Scripts")
+        private java.util.List<Scripts> scripts;
 
         private Results(Builder builder) {
             this.comments = builder.comments;
@@ -265,7 +303,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         /**
          * @return messages
          */
-        public java.util.List < String > getMessages() {
+        public java.util.List<String> getMessages() {
             return this.messages;
         }
 
@@ -286,20 +324,23 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         /**
          * @return scripts
          */
-        public java.util.List < Scripts> getScripts() {
+        public java.util.List<Scripts> getScripts() {
             return this.scripts;
         }
 
         public static final class Builder {
             private String comments; 
             private String feedback; 
-            private java.util.List < String > messages; 
+            private java.util.List<String> messages; 
             private String ruleName; 
             private String ruleType; 
-            private java.util.List < Scripts> scripts; 
+            private java.util.List<Scripts> scripts; 
 
             /**
-             * The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](~~194114~~).
+             * <p>The comment that is specified when you create the SQL review rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx business rule: the query must have a where condition.</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -307,15 +348,18 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The optimization suggestion for the SQL statement. Valid values:
-             * <p>
+             * <p>The optimization suggestion for the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>MUST_IMPROVE</strong>: The SQL statement must be improved.</li>
+             * <li><strong>POTENTIAL_ISSUE</strong>: The SQL statement contains potential issues.</li>
+             * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you improve the SQL statement.</li>
+             * <li><strong>USEDMSTOOLKIT</strong>: We recommend that you change schemas without locking tables.</li>
+             * <li><strong>USEDMSDML_UNLOCK</strong>: We recommend that you change data without locking tables.</li>
+             * <li><strong>TABLEINDEXSUGGEST</strong>: We recommend that you use SQL statements that use indexes.</li>
+             * </ul>
              * 
-             * *   **MUST_IMPROVE**: The SQL statement must be improved.
-             * *   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.
-             * *   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.
-             * *   **USEDMSTOOLKIT**: We recommend that you change schemas without locking tables.
-             * *   **USEDMSDML_UNLOCK**: We recommend that you change data without locking tables.
-             * *   **TABLEINDEXSUGGEST**: We recommend that you use SQL statements that use indexes.
+             * <strong>example:</strong>
+             * <p>MUST_IMPROVE</p>
              */
             public Builder feedback(String feedback) {
                 this.feedback = feedback;
@@ -323,15 +367,18 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The review results.
+             * <p>The review results.</p>
              */
-            public Builder messages(java.util.List < String > messages) {
+            public Builder messages(java.util.List<String> messages) {
                 this.messages = messages;
                 return this;
             }
 
             /**
-             * The name of the rule. For more information, see [SQL review optimization](~~194114~~).
+             * <p>The name of the rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT_SUGGEST_ASSIGN_WHERE</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -339,11 +386,14 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL review rule. Valid values:
-             * <p>
+             * <p>The type of the SQL review rule. Valid values:</p>
+             * <ul>
+             * <li><strong>REVIEW</strong>: a rule that is used to review SQL statements based on standards.</li>
+             * <li><strong>OPTIMIZE</strong>: a rule that is used to provide optimization suggestions.</li>
+             * </ul>
              * 
-             * *   **REVIEW**: a rule that is used to review SQL statements based on standards.
-             * *   **OPTIMIZE**: a rule that is used to provide optimization suggestions.
+             * <strong>example:</strong>
+             * <p>REVIEW</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -351,9 +401,9 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL script for data changes.
+             * <p>The SQL script for data changes.</p>
              */
-            public Builder scripts(java.util.List < Scripts> scripts) {
+            public Builder scripts(java.util.List<Scripts> scripts) {
                 this.scripts = scripts;
                 return this;
             }
@@ -365,15 +415,21 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSQLReviewOptimizeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSQLReviewOptimizeDetailResponseBody</p>
+     */
     public static class QualityResult extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("OccurError")
+        @com.aliyun.core.annotation.NameInMap("OccurError")
         private Boolean occurError;
 
-        @NameInMap("Results")
-        private java.util.List < Results> results;
+        @com.aliyun.core.annotation.NameInMap("Results")
+        private java.util.List<Results> results;
 
         private QualityResult(Builder builder) {
             this.errorMessage = builder.errorMessage;
@@ -406,17 +462,20 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
         public static final class Builder {
             private String errorMessage; 
             private Boolean occurError; 
-            private java.util.List < Results> results; 
+            private java.util.List<Results> results; 
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>syntax error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -424,11 +483,14 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an error occurs. Valid values:
-             * <p>
+             * <p>Indicates whether an error occurs. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: An error occurs.</li>
+             * <li><strong>false</strong>: No error occurs.</li>
+             * </ul>
              * 
-             * *   **true**: An error occurs.
-             * *   **false**: No error occurs.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder occurError(Boolean occurError) {
                 this.occurError = occurError;
@@ -436,9 +498,9 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The review results based on rules.
+             * <p>The review results based on rules.</p>
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }
@@ -450,20 +512,26 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSQLReviewOptimizeDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSQLReviewOptimizeDetailResponseBody</p>
+     */
     public static class OptimizeDetail extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Integer dbId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Integer instanceId;
 
-        @NameInMap("QualityResult")
+        @com.aliyun.core.annotation.NameInMap("QualityResult")
         private QualityResult qualityResult;
 
-        @NameInMap("QueryKey")
+        @com.aliyun.core.annotation.NameInMap("QueryKey")
         private String queryKey;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
         private OptimizeDetail(Builder builder) {
@@ -525,7 +593,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             private String sqlType; 
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111222</p>
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -533,7 +604,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the database belongs.
+             * <p>The ID of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123321</p>
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -541,7 +615,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The quality of the SQL statement.
+             * <p>The quality of the SQL statement.</p>
              */
             public Builder qualityResult(QualityResult qualityResult) {
                 this.qualityResult = qualityResult;
@@ -549,7 +623,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The key that is used to query the details of optimization suggestions.
+             * <p>The key that is used to query the details of optimization suggestions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a57e54ec5433475ea3082d882fdb****</p>
              */
             public Builder queryKey(String queryKey) {
                 this.queryKey = queryKey;
@@ -557,7 +634,10 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement. Valid values: DELETE, UPDATE, and ALTER_TABLE.
+             * <p>The type of the SQL statement. Valid values: DELETE, UPDATE, and ALTER_TABLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;

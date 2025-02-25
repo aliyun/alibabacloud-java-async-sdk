@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachAppPolicyFromIdentityRequest} extends {@link RequestModel}
  *
  * <p>DetachAppPolicyFromIdentityRequest</p>
  */
 public class DetachAppPolicyFromIdentityRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("IdentityName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityName;
 
-    @Query
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Query
-    @NameInMap("PolicyNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyNames;
 
     private DetachAppPolicyFromIdentityRequest(Builder builder) {
@@ -99,10 +104,14 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         } 
 
         /**
-         * The ID of the application. This parameter is optional when the PolicyNames parameter is set to VODAppAdministratorAccess. This parameter is required when the PolicyNames parameter is set to other values.
-         * <p>
-         * *   Default value: **app-1000000**.
-         * *   For more information, see [Overview](~~113600~~).
+         * <p>The ID of the application. This parameter is optional if you set PolicyNames to VODAppAdministratorAccess. This parameter is required if you set PolicyNames to a value other than VODAppAdministratorAccess.</p>
+         * <ul>
+         * <li>Default value: <strong>app-1000000</strong>.</li>
+         * <li>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -111,10 +120,15 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The name of the identity.
-         * <p>
-         * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
-         * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
+         * <p>The ID of the RAM user or the name of the RAM role.</p>
+         * <ul>
+         * <li>Specifies the ID of the RAM user for this parameter if you set IdentityType to RamUser.</li>
+         * <li>Specifies the name of the RAM role for this parameter if you set IdentityType to RamRole.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****name</p>
          */
         public Builder identityName(String identityName) {
             this.putQueryParameter("IdentityName", identityName);
@@ -123,10 +137,15 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The type of the identity. Valid values:
-         * <p>
-         * *   **RamUser**: a RAM user.
-         * *   **RamRole**: a RAM role.
+         * <p>The type of the identity. Valid values:</p>
+         * <ul>
+         * <li><strong>RamUser</strong>: RAM user</li>
+         * <li><strong>RamRole</strong>: RAM role</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);
@@ -135,11 +154,16 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The name of the policy. Separate multiple policies with commas (,). Only system policies are supported.
-         * <p>
-         * *   **VODAppFullAccess**: authorizes an identity to manage all resources in an application.
-         * *   **VODAppReadOnlyAccess**: authorizes an identity to access all resources in an application in read-only mode.
-         * *   **VODAppAdministratorAccess**: assigns the application administrator role to an identity.
+         * <p>The name of the policy. Separate multiple names with commas (,). Only system policies are supported.</p>
+         * <ul>
+         * <li><strong>VODAppFullAccess</strong>: permissions to manage all resources in an application</li>
+         * <li><strong>VODAppReadOnlyAccess</strong>: permissions to read all resources in an application</li>
+         * <li><strong>VODAppAdministratorAccess</strong>: permissions of the application administrator</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VODAppFullAccess</p>
          */
         public Builder policyNames(String policyNames) {
             this.putQueryParameter("PolicyNames", policyNames);

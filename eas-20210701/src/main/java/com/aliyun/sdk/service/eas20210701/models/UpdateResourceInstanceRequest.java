@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateResourceInstanceRequest</p>
  */
 public class UpdateResourceInstanceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Action")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Action")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String action;
 
     private UpdateResourceInstanceRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class UpdateResourceInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region to which the instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -109,7 +118,11 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group to which the instance belongs. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -118,7 +131,11 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. For more information about how to query the instance ID, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-i-asdasdasd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -127,7 +144,16 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * Action.
+         * <p>The operation that updates the scheduling state of the instance in a dedicated resource group. Valid values:</p>
+         * <ul>
+         * <li>Uncordon: allows scheduling the service to this instance.</li>
+         * <li>Cordon: prohibits scheduling the service to this instance.</li>
+         * <li>Drain: evicts the service that has been scheduled to this instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cordon</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("Action", action);

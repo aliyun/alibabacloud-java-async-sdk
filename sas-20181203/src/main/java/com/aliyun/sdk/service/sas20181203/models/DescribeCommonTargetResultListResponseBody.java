@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommonTargetResultListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCommonTargetResultListResponseBody</p>
  */
 public class DescribeCommonTargetResultListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetConfig")
+    @com.aliyun.core.annotation.NameInMap("TargetConfig")
     private TargetConfig targetConfig;
 
     private DescribeCommonTargetResultListResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         private TargetConfig targetConfig; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the configuration item.
+         * <p>The information about the configuration item.</p>
          */
         public Builder targetConfig(TargetConfig targetConfig) {
             this.targetConfig = targetConfig;
@@ -71,23 +79,29 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommonTargetResultListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonTargetResultListResponseBody</p>
+     */
     public static class TargetConfig extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("TargetDefault")
+        @com.aliyun.core.annotation.NameInMap("TargetDefault")
         private String targetDefault;
 
-        @NameInMap("TargetList")
-        private java.util.List < String > targetList;
+        @com.aliyun.core.annotation.NameInMap("TargetList")
+        private java.util.List<String> targetList;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TargetConfig(Builder builder) {
@@ -124,7 +138,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         /**
          * @return targetList
          */
-        public java.util.List < String > getTargetList() {
+        public java.util.List<String> getTargetList() {
             return this.targetList;
         }
 
@@ -152,17 +166,20 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         public static final class Builder {
             private String flag; 
             private String targetDefault; 
-            private java.util.List < String > targetList; 
+            private java.util.List<String> targetList; 
             private String targetType; 
             private String totalCount; 
             private String type; 
 
             /**
-             * The identifier that indicates whether the configuration item is applied to the server. Valid values:
-             * <p>
+             * <p>The identifier that indicates whether the configuration item is applied to the server. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: applied</li>
+             * <li><strong>del</strong>: not applied</li>
+             * </ul>
              * 
-             * *   **add**: applied
-             * *   **del**: not applied
+             * <strong>example:</strong>
+             * <p>del</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -170,7 +187,10 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The default identifier.
+             * <p>The default identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder targetDefault(String targetDefault) {
                 this.targetDefault = targetDefault;
@@ -178,22 +198,25 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the IDs of the server groups or the UUIDs of the servers.
-             * <p>
-             * 
-             * >  If **uuid** is returned for the **TargetType** parameter, **UUIDs** of the servers are returned. If **groupId** is returned for the **TargetType** parameter, IDs of the server groups are returned.
+             * <p>An array that consists of the IDs of the server groups or the UUIDs of the servers.</p>
+             * <blockquote>
+             * <p> If <strong>uuid</strong> is returned for the <strong>TargetType</strong> parameter, <strong>UUIDs</strong> of the servers are returned. If <strong>groupId</strong> is returned for the <strong>TargetType</strong> parameter, IDs of the server groups are returned.</p>
+             * </blockquote>
              */
-            public Builder targetList(java.util.List < String > targetList) {
+            public Builder targetList(java.util.List<String> targetList) {
                 this.targetList = targetList;
                 return this;
             }
 
             /**
-             * The type of the server to which the configuration item is applied. Valid values:
-             * <p>
+             * <p>The type of the server to which the configuration item is applied. Valid values:</p>
+             * <ul>
+             * <li><strong>uuid</strong>: a server</li>
+             * <li><strong>groupId</strong>: a server group</li>
+             * </ul>
              * 
-             * *   **uuid**: a server
-             * *   **groupId**: a server group
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -201,7 +224,10 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;
@@ -209,13 +235,16 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the configuration item. Valid values:
-             * <p>
+             * <p>The type of the configuration item. Valid values:</p>
+             * <ul>
+             * <li><strong>webshell_timescan</strong>: webshell detection and removal</li>
+             * <li><strong>aliscriptengine</strong>: in-depth detection engine</li>
+             * <li><strong>alidetect</strong>: installation scope of local file detection</li>
+             * <li><strong>alidetect-scan-enable</strong>: detection scope of local file detection</li>
+             * </ul>
              * 
-             * *   **webshell_timescan**: webshell detection and removal
-             * *   **aliscriptengine**: in-depth detection engine
-             * *   **alidetect**: installation scope of local file detection
-             * *   **alidetect-scan-enable**: detection scope of local file detection
+             * <strong>example:</strong>
+             * <p>webshell_timescan</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveReceiverDetailRequest} extends {@link RequestModel}
  *
  * <p>SaveReceiverDetailRequest</p>
  */
 public class SaveReceiverDetailRequest extends Request {
-    @Query
-    @NameInMap("Detail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Detail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String detail;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReceiverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReceiverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiverId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SaveReceiverDetailRequest(Builder builder) {
@@ -112,7 +117,10 @@ public class SaveReceiverDetailRequest extends Request {
         } 
 
         /**
-         * Detail.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{“b”:” birthday”,”e”:”<a href="mailto:xxx@alibaba-inc.com">xxx@alibaba-inc.com</a>”,”g”:” gender”,”m”:” mobile “,”n”:” nickname “,”u”:”name “}]</p>
          */
         public Builder detail(String detail) {
             this.putQueryParameter("Detail", detail);
@@ -130,7 +138,10 @@ public class SaveReceiverDetailRequest extends Request {
         }
 
         /**
-         * ReceiverId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34642</p>
          */
         public Builder receiverId(String receiverId) {
             this.putQueryParameter("ReceiverId", receiverId);

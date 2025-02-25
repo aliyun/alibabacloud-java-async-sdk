@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentIndexResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeComponentIndexResponseBody</p>
  */
 public class DescribeComponentIndexResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeComponentIndexResponseBody(Builder builder) {
@@ -71,14 +71,20 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeComponentIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComponentIndexResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("aliases")
+        @com.aliyun.core.annotation.NameInMap("aliases")
         private java.util.Map < String, ? > aliases;
 
-        @NameInMap("mappings")
+        @com.aliyun.core.annotation.NameInMap("mappings")
         private java.util.Map < String, ? > mappings;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private java.util.Map < String, ? > settings;
 
         private Template(Builder builder) {
@@ -152,11 +158,17 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeComponentIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComponentIndexResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("_meta")
+        @com.aliyun.core.annotation.NameInMap("_meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
 
         private Result(Builder builder) {

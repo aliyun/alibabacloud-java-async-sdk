@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserQuotaResponseBody</p>
  */
 public class DescribeUserQuotaResponseBody extends TeaModel {
-    @NameInMap("ElasticACU")
+    @com.aliyun.core.annotation.NameInMap("ElasticACU")
     private String elasticACU;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReserverdCompteACU")
+    @com.aliyun.core.annotation.NameInMap("ReserverdCompteACU")
     private String reserverdCompteACU;
 
-    @NameInMap("ReserverdStorageACU")
+    @com.aliyun.core.annotation.NameInMap("ReserverdStorageACU")
     private String reserverdStorageACU;
 
-    @NameInMap("ResourceGroupCount")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupCount")
     private String resourceGroupCount;
 
     private DescribeUserQuotaResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private String resourceGroupCount; 
 
         /**
-         * The available elastic AnalyticDB compute units (ACUs).
+         * <p>The available elastic AnalyticDB compute units (ACUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512ACU</p>
          */
         public Builder elasticACU(String elasticACU) {
             this.elasticACU = elasticACU;
@@ -94,7 +102,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0322C7FB-4584-5D2A-BF7F-F9036E940C35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +113,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The available reserved computing resources.
+         * <p>The available reserved computing resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48ACU</p>
          */
         public Builder reserverdCompteACU(String reserverdCompteACU) {
             this.reserverdCompteACU = reserverdCompteACU;
@@ -110,7 +124,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The available reserved storage resources.
+         * <p>The available reserved storage resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24ACU</p>
          */
         public Builder reserverdStorageACU(String reserverdStorageACU) {
             this.reserverdStorageACU = reserverdStorageACU;
@@ -118,7 +135,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The number of available resource groups.
+         * <p>The number of available resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder resourceGroupCount(String resourceGroupCount) {
             this.resourceGroupCount = resourceGroupCount;

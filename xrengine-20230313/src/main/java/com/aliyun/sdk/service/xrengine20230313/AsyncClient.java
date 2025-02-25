@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.xrengine20230313;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.xrengine20230313.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -20,9 +21,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AuthUserResponse> authUser(AuthUserRequest request);
 
+    CompletableFuture<BatchQueryMotionShopTaskStatusResponse> batchQueryMotionShopTaskStatus(BatchQueryMotionShopTaskStatusRequest request);
+
+    CompletableFuture<CreateAvatarTalkProjectResponse> createAvatarTalkProject(CreateAvatarTalkProjectRequest request);
+
     CompletableFuture<CreateDigitalHumanProjectResponse> createDigitalHumanProject(CreateDigitalHumanProjectRequest request);
 
     CompletableFuture<CreateLivePortraitProjectResponse> createLivePortraitProject(CreateLivePortraitProjectRequest request);
+
+    CompletableFuture<GenerateMotionShopVideoUploadUrlResponse> generateMotionShopVideoUploadUrl(GenerateMotionShopVideoUploadUrlRequest request);
 
     CompletableFuture<GetMapDataResponse> getMapData(GetMapDataRequest request);
 
@@ -30,15 +37,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InitLocateResponse> initLocate(InitLocateRequest request);
 
+    CompletableFuture<ListCommonMaterialsResponse> listCommonMaterials(ListCommonMaterialsRequest request);
+
     CompletableFuture<ListDigitalHumanMaterialsResponse> listDigitalHumanMaterials(ListDigitalHumanMaterialsRequest request);
 
     CompletableFuture<ListLocationServiceResponse> listLocationService(ListLocationServiceRequest request);
+
+    CompletableFuture<ListMotionShopTasksResponse> listMotionShopTasks(ListMotionShopTasksRequest request);
 
     CompletableFuture<LivePortraitFaceDetectResponse> livePortraitFaceDetect(LivePortraitFaceDetectRequest request);
 
     CompletableFuture<LocateResponse> locate(LocateRequest request);
 
+    CompletableFuture<LoginHuggingFaceResponse> loginHuggingFace(LoginHuggingFaceRequest request);
+
     CompletableFuture<LoginModelScopeResponse> loginModelScope(LoginModelScopeRequest request);
+
+    CompletableFuture<MotionShopVideoDetectResponse> motionShopVideoDetect(MotionShopVideoDetectRequest request);
 
     CompletableFuture<PopBatchQueryObjectGenerationProjectStatusResponse> popBatchQueryObjectGenerationProjectStatus(PopBatchQueryObjectGenerationProjectStatusRequest request);
 
@@ -120,7 +135,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryLongTtsResultResponse> queryLongTtsResult(QueryLongTtsResultRequest request);
 
+    CompletableFuture<QueryMotionShopVideoDetectResultResponse> queryMotionShopVideoDetectResult(QueryMotionShopVideoDetectResultRequest request);
+
     CompletableFuture<SubmitLongTtsTaskResponse> submitLongTtsTask(SubmitLongTtsTaskRequest request);
+
+    CompletableFuture<SubmitMotionShopTaskResponse> submitMotionShopTask(SubmitMotionShopTaskRequest request);
 
     CompletableFuture<UpdateUserEmailResponse> updateUserEmail(UpdateUserEmailRequest request);
 

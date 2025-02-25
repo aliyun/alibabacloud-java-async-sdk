@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssObjectDetailResponseBody</p>
  */
 public class DescribeOssObjectDetailResponseBody extends TeaModel {
-    @NameInMap("OssObjectDetail")
+    @com.aliyun.core.annotation.NameInMap("OssObjectDetail")
     private OssObjectDetail ossObjectDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOssObjectDetailResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OssObjectDetail.
+         * <p>The details of the OSS object.</p>
          */
         public Builder ossObjectDetail(OssObjectDetail ossObjectDetail) {
             this.ossObjectDetail = ossObjectDetail;
@@ -58,7 +63,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,25 +79,118 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailResponseBody</p>
+     */
+    public static class ModelTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private ModelTags(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModelTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * <p>The tag ID.</p>
+             * <ul>
+             * <li><strong>101</strong>: sensitive personal information</li>
+             * <li><strong>102</strong>: personal information</li>
+             * <li><strong>103</strong>: important information</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The tag name.</p>
+             * <ul>
+             * <li>Sensitive personal information</li>
+             * <li>Personal information</li>
+             * <li>Important information</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>personal sensitive data</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ModelTags build() {
+                return new ModelTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("ModelTags")
+        private java.util.List<ModelTags> modelTags;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private RuleList(Builder builder) {
             this.categoryName = builder.categoryName;
             this.count = builder.count;
+            this.modelTags = builder.modelTags;
             this.riskLevelId = builder.riskLevelId;
             this.riskLevelName = builder.riskLevelName;
             this.ruleName = builder.ruleName;
@@ -118,6 +219,13 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelTags
+         */
+        public java.util.List<ModelTags> getModelTags() {
+            return this.modelTags;
+        }
+
+        /**
          * @return riskLevelId
          */
         public Long getRiskLevelId() {
@@ -141,12 +249,16 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String categoryName; 
             private Long count; 
+            private java.util.List<ModelTags> modelTags; 
             private Long riskLevelId; 
             private String riskLevelName; 
             private String ruleName; 
 
             /**
-             * CategoryName.
+             * <p>The type of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Excel file</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -154,7 +266,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of times that the OSS object hits the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -162,7 +277,25 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>A list of tags for data that hits the recognition model.</p>
+             */
+            public Builder modelTags(java.util.List<ModelTags> modelTags) {
+                this.modelTags = modelTags;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the sensitivity level of the OSS object.</p>
+             * <ul>
+             * <li><strong>1</strong>: No sensitive data is detected.</li>
+             * <li><strong>2</strong>: indicates the low sensitivity level.</li>
+             * <li><strong>3</strong>: indicates the medium sensitivity level.</li>
+             * <li><strong>4</strong>: indicates the high sensitivity level.</li>
+             * <li><strong>5</strong>: indicates the highest sensitivity level.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -170,7 +303,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The name of the sensitivity level for the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium sensitivity level</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -178,7 +314,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the sensitive data detection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*** rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -192,24 +331,30 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOssObjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectDetailResponseBody</p>
+     */
     public static class OssObjectDetail extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        @com.aliyun.core.annotation.NameInMap("RuleList")
+        private java.util.List<RuleList> ruleList;
 
         private OssObjectDetail(Builder builder) {
             this.bucketName = builder.bucketName;
@@ -266,7 +411,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -276,10 +421,13 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private String name; 
             private String regionId; 
             private String riskLevelName; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
 
             /**
-             * BucketName.
+             * <p>The name of the OSS bucket to which the OSS object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucke***</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -287,7 +435,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The type of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Excel file</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -295,7 +446,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obj_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -303,7 +457,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-***</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -311,7 +468,10 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The name of the sensitivity level for the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium sensitivity level</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -319,9 +479,9 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * <p>A list of the sensitive data detection rules that the OSS object hits.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

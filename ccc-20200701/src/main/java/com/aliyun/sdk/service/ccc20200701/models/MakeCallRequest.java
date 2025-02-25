@@ -1,50 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MakeCallRequest} extends {@link RequestModel}
  *
  * <p>MakeCallRequest</p>
  */
 public class MakeCallRequest extends Request {
-    @Query
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Query
-    @NameInMap("Caller")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
     private String caller;
 
-    @Query
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlashSmsVariables")
+    private String flashSmsVariables;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaskedCallee")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaskedCallee")
     private String maskedCallee;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
+    private String mediaType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("TimeoutSeconds")
-    @Validation(maximum = 300, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 30)
     private Integer timeoutSeconds;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private MakeCallRequest(Builder builder) {
@@ -52,8 +65,10 @@ public class MakeCallRequest extends Request {
         this.callee = builder.callee;
         this.caller = builder.caller;
         this.deviceId = builder.deviceId;
+        this.flashSmsVariables = builder.flashSmsVariables;
         this.instanceId = builder.instanceId;
         this.maskedCallee = builder.maskedCallee;
+        this.mediaType = builder.mediaType;
         this.tags = builder.tags;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.userId = builder.userId;
@@ -94,6 +109,13 @@ public class MakeCallRequest extends Request {
     }
 
     /**
+     * @return flashSmsVariables
+     */
+    public String getFlashSmsVariables() {
+        return this.flashSmsVariables;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -105,6 +127,13 @@ public class MakeCallRequest extends Request {
      */
     public String getMaskedCallee() {
         return this.maskedCallee;
+    }
+
+    /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     /**
@@ -132,8 +161,10 @@ public class MakeCallRequest extends Request {
         private String callee; 
         private String caller; 
         private String deviceId; 
+        private String flashSmsVariables; 
         private String instanceId; 
         private String maskedCallee; 
+        private String mediaType; 
         private String tags; 
         private Integer timeoutSeconds; 
         private String userId; 
@@ -147,15 +178,20 @@ public class MakeCallRequest extends Request {
             this.callee = request.callee;
             this.caller = request.caller;
             this.deviceId = request.deviceId;
+            this.flashSmsVariables = request.flashSmsVariables;
             this.instanceId = request.instanceId;
             this.maskedCallee = request.maskedCallee;
+            this.mediaType = request.mediaType;
             this.tags = request.tags;
             this.timeoutSeconds = request.timeoutSeconds;
             this.userId = request.userId;
         } 
 
         /**
-         * Callee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1318888****</p>
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -182,7 +218,19 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * FlashSmsVariables.
+         */
+        public Builder flashSmsVariables(String flashSmsVariables) {
+            this.putQueryParameter("FlashSmsVariables", flashSmsVariables);
+            this.flashSmsVariables = flashSmsVariables;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -196,6 +244,15 @@ public class MakeCallRequest extends Request {
         public Builder maskedCallee(String maskedCallee) {
             this.putQueryParameter("MaskedCallee", maskedCallee);
             this.maskedCallee = maskedCallee;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

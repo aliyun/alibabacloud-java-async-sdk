@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantPermissionsRequest} extends {@link RequestModel}
  *
  * <p>GrantPermissionsRequest</p>
  */
 public class GrantPermissionsRequest extends Request {
-    @Path
-    @NameInMap("uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uid;
 
-    @Body
-    @NameInMap("body")
-    private java.util.List < GrantPermissionsRequestBody> body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<GrantPermissionsRequestBody> body;
 
     private GrantPermissionsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class GrantPermissionsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < GrantPermissionsRequestBody> getBody() {
+    public java.util.List<GrantPermissionsRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<GrantPermissionsRequest, Builder> {
         private String uid; 
-        private java.util.List < GrantPermissionsRequestBody> body; 
+        private java.util.List<GrantPermissionsRequestBody> body; 
 
         private Builder() {
             super();
@@ -69,7 +74,11 @@ public class GrantPermissionsRequest extends Request {
         } 
 
         /**
-         * The ID of the RAM user.
+         * <p>The ID of the RAM user or RAM role whose permissions you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2367****</p>
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);
@@ -78,9 +87,9 @@ public class GrantPermissionsRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request parameters.</p>
          */
-        public Builder body(java.util.List < GrantPermissionsRequestBody> body) {
+        public Builder body(java.util.List<GrantPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -93,26 +102,32 @@ public class GrantPermissionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GrantPermissionsRequest} extends {@link TeaModel}
+     *
+     * <p>GrantPermissionsRequest</p>
+     */
     public static class GrantPermissionsRequestBody extends TeaModel {
-        @NameInMap("cluster")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cluster")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cluster;
 
-        @NameInMap("is_custom")
+        @com.aliyun.core.annotation.NameInMap("is_custom")
         private Boolean isCustom;
 
-        @NameInMap("is_ram_role")
+        @com.aliyun.core.annotation.NameInMap("is_ram_role")
         private Boolean isRamRole;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("role_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("role_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roleName;
 
-        @NameInMap("role_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("role_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roleType;
 
         private GrantPermissionsRequestBody(Builder builder) {
@@ -183,10 +198,14 @@ public class GrantPermissionsRequest extends Request {
             private String roleType; 
 
             /**
-             * The ID of the cluster that you want to manage.
-             * <p>
+             * <p>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</p>
+             * <ul>
+             * <li>Set this parameter to an empty string if <code>role_type</code> is set to <code>all-clusters</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   When the `role_type` parameter is set to `all-clusters`, this parameter is set to an empty string.
+             * <strong>example:</strong>
+             * <p>c796c60***</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -194,7 +213,10 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * Specifies whether to perform a custom authorization. To perform a custom authorization, set `role_name` to a custom cluster role.
+             * <p>Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set <code>role_name</code> to the name of the custom role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCustom(Boolean isCustom) {
                 this.isCustom = isCustom;
@@ -202,7 +224,10 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * Specifies whether the permissions are granted to a RAM role.
+             * <p>Specifies whether to use a RAM role to grant permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRamRole(Boolean isRamRole) {
                 this.isRamRole = isRamRole;
@@ -210,7 +235,10 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * The namespace to which the permissions are scoped. This parameter is required only if you set role_type to namespace.
+             * <p>The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -218,14 +246,18 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * The predefined role name. Valid values:
-             * <p>
+             * <p>The predefined role. Valid values:</p>
+             * <ul>
+             * <li><code>admin</code>: administrator</li>
+             * <li><code>ops</code>: O&amp;M engineer</li>
+             * <li><code>dev</code>: developer</li>
+             * <li><code>restricted</code>: restricted user</li>
+             * <li>Custom role</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   `admin`: administrator
-             * *   `ops`: O\&M engineer
-             * *   `dev`: developer
-             * *   `restricted`: restricted user
-             * *   The custom cluster role.
+             * <strong>example:</strong>
+             * <p>ops</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -233,12 +265,16 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * The authorization type. Valid values:
-             * <p>
+             * <p>The authorization type. Valid values:</p>
+             * <ul>
+             * <li><code>cluster</code>: authorizes the RAM user or RAM role to manage the specified clusters.</li>
+             * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namepsaces.</li>
+             * <li><code>all-clusters</code>: authorizes the RAM user or RAM role to manage all clusters.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   `cluster`: indicates that the permissions are scoped to a cluster.
-             * *   `namespace`: specifies that the permissions are scoped to a namespace of a cluster.
-             * *   `all-clusters`: specifies that the permissions are scoped to all clusters.
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

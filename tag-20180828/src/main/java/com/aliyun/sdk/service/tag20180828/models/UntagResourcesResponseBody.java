@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>UntagResourcesResponseBody</p>
  */
 public class UntagResourcesResponseBody extends TeaModel {
-    @NameInMap("FailedResources")
+    @com.aliyun.core.annotation.NameInMap("FailedResources")
     private FailedResources failedResources;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UntagResourcesResponseBody(Builder builder) {
@@ -50,14 +55,15 @@ public class UntagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the resources from which tags fail to be removed.
-         * <p>
-         * 
-         * > 
-         * 
-         * *   If tags are removed from all resources, the value of FailedResources is empty.
-         * 
-         * *   If tags fail to be removed from some or all resources, the value of FailedResources contains the detailed information about the resources.
+         * <p>The information about the resources from which tags fail to be removed.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If tags are removed from all resources, the value of FailedResources is empty.</p>
+         * </li>
+         * <li><p>If tags fail to be removed from some or all resources, the value of FailedResources contains the detailed information about the resources.</p>
+         * </li>
+         * </ul>
          */
         public Builder failedResources(FailedResources failedResources) {
             this.failedResources = failedResources;
@@ -65,7 +71,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43D12436-B10F-4469-8136-FD1C5D2B2083</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +87,17 @@ public class UntagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UntagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UntagResourcesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Result(Builder builder) {
@@ -117,7 +132,10 @@ public class UntagResourcesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidResourceId.NotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -125,7 +143,10 @@ public class UntagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified ResourceIds are not found in our records.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -139,11 +160,17 @@ public class UntagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UntagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UntagResourcesResponseBody</p>
+     */
     public static class FailedResource extends TeaModel {
-        @NameInMap("ResourceARN")
+        @com.aliyun.core.annotation.NameInMap("ResourceARN")
         private String resourceARN;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
         private FailedResource(Builder builder) {
@@ -178,7 +205,10 @@ public class UntagResourcesResponseBody extends TeaModel {
             private Result result; 
 
             /**
-             * The ARN of the resource.
+             * <p>The ARN of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-xxxxxxxxxx1</p>
              */
             public Builder resourceARN(String resourceARN) {
                 this.resourceARN = resourceARN;
@@ -186,7 +216,7 @@ public class UntagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the error.
+             * <p>The information about the error.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -200,9 +230,15 @@ public class UntagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UntagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>UntagResourcesResponseBody</p>
+     */
     public static class FailedResources extends TeaModel {
-        @NameInMap("FailedResource")
-        private java.util.List < FailedResource> failedResource;
+        @com.aliyun.core.annotation.NameInMap("FailedResource")
+        private java.util.List<FailedResource> failedResource;
 
         private FailedResources(Builder builder) {
             this.failedResource = builder.failedResource;
@@ -219,17 +255,17 @@ public class UntagResourcesResponseBody extends TeaModel {
         /**
          * @return failedResource
          */
-        public java.util.List < FailedResource> getFailedResource() {
+        public java.util.List<FailedResource> getFailedResource() {
             return this.failedResource;
         }
 
         public static final class Builder {
-            private java.util.List < FailedResource> failedResource; 
+            private java.util.List<FailedResource> failedResource; 
 
             /**
              * FailedResource.
              */
-            public Builder failedResource(java.util.List < FailedResource> failedResource) {
+            public Builder failedResource(java.util.List<FailedResource> failedResource) {
                 this.failedResource = failedResource;
                 return this;
             }

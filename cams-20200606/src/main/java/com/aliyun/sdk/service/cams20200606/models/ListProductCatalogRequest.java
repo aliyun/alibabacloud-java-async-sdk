@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductCatalogRequest} extends {@link RequestModel}
  *
  * <p>ListProductCatalogRequest</p>
  */
 public class ListProductCatalogRequest extends Request {
-    @Query
-    @NameInMap("After")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("After")
     private String after;
 
-    @Query
-    @NameInMap("Before")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Before")
     private String before;
 
-    @Query
-    @NameInMap("BusinessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long businessId;
 
-    @Query
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Query
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private String fields;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Long limit;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListProductCatalogRequest(Builder builder) {
@@ -167,7 +167,10 @@ public class ListProductCatalogRequest extends Request {
         } 
 
         /**
-         * The cursor that points to the end of the page of the returned data.
+         * <p>The cursor that points to the end of the page of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kdkii48jfjjei3</p>
          */
         public Builder after(String after) {
             this.putQueryParameter("After", after);
@@ -176,7 +179,10 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * The cursor that points to the beginning of the page of the returned data.
+         * <p>The cursor that points to the beginning of the page of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wiidkd939kek93</p>
          */
         public Builder before(String before) {
             this.putQueryParameter("Before", before);
@@ -185,7 +191,11 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * The Business Manager ID.
+         * <p>The Business Manager ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder businessId(Long businessId) {
             this.putQueryParameter("BusinessId", businessId);
@@ -194,7 +204,10 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * The space ID of the user within the independent software vendor (ISV) account.
+         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -203,9 +216,11 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * The fields. Separate multiple fields with commas (,).
-         * <p>
-         * see  [catalog fields](~~2579419~~)
+         * <p>The fields. Separate multiple fields with commas (,).
+         * see  <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>id,name</p>
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);
@@ -214,7 +229,10 @@ public class ListProductCatalogRequest extends Request {
         }
 
         /**
-         * The number of catalogs to be queried. Valid values: 1 to 1000.
+         * <p>The number of catalogs to be queried. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);

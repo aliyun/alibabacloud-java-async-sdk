@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoProvisioningGroupInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoProvisioningGroupInstancesResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoProvisioningGroupInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         private Integer totalCount; 
 
         /**
-         * An array consisting of Instance data.
+         * <p>An array consisting of Instance data.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +99,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         }
 
         /**
-         * The number of queried instances in the auto provisioning group.
+         * <p>The number of queried instances in the auto provisioning group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,41 +148,47 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupInstancesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private Integer CPU;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private Boolean ioOptimized;
 
-        @NameInMap("IsSpot")
+        @com.aliyun.core.annotation.NameInMap("IsSpot")
         private Boolean isSpot;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instance(Builder builder) {
@@ -290,7 +313,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             private String zoneId; 
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder CPU(Integer CPU) {
                 this.CPU = CPU;
@@ -298,7 +324,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T04:04Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -306,7 +335,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -314,7 +346,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The instance type of the ECS instance.
+             * <p>The instance type of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -322,7 +357,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * Indicates whether the instance is I/O optimized.
+             * <p>Indicates whether the instance is I/O optimized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ioOptimized(Boolean ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -330,7 +368,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * Indicates whether the instance is a preemptible instance.
+             * <p>Indicates whether the instance is a preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSpot(Boolean isSpot) {
                 this.isSpot = isSpot;
@@ -338,7 +379,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The memory size of the instance. Unit: MiB.
+             * <p>The memory size of the instance. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -346,11 +390,14 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The network type of the instance. Valid values:
-             * <p>
+             * <p>The network type of the instance. Valid values:</p>
+             * <ul>
+             * <li>vpc</li>
+             * <li>classic</li>
+             * </ul>
              * 
-             * *   vpc
-             * *   classic
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -358,11 +405,14 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The operating system type of the instance. Valid values:
-             * <p>
+             * <p>The operating system type of the instance. Valid values:</p>
+             * <ul>
+             * <li>windows</li>
+             * <li>linux</li>
+             * </ul>
              * 
-             * *   windows
-             * *   linux
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -370,7 +420,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -378,7 +431,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The status of the instance.
+             * <p>The status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -386,7 +442,10 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             }
 
             /**
-             * The zone ID of the instance.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -400,9 +459,15 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -419,17 +484,17 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

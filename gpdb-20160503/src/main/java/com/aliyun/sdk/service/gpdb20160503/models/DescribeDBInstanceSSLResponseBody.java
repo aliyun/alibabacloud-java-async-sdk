@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSSLResponseBody</p>
  */
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("CertCommonName")
+    @com.aliyun.core.annotation.NameInMap("CertCommonName")
     private String certCommonName;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private Boolean SSLEnabled;
 
-    @NameInMap("SSLExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("SSLExpiredTime")
     private String SSLExpiredTime;
 
     private DescribeDBInstanceSSLResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String SSLExpiredTime; 
 
         /**
-         * The name of the SSL certificate.
+         * <p>The name of the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.gpdbmaster.xxx.rds.aliyuncs.com</p>
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -106,7 +114,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -114,7 +125,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -122,7 +136,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D5FF8636-37F6-4CE0-8002-F8734C62C686</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether SSL encryption is enabled.
+         * <p>Indicates whether SSL encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder SSLEnabled(Boolean SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -138,7 +158,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the SSL certificate.
+         * <p>The expiration time of the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-05T09:05:53Z</p>
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;

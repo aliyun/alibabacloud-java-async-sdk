@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualMFADevicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVirtualMFADevicesRequest</p>
  */
 public class DescribeVirtualMFADevicesRequest extends Request {
-    @Query
-    @NameInMap("EndUserId")
-    private java.util.List < String > endUserId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    private java.util.List<String> endUserId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeVirtualMFADevicesRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
@@ -92,7 +97,7 @@ public class DescribeVirtualMFADevicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVirtualMFADevicesRequest, Builder> {
-        private java.util.List < String > endUserId; 
+        private java.util.List<String> endUserId; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -112,16 +117,22 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         } 
 
         /**
-         * >  This parameter is in invitational preview and unavailable for public use.
+         * <p>The names of the AD users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;
         }
 
         /**
-         * The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
+         * <p>The number of entries per page. Valid values: 1 to 500. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -130,7 +141,10 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The name of the AD user.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -139,7 +153,10 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to DescribeVirtualMFADevices.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-269345****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -148,7 +165,11 @@ public class DescribeVirtualMFADevicesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the NextToken value returned in the last call.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

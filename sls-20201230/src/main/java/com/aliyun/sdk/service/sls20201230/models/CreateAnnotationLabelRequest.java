@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateAnnotationLabelRequest} extends {@link RequestModel}
  *
  * <p>CreateAnnotationLabelRequest</p>
  */
 public class CreateAnnotationLabelRequest extends Request {
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private MLLabelParam body;
 
     private CreateAnnotationLabelRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class CreateAnnotationLabelRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The data structure of the request.</p>
          */
         public Builder body(MLLabelParam body) {
             this.putBodyParameter("body", body);

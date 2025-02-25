@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserAssetIPTrafficInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserAssetIPTrafficInfoResponseBody</p>
  */
 public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("InBps")
+    @com.aliyun.core.annotation.NameInMap("InBps")
     private Long inBps;
 
-    @NameInMap("InPps")
+    @com.aliyun.core.annotation.NameInMap("InPps")
     private Long inPps;
 
-    @NameInMap("NewConn")
+    @com.aliyun.core.annotation.NameInMap("NewConn")
     private Long newConn;
 
-    @NameInMap("OutBps")
+    @com.aliyun.core.annotation.NameInMap("OutBps")
     private Long outBps;
 
-    @NameInMap("OutPps")
+    @com.aliyun.core.annotation.NameInMap("OutPps")
     private Long outPps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SessionCount")
+    @com.aliyun.core.annotation.NameInMap("SessionCount")
     private Long sessionCount;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private DescribeUserAssetIPTrafficInfoResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         private Long startTime; 
 
         /**
-         * The end of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656923760</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -142,7 +150,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network throughput, which indicates the inbound traffic rate. Unit: bit/s.
+         * <p>The network throughput, which indicates the inbound traffic rate. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4520</p>
          */
         public Builder inBps(Long inBps) {
             this.inBps = inBps;
@@ -150,7 +161,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network throughput, which indicates the inbound packet rate. Unit: packets per second (pps).
+         * <p>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
          */
         public Builder inPps(Long inPps) {
             this.inPps = inPps;
@@ -158,7 +172,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of new connections.
+         * <p>The new connection creation rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder newConn(Long newConn) {
             this.newConn = newConn;
@@ -166,7 +183,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network throughput, which indicates the outbound traffic rate. Unit: bit/s.
+         * <p>The network throughput, which indicates the outbound traffic rate. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4180</p>
          */
         public Builder outBps(Long outBps) {
             this.outBps = outBps;
@@ -174,7 +194,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network throughput, which indicates the outbound packet rate. Unit: pps.
+         * <p>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224</p>
          */
         public Builder outPps(Long outPps) {
             this.outPps = outPps;
@@ -182,7 +205,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +216,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of requests.
+         * <p>The number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder sessionCount(Long sessionCount) {
             this.sessionCount = sessionCount;
@@ -198,7 +227,10 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656837360</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

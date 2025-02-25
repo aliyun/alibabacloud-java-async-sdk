@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListZnodeChildrenResponseBody} extends {@link TeaModel}
  *
  * <p>ListZnodeChildrenResponseBody</p>
  */
 public class ListZnodeChildrenResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListZnodeChildrenResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,22 +84,25 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDB6CE0B-9CAF-41B5-9FEA-E08BE8E2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,17 +152,23 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListZnodeChildrenResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListZnodeChildrenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Dir")
+        @com.aliyun.core.annotation.NameInMap("Dir")
         private Boolean dir;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private Data(Builder builder) {
@@ -198,7 +221,10 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The data of the node.
+             * <p>The data of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -206,11 +232,14 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node information was returned. Valid values:
-             * <p>
+             * <p>Indicates whether the node information was returned. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The node information was returned.</li>
+             * <li><code>false</code>: The node information failed to be returned.</li>
+             * </ul>
              * 
-             * *   `true`: The node information was returned.
-             * *   `false`: The node information failed to be returned.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dir(Boolean dir) {
                 this.dir = dir;
@@ -218,7 +247,10 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-bc1a29b0-160230875****-reg-center-0-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -226,7 +258,10 @@ public class ListZnodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the node.
+             * <p>The path of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/zookeeper</p>
              */
             public Builder path(String path) {
                 this.path = path;

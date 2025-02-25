@@ -1,87 +1,100 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Query
-    @NameInMap("ApplicationConfigs")
-    private java.util.List < ApplicationConfig > applicationConfigs;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
+    private java.util.List<ApplicationConfig> applicationConfigs;
 
-    @Query
-    @NameInMap("Applications")
-    @Validation(required = true)
-    private java.util.List < Application > applications;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Applications")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Application> applications;
 
-    @Query
-    @NameInMap("BootstrapScripts")
-    private java.util.List < Script > bootstrapScripts;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BootstrapScripts")
+    private java.util.List<Script> bootstrapScripts;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("DeployMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
-    @Query
-    @NameInMap("NodeAttributes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeAttributes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NodeAttributes nodeAttributes;
 
-    @Query
-    @NameInMap("NodeGroups")
-    @Validation(required = true)
-    private java.util.List < NodeGroupConfig > nodeGroups;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<NodeGroupConfig> nodeGroups;
 
-    @Query
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReleaseVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String releaseVersion;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityMode")
     private String securityMode;
 
-    @Query
-    @NameInMap("SubscriptionConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionConfig")
     private SubscriptionConfig subscriptionConfig;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tag> tags;
 
     private CreateClusterRequest(Builder builder) {
         super(builder);
@@ -91,7 +104,9 @@ public class CreateClusterRequest extends Request {
         this.clientToken = builder.clientToken;
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
+        this.deletionProtection = builder.deletionProtection;
         this.deployMode = builder.deployMode;
+        this.description = builder.description;
         this.nodeAttributes = builder.nodeAttributes;
         this.nodeGroups = builder.nodeGroups;
         this.paymentType = builder.paymentType;
@@ -119,21 +134,21 @@ public class CreateClusterRequest extends Request {
     /**
      * @return applicationConfigs
      */
-    public java.util.List < ApplicationConfig > getApplicationConfigs() {
+    public java.util.List<ApplicationConfig> getApplicationConfigs() {
         return this.applicationConfigs;
     }
 
     /**
      * @return applications
      */
-    public java.util.List < Application > getApplications() {
+    public java.util.List<Application> getApplications() {
         return this.applications;
     }
 
     /**
      * @return bootstrapScripts
      */
-    public java.util.List < Script > getBootstrapScripts() {
+    public java.util.List<Script> getBootstrapScripts() {
         return this.bootstrapScripts;
     }
 
@@ -159,10 +174,24 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    /**
      * @return deployMode
      */
     public String getDeployMode() {
         return this.deployMode;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -175,7 +204,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return nodeGroups
      */
-    public java.util.List < NodeGroupConfig > getNodeGroups() {
+    public java.util.List<NodeGroupConfig> getNodeGroups() {
         return this.nodeGroups;
     }
 
@@ -224,27 +253,29 @@ public class CreateClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
-        private java.util.List < ApplicationConfig > applicationConfigs; 
-        private java.util.List < Application > applications; 
-        private java.util.List < Script > bootstrapScripts; 
+        private java.util.List<ApplicationConfig> applicationConfigs; 
+        private java.util.List<Application> applications; 
+        private java.util.List<Script> bootstrapScripts; 
         private String clientToken; 
         private String clusterName; 
         private String clusterType; 
+        private Boolean deletionProtection; 
         private String deployMode; 
+        private String description; 
         private NodeAttributes nodeAttributes; 
-        private java.util.List < NodeGroupConfig > nodeGroups; 
+        private java.util.List<NodeGroupConfig> nodeGroups; 
         private String paymentType; 
         private String regionId; 
         private String releaseVersion; 
         private String resourceGroupId; 
         private String securityMode; 
         private SubscriptionConfig subscriptionConfig; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -258,7 +289,9 @@ public class CreateClusterRequest extends Request {
             this.clientToken = request.clientToken;
             this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
+            this.deletionProtection = request.deletionProtection;
             this.deployMode = request.deployMode;
+            this.description = request.description;
             this.nodeAttributes = request.nodeAttributes;
             this.nodeGroups = request.nodeGroups;
             this.paymentType = request.paymentType;
@@ -271,34 +304,38 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * 应用配置。数组元素个数N的取值范围：1~1000。
+         * <p>The application configurations. Number of elements in the array: 1 to 1000.</p>
          */
-        public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
+        public Builder applicationConfigs(java.util.List<ApplicationConfig> applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
             this.applicationConfigs = applicationConfigs;
             return this;
         }
 
         /**
-         * 应用列表。数组元素个数N的取值范围：1~100。
+         * <p>The services. Number of elements in the array: 1 to 100.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder applications(java.util.List < Application > applications) {
+        public Builder applications(java.util.List<Application> applications) {
             this.putQueryParameter("Applications", applications);
             this.applications = applications;
             return this;
         }
 
         /**
-         * 引导脚本。数组元素个数N的取值范围：1~10。
+         * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
          */
-        public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
+        public Builder bootstrapScripts(java.util.List<Script> bootstrapScripts) {
             this.putQueryParameter("BootstrapScripts", bootstrapScripts);
             this.bootstrapScripts = bootstrapScripts;
             return this;
         }
 
         /**
-         * 幂等客户端TOKEN。同一个ClientToken多次调用的返回结果一致，同一个ClientToken最多只创建一个集群。
+         * <p>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -307,7 +344,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群名称。长度为1~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）
+         * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emrtest</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -316,14 +357,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 创建的EMR集群类型。取值范围：
-         * <p>
-         * - DATALAKE：新版数据湖。
-         * - OLAP：数据分析。
-         * - DATAFLOW：实时数据流。
-         * - DATASERVING：数据服务。
-         * - CUSTOM：自定义集群。
-         * - HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。
+         * <p>The type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>DATALAKE: data lake</li>
+         * <li>OLAP: online analytical processing (OLAP)</li>
+         * <li>DATAFLOW: Dataflow</li>
+         * <li>DATASERVING: DataServing</li>
+         * <li>CUSTOM: a custom hybrid cluster.</li>
+         * <li>HADOOP: the old data lake. We recommend that you use the new data lake.</li>
+         * </ul>
+         * <p>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -332,12 +379,31 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群中的应用部署模式。取值范围：
-         * <p>
-         * - NORMAL：非高可用部署。集群1个MASTER节点。
-         * - HA：高可用部署。高可用部署要求至少3个MASTER节点。
+         * <p>Specifies whether to enable release protection for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true: enables release protection for the cluster.</li>
+         * <li>false: disables release protection for the cluster.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * 默认值：NORMAL。
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</li>
+         * <li>HA: high availability (HA) mode. A cluster that contains three master nodes is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HA</p>
          */
         public Builder deployMode(String deployMode) {
             this.putQueryParameter("DeployMode", deployMode);
@@ -346,7 +412,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 节点属性。集群中的ECS节点基础属性。
+         * <p>The cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Emr cluster for ETL</p>
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The attributes of all ECS instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             this.putQueryParameter("NodeAttributes", nodeAttributes);
@@ -355,23 +434,28 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 节点组。数组元素个数N的取值范围：1~100。
-         * <p>
-         * <p>
+         * <p>The node groups. Number of elements in the array: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
-        public Builder nodeGroups(java.util.List < NodeGroupConfig > nodeGroups) {
+        public Builder nodeGroups(java.util.List<NodeGroupConfig> nodeGroups) {
             this.putQueryParameter("NodeGroups", nodeGroups);
             this.nodeGroups = nodeGroups;
             return this;
         }
 
         /**
-         * 集群的付费类型。取值范围：
-         * <p>
-         * - PayAsYouGo：后付费。
-         * - Subscription：预付费。
+         * <p>The billing cycle of the instance. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * <li>Subscription: subscription</li>
+         * </ul>
+         * <p>Default value: PayAsYouGo.</p>
          * 
-         * 默认值：PayAsYouGo。
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -380,7 +464,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -389,7 +477,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * EMR发行版。
+         * <p>The EMR version. You can query available E-MapReduce (EMR) versions in the EMR console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.8.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putQueryParameter("ReleaseVersion", releaseVersion);
@@ -398,7 +490,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群所在的企业资源组ID。
+         * <p>The ID of the resource group to which to assign the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -407,12 +502,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Kerberos安全模式。取值范围：
-         * <p>
-         * - NORMAL：普通模式，不开启Kerberos模式。
-         * - KERBEROS：开启Kerberos模式。
+         * <p>The security mode of the cluster. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: disables Kerberos authentication for the cluster. This is the default value.</li>
+         * <li>KERBEROS: enables Kerberos authentication for the cluster.</li>
+         * </ul>
          * 
-         * 默认值：NORMAL
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder securityMode(String securityMode) {
             this.putQueryParameter("SecurityMode", securityMode);
@@ -421,7 +518,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 预付费配置。当PaymentType取值Subscription时该参数生效。
+         * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             this.putQueryParameter("SubscriptionConfig", subscriptionConfig);
@@ -430,9 +527,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 标签。数组元数个数N的取值范围：0~20。
+         * <p>The tags. Number of elements in the array: 0 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

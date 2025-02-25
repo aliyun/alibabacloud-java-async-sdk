@@ -128,15 +128,15 @@ public class ListEmrMainVersionRequest extends Request {
             super();
         } 
 
-        private Builder(ListEmrMainVersionRequest response) {
-            super(response);
-            this.emrVersion = response.emrVersion;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.stackName = response.stackName;
-            this.stackVersion = response.stackVersion;
+        private Builder(ListEmrMainVersionRequest request) {
+            super(request);
+            this.emrVersion = request.emrVersion;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.stackName = request.stackName;
+            this.stackVersion = request.stackVersion;
         } 
 
         /**

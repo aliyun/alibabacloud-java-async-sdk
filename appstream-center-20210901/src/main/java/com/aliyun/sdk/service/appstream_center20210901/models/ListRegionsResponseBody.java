@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRegionsResponseBody</p>
  */
 public class ListRegionsResponseBody extends TeaModel {
-    @NameInMap("RegionModels")
-    private java.util.List < RegionModels> regionModels;
+    @com.aliyun.core.annotation.NameInMap("RegionModels")
+    private java.util.List<RegionModels> regionModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRegionsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListRegionsResponseBody extends TeaModel {
     /**
      * @return regionModels
      */
-    public java.util.List < RegionModels> getRegionModels() {
+    public java.util.List<RegionModels> getRegionModels() {
         return this.regionModels;
     }
 
@@ -46,19 +51,22 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RegionModels> regionModels; 
+        private java.util.List<RegionModels> regionModels; 
         private String requestId; 
 
         /**
-         * RegionModels.
+         * <p>The region IDs.</p>
          */
-        public Builder regionModels(java.util.List < RegionModels> regionModels) {
+        public Builder regionModels(java.util.List<RegionModels> regionModels) {
             this.regionModels = regionModels;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class ListRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegionsResponseBody</p>
+     */
     public static class RegionModels extends TeaModel {
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
         private RegionModels(Builder builder) {
@@ -98,7 +112,10 @@ public class ListRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

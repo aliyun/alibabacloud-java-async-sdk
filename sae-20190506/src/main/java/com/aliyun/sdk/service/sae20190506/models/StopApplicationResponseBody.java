@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>StopApplicationResponseBody</p>
  */
 public class StopApplicationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private StopApplicationResponseBody(Builder builder) {
@@ -118,11 +123,11 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   If the request is successful, this parameter is not returned.****
-         * *   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>If the request is successful, this parameter is not returned.****</li>
+         * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -130,11 +135,11 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the specified application is stopped. Valid values:
-         * <p>
-         * 
-         * *   **true**
-         * *   **false**
+         * <p>Indicates whether the specified application is stopped. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +147,10 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +158,10 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +177,10 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the change order.
+         * <p>The ID of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b6e215637275918588187d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -179,8 +193,14 @@ public class StopApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StopApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>StopApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
 
         private Data(Builder builder) {
@@ -206,13 +226,16 @@ public class StopApplicationResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * The HTTP status code. Valid values:
-             * <p>
+             * <p>The HTTP status code. Valid values:</p>
+             * <ul>
+             * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+             * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+             * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+             * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+             * </ul>
              * 
-             * *   **2xx**: indicates that the request was successful.
-             * *   **3xx**: indicates that the request was redirected.
-             * *   **4xx**: indicates that the request was invalid.
-             * *   **5xx**: indicates that a server error occurred.
+             * <strong>example:</strong>
+             * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

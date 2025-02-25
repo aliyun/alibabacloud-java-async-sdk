@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEscalationPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEscalationPoliciesResponseBody</p>
  */
 public class ListEscalationPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEscalationPoliciesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned objects.
+         * <p>The returned objects.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +63,10 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEscalationPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEscalationPoliciesResponseBody</p>
+     */
     public static class EscalationPolicies extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EscalationPolicies(Builder builder) {
@@ -110,7 +124,10 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the escalation policy.
+             * <p>The ID of the escalation policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -118,7 +135,10 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the escalation policy.
+             * <p>The name of the escalation policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod escalation policy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -132,17 +152,23 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEscalationPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEscalationPoliciesResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("EscalationPolicies")
-        private java.util.List < EscalationPolicies> escalationPolicies;
+        @com.aliyun.core.annotation.NameInMap("EscalationPolicies")
+        private java.util.List<EscalationPolicies> escalationPolicies;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {
@@ -163,7 +189,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         /**
          * @return escalationPolicies
          */
-        public java.util.List < EscalationPolicies> getEscalationPolicies() {
+        public java.util.List<EscalationPolicies> getEscalationPolicies() {
             return this.escalationPolicies;
         }
 
@@ -189,21 +215,24 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EscalationPolicies> escalationPolicies; 
+            private java.util.List<EscalationPolicies> escalationPolicies; 
             private Long page; 
             private Long size; 
             private Long total; 
 
             /**
-             * The list of escalation policies.
+             * <p>The list of escalation policies.</p>
              */
-            public Builder escalationPolicies(java.util.List < EscalationPolicies> escalationPolicies) {
+            public Builder escalationPolicies(java.util.List<EscalationPolicies> escalationPolicies) {
                 this.escalationPolicies = escalationPolicies;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -211,7 +240,10 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -219,7 +251,10 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

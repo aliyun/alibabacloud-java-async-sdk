@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRdUsersResponseBody</p>
  */
 public class ListRdUsersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRdUsersResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListRdUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListRdUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,22 +71,22 @@ public class ListRdUsersResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DelegatedOrNot")
+        @com.aliyun.core.annotation.NameInMap("DelegatedOrNot")
         private Boolean delegatedOrNot;
 
-        @NameInMap("Joined")
+        @com.aliyun.core.annotation.NameInMap("Joined")
         private Boolean joined;
 
-        @NameInMap("JoinedTime")
+        @com.aliyun.core.annotation.NameInMap("JoinedTime")
         private String joinedTime;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
-        @NameInMap("SubUserName")
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
 
         private Data(Builder builder) {
@@ -158,7 +157,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             private String subUserName; 
 
             /**
-             * DelegatedOrNot.
+             * Indicates whether the account can be used to view the logs and alerts within the account.
              */
             public Builder delegatedOrNot(Boolean delegatedOrNot) {
                 this.delegatedOrNot = delegatedOrNot;
@@ -166,7 +165,11 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Joined.
+             * Indicates whether the account is added to the threat analysis feature for centralized management. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder joined(Boolean joined) {
                 this.joined = joined;
@@ -174,7 +177,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * JoinedTime.
+             * The time when the account was added to the threat analysis feature.
              */
             public Builder joinedTime(String joinedTime) {
                 this.joinedTime = joinedTime;
@@ -182,7 +185,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -190,7 +193,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account that is used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -198,7 +201,7 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserName.
+             * The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

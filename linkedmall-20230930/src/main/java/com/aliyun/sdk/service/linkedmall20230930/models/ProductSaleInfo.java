@@ -1,51 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductSaleInfo} extends {@link TeaModel}
  *
  * <p>ProductSaleInfo</p>
  */
 public class ProductSaleInfo extends TeaModel {
-    @NameInMap("canSell")
+    @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @NameInMap("fuzzyQuantity")
+    @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
-    @NameInMap("productId")
+    @com.aliyun.core.annotation.NameInMap("limitRules")
+    private java.util.List<LimitRule> limitRules;
+
+    @com.aliyun.core.annotation.NameInMap("lmItemId")
+    private String lmItemId;
+
+    @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
-    @NameInMap("productStatus")
+    @com.aliyun.core.annotation.NameInMap("productStatus")
     private String productStatus;
 
-    @NameInMap("quantity")
+    @com.aliyun.core.annotation.NameInMap("quantity")
     private Long quantity;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("skus")
-    private java.util.List < SkuSaleInfo > skus;
+    @com.aliyun.core.annotation.NameInMap("skus")
+    private java.util.List<SkuSaleInfo> skus;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
     private ProductSaleInfo(Builder builder) {
         this.canSell = builder.canSell;
         this.divisionCode = builder.divisionCode;
         this.fuzzyQuantity = builder.fuzzyQuantity;
+        this.limitRules = builder.limitRules;
+        this.lmItemId = builder.lmItemId;
         this.productId = builder.productId;
         this.productStatus = builder.productStatus;
         this.quantity = builder.quantity;
@@ -82,6 +95,20 @@ public class ProductSaleInfo extends TeaModel {
      */
     public String getFuzzyQuantity() {
         return this.fuzzyQuantity;
+    }
+
+    /**
+     * @return limitRules
+     */
+    public java.util.List<LimitRule> getLimitRules() {
+        return this.limitRules;
+    }
+
+    /**
+     * @return lmItemId
+     */
+    public String getLmItemId() {
+        return this.lmItemId;
     }
 
     /**
@@ -122,7 +149,7 @@ public class ProductSaleInfo extends TeaModel {
     /**
      * @return skus
      */
-    public java.util.List < SkuSaleInfo > getSkus() {
+    public java.util.List<SkuSaleInfo> getSkus() {
         return this.skus;
     }
 
@@ -137,12 +164,14 @@ public class ProductSaleInfo extends TeaModel {
         private Boolean canSell; 
         private String divisionCode; 
         private String fuzzyQuantity; 
+        private java.util.List<LimitRule> limitRules; 
+        private String lmItemId; 
         private String productId; 
         private String productStatus; 
         private Long quantity; 
         private String requestId; 
         private String shopId; 
-        private java.util.List < SkuSaleInfo > skus; 
+        private java.util.List<SkuSaleInfo> skus; 
         private String title; 
 
         /**
@@ -166,6 +195,22 @@ public class ProductSaleInfo extends TeaModel {
          */
         public Builder fuzzyQuantity(String fuzzyQuantity) {
             this.fuzzyQuantity = fuzzyQuantity;
+            return this;
+        }
+
+        /**
+         * limitRules.
+         */
+        public Builder limitRules(java.util.List<LimitRule> limitRules) {
+            this.limitRules = limitRules;
+            return this;
+        }
+
+        /**
+         * lmItemId.
+         */
+        public Builder lmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
             return this;
         }
 
@@ -212,7 +257,7 @@ public class ProductSaleInfo extends TeaModel {
         /**
          * skus.
          */
-        public Builder skus(java.util.List < SkuSaleInfo > skus) {
+        public Builder skus(java.util.List<SkuSaleInfo> skus) {
             this.skus = skus;
             return this;
         }

@@ -1,51 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicMediaBasicInfosRequest} extends {@link RequestModel}
  *
  * <p>ListPublicMediaBasicInfosRequest</p>
  */
 public class ListPublicMediaBasicInfosRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("IncludeFileBasicInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
+    private String businessType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeFileBasicInfo")
     private Boolean includeFileBasicInfo;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("MediaTagId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaTagId")
     private String mediaTagId;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     private ListPublicMediaBasicInfosRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.businessType = builder.businessType;
         this.includeFileBasicInfo = builder.includeFileBasicInfo;
         this.maxResults = builder.maxResults;
         this.mediaTagId = builder.mediaTagId;
@@ -72,6 +82,13 @@ public class ListPublicMediaBasicInfosRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return businessType
+     */
+    public String getBusinessType() {
+        return this.businessType;
     }
 
     /**
@@ -118,6 +135,7 @@ public class ListPublicMediaBasicInfosRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPublicMediaBasicInfosRequest, Builder> {
         private String regionId; 
+        private String businessType; 
         private Boolean includeFileBasicInfo; 
         private Integer maxResults; 
         private String mediaTagId; 
@@ -132,6 +150,7 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         private Builder(ListPublicMediaBasicInfosRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.businessType = request.businessType;
             this.includeFileBasicInfo = request.includeFileBasicInfo;
             this.maxResults = request.maxResults;
             this.mediaTagId = request.mediaTagId;
@@ -150,7 +169,27 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * IncludeFileBasicInfo.
+         * <p>The business type of the media asset. Valid values:</p>
+         * <ul>
+         * <li>sticker</li>
+         * <li>bgm</li>
+         * <li>bgi</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sticker</p>
+         */
+        public Builder businessType(String businessType) {
+            this.putQueryParameter("BusinessType", businessType);
+            this.businessType = businessType;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to return the basic information of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeFileBasicInfo(Boolean includeFileBasicInfo) {
             this.putQueryParameter("IncludeFileBasicInfo", includeFileBasicInfo);
@@ -159,7 +198,11 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return.</p>
+         * <p>Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -168,7 +211,41 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * MediaTagId.
+         * <p>The media tag. All media assets that contain the specified media tag are returned. Valid values:</p>
+         * <ul>
+         * <li><p>Sticker tags:</p>
+         * <ul>
+         * <li>sticker-atmosphere</li>
+         * <li>sticker-bubble</li>
+         * <li>sticker-cute</li>
+         * <li>sticker-daily</li>
+         * <li>sticker-expression</li>
+         * <li>sticker-gif</li>
+         * </ul>
+         * </li>
+         * <li><p>Background music (BGM) tags:</p>
+         * <ul>
+         * <li>bgm-romantic</li>
+         * <li>bgm-cuisine</li>
+         * <li>bgm-chinese-style</li>
+         * <li>bgm-upbeat</li>
+         * <li>bgm-dynamic</li>
+         * <li>bgm-relaxing</li>
+         * <li>bgm-quirky</li>
+         * <li>bgm-beauty</li>
+         * </ul>
+         * </li>
+         * <li><p>Background image (BGI) tags:</p>
+         * <ul>
+         * <li>bgi-grad</li>
+         * <li>bgi-solid</li>
+         * <li>bgi-pic</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ticker-atmosphere</p>
          */
         public Builder mediaTagId(String mediaTagId) {
             this.putQueryParameter("MediaTagId", mediaTagId);
@@ -177,7 +254,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pSa1SQ0wCe5pzVrQ6mWZEw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -186,7 +266,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -195,7 +278,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Matcher} extends {@link TeaModel}
  *
  * <p>Matcher</p>
  */
 public class Matcher extends TeaModel {
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @NameInMap("Operator")
+    @com.aliyun.core.annotation.NameInMap("Operator")
     private String operator;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private Matcher(Builder builder) {

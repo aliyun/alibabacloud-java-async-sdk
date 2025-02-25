@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWorkitemCommentRequest} extends {@link RequestModel}
  *
  * <p>DeleteWorkitemCommentRequest</p>
  */
 public class DeleteWorkitemCommentRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("commentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("commentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long commentId;
 
-    @Body
-    @NameInMap("identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
     private DeleteWorkitemCommentRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class DeleteWorkitemCommentRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -94,7 +102,10 @@ public class DeleteWorkitemCommentRequest extends Request {
         }
 
         /**
-         * commentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12xx34</p>
          */
         public Builder commentId(Long commentId) {
             this.putBodyParameter("commentId", commentId);
@@ -103,7 +114,10 @@ public class DeleteWorkitemCommentRequest extends Request {
         }
 
         /**
-         * identifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e8b2xxxxxx2abdxxxxxxxx23</p>
          */
         public Builder identifier(String identifier) {
             this.putBodyParameter("identifier", identifier);

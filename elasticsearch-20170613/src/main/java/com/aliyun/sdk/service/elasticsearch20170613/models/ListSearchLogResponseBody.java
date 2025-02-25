@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListSearchLogResponseBody</p>
  */
 public class ListSearchLogResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListSearchLogResponseBody(Builder builder) {
@@ -62,16 +62,15 @@ public class ListSearchLogResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The level of the log. Valid values:
-         * <p>
-         * 
-         * *   warn: warning log
-         * *   info: information log
-         * *   error: error log
-         * *   trace: trace logs
-         * *   debug: debug logs
-         * 
-         * The level information has been migrated to the contentCollection field.
+         * <p>The level of the log. Valid values:</p>
+         * <ul>
+         * <li>warn: warning log</li>
+         * <li>info: information log</li>
+         * <li>error: error log</li>
+         * <li>trace: trace logs</li>
+         * <li>debug: debug logs</li>
+         * </ul>
+         * <p>The level information has been migrated to the contentCollection field.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -79,7 +78,10 @@ public class ListSearchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The list of logs returned by the request.
+         * <p>The list of logs returned by the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -87,7 +89,7 @@ public class ListSearchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the log entry. Migrated to the contentCollection field.
+         * <p>The content of the log entry. Migrated to the contentCollection field.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -100,8 +102,14 @@ public class ListSearchLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSearchLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchLogResponseBody</p>
+     */
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
 
         private Headers(Builder builder) {
@@ -127,7 +135,10 @@ public class ListSearchLogResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The IP address of the node that generates the log.
+             * <p>The IP address of the node that generates the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -141,23 +152,29 @@ public class ListSearchLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSearchLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSearchLogResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("contentCollection")
+        @com.aliyun.core.annotation.NameInMap("contentCollection")
         private java.util.Map < String, ? > contentCollection;
 
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("timestamp")
+        @com.aliyun.core.annotation.NameInMap("timestamp")
         private Long timestamp;
 
         private Result(Builder builder) {
@@ -228,7 +245,10 @@ public class ListSearchLogResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[GC (Allocation Failure) 2018-07-19T17:24:20.682+0800: 7516.513: [ParNew: 6604768K-&gt;81121K(7341504K), 0.0760606 secs] 7226662K-&gt;703015K(31813056K), 0.0762507 secs] [Times: user=0.52 sys=0.00, real=0.07 secs]</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -244,7 +264,10 @@ public class ListSearchLogResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the log entry. Different content fields are returned for different log types.
+             * <p>Details of the log entry. Different content fields are returned for different log types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>192.168.**.**</code></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -260,7 +283,10 @@ public class ListSearchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the log is generated. Unit: ms.
+             * <p>The timestamp when the log is generated. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder level(String level) {
                 this.level = level;

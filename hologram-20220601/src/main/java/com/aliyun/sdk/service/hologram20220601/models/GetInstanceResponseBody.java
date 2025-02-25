@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal server error.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +136,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the instance.
+         * <p>The information about the instance.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -130,7 +144,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>865A02C2-B374-5DD4-9B34-0CA15DA1AEBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request result, which indicates whether the request was successful.
+         * <p>The request result, which indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,26 +171,32 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("AlternativeEndpoints")
+        @com.aliyun.core.annotation.NameInMap("AlternativeEndpoints")
         private String alternativeEndpoints;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private Endpoints(Builder builder) {
@@ -250,7 +276,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * The endpoint. This parameter is returned if both the AnyTunnel and SingleTunnel modes are enabled for an instance, and the instance is switched from the AnyTunnel mode to the SingleTunnel mode. In this case, two endpoints are returned.
+             * <p>The endpoint. This parameter is returned if both the AnyTunnel and SingleTunnel modes are enabled for an instance, and the instance is switched from the AnyTunnel mode to the SingleTunnel mode. In this case, two endpoints are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</p>
              */
             public Builder alternativeEndpoints(String alternativeEndpoints) {
                 this.alternativeEndpoints = alternativeEndpoints;
@@ -258,26 +287,26 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the network is enabled.
-             * <p>
+             * <p>Indicates whether the network is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -285,7 +314,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -293,64 +325,55 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The network type.
-             * <p>
+             * <p>The network type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>VPCSingleTunnel</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   VPCSingleTunnel
+             * <p>virtual private cloud (VPC)</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>Intranet</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>internal network</p>
+             * <!-- -->
              * 
-             *     virtual private cloud (VPC)
+             * <p>.</p>
+             * </li>
+             * <li><p>VPCAnyTunnel</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     .
+             * <p>not supported by new instances</p>
+             * <!-- -->
+             * </li>
+             * <li><p>Internet</p>
+             * <!-- -->
              * 
-             * *   Intranet
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>Internet</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     internal network
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   VPCAnyTunnel
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     not supported by new instances
-             * 
-             *     <!-- -->
-             * 
-             * *   Internet
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Internet
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -358,7 +381,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1jqwp2ys6kp7tc9t983</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -366,7 +392,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The ID of the VPC to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf66jjber3hgvwhki3wna</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -374,7 +403,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of VPC to which the instance belongs.
+             * <p>The ID of the instance that is deployed in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgprecn-cn-uqm362o1b001-frontend-st</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -388,11 +420,17 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -427,7 +465,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -435,7 +476,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -449,86 +493,101 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private String autoRenewal;
 
-        @NameInMap("ColdStorage")
+        @com.aliyun.core.annotation.NameInMap("ColdStorage")
         private Long coldStorage;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ComputeNodeCount")
+        @com.aliyun.core.annotation.NameInMap("ComputeNodeCount")
         private Long computeNodeCount;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private String disk;
 
-        @NameInMap("EnableHiveAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableHiveAccess")
         private String enableHiveAccess;
 
-        @NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        @com.aliyun.core.annotation.NameInMap("EnableServerless")
+        private Boolean enableServerless;
 
-        @NameInMap("ExpirationTime")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
+        private java.util.List<Endpoints> endpoints;
+
+        @com.aliyun.core.annotation.NameInMap("ExpirationTime")
         private String expirationTime;
 
-        @NameInMap("GatewayCount")
+        @com.aliyun.core.annotation.NameInMap("GatewayCount")
         private Long gatewayCount;
 
-        @NameInMap("GatewayCpu")
+        @com.aliyun.core.annotation.NameInMap("GatewayCpu")
         private Long gatewayCpu;
 
-        @NameInMap("GatewayMemory")
+        @com.aliyun.core.annotation.NameInMap("GatewayMemory")
         private Long gatewayMemory;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceOwner")
+        @com.aliyun.core.annotation.NameInMap("InstanceOwner")
         private String instanceOwner;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("LeaderInstanceId")
+        @com.aliyun.core.annotation.NameInMap("LeaderInstanceId")
         private String leaderInstanceId;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ReplicaRole")
+        private String replicaRole;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SuspendReason")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
+        @com.aliyun.core.annotation.NameInMap("SuspendReason")
         private String suspendReason;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instance(Builder builder) {
@@ -540,6 +599,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.disk = builder.disk;
             this.enableHiveAccess = builder.enableHiveAccess;
+            this.enableServerless = builder.enableServerless;
             this.endpoints = builder.endpoints;
             this.expirationTime = builder.expirationTime;
             this.gatewayCount = builder.gatewayCount;
@@ -554,7 +614,9 @@ public class GetInstanceResponseBody extends TeaModel {
             this.leaderInstanceId = builder.leaderInstanceId;
             this.memory = builder.memory;
             this.regionId = builder.regionId;
+            this.replicaRole = builder.replicaRole;
             this.resourceGroupId = builder.resourceGroupId;
+            this.storageType = builder.storageType;
             this.suspendReason = builder.suspendReason;
             this.tags = builder.tags;
             this.version = builder.version;
@@ -626,9 +688,16 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableServerless
+         */
+        public Boolean getEnableServerless() {
+            return this.enableServerless;
+        }
+
+        /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -724,10 +793,24 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return replicaRole
+         */
+        public String getReplicaRole() {
+            return this.replicaRole;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
         }
 
         /**
@@ -740,7 +823,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -767,7 +850,8 @@ public class GetInstanceResponseBody extends TeaModel {
             private String creationTime; 
             private String disk; 
             private String enableHiveAccess; 
-            private java.util.List < Endpoints> endpoints; 
+            private Boolean enableServerless; 
+            private java.util.List<Endpoints> endpoints; 
             private String expirationTime; 
             private Long gatewayCount; 
             private Long gatewayCpu; 
@@ -781,33 +865,35 @@ public class GetInstanceResponseBody extends TeaModel {
             private String leaderInstanceId; 
             private Long memory; 
             private String regionId; 
+            private String replicaRole; 
             private String resourceGroupId; 
+            private String storageType; 
             private String suspendReason; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String version; 
             private String zoneId; 
 
             /**
-             * Indicates whether auto-renewal is enabled.
-             * <p>
+             * <p>Indicates whether auto-renewal is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenewal(String autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -815,7 +901,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The cold storage capacity of the instance. Unit: GB. Standard SSD is used for hot storage, and HDD is used for cold storage.
+             * <p>The cold storage capacity of the instance. Unit: GB. Standard SSD is used for hot storage, and HDD is used for cold storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder coldStorage(Long coldStorage) {
                 this.coldStorage = coldStorage;
@@ -823,118 +912,96 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code.
-             * <p>
+             * <p>The commodity code.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>hologram_maxcomputeAccelerate_public_cn</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   hologram_maxcomputeAccelerate_public_cn
+             * <p>China site/Lakehouse Acceleration Edition</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>hologram_combo_public_cn</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>China site/Subscription</p>
+             * <!-- -->
              * 
-             *     China site/Lakehouse Acceleration Edition
+             * <p>.</p>
+             * </li>
+             * <li><p>hologram_prepay_public_intl</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     .
+             * <p>International site/Subscription</p>
+             * <!-- -->
              * 
-             * *   hologram_combo_public_cn
+             * <p>.</p>
+             * </li>
+             * <li><p>hologram_storage_dp_cn</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>China site/Storage plan</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>hologram_postpay_public_cn</p>
+             * <!-- -->
              * 
-             *     China site/Subscription
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>China site/Pay-as-you-go</p>
+             * <!-- -->
              * 
-             *     .
+             * <p>.</p>
+             * </li>
+             * <li><p>hologram_postpay_public_intl</p>
+             * <!-- -->
              * 
-             * *   hologram_prepay_public_intl
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>International site/Pay-as-you-go</p>
+             * <!-- -->
+             * </li>
+             * <li><p>hologram_maxcomputeAccelerate_public_intl</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>International site/Lakehouse Acceleration Edition</p>
+             * <!-- -->
              * 
-             *     International site/Subscription
+             * <p>.</p>
+             * </li>
+             * <li><p>hologram_cu_dp_cn</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     .
+             * <p>China site/Compute plan</p>
+             * <!-- --></li>
+             * </ul>
              * 
-             * *   hologram_storage_dp_cn
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     China site/Storage plan
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   hologram_postpay_public_cn
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     China site/Pay-as-you-go
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   hologram_postpay_public_intl
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     International site/Pay-as-you-go
-             * 
-             *     <!-- -->
-             * 
-             * *   hologram_maxcomputeAccelerate_public_intl
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     International site/Lakehouse Acceleration Edition
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   hologram_cu_dp_cn
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     China site/Compute plan
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>hologram_combo_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -942,7 +1009,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes. In a typical configuration, a node has 16 vCPUs and 32 GB of memory.
+             * <p>The number of compute nodes. In a typical configuration, a node has 16 CPU cores and 32 GB of memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder computeNodeCount(Long computeNodeCount) {
                 this.computeNodeCount = computeNodeCount;
@@ -950,7 +1020,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -958,7 +1031,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-03T13:06:06Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -966,7 +1042,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that can be stored in the disk of the Standard storage class. Unit: GB.
+             * <p>The amount of data that can be stored in the disk of the Standard storage class. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder disk(String disk) {
                 this.disk = disk;
@@ -974,7 +1053,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data lake acceleration is enabled.
+             * <p>Indicates whether data lake acceleration is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHiveAccess(String enableHiveAccess) {
                 this.enableHiveAccess = enableHiveAccess;
@@ -982,15 +1064,26 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The list of endpoints.
+             * EnableServerless.
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder enableServerless(Boolean enableServerless) {
+                this.enableServerless = enableServerless;
+                return this;
+            }
+
+            /**
+             * <p>The list of endpoints.</p>
+             */
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
 
             /**
-             * The expiration time. This parameter is invalid for pay-as-you-go instances.
+             * <p>The expiration time. This parameter is invalid for pay-as-you-go instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-03T13:06:06Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -998,7 +1091,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网关节点数量。
+             * <p>The number of gateway nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder gatewayCount(Long gatewayCount) {
                 this.gatewayCount = gatewayCount;
@@ -1006,9 +1102,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网关cpu资源。
-             * <p>
-             * 单位：core。
+             * <p>The number of CPU cores of the gateway. Unit: core.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder gatewayCpu(Long gatewayCpu) {
                 this.gatewayCpu = gatewayCpu;
@@ -1016,9 +1113,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网关内存资源。
-             * <p>
-             * 单位：GB。
+             * <p>The size of memory resources of the gateway. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder gatewayMemory(Long gatewayMemory) {
                 this.gatewayMemory = gatewayMemory;
@@ -1026,38 +1124,35 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance.
-             * <p>
+             * <p>The billing method of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>PostPaid</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   PostPaid
+             * <p>pay-as-you-go</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>PrePaid</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>subscription</p>
+             * <!-- -->
              * 
-             *     pay-as-you-go
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   PrePaid
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     subscription
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1065,7 +1160,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-tl32s6cgw00b</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1073,7 +1171,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name. The instance name must be 2 to 64 characters in length.
+             * <p>The instance name. The instance name must be 2 to 64 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1081,7 +1182,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the instance.
+             * <p>The owner of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678900000</p>
              */
             public Builder instanceOwner(String instanceOwner) {
                 this.instanceOwner = instanceOwner;
@@ -1089,42 +1193,40 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance.
-             * <p>
+             * <p>The status of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Creating</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Creating
+             * <!-- -->
+             * </li>
+             * <li><p>Running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Suspended</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Running
+             * <!-- -->
+             * </li>
+             * <li><p>Allocating</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Suspended
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Allocating
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -1132,38 +1234,35 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
-             * <p>
+             * <p>The type of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Follower</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   Follower
+             * <p>read-only secondary instance</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>Standard</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>normal instance</p>
+             * <!-- -->
              * 
-             *     read-only secondary instance
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   Standard
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     normal instance
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1171,7 +1270,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary instance.
+             * <p>The ID of the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgpostcn-cn-i7m2ncd6w002</p>
              */
             public Builder leaderInstanceId(String leaderInstanceId) {
                 this.leaderInstanceId = leaderInstanceId;
@@ -1179,7 +1281,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GB.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -1187,7 +1292,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1195,7 +1303,18 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * ReplicaRole.
+             */
+            public Builder replicaRole(String replicaRole) {
+                this.replicaRole = replicaRole;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzuq7hpybze2i</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1203,7 +1322,54 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the suspension.
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
+                return this;
+            }
+
+            /**
+             * <p>The reason for the suspension.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Indebet</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>The instance has an overdue payment</p>
+             * <!-- -->
+             * 
+             * <p>.</p>
+             * </li>
+             * <li><p>Manual</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>The instance is manually suspended</p>
+             * <!-- -->
+             * 
+             * <p>.</p>
+             * </li>
+             * <li><p>Overdue</p>
+             * <!-- -->
+             * 
+             * <p>:</p>
+             * <!-- -->
+             * 
+             * <p>The instance has expired</p>
+             * <!-- -->
+             * 
+             * <p>.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder suspendReason(String suspendReason) {
                 this.suspendReason = suspendReason;
@@ -1211,15 +1377,18 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance tag.
+             * <p>The instance tag.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The instance version.
+             * <p>The instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r1.3.37</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1227,7 +1396,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the instance resides.
+             * <p>The ID of the zone where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

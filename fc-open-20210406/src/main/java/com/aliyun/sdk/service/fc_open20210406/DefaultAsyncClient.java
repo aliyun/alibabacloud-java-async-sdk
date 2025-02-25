@@ -383,6 +383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+      *
+     */
     @Override
     public CompletableFuture<GetFunctionAsyncInvokeConfigResponse> getFunctionAsyncInvokeConfig(GetFunctionAsyncInvokeConfigRequest request) {
         try {
@@ -482,7 +486,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The version or alias of the service to which the asynchronous task belongs.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     @Override
@@ -569,6 +573,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+      *
+     */
     @Override
     public CompletableFuture<ListFunctionAsyncInvokeConfigsResponse> listFunctionAsyncInvokeConfigs(ListFunctionAsyncInvokeConfigsRequest request) {
         try {
@@ -598,8 +606,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The maximum number of resources to return. Valid values: \\[0,1000].
-      * The number of returned resources is less than or equal to the specified number.
+      * The ListInstances operation allows you to query available instances of a function.
+      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as the active instances queried by using the InvokeFunction operation if values of `ServiceName`, `FunctionName`, and `Qualifier` are the same.
       *
      */
     @Override
@@ -715,7 +723,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The metadata of the service and function to which the asynchronous task belongs.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     @Override
@@ -733,7 +741,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The name of the service to which the asynchronous task belongs.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     @Override
@@ -807,7 +815,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The maximum validity period of messages.
+      * StatefulAsyncInvocation specifies the configurations of an asynchronous task. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     @Override
@@ -895,7 +903,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.
+      * StatefulAsyncInvocation represents asynchronous tasks. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     @Override

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEIURangeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEIURangeResponseBody</p>
  */
 public class DescribeEIURangeResponseBody extends TeaModel {
-    @NameInMap("EIUInfo")
+    @com.aliyun.core.annotation.NameInMap("EIUInfo")
     private EIUInfo EIUInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEIURangeResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EIUInfo.
+         * <p>The queried information about the number of EIUs.</p>
          */
         public Builder EIUInfo(EIUInfo EIUInfo) {
             this.EIUInfo = EIUInfo;
@@ -58,7 +58,10 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,19 +74,37 @@ public class DescribeEIURangeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEIURangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEIURangeResponseBody</p>
+     */
     public static class EIUInfo extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("EIURange")
+        @com.aliyun.core.annotation.NameInMap("EIURange")
         private java.util.List < Long > EIURange;
 
-        @NameInMap("StorageResourceRange")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
+        private String maxValue;
+
+        @com.aliyun.core.annotation.NameInMap("MinValue")
+        private String minValue;
+
+        @com.aliyun.core.annotation.NameInMap("Step")
+        private String step;
+
+        @com.aliyun.core.annotation.NameInMap("StorageResourceRange")
         private java.util.List < String > storageResourceRange;
 
         private EIUInfo(Builder builder) {
             this.defaultValue = builder.defaultValue;
             this.EIURange = builder.EIURange;
+            this.maxValue = builder.maxValue;
+            this.minValue = builder.minValue;
+            this.step = builder.step;
             this.storageResourceRange = builder.storageResourceRange;
         }
 
@@ -110,6 +131,27 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxValue
+         */
+        public String getMaxValue() {
+            return this.maxValue;
+        }
+
+        /**
+         * @return minValue
+         */
+        public String getMinValue() {
+            return this.minValue;
+        }
+
+        /**
+         * @return step
+         */
+        public String getStep() {
+            return this.step;
+        }
+
+        /**
          * @return storageResourceRange
          */
         public java.util.List < String > getStorageResourceRange() {
@@ -119,10 +161,16 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         public static final class Builder {
             private String defaultValue; 
             private java.util.List < Long > EIURange; 
+            private String maxValue; 
+            private String minValue; 
+            private String step; 
             private java.util.List < String > storageResourceRange; 
 
             /**
-             * DefaultValue.
+             * <p>The suggested value for the number of EIUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -130,7 +178,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             }
 
             /**
-             * EIURange.
+             * <p>The queried range for the number of EIUs.</p>
              */
             public Builder EIURange(java.util.List < Long > EIURange) {
                 this.EIURange = EIURange;
@@ -138,7 +186,40 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageResourceRange.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder maxValue(String maxValue) {
+                this.maxValue = maxValue;
+                return this;
+            }
+
+            /**
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder minValue(String minValue) {
+                this.minValue = minValue;
+                return this;
+            }
+
+            /**
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder step(String step) {
+                this.step = step;
+                return this;
+            }
+
+            /**
+             * <p>A reserved parameter.</p>
              */
             public Builder storageResourceRange(java.util.List < String > storageResourceRange) {
                 this.storageResourceRange = storageResourceRange;

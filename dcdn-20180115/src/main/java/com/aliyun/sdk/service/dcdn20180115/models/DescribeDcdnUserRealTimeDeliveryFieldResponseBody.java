@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserRealTimeDeliveryFieldResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnUserRealTimeDeliveryFieldResponseBody</p>
  */
 public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnUserRealTimeDeliveryFieldResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3EACD23C-F49F-4BF7-B9AD-C2CD3BA888C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnUserRealTimeDeliveryFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserRealTimeDeliveryFieldResponseBody</p>
+     */
     public static class Fields extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private Fields(Builder builder) {
@@ -122,7 +131,10 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
             private Boolean selected; 
 
             /**
-             * The description of the field.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The timestamp of the request</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +142,10 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the field.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unixtime</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -138,11 +153,14 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether the field was selected.
-             * <p>
+             * <p>Indicates whether the field was selected.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -156,8 +174,14 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnUserRealTimeDeliveryFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserRealTimeDeliveryFieldResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Fields")
+        @com.aliyun.core.annotation.NameInMap("Fields")
         private java.util.List < Fields> fields;
 
         private Content(Builder builder) {

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteAuthRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteAuthRequest</p>
  */
 public class UpdateGatewayRouteAuthRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AuthJSON")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthJSON")
+    @com.aliyun.core.annotation.Validation(required = true)
     private AuthJSON authJSON;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
     private UpdateGatewayRouteAuthRequest(Builder builder) {
@@ -113,11 +118,14 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -126,7 +134,8 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * The authentication configurations.
+         * <p>The authentication configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder authJSON(AuthJSON authJSON) {
             String authJSONShrink = shrink(authJSON, "AuthJSON", "json");
@@ -136,7 +145,10 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * The gateway ID.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -145,7 +157,11 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-0adf3ad751284cc69fcf9669fba*****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -154,7 +170,11 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * The route ID.
+         * <p>The route ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -169,8 +189,14 @@ public class UpdateGatewayRouteAuthRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayRouteAuthRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteAuthRequest</p>
+     */
     public static class AuthJSON extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AuthJSON(Builder builder) {
@@ -196,10 +222,13 @@ public class UpdateGatewayRouteAuthRequest extends Request {
             private String type; 
 
             /**
-             * The authentication type. If an empty string is passed, no authentication type is available. Valid values:
-             * <p>
+             * <p>The authentication type. If an empty string is passed, no authentication type is available. Valid values:</p>
+             * <ul>
+             * <li>JWT</li>
+             * </ul>
              * 
-             * *   JWT
+             * <strong>example:</strong>
+             * <p>JWT</p>
              */
             public Builder type(String type) {
                 this.type = type;

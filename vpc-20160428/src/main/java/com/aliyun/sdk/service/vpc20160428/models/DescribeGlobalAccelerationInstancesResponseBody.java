@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
  */
 public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
-    @NameInMap("GlobalAccelerationInstances")
+    @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstances")
     private GlobalAccelerationInstances globalAccelerationInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeGlobalAccelerationInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the GA instances.
+         * <p>The details of the GA instances.</p>
          */
         public Builder globalAccelerationInstances(GlobalAccelerationInstances globalAccelerationInstances) {
             this.globalAccelerationInstances = globalAccelerationInstances;
@@ -94,7 +99,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B4EE38D-C75B-4E1F-844E-863A94430676</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIpAddress")
+        @com.aliyun.core.annotation.NameInMap("ServerIpAddress")
         private String serverIpAddress;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
         private BackendServer(Builder builder) {
@@ -194,7 +217,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             private String serverType; 
 
             /**
-             * The region where the backend servers are deployed.
+             * <p>The region where the backend servers are deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -202,7 +228,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend server.
+             * <p>The ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zeg83zvn5d4ed4y****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -210,7 +239,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the backend server.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.xx.xx.109</p>
              */
             public Builder serverIpAddress(String serverIpAddress) {
                 this.serverIpAddress = serverIpAddress;
@@ -218,11 +250,14 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server.
-             * <p>
+             * <p>The type of the backend server.</p>
+             * <ul>
+             * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
+             * <li><strong>SlbInstance</strong>: Server Load Balancer (SLB) instance</li>
+             * </ul>
              * 
-             * *   **EcsInstance**: Elastic Compute Service (ECS) instance
-             * *   **SlbInstance**: Server Load Balancer (SLB) instance
+             * <strong>example:</strong>
+             * <p>EcsInstance</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -236,9 +271,15 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
-        private java.util.List < BackendServer> backendServer;
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
+        private java.util.List<BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
             this.backendServer = builder.backendServer;
@@ -255,17 +296,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         /**
          * @return backendServer
          */
-        public java.util.List < BackendServer> getBackendServer() {
+        public java.util.List<BackendServer> getBackendServer() {
             return this.backendServer;
         }
 
         public static final class Builder {
-            private java.util.List < BackendServer> backendServer; 
+            private java.util.List<BackendServer> backendServer; 
 
             /**
              * BackendServer.
              */
-            public Builder backendServer(java.util.List < BackendServer> backendServer) {
+            public Builder backendServer(java.util.List<BackendServer> backendServer) {
                 this.backendServer = backendServer;
                 return this;
             }
@@ -277,11 +318,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class PublicIpAddress extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
         private PublicIpAddress(Builder builder) {
@@ -316,7 +363,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             private String ipAddress; 
 
             /**
-             * The ID of the public IP address of the GA instance.
+             * <p>The ID of the public IP address of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bp19yqraac4w3y0jd****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -324,7 +374,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the GA instance.
+             * <p>The public IP address of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.xx.xx.78</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -338,9 +391,15 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class PublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddress")
-        private java.util.List < PublicIpAddress> publicIpAddress;
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
+        private java.util.List<PublicIpAddress> publicIpAddress;
 
         private PublicIpAddresses(Builder builder) {
             this.publicIpAddress = builder.publicIpAddress;
@@ -357,17 +416,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         /**
          * @return publicIpAddress
          */
-        public java.util.List < PublicIpAddress> getPublicIpAddress() {
+        public java.util.List<PublicIpAddress> getPublicIpAddress() {
             return this.publicIpAddress;
         }
 
         public static final class Builder {
-            private java.util.List < PublicIpAddress> publicIpAddress; 
+            private java.util.List<PublicIpAddress> publicIpAddress; 
 
             /**
              * PublicIpAddress.
              */
-            public Builder publicIpAddress(java.util.List < PublicIpAddress> publicIpAddress) {
+            public Builder publicIpAddress(java.util.List<PublicIpAddress> publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
                 return this;
             }
@@ -379,53 +438,59 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class GlobalAccelerationInstance extends TeaModel {
-        @NameInMap("AccelerationLocation")
+        @com.aliyun.core.annotation.NameInMap("AccelerationLocation")
         private String accelerationLocation;
 
-        @NameInMap("BackendServers")
+        @com.aliyun.core.annotation.NameInMap("BackendServers")
         private BackendServers backendServers;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("BandwidthType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private String bandwidthType;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GlobalAccelerationInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstanceId")
         private String globalAccelerationInstanceId;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublicIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
         private PublicIpAddresses publicIpAddresses;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceLocation")
+        @com.aliyun.core.annotation.NameInMap("ServiceLocation")
         private String serviceLocation;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private GlobalAccelerationInstance(Builder builder) {
@@ -586,7 +651,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The acceleration area of the GA instance.
+             * <p>The acceleration area of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>china-mainland</p>
              */
             public Builder accelerationLocation(String accelerationLocation) {
                 this.accelerationLocation = accelerationLocation;
@@ -594,7 +662,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the backend servers of the GA instance.
+             * <p>The details about the backend servers of the GA instance.</p>
              */
             public Builder backendServers(BackendServers backendServers) {
                 this.backendServers = backendServers;
@@ -602,7 +670,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the GA instance.
+             * <p>The maximum bandwidth of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -610,11 +681,14 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth type of the GA instance.
-             * <p>
+             * <p>The bandwidth type of the GA instance.</p>
+             * <ul>
+             * <li><strong>Sharing</strong></li>
+             * <li><strong>Exclusive</strong> (default)</li>
+             * </ul>
              * 
-             * *   **Sharing**
-             * *   **Exclusive** (default)
+             * <strong>example:</strong>
+             * <p>Exclusive</p>
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -622,7 +696,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the GA instance.
+             * <p>The billing method of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -630,7 +707,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the GA instance was created. The time is displayed in UTC.
+             * <p>The time when the GA instance was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-05T03:39:31Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -638,7 +718,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the GA instance.
+             * <p>The description of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -646,7 +729,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-05T16:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -654,7 +740,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the GA instance.
+             * <p>The ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1x99kj7kl1ziw5x****</p>
              */
             public Builder globalAccelerationInstanceId(String globalAccelerationInstanceId) {
                 this.globalAccelerationInstanceId = globalAccelerationInstanceId;
@@ -662,7 +751,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the GA instance.
+             * <p>The billing method of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayByBandwidth</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -670,7 +762,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the dedicated GA instance.
+             * <p>The public IP address of the dedicated GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.xx.xx.99</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -678,7 +773,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the GA instance.
+             * <p>The name of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -686,7 +784,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
              */
             public Builder publicIpAddresses(PublicIpAddresses publicIpAddresses) {
                 this.publicIpAddresses = publicIpAddresses;
@@ -694,7 +792,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the GA instance.
+             * <p>The region ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -702,7 +803,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The service area of the GA instance.
+             * <p>The service area of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>china-mainland</p>
              */
             public Builder serviceLocation(String serviceLocation) {
                 this.serviceLocation = serviceLocation;
@@ -710,13 +814,16 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the GA instance.
-             * <p>
+             * <p>The status of the GA instance.</p>
+             * <ul>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Inuse</strong></li>
+             * <li><strong>Associating</strong></li>
+             * <li><strong>Unassociating</strong></li>
+             * </ul>
              * 
-             * *   **Available**
-             * *   **Inuse**
-             * *   **Associating**
-             * *   **Unassociating**
+             * <strong>example:</strong>
+             * <p>InUse</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -730,9 +837,15 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalAccelerationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
+     */
     public static class GlobalAccelerationInstances extends TeaModel {
-        @NameInMap("GlobalAccelerationInstance")
-        private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance;
+        @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstance")
+        private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance;
 
         private GlobalAccelerationInstances(Builder builder) {
             this.globalAccelerationInstance = builder.globalAccelerationInstance;
@@ -749,17 +862,17 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         /**
          * @return globalAccelerationInstance
          */
-        public java.util.List < GlobalAccelerationInstance> getGlobalAccelerationInstance() {
+        public java.util.List<GlobalAccelerationInstance> getGlobalAccelerationInstance() {
             return this.globalAccelerationInstance;
         }
 
         public static final class Builder {
-            private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance; 
+            private java.util.List<GlobalAccelerationInstance> globalAccelerationInstance; 
 
             /**
              * GlobalAccelerationInstance.
              */
-            public Builder globalAccelerationInstance(java.util.List < GlobalAccelerationInstance> globalAccelerationInstance) {
+            public Builder globalAccelerationInstance(java.util.List<GlobalAccelerationInstance> globalAccelerationInstance) {
                 this.globalAccelerationInstance = globalAccelerationInstance;
                 return this;
             }

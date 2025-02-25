@@ -1,45 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentlessTaskCountResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentlessTaskCountResponseBody</p>
  */
 public class GetAgentlessTaskCountResponseBody extends TeaModel {
-    @NameInMap("BaselineCheckCount")
+    @com.aliyun.core.annotation.NameInMap("BaselineCheckCount")
     private Integer baselineCheckCount;
 
-    @NameInMap("CveVulCount")
+    @com.aliyun.core.annotation.NameInMap("CveVulCount")
     private Integer cveVulCount;
 
-    @NameInMap("LastTaskTime")
+    @com.aliyun.core.annotation.NameInMap("LastTaskTime")
     private Long lastTaskTime;
 
-    @NameInMap("MaliciousFile")
+    @com.aliyun.core.annotation.NameInMap("MaliciousFile")
     private Integer maliciousFile;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskMachine")
+    @com.aliyun.core.annotation.NameInMap("RiskMachine")
     private Integer riskMachine;
 
-    @NameInMap("ScaVulCount")
+    @com.aliyun.core.annotation.NameInMap("ScaVulCount")
     private Integer scaVulCount;
 
-    @NameInMap("ScanMachine")
+    @com.aliyun.core.annotation.NameInMap("ScanMachine")
     private Integer scanMachine;
 
-    @NameInMap("SysVulCount")
+    @com.aliyun.core.annotation.NameInMap("SensitiveFileCount")
+    private Integer sensitiveFileCount;
+
+    @com.aliyun.core.annotation.NameInMap("SysVulCount")
     private String sysVulCount;
 
-    @NameInMap("Vulnerability")
+    @com.aliyun.core.annotation.NameInMap("Vulnerability")
     private Integer vulnerability;
 
     private GetAgentlessTaskCountResponseBody(Builder builder) {
@@ -51,6 +59,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         this.riskMachine = builder.riskMachine;
         this.scaVulCount = builder.scaVulCount;
         this.scanMachine = builder.scanMachine;
+        this.sensitiveFileCount = builder.sensitiveFileCount;
         this.sysVulCount = builder.sysVulCount;
         this.vulnerability = builder.vulnerability;
     }
@@ -120,6 +129,13 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     }
 
     /**
+     * @return sensitiveFileCount
+     */
+    public Integer getSensitiveFileCount() {
+        return this.sensitiveFileCount;
+    }
+
+    /**
      * @return sysVulCount
      */
     public String getSysVulCount() {
@@ -142,11 +158,15 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         private Integer riskMachine; 
         private Integer scaVulCount; 
         private Integer scanMachine; 
+        private Integer sensitiveFileCount; 
         private String sysVulCount; 
         private Integer vulnerability; 
 
         /**
-         * The number of baseline checks.
+         * <p>The number of baseline checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder baselineCheckCount(Integer baselineCheckCount) {
             this.baselineCheckCount = baselineCheckCount;
@@ -154,7 +174,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of system vulnerabilities.
+         * <p>The number of system vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cveVulCount(Integer cveVulCount) {
             this.cveVulCount = cveVulCount;
@@ -162,7 +185,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp generated when the last detection is performed.
+         * <p>The timestamp generated when the last detection is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682577532318</p>
          */
         public Builder lastTaskTime(Long lastTaskTime) {
             this.lastTaskTime = lastTaskTime;
@@ -170,7 +196,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of malicious files.
+         * <p>The number of malicious files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maliciousFile(Integer maliciousFile) {
             this.maliciousFile = maliciousFile;
@@ -178,7 +207,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +218,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of risky hosts.
+         * <p>The number of risky hosts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskMachine(Integer riskMachine) {
             this.riskMachine = riskMachine;
@@ -194,7 +229,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of application vulnerabilities.
+         * <p>The number of application vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaVulCount(Integer scaVulCount) {
             this.scaVulCount = scaVulCount;
@@ -202,7 +240,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of hosts that are scanned.
+         * <p>The number of hosts that are scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scanMachine(Integer scanMachine) {
             this.scanMachine = scanMachine;
@@ -210,7 +251,21 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of Windows system vulnerabilities.
+         * <p>The total number of sensitive files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder sensitiveFileCount(Integer sensitiveFileCount) {
+            this.sensitiveFileCount = sensitiveFileCount;
+            return this;
+        }
+
+        /**
+         * <p>The total number of Windows system vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sysVulCount(String sysVulCount) {
             this.sysVulCount = sysVulCount;
@@ -218,7 +273,10 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities.
+         * <p>The number of vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder vulnerability(Integer vulnerability) {
             this.vulnerability = vulnerability;

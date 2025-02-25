@@ -1,73 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBProxyRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBProxyRequest</p>
  */
 public class ModifyDBProxyRequest extends Request {
-    @Query
-    @NameInMap("ConfigDBProxyService")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigDBProxyService")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configDBProxyService;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("DBProxyInstanceNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyInstanceNum")
     private String DBProxyInstanceNum;
 
-    @Query
-    @NameInMap("DBProxyInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyInstanceType")
     private String DBProxyInstanceType;
 
-    @Query
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
+    private java.util.List<DBProxyNodes> DBProxyNodes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PersistentConnectionStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PersistentConnectionStatus")
     private String persistentConnectionStatus;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private ModifyDBProxyRequest(Builder builder) {
@@ -77,6 +86,7 @@ public class ModifyDBProxyRequest extends Request {
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceNum = builder.DBProxyInstanceNum;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
+        this.DBProxyNodes = builder.DBProxyNodes;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.ownerId = builder.ownerId;
         this.persistentConnectionStatus = builder.persistentConnectionStatus;
@@ -134,6 +144,13 @@ public class ModifyDBProxyRequest extends Request {
      */
     public String getDBProxyInstanceType() {
         return this.DBProxyInstanceType;
+    }
+
+    /**
+     * @return DBProxyNodes
+     */
+    public java.util.List<DBProxyNodes> getDBProxyNodes() {
+        return this.DBProxyNodes;
     }
 
     /**
@@ -205,6 +222,7 @@ public class ModifyDBProxyRequest extends Request {
         private String DBProxyEngineType; 
         private String DBProxyInstanceNum; 
         private String DBProxyInstanceType; 
+        private java.util.List<DBProxyNodes> DBProxyNodes; 
         private String instanceNetworkType; 
         private Long ownerId; 
         private String persistentConnectionStatus; 
@@ -226,6 +244,7 @@ public class ModifyDBProxyRequest extends Request {
             this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceNum = request.DBProxyInstanceNum;
             this.DBProxyInstanceType = request.DBProxyInstanceType;
+            this.DBProxyNodes = request.DBProxyNodes;
             this.instanceNetworkType = request.instanceNetworkType;
             this.ownerId = request.ownerId;
             this.persistentConnectionStatus = request.persistentConnectionStatus;
@@ -238,11 +257,16 @@ public class ModifyDBProxyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable the database proxy feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the database proxy feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Startup</strong>: enables the feature.</li>
+         * <li><strong>Shutdown</strong>: disables the feature.</li>
+         * <li><strong>Modify</strong>: modifies the configuration of the feature.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Startup**: enables the database proxy feature.
-         * *   **Shutdown**: disables the database proxy feature.
+         * <strong>example:</strong>
+         * <p>Startup</p>
          */
         public Builder configDBProxyService(String configDBProxyService) {
             this.putQueryParameter("ConfigDBProxyService", configDBProxyService);
@@ -251,7 +275,11 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -260,7 +288,10 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -269,10 +300,13 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The number of proxy instances that are enabled. Valid values: **1** to **16**. Default value: **1**.
-         * <p>
+         * <p>The number of proxy instances that are enabled. Valid values: <strong>1</strong> to <strong>16</strong>. Default value: <strong>1</strong>.</p>
+         * <blockquote>
+         * <p> The capability of the database proxy to process requests increases with the number of proxy instances that are enabled. You can monitor the load on the instance and specify an appropriate number of proxy instances based on the load monitoring data.</p>
+         * </blockquote>
          * 
-         * >  The capability of the database proxy to process requests increases with the number of proxy instances that are enabled. You can monitor the load on the instance and specify an appropriate number of proxy instances based on the load monitoring data.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder DBProxyInstanceNum(String DBProxyInstanceNum) {
             this.putQueryParameter("DBProxyInstanceNum", DBProxyInstanceNum);
@@ -281,7 +315,14 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>The database proxy type. Valid values:</p>
+         * <ul>
+         * <li><strong>common</strong>: general-purpose database proxy</li>
+         * <li><strong>exclusive</strong> (default): dedicated database proxy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.putQueryParameter("DBProxyInstanceType", DBProxyInstanceType);
@@ -290,10 +331,23 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Set the value to **VPC**.
-         * <p>
+         * <p>The proxy nodes.</p>
+         */
+        public Builder DBProxyNodes(java.util.List<DBProxyNodes> DBProxyNodes) {
+            String DBProxyNodesShrink = shrink(DBProxyNodes, "DBProxyNodes", "json");
+            this.putQueryParameter("DBProxyNodes", DBProxyNodesShrink);
+            this.DBProxyNodes = DBProxyNodes;
+            return this;
+        }
+
+        /**
+         * <p>The network type of the instance. Set the value to <strong>VPC</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -311,7 +365,22 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * PersistentConnectionStatus.
+         * <p>Specifies whether to enable persistent connections. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is available only for instances that run MySQL.</p>
+         * </li>
+         * <li><p>If you want to modify persistent connections, you must set the <strong>ConfigDBProxyService</strong> parameter to <strong>Modify</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder persistentConnectionStatus(String persistentConnectionStatus) {
             this.putQueryParameter("PersistentConnectionStatus", persistentConnectionStatus);
@@ -320,7 +389,10 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -329,7 +401,10 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -356,10 +431,13 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
+         * <blockquote>
+         * <p> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxxxxxxx</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -368,10 +446,13 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.
-         * <p>
+         * <p>The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
+         * <blockquote>
+         * <p> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -386,4 +467,109 @@ public class ModifyDBProxyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBProxyRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBProxyRequest</p>
+     */
+    public static class DBProxyNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cpuCores")
+        private String cpuCores;
+
+        @com.aliyun.core.annotation.NameInMap("nodeCounts")
+        private String nodeCounts;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private DBProxyNodes(Builder builder) {
+            this.cpuCores = builder.cpuCores;
+            this.nodeCounts = builder.nodeCounts;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBProxyNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuCores
+         */
+        public String getCpuCores() {
+            return this.cpuCores;
+        }
+
+        /**
+         * @return nodeCounts
+         */
+        public String getNodeCounts() {
+            return this.nodeCounts;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String cpuCores; 
+            private String nodeCounts; 
+            private String zoneId; 
+
+            /**
+             * <p>The number of CPU cores of the node. Valid values: <strong>1</strong> to <strong>16</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is required when you configure the <strong>DBProxyNodes</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder cpuCores(String cpuCores) {
+                this.cpuCores = cpuCores;
+                return this;
+            }
+
+            /**
+             * <p>The number of proxy nodes in the zone. Valid values: <strong>1</strong> and <strong>2</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is required when you configure the <strong>DBProxyNodes</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder nodeCounts(String nodeCounts) {
+                this.nodeCounts = nodeCounts;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the zone in which the node resides.</p>
+             * <blockquote>
+             * <p> This parameter is required when you configure the <strong>DBProxyNodes</strong> parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hagnzhou-c</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public DBProxyNodes build() {
+                return new DBProxyNodes(this);
+            } 
+
+        } 
+
+    }
 }

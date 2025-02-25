@@ -1,28 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJobRequest} extends {@link RequestModel}
  *
  * <p>UpdateJobRequest</p>
  */
 public class UpdateJobRequest extends Request {
-    @Path
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
     private UpdateJobRequest(Builder builder) {
         super(builder);
         this.jobId = builder.jobId;
+        this.accessibility = builder.accessibility;
         this.priority = builder.priority;
     }
 
@@ -47,6 +57,13 @@ public class UpdateJobRequest extends Request {
     }
 
     /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
      * @return priority
      */
     public Integer getPriority() {
@@ -55,6 +72,7 @@ public class UpdateJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateJobRequest, Builder> {
         private String jobId; 
+        private String accessibility; 
         private Integer priority; 
 
         private Builder() {
@@ -64,6 +82,7 @@ public class UpdateJobRequest extends Request {
         private Builder(UpdateJobRequest request) {
             super(request);
             this.jobId = request.jobId;
+            this.accessibility = request.accessibility;
             this.priority = request.priority;
         } 
 
@@ -73,6 +92,15 @@ public class UpdateJobRequest extends Request {
         public Builder jobId(String jobId) {
             this.putPathParameter("JobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putBodyParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
             return this;
         }
 

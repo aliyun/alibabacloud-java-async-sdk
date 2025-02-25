@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVpcHoneyPotRequest} extends {@link RequestModel}
  *
  * <p>AddVpcHoneyPotRequest</p>
  */
 public class AddVpcHoneyPotRequest extends Request {
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private AddVpcHoneyPotRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class AddVpcHoneyPotRequest extends Request {
         } 
 
         /**
-         * The ID of the virtual private cloud (VPC) in which you want to create a honeypot.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) in which you want to create a honeypot.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the VPC ID. The VPC ID is the value of the InstanceId parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeVpcList](~~DescribeVpcList~~) operation to obtain the VPC ID. The VPC ID is the value of the InstanceId parameter.
+         * <strong>example:</strong>
+         * <p>vpc-p0w5fgkfsl5a6791q****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

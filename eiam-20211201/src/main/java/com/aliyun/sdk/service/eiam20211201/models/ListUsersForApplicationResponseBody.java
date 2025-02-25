@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersForApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersForApplicationResponseBody</p>
  */
 public class ListUsersForApplicationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Users")
-    private java.util.List < Users> users;
+    @com.aliyun.core.annotation.NameInMap("Users")
+    private java.util.List<Users> users;
 
     private ListUsersForApplicationResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,17 +57,20 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,9 +89,9 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the accounts.
+         * <p>The IDs of the accounts.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.users = users;
             return this;
         }
@@ -91,8 +102,14 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersForApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForApplicationResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Users(Builder builder) {
@@ -118,7 +135,10 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

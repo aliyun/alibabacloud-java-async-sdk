@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateParamsResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateParamsResponseBody</p>
  */
 public class GetTemplateParamsResponseBody extends TeaModel {
-    @NameInMap("ParamList")
-    private java.util.List < ParamList> paramList;
+    @com.aliyun.core.annotation.NameInMap("ParamList")
+    private java.util.List<ParamList> paramList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private GetTemplateParamsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
     /**
      * @return paramList
      */
-    public java.util.List < ParamList> getParamList() {
+    public java.util.List<ParamList> getParamList() {
         return this.paramList;
     }
 
@@ -57,20 +62,23 @@ public class GetTemplateParamsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ParamList> paramList; 
+        private java.util.List<ParamList> paramList; 
         private String requestId; 
         private String templateId; 
 
         /**
-         * ParamList.
+         * <p>The queried parameters.</p>
          */
-        public Builder paramList(java.util.List < ParamList> paramList) {
+        public Builder paramList(java.util.List<ParamList> paramList) {
             this.paramList = paramList;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>419c8741c1b4325f035b</strong></strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -91,20 +102,26 @@ public class GetTemplateParamsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateParamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateParamsResponseBody</p>
+     */
     public static class ParamList extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CoverUrl")
+        @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MediaUrl")
+        @com.aliyun.core.annotation.NameInMap("MediaUrl")
         private String mediaUrl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ParamList(Builder builder) {
@@ -166,7 +183,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Content.
+             * <p>The original subtitle content.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -174,7 +191,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The thumbnail URL of the original material.</p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -182,7 +199,10 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -190,7 +210,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaUrl.
+             * <p>The URL of the original material.</p>
              */
             public Builder mediaUrl(String mediaUrl) {
                 this.mediaUrl = mediaUrl;
@@ -198,7 +218,16 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The material type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Video</li>
+             * <li>Text</li>
+             * <li>Image</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Image</p>
              */
             public Builder type(String type) {
                 this.type = type;

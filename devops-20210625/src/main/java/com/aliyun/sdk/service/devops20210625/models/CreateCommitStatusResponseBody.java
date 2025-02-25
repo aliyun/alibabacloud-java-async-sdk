@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommitStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCommitStatusResponseBody</p>
  */
 public class CreateCommitStatusResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private CreateCommitStatusResponseBody(Builder builder) {
@@ -131,17 +136,23 @@ public class CreateCommitStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCommitStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommitStatusResponseBody</p>
+     */
     public static class Creator extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private Long aliyunPk;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("login")
+        @com.aliyun.core.annotation.NameInMap("login")
         private String login;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Creator(Builder builder) {
@@ -232,26 +243,32 @@ public class CreateCommitStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCommitStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommitStatusResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("context")
+        @com.aliyun.core.annotation.NameInMap("context")
         private String context;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private Creator creator;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("sha")
+        @com.aliyun.core.annotation.NameInMap("sha")
         private String sha;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("targetUrl")
+        @com.aliyun.core.annotation.NameInMap("targetUrl")
         private String targetUrl;
 
         private Result(Builder builder) {

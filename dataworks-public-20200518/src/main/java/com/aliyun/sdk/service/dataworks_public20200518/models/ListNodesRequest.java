@@ -1,56 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesRequest} extends {@link RequestModel}
  *
  * <p>ListNodesRequest</p>
  */
 public class ListNodesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizName")
     private String bizName;
 
-    @Body
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProgramType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProgramType")
     private String programType;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchedulerType")
+    private String schedulerType;
 
     private ListNodesRequest(Builder builder) {
         super(builder);
@@ -63,6 +71,7 @@ public class ListNodesRequest extends Request {
         this.programType = builder.programType;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
+        this.schedulerType = builder.schedulerType;
     }
 
     public static Builder builder() {
@@ -141,6 +150,13 @@ public class ListNodesRequest extends Request {
         return this.projectId;
     }
 
+    /**
+     * @return schedulerType
+     */
+    public String getSchedulerType() {
+        return this.schedulerType;
+    }
+
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String regionId; 
         private String bizName; 
@@ -151,6 +167,7 @@ public class ListNodesRequest extends Request {
         private String programType; 
         private String projectEnv; 
         private Long projectId; 
+        private String schedulerType; 
 
         private Builder() {
             super();
@@ -167,10 +184,11 @@ public class ListNodesRequest extends Request {
             this.programType = request.programType;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
+            this.schedulerType = request.schedulerType;
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -179,7 +197,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_bizName</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -188,7 +209,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The ID of the baseline with which the node is associated.
+         * <p>The ID of the baseline with which the node is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liux_test_n****</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -197,7 +221,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The description of the node.
+         * <p>The description of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>193379****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -206,7 +233,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The page number. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -215,7 +245,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -224,7 +257,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListNodes**.
+         * <p>The operation that you want to perform. Set the value to <strong>ListNodes</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         public Builder programType(String programType) {
             this.putBodyParameter("ProgramType", programType);
@@ -233,7 +269,11 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * <p>The environment in which the node runs. Valid values: DEV and PROD.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -242,11 +282,32 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The ID of the owner.
+         * <p>The ID of the owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * <p>The scheduling type. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: Nodes are scheduled as expected.</li>
+         * <li>PAUSE: Nodes are paused.</li>
+         * <li>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
+        public Builder schedulerType(String schedulerType) {
+            this.putBodyParameter("SchedulerType", schedulerType);
+            this.schedulerType = schedulerType;
             return this;
         }
 

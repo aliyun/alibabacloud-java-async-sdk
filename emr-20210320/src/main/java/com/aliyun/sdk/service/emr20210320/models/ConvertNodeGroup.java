@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertNodeGroup} extends {@link TeaModel}
  *
  * <p>ConvertNodeGroup</p>
  */
 public class ConvertNodeGroup extends TeaModel {
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private Integer paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
     private ConvertNodeGroup(Builder builder) {
@@ -74,7 +79,10 @@ public class ConvertNodeGroup extends TeaModel {
         private String paymentType; 
 
         /**
-         * 节点组ID。
+         * <p>节点组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -82,7 +90,10 @@ public class ConvertNodeGroup extends TeaModel {
         }
 
         /**
-         * 付费时长。
+         * <p>付费时长。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder paymentDuration(Integer paymentDuration) {
             this.paymentDuration = paymentDuration;
@@ -90,7 +101,10 @@ public class ConvertNodeGroup extends TeaModel {
         }
 
         /**
-         * 付费时长单位。
+         * <p>付费时长单位。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.paymentDurationUnit = paymentDurationUnit;
@@ -98,7 +112,10 @@ public class ConvertNodeGroup extends TeaModel {
         }
 
         /**
-         * 付费类型。
+         * <p>付费类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;

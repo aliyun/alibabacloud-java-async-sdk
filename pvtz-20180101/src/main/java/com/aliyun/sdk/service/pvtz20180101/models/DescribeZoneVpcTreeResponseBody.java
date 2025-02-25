@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZoneVpcTreeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZoneVpcTreeResponseBody</p>
  */
 public class DescribeZoneVpcTreeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private Zones zones;
 
     private DescribeZoneVpcTreeResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B07FBC3-3A53-4939-A3C6-2BDFE407BAB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * <p>The zones.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -71,20 +74,26 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZoneVpcTreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneVpcTreeResponseBody</p>
+     */
     public static class Vpc extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
         private Vpc(Builder builder) {
@@ -146,7 +155,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             private String vpcType; 
 
             /**
-             * region Id
+             * <p>The region ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -154,7 +166,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The name of the region to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Heyuan)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -162,7 +177,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * vpc id
+             * <p>The VPC ID. The unique ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-f8zvrvr1payllgz38****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -170,7 +188,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The VPC name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-vpc</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -178,7 +199,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcType.
+             * <p>The VPC type. Valid values:</p>
+             * <ul>
+             * <li>STANDARD: standard VPC</li>
+             * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -192,8 +220,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZoneVpcTreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneVpcTreeResponseBody</p>
+     */
     public static class Vpcs extends TeaModel {
-        @NameInMap("Vpc")
+        @com.aliyun.core.annotation.NameInMap("Vpc")
         private java.util.List < Vpc> vpc;
 
         private Vpcs(Builder builder) {
@@ -233,53 +267,59 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZoneVpcTreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneVpcTreeResponseBody</p>
+     */
     public static class Zone extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("CreatorType")
+        @com.aliyun.core.annotation.NameInMap("CreatorType")
         private String creatorType;
 
-        @NameInMap("DnsGroup")
+        @com.aliyun.core.annotation.NameInMap("DnsGroup")
         private String dnsGroup;
 
-        @NameInMap("DnsGroupChanging")
+        @com.aliyun.core.annotation.NameInMap("DnsGroupChanging")
         private Boolean dnsGroupChanging;
 
-        @NameInMap("IsPtr")
+        @com.aliyun.core.annotation.NameInMap("IsPtr")
         private Boolean isPtr;
 
-        @NameInMap("RecordCount")
+        @com.aliyun.core.annotation.NameInMap("RecordCount")
         private Integer recordCount;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("Vpcs")
+        @com.aliyun.core.annotation.NameInMap("Vpcs")
         private Vpcs vpcs;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
-        @NameInMap("ZoneTag")
+        @com.aliyun.core.annotation.NameInMap("ZoneTag")
         private String zoneTag;
 
-        @NameInMap("ZoneType")
+        @com.aliyun.core.annotation.NameInMap("ZoneType")
         private String zoneType;
 
         private Zone(Builder builder) {
@@ -440,7 +480,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * CreateTime.
+             * <p>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-18T08:20Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -448,7 +491,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the zone was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568794812000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -456,7 +502,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141339776561****</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -464,7 +513,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorType.
+             * <p>The operator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;
@@ -472,7 +524,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * DnsGroup.
+             * <p>The logical location of the built-in authoritative module in which the zone is added. Valid values:</p>
+             * <ul>
+             * <li>NORMAL_ZONE: regular module</li>
+             * <li>FAST_ZONE: acceleration module</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL_ZONE</p>
              */
             public Builder dnsGroup(String dnsGroup) {
                 this.dnsGroup = dnsGroup;
@@ -480,7 +539,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * DnsGroupChanging.
+             * <p>Indicates whether the zone is being removed to another logical location. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dnsGroupChanging(Boolean dnsGroupChanging) {
                 this.dnsGroupChanging = dnsGroupChanging;
@@ -488,7 +554,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * IsPtr.
+             * <p>Indicates whether the zone is a reverse lookup zone. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPtr(Boolean isPtr) {
                 this.isPtr = isPtr;
@@ -496,7 +569,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * RecordCount.
+             * <p>The number of Domain Name System (DNS) records added for the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recordCount(Integer recordCount) {
                 this.recordCount = recordCount;
@@ -504,7 +580,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -512,7 +591,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-18T08:20Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -520,7 +602,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The time when the zone was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568794834000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -528,7 +613,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Vpcs.
+             * <p>The VPCs associated with the zone.</p>
              */
             public Builder vpcs(Vpcs vpcs) {
                 this.vpcs = vpcs;
@@ -536,7 +621,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * Zone id
+             * <p>The zone ID. This ID uniquely identifies the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6d83e3b31aa60ca4aaa7161f1b6baa95</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -544,7 +632,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * <p>The zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -552,7 +643,17 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneTag.
+             * <p>The type of the cloud service.</p>
+             * <p><strong>Valid values:</strong></p>
+             * <ul>
+             * <li><p>If ZoneType is set to AUTH_ZONE, no value is returned for this parameter.</p>
+             * </li>
+             * <li><p>If ZoneType is set to CLOUD_PRODUCT_ZONE, the type of the cloud service is returned.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BLINK</p>
              */
             public Builder zoneTag(String zoneTag) {
                 this.zoneTag = zoneTag;
@@ -560,7 +661,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneType.
+             * <p>The zone type. Valid values:</p>
+             * <ul>
+             * <li>AUTH_ZONE: authoritative zone</li>
+             * <li>CLOUD_PRODUCT_ZONE: authoritative zone for cloud services</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTH_ZONE</p>
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;
@@ -574,8 +682,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZoneVpcTreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneVpcTreeResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;
 
         private Zones(Builder builder) {

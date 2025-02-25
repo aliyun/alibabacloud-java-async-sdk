@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCloudSiemPredefinedRulesResponseBody</p>
  */
 public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCloudSiemPredefinedRulesResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,43 +216,59 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("AttCk")
+        private String attCk;
+
+        @com.aliyun.core.annotation.NameInMap("EventTransferType")
+        private String eventTransferType;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RuleDescMds")
+        @com.aliyun.core.annotation.NameInMap("RuleDescMds")
         private String ruleDescMds;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleNameMds")
+        @com.aliyun.core.annotation.NameInMap("RuleNameCn")
+        private String ruleNameCn;
+
+        @com.aliyun.core.annotation.NameInMap("RuleNameEn")
+        private String ruleNameEn;
+
+        @com.aliyun.core.annotation.NameInMap("RuleNameMds")
         private String ruleNameMds;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
         private ResponseData(Builder builder) {
             this.alertType = builder.alertType;
+            this.attCk = builder.attCk;
+            this.eventTransferType = builder.eventTransferType;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.ruleDescMds = builder.ruleDescMds;
             this.ruleName = builder.ruleName;
+            this.ruleNameCn = builder.ruleNameCn;
+            this.ruleNameEn = builder.ruleNameEn;
             this.ruleNameMds = builder.ruleNameMds;
             this.source = builder.source;
             this.status = builder.status;
@@ -273,6 +288,20 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
          */
         public String getAlertType() {
             return this.alertType;
+        }
+
+        /**
+         * @return attCk
+         */
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        /**
+         * @return eventTransferType
+         */
+        public String getEventTransferType() {
+            return this.eventTransferType;
         }
 
         /**
@@ -311,6 +340,20 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleNameCn
+         */
+        public String getRuleNameCn() {
+            return this.ruleNameCn;
+        }
+
+        /**
+         * @return ruleNameEn
+         */
+        public String getRuleNameEn() {
+            return this.ruleNameEn;
+        }
+
+        /**
          * @return ruleNameMds
          */
         public String getRuleNameMds() {
@@ -340,11 +383,15 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alertType; 
+            private String attCk; 
+            private String eventTransferType; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
             private String ruleDescMds; 
             private String ruleName; 
+            private String ruleNameCn; 
+            private String ruleNameEn; 
             private String ruleNameMds; 
             private String source; 
             private Integer status; 
@@ -355,6 +402,27 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
+                return this;
+            }
+
+            /**
+             * The alert additional field for ATT\&CK.
+             */
+            public Builder attCk(String attCk) {
+                this.attCk = attCk;
+                return this;
+            }
+
+            /**
+             * The method that is used to generate an event. Valid values:
+             * <p>
+             * 
+             * *   default: built-in method.
+             * *   singleToSingle: The system generates an event for each alert.
+             * *   allToSingle: The system generates an event for alerts within a period of time.
+             */
+            public Builder eventTransferType(String eventTransferType) {
+                this.eventTransferType = eventTransferType;
                 return this;
             }
 
@@ -399,6 +467,22 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
+             * The rule name in Chinese.
+             */
+            public Builder ruleNameCn(String ruleNameCn) {
+                this.ruleNameCn = ruleNameCn;
+                return this;
+            }
+
+            /**
+             * The rule name in English.
+             */
+            public Builder ruleNameEn(String ruleNameEn) {
+                this.ruleNameEn = ruleNameEn;
+                return this;
+            }
+
+            /**
              * The internal code of the rule name.
              */
             public Builder ruleNameMds(String ruleNameMds) {
@@ -427,12 +511,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The threat level. Valid values:
+             * The risk level. Valid values:
              * <p>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * *   serious: high.
+             * *   suspicious: medium.
+             * *   remind: low.
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -447,10 +531,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {

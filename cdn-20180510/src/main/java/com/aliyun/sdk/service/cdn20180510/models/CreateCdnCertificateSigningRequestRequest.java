@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCdnCertificateSigningRequestRequest} extends {@link RequestModel}
  *
  * <p>CreateCdnCertificateSigningRequestRequest</p>
  */
 public class CreateCdnCertificateSigningRequestRequest extends Request {
-    @Query
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Query
-    @NameInMap("CommonName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commonName;
 
-    @Query
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("Organization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
     private String organization;
 
-    @Query
-    @NameInMap("OrganizationUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
     private String organizationUnit;
 
-    @Query
-    @NameInMap("SANs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SANs")
     private String SANs;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private CreateCdnCertificateSigningRequestRequest(Builder builder) {
@@ -153,7 +153,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         } 
 
         /**
-         * The city. Default value: Hangzhou.
+         * <p>The city. Default value: Hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -162,7 +165,11 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The Common Name of the certificate.
+         * <p>The Common Name of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonName</p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -171,7 +178,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The country or region in which the organization is located. Default value: CN.
+         * <p>The country or region in which the organization is located. Default value: CN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -180,7 +190,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The email address.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -189,7 +202,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The name of the organization. Default value: Alibaba Inc.
+         * <p>The name of the organization. Default value: Alibaba Inc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Inc</p>
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -198,7 +214,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The name of the department. Default value: Aliyun CDN.
+         * <p>The name of the department. Default value: Aliyun CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun CDN</p>
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -207,7 +226,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).
+         * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder SANs(String SANs) {
             this.putQueryParameter("SANs", SANs);
@@ -216,7 +238,10 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * The provincial district. Default value: Zhejiang.
+         * <p>The provincial district. Default value: Zhejiang.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

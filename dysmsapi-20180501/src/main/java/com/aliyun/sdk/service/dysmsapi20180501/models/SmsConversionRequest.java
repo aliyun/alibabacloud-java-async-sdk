@@ -1,36 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SmsConversionRequest} extends {@link RequestModel}
  *
  * <p>SmsConversionRequest</p>
  */
 public class SmsConversionRequest extends Request {
-    @Query
-    @NameInMap("ConversionTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConversionTime")
     private Long conversionTime;
 
-    @Query
-    @NameInMap("Delivered")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Delivered")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean delivered;
 
-    @Query
-    @NameInMap("MessageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
+    private String to;
 
     private SmsConversionRequest(Builder builder) {
         super(builder);
         this.conversionTime = builder.conversionTime;
         this.delivered = builder.delivered;
         this.messageId = builder.messageId;
+        this.to = builder.to;
     }
 
     public static Builder builder() {
@@ -67,10 +71,18 @@ public class SmsConversionRequest extends Request {
         return this.messageId;
     }
 
+    /**
+     * @return to
+     */
+    public String getTo() {
+        return this.to;
+    }
+
     public static final class Builder extends Request.Builder<SmsConversionRequest, Builder> {
         private Long conversionTime; 
         private Boolean delivered; 
         private String messageId; 
+        private String to; 
 
         private Builder() {
             super();
@@ -81,14 +93,18 @@ public class SmsConversionRequest extends Request {
             this.conversionTime = request.conversionTime;
             this.delivered = request.delivered;
             this.messageId = request.messageId;
+            this.to = request.to;
         } 
 
         /**
-         * The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.
-         * <p>
+         * <p>The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <ul>
+         * <li>If you leave the parameter empty, the current timestamp is specified by default.</li>
+         * <li>If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.</li>
+         * </ul>
          * 
-         * *   If you leave the parameter empty, the current timestamp is specified by default.
-         * *   If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.
+         * <strong>example:</strong>
+         * <p>1349055900000</p>
          */
         public Builder conversionTime(Long conversionTime) {
             this.putQueryParameter("ConversionTime", conversionTime);
@@ -97,7 +113,11 @@ public class SmsConversionRequest extends Request {
         }
 
         /**
-         * Specifies whether customers replied to the OTP message. Valid values: true and false.
+         * <p>Specifies whether customers replied to the OTP message. Valid values: true and false.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder delivered(Boolean delivered) {
             this.putQueryParameter("Delivered", delivered);
@@ -106,11 +126,23 @@ public class SmsConversionRequest extends Request {
         }
 
         /**
-         * The ID of the OTP message.
+         * <p>The ID of the OTP message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1008030300****</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
             this.messageId = messageId;
+            return this;
+        }
+
+        /**
+         * To.
+         */
+        public Builder to(String to) {
+            this.putQueryParameter("To", to);
+            this.to = to;
             return this;
         }
 

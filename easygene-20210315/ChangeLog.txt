@@ -1,0 +1,12 @@
+2024-10-28 Version: 1.0.3
+- Generated java-async 2021-03-15 for EasyGene.
+
+2024-09-10 Version: 1.0.2
+- Generated java-async 2021-03-15 for EasyGene.
+
+2024-01-30 Version: 1.0.1
+- Generated java-async 2021-03-15 for EasyGene.
+
+2024-01-29 Version: 1.0.0
+- Generated java-async 2021-03-15 for EasyGene.
+

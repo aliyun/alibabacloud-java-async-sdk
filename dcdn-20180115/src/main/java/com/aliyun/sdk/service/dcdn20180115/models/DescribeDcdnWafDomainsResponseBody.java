@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafDomainsResponseBody</p>
  */
 public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private java.util.List < Domains> domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDcdnWafDomainsResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The protected domain name.
+         * <p>The protected domain name.</p>
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.domains = domains;
@@ -94,7 +94,10 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page, which is the same as the PageNumber parameter in request parameters.
+         * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.
+         * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153ca2cd-3c01-44be-b408-64dbc6c88630</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of protected domain names.
+         * <p>The total number of protected domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +143,20 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("ClientIpTag")
+        @com.aliyun.core.annotation.NameInMap("ClientIpTag")
         private String clientIpTag;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("PolicyCount")
+        @com.aliyun.core.annotation.NameInMap("PolicyCount")
         private Integer policyCount;
 
         private Domains(Builder builder) {
@@ -182,7 +200,10 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
             private Integer policyCount; 
 
             /**
-             * The header of IP address of the client that is connected to the point of presence (POP).
+             * <p>The header of IP address of the client that is connected to the point of presence (POP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X-Forwarded-For</p>
              */
             public Builder clientIpTag(String clientIpTag) {
                 this.clientIpTag = clientIpTag;
@@ -190,7 +211,10 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The protected domain name.
+             * <p>The protected domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -198,7 +222,10 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of protection policies that were configured for the protected domain name.
+             * <p>The number of protection policies that were configured for the protected domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder policyCount(Integer policyCount) {
                 this.policyCount = policyCount;

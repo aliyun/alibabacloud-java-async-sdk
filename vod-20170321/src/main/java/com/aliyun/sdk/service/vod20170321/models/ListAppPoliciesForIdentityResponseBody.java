@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppPoliciesForIdentityResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppPoliciesForIdentityResponseBody</p>
  */
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
-    @NameInMap("AppPolicyList")
-    private java.util.List < AppPolicyList> appPolicyList;
+    @com.aliyun.core.annotation.NameInMap("AppPolicyList")
+    private java.util.List<AppPolicyList> appPolicyList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAppPoliciesForIdentityResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     /**
      * @return appPolicyList
      */
-    public java.util.List < AppPolicyList> getAppPolicyList() {
+    public java.util.List<AppPolicyList> getAppPolicyList() {
         return this.appPolicyList;
     }
 
@@ -46,22 +51,25 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppPolicyList> appPolicyList; 
+        private java.util.List<AppPolicyList> appPolicyList; 
         private String requestId; 
 
         /**
-         * The details of each policy.
-         * <p>
-         * 
-         * > A maximum of 100 entries can be returned.
+         * <p>The details of each policy.</p>
+         * <blockquote>
+         * <p>A maximum of 100 entries can be returned.</p>
+         * </blockquote>
          */
-        public Builder appPolicyList(java.util.List < AppPolicyList> appPolicyList) {
+        public Builder appPolicyList(java.util.List<AppPolicyList> appPolicyList) {
             this.appPolicyList = appPolicyList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C9F3E715-B3B8-4D*****27-3A70346F0E04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -74,26 +82,32 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppPoliciesForIdentityResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppPoliciesForIdentityResponseBody</p>
+     */
     public static class AppPolicyList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("PolicyValue")
+        @com.aliyun.core.annotation.NameInMap("PolicyValue")
         private String policyValue;
 
         private AppPolicyList(Builder builder) {
@@ -173,7 +187,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             private String policyValue; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -181,7 +198,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the application policy was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:01:01Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -189,7 +209,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>App full access permission</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -197,7 +220,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The last time when the application policy was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:08:01Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -205,7 +231,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VODAppFullAccess</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -213,11 +242,14 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy. Valid values:
-             * <p>
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>System</strong></li>
+             * <li><strong>Custom</strong></li>
+             * </ul>
              * 
-             * *   **System**
-             * *   **Custom**
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -225,7 +257,10 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the policy.
+             * <p>The content of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder policyValue(String policyValue) {
                 this.policyValue = policyValue;

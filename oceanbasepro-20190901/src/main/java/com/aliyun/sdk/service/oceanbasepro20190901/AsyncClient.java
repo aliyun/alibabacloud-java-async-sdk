@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.oceanbasepro20190901;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.oceanbasepro20190901.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -17,6 +18,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     static AsyncClient create() {
         return builder().build();
     }
+
+    CompletableFuture<BatchKillProcessListResponse> batchKillProcessList(BatchKillProcessListRequest request);
+
+    CompletableFuture<BatchKillSessionListResponse> batchKillSessionList(BatchKillSessionListRequest request);
+
+    CompletableFuture<CancelProjectModifyRecordResponse> cancelProjectModifyRecord(CancelProjectModifyRecordRequest request);
+
+    CompletableFuture<CreateBackupSetDownloadLinkResponse> createBackupSetDownloadLink(CreateBackupSetDownloadLinkRequest request);
 
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
@@ -34,11 +43,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateOmsMysqlDataSourceResponse> createOmsMysqlDataSource(CreateOmsMysqlDataSourceRequest request);
 
-    CompletableFuture<CreateOmsOpenAPIProjectResponse> createOmsOpenAPIProject(CreateOmsOpenAPIProjectRequest request);
-
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
+    CompletableFuture<CreateProjectModifyRecordsResponse> createProjectModifyRecords(CreateProjectModifyRecordsRequest request);
+
+    CompletableFuture<CreateRdsPostgreSQLDataSourceResponse> createRdsPostgreSQLDataSource(CreateRdsPostgreSQLDataSourceRequest request);
+
     CompletableFuture<CreateSecurityIpGroupResponse> createSecurityIpGroup(CreateSecurityIpGroupRequest request);
+
+    CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
+
+    CompletableFuture<CreateTagValueResponse> createTagValue(CreateTagValueRequest request);
 
     CompletableFuture<CreateTenantResponse> createTenant(CreateTenantRequest request);
 
@@ -48,19 +63,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTenantUserResponse> createTenantUser(CreateTenantUserRequest request);
 
+    CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
+
     CompletableFuture<DeleteDatabasesResponse> deleteDatabases(DeleteDatabasesRequest request);
 
     /**
-      * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+      * Before you call this operation, ensure that the following requirements are met:
+      * - The cluster is in the Running state.
+      * - The cluster is a primary cluster and the billing method is pay-as-you-go.
       *
      */
     CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request);
 
-    CompletableFuture<DeleteOmsOpenAPIProjectResponse> deleteOmsOpenAPIProject(DeleteOmsOpenAPIProjectRequest request);
-
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
     CompletableFuture<DeleteSecurityIpGroupResponse> deleteSecurityIpGroup(DeleteSecurityIpGroupRequest request);
+
+    CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
+
+    CompletableFuture<DeleteTagValueResponse> deleteTagValue(DeleteTagValueRequest request);
 
     CompletableFuture<DeleteTenantSecurityIpGroupResponse> deleteTenantSecurityIpGroup(DeleteTenantSecurityIpGroupRequest request);
 
@@ -78,7 +99,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAvailableZoneResponse> describeAvailableZone(DescribeAvailableZoneRequest request);
 
+    CompletableFuture<DescribeBackupEncryptedStringResponse> describeBackupEncryptedString(DescribeBackupEncryptedStringRequest request);
+
+    CompletableFuture<DescribeBackupSetDownloadLinkResponse> describeBackupSetDownloadLink(DescribeBackupSetDownloadLinkRequest request);
+
     CompletableFuture<DescribeCharsetResponse> describeCharset(DescribeCharsetRequest request);
+
+    CompletableFuture<DescribeDataBackupSetResponse> describeDataBackupSet(DescribeDataBackupSetRequest request);
 
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
 
@@ -89,6 +116,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceSSLResponse> describeInstanceSSL(DescribeInstanceSSLRequest request);
 
     CompletableFuture<DescribeInstanceSecurityConfigsResponse> describeInstanceSecurityConfigs(DescribeInstanceSecurityConfigsRequest request);
+
+    CompletableFuture<DescribeInstanceSummaryResponse> describeInstanceSummary(DescribeInstanceSummaryRequest request);
 
     CompletableFuture<DescribeInstanceTagsResponse> describeInstanceTags(DescribeInstanceTagsRequest request);
 
@@ -114,15 +143,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeOasTopSQLListResponse> describeOasTopSQLList(DescribeOasTopSQLListRequest request);
 
-    CompletableFuture<DescribeOmsOpenAPIProjectResponse> describeOmsOpenAPIProject(DescribeOmsOpenAPIProjectRequest request);
-
-    CompletableFuture<DescribeOmsOpenAPIProjectStepsResponse> describeOmsOpenAPIProjectSteps(DescribeOmsOpenAPIProjectStepsRequest request);
-
     CompletableFuture<DescribeOutlineBindingResponse> describeOutlineBinding(DescribeOutlineBindingRequest request);
 
     CompletableFuture<DescribeParametersResponse> describeParameters(DescribeParametersRequest request);
 
     CompletableFuture<DescribeParametersHistoryResponse> describeParametersHistory(DescribeParametersHistoryRequest request);
+
+    CompletableFuture<DescribeProcessStatsCompositionResponse> describeProcessStatsComposition(DescribeProcessStatsCompositionRequest request);
 
     CompletableFuture<DescribeProjectResponse> describeProject(DescribeProjectRequest request);
 
@@ -136,6 +163,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRecommendIndexResponse> describeRecommendIndex(DescribeRecommendIndexRequest request);
 
+    CompletableFuture<DescribeRestorableTenantsResponse> describeRestorableTenants(DescribeRestorableTenantsRequest request);
+
     CompletableFuture<DescribeSQLDetailsResponse> describeSQLDetails(DescribeSQLDetailsRequest request);
 
     CompletableFuture<DescribeSQLHistoryListResponse> describeSQLHistoryList(DescribeSQLHistoryListRequest request);
@@ -144,17 +173,29 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSQLSamplesResponse> describeSQLSamples(DescribeSQLSamplesRequest request);
 
+    CompletableFuture<DescribeSQLTuningAdvicesResponse> describeSQLTuningAdvices(DescribeSQLTuningAdvicesRequest request);
+
+    CompletableFuture<DescribeSampleSqlRawTextsResponse> describeSampleSqlRawTexts(DescribeSampleSqlRawTextsRequest request);
+
     CompletableFuture<DescribeSecurityIpGroupsResponse> describeSecurityIpGroups(DescribeSecurityIpGroupsRequest request);
+
+    CompletableFuture<DescribeSessionListResponse> describeSessionList(DescribeSessionListRequest request);
 
     CompletableFuture<DescribeSlowSQLHistoryListResponse> describeSlowSQLHistoryList(DescribeSlowSQLHistoryListRequest request);
 
     CompletableFuture<DescribeSlowSQLListResponse> describeSlowSQLList(DescribeSlowSQLListRequest request);
+
+    CompletableFuture<DescribeStandbyCreateModeResponse> describeStandbyCreateMode(DescribeStandbyCreateModeRequest request);
+
+    CompletableFuture<DescribeTagValuesResponse> describeTagValues(DescribeTagValuesRequest request);
 
     CompletableFuture<DescribeTenantResponse> describeTenant(DescribeTenantRequest request);
 
     CompletableFuture<DescribeTenantEncryptionResponse> describeTenantEncryption(DescribeTenantEncryptionRequest request);
 
     CompletableFuture<DescribeTenantMetricsResponse> describeTenantMetrics(DescribeTenantMetricsRequest request);
+
+    CompletableFuture<DescribeTenantReadableScnResponse> describeTenantReadableScn(DescribeTenantReadableScnRequest request);
 
     CompletableFuture<DescribeTenantSecurityConfigsResponse> describeTenantSecurityConfigs(DescribeTenantSecurityConfigsRequest request);
 
@@ -186,6 +227,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListProjectFullVerifyResultResponse> listProjectFullVerifyResult(ListProjectFullVerifyResultRequest request);
 
+    CompletableFuture<ListProjectModifyRecordsResponse> listProjectModifyRecords(ListProjectModifyRecordsRequest request);
+
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     CompletableFuture<ListWorkerInstancesResponse> listWorkerInstances(ListWorkerInstancesRequest request);
@@ -198,6 +241,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyInstanceNodeNumResponse> modifyInstanceNodeNum(ModifyInstanceNodeNumRequest request);
 
+    /**
+      * There is currently no authorization information disclosed in the API.
+      *
+     */
+    CompletableFuture<ModifyInstanceSSLResponse> modifyInstanceSSL(ModifyInstanceSSLRequest request);
+
     CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request);
 
     CompletableFuture<ModifyInstanceTagsResponse> modifyInstanceTags(ModifyInstanceTagsRequest request);
@@ -207,6 +256,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParametersResponse> modifyParameters(ModifyParametersRequest request);
 
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    CompletableFuture<ModifyTagNameResponse> modifyTagName(ModifyTagNameRequest request);
+
+    CompletableFuture<ModifyTagValueNameResponse> modifyTagValueName(ModifyTagValueNameRequest request);
 
     CompletableFuture<ModifyTenantEncryptionResponse> modifyTenantEncryption(ModifyTenantEncryptionRequest request);
 
@@ -226,32 +279,28 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyTenantUserStatusResponse> modifyTenantUserStatus(ModifyTenantUserStatusRequest request);
 
-    CompletableFuture<ReleaseOmsOpenAPIProjectResponse> releaseOmsOpenAPIProject(ReleaseOmsOpenAPIProjectRequest request);
-
     CompletableFuture<ReleaseProjectResponse> releaseProject(ReleaseProjectRequest request);
 
-    CompletableFuture<ResetOmsOpenAPIProjectResponse> resetOmsOpenAPIProject(ResetOmsOpenAPIProjectRequest request);
+    CompletableFuture<ReleaseWorkerInstanceResponse> releaseWorkerInstance(ReleaseWorkerInstanceRequest request);
 
-    CompletableFuture<ResumeOmsOpenAPIProjectResponse> resumeOmsOpenAPIProject(ResumeOmsOpenAPIProjectRequest request);
+    CompletableFuture<RemoveStandbyInstanceResponse> removeStandbyInstance(RemoveStandbyInstanceRequest request);
 
     CompletableFuture<ResumeProjectResponse> resumeProject(ResumeProjectRequest request);
 
-    CompletableFuture<SearchOmsOpenAPIMonitorMetricResponse> searchOmsOpenAPIMonitorMetric(SearchOmsOpenAPIMonitorMetricRequest request);
-
-    CompletableFuture<SearchOmsOpenAPIProjectsResponse> searchOmsOpenAPIProjects(SearchOmsOpenAPIProjectsRequest request);
-
-    CompletableFuture<StartOmsOpenAPIProjectResponse> startOmsOpenAPIProject(StartOmsOpenAPIProjectRequest request);
+    CompletableFuture<RetryProjectModifyRecordsResponse> retryProjectModifyRecords(RetryProjectModifyRecordsRequest request);
 
     CompletableFuture<StartProjectResponse> startProject(StartProjectRequest request);
 
     CompletableFuture<StartProjectsByLabelResponse> startProjectsByLabel(StartProjectsByLabelRequest request);
 
-    CompletableFuture<StopOmsOpenAPIProjectResponse> stopOmsOpenAPIProject(StopOmsOpenAPIProjectRequest request);
-
     CompletableFuture<StopProjectResponse> stopProject(StopProjectRequest request);
+
+    CompletableFuture<StopProjectModifyRecordsResponse> stopProjectModifyRecords(StopProjectModifyRecordsRequest request);
 
     CompletableFuture<StopProjectsByLabelResponse> stopProjectsByLabel(StopProjectsByLabelRequest request);
 
     CompletableFuture<SwitchoverInstanceResponse> switchoverInstance(SwitchoverInstanceRequest request);
+
+    CompletableFuture<UpdateProjectConfigResponse> updateProjectConfig(UpdateProjectConfigRequest request);
 
 }

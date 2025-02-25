@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDefaultCollectorConfigurationsRequest} extends {@link RequestModel}
  *
  * <p>ListDefaultCollectorConfigurationsRequest</p>
  */
 public class ListDefaultCollectorConfigurationsRequest extends Request {
-    @Query
-    @NameInMap("resType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resType;
 
-    @Query
-    @NameInMap("resVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resVersion;
 
-    @Query
-    @NameInMap("sourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
     private ListDefaultCollectorConfigurationsRequest(Builder builder) {
@@ -84,13 +84,17 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         } 
 
         /**
-         * The shipper type. Valid values:
-         * <p>
+         * <p>The shipper type. Valid values:</p>
+         * <ul>
+         * <li>fileBeat</li>
+         * <li>metricBeat</li>
+         * <li>heartBeat</li>
+         * <li>auditBeat</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   fileBeat
-         * *   metricBeat
-         * *   heartBeat
-         * *   auditBeat
+         * <strong>example:</strong>
+         * <p>fileBeat</p>
          */
         public Builder resType(String resType) {
             this.putQueryParameter("resType", resType);
@@ -99,11 +103,15 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         }
 
         /**
-         * The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:
-         * <p>
+         * <p>The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:</p>
+         * <ul>
+         * <li>ECS: 6.8.5_with_community</li>
+         * <li>ACK: 6.8.13_with_community</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ECS: 6.8.5\_with_community
-         * *   ACK: 6.8.13\_with_community
+         * <strong>example:</strong>
+         * <p>6.8.5_with_community</p>
          */
         public Builder resVersion(String resVersion) {
             this.putQueryParameter("resVersion", resVersion);
@@ -112,11 +120,14 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         }
 
         /**
-         * The type of the machine on which the shipper is deployed. If you do not configure this parameter, the default configuration files of shippers deployed on all types of machines are returned. Valid values:
-         * <p>
+         * <p>The type of the machine on which the shipper is deployed. If you do not configure this parameter, the default configuration files of shippers deployed on all types of machines are returned. Valid values:</p>
+         * <ul>
+         * <li>ECS: ECS instance</li>
+         * <li>ACK: ACK cluster</li>
+         * </ul>
          * 
-         * *   ECS: ECS instance
-         * *   ACK: ACK cluster
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);

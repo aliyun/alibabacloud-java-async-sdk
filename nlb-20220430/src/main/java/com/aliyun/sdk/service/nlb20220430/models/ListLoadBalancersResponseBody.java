@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
  *
  * <p>ListLoadBalancersResponseBody</p>
  */
 public class ListLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("LoadBalancers")
-    private java.util.List < LoadBalancers> loadBalancers;
+    @com.aliyun.core.annotation.NameInMap("LoadBalancers")
+    private java.util.List<LoadBalancers> loadBalancers;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLoadBalancersResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     /**
      * @return loadBalancers
      */
-    public java.util.List < LoadBalancers> getLoadBalancers() {
+    public java.util.List<LoadBalancers> getLoadBalancers() {
         return this.loadBalancers;
     }
 
@@ -79,22 +84,25 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LoadBalancers> loadBalancers; 
+        private java.util.List<LoadBalancers> loadBalancers; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The NLB instances.
+         * <p>The NLB instances.</p>
          */
-        public Builder loadBalancers(java.util.List < LoadBalancers> loadBalancers) {
+        public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +110,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +125,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,14 +152,20 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class DeletionProtectionConfig extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private DeletionProtectionConfig(Builder builder) {
@@ -186,11 +209,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * Indicates whether deletion protection is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether deletion protection is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -198,7 +224,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when deletion protection was enabled. The time is displayed in UTC in `yyyy-MM-ddTHH:mm:ssZ` format.
+             * <p>The time when deletion protection was enabled. The time is displayed in UTC in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-01T17:22Z</p>
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -206,7 +235,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the deletion protection feature is enabled or disabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+             * <p>The reason why the deletion protection feature is enabled or disabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The instance is running</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -220,8 +252,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancerBillingConfig extends TeaModel {
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
         private LoadBalancerBillingConfig(Builder builder) {
@@ -247,7 +285,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String payType; 
 
             /**
-             * The billing method of the NLB instance. Only **PostPay** is supported, which indicates the pay-as-you-go billing method.
+             * <p>The billing method of the NLB instance. Only <strong>PostPay</strong> is supported, which indicates the pay-as-you-go billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPay</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -261,14 +302,20 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class ModificationProtectionConfig extends TeaModel {
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ModificationProtectionConfig(Builder builder) {
@@ -312,7 +359,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the configuration read-only mode was enabled. The time is displayed in UTC in `yyyy-MM-ddTHH:mm:ssZ` format.
+             * <p>The time when the configuration read-only mode was enabled. The time is displayed in UTC in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-01T17:22Z</p>
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -320,10 +370,11 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
-             * <p>
+             * <p>The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
+             * <p>This parameter takes effect only if <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
              * 
-             * This parameter takes effect only if **Status** is set to **ConsoleProtection**.
+             * <strong>example:</strong>
+             * <p>Service guarantee period</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -331,13 +382,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration read-only mode is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the configuration read-only mode is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>NonProtection</strong>: disabled. In this case, <strong>Reason</strong> is not returned. If <strong>Reason</strong> is set, the value is cleared.</li>
+             * <li><strong>ConsoleProtection</strong>: enabled. In this case, <strong>Reason</strong> is returned.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+             * </blockquote>
              * 
-             * *   **NonProtection**: disabled. In this case, **Reason** is not returned. If **Reason** is set, the value is cleared.
-             * *   **ConsoleProtection**: enabled. In this case, **Reason** is returned.
-             * 
-             * >  If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+             * <strong>example:</strong>
+             * <p>ConsoleProtection</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,11 +406,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("LockType")
+        @com.aliyun.core.annotation.NameInMap("LockType")
         private String lockType;
 
         private OperationLocks(Builder builder) {
@@ -390,7 +451,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String lockType; 
 
             /**
-             * The reason why the NLB instance is locked.
+             * <p>The reason why the NLB instance is locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service exception</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -398,13 +462,16 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of lock. Valid values:
-             * <p>
+             * <p>The type of lock. Valid values:</p>
+             * <ul>
+             * <li><strong>SecurityLocked</strong>: The NLB instance is locked due to security reasons.</li>
+             * <li><strong>RelatedResourceLocked</strong>: The NLB instance is locked due to association issues.</li>
+             * <li><strong>FinancialLocked</strong>: The NLB instance is locked due to overdue payments.</li>
+             * <li><strong>ResidualLocked</strong>: The NLB instance is locked because the payments of the associated resources are overdue and the resources are released.</li>
+             * </ul>
              * 
-             * *   **SecurityLocked**: The NLB instance is locked due to security reasons.
-             * *   **RelatedResourceLocked**: The NLB instance is locked due to association issues.
-             * *   **FinancialLocked**: The NLB instance is locked due to overdue payments.
-             * *   **ResidualLocked**: The NLB instance is locked because the payments of the associated resources are overdue and the resources are released.
+             * <strong>example:</strong>
+             * <p>SecurityLocked</p>
              */
             public Builder lockType(String lockType) {
                 this.lockType = lockType;
@@ -418,11 +485,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -457,7 +530,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -465,7 +541,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ValueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -479,26 +558,32 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancerAddresses extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
-        @NameInMap("PrivateIPv4Address")
+        @com.aliyun.core.annotation.NameInMap("PrivateIPv4Address")
         private String privateIPv4Address;
 
-        @NameInMap("PrivateIPv4HcStatus")
+        @com.aliyun.core.annotation.NameInMap("PrivateIPv4HcStatus")
         private String privateIPv4HcStatus;
 
-        @NameInMap("PrivateIPv6HcStatus")
+        @com.aliyun.core.annotation.NameInMap("PrivateIPv6HcStatus")
         private String privateIPv6HcStatus;
 
-        @NameInMap("PublicIPv4Address")
+        @com.aliyun.core.annotation.NameInMap("PublicIPv4Address")
         private String publicIPv4Address;
 
         private LoadBalancerAddresses(Builder builder) {
@@ -578,7 +663,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String publicIPv4Address; 
 
             /**
-             * The ID of the elastic IP address (EIP).
+             * <p>The ID of the elastic IP address (EIP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bp1aedxso6u80u0qf****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -586,7 +674,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elastic network interface (ENI) attached to the NLB instance.
+             * <p>The ID of the elastic network interface (ENI) attached to the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp12f1xhs5yal61a****</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -594,7 +685,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address used by the NLB instance.
+             * <p>The IPv6 address used by the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:db8:1:1:1:1:1:1</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -602,7 +696,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The private IPv4 address of the NLB instance.
+             * <p>The private IPv4 address of the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.3.32</p>
              */
             public Builder privateIPv4Address(String privateIPv4Address) {
                 this.privateIPv4Address = privateIPv4Address;
@@ -610,7 +707,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The health check status of the private IPv4 address.
+             * <p>The health status of the private IPv4 address of the NLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Healthy</strong></li>
+             * <li><strong>Unhealthy</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only when the Status of the zone is Active.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthy</p>
              */
             public Builder privateIPv4HcStatus(String privateIPv4HcStatus) {
                 this.privateIPv4HcStatus = privateIPv4HcStatus;
@@ -618,7 +725,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The health check status of the private IPv6 address.
+             * <p>The health status of the IPv6 address of the NLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Healthy</strong></li>
+             * <li><strong>Unhealthy</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only when the Status of the zone is Active.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Healthy</p>
              */
             public Builder privateIPv6HcStatus(String privateIPv6HcStatus) {
                 this.privateIPv6HcStatus = privateIPv6HcStatus;
@@ -626,7 +743,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The public IPv4 address of the NLB instance.
+             * <p>The public IPv4 address of the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.XX.XX.69</p>
              */
             public Builder publicIPv4Address(String publicIPv4Address) {
                 this.publicIPv4Address = publicIPv4Address;
@@ -640,17 +760,23 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("LoadBalancerAddresses")
-        private java.util.List < LoadBalancerAddresses> loadBalancerAddresses;
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerAddresses")
+        private java.util.List<LoadBalancerAddresses> loadBalancerAddresses;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ZoneMappings(Builder builder) {
@@ -671,7 +797,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return loadBalancerAddresses
          */
-        public java.util.List < LoadBalancerAddresses> getLoadBalancerAddresses() {
+        public java.util.List<LoadBalancerAddresses> getLoadBalancerAddresses() {
             return this.loadBalancerAddresses;
         }
 
@@ -697,25 +823,36 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LoadBalancerAddresses> loadBalancerAddresses; 
+            private java.util.List<LoadBalancerAddresses> loadBalancerAddresses; 
             private String status; 
             private String vSwitchId; 
             private String zoneId; 
 
             /**
-             * The IP addresses that are used by the NLB instance.
+             * <p>The IP addresses that are used by the NLB instance.</p>
              */
-            public Builder loadBalancerAddresses(java.util.List < LoadBalancerAddresses> loadBalancerAddresses) {
+            public Builder loadBalancerAddresses(java.util.List<LoadBalancerAddresses> loadBalancerAddresses) {
                 this.loadBalancerAddresses = loadBalancerAddresses;
                 return this;
             }
 
             /**
-             * The state of the task. Valid values:
-             * <p>
+             * <p>The zone status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Active</strong>: The zone is available.</p>
+             * </li>
+             * <li><p><strong>Stopped</strong>: The zone is disabled. You can set the zone to this status only by using Cloud Architect Design Tools (CADT).</p>
+             * </li>
+             * <li><p><strong>Shifted</strong>: The DNS record is removed.</p>
+             * </li>
+             * <li><p><strong>Starting</strong>: The zone is being enabled. You can set the zone to this status only by using CADT.</p>
+             * </li>
+             * <li><p><strong>Stopping</strong> You can set the zone to this status only by using CADT.</p>
+             * </li>
+             * </ul>
              * 
-             * *   **Succeeded**: The task is successful.
-             * *   **processing**: The ticket is being executed.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -723,7 +860,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet.
+             * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1rmcrwg3erh1fh8****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -731,7 +871,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the zone. You can call the [DescribeZones](~~443890~~) operation to query the zones.
+             * <p>The name of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the zones.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -745,72 +888,78 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersResponseBody</p>
+     */
     public static class LoadBalancers extends TeaModel {
-        @NameInMap("AddressIpVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
         private String addressIpVersion;
 
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CrossZoneEnabled")
+        @com.aliyun.core.annotation.NameInMap("CrossZoneEnabled")
         private Boolean crossZoneEnabled;
 
-        @NameInMap("DNSName")
+        @com.aliyun.core.annotation.NameInMap("DNSName")
         private String DNSName;
 
-        @NameInMap("DeletionProtectionConfig")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtectionConfig")
         private DeletionProtectionConfig deletionProtectionConfig;
 
-        @NameInMap("Ipv6AddressType")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressType")
         private String ipv6AddressType;
 
-        @NameInMap("LoadBalancerBillingConfig")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerBillingConfig")
         private LoadBalancerBillingConfig loadBalancerBillingConfig;
 
-        @NameInMap("LoadBalancerBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerBusinessStatus")
         private String loadBalancerBusinessStatus;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LoadBalancerName")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
         private String loadBalancerName;
 
-        @NameInMap("LoadBalancerStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
         private String loadBalancerStatus;
 
-        @NameInMap("LoadBalancerType")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerType")
         private String loadBalancerType;
 
-        @NameInMap("ModificationProtectionConfig")
+        @com.aliyun.core.annotation.NameInMap("ModificationProtectionConfig")
         private ModificationProtectionConfig modificationProtectionConfig;
 
-        @NameInMap("OperationLocks")
-        private java.util.List < OperationLocks> operationLocks;
+        @com.aliyun.core.annotation.NameInMap("OperationLocks")
+        private java.util.List<OperationLocks> operationLocks;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+        private java.util.List<String> securityGroupIds;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneMappings")
-        private java.util.List < ZoneMappings> zoneMappings;
+        @com.aliyun.core.annotation.NameInMap("ZoneMappings")
+        private java.util.List<ZoneMappings> zoneMappings;
 
         private LoadBalancers(Builder builder) {
             this.addressIpVersion = builder.addressIpVersion;
@@ -953,7 +1102,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return operationLocks
          */
-        public java.util.List < OperationLocks> getOperationLocks() {
+        public java.util.List<OperationLocks> getOperationLocks() {
             return this.operationLocks;
         }
 
@@ -974,14 +1123,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -995,7 +1144,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return zoneMappings
          */
-        public java.util.List < ZoneMappings> getZoneMappings() {
+        public java.util.List<ZoneMappings> getZoneMappings() {
             return this.zoneMappings;
         }
 
@@ -1015,20 +1164,23 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String loadBalancerStatus; 
             private String loadBalancerType; 
             private ModificationProtectionConfig modificationProtectionConfig; 
-            private java.util.List < OperationLocks> operationLocks; 
+            private java.util.List<OperationLocks> operationLocks; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.List < String > securityGroupIds; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<String> securityGroupIds; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
-            private java.util.List < ZoneMappings> zoneMappings; 
+            private java.util.List<ZoneMappings> zoneMappings; 
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li><strong>ipv4</strong>: IPv4</li>
+             * <li><strong>DualStack</strong>: dual stack</li>
+             * </ul>
              * 
-             * *   **ipv4**: IPv4
-             * *   **DualStack**: dual stack
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;
@@ -1036,11 +1188,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of IPv4 address used by the NLB instance. Valid values:
-             * <p>
+             * <p>The type of IPv4 address used by the NLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
+             * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+             * </ul>
              * 
-             * *   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.
-             * *   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -1048,7 +1203,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EIP bandwidth plan that is associated with the NLB instance if the NLB instance uses a public IP address.
+             * <p>The ID of the EIP bandwidth plan that is associated with the NLB instance if the NLB instance uses a public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp-bp1vevu8h3ieh****</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -1056,7 +1214,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created. The time is displayed in UTC in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * <p>The time when the resource was created. The time is displayed in UTC in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-18T17:22Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1064,11 +1225,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether cross-zone load balancing is enabled for the NLB instance. Valid values:
-             * <p>
+             * <p>Indicates whether cross-zone load balancing is enabled for the NLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder crossZoneEnabled(Boolean crossZoneEnabled) {
                 this.crossZoneEnabled = crossZoneEnabled;
@@ -1076,7 +1240,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the NLB instance.
+             * <p>The domain name of the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nlb-wb7r6dlwetvt5j****.cn-hangzhou.nlb.aliyuncs.com</p>
              */
             public Builder DNSName(String DNSName) {
                 this.DNSName = DNSName;
@@ -1084,7 +1251,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the deletion protection feature.
+             * <p>The configuration of the deletion protection feature.</p>
              */
             public Builder deletionProtectionConfig(DeletionProtectionConfig deletionProtectionConfig) {
                 this.deletionProtectionConfig = deletionProtectionConfig;
@@ -1092,11 +1259,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of IPv6 address used by the NLB instance. Valid values:
-             * <p>
+             * <p>The type of IPv6 address used by the NLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
+             * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+             * </ul>
              * 
-             * *   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.
-             * *   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.
+             * <strong>example:</strong>
+             * <p>Internet</p>
              */
             public Builder ipv6AddressType(String ipv6AddressType) {
                 this.ipv6AddressType = ipv6AddressType;
@@ -1104,7 +1274,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The billing settings of the NLB instance.
+             * <p>The billing settings of the NLB instance.</p>
              */
             public Builder loadBalancerBillingConfig(LoadBalancerBillingConfig loadBalancerBillingConfig) {
                 this.loadBalancerBillingConfig = loadBalancerBillingConfig;
@@ -1112,11 +1282,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the NLB instance. Valid values:
-             * <p>
+             * <p>The business status of the NLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Abnormal</strong>: The NLB instance is not working as expected.</li>
+             * <li><strong>Normal</strong>: The NLB instance is working as expected.</li>
+             * </ul>
              * 
-             * *   **Abnormal**: The NLB instance is not working as expected.
-             * *   **Normal**: The NLB instance is working as expected.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder loadBalancerBusinessStatus(String loadBalancerBusinessStatus) {
                 this.loadBalancerBusinessStatus = loadBalancerBusinessStatus;
@@ -1124,7 +1297,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the NLB instance.
+             * <p>The ID of the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nlb-83ckzc8d4xlp8o****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -1132,7 +1308,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the NLB instance.
+             * <p>The name of the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NLB1</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -1140,15 +1319,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the NLB instance. Valid values:
-             * <p>
+             * <p>The status of the NLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Inactive</strong>: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.</li>
+             * <li><strong>Active</strong>: The NLB instance is running.</li>
+             * <li><strong>Provisioning</strong>: The NLB instance is being created.</li>
+             * <li><strong>Configuring</strong>: The NLB instance is being modified.</li>
+             * <li><strong>Deleting</strong>: The NLB instance is being deleted.</li>
+             * <li><strong>Deleted</strong>: The NLB instance is deleted.</li>
+             * </ul>
              * 
-             * *   **Inactive**: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.
-             * *   **Active**: The NLB instance is running.
-             * *   **Provisioning**: The NLB instance is being created.
-             * *   **Configuring**: The NLB instance is being modified.
-             * *   **Deleting**: The NLB instance is being deleted.
-             * *   **Deleted**: The NLB instance is deleted.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {
                 this.loadBalancerStatus = loadBalancerStatus;
@@ -1156,7 +1338,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SLB instance. Only **Network** is returned, which indicates NLB.
+             * <p>The type of the SLB instance. Only <strong>Network</strong> is returned, which indicates NLB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Network</p>
              */
             public Builder loadBalancerType(String loadBalancerType) {
                 this.loadBalancerType = loadBalancerType;
@@ -1164,7 +1349,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the configuration read-only mode.
+             * <p>The configuration of the configuration read-only mode.</p>
              */
             public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
                 this.modificationProtectionConfig = modificationProtectionConfig;
@@ -1172,15 +1357,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the operation lock. This parameter takes effect if the value of `LoadBalancerBussinessStatus` is **Abnormal**.
+             * <p>The configuration of the operation lock. This parameter takes effect if the value of <code>LoadBalancerBussinessStatus</code> is <strong>Abnormal</strong>.</p>
              */
-            public Builder operationLocks(java.util.List < OperationLocks> operationLocks) {
+            public Builder operationLocks(java.util.List<OperationLocks> operationLocks) {
                 this.operationLocks = operationLocks;
                 return this;
             }
 
             /**
-             * The ID of the region where the NLB instance is deployed.
+             * <p>The ID of the region where the NLB instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1188,7 +1376,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1196,23 +1387,26 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The security group to which the NLB instance is added.
+             * <p>The security group to which the NLB instance is added.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
 
             /**
-             * A list of tags.
+             * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The ID of the VPC where the NLB instance is deployed.
+             * <p>The ID of the VPC where the NLB instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1b49rqrybk45nio****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1220,9 +1414,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The mappings between zones and vSwitches.
+             * <p>The mappings between zones and vSwitches.</p>
              */
-            public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+            public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
                 this.zoneMappings = zoneMappings;
                 return this;
             }

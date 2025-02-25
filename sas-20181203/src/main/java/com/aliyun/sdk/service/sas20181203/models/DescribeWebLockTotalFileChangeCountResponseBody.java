@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockTotalFileChangeCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockTotalFileChangeCountResponseBody</p>
  */
 public class DescribeWebLockTotalFileChangeCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeWebLockTotalFileChangeCountResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeWebLockTotalFileChangeCountResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E70074C8-DFB4-44C5-96C7-909DD231D68A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class DescribeWebLockTotalFileChangeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the files protected by web tamper proofing are changed.
+         * <p>The number of times that the files protected by web tamper proofing are changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartStreamRequest} extends {@link RequestModel}
  *
  * <p>StartStreamRequest</p>
  */
 public class StartStreamRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private StartStreamRequest(Builder builder) {
@@ -88,12 +93,12 @@ public class StartStreamRequest extends Request {
             super();
         } 
 
-        private Builder(StartStreamRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(StartStreamRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -106,7 +111,10 @@ public class StartStreamRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

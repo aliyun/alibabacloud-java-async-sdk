@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest</p>
  */
 public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > domainName;
 
-    @Body
-    @NameInMap("IdentityCredential")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityCredential")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredential;
 
-    @Query
-    @NameInMap("IdentityCredentialNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredentialNo;
 
-    @Query
-    @NameInMap("IdentityCredentialType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredentialType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest(Builder builder) {
@@ -128,7 +128,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -137,7 +137,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * IdentityCredential.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putBodyParameter("IdentityCredential", identityCredential);
@@ -146,7 +146,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -155,7 +155,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>This parameter is required.</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);

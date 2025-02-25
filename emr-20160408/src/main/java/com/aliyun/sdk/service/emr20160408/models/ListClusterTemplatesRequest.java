@@ -128,15 +128,15 @@ public class ListClusterTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterTemplatesRequest response) {
-            super(response);
-            this.bizId = response.bizId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.productType = response.productType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListClusterTemplatesRequest request) {
+            super(request);
+            this.bizId = request.bizId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.productType = request.productType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

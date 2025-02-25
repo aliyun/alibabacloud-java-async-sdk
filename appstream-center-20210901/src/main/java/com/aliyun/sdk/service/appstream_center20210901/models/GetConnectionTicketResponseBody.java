@@ -1,47 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConnectionTicketResponseBody} extends {@link TeaModel}
  *
  * <p>GetConnectionTicketResponseBody</p>
  */
 public class GetConnectionTicketResponseBody extends TeaModel {
-    @NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
     private String appInstanceGroupId;
 
-    @NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
     private String appInstanceId;
 
-    @NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
+    private String appInstancePersistentId;
+
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
-    @NameInMap("Ticket")
+    @com.aliyun.core.annotation.NameInMap("Ticket")
     private String ticket;
 
     private GetConnectionTicketResponseBody(Builder builder) {
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
+        this.appInstancePersistentId = builder.appInstancePersistentId;
         this.bizRegionId = builder.bizRegionId;
         this.osType = builder.osType;
         this.requestId = builder.requestId;
@@ -71,6 +80,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      */
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    /**
+     * @return appInstancePersistentId
+     */
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     /**
@@ -125,6 +141,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public static final class Builder {
         private String appInstanceGroupId; 
         private String appInstanceId; 
+        private String appInstancePersistentId; 
         private String bizRegionId; 
         private String osType; 
         private String requestId; 
@@ -134,7 +151,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String ticket; 
 
         /**
-         * AppInstanceGroupId.
+         * <p>The ID of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-53fvrq1oan****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.appInstanceGroupId = appInstanceGroupId;
@@ -142,7 +162,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstanceId.
+         * <p>The ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-7ybdeiyoeh5e****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.appInstanceId = appInstanceId;
@@ -150,7 +173,21 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * BizRegionId.
+         * <p>The ID of the persistent session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-0bxls9m3cl7s****</p>
+         */
+        public Builder appInstancePersistentId(String appInstancePersistentId) {
+            this.appInstancePersistentId = appInstancePersistentId;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.bizRegionId = bizRegionId;
@@ -158,7 +195,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * OsType.
+         * <p>The operating system.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Windows: the Windows operating system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.osType = osType;
@@ -166,7 +210,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +221,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f3d1b31c-605e-4d04-a896****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -182,7 +232,16 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * <p>The task status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Finished: The task is complete.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Running: The task is being executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -190,7 +249,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>148871678899****</p>
          */
         public Builder tenantId(Long tenantId) {
             this.tenantId = tenantId;
@@ -198,7 +260,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Ticket.
+         * <p>The credential that is used to connect to App Streaming.</p>
+         * <blockquote>
+         * <p> This parameter is displayed for calls other than the first call to this operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DQpbRGVza3RvcF0NCkZvcmNlVGxzVHlwZT0xDQpHV1Rva2VuUGFydDE9MDAva09ROW1FUTU3dU****</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

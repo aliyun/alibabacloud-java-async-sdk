@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertContactResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAlertContactResponseBody</p>
  */
 public class UpdateAlertContactResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateAlertContactResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class UpdateAlertContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the alert contact was updated. Valid values:
-         * <p>
+         * <p>Indicates whether the alert contact was updated. Valid values:</p>
+         * <ul>
+         * <li>true: The alert contact was updated.</li>
+         * <li>false: The alert contact failed to be updated.</li>
+         * </ul>
          * 
-         * *   true: The alert contact was updated.
-         * *   false: The alert contact failed to be updated.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -62,7 +70,10 @@ public class UpdateAlertContactResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

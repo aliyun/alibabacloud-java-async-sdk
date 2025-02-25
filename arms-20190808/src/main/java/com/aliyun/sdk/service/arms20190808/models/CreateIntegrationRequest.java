@@ -1,38 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIntegrationRequest} extends {@link RequestModel}
  *
  * <p>CreateIntegrationRequest</p>
  */
 public class CreateIntegrationRequest extends Request {
-    @Body
-    @NameInMap("AutoRecover")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRecover")
     private Boolean autoRecover;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("IntegrationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationName;
 
-    @Body
-    @NameInMap("IntegrationProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationProductType;
 
-    @Body
-    @NameInMap("RecoverTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecoverTime")
     private Long recoverTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private CreateIntegrationRequest(Builder builder) {
         super(builder);
@@ -41,6 +50,7 @@ public class CreateIntegrationRequest extends Request {
         this.integrationName = builder.integrationName;
         this.integrationProductType = builder.integrationProductType;
         this.recoverTime = builder.recoverTime;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -91,12 +101,20 @@ public class CreateIntegrationRequest extends Request {
         return this.recoverTime;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<CreateIntegrationRequest, Builder> {
         private Boolean autoRecover; 
         private String description; 
         private String integrationName; 
         private String integrationProductType; 
         private Long recoverTime; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -109,10 +127,18 @@ public class CreateIntegrationRequest extends Request {
             this.integrationName = request.integrationName;
             this.integrationProductType = request.integrationProductType;
             this.recoverTime = request.recoverTime;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AutoRecover.
+         * <p>Specifies whether to automatically clear alert events. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRecover(Boolean autoRecover) {
             this.putBodyParameter("AutoRecover", autoRecover);
@@ -121,7 +147,10 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -130,7 +159,11 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationName.
+         * <p>The name of the alert integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor integration</p>
          */
         public Builder integrationName(String integrationName) {
             this.putBodyParameter("IntegrationName", integrationName);
@@ -139,7 +172,15 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationProductType.
+         * <p>The service of the alert integration. Valid values:</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putBodyParameter("IntegrationProductType", integrationProductType);
@@ -148,11 +189,26 @@ public class CreateIntegrationRequest extends Request {
         }
 
         /**
-         * RecoverTime.
+         * <p>The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder recoverTime(Long recoverTime) {
             this.putBodyParameter("RecoverTime", recoverTime);
             this.recoverTime = recoverTime;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

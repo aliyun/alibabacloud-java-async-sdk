@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateLoggingRequest} extends {@link RequestModel}
  *
  * <p>CreateLoggingRequest</p>
  */
 public class CreateLoggingRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Body
-    @NameInMap("loggingDetails")
-    @Validation(required = true)
-    private java.util.List < LoggingDetails> loggingDetails;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("loggingDetails")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<LoggingDetails> loggingDetails;
 
-    @Body
-    @NameInMap("loggingProject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("loggingProject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loggingProject;
 
     private CreateLoggingRequest(Builder builder) {
@@ -57,7 +61,7 @@ public class CreateLoggingRequest extends Request {
     /**
      * @return loggingDetails
      */
-    public java.util.List < LoggingDetails> getLoggingDetails() {
+    public java.util.List<LoggingDetails> getLoggingDetails() {
         return this.loggingDetails;
     }
 
@@ -70,7 +74,7 @@ public class CreateLoggingRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateLoggingRequest, Builder> {
         private String project; 
-        private java.util.List < LoggingDetails> loggingDetails; 
+        private java.util.List<LoggingDetails> loggingDetails; 
         private String loggingProject; 
 
         private Builder() {
@@ -85,7 +89,11 @@ public class CreateLoggingRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -94,16 +102,21 @@ public class CreateLoggingRequest extends Request {
         }
 
         /**
-         * The configurations of service logs.
+         * <p>The configurations of service logs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder loggingDetails(java.util.List < LoggingDetails> loggingDetails) {
+        public Builder loggingDetails(java.util.List<LoggingDetails> loggingDetails) {
             this.putBodyParameter("loggingDetails", loggingDetails);
             this.loggingDetails = loggingDetails;
             return this;
         }
 
         /**
-         * The name of the project to which service logs are stored.
+         * <p>The name of the project to which service logs are stored.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         public Builder loggingProject(String loggingProject) {
             this.putBodyParameter("loggingProject", loggingProject);
@@ -118,13 +131,19 @@ public class CreateLoggingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLoggingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoggingRequest</p>
+     */
     public static class LoggingDetails extends TeaModel {
-        @NameInMap("logstore")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("logstore")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String logstore;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private LoggingDetails(Builder builder) {
@@ -159,7 +178,11 @@ public class CreateLoggingRequest extends Request {
             private String type; 
 
             /**
-             * The name of the Logstore to which service logs of the type are stored.
+             * <p>The name of the Logstore to which service logs of the type are stored.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -167,17 +190,21 @@ public class CreateLoggingRequest extends Request {
             }
 
             /**
-             * The type of service logs. Valid values:
-             * <p>
+             * <p>The type of service logs. Valid values:</p>
+             * <ul>
+             * <li>consumergroup_log: the consumption delay logs of consumer groups.</li>
+             * <li>logtail_alarm: the alert logs of Logtail.</li>
+             * <li>operation_log: the operation logs.</li>
+             * <li>logtail_profile: the collection logs of Logtail.</li>
+             * <li>metering: the metering logs.</li>
+             * <li>logtail_status: the status logs of Logtail.</li>
+             * <li>scheduledsqlalert: the run logs of Scheduled SQL jobs.</li>
+             * <li>etl_alert: the run logs of data transformation jobs.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   consumergroup_log: the consumption delay logs of consumer groups.
-             * *   logtail_alarm: the alert logs of Logtail.
-             * *   operation_log: the operation logs.
-             * *   logtail_profile: the collection logs of Logtail.
-             * *   metering: the metering logs.
-             * *   logtail_status: the status logs of Logtail.
-             * *   scheduledsqlalert: the run logs of Scheduled SQL jobs.
-             * *   etl_alert: the run logs of data transformation jobs.
+             * <strong>example:</strong>
+             * <p>consumergroup_log</p>
              */
             public Builder type(String type) {
                 this.type = type;

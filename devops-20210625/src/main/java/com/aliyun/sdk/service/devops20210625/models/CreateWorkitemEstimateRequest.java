@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkitemEstimateRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkitemEstimateRequest</p>
  */
 public class CreateWorkitemEstimateRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("recordUserIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recordUserIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordUserIdentifier;
 
-    @Body
-    @NameInMap("spentTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spentTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spentTime;
 
-    @Body
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Body
-    @NameInMap("workitemIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemIdentifier;
 
     private CreateWorkitemEstimateRequest(Builder builder) {
@@ -129,7 +134,10 @@ public class CreateWorkitemEstimateRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -147,7 +155,10 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * recordUserIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1316458xxxxx41068</p>
          */
         public Builder recordUserIdentifier(String recordUserIdentifier) {
             this.putBodyParameter("recordUserIdentifier", recordUserIdentifier);
@@ -156,7 +167,10 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * spentTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder spentTime(String spentTime) {
             this.putBodyParameter("spentTime", spentTime);
@@ -165,7 +179,10 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -174,7 +191,10 @@ public class CreateWorkitemEstimateRequest extends Request {
         }
 
         /**
-         * workitemIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e9903d8b3f1xxxxxf9286ef5</p>
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

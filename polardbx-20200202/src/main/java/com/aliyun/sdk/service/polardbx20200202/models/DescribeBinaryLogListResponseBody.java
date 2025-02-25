@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBinaryLogListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBinaryLogListResponseBody</p>
  */
 public class DescribeBinaryLogListResponseBody extends TeaModel {
-    @NameInMap("LogList")
-    private java.util.List < LogList> logList;
+    @com.aliyun.core.annotation.NameInMap("LogList")
+    private java.util.List<LogList> logList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNumber")
+    @com.aliyun.core.annotation.NameInMap("TotalNumber")
     private Integer totalNumber;
 
     private DescribeBinaryLogListResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     /**
      * @return logList
      */
-    public java.util.List < LogList> getLogList() {
+    public java.util.List<LogList> getLogList() {
         return this.logList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LogList> logList; 
+        private java.util.List<LogList> logList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         /**
          * LogList.
          */
-        public Builder logList(java.util.List < LogList> logList) {
+        public Builder logList(java.util.List<LogList> logList) {
             this.logList = logList;
             return this;
         }
@@ -131,38 +136,44 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBinaryLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBinaryLogListResponseBody</p>
+     */
     public static class LogList extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DownloadLink")
+        @com.aliyun.core.annotation.NameInMap("DownloadLink")
         private String downloadLink;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LogSize")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
         private Long logSize;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PurgeStatus")
+        @com.aliyun.core.annotation.NameInMap("PurgeStatus")
         private Integer purgeStatus;
 
-        @NameInMap("UploadHost")
+        @com.aliyun.core.annotation.NameInMap("UploadHost")
         private String uploadHost;
 
-        @NameInMap("UploadStatus")
+        @com.aliyun.core.annotation.NameInMap("UploadStatus")
         private Integer uploadStatus;
 
         private LogList(Builder builder) {

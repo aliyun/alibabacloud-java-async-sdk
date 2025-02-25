@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSourceEventsResponseBody</p>
  */
 public class ListSourceEventsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("firstRowKey")
+    @com.aliyun.core.annotation.NameInMap("firstRowKey")
     private String firstRowKey;
 
-    @NameInMap("lastRowKey")
+    @com.aliyun.core.annotation.NameInMap("lastRowKey")
     private String lastRowKey;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListSourceEventsResponseBody(Builder builder) {
@@ -172,28 +171,28 @@ public class ListSourceEventsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("eventJson")
+        @com.aliyun.core.annotation.NameInMap("eventJson")
         private String eventJson;
 
-        @NameInMap("eventTime")
+        @com.aliyun.core.annotation.NameInMap("eventTime")
         private String eventTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private Long instanceId;
 
-        @NameInMap("instanceType")
+        @com.aliyun.core.annotation.NameInMap("instanceType")
         private String instanceType;
 
-        @NameInMap("monitorSourceId")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceId")
         private Long monitorSourceId;
 
-        @NameInMap("monitorSourceName")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceName")
         private String monitorSourceName;
 
-        @NameInMap("routeRuleId")
+        @com.aliyun.core.annotation.NameInMap("routeRuleId")
         private Long routeRuleId;
 
-        @NameInMap("tenantRamId")
+        @com.aliyun.core.annotation.NameInMap("tenantRamId")
         private Long tenantRamId;
 
         private Data(Builder builder) {

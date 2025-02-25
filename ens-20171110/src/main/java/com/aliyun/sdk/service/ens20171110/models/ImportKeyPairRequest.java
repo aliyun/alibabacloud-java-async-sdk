@@ -1,37 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportKeyPairRequest} extends {@link RequestModel}
  *
  * <p>ImportKeyPairRequest</p>
  */
 public class ImportKeyPairRequest extends Request {
-    @Query
-    @NameInMap("KeyPairName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyPairName;
 
-    @Query
-    @NameInMap("PublicKeyBody")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKeyBody")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String publicKeyBody;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private ImportKeyPairRequest(Builder builder) {
         super(builder);
         this.keyPairName = builder.keyPairName;
         this.publicKeyBody = builder.publicKeyBody;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,17 +60,9 @@ public class ImportKeyPairRequest extends Request {
         return this.publicKeyBody;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<ImportKeyPairRequest, Builder> {
         private String keyPairName; 
         private String publicKeyBody; 
-        private String version; 
 
         private Builder() {
             super();
@@ -81,11 +72,20 @@ public class ImportKeyPairRequest extends Request {
             super(request);
             this.keyPairName = request.keyPairName;
             this.publicKeyBody = request.publicKeyBody;
-            this.version = request.version;
         } 
 
         /**
-         * KeyPairName.
+         * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * </ul>
+         * <p>You can specify the name of only one key pair.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -94,20 +94,15 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * PublicKeyBody.
+         * <p>The public key of the key pair. You can specify only one public key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-rsa AAAAB****</p>
          */
         public Builder publicKeyBody(String publicKeyBody) {
             this.putQueryParameter("PublicKeyBody", publicKeyBody);
             this.publicKeyBody = publicKeyBody;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

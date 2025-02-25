@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyVersionResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePolicyVersionResponseBody</p>
  */
 public class CreatePolicyVersionResponseBody extends TeaModel {
-    @NameInMap("PolicyVersion")
+    @com.aliyun.core.annotation.NameInMap("PolicyVersion")
     private PolicyVersion policyVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePolicyVersionResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PolicyVersion.
+         * <p>The information about the policy version.</p>
          */
         public Builder policyVersion(PolicyVersion policyVersion) {
             this.policyVersion = policyVersion;
@@ -58,7 +63,10 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePolicyVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyVersionResponseBody</p>
+     */
     public static class PolicyVersion extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("IsDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("IsDefaultVersion")
         private Boolean isDefaultVersion;
 
-        @NameInMap("PolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PolicyDocument")
         private String policyDocument;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private PolicyVersion(Builder builder) {
@@ -134,7 +148,10 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * CreateDate.
+             * <p>The time when the policy version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -142,7 +159,10 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefaultVersion.
+             * <p>Indicates whether the policy version is the default version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -150,7 +170,10 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDocument.
+             * <p>The document of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -158,7 +181,10 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The ID of the policy version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

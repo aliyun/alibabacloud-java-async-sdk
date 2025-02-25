@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDirQuotasResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDirQuotasResponseBody</p>
  */
 public class DescribeDirQuotasResponseBody extends TeaModel {
-    @NameInMap("DirQuotaInfos")
-    private java.util.List < DirQuotaInfos> dirQuotaInfos;
+    @com.aliyun.core.annotation.NameInMap("DirQuotaInfos")
+    private java.util.List<DirQuotaInfos> dirQuotaInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDirQuotasResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     /**
      * @return dirQuotaInfos
      */
-    public java.util.List < DirQuotaInfos> getDirQuotaInfos() {
+    public java.util.List<DirQuotaInfos> getDirQuotaInfos() {
         return this.dirQuotaInfos;
     }
 
@@ -79,22 +84,25 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DirQuotaInfos> dirQuotaInfos; 
+        private java.util.List<DirQuotaInfos> dirQuotaInfos; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * DirQuotaInfos.
+         * <p>The queried directory quotas.</p>
          */
-        public Builder dirQuotaInfos(java.util.List < DirQuotaInfos> dirQuotaInfos) {
+        public Builder dirQuotaInfos(java.util.List<DirQuotaInfos> dirQuotaInfos) {
             this.dirQuotaInfos = dirQuotaInfos;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BC5CB97-9F28-42FE-84A4-0CD0DF42****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of directories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,35 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDirQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDirQuotasResponseBody</p>
+     */
     public static class UserQuotaInfos extends TeaModel {
-        @NameInMap("FileCountLimit")
+        @com.aliyun.core.annotation.NameInMap("FileCountLimit")
         private Long fileCountLimit;
 
-        @NameInMap("FileCountReal")
+        @com.aliyun.core.annotation.NameInMap("FileCountReal")
         private Long fileCountReal;
 
-        @NameInMap("QuotaType")
+        @com.aliyun.core.annotation.NameInMap("QuotaType")
         private String quotaType;
 
-        @NameInMap("SizeLimit")
+        @com.aliyun.core.annotation.NameInMap("SizeLimit")
         private Long sizeLimit;
 
-        @NameInMap("SizeReal")
+        @com.aliyun.core.annotation.NameInMap("SizeReal")
         private Long sizeReal;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("SizeRealInByte")
+        private Long sizeRealInByte;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private UserQuotaInfos(Builder builder) {
@@ -159,6 +185,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             this.quotaType = builder.quotaType;
             this.sizeLimit = builder.sizeLimit;
             this.sizeReal = builder.sizeReal;
+            this.sizeRealInByte = builder.sizeRealInByte;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -207,6 +234,13 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
+         * @return sizeRealInByte
+         */
+        public Long getSizeRealInByte() {
+            return this.sizeRealInByte;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -226,11 +260,15 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private String quotaType; 
             private Long sizeLimit; 
             private Long sizeReal; 
+            private Long sizeRealInByte; 
             private String userId; 
             private String userType; 
 
             /**
-             * FileCountLimit.
+             * <p>The maximum number of files that a user can create in the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -238,7 +276,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountReal.
+             * <p>The total number of files that a user has created in the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5100</p>
              */
             public Builder fileCountReal(Long fileCountReal) {
                 this.fileCountReal = fileCountReal;
@@ -246,7 +287,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaType.
+             * <p>The type of the quota. Valid values: Accounting and Enforcement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accounting</p>
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -254,7 +298,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * SizeLimit.
+             * <p>The maximum size of files that a user can create in the directory. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -262,7 +309,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * SizeReal.
+             * <p>The total size of files that a user has created in the directory. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800</p>
              */
             public Builder sizeReal(Long sizeReal) {
                 this.sizeReal = sizeReal;
@@ -270,7 +320,21 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The total size of files that a user has created in the directory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>858995833870</p>
+             */
+            public Builder sizeRealInByte(Long sizeRealInByte) {
+                this.sizeRealInByte = sizeRealInByte;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the user that you specify to create a quota for the directory. The value depends on the value of the UserType parameter. Valid values: Uid and Gid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -278,7 +342,14 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * <p>The type of user. Valid values: Uid, Gid, and AllUsers.</p>
+             * <ul>
+             * <li>If Uid or Gid is returned, a value is returned for UserId.</li>
+             * <li>If AllUsers is returned, UserId is empty.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Uid</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -292,18 +363,24 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDirQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDirQuotasResponseBody</p>
+     */
     public static class DirQuotaInfos extends TeaModel {
-        @NameInMap("DirInode")
+        @com.aliyun.core.annotation.NameInMap("DirInode")
         private String dirInode;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserQuotaInfos")
-        private java.util.List < UserQuotaInfos> userQuotaInfos;
+        @com.aliyun.core.annotation.NameInMap("UserQuotaInfos")
+        private java.util.List<UserQuotaInfos> userQuotaInfos;
 
         private DirQuotaInfos(Builder builder) {
             this.dirInode = builder.dirInode;
@@ -344,7 +421,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         /**
          * @return userQuotaInfos
          */
-        public java.util.List < UserQuotaInfos> getUserQuotaInfos() {
+        public java.util.List<UserQuotaInfos> getUserQuotaInfos() {
             return this.userQuotaInfos;
         }
 
@@ -352,10 +429,13 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private String dirInode; 
             private String path; 
             private String status; 
-            private java.util.List < UserQuotaInfos> userQuotaInfos; 
+            private java.util.List<UserQuotaInfos> userQuotaInfos; 
 
             /**
-             * DirInode.
+             * <p>The inode number of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1123</p>
              */
             public Builder dirInode(String dirInode) {
                 this.dirInode = dirInode;
@@ -363,7 +443,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The absolute path of a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data/sub1</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -371,7 +454,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the quota created for the directory. Valid values: Initializing and Normal. The Initializing state indicates that the quota is being created. The Normal state indicates that the quota is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,9 +465,9 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * UserQuotaInfos.
+             * <p>The information about quotas for all users.</p>
              */
-            public Builder userQuotaInfos(java.util.List < UserQuotaInfos> userQuotaInfos) {
+            public Builder userQuotaInfos(java.util.List<UserQuotaInfos> userQuotaInfos) {
                 this.userQuotaInfos = userQuotaInfos;
                 return this;
             }

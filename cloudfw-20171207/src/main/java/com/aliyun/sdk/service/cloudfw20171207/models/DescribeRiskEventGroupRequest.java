@@ -1,106 +1,115 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskEventGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeRiskEventGroupRequest</p>
  */
 public class DescribeRiskEventGroupRequest extends Request {
-    @Query
-    @NameInMap("AttackApp")
-    private java.util.List < String > attackApp;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttackApp")
+    private java.util.List<String> attackApp;
 
-    @Query
-    @NameInMap("AttackType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttackType")
     private String attackType;
 
-    @Query
-    @NameInMap("BuyVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuyVersion")
     private Long buyVersion;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @Query
-    @NameInMap("DataType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataType;
 
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("DstIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstIP")
     private String dstIP;
 
-    @Query
-    @NameInMap("DstNetworkInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstNetworkInstanceId")
     private String dstNetworkInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @Query
-    @NameInMap("FirewallType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallType")
     private String firewallType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOnlyPrivateAssoc")
+    private String isOnlyPrivateAssoc;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NoLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NoLocation")
     private String noLocation;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RuleResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleResult")
     private String ruleResult;
 
-    @Query
-    @NameInMap("RuleSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleSource")
     private String ruleSource;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("SrcIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcIP")
     private String srcIP;
 
-    @Query
-    @NameInMap("SrcNetworkInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcNetworkInstanceId")
     private String srcNetworkInstanceId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("VulLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulLevel")
     private String vulLevel;
 
     private DescribeRiskEventGroupRequest(Builder builder) {
@@ -116,6 +125,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         this.endTime = builder.endTime;
         this.eventName = builder.eventName;
         this.firewallType = builder.firewallType;
+        this.isOnlyPrivateAssoc = builder.isOnlyPrivateAssoc;
         this.lang = builder.lang;
         this.noLocation = builder.noLocation;
         this.order = builder.order;
@@ -145,7 +155,7 @@ public class DescribeRiskEventGroupRequest extends Request {
     /**
      * @return attackApp
      */
-    public java.util.List < String > getAttackApp() {
+    public java.util.List<String> getAttackApp() {
         return this.attackApp;
     }
 
@@ -217,6 +227,13 @@ public class DescribeRiskEventGroupRequest extends Request {
      */
     public String getFirewallType() {
         return this.firewallType;
+    }
+
+    /**
+     * @return isOnlyPrivateAssoc
+     */
+    public String getIsOnlyPrivateAssoc() {
+        return this.isOnlyPrivateAssoc;
     }
 
     /**
@@ -297,7 +314,7 @@ public class DescribeRiskEventGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRiskEventGroupRequest, Builder> {
-        private java.util.List < String > attackApp; 
+        private java.util.List<String> attackApp; 
         private String attackType; 
         private Long buyVersion; 
         private String currentPage; 
@@ -308,6 +325,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         private String endTime; 
         private String eventName; 
         private String firewallType; 
+        private String isOnlyPrivateAssoc; 
         private String lang; 
         private String noLocation; 
         private String order; 
@@ -337,6 +355,7 @@ public class DescribeRiskEventGroupRequest extends Request {
             this.endTime = request.endTime;
             this.eventName = request.eventName;
             this.firewallType = request.firewallType;
+            this.isOnlyPrivateAssoc = request.isOnlyPrivateAssoc;
             this.lang = request.lang;
             this.noLocation = request.noLocation;
             this.order = request.order;
@@ -351,33 +370,40 @@ public class DescribeRiskEventGroupRequest extends Request {
         } 
 
         /**
-         * The names of attacked applications. Set the value in the `["AttackApp1","AttackApp2"]` format.
+         * <p>The names of attacked applications. Set the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;MySql&quot;,&quot;DNS&quot;]</p>
          */
-        public Builder attackApp(java.util.List < String > attackApp) {
+        public Builder attackApp(java.util.List<String> attackApp) {
             this.putQueryParameter("AttackApp", attackApp);
             this.attackApp = attackApp;
             return this;
         }
 
         /**
-         * The attack type of the intrusion events. Valid values:
-         * <p>
+         * <p>The attack type of the intrusion events. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: suspicious connection</li>
+         * <li><strong>2</strong>: command execution</li>
+         * <li><strong>3</strong>: brute-force attack</li>
+         * <li><strong>4</strong>: scanning</li>
+         * <li><strong>5</strong>: others</li>
+         * <li><strong>6</strong>: information leak</li>
+         * <li><strong>7</strong>: DoS attack</li>
+         * <li><strong>8</strong>: buffer overflow attack</li>
+         * <li><strong>9</strong>: web attack</li>
+         * <li><strong>10</strong>: trojan backdoor</li>
+         * <li><strong>11</strong>: computer worm</li>
+         * <li><strong>12</strong>: mining</li>
+         * <li><strong>13</strong>: reverse shell</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the intrusion events of all attack types are queried.</p>
+         * </blockquote>
          * 
-         * *   **1**: suspicious connection
-         * *   **2**: command execution
-         * *   **3**: brute-force attack
-         * *   **4**: scanning
-         * *   **5**: others
-         * *   **6**: information leak
-         * *   **7**: DoS attack
-         * *   **8**: buffer overflow attack
-         * *   **9**: web attack
-         * *   **10**: trojan backdoor
-         * *   **11**: computer worm
-         * *   **12**: mining
-         * *   **13**: reverse shell
-         * 
-         * > If you do not specify this parameter, the intrusion events of all attack types are queried.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder attackType(String attackType) {
             this.putQueryParameter("AttackType", attackType);
@@ -386,13 +412,16 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The edition of Cloud Firewall that you purchase. Valid values:
-         * <p>
+         * <p>The edition of Cloud Firewall that you purchase. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Premium Edition</li>
+         * <li><strong>3</strong>: Enterprise Edition</li>
+         * <li><strong>4</strong>: Ultimate Edition</li>
+         * <li><strong>10</strong>: Cloud Firewall that uses the pay-as-you-go billing method</li>
+         * </ul>
          * 
-         * *   **2**: Premium Edition
-         * *   **3**: Enterprise Edition
-         * *   **4**: Ultimate Edition
-         * *   **10**: Cloud Firewall that uses the pay-as-you-go billing method
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder buyVersion(Long buyVersion) {
             this.putQueryParameter("BuyVersion", buyVersion);
@@ -401,7 +430,10 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -410,9 +442,11 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The type of the risk events.\
-         * <p>
-         * Set the value to **session**, which indicates intrusion events.
+         * <p>The type of the risk events.<br>Set the value to <strong>session</strong>, which indicates intrusion events.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session</p>
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -421,13 +455,17 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The direction of the traffic for the intrusion events. Valid values:
-         * <p>
+         * <p>The direction of the traffic for the intrusion events. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the intrusion events that are recorded for both inbound and outbound traffic are queried.</p>
+         * </blockquote>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
-         * 
-         * > If you do not specify this parameter, the intrusion events that are recorded for both inbound and outbound traffic are queried.
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -436,7 +474,10 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.
+         * <p>The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder dstIP(String dstIP) {
             this.putQueryParameter("DstIP", dstIP);
@@ -445,10 +486,13 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The ID of the destination VPC.
-         * <p>
+         * <p>The ID of the destination VPC.</p>
+         * <blockquote>
+         * <p>If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>vpc-uf6e9a9zyokj2ywuo****</p>
          */
         public Builder dstNetworkInstanceId(String dstNetworkInstanceId) {
             this.putQueryParameter("DstNetworkInstanceId", dstNetworkInstanceId);
@@ -457,7 +501,11 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1534408267</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -466,7 +514,10 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The name of the intrusion event.
+         * <p>The name of the intrusion event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Webshell communication</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -475,11 +526,14 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The type of the firewall. Valid values:
-         * <p>
+         * <p>The type of the firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewall</li>
+         * <li><strong>InternetFirewall</strong>: Internet firewall (default)</li>
+         * </ul>
          * 
-         * *   **VpcFirewall**: virtual private cloud (VPC) firewall
-         * *   **InternetFirewall**: Internet firewall (default)
+         * <strong>example:</strong>
+         * <p>InternetFirewall</p>
          */
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
@@ -488,11 +542,26 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>Whether to query only the data that has completed private network tracing.</p>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder isOnlyPrivateAssoc(String isOnlyPrivateAssoc) {
+            this.putQueryParameter("IsOnlyPrivateAssoc", isOnlyPrivateAssoc);
+            this.isOnlyPrivateAssoc = isOnlyPrivateAssoc;
+            return this;
+        }
+
+        /**
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -501,11 +570,14 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about the geographical locations of IP addresses.
-         * <p>
+         * <p>Specifies whether to query the information about the geographical locations of IP addresses.</p>
+         * <ul>
+         * <li><strong>true</strong>: does not query the information about the geographical locations of IP addresses.</li>
+         * <li><strong>false</strong>: queries the information about the geographical locations of IP addresses. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: does not query the information about the geographical locations of IP addresses.
-         * *   **false**: queries the information about the geographical locations of IP addresses. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder noLocation(String noLocation) {
             this.putQueryParameter("NoLocation", noLocation);
@@ -514,11 +586,14 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the results. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: the ascending order.</li>
+         * <li><strong>desc</strong>: the descending order. This is the default value.</li>
+         * </ul>
          * 
-         * *   **asc**: the ascending order.
-         * *   **desc**: the descending order. This is the default value.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -527,10 +602,11 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: <strong>6</strong>. Maximum value: <strong>10</strong>.</p>
          * 
-         * Default value: **6**. Maximum value: **10**.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -539,13 +615,17 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The status of the firewall. Valid values:
-         * <p>
+         * <p>The status of the firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: alerting</li>
+         * <li><strong>2</strong>: blocking</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all intrusion events that are detected by the firewall are queried, regardless of the firewall status.</p>
+         * </blockquote>
          * 
-         * *   **1**: alerting
-         * *   **2**: blocking
-         * 
-         * > If you do not specify this parameter, all intrusion events that are detected by the firewall are queried, regardless of the firewall status.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleResult(String ruleResult) {
             this.putQueryParameter("RuleResult", ruleResult);
@@ -554,14 +634,18 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The module of the rule that is used to detect the intrusion events. Valid values:
-         * <p>
+         * <p>The module of the rule that is used to detect the intrusion events. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: basic protection</li>
+         * <li><strong>2</strong>: virtual patching</li>
+         * <li><strong>4</strong>: threat intelligence</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the intrusion events that are detected by all rules are queried.</p>
+         * </blockquote>
          * 
-         * *   **1**: basic protection
-         * *   **2**: virtual patching
-         * *   **4**: threat intelligence
-         * 
-         * > If you do not specify this parameter, the intrusion events that are detected by all rules are queried.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleSource(String ruleSource) {
             this.putQueryParameter("RuleSource", ruleSource);
@@ -570,11 +654,14 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The field based on which you want to sort the results. Valid values:
-         * <p>
+         * <p>The field based on which you want to sort the results. Valid values:</p>
+         * <ul>
+         * <li><strong>VulLevel</strong>: The results are sorted based on the risk level field. This is the default value.</li>
+         * <li><strong>LastTime</strong>: The results are sorted based on the most recent occurrence time.</li>
+         * </ul>
          * 
-         * *   **VulLevel**: The results are sorted based on the risk level field. This is the default value.
-         * *   **LastTime**: The results are sorted based on the most recent occurrence time.
+         * <strong>example:</strong>
+         * <p>LastTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -583,7 +670,10 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The source IP address to query. If you specify this parameter, all intrusion events with the specified source IP address are queried.
+         * <p>The source IP address to query. If you specify this parameter, all intrusion events with the specified source IP address are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder srcIP(String srcIP) {
             this.putQueryParameter("SrcIP", srcIP);
@@ -592,10 +682,13 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The ID of the source VPC.
-         * <p>
+         * <p>The ID of the source VPC.</p>
+         * <blockquote>
+         * <p>If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>vpc-uf6e9a9zyokj2ywuo****</p>
          */
         public Builder srcNetworkInstanceId(String srcNetworkInstanceId) {
             this.putQueryParameter("SrcNetworkInstanceId", srcNetworkInstanceId);
@@ -604,7 +697,11 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1534408189</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -613,14 +710,18 @@ public class DescribeRiskEventGroupRequest extends Request {
         }
 
         /**
-         * The risk level of the intrusion events. Valid values:
-         * <p>
+         * <p>The risk level of the intrusion events. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: low</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: high</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the intrusion events that are at all risk levels are queried.</p>
+         * </blockquote>
          * 
-         * *   **1**: low
-         * *   **2**: medium
-         * *   **3**: high
-         * 
-         * > If you do not specify this parameter, the intrusion events that are at all risk levels are queried.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder vulLevel(String vulLevel) {
             this.putQueryParameter("VulLevel", vulLevel);

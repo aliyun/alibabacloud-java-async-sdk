@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTraceAppRequest} extends {@link RequestModel}
  *
  * <p>DeleteTraceAppRequest</p>
  */
 public class DeleteTraceAppRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("DeleteReason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteReason")
     private DeleteReason deleteReason;
 
-    @Query
-    @NameInMap("Pid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DeleteTraceAppRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class DeleteTraceAppRequest extends Request {
         } 
 
         /**
-         * The ID of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application ID. For more information, see [SearchTraceAppByName](~~130676~~).
+         * <p>The ID of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/130676.html">SearchTraceAppByName</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5406**</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -123,7 +132,7 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * The reason(s) to delete application.
+         * <p>The reason(s) to delete application.</p>
          */
         public Builder deleteReason(DeleteReason deleteReason) {
             String deleteReasonShrink = shrink(deleteReason, "DeleteReason", "json");
@@ -133,7 +142,11 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * The PID of the application. For more information about how to query the PID, see [QueryMetricByPage](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
+         * <p>The PID of the application. For more information about how to query the PID, see <a href="https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr">QueryMetricByPage</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9w0sc5gxxz@edcsd447c2f****</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -142,7 +155,11 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the application is located.
+         * <p>The ID of the region in which the application is located.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,11 +168,15 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * The type of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application type. For more information, see [SearchTraceAppByName](~~130676~~). Valid values:
-         * <p>
+         * <p>The type of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application type. For more information, see <a href="https://help.aliyun.com/document_detail/130676.html">SearchTraceAppByName</a>. Valid values:</p>
+         * <ul>
+         * <li><code>TRACE</code>: Application Monitoring</li>
+         * <li><code>RETCODE</code>: frontend monitoring</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `TRACE`: Application Monitoring
-         * *   `RETCODE`: frontend monitoring
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -170,11 +191,17 @@ public class DeleteTraceAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteTraceAppRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteTraceAppRequest</p>
+     */
     public static class ReasonIds extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ReasonIds(Builder builder) {
@@ -209,7 +236,10 @@ public class DeleteTraceAppRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the reason for deletion.
+             * <p>The ID of the reason for deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -217,7 +247,10 @@ public class DeleteTraceAppRequest extends Request {
             }
 
             /**
-             * A description of the reason for removal.
+             * <p>A description of the reason for removal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The function is not perfect, and the root cause of the problem cannot be located.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,11 +264,17 @@ public class DeleteTraceAppRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteTraceAppRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteTraceAppRequest</p>
+     */
     public static class DeleteReason extends TeaModel {
-        @NameInMap("ReasonIds")
-        private java.util.List < ReasonIds> reasonIds;
+        @com.aliyun.core.annotation.NameInMap("ReasonIds")
+        private java.util.List<ReasonIds> reasonIds;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private DeleteReason(Builder builder) {
@@ -254,7 +293,7 @@ public class DeleteTraceAppRequest extends Request {
         /**
          * @return reasonIds
          */
-        public java.util.List < ReasonIds> getReasonIds() {
+        public java.util.List<ReasonIds> getReasonIds() {
             return this.reasonIds;
         }
 
@@ -266,19 +305,22 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ReasonIds> reasonIds; 
+            private java.util.List<ReasonIds> reasonIds; 
             private String remark; 
 
             /**
-             * Reasons Ids.
+             * <p>Reasons Ids.</p>
              */
-            public Builder reasonIds(java.util.List < ReasonIds> reasonIds) {
+            public Builder reasonIds(java.util.List<ReasonIds> reasonIds) {
                 this.reasonIds = reasonIds;
                 return this;
             }
 
             /**
-             * Additional remarks when none of the reasons for removal provided are met.
+             * <p>Additional remarks when none of the reasons for removal provided are met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The business scenario cannot be satisfied.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

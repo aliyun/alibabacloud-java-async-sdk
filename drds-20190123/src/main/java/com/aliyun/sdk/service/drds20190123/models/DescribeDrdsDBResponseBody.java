@@ -62,7 +62,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates the details about the database.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +190,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * Indicates the time when the database was created. The value is in the UNIX timestamp format. Unit: ms.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -198,7 +198,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstType.
+             * Indicates the storage type of the database.
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -206,7 +206,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * Indicates the name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -214,7 +214,11 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * InstRole.
+             * Indicates the type of the instance in which the database is deployed. Valid values:
+             * <p>
+             * 
+             * *   **MASTER**: The instance is a primary instance.
+             * *   **SLAVE**: The instance is a read-only instance.
              */
             public Builder instRole(String instRole) {
                 this.instRole = instRole;
@@ -222,7 +226,11 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * Indicates the database sharding method.
+             * <p>
+             * 
+             * *   **HORIZONTAL**: The database is horizontally sharded.
+             * *   **VERTICAL**: The database is vertically sharded.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -230,7 +238,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * Indicates the schema name of the database.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -238,7 +246,11 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates the state of the database. Valid values:
+             * <p>
+             * 
+             * *   **TO_BE_INIT**: The database is being created.
+             * *   **NORMAL**: The database is running.
              */
             public Builder status(String status) {
                 this.status = status;

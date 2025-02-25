@@ -1,41 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKubernetesVersionMetadataRequest} extends {@link RequestModel}
  *
  * <p>DescribeKubernetesVersionMetadataRequest</p>
  */
 public class DescribeKubernetesVersionMetadataRequest extends Request {
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("KubernetesVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KubernetesVersion")
     private String kubernetesVersion;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("Profile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Profile")
     private String profile;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryUpgradableVersion")
+    private Boolean queryUpgradableVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
     private DescribeKubernetesVersionMetadataRequest(Builder builder) {
@@ -44,6 +53,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         this.kubernetesVersion = builder.kubernetesVersion;
         this.mode = builder.mode;
         this.profile = builder.profile;
+        this.queryUpgradableVersion = builder.queryUpgradableVersion;
         this.region = builder.region;
         this.runtime = builder.runtime;
     }
@@ -90,6 +100,13 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     }
 
     /**
+     * @return queryUpgradableVersion
+     */
+    public Boolean getQueryUpgradableVersion() {
+        return this.queryUpgradableVersion;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -108,6 +125,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         private String kubernetesVersion; 
         private String mode; 
         private String profile; 
+        private Boolean queryUpgradableVersion; 
         private String region; 
         private String runtime; 
 
@@ -121,17 +139,22 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
             this.kubernetesVersion = request.kubernetesVersion;
             this.mode = request.mode;
             this.profile = request.profile;
+            this.queryUpgradableVersion = request.queryUpgradableVersion;
             this.region = request.region;
             this.runtime = request.runtime;
         } 
 
         /**
-         * The cluster type that you want to use. Valid values:
-         * <p>
+         * <p>The cluster type that you want to use. Valid values:</p>
+         * <ul>
+         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `Kubernetes`: ACK dedicated cluster
-         * *   `ManagedKubernetes`: ACK managed cluster
-         * *   `ExternalKubernetes`: registered cluster
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -140,10 +163,11 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not set this parameter, the latest Kubernetes version is used.
-         * <p>
+         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not set this parameter, the latest Kubernetes version is used.</p>
+         * <p>You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
          * 
-         * You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+         * <strong>example:</strong>
+         * <p>1.16.9-aliyun.1</p>
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putQueryParameter("KubernetesVersion", kubernetesVersion);
@@ -152,15 +176,16 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * The query mode. Valid values:
-         * <p>
+         * <p>The query mode. Valid values:</p>
+         * <ul>
+         * <li><code>supported</code>: queries all supported Kubernetes versions.</li>
+         * <li><code>creatable</code>: queries only Kubernetes versions of clusters that you can create.</li>
+         * </ul>
+         * <p>If you specify <code>KubernetesVersion</code>, this parameter does not take effect.</p>
+         * <p>If you do not specify a query mode, Kubernetes versions of clusters that you can create are returned.</p>
          * 
-         * *   `supported`: queries all supported versions.
-         * *   `creatable`: queries only versions that allow you to create clusters.
-         * 
-         * If you specify `KubernetesVersion`, this parameter does not take effect.
-         * 
-         * Default value: creatable.
+         * <strong>example:</strong>
+         * <p>supported</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -169,14 +194,16 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * The scenario where clusters are used. Valid values:
-         * <p>
+         * <p>The scenario where clusters are used. Valid values:</p>
+         * <ul>
+         * <li><code>Default</code>: non-edge computing scenarios</li>
+         * <li><code>Edge</code>: edge computing scenarios</li>
+         * <li><code>Serverless</code>: serverless scenarios.</li>
+         * </ul>
+         * <p>Default value: <code>Default</code>.</p>
          * 
-         * *   `Default`: non-edge computing scenarios
-         * *   `Edge`: edge computing scenarios
-         * *   `Serverless`: serverless scenarios.
-         * 
-         * Default value: `Default`.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.putQueryParameter("Profile", profile);
@@ -185,7 +212,23 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>Specify whether to query the Kubernetes versions available for updates. This parameter takes effect only when the KubernetesVersion parameter is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.30.1-aliyun.1</p>
+         */
+        public Builder queryUpgradableVersion(Boolean queryUpgradableVersion) {
+            this.putQueryParameter("QueryUpgradableVersion", queryUpgradableVersion);
+            this.queryUpgradableVersion = queryUpgradableVersion;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -194,16 +237,17 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * The container runtime type that you want to use. You can specify a runtime type to query only OS images that support the runtime type. Valid values:
-         * <p>
+         * <p>The container runtime type that you want to use. You can specify a runtime type to query only OS images that support the runtime type. Valid values:</p>
+         * <ul>
+         * <li><code>docker</code>: Docker</li>
+         * <li><code>containerd</code>: containerd</li>
+         * <li><code>Sandboxed-Container.runv</code>: Sandboxed-Container</li>
+         * </ul>
+         * <p>If you specify a runtime type, only the OS images that support the specified runtime type are returned.</p>
+         * <p>Otherwise, all OS images are returned.</p>
          * 
-         * *   `docker`: Docker
-         * *   `containerd`: containerd
-         * *   `Sandboxed-Container.runv`: Sandboxed-Container
-         * 
-         * If you specify a runtime type, only the OS images that support the specified runtime type are returned.
-         * 
-         * Otherwise, all OS images are returned.
+         * <strong>example:</strong>
+         * <p>docker</p>
          */
         public Builder runtime(String runtime) {
             this.putQueryParameter("runtime", runtime);

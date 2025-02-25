@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOnlineConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListOnlineConfigsRequest</p>
  */
 public class ListOnlineConfigsRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("nodeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("nodeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeName;
 
-    @Query
-    @NameInMap("domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
     private ListOnlineConfigsRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ListOnlineConfigsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2s170b03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +103,11 @@ public class ListOnlineConfigsRequest extends Request {
         }
 
         /**
-         * nodeName.
+         * <p>The name of the Query Result Searcher (QRS) worker.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_qrs</p>
          */
         public Builder nodeName(String nodeName) {
             this.putPathParameter("nodeName", nodeName);
@@ -103,7 +116,11 @@ public class ListOnlineConfigsRequest extends Request {
         }
 
         /**
-         * domain.
+         * <p>The name of the domain</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sz_vpc_domain_1</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);

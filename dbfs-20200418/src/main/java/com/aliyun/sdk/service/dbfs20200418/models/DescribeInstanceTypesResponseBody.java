@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTypesResponseBody</p>
  */
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private java.util.List < InstanceTypes> instanceTypes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTypesResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Array of InstanceType
+         * InstanceTypes.
          */
         public Builder instanceTypes(java.util.List < InstanceTypes> instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -58,7 +58,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +71,23 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("CpuCoreCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Float cpuCoreCount;
 
-        @NameInMap("InstanceTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeDescription")
         private String instanceTypeDescription;
 
-        @NameInMap("InstanceTypeId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Float memorySize;
 
         private InstanceTypes(Builder builder) {

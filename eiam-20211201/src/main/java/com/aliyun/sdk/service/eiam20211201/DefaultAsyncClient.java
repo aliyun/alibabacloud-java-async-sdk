@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddUserToOrganizationalUnits  AddUserToOrganizationalUnitsRequest
+     * @return AddUserToOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<AddUserToOrganizationalUnitsResponse> addUserToOrganizationalUnits(AddUserToOrganizationalUnitsRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUsersToGroup  AddUsersToGroupRequest
+     * @return AddUsersToGroupResponse
+     */
     @Override
     public CompletableFuture<AddUsersToGroupResponse> addUsersToGroup(AddUsersToGroupRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeApplicationToGroups  AuthorizeApplicationToGroupsRequest
+     * @return AuthorizeApplicationToGroupsResponse
+     */
     @Override
     public CompletableFuture<AuthorizeApplicationToGroupsResponse> authorizeApplicationToGroups(AuthorizeApplicationToGroupsRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeApplicationToOrganizationalUnits  AuthorizeApplicationToOrganizationalUnitsRequest
+     * @return AuthorizeApplicationToOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<AuthorizeApplicationToOrganizationalUnitsResponse> authorizeApplicationToOrganizationalUnits(AuthorizeApplicationToOrganizationalUnitsRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeApplicationToUsers  AuthorizeApplicationToUsersRequest
+     * @return AuthorizeApplicationToUsersResponse
+     */
     @Override
     public CompletableFuture<AuthorizeApplicationToUsersResponse> authorizeApplicationToUsers(AuthorizeApplicationToUsersRequest request) {
         try {
@@ -110,8 +130,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.
-      *
+     * <b>description</b> :
+     * <p>IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.</p>
+     * 
+     * @param request the request parameters of CreateApplication  CreateApplicationRequest
+     * @return CreateApplicationResponse
      */
     @Override
     public CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request) {
@@ -127,6 +150,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApplicationClientSecret  CreateApplicationClientSecretRequest
+     * @return CreateApplicationClientSecretResponse
+     */
     @Override
     public CompletableFuture<CreateApplicationClientSecretResponse> createApplicationClientSecret(CreateApplicationClientSecretRequest request) {
         try {
@@ -141,6 +168,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDomain  CreateDomainRequest
+     * @return CreateDomainResponse
+     */
     @Override
     public CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request) {
         try {
@@ -155,6 +186,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDomainProxyToken  CreateDomainProxyTokenRequest
+     * @return CreateDomainProxyTokenResponse
+     */
     @Override
     public CompletableFuture<CreateDomainProxyTokenResponse> createDomainProxyToken(CreateDomainProxyTokenRequest request) {
         try {
@@ -169,6 +204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
     @Override
     public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
         try {
@@ -183,6 +222,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIdentityProvider  CreateIdentityProviderRequest
+     * @return CreateIdentityProviderResponse
+     */
+    @Override
+    public CompletableFuture<CreateIdentityProviderResponse> createIdentityProvider(CreateIdentityProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateIdentityProvider").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateIdentityProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateIdentityProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -197,6 +258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNetworkAccessEndpoint  CreateNetworkAccessEndpointRequest
+     * @return CreateNetworkAccessEndpointResponse
+     */
     @Override
     public CompletableFuture<CreateNetworkAccessEndpointResponse> createNetworkAccessEndpoint(CreateNetworkAccessEndpointRequest request) {
         try {
@@ -211,6 +276,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrganizationalUnit  CreateOrganizationalUnitRequest
+     * @return CreateOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<CreateOrganizationalUnitResponse> createOrganizationalUnit(CreateOrganizationalUnitRequest request) {
         try {
@@ -225,6 +294,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -240,8 +313,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Make sure that the EIAM application that you want to delete is not used before you delete the EIAM application. After you delete the EIAM application, all configurations are deleted and cannot be restored.
-      *
+     * <b>description</b> :
+     * <p>Make sure that the EIAM application that you want to delete is not used before you delete the EIAM application. After you delete the EIAM application, all configurations are deleted and cannot be restored.</p>
+     * 
+     * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
+     * @return DeleteApplicationResponse
      */
     @Override
     public CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request) {
@@ -257,6 +333,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApplicationClientSecret  DeleteApplicationClientSecretRequest
+     * @return DeleteApplicationClientSecretResponse
+     */
     @Override
     public CompletableFuture<DeleteApplicationClientSecretResponse> deleteApplicationClientSecret(DeleteApplicationClientSecretRequest request) {
         try {
@@ -271,6 +351,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomain  DeleteDomainRequest
+     * @return DeleteDomainResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
         try {
@@ -285,6 +369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomainProxyToken  DeleteDomainProxyTokenRequest
+     * @return DeleteDomainProxyTokenResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainProxyTokenResponse> deleteDomainProxyToken(DeleteDomainProxyTokenRequest request) {
         try {
@@ -299,6 +387,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
         try {
@@ -314,8 +406,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.
-      *
+     * @param request the request parameters of DeleteIdentityProvider  DeleteIdentityProviderRequest
+     * @return DeleteIdentityProviderResponse
+     */
+    @Override
+    public CompletableFuture<DeleteIdentityProviderResponse> deleteIdentityProvider(DeleteIdentityProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteIdentityProvider").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteIdentityProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteIdentityProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.</p>
+     * 
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
      */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
@@ -331,6 +444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkAccessEndpoint  DeleteNetworkAccessEndpointRequest
+     * @return DeleteNetworkAccessEndpointResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkAccessEndpointResponse> deleteNetworkAccessEndpoint(DeleteNetworkAccessEndpointRequest request) {
         try {
@@ -345,6 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteOrganizationalUnit  DeleteOrganizationalUnitRequest
+     * @return DeleteOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<DeleteOrganizationalUnitResponse> deleteOrganizationalUnit(DeleteOrganizationalUnitRequest request) {
         try {
@@ -359,6 +480,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteOrganizationalUnitChildren  DeleteOrganizationalUnitChildrenRequest
+     * @return DeleteOrganizationalUnitChildrenResponse
+     */
+    @Override
+    public CompletableFuture<DeleteOrganizationalUnitChildrenResponse> deleteOrganizationalUnitChildren(DeleteOrganizationalUnitChildrenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteOrganizationalUnitChildren").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteOrganizationalUnitChildrenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteOrganizationalUnitChildrenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteUser  DeleteUserRequest
+     * @return DeleteUserResponse
+     */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
         try {
@@ -374,8 +517,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.
-      *
+     * <b>description</b> :
+     * <p>All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.</p>
+     * 
+     * @param request the request parameters of DisableApplication  DisableApplicationRequest
+     * @return DisableApplicationResponse
      */
     @Override
     public CompletableFuture<DisableApplicationResponse> disableApplication(DisableApplicationRequest request) {
@@ -391,6 +537,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableApplicationApiInvoke  DisableApplicationApiInvokeRequest
+     * @return DisableApplicationApiInvokeResponse
+     */
     @Override
     public CompletableFuture<DisableApplicationApiInvokeResponse> disableApplicationApiInvoke(DisableApplicationApiInvokeRequest request) {
         try {
@@ -405,6 +555,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableApplicationClientSecret  DisableApplicationClientSecretRequest
+     * @return DisableApplicationClientSecretResponse
+     */
     @Override
     public CompletableFuture<DisableApplicationClientSecretResponse> disableApplicationClientSecret(DisableApplicationClientSecretRequest request) {
         try {
@@ -419,6 +573,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableApplicationProvisioning  DisableApplicationProvisioningRequest
+     * @return DisableApplicationProvisioningResponse
+     */
     @Override
     public CompletableFuture<DisableApplicationProvisioningResponse> disableApplicationProvisioning(DisableApplicationProvisioningRequest request) {
         try {
@@ -433,6 +591,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableApplicationSso  DisableApplicationSsoRequest
+     * @return DisableApplicationSsoResponse
+     */
     @Override
     public CompletableFuture<DisableApplicationSsoResponse> disableApplicationSso(DisableApplicationSsoRequest request) {
         try {
@@ -447,6 +609,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableDomainProxyToken  DisableDomainProxyTokenRequest
+     * @return DisableDomainProxyTokenResponse
+     */
     @Override
     public CompletableFuture<DisableDomainProxyTokenResponse> disableDomainProxyToken(DisableDomainProxyTokenRequest request) {
         try {
@@ -461,6 +627,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableIdentityProviderUdPull  DisableIdentityProviderUdPullRequest
+     * @return DisableIdentityProviderUdPullResponse
+     */
+    @Override
+    public CompletableFuture<DisableIdentityProviderUdPullResponse> disableIdentityProviderUdPull(DisableIdentityProviderUdPullRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableIdentityProviderUdPull").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableIdentityProviderUdPullResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableIdentityProviderUdPullResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableInitDomainAutoRedirect  DisableInitDomainAutoRedirectRequest
+     * @return DisableInitDomainAutoRedirectResponse
+     */
     @Override
     public CompletableFuture<DisableInitDomainAutoRedirectResponse> disableInitDomainAutoRedirect(DisableInitDomainAutoRedirectRequest request) {
         try {
@@ -475,6 +663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableUser  DisableUserRequest
+     * @return DisableUserResponse
+     */
     @Override
     public CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request) {
         try {
@@ -489,6 +681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableApplication  EnableApplicationRequest
+     * @return EnableApplicationResponse
+     */
     @Override
     public CompletableFuture<EnableApplicationResponse> enableApplication(EnableApplicationRequest request) {
         try {
@@ -503,6 +699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableApplicationApiInvoke  EnableApplicationApiInvokeRequest
+     * @return EnableApplicationApiInvokeResponse
+     */
     @Override
     public CompletableFuture<EnableApplicationApiInvokeResponse> enableApplicationApiInvoke(EnableApplicationApiInvokeRequest request) {
         try {
@@ -517,6 +717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableApplicationClientSecret  EnableApplicationClientSecretRequest
+     * @return EnableApplicationClientSecretResponse
+     */
     @Override
     public CompletableFuture<EnableApplicationClientSecretResponse> enableApplicationClientSecret(EnableApplicationClientSecretRequest request) {
         try {
@@ -531,6 +735,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableApplicationProvisioning  EnableApplicationProvisioningRequest
+     * @return EnableApplicationProvisioningResponse
+     */
     @Override
     public CompletableFuture<EnableApplicationProvisioningResponse> enableApplicationProvisioning(EnableApplicationProvisioningRequest request) {
         try {
@@ -545,6 +753,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableApplicationSso  EnableApplicationSsoRequest
+     * @return EnableApplicationSsoResponse
+     */
     @Override
     public CompletableFuture<EnableApplicationSsoResponse> enableApplicationSso(EnableApplicationSsoRequest request) {
         try {
@@ -559,6 +771,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableDomainProxyToken  EnableDomainProxyTokenRequest
+     * @return EnableDomainProxyTokenResponse
+     */
     @Override
     public CompletableFuture<EnableDomainProxyTokenResponse> enableDomainProxyToken(EnableDomainProxyTokenRequest request) {
         try {
@@ -573,6 +789,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableIdentityProviderUdPull  EnableIdentityProviderUdPullRequest
+     * @return EnableIdentityProviderUdPullResponse
+     */
+    @Override
+    public CompletableFuture<EnableIdentityProviderUdPullResponse> enableIdentityProviderUdPull(EnableIdentityProviderUdPullRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableIdentityProviderUdPull").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableIdentityProviderUdPullResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableIdentityProviderUdPullResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableInitDomainAutoRedirect  EnableInitDomainAutoRedirectRequest
+     * @return EnableInitDomainAutoRedirectResponse
+     */
     @Override
     public CompletableFuture<EnableInitDomainAutoRedirectResponse> enableInitDomainAutoRedirect(EnableInitDomainAutoRedirectRequest request) {
         try {
@@ -587,6 +825,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableUser  EnableUserRequest
+     * @return EnableUserResponse
+     */
     @Override
     public CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request) {
         try {
@@ -601,6 +843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplication  GetApplicationRequest
+     * @return GetApplicationResponse
+     */
     @Override
     public CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request) {
         try {
@@ -615,6 +861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplicationGrantScope  GetApplicationGrantScopeRequest
+     * @return GetApplicationGrantScopeResponse
+     */
     @Override
     public CompletableFuture<GetApplicationGrantScopeResponse> getApplicationGrantScope(GetApplicationGrantScopeRequest request) {
         try {
@@ -629,6 +879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplicationProvisioningConfig  GetApplicationProvisioningConfigRequest
+     * @return GetApplicationProvisioningConfigResponse
+     */
     @Override
     public CompletableFuture<GetApplicationProvisioningConfigResponse> getApplicationProvisioningConfig(GetApplicationProvisioningConfigRequest request) {
         try {
@@ -643,6 +897,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplicationProvisioningScope  GetApplicationProvisioningScopeRequest
+     * @return GetApplicationProvisioningScopeResponse
+     */
     @Override
     public CompletableFuture<GetApplicationProvisioningScopeResponse> getApplicationProvisioningScope(GetApplicationProvisioningScopeRequest request) {
         try {
@@ -657,6 +915,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplicationSsoConfig  GetApplicationSsoConfigRequest
+     * @return GetApplicationSsoConfigResponse
+     */
     @Override
     public CompletableFuture<GetApplicationSsoConfigResponse> getApplicationSsoConfig(GetApplicationSsoConfigRequest request) {
         try {
@@ -671,6 +933,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDomain  GetDomainRequest
+     * @return GetDomainResponse
+     */
     @Override
     public CompletableFuture<GetDomainResponse> getDomain(GetDomainRequest request) {
         try {
@@ -685,6 +951,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDomainDnsChallenge  GetDomainDnsChallengeRequest
+     * @return GetDomainDnsChallengeResponse
+     */
     @Override
     public CompletableFuture<GetDomainDnsChallengeResponse> getDomainDnsChallenge(GetDomainDnsChallengeRequest request) {
         try {
@@ -699,6 +969,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetForgetPasswordConfiguration  GetForgetPasswordConfigurationRequest
+     * @return GetForgetPasswordConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetForgetPasswordConfigurationResponse> getForgetPasswordConfiguration(GetForgetPasswordConfigurationRequest request) {
         try {
@@ -713,6 +987,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGroup  GetGroupRequest
+     * @return GetGroupResponse
+     */
     @Override
     public CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request) {
         try {
@@ -727,6 +1005,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIdentityProvider  GetIdentityProviderRequest
+     * @return GetIdentityProviderResponse
+     */
+    @Override
+    public CompletableFuture<GetIdentityProviderResponse> getIdentityProvider(GetIdentityProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIdentityProvider").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIdentityProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIdentityProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetIdentityProviderUdPullConfiguration  GetIdentityProviderUdPullConfigurationRequest
+     * @return GetIdentityProviderUdPullConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetIdentityProviderUdPullConfigurationResponse> getIdentityProviderUdPullConfiguration(GetIdentityProviderUdPullConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIdentityProviderUdPullConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIdentityProviderUdPullConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIdentityProviderUdPullConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstance  GetInstanceRequest
+     * @return GetInstanceResponse
+     */
     @Override
     public CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request) {
         try {
@@ -741,6 +1059,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</p>
+     * 
+     * @param request the request parameters of GetInstanceLicense  GetInstanceLicenseRequest
+     * @return GetInstanceLicenseResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceLicenseResponse> getInstanceLicense(GetInstanceLicenseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetInstanceLicense").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceLicenseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceLicenseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetNetworkAccessEndpoint  GetNetworkAccessEndpointRequest
+     * @return GetNetworkAccessEndpointResponse
+     */
     @Override
     public CompletableFuture<GetNetworkAccessEndpointResponse> getNetworkAccessEndpoint(GetNetworkAccessEndpointRequest request) {
         try {
@@ -755,6 +1098,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrganizationalUnit  GetOrganizationalUnitRequest
+     * @return GetOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<GetOrganizationalUnitResponse> getOrganizationalUnit(GetOrganizationalUnitRequest request) {
         try {
@@ -769,6 +1116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPasswordComplexityConfiguration  GetPasswordComplexityConfigurationRequest
+     * @return GetPasswordComplexityConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetPasswordComplexityConfigurationResponse> getPasswordComplexityConfiguration(GetPasswordComplexityConfigurationRequest request) {
         try {
@@ -783,6 +1134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPasswordExpirationConfiguration  GetPasswordExpirationConfigurationRequest
+     * @return GetPasswordExpirationConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetPasswordExpirationConfigurationResponse> getPasswordExpirationConfiguration(GetPasswordExpirationConfigurationRequest request) {
         try {
@@ -797,6 +1152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPasswordHistoryConfiguration  GetPasswordHistoryConfigurationRequest
+     * @return GetPasswordHistoryConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetPasswordHistoryConfigurationResponse> getPasswordHistoryConfiguration(GetPasswordHistoryConfigurationRequest request) {
         try {
@@ -811,6 +1170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPasswordInitializationConfiguration  GetPasswordInitializationConfigurationRequest
+     * @return GetPasswordInitializationConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetPasswordInitializationConfigurationResponse> getPasswordInitializationConfiguration(GetPasswordInitializationConfigurationRequest request) {
         try {
@@ -825,6 +1188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRootOrganizationalUnit  GetRootOrganizationalUnitRequest
+     * @return GetRootOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<GetRootOrganizationalUnitResponse> getRootOrganizationalUnit(GetRootOrganizationalUnitRequest request) {
         try {
@@ -839,6 +1206,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSynchronizationJob  GetSynchronizationJobRequest
+     * @return GetSynchronizationJobResponse
+     */
+    @Override
+    public CompletableFuture<GetSynchronizationJobResponse> getSynchronizationJob(GetSynchronizationJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSynchronizationJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSynchronizationJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSynchronizationJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -853,6 +1242,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplicationClientSecrets  ListApplicationClientSecretsRequest
+     * @return ListApplicationClientSecretsResponse
+     */
     @Override
     public CompletableFuture<ListApplicationClientSecretsResponse> listApplicationClientSecrets(ListApplicationClientSecretsRequest request) {
         try {
@@ -867,6 +1260,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplications  ListApplicationsRequest
+     * @return ListApplicationsResponse
+     */
     @Override
     public CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request) {
         try {
@@ -882,8 +1279,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can only query the permissions that are directly granted to the EIAM organization by calling the ListApplicationsForOrganizationalUnit operation. You can filter applications by configuring the **ApplicationIds** parameter when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can only query the permissions that are directly granted to the EIAM organization by calling the ListApplicationsForOrganizationalUnit operation. You can filter applications by configuring the <strong>ApplicationIds</strong> parameter when you call this operation.</p>
+     * 
+     * @param request the request parameters of ListApplicationsForOrganizationalUnit  ListApplicationsForOrganizationalUnitRequest
+     * @return ListApplicationsForOrganizationalUnitResponse
      */
     @Override
     public CompletableFuture<ListApplicationsForOrganizationalUnitResponse> listApplicationsForOrganizationalUnit(ListApplicationsForOrganizationalUnitRequest request) {
@@ -899,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplicationsForUser  ListApplicationsForUserRequest
+     * @return ListApplicationsForUserResponse
+     */
     @Override
     public CompletableFuture<ListApplicationsForUserResponse> listApplicationsForUser(ListApplicationsForUserRequest request) {
         try {
@@ -913,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDomainProxyTokens  ListDomainProxyTokensRequest
+     * @return ListDomainProxyTokensResponse
+     */
     @Override
     public CompletableFuture<ListDomainProxyTokensResponse> listDomainProxyTokens(ListDomainProxyTokensRequest request) {
         try {
@@ -927,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDomains  ListDomainsRequest
+     * @return ListDomainsResponse
+     */
     @Override
     public CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request) {
         try {
@@ -941,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEiamInstances  ListEiamInstancesRequest
+     * @return ListEiamInstancesResponse
+     */
     @Override
     public CompletableFuture<ListEiamInstancesResponse> listEiamInstances(ListEiamInstancesRequest request) {
         try {
@@ -955,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEiamRegions  ListEiamRegionsRequest
+     * @return ListEiamRegionsResponse
+     */
     @Override
     public CompletableFuture<ListEiamRegionsResponse> listEiamRegions(ListEiamRegionsRequest request) {
         try {
@@ -969,6 +1389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroups  ListGroupsRequest
+     * @return ListGroupsResponse
+     */
     @Override
     public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
         try {
@@ -983,6 +1407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroupsForApplication  ListGroupsForApplicationRequest
+     * @return ListGroupsForApplicationResponse
+     */
     @Override
     public CompletableFuture<ListGroupsForApplicationResponse> listGroupsForApplication(ListGroupsForApplicationRequest request) {
         try {
@@ -997,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroupsForUser  ListGroupsForUserRequest
+     * @return ListGroupsForUserResponse
+     */
     @Override
     public CompletableFuture<ListGroupsForUserResponse> listGroupsForUser(ListGroupsForUserRequest request) {
         try {
@@ -1011,6 +1443,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIdentityProviders  ListIdentityProvidersRequest
+     * @return ListIdentityProvidersResponse
+     */
+    @Override
+    public CompletableFuture<ListIdentityProvidersResponse> listIdentityProviders(ListIdentityProvidersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListIdentityProviders").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIdentityProvidersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIdentityProvidersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
         try {
@@ -1025,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNetworkAccessEndpointAvailableRegions  ListNetworkAccessEndpointAvailableRegionsRequest
+     * @return ListNetworkAccessEndpointAvailableRegionsResponse
+     */
     @Override
     public CompletableFuture<ListNetworkAccessEndpointAvailableRegionsResponse> listNetworkAccessEndpointAvailableRegions(ListNetworkAccessEndpointAvailableRegionsRequest request) {
         try {
@@ -1039,6 +1497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNetworkAccessEndpointAvailableZones  ListNetworkAccessEndpointAvailableZonesRequest
+     * @return ListNetworkAccessEndpointAvailableZonesResponse
+     */
     @Override
     public CompletableFuture<ListNetworkAccessEndpointAvailableZonesResponse> listNetworkAccessEndpointAvailableZones(ListNetworkAccessEndpointAvailableZonesRequest request) {
         try {
@@ -1053,6 +1515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNetworkAccessEndpoints  ListNetworkAccessEndpointsRequest
+     * @return ListNetworkAccessEndpointsResponse
+     */
     @Override
     public CompletableFuture<ListNetworkAccessEndpointsResponse> listNetworkAccessEndpoints(ListNetworkAccessEndpointsRequest request) {
         try {
@@ -1067,6 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNetworkAccessPaths  ListNetworkAccessPathsRequest
+     * @return ListNetworkAccessPathsResponse
+     */
     @Override
     public CompletableFuture<ListNetworkAccessPathsResponse> listNetworkAccessPaths(ListNetworkAccessPathsRequest request) {
         try {
@@ -1081,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOrganizationalUnitParents  ListOrganizationalUnitParentsRequest
+     * @return ListOrganizationalUnitParentsResponse
+     */
     @Override
     public CompletableFuture<ListOrganizationalUnitParentsResponse> listOrganizationalUnitParents(ListOrganizationalUnitParentsRequest request) {
         try {
@@ -1095,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOrganizationalUnits  ListOrganizationalUnitsRequest
+     * @return ListOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<ListOrganizationalUnitsResponse> listOrganizationalUnits(ListOrganizationalUnitsRequest request) {
         try {
@@ -1109,6 +1587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOrganizationalUnitsForApplication  ListOrganizationalUnitsForApplicationRequest
+     * @return ListOrganizationalUnitsForApplicationResponse
+     */
     @Override
     public CompletableFuture<ListOrganizationalUnitsForApplicationResponse> listOrganizationalUnitsForApplication(ListOrganizationalUnitsForApplicationRequest request) {
         try {
@@ -1123,6 +1605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
     @Override
     public CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request) {
         try {
@@ -1137,6 +1623,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSynchronizationJobs  ListSynchronizationJobsRequest
+     * @return ListSynchronizationJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListSynchronizationJobsResponse> listSynchronizationJobs(ListSynchronizationJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSynchronizationJobs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSynchronizationJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSynchronizationJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -1151,6 +1659,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsersForApplication  ListUsersForApplicationRequest
+     * @return ListUsersForApplicationResponse
+     */
     @Override
     public CompletableFuture<ListUsersForApplicationResponse> listUsersForApplication(ListUsersForApplicationRequest request) {
         try {
@@ -1165,6 +1677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsersForGroup  ListUsersForGroupRequest
+     * @return ListUsersForGroupResponse
+     */
     @Override
     public CompletableFuture<ListUsersForGroupResponse> listUsersForGroup(ListUsersForGroupRequest request) {
         try {
@@ -1179,6 +1695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ObtainApplicationClientSecret  ObtainApplicationClientSecretRequest
+     * @return ObtainApplicationClientSecretResponse
+     */
     @Override
     public CompletableFuture<ObtainApplicationClientSecretResponse> obtainApplicationClientSecret(ObtainApplicationClientSecretRequest request) {
         try {
@@ -1193,6 +1713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ObtainDomainProxyToken  ObtainDomainProxyTokenRequest
+     * @return ObtainDomainProxyTokenResponse
+     */
     @Override
     public CompletableFuture<ObtainDomainProxyTokenResponse> obtainDomainProxyToken(ObtainDomainProxyTokenRequest request) {
         try {
@@ -1207,6 +1731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUserFromOrganizationalUnits  RemoveUserFromOrganizationalUnitsRequest
+     * @return RemoveUserFromOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<RemoveUserFromOrganizationalUnitsResponse> removeUserFromOrganizationalUnits(RemoveUserFromOrganizationalUnitsRequest request) {
         try {
@@ -1221,6 +1749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUsersFromGroup  RemoveUsersFromGroupRequest
+     * @return RemoveUsersFromGroupResponse
+     */
     @Override
     public CompletableFuture<RemoveUsersFromGroupResponse> removeUsersFromGroup(RemoveUsersFromGroupRequest request) {
         try {
@@ -1235,6 +1767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeApplicationFromGroups  RevokeApplicationFromGroupsRequest
+     * @return RevokeApplicationFromGroupsResponse
+     */
     @Override
     public CompletableFuture<RevokeApplicationFromGroupsResponse> revokeApplicationFromGroups(RevokeApplicationFromGroupsRequest request) {
         try {
@@ -1249,6 +1785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeApplicationFromOrganizationalUnits  RevokeApplicationFromOrganizationalUnitsRequest
+     * @return RevokeApplicationFromOrganizationalUnitsResponse
+     */
     @Override
     public CompletableFuture<RevokeApplicationFromOrganizationalUnitsResponse> revokeApplicationFromOrganizationalUnits(RevokeApplicationFromOrganizationalUnitsRequest request) {
         try {
@@ -1263,6 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeApplicationFromUsers  RevokeApplicationFromUsersRequest
+     * @return RevokeApplicationFromUsersResponse
+     */
     @Override
     public CompletableFuture<RevokeApplicationFromUsersResponse> revokeApplicationFromUsers(RevokeApplicationFromUsersRequest request) {
         try {
@@ -1277,6 +1821,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunSynchronizationJob  RunSynchronizationJobRequest
+     * @return RunSynchronizationJobResponse
+     */
+    @Override
+    public CompletableFuture<RunSynchronizationJobResponse> runSynchronizationJob(RunSynchronizationJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunSynchronizationJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunSynchronizationJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunSynchronizationJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetApplicationGrantScope  SetApplicationGrantScopeRequest
+     * @return SetApplicationGrantScopeResponse
+     */
     @Override
     public CompletableFuture<SetApplicationGrantScopeResponse> setApplicationGrantScope(SetApplicationGrantScopeRequest request) {
         try {
@@ -1291,6 +1857,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetApplicationProvisioningConfig  SetApplicationProvisioningConfigRequest
+     * @return SetApplicationProvisioningConfigResponse
+     */
     @Override
     public CompletableFuture<SetApplicationProvisioningConfigResponse> setApplicationProvisioningConfig(SetApplicationProvisioningConfigRequest request) {
         try {
@@ -1305,6 +1875,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetApplicationProvisioningScope  SetApplicationProvisioningScopeRequest
+     * @return SetApplicationProvisioningScopeResponse
+     */
     @Override
     public CompletableFuture<SetApplicationProvisioningScopeResponse> setApplicationProvisioningScope(SetApplicationProvisioningScopeRequest request) {
         try {
@@ -1320,8 +1894,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In IDaaS EIAM, the application management feature supports multiple SSO protocols for applications, including SAML 2.0 and OIDC protocols. Each application supports only one protocol, and the protocol cannot be changed after the application is created. You can specify the SSO configuration attributes of an application based on the supported SSO protocol.
-      *
+     * <b>description</b> :
+     * <p>In IDaaS EIAM, the application management feature supports multiple SSO protocols for applications, including SAML 2.0 and OIDC protocols. Each application supports only one protocol, and the protocol cannot be changed after the application is created. You can specify the SSO configuration attributes of an application based on the supported SSO protocol.</p>
+     * 
+     * @param request the request parameters of SetApplicationSsoConfig  SetApplicationSsoConfigRequest
+     * @return SetApplicationSsoConfigResponse
      */
     @Override
     public CompletableFuture<SetApplicationSsoConfigResponse> setApplicationSsoConfig(SetApplicationSsoConfigRequest request) {
@@ -1337,6 +1914,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDefaultDomain  SetDefaultDomainRequest
+     * @return SetDefaultDomainResponse
+     */
     @Override
     public CompletableFuture<SetDefaultDomainResponse> setDefaultDomain(SetDefaultDomainRequest request) {
         try {
@@ -1351,6 +1932,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetForgetPasswordConfiguration  SetForgetPasswordConfigurationRequest
+     * @return SetForgetPasswordConfigurationResponse
+     */
     @Override
     public CompletableFuture<SetForgetPasswordConfigurationResponse> setForgetPasswordConfiguration(SetForgetPasswordConfigurationRequest request) {
         try {
@@ -1365,6 +1950,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetIdentityProviderUdPullConfiguration  SetIdentityProviderUdPullConfigurationRequest
+     * @return SetIdentityProviderUdPullConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<SetIdentityProviderUdPullConfigurationResponse> setIdentityProviderUdPullConfiguration(SetIdentityProviderUdPullConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetIdentityProviderUdPullConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetIdentityProviderUdPullConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetIdentityProviderUdPullConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetPasswordComplexityConfiguration  SetPasswordComplexityConfigurationRequest
+     * @return SetPasswordComplexityConfigurationResponse
+     */
     @Override
     public CompletableFuture<SetPasswordComplexityConfigurationResponse> setPasswordComplexityConfiguration(SetPasswordComplexityConfigurationRequest request) {
         try {
@@ -1379,6 +1986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetPasswordExpirationConfiguration  SetPasswordExpirationConfigurationRequest
+     * @return SetPasswordExpirationConfigurationResponse
+     */
     @Override
     public CompletableFuture<SetPasswordExpirationConfigurationResponse> setPasswordExpirationConfiguration(SetPasswordExpirationConfigurationRequest request) {
         try {
@@ -1393,6 +2004,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetPasswordHistoryConfiguration  SetPasswordHistoryConfigurationRequest
+     * @return SetPasswordHistoryConfigurationResponse
+     */
     @Override
     public CompletableFuture<SetPasswordHistoryConfigurationResponse> setPasswordHistoryConfiguration(SetPasswordHistoryConfigurationRequest request) {
         try {
@@ -1407,6 +2022,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetPasswordInitializationConfiguration  SetPasswordInitializationConfigurationRequest
+     * @return SetPasswordInitializationConfigurationResponse
+     */
     @Override
     public CompletableFuture<SetPasswordInitializationConfigurationResponse> setPasswordInitializationConfiguration(SetPasswordInitializationConfigurationRequest request) {
         try {
@@ -1421,6 +2040,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetUserPrimaryOrganizationalUnit  SetUserPrimaryOrganizationalUnitRequest
+     * @return SetUserPrimaryOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<SetUserPrimaryOrganizationalUnitResponse> setUserPrimaryOrganizationalUnit(SetUserPrimaryOrganizationalUnitRequest request) {
         try {
@@ -1435,6 +2058,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnlockUser  UnlockUserRequest
+     * @return UnlockUserResponse
+     */
     @Override
     public CompletableFuture<UnlockUserResponse> unlockUser(UnlockUserRequest request) {
         try {
@@ -1449,6 +2076,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApplicationAuthorizationType  UpdateApplicationAuthorizationTypeRequest
+     * @return UpdateApplicationAuthorizationTypeResponse
+     */
     @Override
     public CompletableFuture<UpdateApplicationAuthorizationTypeResponse> updateApplicationAuthorizationType(UpdateApplicationAuthorizationTypeRequest request) {
         try {
@@ -1463,6 +2094,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApplicationDescription  UpdateApplicationDescriptionRequest
+     * @return UpdateApplicationDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdateApplicationDescriptionResponse> updateApplicationDescription(UpdateApplicationDescriptionRequest request) {
         try {
@@ -1477,6 +2112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGroup  UpdateGroupRequest
+     * @return UpdateGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateGroupResponse> updateGroup(UpdateGroupRequest request) {
         try {
@@ -1491,6 +2130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGroupDescription  UpdateGroupDescriptionRequest
+     * @return UpdateGroupDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdateGroupDescriptionResponse> updateGroupDescription(UpdateGroupDescriptionRequest request) {
         try {
@@ -1505,6 +2148,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIdentityProvider  UpdateIdentityProviderRequest
+     * @return UpdateIdentityProviderResponse
+     */
+    @Override
+    public CompletableFuture<UpdateIdentityProviderResponse> updateIdentityProvider(UpdateIdentityProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateIdentityProvider").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateIdentityProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateIdentityProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateInstanceDescription  UpdateInstanceDescriptionRequest
+     * @return UpdateInstanceDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceDescriptionResponse> updateInstanceDescription(UpdateInstanceDescriptionRequest request) {
         try {
@@ -1519,6 +2184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateNetworkAccessEndpointName  UpdateNetworkAccessEndpointNameRequest
+     * @return UpdateNetworkAccessEndpointNameResponse
+     */
     @Override
     public CompletableFuture<UpdateNetworkAccessEndpointNameResponse> updateNetworkAccessEndpointName(UpdateNetworkAccessEndpointNameRequest request) {
         try {
@@ -1533,6 +2202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateOrganizationalUnit  UpdateOrganizationalUnitRequest
+     * @return UpdateOrganizationalUnitResponse
+     */
     @Override
     public CompletableFuture<UpdateOrganizationalUnitResponse> updateOrganizationalUnit(UpdateOrganizationalUnitRequest request) {
         try {
@@ -1547,6 +2220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateOrganizationalUnitDescription  UpdateOrganizationalUnitDescriptionRequest
+     * @return UpdateOrganizationalUnitDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdateOrganizationalUnitDescriptionResponse> updateOrganizationalUnitDescription(UpdateOrganizationalUnitDescriptionRequest request) {
         try {
@@ -1561,6 +2238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateOrganizationalUnitParentId  UpdateOrganizationalUnitParentIdRequest
+     * @return UpdateOrganizationalUnitParentIdResponse
+     */
     @Override
     public CompletableFuture<UpdateOrganizationalUnitParentIdResponse> updateOrganizationalUnitParentId(UpdateOrganizationalUnitParentIdRequest request) {
         try {
@@ -1575,6 +2256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {
@@ -1589,6 +2274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserDescription  UpdateUserDescriptionRequest
+     * @return UpdateUserDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdateUserDescriptionResponse> updateUserDescription(UpdateUserDescriptionRequest request) {
         try {
@@ -1603,6 +2292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserPassword  UpdateUserPasswordRequest
+     * @return UpdateUserPasswordResponse
+     */
     @Override
     public CompletableFuture<UpdateUserPasswordResponse> updateUserPassword(UpdateUserPasswordRequest request) {
         try {

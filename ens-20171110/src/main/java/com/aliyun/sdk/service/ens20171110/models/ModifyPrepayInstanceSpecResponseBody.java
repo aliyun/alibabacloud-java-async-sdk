@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrepayInstanceSpecResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyPrepayInstanceSpecResponseBody</p>
  */
 public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyPrepayInstanceSpecResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD94C8E8-128E-525C-A0C3-60E063B70330</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

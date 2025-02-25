@@ -1,28 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnsubscribeRequest} extends {@link RequestModel}
  *
  * <p>UnsubscribeRequest</p>
  */
 public class UnsubscribeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SubscriptionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionName;
 
-    @Query
-    @NameInMap("TopicName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
     private UnsubscribeRequest(Builder builder) {
@@ -92,7 +98,11 @@ public class UnsubscribeRequest extends Request {
         }
 
         /**
-         * SubscriptionName.
+         * <p>The name of the subscription.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySubscription</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -101,7 +111,11 @@ public class UnsubscribeRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * <p>The name of the topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

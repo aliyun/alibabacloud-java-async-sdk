@@ -1,64 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDcdnDomainRequest} extends {@link RequestModel}
  *
  * <p>AddDcdnDomainRequest</p>
  */
 public class AddDcdnDomainRequest extends Request {
-    @Query
-    @NameInMap("CheckUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckUrl")
     private String checkUrl;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("FunctionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionType")
     private String functionType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Scene")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
     private String scene;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Sources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sources")
     private String sources;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TopLevelDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopLevelDomain")
     private String topLevelDomain;
 
     private AddDcdnDomainRequest(Builder builder) {
@@ -209,7 +209,10 @@ public class AddDcdnDomainRequest extends Request {
         } 
 
         /**
-         * The URL that is used for health checks.
+         * <p>The URL that is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -218,10 +221,12 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The domain name that you want to add. You can specify only one domain name in each request.
-         * <p>
+         * <p>The domain name that you want to add. You can specify only one domain name in each request.</p>
+         * <p>Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -230,7 +235,15 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * FunctionType.
+         * <p>Computing service type. Valid values:</p>
+         * <ul>
+         * <li><strong>routine</strong></li>
+         * <li><strong>image</strong></li>
+         * <li><strong>cloudFunction</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>routine</p>
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("FunctionType", functionType);
@@ -257,7 +270,10 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.
+         * <p>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6r4**</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -266,7 +282,16 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>The Acceleration scen. Supported:</p>
+         * <ul>
+         * <li>apiscene:API acceleration.</li>
+         * <li>webservicescene: accelerate website business.</li>
+         * <li>staticscene: video and graphic acceleration.</li>
+         * <li>(Empty): no scene.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>apiscene</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -275,14 +300,16 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The acceleration region. Valid values:
-         * <p>
+         * <p>The acceleration region. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * <li><strong>global</strong>: global</li>
+         * </ul>
+         * <p>Default value: <strong>domestic</strong>.</p>
          * 
-         * *   **domestic**: Chinese mainland
-         * *   **overseas**: outside the Chinese mainland
-         * *   **global**: global
-         * 
-         * Default value: **domestic**.
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -300,7 +327,10 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
+         * <p>The information about the addresses of origin servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -309,7 +339,7 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The information about the tags.
+         * <p>The information about the tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -318,7 +348,10 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * The top-level domain.
+         * <p>The top-level domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourTopLevelDomain</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);
@@ -333,11 +366,17 @@ public class AddDcdnDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddDcdnDomainRequest} extends {@link TeaModel}
+     *
+     * <p>AddDcdnDomainRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -372,7 +411,10 @@ public class AddDcdnDomainRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag. Valid values of N: **1 to 20**.
+             * <p>The key of a tag. Valid values of N: <strong>1 to 20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -380,7 +422,10 @@ public class AddDcdnDomainRequest extends Request {
             }
 
             /**
-             * The value of a tag. Valid values of N: **1 to 20**.
+             * <p>The value of a tag. Valid values of N: <strong>1 to 20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

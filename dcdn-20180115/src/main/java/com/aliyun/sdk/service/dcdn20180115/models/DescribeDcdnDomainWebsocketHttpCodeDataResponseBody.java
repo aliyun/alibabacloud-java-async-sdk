@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainWebsocketHttpCodeDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainWebsocketHttpCodeDataResponseBody</p>
  */
 public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("HttpCodeDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("HttpCodeDataPerInterval")
     private HttpCodeDataPerInterval httpCodeDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnDomainWebsocketHttpCodeDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-01T13:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
          */
         public Builder httpCodeDataPerInterval(HttpCodeDataPerInterval httpCodeDataPerInterval) {
             this.httpCodeDataPerInterval = httpCodeDataPerInterval;
@@ -130,7 +139,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91FC2D9D-B042-4634-8A5C-7B8E7482C22D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-01T05:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,14 +166,20 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketHttpCodeDataResponseBody</p>
+     */
     public static class HttpCodeDataModule extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Float count;
 
-        @NameInMap("Proportion")
+        @com.aliyun.core.annotation.NameInMap("Proportion")
         private Float proportion;
 
         private HttpCodeDataModule(Builder builder) {
@@ -202,7 +223,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             private Float proportion; 
 
             /**
-             * The HTTP status code returned.
+             * <p>The HTTP status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -210,7 +234,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder count(Float count) {
                 this.count = count;
@@ -218,7 +245,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             }
 
             /**
-             * The proportion of the HTTP status code.
+             * <p>The proportion of the HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder proportion(Float proportion) {
                 this.proportion = proportion;
@@ -232,8 +262,14 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketHttpCodeDataResponseBody</p>
+     */
     public static class WebsocketHttpCode extends TeaModel {
-        @NameInMap("HttpCodeDataModule")
+        @com.aliyun.core.annotation.NameInMap("HttpCodeDataModule")
         private java.util.List < HttpCodeDataModule> httpCodeDataModule;
 
         private WebsocketHttpCode(Builder builder) {
@@ -273,11 +309,17 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketHttpCodeDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("WebsocketHttpCode")
+        @com.aliyun.core.annotation.NameInMap("WebsocketHttpCode")
         private WebsocketHttpCode websocketHttpCode;
 
         private DataModule(Builder builder) {
@@ -312,7 +354,10 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             private WebsocketHttpCode websocketHttpCode; 
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-03-01T13:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -320,7 +365,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             }
 
             /**
-             * The proportions of the HTTP status codes.
+             * <p>The proportions of the HTTP status codes.</p>
              */
             public Builder websocketHttpCode(WebsocketHttpCode websocketHttpCode) {
                 this.websocketHttpCode = websocketHttpCode;
@@ -334,8 +379,14 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketHttpCodeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketHttpCodeDataResponseBody</p>
+     */
     public static class HttpCodeDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private HttpCodeDataPerInterval(Builder builder) {

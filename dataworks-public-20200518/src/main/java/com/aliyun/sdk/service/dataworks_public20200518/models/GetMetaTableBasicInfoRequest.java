@@ -1,44 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableBasicInfoRequest} extends {@link RequestModel}
  *
  * <p>GetMetaTableBasicInfoRequest</p>
  */
 public class GetMetaTableBasicInfoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @Query
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @Query
-    @NameInMap("Extension")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extension")
     private Boolean extension;
 
-    @Query
-    @NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
     private String tableGuid;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private GetMetaTableBasicInfoRequest(Builder builder) {
@@ -139,7 +143,7 @@ public class GetMetaTableBasicInfoRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -148,10 +152,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
+         * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+         * <p>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to query the ID.</p>
          * 
-         * You can call the [GetMetaDBTableList](~~173916~~) operation to query the name of the metatable.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -160,7 +165,10 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The type of the data source. Valid values: odps and emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -169,7 +177,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * <p>The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780105.html">ListMetaDB</a> operation to query the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -178,7 +190,10 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The error message returned.
+         * <p>Specifies whether to include extended fields in query results. The extended fields include ReadCount, FavoriteCount, and ViewCount. This parameter takes effect only if you set the DataSourceType parameter to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder extension(Boolean extension) {
             this.putQueryParameter("Extension", extension);
@@ -187,10 +202,13 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
+         * <p>The GUID of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</p>
+         * <blockquote>
+         * <p>This parameter is optional for E-MapReduce (EMR) tables.</p>
+         * </blockquote>
          * 
-         * You can call the [ListMetaDB](~~185662~~) operation to query the name of the metadatabase.
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -199,12 +217,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * Specifies whether to include extended fields in query results.
-         * <p>
+         * <p>The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the name.</p>
          * 
-         * The extended fields include ReadCount, FavoriteCount, and ViewCount.
-         * 
-         * This parameter takes effect only if you set the DataSourceType parameter to odps.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

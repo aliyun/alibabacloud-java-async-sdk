@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHubClusterLogsResponseBody</p>
  */
 public class DescribeHubClusterLogsResponseBody extends TeaModel {
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private java.util.List < Logs> logs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHubClusterLogsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Brief information about operation logs.
+         * The details of operations logs.
          */
         public Builder logs(java.util.List < Logs> logs) {
             this.logs = logs;
@@ -58,7 +57,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,16 +71,16 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
     } 
 
     public static class Logs extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterLog")
+        @com.aliyun.core.annotation.NameInMap("ClusterLog")
         private String clusterLog;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
         private Logs(Builder builder) {
@@ -134,7 +133,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             private String logLevel; 
 
             /**
-             * The ID of the master instance.
+             * The ID of the Fleet instance.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -142,7 +141,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * A log of the master instance.
+             * The log of the Fleet instance.
              */
             public Builder clusterLog(String clusterLog) {
                 this.clusterLog = clusterLog;
@@ -150,7 +149,7 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log was created. Format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC time).
+             * The time when the log was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -158,7 +157,12 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the log. Valid values: - error: errors. - warn: warnings. - info: information.
+             * The log level. Valid values:
+             * <p>
+             * 
+             * *   error
+             * *   warn
+             * *   info
              */
             public Builder logLevel(String logLevel) {
                 this.logLevel = logLevel;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTopicResponseBody} extends {@link TeaModel}
  *
  * <p>ListTopicResponseBody</p>
  */
 public class ListTopicResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTopicResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +133,10 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06273500-249F-5863-121D-74D51123****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The response status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -138,7 +155,10 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,32 +171,114 @@ public class ListTopicResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTopicResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTopicResponseBody</p>
+     */
     public static class PageData extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LoggingEnabled")
+        @com.aliyun.core.annotation.NameInMap("LoggingEnabled")
         private Boolean loggingEnabled;
 
-        @NameInMap("MaxMessageSize")
+        @com.aliyun.core.annotation.NameInMap("MaxMessageSize")
         private Long maxMessageSize;
 
-        @NameInMap("MessageCount")
+        @com.aliyun.core.annotation.NameInMap("MessageCount")
         private Long messageCount;
 
-        @NameInMap("MessageRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("MessageRetentionPeriod")
         private Long messageRetentionPeriod;
 
-        @NameInMap("TopicInnerUrl")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("TopicInnerUrl")
         private String topicInnerUrl;
 
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
-        @NameInMap("TopicUrl")
+        @com.aliyun.core.annotation.NameInMap("TopicUrl")
         private String topicUrl;
 
         private PageData(Builder builder) {
@@ -186,6 +288,7 @@ public class ListTopicResponseBody extends TeaModel {
             this.maxMessageSize = builder.maxMessageSize;
             this.messageCount = builder.messageCount;
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
+            this.tags = builder.tags;
             this.topicInnerUrl = builder.topicInnerUrl;
             this.topicName = builder.topicName;
             this.topicUrl = builder.topicUrl;
@@ -242,6 +345,13 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return topicInnerUrl
          */
         public String getTopicInnerUrl() {
@@ -269,12 +379,16 @@ public class ListTopicResponseBody extends TeaModel {
             private Long maxMessageSize; 
             private Long messageCount; 
             private Long messageRetentionPeriod; 
+            private java.util.List<Tags> tags; 
             private String topicInnerUrl; 
             private String topicName; 
             private String topicUrl; 
 
             /**
-             * CreateTime.
+             * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1449554962</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -282,7 +396,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * <p>The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1449554962</p>
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -290,7 +407,14 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * LoggingEnabled.
+             * <p>Indicates whether the logging feature is enabled.</p>
+             * <ul>
+             * <li>True</li>
+             * <li>False</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder loggingEnabled(Boolean loggingEnabled) {
                 this.loggingEnabled = loggingEnabled;
@@ -298,7 +422,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * MaxMessageSize.
+             * <p>The maximum length of the message that is sent to the topic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65536</p>
              */
             public Builder maxMessageSize(Long maxMessageSize) {
                 this.maxMessageSize = maxMessageSize;
@@ -306,7 +433,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * MessageCount.
+             * <p>The number of messages in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder messageCount(Long messageCount) {
                 this.messageCount = messageCount;
@@ -314,7 +444,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * MessageRetentionPeriod.
+             * <p>The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
@@ -322,7 +455,18 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicInnerUrl.
+             * <p>The tags added to the resources.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The internal URL of the message topic. The internal URL can be accessed over an internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http:// 111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic</p>
              */
             public Builder topicInnerUrl(String topicInnerUrl) {
                 this.topicInnerUrl = topicInnerUrl;
@@ -330,7 +474,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * <p>The name of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-topic</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -338,7 +485,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicUrl.
+             * <p>The URL of the message topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http:// 111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic</p>
              */
             public Builder topicUrl(String topicUrl) {
                 this.topicUrl = topicUrl;
@@ -352,17 +502,23 @@ public class ListTopicResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTopicResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageData")
-        private java.util.List < PageData> pageData;
+        @com.aliyun.core.annotation.NameInMap("PageData")
+        private java.util.List<PageData> pageData;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -383,7 +539,7 @@ public class ListTopicResponseBody extends TeaModel {
         /**
          * @return pageData
          */
-        public java.util.List < PageData> getPageData() {
+        public java.util.List<PageData> getPageData() {
             return this.pageData;
         }
 
@@ -409,21 +565,24 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PageData> pageData; 
+            private java.util.List<PageData> pageData; 
             private Long pageNum; 
             private Long pageSize; 
             private Long total; 
 
             /**
-             * PageData.
+             * <p>The data returned on the current page.</p>
              */
-            public Builder pageData(java.util.List < PageData> pageData) {
+            public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
                 return this;
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -431,7 +590,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +601,10 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder total(Long total) {
                 this.total = total;

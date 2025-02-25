@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetMediaInfosResponseBody</p>
  */
 public class BatchGetMediaInfosResponseBody extends TeaModel {
-    @NameInMap("MediaInfos")
-    private java.util.List < MediaInfos> mediaInfos;
+    @com.aliyun.core.annotation.NameInMap("MediaInfos")
+    private java.util.List<MediaInfos> mediaInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchGetMediaInfosResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     /**
      * @return mediaInfos
      */
-    public java.util.List < MediaInfos> getMediaInfos() {
+    public java.util.List<MediaInfos> getMediaInfos() {
         return this.mediaInfos;
     }
 
@@ -46,19 +51,22 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MediaInfos> mediaInfos; 
+        private java.util.List<MediaInfos> mediaInfos; 
         private String requestId; 
 
         /**
-         * MediaInfos.
+         * <p>The queried media assets.</p>
          */
-        public Builder mediaInfos(java.util.List < MediaInfos> mediaInfos) {
+        public Builder mediaInfos(java.util.List<MediaInfos> mediaInfos) {
             this.mediaInfos = mediaInfos;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetMediaInfosResponseBody</p>
+     */
     public static class FileBasicInfo extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("FileStatus")
+        @com.aliyun.core.annotation.NameInMap("FileStatus")
         private String fileStatus;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private FileBasicInfo(Builder builder) {
@@ -218,7 +232,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1132.68</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -226,7 +243,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -234,7 +254,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -242,7 +265,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30611502</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -250,7 +276,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileStatus.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder fileStatus(String fileStatus) {
                 this.fileStatus = fileStatus;
@@ -258,7 +287,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -266,7 +298,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -274,7 +309,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -282,7 +320,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -290,7 +331,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the file resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -298,7 +342,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -312,8 +359,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetMediaInfosResponseBody</p>
+     */
     public static class FileInfoList extends TeaModel {
-        @NameInMap("FileBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("FileBasicInfo")
         private FileBasicInfo fileBasicInfo;
 
         private FileInfoList(Builder builder) {
@@ -339,7 +392,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private FileBasicInfo fileBasicInfo; 
 
             /**
-             * FileBasicInfo.
+             * <p>The basic information of the file, including the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -353,59 +406,65 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetMediaInfosResponseBody</p>
+     */
     public static class MediaBasicInfo extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletedTime")
+        @com.aliyun.core.annotation.NameInMap("DeletedTime")
         private String deletedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InputURL")
+        @com.aliyun.core.annotation.NameInMap("InputURL")
         private String inputURL;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaTags")
+        @com.aliyun.core.annotation.NameInMap("MediaTags")
         private String mediaTags;
 
-        @NameInMap("MediaType")
+        @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private String snapshots;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SpriteImages")
+        @com.aliyun.core.annotation.NameInMap("SpriteImages")
         private String spriteImages;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("TranscodeStatus")
+        @com.aliyun.core.annotation.NameInMap("TranscodeStatus")
         private String transcodeStatus;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaBasicInfo(Builder builder) {
@@ -584,7 +643,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * BusinessType.
+             * <p>The business type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -592,7 +654,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The category of the media asset.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -600,7 +662,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The thumbnail URL of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -608,7 +673,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the media asset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -616,7 +684,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * <p>The time when the media asset was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -624,7 +695,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the media asset.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -632,7 +703,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * InputURL.
+             * <p>The URL of the media asset in another service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
              */
             public Builder inputURL(String inputURL) {
                 this.inputURL = inputURL;
@@ -640,7 +714,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>MediaId</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -648,7 +725,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags of the media asset.</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -656,7 +733,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The type of the media asset. Valid values:</p>
+             * <p>- image</p>
+             * <p>- video</p>
+             * <p>- audio</p>
+             * <p>- text</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -664,7 +748,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the media asset was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:12Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -672,7 +759,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The snapshots of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
              */
             public Builder snapshots(String snapshots) {
                 this.snapshots = snapshots;
@@ -680,7 +770,12 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the media asset. Valid values:</p>
+             * <p>- oss</p>
+             * <p>- vod</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -688,7 +783,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteImages.
+             * <p>The sprite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
              */
             public Builder spriteImages(String spriteImages) {
                 this.spriteImages = spriteImages;
@@ -696,7 +794,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -704,7 +805,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the media asset.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -712,7 +813,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeStatus.
+             * <p>The transcoding status of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Init</p>
              */
             public Builder transcodeStatus(String transcodeStatus) {
                 this.transcodeStatus = transcodeStatus;
@@ -720,7 +824,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userDataTest</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -734,14 +841,20 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetMediaInfosResponseBody</p>
+     */
     public static class MediaInfos extends TeaModel {
-        @NameInMap("FileInfoList")
-        private java.util.List < FileInfoList> fileInfoList;
+        @com.aliyun.core.annotation.NameInMap("FileInfoList")
+        private java.util.List<FileInfoList> fileInfoList;
 
-        @NameInMap("MediaBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaInfos(Builder builder) {
@@ -761,7 +874,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * @return fileInfoList
          */
-        public java.util.List < FileInfoList> getFileInfoList() {
+        public java.util.List<FileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
@@ -780,20 +893,20 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FileInfoList> fileInfoList; 
+            private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
             /**
-             * FileInfos
+             * <p>FileInfos</p>
              */
-            public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
+            public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
                 return this;
             }
 
             /**
-             * MediaBasicInfo.
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -801,7 +914,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

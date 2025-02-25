@@ -1,35 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGlobalResourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteGlobalResourceRequest</p>
  */
 public class DeleteGlobalResourceRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ResourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceName;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private DeleteGlobalResourceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.regionId = builder.regionId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
     }
@@ -55,6 +65,13 @@ public class DeleteGlobalResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceName
      */
     public String getResourceName() {
@@ -70,6 +87,7 @@ public class DeleteGlobalResourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteGlobalResourceRequest, Builder> {
         private String clusterId; 
+        private String regionId; 
         private String resourceName; 
         private String resourceType; 
 
@@ -80,12 +98,16 @@ public class DeleteGlobalResourceRequest extends Request {
         private Builder(DeleteGlobalResourceRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
             this.resourceName = request.resourceName;
             this.resourceType = request.resourceType;
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-t4naqsay5gn******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +116,19 @@ public class DeleteGlobalResourceRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PubPhoenixSLBQueryServerVip</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -103,7 +137,10 @@ public class DeleteGlobalResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL_VIP</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

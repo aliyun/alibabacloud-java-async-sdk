@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServicesRequest} extends {@link RequestModel}
  *
  * <p>ListServicesRequest</p>
  */
 public class ListServicesRequest extends Request {
-    @Query
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListServicesRequest(Builder builder) {
@@ -69,7 +74,14 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * The type of the application. You can set the value to **XTRACE** or leave this parameter unspecified.
+         * <p>The type of the application. You can leave this parameter empty or set this parameter to <code>XTRACE</code>. We recommend that you leave this parameter empty.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, applications monitored by Managed Service for OpenTelemetry or Application Real-Time Monitoring Service (ARMS) can be queried.</li>
+         * <li>If you set this parameter to <code>XTRACE</code>, only applications monitored by Managed Service for OpenTelemetry can be queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>XTRACE</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -78,7 +90,11 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

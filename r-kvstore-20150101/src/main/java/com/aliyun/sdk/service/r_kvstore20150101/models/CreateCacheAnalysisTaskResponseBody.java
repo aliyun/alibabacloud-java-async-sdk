@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCacheAnalysisTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCacheAnalysisTaskResponseBody</p>
  */
 public class CreateCacheAnalysisTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCacheAnalysisTaskResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class CreateCacheAnalysisTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBC1E3D6-7C88-4DF5-9A3D-0DB1E6D9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

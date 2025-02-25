@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppInstancesResponseBody</p>
  */
 public class ListAppInstancesResponseBody extends TeaModel {
-    @NameInMap("AppInstanceModels")
-    private java.util.List < AppInstanceModels> appInstanceModels;
+    @com.aliyun.core.annotation.NameInMap("AppInstanceModels")
+    private java.util.List<AppInstanceModels> appInstanceModels;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAppInstancesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     /**
      * @return appInstanceModels
      */
-    public java.util.List < AppInstanceModels> getAppInstanceModels() {
+    public java.util.List<AppInstanceModels> getAppInstanceModels() {
         return this.appInstanceModels;
     }
 
@@ -79,22 +84,25 @@ public class ListAppInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppInstanceModels> appInstanceModels; 
+        private java.util.List<AppInstanceModels> appInstanceModels; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * AppInstanceModels.
+         * <p>The IDs of the application instances.</p>
          */
-        public Builder appInstanceModels(java.util.List < AppInstanceModels> appInstanceModels) {
+        public Builder appInstanceModels(java.util.List<AppInstanceModels> appInstanceModels) {
             this.appInstanceModels = appInstanceModels;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. We recommend that you configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page. The value cannot be greater than <code>100</code>. We recommend that you configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstancesResponseBody</p>
+     */
     public static class BindInfo extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("UsageDuration")
+        @com.aliyun.core.annotation.NameInMap("UsageDuration")
         private Long usageDuration;
 
         private BindInfo(Builder builder) {
@@ -170,7 +193,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private Long usageDuration; 
 
             /**
-             * EndUserId.
+             * <p>The ID of the end user that is bound to the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app.test</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -178,7 +204,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UsageDuration.
+             * <p>The use duration of the application instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder usageDuration(Long usageDuration) {
                 this.usageDuration = usageDuration;
@@ -192,38 +221,52 @@ public class ListAppInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAppInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstancesResponseBody</p>
+     */
     public static class AppInstanceModels extends TeaModel {
-        @NameInMap("AppInstanceGroupId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
-        @NameInMap("AppInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceId")
         private String appInstanceId;
 
-        @NameInMap("BindInfo")
+        @com.aliyun.core.annotation.NameInMap("BindInfo")
         private BindInfo bindInfo;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("MainEthPublicIp")
+        @com.aliyun.core.annotation.NameInMap("MainEthPublicIp")
         private String mainEthPublicIp;
 
-        @NameInMap("SessionStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AppInstanceModels(Builder builder) {
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.appInstanceId = builder.appInstanceId;
             this.bindInfo = builder.bindInfo;
+            this.chargeType = builder.chargeType;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.mainEthPublicIp = builder.mainEthPublicIp;
+            this.nodeId = builder.nodeId;
             this.sessionStatus = builder.sessionStatus;
             this.status = builder.status;
         }
@@ -258,6 +301,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -279,6 +329,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
          * @return sessionStatus
          */
         public String getSessionStatus() {
@@ -296,14 +353,19 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private String appInstanceGroupId; 
             private String appInstanceId; 
             private BindInfo bindInfo; 
+            private String chargeType; 
             private String gmtCreate; 
             private String gmtModified; 
             private String mainEthPublicIp; 
+            private String nodeId; 
             private String sessionStatus; 
             private String status; 
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-dk8p95irqfst9****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -311,7 +373,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceId.
+             * <p>The ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-8dl7dzchklmka****</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -319,7 +384,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BindInfo.
+             * <p>The information about the binding between the application instance and end users.</p>
              */
             public Builder bindInfo(BindInfo bindInfo) {
                 this.bindInfo = bindInfo;
@@ -327,7 +392,18 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * <p>The time when the application instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-07T20:29:19.000+08:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -335,7 +411,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the application instance was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-07T20:29:19.000+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -343,7 +422,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MainEthPublicIp.
+             * <p>The public IP address associated with the primary NIC. This value is returned only if <code>StrategyType</code> is set to <code>Mixed</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.13.13.211</p>
              */
             public Builder mainEthPublicIp(String mainEthPublicIp) {
                 this.mainEthPublicIp = mainEthPublicIp;
@@ -351,7 +433,23 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * <p>The session status. This parameter is returned only if the application instance is in the <code>RUNNING</code> state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>disconnect: disconnected</li>
+             * <li>connect: connected</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>connect</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -359,7 +457,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BOUND</p>
              */
             public Builder status(String status) {
                 this.status = status;

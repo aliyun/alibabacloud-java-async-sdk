@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MakeCallRequest} extends {@link RequestModel}
  *
  * <p>MakeCallRequest</p>
  */
 public class MakeCallRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("CallingNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callingNumber;
 
-    @Query
-    @NameInMap("CommandCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandCode;
 
-    @Query
-    @NameInMap("ExtInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
     private String extInfo;
 
-    @Query
-    @NameInMap("OuterAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerAccountId;
 
-    @Query
-    @NameInMap("OuterAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerAccountType;
 
     private MakeCallRequest(Builder builder) {
@@ -129,7 +134,10 @@ public class MakeCallRequest extends Request {
         } 
 
         /**
-         * CalledNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130****0000</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -138,7 +146,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571456****</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -147,7 +158,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * CommandCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outBound_Call</p>
          */
         public Builder commandCode(String commandCode) {
             this.putQueryParameter("CommandCode", commandCode);
@@ -165,7 +179,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * OuterAccountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outerAccountId(String outerAccountId) {
             this.putQueryParameter("OuterAccountId", outerAccountId);
@@ -174,7 +191,10 @@ public class MakeCallRequest extends Request {
         }
 
         /**
-         * OuterAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIPAY</p>
          */
         public Builder outerAccountType(String outerAccountType) {
             this.putQueryParameter("OuterAccountType", outerAccountType);

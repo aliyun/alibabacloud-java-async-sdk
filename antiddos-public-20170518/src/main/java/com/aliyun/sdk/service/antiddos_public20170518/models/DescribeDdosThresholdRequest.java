@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosThresholdRequest</p>
  */
 public class DescribeDdosThresholdRequest extends Request {
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
-    @Query
-    @NameInMap("DdosType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosType;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
     private DescribeDdosThresholdRequest(Builder builder) {
@@ -100,7 +99,10 @@ public class DescribeDdosThresholdRequest extends Request {
         } 
 
         /**
-         * DdosRegionId.
+         * The region ID of the asset.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -109,7 +111,11 @@ public class DescribeDdosThresholdRequest extends Request {
         }
 
         /**
-         * DdosType.
+         * The type of the threshold. Valid values:
+         * <p>
+         * 
+         * *   **defense**: traffic scrubbing threshold
+         * *   **blackhole**: DDoS mitigation threshold
          */
         public Builder ddosType(String ddosType) {
             this.putQueryParameter("DdosType", ddosType);
@@ -118,7 +124,7 @@ public class DescribeDdosThresholdRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of asset N to query.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -127,7 +133,12 @@ public class DescribeDdosThresholdRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: ECS instance
+         * *   **slb**: SLB instance
+         * *   **eip**: EIP
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

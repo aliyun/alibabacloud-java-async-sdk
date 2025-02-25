@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForCreatingDnsHostRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForCreatingDnsHostRequest</p>
  */
 public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
-    @Query
-    @NameInMap("DnsName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dnsName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Ip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > ip;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveSingleTaskForCreatingDnsHostRequest(Builder builder) {
@@ -113,7 +113,10 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         } 
 
         /**
-         * DnsName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns1</p>
          */
         public Builder dnsName(String dnsName) {
             this.putQueryParameter("DnsName", dnsName);
@@ -122,7 +125,10 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S1234567890</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +137,10 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218.xx.xx.236</p>
          */
         public Builder ip(java.util.List < String > ip) {
             this.putQueryParameter("Ip", ip);

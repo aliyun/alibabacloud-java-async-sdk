@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeFabricChaincodeDefinitionRequest</p>
  */
 public class UpgradeFabricChaincodeDefinitionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ChaincodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChaincodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chaincodeId;
 
-    @Body
-    @NameInMap("ChaincodePackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChaincodePackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chaincodePackageId;
 
-    @Body
-    @NameInMap("ChaincodeVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChaincodeVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chaincodeVersion;
 
-    @Body
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Body
-    @NameInMap("CollectionConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CollectionConfig")
     private String collectionConfig;
 
-    @Body
-    @NameInMap("EndorsePolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndorsePolicy")
     private String endorsePolicy;
 
-    @Body
-    @NameInMap("InitRequired")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InitRequired")
     private Boolean initRequired;
 
-    @Body
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Body
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpgradeFabricChaincodeDefinitionRequest(Builder builder) {

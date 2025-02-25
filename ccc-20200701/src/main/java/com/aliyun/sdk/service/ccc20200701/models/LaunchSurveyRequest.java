@@ -1,50 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LaunchSurveyRequest} extends {@link RequestModel}
  *
  * <p>LaunchSurveyRequest</p>
  */
 public class LaunchSurveyRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
     private String contactFlowId;
 
-    @Query
-    @NameInMap("ContactFlowVariables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowVariables")
     private String contactFlowVariables;
 
-    @Query
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("SmsMetadataId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsMetadataId")
     private String smsMetadataId;
 
-    @Query
-    @NameInMap("SurveyChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SurveyChannel")
     private String surveyChannel;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SurveyTemplateId")
+    private String surveyTemplateId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SurveyTemplateVariables")
+    private String surveyTemplateVariables;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private LaunchSurveyRequest(Builder builder) {
@@ -56,6 +68,8 @@ public class LaunchSurveyRequest extends Request {
         this.jobId = builder.jobId;
         this.smsMetadataId = builder.smsMetadataId;
         this.surveyChannel = builder.surveyChannel;
+        this.surveyTemplateId = builder.surveyTemplateId;
+        this.surveyTemplateVariables = builder.surveyTemplateVariables;
         this.userId = builder.userId;
     }
 
@@ -122,6 +136,20 @@ public class LaunchSurveyRequest extends Request {
     }
 
     /**
+     * @return surveyTemplateId
+     */
+    public String getSurveyTemplateId() {
+        return this.surveyTemplateId;
+    }
+
+    /**
+     * @return surveyTemplateVariables
+     */
+    public String getSurveyTemplateVariables() {
+        return this.surveyTemplateVariables;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -136,6 +164,8 @@ public class LaunchSurveyRequest extends Request {
         private String jobId; 
         private String smsMetadataId; 
         private String surveyChannel; 
+        private String surveyTemplateId; 
+        private String surveyTemplateVariables; 
         private String userId; 
 
         private Builder() {
@@ -151,6 +181,8 @@ public class LaunchSurveyRequest extends Request {
             this.jobId = request.jobId;
             this.smsMetadataId = request.smsMetadataId;
             this.surveyChannel = request.surveyChannel;
+            this.surveyTemplateId = request.surveyTemplateId;
+            this.surveyTemplateVariables = request.surveyTemplateVariables;
             this.userId = request.userId;
         } 
 
@@ -182,7 +214,10 @@ public class LaunchSurveyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +226,10 @@ public class LaunchSurveyRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6580466654649****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -214,6 +252,24 @@ public class LaunchSurveyRequest extends Request {
         public Builder surveyChannel(String surveyChannel) {
             this.putQueryParameter("SurveyChannel", surveyChannel);
             this.surveyChannel = surveyChannel;
+            return this;
+        }
+
+        /**
+         * SurveyTemplateId.
+         */
+        public Builder surveyTemplateId(String surveyTemplateId) {
+            this.putQueryParameter("SurveyTemplateId", surveyTemplateId);
+            this.surveyTemplateId = surveyTemplateId;
+            return this;
+        }
+
+        /**
+         * SurveyTemplateVariables.
+         */
+        public Builder surveyTemplateVariables(String surveyTemplateVariables) {
+            this.putQueryParameter("SurveyTemplateVariables", surveyTemplateVariables);
+            this.surveyTemplateVariables = surveyTemplateVariables;
             return this;
         }
 

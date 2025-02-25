@@ -135,11 +135,15 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         @NameInMap("DecryptKey")
         private String decryptKey;
 
+        @NameInMap("StunInfo")
+        private String stunInfo;
+
         @NameInMap("VodUrl")
         private String vodUrl;
 
         private Data(Builder builder) {
             this.decryptKey = builder.decryptKey;
+            this.stunInfo = builder.stunInfo;
             this.vodUrl = builder.vodUrl;
         }
 
@@ -159,6 +163,13 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
         }
 
         /**
+         * @return stunInfo
+         */
+        public String getStunInfo() {
+            return this.stunInfo;
+        }
+
+        /**
          * @return vodUrl
          */
         public String getVodUrl() {
@@ -167,6 +178,7 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
 
         public static final class Builder {
             private String decryptKey; 
+            private String stunInfo; 
             private String vodUrl; 
 
             /**
@@ -174,6 +186,14 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
              */
             public Builder decryptKey(String decryptKey) {
                 this.decryptKey = decryptKey;
+                return this;
+            }
+
+            /**
+             * StunInfo.
+             */
+            public Builder stunInfo(String stunInfo) {
+                this.stunInfo = stunInfo;
                 return this;
             }
 

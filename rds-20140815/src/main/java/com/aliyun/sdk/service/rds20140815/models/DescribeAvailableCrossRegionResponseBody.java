@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableCrossRegionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableCrossRegionResponseBody</p>
  */
 public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableCrossRegionResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of destination regions for cross-region backups.
+         * <p>An array that consists of destination regions for cross-region backups.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +63,10 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39265F46-EC77-4036-8AC4-F035F32F6BE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableCrossRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableCrossRegionResponseBody</p>
+     */
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
-        private java.util.List < String > region;
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private java.util.List<String> region;
 
         private Regions(Builder builder) {
             this.region = builder.region;
@@ -90,17 +104,17 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         /**
          * @return region
          */
-        public java.util.List < String > getRegion() {
+        public java.util.List<String> getRegion() {
             return this.region;
         }
 
         public static final class Builder {
-            private java.util.List < String > region; 
+            private java.util.List<String> region; 
 
             /**
              * Region.
              */
-            public Builder region(java.util.List < String > region) {
+            public Builder region(java.util.List<String> region) {
                 this.region = region;
                 return this;
             }

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ShopPageResult} extends {@link TeaModel}
  *
  * <p>ShopPageResult</p>
  */
 public class ShopPageResult extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("shopList")
-    private java.util.List < ShopPageDataResult > shopList;
+    @com.aliyun.core.annotation.NameInMap("shopList")
+    private java.util.List<ShopPageDataResult> shopList;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
 
     private ShopPageResult(Builder builder) {
@@ -45,7 +50,7 @@ public class ShopPageResult extends TeaModel {
     /**
      * @return shopList
      */
-    public java.util.List < ShopPageDataResult > getShopList() {
+    public java.util.List<ShopPageDataResult> getShopList() {
         return this.shopList;
     }
 
@@ -58,7 +63,7 @@ public class ShopPageResult extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ShopPageDataResult > shopList; 
+        private java.util.List<ShopPageDataResult> shopList; 
         private Integer total; 
 
         /**
@@ -72,7 +77,7 @@ public class ShopPageResult extends TeaModel {
         /**
          * shopList.
          */
-        public Builder shopList(java.util.List < ShopPageDataResult > shopList) {
+        public Builder shopList(java.util.List<ShopPageDataResult> shopList) {
             this.shopList = shopList;
             return this;
         }

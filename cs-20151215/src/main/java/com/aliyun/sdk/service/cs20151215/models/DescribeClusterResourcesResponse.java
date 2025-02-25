@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterResourcesResponse} extends {@link TeaModel}
  *
  * <p>DescribeClusterResourcesResponse</p>
  */
 public class DescribeClusterResourcesResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < DescribeClusterResourcesResponseBody> body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<DescribeClusterResourcesResponseBody> body;
 
     private DescribeClusterResourcesResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class DescribeClusterResourcesResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class DescribeClusterResourcesResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribeClusterResourcesResponseBody> getBody() {
+    public java.util.List<DescribeClusterResourcesResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribeClusterResourcesResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribeClusterResourcesResponseBody> body);
+        Builder body(java.util.List<DescribeClusterResourcesResponseBody> body);
 
         @Override
         DescribeClusterResourcesResponse build();
@@ -77,9 +79,9 @@ public class DescribeClusterResourcesResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeClusterResourcesResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribeClusterResourcesResponseBody> body; 
+        private java.util.List<DescribeClusterResourcesResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class DescribeClusterResourcesResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class DescribeClusterResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribeClusterResourcesResponseBody> body) {
+        public Builder body(java.util.List<DescribeClusterResourcesResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -126,14 +128,20 @@ public class DescribeClusterResourcesResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterResourcesResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResourcesResponse</p>
+     */
     public static class Dependencies extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("resource_type")
+        @com.aliyun.core.annotation.NameInMap("resource_type")
         private String resourceType;
 
-        @NameInMap("instance_id")
+        @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
 
         private Dependencies(Builder builder) {
@@ -207,30 +215,217 @@ public class DescribeClusterResourcesResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterResourcesResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResourcesResponse</p>
+     */
+    public static class AssociatedObject extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("kind")
+        private String kind;
+
+        @com.aliyun.core.annotation.NameInMap("namespace")
+        private String namespace;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private AssociatedObject(Builder builder) {
+            this.kind = builder.kind;
+            this.namespace = builder.namespace;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssociatedObject create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String kind; 
+            private String namespace; 
+            private String name; 
+
+            /**
+             * <p>The Kubernetes object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service</p>
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * <p>The namespace in which the Kubernetes object resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system</p>
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * <p>The Kubernetes object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx-ingress-lb</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public AssociatedObject build() {
+                return new AssociatedObject(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterResourcesResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResourcesResponse</p>
+     */
+    public static class DeleteBehavior extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("delete_by_default")
+        private Boolean deleteByDefault;
+
+        @com.aliyun.core.annotation.NameInMap("changeable")
+        private Boolean changeable;
+
+        private DeleteBehavior(Builder builder) {
+            this.deleteByDefault = builder.deleteByDefault;
+            this.changeable = builder.changeable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteBehavior create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deleteByDefault
+         */
+        public Boolean getDeleteByDefault() {
+            return this.deleteByDefault;
+        }
+
+        /**
+         * @return changeable
+         */
+        public Boolean getChangeable() {
+            return this.changeable;
+        }
+
+        public static final class Builder {
+            private Boolean deleteByDefault; 
+            private Boolean changeable; 
+
+            /**
+             * <p>Specifies whether to delete the resource by default when the cluster is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder deleteByDefault(Boolean deleteByDefault) {
+                this.deleteByDefault = deleteByDefault;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the default behavior returned in delete_by_default can be changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder changeable(Boolean changeable) {
+                this.changeable = changeable;
+                return this;
+            }
+
+            public DeleteBehavior build() {
+                return new DeleteBehavior(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterResourcesResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterResourcesResponse</p>
+     */
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("instance_id")
+        @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
 
-        @NameInMap("resource_info")
+        @com.aliyun.core.annotation.NameInMap("resource_info")
         private String resourceInfo;
 
-        @NameInMap("resource_type")
+        @com.aliyun.core.annotation.NameInMap("resource_type")
         private String resourceType;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("auto_create")
+        @com.aliyun.core.annotation.NameInMap("auto_create")
         private Long autoCreate;
 
-        @NameInMap("dependencies")
-        private java.util.List < Dependencies> dependencies;
+        @com.aliyun.core.annotation.NameInMap("dependencies")
+        private java.util.List<Dependencies> dependencies;
+
+        @com.aliyun.core.annotation.NameInMap("associated_object")
+        private AssociatedObject associatedObject;
+
+        @com.aliyun.core.annotation.NameInMap("delete_behavior")
+        private DeleteBehavior deleteBehavior;
+
+        @com.aliyun.core.annotation.NameInMap("creator_type")
+        private String creatorType;
+
+        @com.aliyun.core.annotation.NameInMap("extra_info")
+        private java.util.Map<String, ?> extraInfo;
 
         private DescribeClusterResourcesResponseBody(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -241,6 +436,10 @@ public class DescribeClusterResourcesResponse extends Response {
             this.state = builder.state;
             this.autoCreate = builder.autoCreate;
             this.dependencies = builder.dependencies;
+            this.associatedObject = builder.associatedObject;
+            this.deleteBehavior = builder.deleteBehavior;
+            this.creatorType = builder.creatorType;
+            this.extraInfo = builder.extraInfo;
         }
 
         public static Builder builder() {
@@ -303,8 +502,36 @@ public class DescribeClusterResourcesResponse extends Response {
         /**
          * @return dependencies
          */
-        public java.util.List < Dependencies> getDependencies() {
+        public java.util.List<Dependencies> getDependencies() {
             return this.dependencies;
+        }
+
+        /**
+         * @return associatedObject
+         */
+        public AssociatedObject getAssociatedObject() {
+            return this.associatedObject;
+        }
+
+        /**
+         * @return deleteBehavior
+         */
+        public DeleteBehavior getDeleteBehavior() {
+            return this.deleteBehavior;
+        }
+
+        /**
+         * @return creatorType
+         */
+        public String getCreatorType() {
+            return this.creatorType;
+        }
+
+        /**
+         * @return extraInfo
+         */
+        public java.util.Map<String, ?> getExtraInfo() {
+            return this.extraInfo;
         }
 
         public static final class Builder {
@@ -315,10 +542,17 @@ public class DescribeClusterResourcesResponse extends Response {
             private String resourceType; 
             private String state; 
             private Long autoCreate; 
-            private java.util.List < Dependencies> dependencies; 
+            private java.util.List<Dependencies> dependencies; 
+            private AssociatedObject associatedObject; 
+            private DeleteBehavior deleteBehavior; 
+            private String creatorType; 
+            private java.util.Map<String, ?> extraInfo; 
 
             /**
-             * The ID of the cluster.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb95aa626a47740afbf6aa099b65****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -326,7 +560,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-11T10:11:54+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -334,7 +571,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-wz9poz4r0ymh8u0uf****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +582,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](~~133836~~).
+             * <p>The resource information. For more information about how to query the source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Id&quot;:&quot;k8s_master_slb&quot;,&quot;Name&quot;:&quot;k8s_master_slb&quot;,&quot;Type&quot;:&quot;ALIYUN::SLB::LoadBalancer&quot;,&quot;Status&quot;:&quot;CREATE_COMPLETE&quot;,&quot;StatusReason&quot;:&quot;state changed&quot;,&quot;Updated&quot;:&quot;2020-05-21T13:25:02&quot;,&quot;PhysicalId&quot;:&quot;lb-wz9poz4r0ymh8u0uf****&quot;}</p>
              */
             public Builder resourceInfo(String resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -350,7 +593,10 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The type of resource.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::SLB::LoadBalancer</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -358,17 +604,20 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The status of the resource. Valid values:
-             * <p>
+             * <p>The resource status. Valid values:</p>
+             * <ul>
+             * <li><code>CREATE_COMPLETE</code>: the resource is created.</li>
+             * <li><code>CREATE_FAILED</code>: the resource failed to be created.</li>
+             * <li><code>CREATE_IN_PROGRESS</code>: the resource is being created.</li>
+             * <li><code>DELETE_FAILED</code>: the resource failed to be deleted.</li>
+             * <li><code>DELETE_IN_PROGRESS</code>: the resource is being deleted.</li>
+             * <li><code>ROLLBACK_COMPLETE</code>: the resource is rolled back.</li>
+             * <li><code>ROLLBACK_FAILED</code>: the resource failed to be rolled back.</li>
+             * <li><code>ROLLBACK_IN_PROGRESS</code>: the resource is being rolled back.</li>
+             * </ul>
              * 
-             * *   `CREATE_COMPLETE`: The resource is created.
-             * *   `CREATE_FAILED`: The resource failed to be created.
-             * *   `CREATE_IN_PROGRESS`: The resource is being created.
-             * *   `DELETE_FAILED`: The resource failed to be deleted.
-             * *   `DELETE_IN_PROGRESS`: The resource is being deleted.
-             * *   `ROLLBACK_COMPLETE`: The resource is rolled back.
-             * *   `ROLLBACK_FAILED`: The resource failed to be rolled back.
-             * *   `ROLLBACK_IN_PROGRESS`: The resource is being rolled back.
+             * <strong>example:</strong>
+             * <p>CREATE_COMPLETE</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -376,11 +625,14 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * Indicates whether the resource is created by Container Service for Kubernetes (ACK). Valid values:
-             * <p>
+             * <p>Specifies whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</p>
+             * <ul>
+             * <li>1: the resource is created by ACK.</li>
+             * <li>0: the resource is an existing resource.</li>
+             * </ul>
              * 
-             * *   1: The resource is created by ACK.
-             * *   0: The resource is an existing resource.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoCreate(Long autoCreate) {
                 this.autoCreate = autoCreate;
@@ -388,10 +640,53 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * dependencies.
+             * <p>The dependent resources.</p>
              */
-            public Builder dependencies(java.util.List < Dependencies> dependencies) {
+            public Builder dependencies(java.util.List<Dependencies> dependencies) {
                 this.dependencies = dependencies;
+                return this;
+            }
+
+            /**
+             * <p>The Kubernetes object with which the resource is associated.</p>
+             */
+            public Builder associatedObject(AssociatedObject associatedObject) {
+                this.associatedObject = associatedObject;
+                return this;
+            }
+
+            /**
+             * <p>The deletion behavior of the resource when the cluster is deleted.</p>
+             */
+            public Builder deleteBehavior(DeleteBehavior deleteBehavior) {
+                this.deleteBehavior = deleteBehavior;
+                return this;
+            }
+
+            /**
+             * <p>The resource creator. Valid values:</p>
+             * <ul>
+             * <li>user: The resource is created by the user.</li>
+             * <li>system: The resource is created by the ACK management system.</li>
+             * <li>addon: The resource is created by a cluster component.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>addon</p>
+             */
+            public Builder creatorType(String creatorType) {
+                this.creatorType = creatorType;
+                return this;
+            }
+
+            /**
+             * <p>The additional information about the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;IP&quot;: &quot;xx.xx.xx.xx&quot;}</p>
+             */
+            public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
+                this.extraInfo = extraInfo;
                 return this;
             }
 

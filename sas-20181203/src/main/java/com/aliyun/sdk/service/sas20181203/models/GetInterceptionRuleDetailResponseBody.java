@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInterceptionRuleDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetInterceptionRuleDetailResponseBody</p>
  */
 public class GetInterceptionRuleDetailResponseBody extends TeaModel {
-    @NameInMap("InterceptionRuleDetail")
+    @com.aliyun.core.annotation.NameInMap("InterceptionRuleDetail")
     private InterceptionRuleDetail interceptionRuleDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInterceptionRuleDetailResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the rule.
+         * <p>The details of the rule.</p>
          */
         public Builder interceptionRuleDetail(InterceptionRuleDetail interceptionRuleDetail) {
             this.interceptionRuleDetail = interceptionRuleDetail;
@@ -58,7 +63,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBC6E47-7508-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInterceptionRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterceptionRuleDetailResponseBody</p>
+     */
     public static class DstTarget extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ImageList")
-        private java.util.List < String > imageList;
+        @com.aliyun.core.annotation.NameInMap("ImageList")
+        private java.util.List<String> imageList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Ports")
-        private java.util.List < String > ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<String> ports;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("TagList")
-        private java.util.List < String > tagList;
+        @com.aliyun.core.annotation.NameInMap("TagList")
+        private java.util.List<String> tagList;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Integer targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private DstTarget(Builder builder) {
@@ -129,7 +143,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * @return imageList
          */
-        public java.util.List < String > getImageList() {
+        public java.util.List<String> getImageList() {
             return this.imageList;
         }
 
@@ -143,7 +157,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < String > getPorts() {
+        public java.util.List<String> getPorts() {
             return this.ports;
         }
 
@@ -157,7 +171,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < String > getTagList() {
+        public java.util.List<String> getTagList() {
             return this.tagList;
         }
 
@@ -184,17 +198,20 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appName; 
-            private java.util.List < String > imageList; 
+            private java.util.List<String> imageList; 
             private String namespace; 
-            private java.util.List < String > ports; 
+            private java.util.List<String> ports; 
             private String ruleType; 
-            private java.util.List < String > tagList; 
+            private java.util.List<String> tagList; 
             private Integer targetId; 
             private String targetName; 
             private String targetType; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -202,15 +219,18 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the name of the image specified for the network object.
+             * <p>An array that consists of the name of the image specified for the network object.</p>
              */
-            public Builder imageList(java.util.List < String > imageList) {
+            public Builder imageList(java.util.List<String> imageList) {
                 this.imageList = imageList;
                 return this;
             }
 
             /**
-             * The namespace to which the network object belongs.
+             * <p>The namespace to which the network object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-system</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -218,15 +238,18 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the port range of the destination network object.
+             * <p>An array that consists of the port range of the destination network object.</p>
              */
-            public Builder ports(java.util.List < String > ports) {
+            public Builder ports(java.util.List<String> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * The type of the rule.
+             * <p>The type of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customize</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -234,15 +257,18 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the labels specified for the network object.
+             * <p>An array that consists of the labels specified for the network object.</p>
              */
-            public Builder tagList(java.util.List < String > tagList) {
+            public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;
                 return this;
             }
 
             /**
-             * The ID of the network object.
+             * <p>The ID of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200014</p>
              */
             public Builder targetId(Integer targetId) {
                 this.targetId = targetId;
@@ -250,7 +276,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object.
+             * <p>The name of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo4-be1</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -258,7 +287,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object.
+             * <p>The type of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -272,29 +304,35 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInterceptionRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterceptionRuleDetailResponseBody</p>
+     */
     public static class SrcTarget extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ImageList")
-        private java.util.List < String > imageList;
+        @com.aliyun.core.annotation.NameInMap("ImageList")
+        private java.util.List<String> imageList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("TagList")
-        private java.util.List < String > tagList;
+        @com.aliyun.core.annotation.NameInMap("TagList")
+        private java.util.List<String> tagList;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Integer targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private SrcTarget(Builder builder) {
@@ -326,7 +364,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * @return imageList
          */
-        public java.util.List < String > getImageList() {
+        public java.util.List<String> getImageList() {
             return this.imageList;
         }
 
@@ -347,7 +385,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < String > getTagList() {
+        public java.util.List<String> getTagList() {
             return this.tagList;
         }
 
@@ -374,16 +412,19 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appName; 
-            private java.util.List < String > imageList; 
+            private java.util.List<String> imageList; 
             private String namespace; 
             private String ruleType; 
-            private java.util.List < String > tagList; 
+            private java.util.List<String> tagList; 
             private Integer targetId; 
             private String targetName; 
             private String targetType; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -391,15 +432,18 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The images of the network object.
+             * <p>The images of the network object.</p>
              */
-            public Builder imageList(java.util.List < String > imageList) {
+            public Builder imageList(java.util.List<String> imageList) {
                 this.imageList = imageList;
                 return this;
             }
 
             /**
-             * The namespace to which the network object belongs.
+             * <p>The namespace to which the network object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -407,7 +451,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule.
+             * <p>The type of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customize</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -415,15 +462,18 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The labels specified for the network object.
+             * <p>The labels specified for the network object.</p>
              */
-            public Builder tagList(java.util.List < String > tagList) {
+            public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;
                 return this;
             }
 
             /**
-             * The ID of the network object.
+             * <p>The ID of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300635</p>
              */
             public Builder targetId(Integer targetId) {
                 this.targetId = targetId;
@@ -431,7 +481,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object.
+             * <p>The name of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dmz</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -439,7 +492,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object.
+             * <p>The type of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -453,29 +509,35 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInterceptionRuleDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterceptionRuleDetailResponseBody</p>
+     */
     public static class InterceptionRuleDetail extends TeaModel {
-        @NameInMap("DstTarget")
+        @com.aliyun.core.annotation.NameInMap("DstTarget")
         private DstTarget dstTarget;
 
-        @NameInMap("InterceptType")
+        @com.aliyun.core.annotation.NameInMap("InterceptType")
         private Long interceptType;
 
-        @NameInMap("OrderIndex")
+        @com.aliyun.core.annotation.NameInMap("OrderIndex")
         private Long orderIndex;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleSwitch")
+        @com.aliyun.core.annotation.NameInMap("RuleSwitch")
         private Integer ruleSwitch;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("SrcTarget")
+        @com.aliyun.core.annotation.NameInMap("SrcTarget")
         private SrcTarget srcTarget;
 
         private InterceptionRuleDetail(Builder builder) {
@@ -564,7 +626,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             private SrcTarget srcTarget; 
 
             /**
-             * The destination network object.
+             * <p>The destination network object.</p>
              */
             public Builder dstTarget(DstTarget dstTarget) {
                 this.dstTarget = dstTarget;
@@ -572,13 +634,16 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The interception mode. Valid values:
-             * <p>
+             * <p>The interception mode. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: monitor</li>
+             * <li><strong>1</strong>: block</li>
+             * <li><strong>2</strong>: alert</li>
+             * <li><strong>3</strong>: allow</li>
+             * </ul>
              * 
-             * *   **0**: monitor
-             * *   **1**: block
-             * *   **2**: alert
-             * *   **3**: allow
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interceptType(Long interceptType) {
                 this.interceptType = interceptType;
@@ -586,7 +651,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
+             * <p>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderIndex(Long orderIndex) {
                 this.orderIndex = orderIndex;
@@ -594,7 +662,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>467</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -602,7 +673,10 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dmz-frontend-accept</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -610,11 +684,14 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the defense rule. Valid values:
-             * <p>
+             * <p>The status of the defense rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The rule is enabled.</li>
+             * <li><strong>0</strong>: The rule is disabled.</li>
+             * </ul>
              * 
-             * *   **1**: The rule is enabled.
-             * *   **0**: The rule is disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleSwitch(Integer ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -622,11 +699,14 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>suggest</strong>: a suggestion rule</li>
+             * <li><strong>customize</strong>: a custom rule</li>
+             * </ul>
              * 
-             * *   **suggest**: a suggestion rule
-             * *   **customize**: a custom rule
+             * <strong>example:</strong>
+             * <p>customize</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -634,7 +714,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The source network object.
+             * <p>The source network object.</p>
              */
             public Builder srcTarget(SrcTarget srcTarget) {
                 this.srcTarget = srcTarget;

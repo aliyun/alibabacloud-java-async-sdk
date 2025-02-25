@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSaasInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListSaasInfoResponseBody</p>
  */
 public class ListSaasInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SaasToken")
+    @com.aliyun.core.annotation.NameInMap("SaasToken")
     private String saasToken;
 
     private ListSaasInfoResponseBody(Builder builder) {
@@ -70,7 +70,10 @@ public class ListSaasInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A629A28F-F25E-5572-A679-FA46FB0151D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +94,26 @@ public class ListSaasInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSaasInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSaasInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ServiceUrl")
+        @com.aliyun.core.annotation.NameInMap("ServiceUrl")
         private String serviceUrl;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

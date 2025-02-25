@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSecurityConfigsRequest</p>
  */
 public class DescribeInstanceSecurityConfigsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CheckId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckId")
     private String checkId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DescribeInstanceSecurityConfigsRequest(Builder builder) {
@@ -93,7 +91,7 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
         }
 
         /**
-         * CheckId.
+         * The unique identifier of the check.
          */
         public Builder checkId(String checkId) {
             this.putBodyParameter("CheckId", checkId);
@@ -102,7 +100,7 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

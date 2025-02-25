@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGroupRequest</p>
  */
 public class CreateGroupRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private CreateGroupRequest(Builder builder) {
@@ -82,10 +87,11 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * The description.
-         * <p>
+         * <p>The description.</p>
+         * <p>The description can be up to 128 characters in length.</p>
          * 
-         * The value can be up to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -94,10 +100,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The display name of the RAM user group.
-         * <p>
+         * <p>The display name of the RAM user group.</p>
+         * <p>The name can be up to 24 characters in length.</p>
          * 
-         * The name can be up to 24 characters in length.
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -106,10 +113,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The name of the RAM user group. You must specify this parameter.
-         * <p>
+         * <p>The name of the RAM user group. You must specify this parameter.</p>
+         * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

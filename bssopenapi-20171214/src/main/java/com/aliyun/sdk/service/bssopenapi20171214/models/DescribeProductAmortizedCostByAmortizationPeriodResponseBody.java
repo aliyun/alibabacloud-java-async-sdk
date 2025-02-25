@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductAmortizedCostByAmortizationPeriodResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProductAmortizedCostByAmortizationPeriodResponseBody</p>
  */
 public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeProductAmortizedCostByAmortizationPeriodResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful！</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,143 +148,162 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProductAmortizedCostByAmortizationPeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductAmortizedCostByAmortizationPeriodResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AmortizationPeriod")
+        @com.aliyun.core.annotation.NameInMap("AfterDiscountAmount")
+        private Double afterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("AmortizationPeriod")
         private String amortizationPeriod;
 
-        @NameInMap("AmortizationStatus")
+        @com.aliyun.core.annotation.NameInMap("AmortizationStatus")
         private String amortizationStatus;
 
-        @NameInMap("BillAccountID")
+        @com.aliyun.core.annotation.NameInMap("BillAccountID")
         private Long billAccountID;
 
-        @NameInMap("BillAccountName")
+        @com.aliyun.core.annotation.NameInMap("BillAccountName")
         private String billAccountName;
 
-        @NameInMap("BillOwnerID")
+        @com.aliyun.core.annotation.NameInMap("BillOwnerID")
         private Long billOwnerID;
 
-        @NameInMap("BillOwnerName")
+        @com.aliyun.core.annotation.NameInMap("BillOwnerName")
         private String billOwnerName;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("ConsumePeriod")
+        @com.aliyun.core.annotation.NameInMap("ConsumePeriod")
         private String consumePeriod;
 
-        @NameInMap("CurrentAmortizationDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationAfterDiscountAmount")
+        private Double currentAmortizationAfterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByCashCoupons")
         private Double currentAmortizationDeductedByCashCoupons;
 
-        @NameInMap("CurrentAmortizationDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByCoupons")
         private Double currentAmortizationDeductedByCoupons;
 
-        @NameInMap("CurrentAmortizationDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByPrepaidCard")
         private Double currentAmortizationDeductedByPrepaidCard;
 
-        @NameInMap("CurrentAmortizationExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationExpenditureAmount")
         private Double currentAmortizationExpenditureAmount;
 
-        @NameInMap("CurrentAmortizationInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationInvoiceDiscount")
         private Double currentAmortizationInvoiceDiscount;
 
-        @NameInMap("CurrentAmortizationPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationPretaxAmount")
         private Double currentAmortizationPretaxAmount;
 
-        @NameInMap("CurrentAmortizationPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationPretaxGrossAmount")
         private Double currentAmortizationPretaxGrossAmount;
 
-        @NameInMap("CurrentAmortizationRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationRoundDownDiscount")
         private Double currentAmortizationRoundDownDiscount;
 
-        @NameInMap("DeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCashCoupons")
         private Double deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCoupons")
         private Double deductedByCoupons;
 
-        @NameInMap("DeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("DeductedByPrepaidCard")
         private Double deductedByPrepaidCard;
 
-        @NameInMap("ExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("ExpenditureAmount")
         private Double expenditureAmount;
 
-        @NameInMap("InvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("InvoiceDiscount")
         private Double invoiceDiscount;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private Double pretaxAmount;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private Double pretaxGrossAmount;
 
-        @NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedAfterDiscountAmount")
+        private Double previouslyAmortizedAfterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
         private Double previouslyAmortizedDeductedByCashCoupons;
 
-        @NameInMap("PreviouslyAmortizedDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByCoupons")
         private Double previouslyAmortizedDeductedByCoupons;
 
-        @NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
         private Double previouslyAmortizedDeductedByPrepaidCard;
 
-        @NameInMap("PreviouslyAmortizedExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedExpenditureAmount")
         private Double previouslyAmortizedExpenditureAmount;
 
-        @NameInMap("PreviouslyAmortizedInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedInvoiceDiscount")
         private Double previouslyAmortizedInvoiceDiscount;
 
-        @NameInMap("PreviouslyAmortizedPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedPretaxAmount")
         private Double previouslyAmortizedPretaxAmount;
 
-        @NameInMap("PreviouslyAmortizedPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedPretaxGrossAmount")
         private Double previouslyAmortizedPretaxGrossAmount;
 
-        @NameInMap("PreviouslyAmortizedRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedRoundDownDiscount")
         private Double previouslyAmortizedRoundDownDiscount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductDetail")
+        @com.aliyun.core.annotation.NameInMap("ProductDetail")
         private String productDetail;
 
-        @NameInMap("ProductDetailCode")
+        @com.aliyun.core.annotation.NameInMap("ProductDetailCode")
         private String productDetailCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("RemainingAmortizationDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationAfterDiscountAmount")
+        private Double remainingAmortizationAfterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByCashCoupons")
         private Double remainingAmortizationDeductedByCashCoupons;
 
-        @NameInMap("RemainingAmortizationDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByCoupons")
         private Double remainingAmortizationDeductedByCoupons;
 
-        @NameInMap("RemainingAmortizationDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByPrepaidCard")
         private Double remainingAmortizationDeductedByPrepaidCard;
 
-        @NameInMap("RemainingAmortizationExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationExpenditureAmount")
         private Double remainingAmortizationExpenditureAmount;
 
-        @NameInMap("RemainingAmortizationInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationInvoiceDiscount")
         private Double remainingAmortizationInvoiceDiscount;
 
-        @NameInMap("RemainingAmortizationPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationPretaxAmount")
         private Double remainingAmortizationPretaxAmount;
 
-        @NameInMap("RemainingAmortizationPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationPretaxGrossAmount")
         private Double remainingAmortizationPretaxGrossAmount;
 
-        @NameInMap("RemainingAmortizationRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationRoundDownDiscount")
         private Double remainingAmortizationRoundDownDiscount;
 
-        @NameInMap("RoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("RoundDownDiscount")
         private Double roundDownDiscount;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
         private Items(Builder builder) {
+            this.afterDiscountAmount = builder.afterDiscountAmount;
             this.amortizationPeriod = builder.amortizationPeriod;
             this.amortizationStatus = builder.amortizationStatus;
             this.billAccountID = builder.billAccountID;
@@ -276,6 +312,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             this.billOwnerName = builder.billOwnerName;
             this.bizType = builder.bizType;
             this.consumePeriod = builder.consumePeriod;
+            this.currentAmortizationAfterDiscountAmount = builder.currentAmortizationAfterDiscountAmount;
             this.currentAmortizationDeductedByCashCoupons = builder.currentAmortizationDeductedByCashCoupons;
             this.currentAmortizationDeductedByCoupons = builder.currentAmortizationDeductedByCoupons;
             this.currentAmortizationDeductedByPrepaidCard = builder.currentAmortizationDeductedByPrepaidCard;
@@ -291,6 +328,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             this.invoiceDiscount = builder.invoiceDiscount;
             this.pretaxAmount = builder.pretaxAmount;
             this.pretaxGrossAmount = builder.pretaxGrossAmount;
+            this.previouslyAmortizedAfterDiscountAmount = builder.previouslyAmortizedAfterDiscountAmount;
             this.previouslyAmortizedDeductedByCashCoupons = builder.previouslyAmortizedDeductedByCashCoupons;
             this.previouslyAmortizedDeductedByCoupons = builder.previouslyAmortizedDeductedByCoupons;
             this.previouslyAmortizedDeductedByPrepaidCard = builder.previouslyAmortizedDeductedByPrepaidCard;
@@ -303,6 +341,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             this.productDetail = builder.productDetail;
             this.productDetailCode = builder.productDetailCode;
             this.productName = builder.productName;
+            this.remainingAmortizationAfterDiscountAmount = builder.remainingAmortizationAfterDiscountAmount;
             this.remainingAmortizationDeductedByCashCoupons = builder.remainingAmortizationDeductedByCashCoupons;
             this.remainingAmortizationDeductedByCoupons = builder.remainingAmortizationDeductedByCoupons;
             this.remainingAmortizationDeductedByPrepaidCard = builder.remainingAmortizationDeductedByPrepaidCard;
@@ -321,6 +360,13 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return afterDiscountAmount
+         */
+        public Double getAfterDiscountAmount() {
+            return this.afterDiscountAmount;
         }
 
         /**
@@ -377,6 +423,13 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
          */
         public String getConsumePeriod() {
             return this.consumePeriod;
+        }
+
+        /**
+         * @return currentAmortizationAfterDiscountAmount
+         */
+        public Double getCurrentAmortizationAfterDiscountAmount() {
+            return this.currentAmortizationAfterDiscountAmount;
         }
 
         /**
@@ -485,6 +538,13 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
+         * @return previouslyAmortizedAfterDiscountAmount
+         */
+        public Double getPreviouslyAmortizedAfterDiscountAmount() {
+            return this.previouslyAmortizedAfterDiscountAmount;
+        }
+
+        /**
          * @return previouslyAmortizedDeductedByCashCoupons
          */
         public Double getPreviouslyAmortizedDeductedByCashCoupons() {
@@ -569,6 +629,13 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
+         * @return remainingAmortizationAfterDiscountAmount
+         */
+        public Double getRemainingAmortizationAfterDiscountAmount() {
+            return this.remainingAmortizationAfterDiscountAmount;
+        }
+
+        /**
          * @return remainingAmortizationDeductedByCashCoupons
          */
         public Double getRemainingAmortizationDeductedByCashCoupons() {
@@ -639,6 +706,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         public static final class Builder {
+            private Double afterDiscountAmount; 
             private String amortizationPeriod; 
             private String amortizationStatus; 
             private Long billAccountID; 
@@ -647,6 +715,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             private String billOwnerName; 
             private String bizType; 
             private String consumePeriod; 
+            private Double currentAmortizationAfterDiscountAmount; 
             private Double currentAmortizationDeductedByCashCoupons; 
             private Double currentAmortizationDeductedByCoupons; 
             private Double currentAmortizationDeductedByPrepaidCard; 
@@ -662,6 +731,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             private Double invoiceDiscount; 
             private Double pretaxAmount; 
             private Double pretaxGrossAmount; 
+            private Double previouslyAmortizedAfterDiscountAmount; 
             private Double previouslyAmortizedDeductedByCashCoupons; 
             private Double previouslyAmortizedDeductedByCoupons; 
             private Double previouslyAmortizedDeductedByPrepaidCard; 
@@ -674,6 +744,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             private String productDetail; 
             private String productDetailCode; 
             private String productName; 
+            private Double remainingAmortizationAfterDiscountAmount; 
             private Double remainingAmortizationDeductedByCashCoupons; 
             private Double remainingAmortizationDeductedByCoupons; 
             private Double remainingAmortizationDeductedByPrepaidCard; 
@@ -686,7 +757,18 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             private String subscriptionType; 
 
             /**
-             * The allocation month. Format: YYYYMM.
+             * AfterDiscountAmount.
+             */
+            public Builder afterDiscountAmount(Double afterDiscountAmount) {
+                this.afterDiscountAmount = afterDiscountAmount;
+                return this;
+            }
+
+            /**
+             * <p>The allocation month. Format: YYYYMM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202210</p>
              */
             public Builder amortizationPeriod(String amortizationPeriod) {
                 this.amortizationPeriod = amortizationPeriod;
@@ -694,11 +776,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The allocation status. Valid values:
-             * <p>
+             * <p>The allocation status. Valid values:</p>
+             * <ul>
+             * <li>amortized: allocated</li>
+             * <li>unAmortized: not allocated</li>
+             * </ul>
              * 
-             * *   amortized: allocated
-             * *   unAmortized: not allocated
+             * <strong>example:</strong>
+             * <p>amortized</p>
              */
             public Builder amortizationStatus(String amortizationStatus) {
                 this.amortizationStatus = amortizationStatus;
@@ -706,7 +791,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The ID of the account to which the bill belongs.
+             * <p>The ID of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder billAccountID(Long billAccountID) {
                 this.billAccountID = billAccountID;
@@ -714,7 +802,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The name of the account to which the bill belongs.
+             * <p>The name of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -722,7 +813,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The ID of the account to which the resource belongs.
+             * <p>The ID of the account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185xxxxx489</p>
              */
             public Builder billOwnerID(Long billOwnerID) {
                 this.billOwnerID = billOwnerID;
@@ -730,7 +824,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The name of the account to which the resource belongs.
+             * <p>The name of the account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billOwnerName(String billOwnerName) {
                 this.billOwnerName = billOwnerName;
@@ -738,7 +835,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The business type.
+             * <p>The business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trusteeship</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -746,7 +846,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The billing cycle. Format: YYYYMM.
+             * <p>The billing cycle. Format: YYYYMM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202210</p>
              */
             public Builder consumePeriod(String consumePeriod) {
                 this.consumePeriod = consumePeriod;
@@ -754,7 +857,18 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using vouchers and allocated to the current allocation month.
+             * CurrentAmortizationAfterDiscountAmount.
+             */
+            public Builder currentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
+                this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
+                return this;
+            }
+
+            /**
+             * <p>The amount deducted by using vouchers and allocated to the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByCashCoupons(Double currentAmortizationDeductedByCashCoupons) {
                 this.currentAmortizationDeductedByCashCoupons = currentAmortizationDeductedByCashCoupons;
@@ -762,7 +876,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using coupons and allocated to the current allocation month.
+             * <p>The amount deducted by using coupons and allocated to the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByCoupons(Double currentAmortizationDeductedByCoupons) {
                 this.currentAmortizationDeductedByCoupons = currentAmortizationDeductedByCoupons;
@@ -770,7 +887,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using prepaid cards and allocated to the current allocation month.
+             * <p>The amount deducted by using prepaid cards and allocated to the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationDeductedByPrepaidCard(Double currentAmortizationDeductedByPrepaidCard) {
                 this.currentAmortizationDeductedByPrepaidCard = currentAmortizationDeductedByPrepaidCard;
@@ -778,7 +898,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The expenditure amount allocated to the current allocation month. Invoicing is supported.
+             * <p>The expenditure amount allocated to the current allocation month. Invoicing is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationExpenditureAmount(Double currentAmortizationExpenditureAmount) {
                 this.currentAmortizationExpenditureAmount = currentAmortizationExpenditureAmount;
@@ -786,7 +909,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The discount amount allocated to the current allocation month.
+             * <p>The discount amount allocated to the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationInvoiceDiscount(Double currentAmortizationInvoiceDiscount) {
                 this.currentAmortizationInvoiceDiscount = currentAmortizationInvoiceDiscount;
@@ -794,7 +920,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax amount allocated to the current allocation month.
+             * <p>The pretax amount allocated to the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationPretaxAmount(Double currentAmortizationPretaxAmount) {
                 this.currentAmortizationPretaxAmount = currentAmortizationPretaxAmount;
@@ -802,7 +931,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax gross amount allocated to the current allocation month.
+             * <p>The pretax gross amount allocated to the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationPretaxGrossAmount(Double currentAmortizationPretaxGrossAmount) {
                 this.currentAmortizationPretaxGrossAmount = currentAmortizationPretaxGrossAmount;
@@ -810,7 +942,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The round-off amount allocated to the current allocation month.
+             * <p>The round-off amount allocated to the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder currentAmortizationRoundDownDiscount(Double currentAmortizationRoundDownDiscount) {
                 this.currentAmortizationRoundDownDiscount = currentAmortizationRoundDownDiscount;
@@ -818,7 +953,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using vouchers.
+             * <p>The amount deducted by using vouchers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCashCoupons(Double deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -826,7 +964,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using coupons.
+             * <p>The amount deducted by using coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCoupons(Double deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -834,7 +975,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using prepaid cards.
+             * <p>The amount deducted by using prepaid cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByPrepaidCard(Double deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -842,7 +986,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The expenditure amount. Invoicing is supported.
+             * <p>The expenditure amount. Invoicing is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expenditureAmount(Double expenditureAmount) {
                 this.expenditureAmount = expenditureAmount;
@@ -850,7 +997,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The discount amount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder invoiceDiscount(Double invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -858,7 +1008,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax amount.
+             * <p>The pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmount(Double pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -866,7 +1019,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax gross amount.
+             * <p>The pretax gross amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxGrossAmount(Double pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -874,7 +1030,18 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using vouchers and allocated before the current allocation month.
+             * PreviouslyAmortizedAfterDiscountAmount.
+             */
+            public Builder previouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
+                this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
+                return this;
+            }
+
+            /**
+             * <p>The amount deducted by using vouchers and allocated before the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
                 this.previouslyAmortizedDeductedByCashCoupons = previouslyAmortizedDeductedByCashCoupons;
@@ -882,7 +1049,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using coupons and allocated before the current allocation month.
+             * <p>The amount deducted by using coupons and allocated before the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByCoupons(Double previouslyAmortizedDeductedByCoupons) {
                 this.previouslyAmortizedDeductedByCoupons = previouslyAmortizedDeductedByCoupons;
@@ -890,7 +1060,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using prepaid cards and allocated before the current allocation month.
+             * <p>The amount deducted by using prepaid cards and allocated before the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedDeductedByPrepaidCard(Double previouslyAmortizedDeductedByPrepaidCard) {
                 this.previouslyAmortizedDeductedByPrepaidCard = previouslyAmortizedDeductedByPrepaidCard;
@@ -898,7 +1071,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The expenditure amount allocated before the current allocation month. Invoicing is supported.
+             * <p>The expenditure amount allocated before the current allocation month. Invoicing is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedExpenditureAmount(Double previouslyAmortizedExpenditureAmount) {
                 this.previouslyAmortizedExpenditureAmount = previouslyAmortizedExpenditureAmount;
@@ -906,7 +1082,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The discount amount allocated before the current allocation month.
+             * <p>The discount amount allocated before the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedInvoiceDiscount(Double previouslyAmortizedInvoiceDiscount) {
                 this.previouslyAmortizedInvoiceDiscount = previouslyAmortizedInvoiceDiscount;
@@ -914,7 +1093,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax amount allocated before the current allocation month.
+             * <p>The pretax amount allocated before the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedPretaxAmount(Double previouslyAmortizedPretaxAmount) {
                 this.previouslyAmortizedPretaxAmount = previouslyAmortizedPretaxAmount;
@@ -922,7 +1104,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax gross amount allocated before the current allocation month.
+             * <p>The pretax gross amount allocated before the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedPretaxGrossAmount(Double previouslyAmortizedPretaxGrossAmount) {
                 this.previouslyAmortizedPretaxGrossAmount = previouslyAmortizedPretaxGrossAmount;
@@ -930,7 +1115,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The round-off amount allocated before the current allocation month.
+             * <p>The round-off amount allocated before the current allocation month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder previouslyAmortizedRoundDownDiscount(Double previouslyAmortizedRoundDownDiscount) {
                 this.previouslyAmortizedRoundDownDiscount = previouslyAmortizedRoundDownDiscount;
@@ -938,7 +1126,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -946,7 +1137,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The specific service resource.
+             * <p>The specific service resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -954,7 +1148,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The code of the specific service resource.
+             * <p>The code of the specific service resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productDetailCode(String productDetailCode) {
                 this.productDetailCode = productDetailCode;
@@ -962,7 +1159,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApsaraDB RDS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -970,7 +1170,18 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using vouchers and to be allocated to one or more future allocation months.
+             * RemainingAmortizationAfterDiscountAmount.
+             */
+            public Builder remainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
+                this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
+                return this;
+            }
+
+            /**
+             * <p>The amount deducted by using vouchers and to be allocated to one or more future allocation months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByCashCoupons(Double remainingAmortizationDeductedByCashCoupons) {
                 this.remainingAmortizationDeductedByCashCoupons = remainingAmortizationDeductedByCashCoupons;
@@ -978,7 +1189,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using coupons and to be allocated to one or more future allocation months.
+             * <p>The amount deducted by using coupons and to be allocated to one or more future allocation months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByCoupons(Double remainingAmortizationDeductedByCoupons) {
                 this.remainingAmortizationDeductedByCoupons = remainingAmortizationDeductedByCoupons;
@@ -986,7 +1200,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The amount deducted by using prepaid cards and to be allocated to one or more future allocation months.
+             * <p>The amount deducted by using prepaid cards and to be allocated to one or more future allocation months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationDeductedByPrepaidCard(Double remainingAmortizationDeductedByPrepaidCard) {
                 this.remainingAmortizationDeductedByPrepaidCard = remainingAmortizationDeductedByPrepaidCard;
@@ -994,7 +1211,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The expenditure amount to be allocated to one or more future allocation months. Invoicing is supported.
+             * <p>The expenditure amount to be allocated to one or more future allocation months. Invoicing is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationExpenditureAmount(Double remainingAmortizationExpenditureAmount) {
                 this.remainingAmortizationExpenditureAmount = remainingAmortizationExpenditureAmount;
@@ -1002,7 +1222,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The discount amount to be allocated to one or more future allocation months.
+             * <p>The discount amount to be allocated to one or more future allocation months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationInvoiceDiscount(Double remainingAmortizationInvoiceDiscount) {
                 this.remainingAmortizationInvoiceDiscount = remainingAmortizationInvoiceDiscount;
@@ -1010,7 +1233,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax amount to be allocated to one or more future allocation months.
+             * <p>The pretax amount to be allocated to one or more future allocation months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationPretaxAmount(Double remainingAmortizationPretaxAmount) {
                 this.remainingAmortizationPretaxAmount = remainingAmortizationPretaxAmount;
@@ -1018,7 +1244,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The pretax gross amount to be allocated to one or more future allocation months.
+             * <p>The pretax gross amount to be allocated to one or more future allocation months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationPretaxGrossAmount(Double remainingAmortizationPretaxGrossAmount) {
                 this.remainingAmortizationPretaxGrossAmount = remainingAmortizationPretaxGrossAmount;
@@ -1026,7 +1255,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The round-off amount to be allocated to one or more future allocation months.
+             * <p>The round-off amount to be allocated to one or more future allocation months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingAmortizationRoundDownDiscount(Double remainingAmortizationRoundDownDiscount) {
                 this.remainingAmortizationRoundDownDiscount = remainingAmortizationRoundDownDiscount;
@@ -1034,7 +1266,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The round-off amount.
+             * <p>The round-off amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder roundDownDiscount(Double roundDownDiscount) {
                 this.roundDownDiscount = roundDownDiscount;
@@ -1042,11 +1277,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription: the subscription billing method</li>
+             * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+             * </ul>
              * 
-             * *   Subscription: the subscription billing method
-             * *   PayAsYouGo: the pay-as-you-go billing method
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -1060,23 +1298,29 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductAmortizedCostByAmortizationPeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductAmortizedCostByAmortizationPeriodResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountID")
+        @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -1113,7 +1357,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1141,13 +1385,16 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         public static final class Builder {
             private String accountID; 
             private String accountName; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>185766xxxx</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1155,7 +1402,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1163,15 +1413,18 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The data entries returned.
+             * <p>The data entries returned.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -1179,7 +1432,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The position from which the results started to return. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.
+             * <p>The position from which the results started to return. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1187,7 +1443,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMergeRequestPersonnelRequest} extends {@link RequestModel}
  *
  * <p>UpdateMergeRequestPersonnelRequest</p>
  */
 public class UpdateMergeRequestPersonnelRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Path
-    @NameInMap("localId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("localId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long localId;
 
-    @Path
-    @NameInMap("personType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("personType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String personType;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("newUserIdList")
-    private java.util.List < String > newUserIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("newUserIdList")
+    private java.util.List<String> newUserIdList;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpdateMergeRequestPersonnelRequest(Builder builder) {
@@ -94,7 +99,7 @@ public class UpdateMergeRequestPersonnelRequest extends Request {
     /**
      * @return newUserIdList
      */
-    public java.util.List < String > getNewUserIdList() {
+    public java.util.List<String> getNewUserIdList() {
         return this.newUserIdList;
     }
 
@@ -110,7 +115,7 @@ public class UpdateMergeRequestPersonnelRequest extends Request {
         private Long localId; 
         private String personType; 
         private String accessToken; 
-        private java.util.List < String > newUserIdList; 
+        private java.util.List<String> newUserIdList; 
         private String organizationId; 
 
         private Builder() {
@@ -128,7 +133,10 @@ public class UpdateMergeRequestPersonnelRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1233456</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -137,7 +145,10 @@ public class UpdateMergeRequestPersonnelRequest extends Request {
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder localId(Long localId) {
             this.putPathParameter("localId", localId);
@@ -146,7 +157,7 @@ public class UpdateMergeRequestPersonnelRequest extends Request {
         }
 
         /**
-         * personType.
+         * <p>This parameter is required.</p>
          */
         public Builder personType(String personType) {
             this.putPathParameter("personType", personType);
@@ -166,14 +177,17 @@ public class UpdateMergeRequestPersonnelRequest extends Request {
         /**
          * newUserIdList.
          */
-        public Builder newUserIdList(java.util.List < String > newUserIdList) {
+        public Builder newUserIdList(java.util.List<String> newUserIdList) {
             this.putBodyParameter("newUserIdList", newUserIdList);
             this.newUserIdList = newUserIdList;
             return this;
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

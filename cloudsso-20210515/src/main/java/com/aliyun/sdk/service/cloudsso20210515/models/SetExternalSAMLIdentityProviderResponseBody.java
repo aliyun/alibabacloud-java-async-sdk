@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetExternalSAMLIdentityProviderResponseBody} extends {@link TeaModel}
  *
  * <p>SetExternalSAMLIdentityProviderResponseBody</p>
  */
 public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLIdentityProviderConfiguration")
+    @com.aliyun.core.annotation.NameInMap("SAMLIdentityProviderConfiguration")
     private SAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration;
 
     private SetExternalSAMLIdentityProviderResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         private SAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63160579-2E1B-57B0-8273-B27427172385</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the IdP.
+         * <p>The configurations of the IdP.</p>
          */
         public Builder SAMLIdentityProviderConfiguration(SAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration) {
             this.SAMLIdentityProviderConfiguration = SAMLIdentityProviderConfiguration;
@@ -71,35 +74,45 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetExternalSAMLIdentityProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetExternalSAMLIdentityProviderResponseBody</p>
+     */
     public static class SAMLIdentityProviderConfiguration extends TeaModel {
-        @NameInMap("CertificateIds")
+        @com.aliyun.core.annotation.NameInMap("BindingType")
+        private String bindingType;
+
+        @com.aliyun.core.annotation.NameInMap("CertificateIds")
         private java.util.List < String > certificateIds;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EncodedMetadataDocument")
+        @com.aliyun.core.annotation.NameInMap("EncodedMetadataDocument")
         private String encodedMetadataDocument;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("LoginUrl")
+        @com.aliyun.core.annotation.NameInMap("LoginUrl")
         private String loginUrl;
 
-        @NameInMap("SSOStatus")
+        @com.aliyun.core.annotation.NameInMap("SSOStatus")
         private String SSOStatus;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("WantRequestSigned")
+        @com.aliyun.core.annotation.NameInMap("WantRequestSigned")
         private Boolean wantRequestSigned;
 
         private SAMLIdentityProviderConfiguration(Builder builder) {
+            this.bindingType = builder.bindingType;
             this.certificateIds = builder.certificateIds;
             this.createTime = builder.createTime;
             this.directoryId = builder.directoryId;
@@ -117,6 +130,13 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
 
         public static SAMLIdentityProviderConfiguration create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindingType
+         */
+        public String getBindingType() {
+            return this.bindingType;
         }
 
         /**
@@ -183,6 +203,7 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bindingType; 
             private java.util.List < String > certificateIds; 
             private String createTime; 
             private String directoryId; 
@@ -194,7 +215,22 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             private Boolean wantRequestSigned; 
 
             /**
-             * The ID of the SAML signing certificate.
+             * <p>The Binding method for initiating a SAML request. Values:</p>
+             * <ul>
+             * <li>Post: Initiate the SAML request using the Post method. </li>
+             * <li>Redirect: Initiate the SAML request using the Redirect method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Redirect</p>
+             */
+            public Builder bindingType(String bindingType) {
+                this.bindingType = bindingType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the SAML signing certificate.</p>
              */
             public Builder certificateIds(java.util.List < String > certificateIds) {
                 this.certificateIds = certificateIds;
@@ -202,7 +238,10 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the IdP was configured for the first time.
+             * <p>The time when the IdP was configured for the first time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-10T02:57:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +249,10 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -218,7 +260,10 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata file of the IdP. The value of this parameter is Base64-encoded.
+             * <p>The metadata file of the IdP. The value of this parameter is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PD94bWwgdmVyc2lvbj0iMS4****</p>
              */
             public Builder encodedMetadataDocument(String encodedMetadataDocument) {
                 this.encodedMetadataDocument = encodedMetadataDocument;
@@ -226,7 +271,10 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The entity ID of the IdP.
+             * <p>The entity ID of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.okta.com/exk3qwgtjhetR2Od">http://www.okta.com/exk3qwgtjhetR2Od</a>****</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -234,7 +282,7 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The logon URL of the IdP.
+             * <p>The logon URL of the IdP.</p>
              */
             public Builder loginUrl(String loginUrl) {
                 this.loginUrl = loginUrl;
@@ -242,11 +290,14 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The status of SSO logon. Valid values:
-             * <p>
+             * <p>The status of SSO logon. Valid values:</p>
+             * <ul>
+             * <li>Enabled</li>
+             * <li>Disabled</li>
+             * </ul>
              * 
-             * *   Enabled
-             * *   Disabled
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder SSOStatus(String SSOStatus) {
                 this.SSOStatus = SSOStatus;
@@ -254,7 +305,10 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the IdP configurations were last modified.
+             * <p>The time when the IdP configurations were last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-10T02:57:16Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -262,11 +316,14 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:
-             * <p>
+             * <p>Indicates whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</p>
+             * <ul>
+             * <li>true: yes</li>
+             * <li>false: no (default)</li>
+             * </ul>
              * 
-             * *   true: yes
-             * *   false: no (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder wantRequestSigned(Boolean wantRequestSigned) {
                 this.wantRequestSigned = wantRequestSigned;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceDomainsResponseBody</p>
  */
 public class DescribeInstanceDomainsResponseBody extends TeaModel {
-    @NameInMap("InstanceDomains")
-    private java.util.List < InstanceDomains> instanceDomains;
+    @com.aliyun.core.annotation.NameInMap("InstanceDomains")
+    private java.util.List<InstanceDomains> instanceDomains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeInstanceDomainsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
     /**
      * @return instanceDomains
      */
-    public java.util.List < InstanceDomains> getInstanceDomains() {
+    public java.util.List<InstanceDomains> getInstanceDomains() {
         return this.instanceDomains;
     }
 
@@ -90,7 +95,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceDomains> instanceDomains; 
+        private java.util.List<InstanceDomains> instanceDomains; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,15 +103,18 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * InstanceDomains.
+         * <p>The domain names that are bound to the Alibaba Cloud DNS instance.</p>
          */
-        public Builder instanceDomains(java.util.List < InstanceDomains> instanceDomains) {
+        public Builder instanceDomains(java.util.List<InstanceDomains> instanceDomains) {
             this.instanceDomains = instanceDomains;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68386699-8B9E-4D5B-BC4C-75A28F6C2A00</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>The total number of entries returned on all pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +155,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -151,14 +171,20 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDomainsResponseBody</p>
+     */
     public static class InstanceDomains extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private InstanceDomains(Builder builder) {
@@ -202,7 +228,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-09T02:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +239,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583720154000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -218,7 +250,10 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

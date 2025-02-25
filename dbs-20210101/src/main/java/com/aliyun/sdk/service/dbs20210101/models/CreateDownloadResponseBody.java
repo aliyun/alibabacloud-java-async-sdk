@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDownloadResponseBody</p>
  */
 public class CreateDownloadResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CreateDownloadResponseBody(Builder builder) {
@@ -118,7 +117,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The information about the download task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -176,43 +175,43 @@ public class CreateDownloadResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BackupSetTime")
+        @com.aliyun.core.annotation.NameInMap("BackupSetTime")
         private Long backupSetTime;
 
-        @NameInMap("BakSetId")
+        @com.aliyun.core.annotation.NameInMap("BakSetId")
         private String bakSetId;
 
-        @NameInMap("DbList")
+        @com.aliyun.core.annotation.NameInMap("DbList")
         private String dbList;
 
-        @NameInMap("DownloadStatus")
+        @com.aliyun.core.annotation.NameInMap("DownloadStatus")
         private String downloadStatus;
 
-        @NameInMap("ExportDataSize")
+        @com.aliyun.core.annotation.NameInMap("ExportDataSize")
         private Long exportDataSize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("ImportDataSize")
+        @com.aliyun.core.annotation.NameInMap("ImportDataSize")
         private Long importDataSize;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
-        @NameInMap("TargetPath")
+        @com.aliyun.core.annotation.NameInMap("TargetPath")
         private String targetPath;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {
@@ -442,7 +441,7 @@ public class CreateDownloadResponseBody extends TeaModel {
              * The destination path to which the backup set is downloaded.
              * <p>
              * 
-             * > This parameter is returned if the TargetType parameter is set to OSS.
+             * >  This parameter is returned if the value of **TargetType is OSS**.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;

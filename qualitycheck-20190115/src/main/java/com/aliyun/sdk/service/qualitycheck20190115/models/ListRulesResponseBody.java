@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRulesResponseBody</p>
  */
 public class ListRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRulesResponseBody(Builder builder) {
@@ -72,7 +77,7 @@ public class ListRulesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -114,7 +119,7 @@ public class ListRulesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -140,7 +145,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -191,29 +196,35 @@ public class ListRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BusinessCategoryNameList")
-        private java.util.List < String > businessCategoryNameList;
+        @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
+        private java.util.List<String> businessCategoryNameList;
 
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private Integer ruleType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private Data(Builder builder) {
@@ -238,7 +249,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return businessCategoryNameList
          */
-        public java.util.List < String > getBusinessCategoryNameList() {
+        public java.util.List<String> getBusinessCategoryNameList() {
             return this.businessCategoryNameList;
         }
 
@@ -292,7 +303,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > businessCategoryNameList; 
+            private java.util.List<String> businessCategoryNameList; 
             private String comments; 
             private String createTime; 
             private String name; 
@@ -304,7 +315,7 @@ public class ListRulesResponseBody extends TeaModel {
             /**
              * BusinessCategoryNameList.
              */
-            public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
+            public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
                 this.businessCategoryNameList = businessCategoryNameList;
                 return this;
             }

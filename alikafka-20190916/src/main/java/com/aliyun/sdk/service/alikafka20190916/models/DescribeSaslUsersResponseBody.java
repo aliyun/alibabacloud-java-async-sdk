@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSaslUsersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSaslUsersResponseBody</p>
  */
 public class DescribeSaslUsersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SaslUserList")
+    @com.aliyun.core.annotation.NameInMap("SaslUserList")
     private SaslUserList saslUserList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSaslUsersResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +113,10 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E3B3592-5994-4F65-A61E-E62A77A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The SASL users.
+         * <p>The Simple Authentication and Security Layer (SASL) users.</p>
          */
         public Builder saslUserList(SaslUserList saslUserList) {
             this.saslUserList = saslUserList;
@@ -118,7 +132,10 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +148,27 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSaslUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSaslUsersResponseBody</p>
+     */
     public static class SaslUserVO extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Mechanism")
+        private String mechanism;
+
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private SaslUserVO(Builder builder) {
+            this.mechanism = builder.mechanism;
             this.password = builder.password;
             this.type = builder.type;
             this.username = builder.username;
@@ -153,6 +180,13 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
 
         public static SaslUserVO create() {
             return builder().build();
+        }
+
+        /**
+         * @return mechanism
+         */
+        public String getMechanism() {
+            return this.mechanism;
         }
 
         /**
@@ -177,12 +211,30 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String mechanism; 
             private String password; 
             private String type; 
             private String username; 
 
             /**
-             * The password that is used to access the Elasticsearch cluster.
+             * <p>The encryption method.</p>
+             * <blockquote>
+             * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>SCRAM-SHA-256</p>
+             */
+            public Builder mechanism(String mechanism) {
+                this.mechanism = mechanism;
+                return this;
+            }
+
+            /**
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -190,13 +242,16 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The request type. Valid values:
-             * <p>
+             * <p>The type of the SASL user. Valid values:</p>
+             * <ul>
+             * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
+             * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
+             * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
+             * </ul>
+             * <p>Default value: <strong>plain</strong>.</p>
              * 
-             * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
-             * *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
-             * 
-             * Default value: **plain**.
+             * <strong>example:</strong>
+             * <p>scram</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -204,7 +259,10 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test12***</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -218,9 +276,15 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSaslUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSaslUsersResponseBody</p>
+     */
     public static class SaslUserList extends TeaModel {
-        @NameInMap("SaslUserVO")
-        private java.util.List < SaslUserVO> saslUserVO;
+        @com.aliyun.core.annotation.NameInMap("SaslUserVO")
+        private java.util.List<SaslUserVO> saslUserVO;
 
         private SaslUserList(Builder builder) {
             this.saslUserVO = builder.saslUserVO;
@@ -237,17 +301,17 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         /**
          * @return saslUserVO
          */
-        public java.util.List < SaslUserVO> getSaslUserVO() {
+        public java.util.List<SaslUserVO> getSaslUserVO() {
             return this.saslUserVO;
         }
 
         public static final class Builder {
-            private java.util.List < SaslUserVO> saslUserVO; 
+            private java.util.List<SaslUserVO> saslUserVO; 
 
             /**
              * SaslUserVO.
              */
-            public Builder saslUserVO(java.util.List < SaslUserVO> saslUserVO) {
+            public Builder saslUserVO(java.util.List<SaslUserVO> saslUserVO) {
                 this.saslUserVO = saslUserVO;
                 return this;
             }

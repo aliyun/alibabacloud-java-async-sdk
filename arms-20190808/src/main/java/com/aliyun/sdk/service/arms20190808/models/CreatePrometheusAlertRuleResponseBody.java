@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePrometheusAlertRuleResponseBody</p>
  */
 public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PrometheusAlertRule")
+    @com.aliyun.core.annotation.NameInMap("PrometheusAlertRule")
     private PrometheusAlertRule prometheusAlertRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreatePrometheusAlertRuleResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +113,7 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PrometheusAlertRule.
+         * <p>The returned struct.</p>
          */
         public Builder prometheusAlertRule(PrometheusAlertRule prometheusAlertRule) {
             this.prometheusAlertRule = prometheusAlertRule;
@@ -110,7 +121,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +148,17 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePrometheusAlertRuleResponseBody</p>
+     */
     public static class Annotations extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Annotations(Builder builder) {
@@ -170,7 +193,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the annotation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>message</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +204,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the annotation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The CPU utilization of ${{$labels.pod_name}} has exceeded 80%. Current value: {{$value}}%</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,11 +221,17 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePrometheusAlertRuleResponseBody</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -231,7 +266,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>severity</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -239,7 +277,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>critical</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -253,41 +294,47 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePrometheusAlertRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePrometheusAlertRuleResponseBody</p>
+     */
     public static class PrometheusAlertRule extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("Annotations")
-        private java.util.List < Annotations> annotations;
+        @com.aliyun.core.annotation.NameInMap("Annotations")
+        private java.util.List<Annotations> annotations;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("DispatchRuleId")
+        @com.aliyun.core.annotation.NameInMap("DispatchRuleId")
         private Long dispatchRuleId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<Labels> labels;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NotifyType")
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
         private String notifyType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PrometheusAlertRule(Builder builder) {
@@ -330,7 +377,7 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.List < Annotations> getAnnotations() {
+        public java.util.List<Annotations> getAnnotations() {
             return this.annotations;
         }
 
@@ -365,7 +412,7 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -400,19 +447,22 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Long alertId; 
             private String alertName; 
-            private java.util.List < Annotations> annotations; 
+            private java.util.List<Annotations> annotations; 
             private String clusterId; 
             private Long dispatchRuleId; 
             private String duration; 
             private String expression; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String message; 
             private String notifyType; 
             private Integer status; 
             private String type; 
 
             /**
-             * AlertId.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3888704</p>
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -420,7 +470,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus_Alert</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -428,15 +481,18 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Annotations.
+             * <p>The annotations of the alert rule.</p>
              */
-            public Builder annotations(java.util.List < Annotations> annotations) {
+            public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
                 return this;
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0bad479465464e1d8c1e641b0afb****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -444,7 +500,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchRuleId.
+             * <p>The ID of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10282</p>
              */
             public Builder dispatchRuleId(Long dispatchRuleId) {
                 this.dispatchRuleId = dispatchRuleId;
@@ -452,7 +511,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration. The value ranges from 1 to 1440 minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10m</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -460,7 +522,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * <p>The expression of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100 * (sum(rate(container_cpu_usage_seconds_total[1m])) by (pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, &quot;pod_name&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (pod_name))&gt;75</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -468,15 +533,18 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The tags of the alert rule.</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * Message.
+             * <p>The content of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The CPU utilization of ${{$labels.pod_name}} has exceeded 80%. Current value: {{$value}}%</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -484,7 +552,14 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyType.
+             * <p>The method that is used to send alert notifications. Valid values:</p>
+             * <ul>
+             * <li>ALERT_MANAGER: Alert notifications are sent by Operation Center.</li>
+             * <li>DISPATCH_RULE: Alert notifications are sent based on the specified notification policy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALERT_MANAGER</p>
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -492,7 +567,14 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>1</code>: The alert rule is enabled.</li>
+             * <li><code>0</code>: The alert rule is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -500,7 +582,10 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Kubernetes component alert</p>
              */
             public Builder type(String type) {
                 this.type = type;

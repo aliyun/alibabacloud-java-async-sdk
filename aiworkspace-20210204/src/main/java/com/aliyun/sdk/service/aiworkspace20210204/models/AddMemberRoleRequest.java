@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMemberRoleRequest} extends {@link RequestModel}
  *
  * <p>AddMemberRoleRequest</p>
  */
 public class AddMemberRoleRequest extends Request {
-    @Path
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Path
-    @NameInMap("MemberId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("MemberId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memberId;
 
-    @Path
-    @NameInMap("RoleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
     private AddMemberRoleRequest(Builder builder) {
@@ -85,7 +85,10 @@ public class AddMemberRoleRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -94,7 +97,10 @@ public class AddMemberRoleRequest extends Request {
         }
 
         /**
-         * MemberId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883-215139******688039</p>
          */
         public Builder memberId(String memberId) {
             this.putPathParameter("MemberId", memberId);
@@ -103,7 +109,10 @@ public class AddMemberRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAI.AlgoDeveloper</p>
          */
         public Builder roleName(String roleName) {
             this.putPathParameter("RoleName", roleName);

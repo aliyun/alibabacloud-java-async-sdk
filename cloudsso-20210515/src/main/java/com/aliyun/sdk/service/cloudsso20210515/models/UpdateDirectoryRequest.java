@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDirectoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateDirectoryRequest</p>
  */
 public class UpdateDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("NewDirectoryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDirectoryName")
     private String newDirectoryName;
 
     private UpdateDirectoryRequest(Builder builder) {
@@ -68,7 +68,10 @@ public class UpdateDirectoryRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,12 +80,12 @@ public class UpdateDirectoryRequest extends Request {
         }
 
         /**
-         * The new name of the directory. The name must be globally unique.
-         * <p>
+         * <p>The new name of the directory. The name must be globally unique.</p>
+         * <p>The name can contain lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-) and cannot have two consecutive hyphens (-). If you want to start the new name of the directory starts with <code>d-</code>, you must set this parameter to the ID of the directory.</p>
+         * <p>The name must be 2 to 64 characters in length.</p>
          * 
-         * The name can contain lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-) and cannot have two consecutive hyphens (-). If you want to start the new name of the directory starts with `d-`, you must set this parameter to the ID of the directory.
-         * 
-         * The name must be 2 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>new-example</p>
          */
         public Builder newDirectoryName(String newDirectoryName) {
             this.putQueryParameter("NewDirectoryName", newDirectoryName);

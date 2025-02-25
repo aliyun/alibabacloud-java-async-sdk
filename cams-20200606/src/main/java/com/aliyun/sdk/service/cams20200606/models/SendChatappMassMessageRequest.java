@@ -1,86 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendChatappMassMessageRequest} extends {@link RequestModel}
  *
  * <p>SendChatappMassMessageRequest</p>
  */
 public class SendChatappMassMessageRequest extends Request {
-    @Body
-    @NameInMap("ChannelType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelType;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("CustWabaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustWabaId")
     @Deprecated
     private String custWabaId;
 
-    @Body
-    @NameInMap("FallBackContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackContent")
     private String fallBackContent;
 
-    @Body
-    @NameInMap("FallBackDuration")
-    @Validation(maximum = 43200, minimum = 60)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 43200, minimum = 10)
     private Integer fallBackDuration;
 
-    @Body
-    @NameInMap("FallBackId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackId")
     private String fallBackId;
 
-    @Body
-    @NameInMap("FallBackRule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackRule")
     private String fallBackRule;
 
-    @Body
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Body
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Body
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @Body
-    @NameInMap("Language")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String language;
 
-    @Body
-    @NameInMap("SenderList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SenderList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SenderList> senderList;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @Body
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Body
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @Body
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Long ttl;
 
     private SendChatappMassMessageRequest(Builder builder) {
@@ -100,6 +103,7 @@ public class SendChatappMassMessageRequest extends Request {
         this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
+        this.templateName = builder.templateName;
         this.ttl = builder.ttl;
     }
 
@@ -222,6 +226,13 @@ public class SendChatappMassMessageRequest extends Request {
     }
 
     /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return ttl
      */
     public Long getTtl() {
@@ -244,6 +255,7 @@ public class SendChatappMassMessageRequest extends Request {
         private String tag; 
         private String taskId; 
         private String templateCode; 
+        private String templateName; 
         private Long ttl; 
 
         private Builder() {
@@ -267,11 +279,21 @@ public class SendChatappMassMessageRequest extends Request {
             this.tag = request.tag;
             this.taskId = request.taskId;
             this.templateCode = request.templateCode;
+            this.templateName = request.templateName;
             this.ttl = request.ttl;
         } 
 
         /**
-         * The channel type. Valid values: whatsapp, viber, and line.
+         * <p>The type of the channel. Valid values:</p>
+         * <ul>
+         * <li><strong>whatsapp</strong></li>
+         * <li><strong>viber</strong></li>
+         * <li><strong>line</strong> (under development)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>whatsapp</p>
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -280,7 +302,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The space ID of the user.
+         * <p>The space ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28251486512358****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -289,7 +314,13 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp Business account under the ISV account.
+         * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <blockquote>
+         * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>65921621816****</p>
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -298,7 +329,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The fallback content.
+         * <p>The content of the fallback message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fallback message</p>
          */
         public Builder fallBackContent(String fallBackContent) {
             this.putBodyParameter("FallBackContent", fallBackContent);
@@ -307,7 +341,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 消息在指定时间内没有返回已到达回执时回落, 不填代表不根据此时间判断回落，只有发送失败和有失败的状态报告时才会回落。时间单位为秒 最小值为60，最大值43200
+         * <p>Specifies the period of time after which the fallback message is sent if the message receipt that indicates the message is delivered to clients is not received. If this parameter is left empty, the fallback message is sent only when the message fails to be sent or the message receipt that indicates the message is not delivered to clients is received. Unit: seconds. Valid values: 60 to 43200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
             this.putBodyParameter("FallBackDuration", fallBackDuration);
@@ -316,7 +353,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The ID of the fallback strategy.
+         * <p>The ID of the fallback policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00001</p>
          */
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
@@ -325,7 +365,14 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * FallBackRule.
+         * <p>The fallback rule. Valid values:</p>
+         * <ul>
+         * <li><strong>undelivered</strong>: A fallback is triggered if the message is not delivered to clients. When the message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</li>
+         * <li><strong>sentFailed</strong>: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>undelivered</p>
          */
         public Builder fallBackRule(String fallBackRule) {
             this.putBodyParameter("FallBackRule", fallBackRule);
@@ -334,7 +381,11 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The phone number of the message sender.
+         * <p>The mobile phone number of the message sender.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861387777****</p>
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -343,7 +394,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdi3kksloslikdkkdk</p>
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -352,7 +406,14 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.
+         * <p>The type of the Viber message. Valid values:</p>
+         * <ul>
+         * <li><strong>promotion</strong></li>
+         * <li><strong>transaction</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -361,7 +422,11 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The language. For more information about language codes, see [Language codes](~~463420~~).
+         * <p>The language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -370,7 +435,8 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The list of phone numbers that receive the message.
+         * <p>The mobile phone numbers of the message receivers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder senderList(java.util.List < SenderList> senderList) {
             String senderListShrink = shrink(senderList, "SenderList", "json");
@@ -380,7 +446,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The tag information when the ChannelType parameter is set to viber.
+         * <p>The tag information when the ChannelType parameter is set to viber.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
@@ -389,7 +458,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000001</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -398,7 +470,10 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The encoding of the message template.
+         * <p>The template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>744c4b5c79c9432497a075bdfca36bf5</p>
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -407,7 +482,22 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.
+         * <p>The name of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
+         */
+        public Builder templateName(String templateName) {
+            this.putBodyParameter("TemplateName", templateName);
+            this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder ttl(Long ttl) {
             this.putBodyParameter("Ttl", ttl);
@@ -422,11 +512,17 @@ public class SendChatappMassMessageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SendChatappMassMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMassMessageRequest</p>
+     */
     public static class FlowAction extends TeaModel {
-        @NameInMap("FlowActionData")
+        @com.aliyun.core.annotation.NameInMap("FlowActionData")
         private java.util.Map < String, String > flowActionData;
 
-        @NameInMap("FlowToken")
+        @com.aliyun.core.annotation.NameInMap("FlowToken")
         private String flowToken;
 
         private FlowAction(Builder builder) {
@@ -461,7 +557,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String flowToken; 
 
             /**
-             * FlowActionData.
+             * <p>The default parameter of the Flow.</p>
              */
             public Builder flowActionData(java.util.Map < String, String > flowActionData) {
                 this.flowActionData = flowActionData;
@@ -469,7 +565,10 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * FlowToken.
+             * <p>The information about the Flow token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kde****</p>
              */
             public Builder flowToken(String flowToken) {
                 this.flowToken = flowToken;
@@ -483,8 +582,14 @@ public class SendChatappMassMessageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendChatappMassMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMassMessageRequest</p>
+     */
     public static class ProductItems extends TeaModel {
-        @NameInMap("ProductRetailerId")
+        @com.aliyun.core.annotation.NameInMap("ProductRetailerId")
         private String productRetailerId;
 
         private ProductItems(Builder builder) {
@@ -510,7 +615,10 @@ public class SendChatappMassMessageRequest extends Request {
             private String productRetailerId; 
 
             /**
-             * ProductRetailerId.
+             * <p>The retailer ID of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ksi399d8</p>
              */
             public Builder productRetailerId(String productRetailerId) {
                 this.productRetailerId = productRetailerId;
@@ -524,11 +632,17 @@ public class SendChatappMassMessageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendChatappMassMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMassMessageRequest</p>
+     */
     public static class Sections extends TeaModel {
-        @NameInMap("ProductItems")
+        @com.aliyun.core.annotation.NameInMap("ProductItems")
         private java.util.List < ProductItems> productItems;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Sections(Builder builder) {
@@ -563,7 +677,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String title; 
 
             /**
-             * ProductItems.
+             * <p>The products.</p>
              */
             public Builder productItems(java.util.List < ProductItems> productItems) {
                 this.productItems = productItems;
@@ -571,7 +685,10 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -585,11 +702,17 @@ public class SendChatappMassMessageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendChatappMassMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMassMessageRequest</p>
+     */
     public static class ProductAction extends TeaModel {
-        @NameInMap("Sections")
+        @com.aliyun.core.annotation.NameInMap("Sections")
         private java.util.List < Sections> sections;
 
-        @NameInMap("ThumbnailProductRetailerId")
+        @com.aliyun.core.annotation.NameInMap("ThumbnailProductRetailerId")
         private String thumbnailProductRetailerId;
 
         private ProductAction(Builder builder) {
@@ -624,7 +747,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String thumbnailProductRetailerId; 
 
             /**
-             * Sections.
+             * <p>The products. Up to 30 products and 10 categories can be added.</p>
              */
             public Builder sections(java.util.List < Sections> sections) {
                 this.sections = sections;
@@ -632,7 +755,10 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * ThumbnailProductRetailerId.
+             * <p>The retailer ID of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skkks999393</p>
              */
             public Builder thumbnailProductRetailerId(String thumbnailProductRetailerId) {
                 this.thumbnailProductRetailerId = thumbnailProductRetailerId;
@@ -646,21 +772,27 @@ public class SendChatappMassMessageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendChatappMassMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMassMessageRequest</p>
+     */
     public static class SenderList extends TeaModel {
-        @NameInMap("FlowAction")
+        @com.aliyun.core.annotation.NameInMap("FlowAction")
         private FlowAction flowAction;
 
-        @NameInMap("Payload")
+        @com.aliyun.core.annotation.NameInMap("Payload")
         private java.util.List < String > payload;
 
-        @NameInMap("ProductAction")
+        @com.aliyun.core.annotation.NameInMap("ProductAction")
         private ProductAction productAction;
 
-        @NameInMap("TemplateParams")
+        @com.aliyun.core.annotation.NameInMap("TemplateParams")
         private java.util.Map < String, String > templateParams;
 
-        @NameInMap("To")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("To")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String to;
 
         private SenderList(Builder builder) {
@@ -722,7 +854,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String to; 
 
             /**
-             * FlowAction.
+             * <p>The Flow action.</p>
              */
             public Builder flowAction(FlowAction flowAction) {
                 this.flowAction = flowAction;
@@ -730,7 +862,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * payload
+             * <p>The payload of the button.</p>
              */
             public Builder payload(java.util.List < String > payload) {
                 this.payload = payload;
@@ -738,7 +870,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * ProductAction.
+             * <p>The information about the product.</p>
              */
             public Builder productAction(ProductAction productAction) {
                 this.productAction = productAction;
@@ -746,7 +878,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * The parameters of the message template.
+             * <p>The parameters of the template.</p>
              */
             public Builder templateParams(java.util.Map < String, String > templateParams) {
                 this.templateParams = templateParams;
@@ -754,7 +886,11 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * The phone number that receives the message.
+             * <p>The mobile phone number of the message receiver.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>861388988****</p>
              */
             public Builder to(String to) {
                 this.to = to;

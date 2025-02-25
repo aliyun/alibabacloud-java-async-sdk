@@ -77,15 +77,18 @@ public class UpdateResourceGroupAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateResourceGroupAttributeRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.regionId = response.regionId;
+        private Builder(UpdateResourceGroupAttributeRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance that you want to transfer.
+         * <p>
+         * 
+         * >  You can call the [DescribeDrdsInstances](~~139284~~) operation to view the details of the instances under the account, including the instance IDs.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -94,7 +97,10 @@ public class UpdateResourceGroupAttributeRequest extends Request {
         }
 
         /**
-         * NewResourceGroupId.
+         * The ID of the resource group that you want to specify.
+         * <p>
+         * 
+         * >  You can call the [ListResourceGroups](~~158855~~) operation to view the details of the resource groups, including the resource group IDs.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -103,7 +109,10 @@ public class UpdateResourceGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance you want to transfer is located.
+         * <p>
+         * 
+         * >  You can call the [DescribeDrdsInstances](~~139284~~) operation to view the details of the instances under the account, including the region IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

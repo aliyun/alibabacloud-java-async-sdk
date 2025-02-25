@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveClusterNodesRequest} extends {@link RequestModel}
  *
  * <p>RemoveClusterNodesRequest</p>
  */
 public class RemoveClusterNodesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("drain_node")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("drain_node")
     private Boolean drainNode;
 
-    @Body
-    @NameInMap("nodes")
-    @Validation(required = true)
-    private java.util.List < String > nodes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> nodes;
 
-    @Body
-    @NameInMap("release_node")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("release_node")
     private Boolean releaseNode;
 
     private RemoveClusterNodesRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class RemoveClusterNodesRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -82,7 +87,7 @@ public class RemoveClusterNodesRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveClusterNodesRequest, Builder> {
         private String clusterId; 
         private Boolean drainNode; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> nodes; 
         private Boolean releaseNode; 
 
         private Builder() {
@@ -98,7 +103,11 @@ public class RemoveClusterNodesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +116,7 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * Specifies whether to evict all pods from the nodes that you want to remove.
+         * <p>Specifies whether to evict all pods from the nodes that you want to remove.</p>
          */
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
@@ -116,16 +125,17 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * The list of nodes to be removed.
+         * <p>The list of nodes to be removed.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * Specifies whether to release the Elastic Compute Service (ECS) instances when they are removed from the cluster.
+         * <p>Specifies whether to release the Elastic Compute Service (ECS) instances when they are removed from the cluster.</p>
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putBodyParameter("release_node", releaseNode);

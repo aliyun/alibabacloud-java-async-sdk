@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetGatewayServiceDetailResponseBody</p>
  */
 public class GetGatewayServiceDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetGatewayServiceDetailResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9802C54E-5CC5-5706-927B-993DBB6DCF2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,12 +175,18 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayServiceDetailResponseBody</p>
+     */
     public static class LabelDetails extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private LabelDetails(Builder builder) {
             this.key = builder.key;
@@ -185,16 +211,19 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>label</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -202,9 +231,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tag values.
+             * <p>The tag value.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -216,26 +245,32 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayServiceDetailResponseBody</p>
+     */
     public static class PortTrafficPolicyList extends TeaModel {
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private Long serviceId;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Integer servicePort;
 
-        @NameInMap("TrafficPolicy")
+        @com.aliyun.core.annotation.NameInMap("TrafficPolicy")
         private TrafficPolicy trafficPolicy;
 
         private PortTrafficPolicyList(Builder builder) {
@@ -315,7 +350,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private TrafficPolicy trafficPolicy; 
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-2837hfd91h34dbg87364g*****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -323,7 +361,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was created.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1667460287386</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -331,7 +372,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was modified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1667460287386</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -339,7 +383,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the port configuration.
+             * <p>The port ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -347,7 +394,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -355,7 +405,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The service port number.
+             * <p>The service port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -363,7 +416,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic policy.
+             * <p>The traffic policy.</p>
              */
             public Builder trafficPolicy(TrafficPolicy trafficPolicy) {
                 this.trafficPolicy = trafficPolicy;
@@ -377,11 +430,17 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayServiceDetailResponseBody</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -416,7 +475,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -424,7 +486,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -438,11 +503,17 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayServiceDetailResponseBody</p>
+     */
     public static class ServiceVersion extends TeaModel {
-        @NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<Labels> labels;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ServiceVersion(Builder builder) {
@@ -461,7 +532,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -473,19 +544,22 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String name; 
 
             /**
-             * The tags.
+             * <p>The tag.</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -499,14 +573,20 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayServiceDetailResponseBody</p>
+     */
     public static class VersionDetails extends TeaModel {
-        @NameInMap("EndpointNum")
+        @com.aliyun.core.annotation.NameInMap("EndpointNum")
         private Integer endpointNum;
 
-        @NameInMap("EndpointNumPercent")
+        @com.aliyun.core.annotation.NameInMap("EndpointNumPercent")
         private String endpointNumPercent;
 
-        @NameInMap("ServiceVersion")
+        @com.aliyun.core.annotation.NameInMap("ServiceVersion")
         private ServiceVersion serviceVersion;
 
         private VersionDetails(Builder builder) {
@@ -550,7 +630,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private ServiceVersion serviceVersion; 
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder endpointNum(Integer endpointNum) {
                 this.endpointNum = endpointNum;
@@ -558,7 +641,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of instances.
+             * <p>The percentage of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20%</p>
              */
             public Builder endpointNumPercent(String endpointNumPercent) {
                 this.endpointNumPercent = endpointNumPercent;
@@ -566,7 +652,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * <p>The service version.</p>
              */
             public Builder serviceVersion(ServiceVersion serviceVersion) {
                 this.serviceVersion = serviceVersion;
@@ -580,14 +666,20 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayServiceDetailResponseBody</p>
+     */
     public static class Versions extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Versions(Builder builder) {
@@ -631,7 +723,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -639,7 +734,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -647,7 +745,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -661,74 +762,90 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGatewayServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayServiceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("DnsServerList")
+        private java.util.List<String> dnsServerList;
+
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayTrafficPolicy")
+        @com.aliyun.core.annotation.NameInMap("GatewayTrafficPolicy")
         private TrafficPolicy gatewayTrafficPolicy;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HealthCheck")
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private String healthCheck;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Ips")
-        private java.util.List < String > ips;
+        @com.aliyun.core.annotation.NameInMap("Ips")
+        private java.util.List<String> ips;
 
-        @NameInMap("LabelDetails")
-        private java.util.List < LabelDetails> labelDetails;
+        @com.aliyun.core.annotation.NameInMap("LabelDetails")
+        private java.util.List<LabelDetails> labelDetails;
 
-        @NameInMap("MetaInfo")
+        @com.aliyun.core.annotation.NameInMap("MetaInfo")
         private String metaInfo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("PortTrafficPolicyList")
-        private java.util.List < PortTrafficPolicyList> portTrafficPolicyList;
+        @com.aliyun.core.annotation.NameInMap("PortTrafficPolicyList")
+        private java.util.List<PortTrafficPolicyList> portTrafficPolicyList;
 
-        @NameInMap("Ports")
-        private java.util.List < Integer > ports;
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private java.util.List<Integer> ports;
 
-        @NameInMap("ServiceNameInRegistry")
+        @com.aliyun.core.annotation.NameInMap("ServiceFQDN")
+        private String serviceFQDN;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceNameInRegistry")
         private String serviceNameInRegistry;
 
-        @NameInMap("ServiceProtocol")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
+        private Integer servicePort;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
-        @NameInMap("SourceId")
+        @com.aliyun.core.annotation.NameInMap("SourceId")
         private Long sourceId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("VersionDetails")
-        private java.util.List < VersionDetails> versionDetails;
+        @com.aliyun.core.annotation.NameInMap("VersionDetails")
+        private java.util.List<VersionDetails> versionDetails;
 
-        @NameInMap("Versions")
-        private java.util.List < Versions> versions;
+        @com.aliyun.core.annotation.NameInMap("Versions")
+        private java.util.List<Versions> versions;
 
         private Data(Builder builder) {
+            this.dnsServerList = builder.dnsServerList;
             this.gatewayId = builder.gatewayId;
             this.gatewayTrafficPolicy = builder.gatewayTrafficPolicy;
             this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -745,7 +862,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             this.namespace = builder.namespace;
             this.portTrafficPolicyList = builder.portTrafficPolicyList;
             this.ports = builder.ports;
+            this.serviceFQDN = builder.serviceFQDN;
             this.serviceNameInRegistry = builder.serviceNameInRegistry;
+            this.servicePort = builder.servicePort;
             this.serviceProtocol = builder.serviceProtocol;
             this.sourceId = builder.sourceId;
             this.sourceType = builder.sourceType;
@@ -759,6 +878,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return dnsServerList
+         */
+        public java.util.List<String> getDnsServerList() {
+            return this.dnsServerList;
         }
 
         /**
@@ -827,14 +953,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         /**
          * @return labelDetails
          */
-        public java.util.List < LabelDetails> getLabelDetails() {
+        public java.util.List<LabelDetails> getLabelDetails() {
             return this.labelDetails;
         }
 
@@ -862,15 +988,22 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return portTrafficPolicyList
          */
-        public java.util.List < PortTrafficPolicyList> getPortTrafficPolicyList() {
+        public java.util.List<PortTrafficPolicyList> getPortTrafficPolicyList() {
             return this.portTrafficPolicyList;
         }
 
         /**
          * @return ports
          */
-        public java.util.List < Integer > getPorts() {
+        public java.util.List<Integer> getPorts() {
             return this.ports;
+        }
+
+        /**
+         * @return serviceFQDN
+         */
+        public String getServiceFQDN() {
+            return this.serviceFQDN;
         }
 
         /**
@@ -878,6 +1011,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
          */
         public String getServiceNameInRegistry() {
             return this.serviceNameInRegistry;
+        }
+
+        /**
+         * @return servicePort
+         */
+        public Integer getServicePort() {
+            return this.servicePort;
         }
 
         /**
@@ -904,18 +1044,19 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return versionDetails
          */
-        public java.util.List < VersionDetails> getVersionDetails() {
+        public java.util.List<VersionDetails> getVersionDetails() {
             return this.versionDetails;
         }
 
         /**
          * @return versions
          */
-        public java.util.List < Versions> getVersions() {
+        public java.util.List<Versions> getVersions() {
             return this.versions;
         }
 
         public static final class Builder {
+            private java.util.List<String> dnsServerList; 
             private Long gatewayId; 
             private TrafficPolicy gatewayTrafficPolicy; 
             private String gatewayUniqueId; 
@@ -925,22 +1066,35 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String healthCheck; 
             private String healthStatus; 
             private Long id; 
-            private java.util.List < String > ips; 
-            private java.util.List < LabelDetails> labelDetails; 
+            private java.util.List<String> ips; 
+            private java.util.List<LabelDetails> labelDetails; 
             private String metaInfo; 
             private String name; 
             private String namespace; 
-            private java.util.List < PortTrafficPolicyList> portTrafficPolicyList; 
-            private java.util.List < Integer > ports; 
+            private java.util.List<PortTrafficPolicyList> portTrafficPolicyList; 
+            private java.util.List<Integer> ports; 
+            private String serviceFQDN; 
             private String serviceNameInRegistry; 
+            private Integer servicePort; 
             private String serviceProtocol; 
             private Long sourceId; 
             private String sourceType; 
-            private java.util.List < VersionDetails> versionDetails; 
-            private java.util.List < Versions> versions; 
+            private java.util.List<VersionDetails> versionDetails; 
+            private java.util.List<Versions> versions; 
 
             /**
-             * The ID of the gateway.
+             * DnsServerList.
+             */
+            public Builder dnsServerList(java.util.List<String> dnsServerList) {
+                this.dnsServerList = dnsServerList;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -948,7 +1102,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic policy of the service.
+             * <p>The traffic policy of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder gatewayTrafficPolicy(TrafficPolicy gatewayTrafficPolicy) {
                 this.gatewayTrafficPolicy = gatewayTrafficPolicy;
@@ -956,7 +1113,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597c****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -964,7 +1124,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07 18:07:57</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -972,7 +1135,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -980,7 +1146,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -988,7 +1157,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check is enabled.
+             * <p>Indicates whether the health check is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder healthCheck(String healthCheck) {
                 this.healthCheck = healthCheck;
@@ -996,7 +1168,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the health check. Valid values:
+             * <p>The status of the health check. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -1004,7 +1179,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service.
+             * <p>The ID of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1012,23 +1190,26 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the service.
+             * <p>The IP address of the service.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
 
             /**
-             * The details of the tag.
+             * <p>The details of the tag.</p>
              */
-            public Builder labelDetails(java.util.List < LabelDetails> labelDetails) {
+            public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
                 this.labelDetails = labelDetails;
                 return this;
             }
 
             /**
-             * The basic information about the service.
+             * <p>The basic information about the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metaInfo(String metaInfo) {
                 this.metaInfo = metaInfo;
@@ -1036,7 +1217,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1044,7 +1228,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1052,23 +1239,34 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic policy of service ports.
+             * <p>The traffic policy of service ports.</p>
              */
-            public Builder portTrafficPolicyList(java.util.List < PortTrafficPolicyList> portTrafficPolicyList) {
+            public Builder portTrafficPolicyList(java.util.List<PortTrafficPolicyList> portTrafficPolicyList) {
                 this.portTrafficPolicyList = portTrafficPolicyList;
                 return this;
             }
 
             /**
-             * The array of service ports.
+             * <p>The array of service ports.</p>
              */
-            public Builder ports(java.util.List < Integer > ports) {
+            public Builder ports(java.util.List<Integer> ports) {
                 this.ports = ports;
                 return this;
             }
 
             /**
-             * The name of the service registered with the service registry.
+             * ServiceFQDN.
+             */
+            public Builder serviceFQDN(String serviceFQDN) {
+                this.serviceFQDN = serviceFQDN;
+                return this;
+            }
+
+            /**
+             * <p>The name of the service registered with the service registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder serviceNameInRegistry(String serviceNameInRegistry) {
                 this.serviceNameInRegistry = serviceNameInRegistry;
@@ -1076,7 +1274,21 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol of the service.
+             * <p>The service port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
+             */
+            public Builder servicePort(Integer servicePort) {
+                this.servicePort = servicePort;
+                return this;
+            }
+
+            /**
+             * <p>The protocol of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -1084,7 +1296,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service source.
+             * <p>The ID of the service source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -1092,7 +1307,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the service.
+             * <p>The source type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1100,17 +1318,17 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of versions.
+             * <p>The details of versions.</p>
              */
-            public Builder versionDetails(java.util.List < VersionDetails> versionDetails) {
+            public Builder versionDetails(java.util.List<VersionDetails> versionDetails) {
                 this.versionDetails = versionDetails;
                 return this;
             }
 
             /**
-             * The version of the service.
+             * <p>The service version. This parameter is deprecated.</p>
              */
-            public Builder versions(java.util.List < Versions> versions) {
+            public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;
                 return this;
             }

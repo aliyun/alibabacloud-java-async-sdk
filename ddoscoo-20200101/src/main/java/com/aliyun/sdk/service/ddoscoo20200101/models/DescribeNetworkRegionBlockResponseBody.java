@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkRegionBlockResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkRegionBlockResponseBody</p>
  */
 public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNetworkRegionBlockResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration of blocked locations.
+         * <p>The configuration of blocked locations.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -58,7 +63,10 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkRegionBlockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkRegionBlockResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("Countries")
-        private java.util.List < String > countries;
+        @com.aliyun.core.annotation.NameInMap("Countries")
+        private java.util.List<Long> countries;
 
-        @NameInMap("Provinces")
-        private java.util.List < String > provinces;
+        @com.aliyun.core.annotation.NameInMap("Provinces")
+        private java.util.List<Long> provinces;
 
-        @NameInMap("RegionBlockSwitch")
+        @com.aliyun.core.annotation.NameInMap("RegionBlockSwitch")
         private String regionBlockSwitch;
 
         private Config(Builder builder) {
@@ -98,14 +112,14 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         /**
          * @return countries
          */
-        public java.util.List < String > getCountries() {
+        public java.util.List<Long> getCountries() {
             return this.countries;
         }
 
         /**
          * @return provinces
          */
-        public java.util.List < String > getProvinces() {
+        public java.util.List<Long> getProvinces() {
             return this.provinces;
         }
 
@@ -117,32 +131,35 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > countries; 
-            private java.util.List < String > provinces; 
+            private java.util.List<Long> countries; 
+            private java.util.List<Long> provinces; 
             private String regionBlockSwitch; 
 
             /**
-             * An array consisting of the codes of the countries or areas from which the requests are blocked.
+             * <p>The codes of the countries or areas from which the requests are blocked.</p>
              */
-            public Builder countries(java.util.List < String > countries) {
+            public Builder countries(java.util.List<Long> countries) {
                 this.countries = countries;
                 return this;
             }
 
             /**
-             * An array consisting of the codes of the administrative regions in China from which the requests are blocked.
+             * <p>The codes of the administrative regions in China from which the requests are blocked.</p>
              */
-            public Builder provinces(java.util.List < String > provinces) {
+            public Builder provinces(java.util.List<Long> provinces) {
                 this.provinces = provinces;
                 return this;
             }
 
             /**
-             * The status of the Location Blacklist policy. Valid values:
-             * <p>
+             * <p>The status of the Location Blacklist policy. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder regionBlockSwitch(String regionBlockSwitch) {
                 this.regionBlockSwitch = regionBlockSwitch;

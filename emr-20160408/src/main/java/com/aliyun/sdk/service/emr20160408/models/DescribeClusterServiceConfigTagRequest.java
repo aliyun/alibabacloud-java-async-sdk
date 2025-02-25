@@ -103,13 +103,13 @@ public class DescribeClusterServiceConfigTagRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterServiceConfigTagRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.configTag = response.configTag;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(DescribeClusterServiceConfigTagRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.configTag = request.configTag;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceOpsRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceOpsRecordsRequest</p>
  */
 public class DescribeInstanceOpsRecordsRequest extends Request {
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("OpsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String opsType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeInstanceOpsRecordsRequest(Builder builder) {
@@ -141,7 +141,11 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of the elastic container instance.
+         * <p>The ID of the elastic container instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp1dvysdafbh00t7****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -150,11 +154,15 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         }
 
         /**
-         * The type of the O\&M task. Valid values:
-         * <p>
+         * <p>The type of the O&amp;M task. Valid values:</p>
+         * <ul>
+         * <li>coredump</li>
+         * <li>tcpdump</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   coredump
-         * *   tcpdump
+         * <strong>example:</strong>
+         * <p>coredump</p>
          */
         public Builder opsType(String opsType) {
             this.putQueryParameter("OpsType", opsType);
@@ -181,7 +189,11 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

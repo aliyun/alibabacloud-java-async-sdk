@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingApplyRequest} extends {@link RequestModel}
  *
  * <p>TicketChangingApplyRequest</p>
  */
 public class TicketChangingApplyRequest extends Request {
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("dis_sub_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_sub_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disSubOrderId;
 
-    @Body
-    @NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
     private Integer isVoluntary;
 
-    @Body
-    @NameInMap("modify_flight_info_list")
-    @Validation(required = true)
-    private java.util.List < ModifyFlightInfoList> modifyFlightInfoList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modify_flight_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ModifyFlightInfoList> modifyFlightInfoList;
 
-    @Body
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Body
-    @NameInMap("reason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason")
     private String reason;
 
-    @Body
-    @NameInMap("session_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("session_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
-    @Body
-    @NameInMap("whether_retry")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("whether_retry")
     private Boolean whetherRetry;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private TicketChangingApplyRequest(Builder builder) {
@@ -103,7 +108,7 @@ public class TicketChangingApplyRequest extends Request {
     /**
      * @return modifyFlightInfoList
      */
-    public java.util.List < ModifyFlightInfoList> getModifyFlightInfoList() {
+    public java.util.List<ModifyFlightInfoList> getModifyFlightInfoList() {
         return this.modifyFlightInfoList;
     }
 
@@ -146,7 +151,7 @@ public class TicketChangingApplyRequest extends Request {
         private String disOrderId; 
         private String disSubOrderId; 
         private Integer isVoluntary; 
-        private java.util.List < ModifyFlightInfoList> modifyFlightInfoList; 
+        private java.util.List<ModifyFlightInfoList> modifyFlightInfoList; 
         private String otaItemId; 
         private String reason; 
         private String sessionId; 
@@ -171,7 +176,10 @@ public class TicketChangingApplyRequest extends Request {
         } 
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis1234</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -180,7 +188,10 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * dis_sub_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mid1243</p>
          */
         public Builder disSubOrderId(String disSubOrderId) {
             this.putBodyParameter("dis_sub_order_id", disSubOrderId);
@@ -198,9 +209,9 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * modify_flight_info_list.
+         * <p>This parameter is required.</p>
          */
-        public Builder modifyFlightInfoList(java.util.List < ModifyFlightInfoList> modifyFlightInfoList) {
+        public Builder modifyFlightInfoList(java.util.List<ModifyFlightInfoList> modifyFlightInfoList) {
             String modifyFlightInfoListShrink = shrink(modifyFlightInfoList, "modify_flight_info_list", "json");
             this.putBodyParameter("modify_flight_info_list", modifyFlightInfoListShrink);
             this.modifyFlightInfoList = modifyFlightInfoList;
@@ -208,7 +219,10 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1s8837sh991hsj92h</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putBodyParameter("ota_item_id", otaItemId);
@@ -226,7 +240,10 @@ public class TicketChangingApplyRequest extends Request {
         }
 
         /**
-         * session_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us88s2bsbin22hjusd8i</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("session_id", sessionId);
@@ -259,17 +276,23 @@ public class TicketChangingApplyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingApplyRequest} extends {@link TeaModel}
+     *
+     * <p>TicketChangingApplyRequest</p>
+     */
     public static class PassengerInfoList extends TeaModel {
-        @NameInMap("origin_flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("origin_flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String originFlightNo;
 
-        @NameInMap("out_user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("out_user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String outUserId;
 
-        @NameInMap("passenger_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String passengerName;
 
         private PassengerInfoList(Builder builder) {
@@ -313,7 +336,10 @@ public class TicketChangingApplyRequest extends Request {
             private String passengerName; 
 
             /**
-             * origin_flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CA1703</p>
              */
             public Builder originFlightNo(String originFlightNo) {
                 this.originFlightNo = originFlightNo;
@@ -321,7 +347,10 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * out_user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder outUserId(String outUserId) {
                 this.outUserId = outUserId;
@@ -329,7 +358,7 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * passenger_name.
+             * <p>This parameter is required.</p>
              */
             public Builder passengerName(String passengerName) {
                 this.passengerName = passengerName;
@@ -343,29 +372,35 @@ public class TicketChangingApplyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingApplyRequest} extends {@link TeaModel}
+     *
+     * <p>TicketChangingApplyRequest</p>
+     */
     public static class ModifyFlightInfoList extends TeaModel {
-        @NameInMap("arr_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCity;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("dep_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCity;
 
-        @NameInMap("dep_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depDate;
 
-        @NameInMap("flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String flightNo;
 
-        @NameInMap("passenger_info_list")
-        @Validation(required = true)
-        private java.util.List < PassengerInfoList> passengerInfoList;
+        @com.aliyun.core.annotation.NameInMap("passenger_info_list")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<PassengerInfoList> passengerInfoList;
 
         private ModifyFlightInfoList(Builder builder) {
             this.arrCity = builder.arrCity;
@@ -422,7 +457,7 @@ public class TicketChangingApplyRequest extends Request {
         /**
          * @return passengerInfoList
          */
-        public java.util.List < PassengerInfoList> getPassengerInfoList() {
+        public java.util.List<PassengerInfoList> getPassengerInfoList() {
             return this.passengerInfoList;
         }
 
@@ -432,10 +467,13 @@ public class TicketChangingApplyRequest extends Request {
             private String depCity; 
             private String depDate; 
             private String flightNo; 
-            private java.util.List < PassengerInfoList> passengerInfoList; 
+            private java.util.List<PassengerInfoList> passengerInfoList; 
 
             /**
-             * arr_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BJS</p>
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -451,7 +489,10 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * dep_city.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGH</p>
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -459,7 +500,10 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0000-00-00 00:00:00</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -467,7 +511,10 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * flight_no.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CA1704</p>
              */
             public Builder flightNo(String flightNo) {
                 this.flightNo = flightNo;
@@ -475,9 +522,9 @@ public class TicketChangingApplyRequest extends Request {
             }
 
             /**
-             * passenger_info_list.
+             * <p>This parameter is required.</p>
              */
-            public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
+            public Builder passengerInfoList(java.util.List<PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;
                 return this;
             }

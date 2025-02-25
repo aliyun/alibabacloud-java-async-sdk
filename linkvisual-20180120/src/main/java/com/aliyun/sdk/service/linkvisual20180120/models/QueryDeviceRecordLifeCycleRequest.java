@@ -49,9 +49,9 @@ public class QueryDeviceRecordLifeCycleRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceRecordLifeCycleRequest response) {
-            super(response);
-            this.deviceList = response.deviceList;
+        private Builder(QueryDeviceRecordLifeCycleRequest request) {
+            super(request);
+            this.deviceList = request.deviceList;
         } 
 
         /**

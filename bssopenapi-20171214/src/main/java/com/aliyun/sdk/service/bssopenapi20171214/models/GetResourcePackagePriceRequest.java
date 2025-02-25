@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourcePackagePriceRequest} extends {@link RequestModel}
  *
  * <p>GetResourcePackagePriceRequest</p>
  */
 public class GetResourcePackagePriceRequest extends Request {
-    @Query
-    @NameInMap("Duration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer duration;
 
-    @Query
-    @NameInMap("EffectiveDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveDate")
     private String effectiveDate;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PackageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packageType;
 
-    @Query
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Query
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("Specification")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Specification")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String specification;
 
     private GetResourcePackagePriceRequest(Builder builder) {
@@ -170,7 +175,11 @@ public class GetResourcePackagePriceRequest extends Request {
         } 
 
         /**
-         * The validity period of the resource plan. The value must be the same as the duration of the resource plan specified in the specifications.
+         * <p>The validity period of the resource plan. The value must be the same as the duration of the resource plan specified in the specifications.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -179,7 +188,13 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.
+         * <p>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default. 
+         * When the <strong>OrderType</strong> is <strong>BUY</strong>, resource packs with the <strong>EffectiveDate longer than the current time of 6 months</strong> are not supported. 
+         * If the <strong>OrderType</strong> is <strong>UPGRADE</strong>, the <strong>EffectiveDate</strong> <strong>must be less than or equal to</strong> the actual expiration time of the upgraded instance.
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-10T12:00:00Z</p>
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -188,7 +203,10 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance. <strong>This parameter is required when the order type is renewal or upgrade.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSSBAG-cn-0xl0002</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -197,14 +215,16 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * The type of the order. Valid values:
-         * <p>
+         * <p>The type of the order. Valid values:</p>
+         * <ul>
+         * <li>BUY: You place the order to purchase an instance.</li>
+         * <li>UPGRADE: You place the order to upgrade an instance.</li>
+         * <li>RENEW: You place the order to renew an instance.</li>
+         * </ul>
+         * <p>Default value: BUY.</p>
          * 
-         * *   BUY: You place the order to purchase an instance.
-         * *   UPGRADE: You place the order to upgrade an instance.
-         * *   RENEW: You place the order to renew an instance.
-         * 
-         * Default value: BUY.
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -222,7 +242,11 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * The type of the resource plan. The value must be the same as the value of the **ProductCode** parameter that is returned when you call the **DescribeResourcePackageProduct** operation.
+         * <p>The type of the resource plan. The value must be the same as the value of the <strong>ProductCode</strong> parameter that is returned when you call the <strong>DescribeResourcePackageProduct</strong> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FPT_ossbag_periodMonthlyAcc_NetworkOut_finance_common</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -231,11 +255,14 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * The unit of validity period of the resource plan. Valid values:
-         * <p>
+         * <p>The unit of validity period of the resource plan. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
          * 
-         * *   Month
-         * *   Year
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -244,7 +271,11 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * The code of service. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.
+         * <p>The code of service. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud Services</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossbag</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -253,7 +284,11 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * The specifications of the resource plan.
+         * <p>The specifications of the resource plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

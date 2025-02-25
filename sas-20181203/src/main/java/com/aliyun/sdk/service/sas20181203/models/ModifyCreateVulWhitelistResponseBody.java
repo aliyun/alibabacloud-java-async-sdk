@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCreateVulWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCreateVulWhitelistResponseBody</p>
  */
 public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulWhitelistList")
-    private java.util.List < VulWhitelistList> vulWhitelistList;
+    @com.aliyun.core.annotation.NameInMap("VulWhitelistList")
+    private java.util.List<VulWhitelistList> vulWhitelistList;
 
     private ModifyCreateVulWhitelistResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     /**
      * @return vulWhitelistList
      */
-    public java.util.List < VulWhitelistList> getVulWhitelistList() {
+    public java.util.List<VulWhitelistList> getVulWhitelistList() {
         return this.vulWhitelistList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VulWhitelistList> vulWhitelistList; 
+        private java.util.List<VulWhitelistList> vulWhitelistList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B23A612-D997-5176-8C3B-D640DFD65772</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the whitelist.
+         * <p>An array that consists of the information about the whitelist.</p>
          */
-        public Builder vulWhitelistList(java.util.List < VulWhitelistList> vulWhitelistList) {
+        public Builder vulWhitelistList(java.util.List<VulWhitelistList> vulWhitelistList) {
             this.vulWhitelistList = vulWhitelistList;
             return this;
         }
@@ -71,8 +79,14 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCreateVulWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyCreateVulWhitelistResponseBody</p>
+     */
     public static class VulWhitelistList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private VulWhitelistList(Builder builder) {
@@ -98,7 +112,10 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * The ID of the whitelist.
+             * <p>The ID of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30376</p>
              */
             public Builder id(Long id) {
                 this.id = id;

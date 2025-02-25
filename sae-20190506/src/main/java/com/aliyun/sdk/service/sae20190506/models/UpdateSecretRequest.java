@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSecretRequest} extends {@link RequestModel}
  *
  * <p>UpdateSecretRequest</p>
  */
 public class UpdateSecretRequest extends Request {
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Query
-    @NameInMap("SecretData")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretData")
+    @com.aliyun.core.annotation.Validation(required = true)
     private SecretData secretData;
 
-    @Query
-    @NameInMap("SecretId")
-    @Validation(required = true, maximum = 1000000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000000000, minimum = 1)
     private Long secretId;
 
     private UpdateSecretRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class UpdateSecretRequest extends Request {
         } 
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -94,7 +102,7 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * SecretData.
+         * <p>This parameter is required.</p>
          */
         public Builder secretData(SecretData secretData) {
             String secretDataShrink = shrink(secretData, "SecretData", "json");
@@ -104,7 +112,10 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * SecretId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder secretId(Long secretId) {
             this.putQueryParameter("SecretId", secretId);
@@ -119,9 +130,15 @@ public class UpdateSecretRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSecretRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSecretRequest</p>
+     */
     public static class SecretData extends TeaModel {
-        @NameInMap("SecretData")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecretData")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String secretData;
 
         private SecretData(Builder builder) {
@@ -147,7 +164,7 @@ public class UpdateSecretRequest extends Request {
             private String secretData; 
 
             /**
-             * SecretData.
+             * <p>This parameter is required.</p>
              */
             public Builder secretData(String secretData) {
                 this.secretData = secretData;

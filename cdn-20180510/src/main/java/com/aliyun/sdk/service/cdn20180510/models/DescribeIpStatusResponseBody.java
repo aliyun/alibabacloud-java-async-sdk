@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpStatusResponseBody</p>
  */
 public class DescribeIpStatusResponseBody extends TeaModel {
-    @NameInMap("IpStatus")
+    @com.aliyun.core.annotation.NameInMap("IpStatus")
     private java.util.List < IpStatus> ipStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIpStatusResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeIpStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of the IP addresses of the POPs.
+         * <p>The status of the IP addresses of the POPs.</p>
          */
         public Builder ipStatus(java.util.List < IpStatus> ipStatus) {
             this.ipStatus = ipStatus;
@@ -58,7 +58,10 @@ public class DescribeIpStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeIpStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpStatusResponseBody</p>
+     */
     public static class IpStatus extends TeaModel {
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private String ip;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private IpStatus(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeIpStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The IP address of the POP.
+             * <p>The IP address of the POP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10.10</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -118,12 +130,15 @@ public class DescribeIpStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
-             * <p>
+             * <p>The status.</p>
+             * <ul>
+             * <li><strong>nonali</strong>: not an Alibaba Cloud CDN POP</li>
+             * <li><strong>normal</strong>: an available Alibaba Cloud CDN POP</li>
+             * <li><strong>abnormal</strong>: an unavailable Alibaba Cloud CDN POP</li>
+             * </ul>
              * 
-             * *   **nonali**: not an Alibaba Cloud CDN POP
-             * *   **normal**: an available Alibaba Cloud CDN POP
-             * *   **abnormal**: an unavailable Alibaba Cloud CDN POP
+             * <strong>example:</strong>
+             * <p>abnormal</p>
              */
             public Builder status(String status) {
                 this.status = status;

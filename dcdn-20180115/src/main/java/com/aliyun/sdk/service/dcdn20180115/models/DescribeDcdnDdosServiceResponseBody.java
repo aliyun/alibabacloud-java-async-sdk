@@ -1,60 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDdosServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDdosServiceResponseBody</p>
  */
 public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
-    @NameInMap("ChangingAffectTime")
+    @com.aliyun.core.annotation.NameInMap("ChangingAffectTime")
     private String changingAffectTime;
 
-    @NameInMap("ChangingChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChangingChargeType")
     private String changingChargeType;
 
-    @NameInMap("ChangingDomianNum")
+    @com.aliyun.core.annotation.NameInMap("ChangingDomianNum")
     private Integer changingDomianNum;
 
-    @NameInMap("ChangingEdition")
+    @com.aliyun.core.annotation.NameInMap("ChangingEdition")
     private String changingEdition;
 
-    @NameInMap("ChangingProtectNum")
+    @com.aliyun.core.annotation.NameInMap("ChangingProtectNum")
     private Integer changingProtectNum;
 
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("DomianNum")
+    @com.aliyun.core.annotation.NameInMap("DomianNum")
     private Integer domianNum;
 
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private String enabled;
 
-    @NameInMap("EndingTime")
+    @com.aliyun.core.annotation.NameInMap("EndingTime")
     private String endingTime;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("OpeningTime")
+    @com.aliyun.core.annotation.NameInMap("OpeningTime")
     private String openingTime;
 
-    @NameInMap("ProtectNum")
+    @com.aliyun.core.annotation.NameInMap("ProtectNum")
     private Integer protectNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDcdnDdosServiceResponseBody(Builder builder) {
@@ -206,7 +206,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * ChangingAffectTime.
+         * <p>The time when the renewed service takes effect. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-31T16:00:00Z</p>
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -214,7 +217,15 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingChargeType.
+         * <p>The metering method after the configuration changes Valid values:</p>
+         * <ul>
+         * <li><strong>PayByBandwidth</strong></li>
+         * <li><strong>PayByTraffic</strong></li>
+         * <li><strong>PayByBandwidth95</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -222,7 +233,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingDomianNum.
+         * <p>The number of protected domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder changingDomianNum(Integer changingDomianNum) {
             this.changingDomianNum = changingDomianNum;
@@ -230,7 +244,16 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingEdition.
+         * <p>The protection edition for which the configuration changes take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>poc</strong>: POC Edition</li>
+         * <li><strong>basic</strong>: Basic Edition</li>
+         * <li><strong>insurance</strong>: Insurance Edition</li>
+         * <li><strong>unlimited</strong>: Unlimited Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder changingEdition(String changingEdition) {
             this.changingEdition = changingEdition;
@@ -238,7 +261,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingProtectNum.
+         * <p>The number of mitigation sessions with configuration changes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder changingProtectNum(Integer changingProtectNum) {
             this.changingProtectNum = changingProtectNum;
@@ -246,7 +272,15 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByBandwidth</strong></li>
+         * <li><strong>PayByTraffic</strong></li>
+         * <li><strong>PayByBandwidth95</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -254,7 +288,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * DomianNum.
+         * <p>The number of protected domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder domianNum(Integer domianNum) {
             this.domianNum = domianNum;
@@ -262,7 +299,16 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Edition.
+         * <p>The protection edition. Valid values:</p>
+         * <ul>
+         * <li><strong>poc</strong>: POC Edition</li>
+         * <li><strong>basic</strong>: Basic Edition</li>
+         * <li><strong>insurance</strong>: Insurance Edition</li>
+         * <li><strong>unlimited</strong>: Unlimited Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>poc</p>
          */
         public Builder edition(String edition) {
             this.edition = edition;
@@ -270,7 +316,14 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * <p>The activation status of the service. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enabled(String enabled) {
             this.enabled = enabled;
@@ -278,7 +331,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * EndingTime.
+         * <p>The service expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-26T16:00:00Z</p>
          */
         public Builder endingTime(String endingTime) {
             this.endingTime = endingTime;
@@ -286,7 +342,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-12345</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -294,7 +353,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OpeningTime.
+         * <p>The time when the service was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-26T16:00:00Z</p>
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -302,7 +364,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ProtectNum.
+         * <p>The number of mitigation sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder protectNum(Integer protectNum) {
             this.protectNum = protectNum;
@@ -310,7 +375,10 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -318,7 +386,16 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the service. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>WaitForExpire</strong></li>
+         * <li><strong>expired</strong></li>
+         * <li><strong>Released</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.status = status;

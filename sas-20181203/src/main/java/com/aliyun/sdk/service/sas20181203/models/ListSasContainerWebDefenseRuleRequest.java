@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSasContainerWebDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>ListSasContainerWebDefenseRuleRequest</p>
  */
 public class ListSasContainerWebDefenseRuleRequest extends Request {
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("LogicalExp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalExp")
     private String logicalExp;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListSasContainerWebDefenseRuleRequest(Builder builder) {
@@ -96,17 +101,22 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>name</strong>: the name of the search condition.</p>
+         * </li>
+         * <li><p><strong>value</strong>: the value of the search condition.</p>
+         * </li>
+         * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   **name**: the name of the search condition.
-         * 
-         * *   **value**: the value of the search condition.
-         * 
-         * *   **logicalExp**: the logical relation for multiple search conditions. Valid values:
-         * 
-         *     *   **OR**: The search conditions use a logical **OR**.
-         *     *   **AND**: The search conditions use a logical **AND**.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;ruleName&quot;,&quot;value&quot;:&quot;test-1818&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -115,7 +125,10 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -124,11 +137,14 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * The logical relation for multiple search conditions. Valid values:
-         * <p>
+         * <p>The logical relation for multiple search conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+         * </ul>
          * 
-         * *   **OR**: The search conditions use a logical **OR**.
-         * *   **AND**: The search conditions use a logical **AND**.
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -137,7 +153,10 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

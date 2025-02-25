@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIncidentTimelinesResponseBody</p>
  */
 public class ListIncidentTimelinesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListIncidentTimelinesResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class ListIncidentTimelinesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private Long description;
 
-        @NameInMap("incidentId")
+        @com.aliyun.core.annotation.NameInMap("incidentId")
         private Long incidentId;
 
-        @NameInMap("incidentNumber")
+        @com.aliyun.core.annotation.NameInMap("incidentNumber")
         private String incidentNumber;
 
-        @NameInMap("incidentTitle")
+        @com.aliyun.core.annotation.NameInMap("incidentTitle")
         private String incidentTitle;
 
-        @NameInMap("relRouteRuleDeleteType")
+        @com.aliyun.core.annotation.NameInMap("relRouteRuleDeleteType")
         private Integer relRouteRuleDeleteType;
 
-        @NameInMap("relatedServiceName")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceName")
         private String relatedServiceName;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("snapshotData")
+        @com.aliyun.core.annotation.NameInMap("snapshotData")
         private String snapshotData;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Data(Builder builder) {

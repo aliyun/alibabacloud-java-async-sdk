@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepositoryCommitsRequest} extends {@link RequestModel}
  *
  * <p>ListRepositoryCommitsRequest</p>
  */
 public class ListRepositoryCommitsRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("end")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("end")
     private String end;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Long page;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("path")
     private String path;
 
-    @Query
-    @NameInMap("refName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("refName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String refName;
 
-    @Query
-    @NameInMap("search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search")
     private String search;
 
-    @Query
-    @NameInMap("showCommentsCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("showCommentsCount")
     private Boolean showCommentsCount;
 
-    @Query
-    @NameInMap("showSignature")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("showSignature")
     private Boolean showSignature;
 
-    @Query
-    @NameInMap("start")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("start")
     private String start;
 
     private ListRepositoryCommitsRequest(Builder builder) {
@@ -211,7 +216,10 @@ public class ListRepositoryCommitsRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2334743</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -238,7 +246,10 @@ public class ListRepositoryCommitsRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -274,7 +285,7 @@ public class ListRepositoryCommitsRequest extends Request {
         }
 
         /**
-         * refName.
+         * <p>This parameter is required.</p>
          */
         public Builder refName(String refName) {
             this.putQueryParameter("refName", refName);

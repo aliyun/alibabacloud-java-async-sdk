@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,77 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateHubClusterFeatureRequest</p>
  */
 public class UpdateHubClusterFeatureRequest extends Request {
-    @Query
-    @NameInMap("AccessControlList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessControlList")
     private java.util.List < String > accessControlList;
 
-    @Query
-    @NameInMap("ApiServerEipId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiServerEipId")
     private String apiServerEipId;
 
-    @Query
-    @NameInMap("ArgoCDEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoCDEnabled")
     private Boolean argoCDEnabled;
 
-    @Query
-    @NameInMap("ArgoCDHAEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoCDHAEnabled")
     private Boolean argoCDHAEnabled;
 
-    @Query
-    @NameInMap("ArgoEventsEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoEventsEnabled")
     private Boolean argoEventsEnabled;
 
-    @Query
-    @NameInMap("ArgoServerEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoServerEnabled")
     private Boolean argoServerEnabled;
 
-    @Query
-    @NameInMap("AuditLogEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditLogEnabled")
     private Boolean auditLogEnabled;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
     private Boolean deletionProtection;
 
-    @Query
-    @NameInMap("EnableMesh")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableMesh")
     private Boolean enableMesh;
 
-    @Query
-    @NameInMap("MSEEnabled")
-    private Boolean MSEEnabled;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayEnabled")
+    private Boolean gatewayEnabled;
 
-    @Query
-    @NameInMap("MonitorEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorEnabled")
     private Boolean monitorEnabled;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PriceLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriceLimit")
     private String priceLimit;
 
-    @Query
-    @NameInMap("PublicAccessEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicAccessEnabled")
     private Boolean publicAccessEnabled;
 
-    @Query
-    @NameInMap("PublicApiServerEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicApiServerEnabled")
     private Boolean publicApiServerEnabled;
 
-    @Query
-    @NameInMap("VSwitches")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
     private java.util.List < String > vSwitches;
 
-    @Query
-    @NameInMap("WorkflowScheduleMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowScheduleMode")
     private String workflowScheduleMode;
 
     private UpdateHubClusterFeatureRequest(Builder builder) {
@@ -97,7 +96,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         this.clusterId = builder.clusterId;
         this.deletionProtection = builder.deletionProtection;
         this.enableMesh = builder.enableMesh;
-        this.MSEEnabled = builder.MSEEnabled;
+        this.gatewayEnabled = builder.gatewayEnabled;
         this.monitorEnabled = builder.monitorEnabled;
         this.name = builder.name;
         this.priceLimit = builder.priceLimit;
@@ -191,10 +190,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     }
 
     /**
-     * @return MSEEnabled
+     * @return gatewayEnabled
      */
-    public Boolean getMSEEnabled() {
-        return this.MSEEnabled;
+    public Boolean getGatewayEnabled() {
+        return this.gatewayEnabled;
     }
 
     /**
@@ -257,7 +256,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         private String clusterId; 
         private Boolean deletionProtection; 
         private Boolean enableMesh; 
-        private Boolean MSEEnabled; 
+        private Boolean gatewayEnabled; 
         private Boolean monitorEnabled; 
         private String name; 
         private String priceLimit; 
@@ -282,7 +281,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
             this.clusterId = request.clusterId;
             this.deletionProtection = request.deletionProtection;
             this.enableMesh = request.enableMesh;
-            this.MSEEnabled = request.MSEEnabled;
+            this.gatewayEnabled = request.gatewayEnabled;
             this.monitorEnabled = request.monitorEnabled;
             this.name = request.name;
             this.priceLimit = request.priceLimit;
@@ -414,11 +413,14 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * MSEEnabled.
+         * Specifies whether to enable Gateway. Valid values:
+         * <p>
+         * - true
+         * - false
          */
-        public Builder MSEEnabled(Boolean MSEEnabled) {
-            this.putQueryParameter("MSEEnabled", MSEEnabled);
-            this.MSEEnabled = MSEEnabled;
+        public Builder gatewayEnabled(Boolean gatewayEnabled) {
+            this.putQueryParameter("GatewayEnabled", gatewayEnabled);
+            this.gatewayEnabled = gatewayEnabled;
             return this;
         }
 

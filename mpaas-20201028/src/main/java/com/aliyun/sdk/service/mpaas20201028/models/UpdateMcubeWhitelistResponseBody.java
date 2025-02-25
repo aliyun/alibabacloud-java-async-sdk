@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMcubeWhitelistResponseBody</p>
  */
 public class UpdateMcubeWhitelistResponseBody extends TeaModel {
-    @NameInMap("AddWhitelistResult")
+    @com.aliyun.core.annotation.NameInMap("AddWhitelistResult")
     private AddWhitelistResult addWhitelistResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private UpdateMcubeWhitelistResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
     } 
 
     public static class AddWhitelistInfo extends TeaModel {
-        @NameInMap("FailNum")
+        @com.aliyun.core.annotation.NameInMap("FailNum")
         private Long failNum;
 
-        @NameInMap("FailUserIds")
+        @com.aliyun.core.annotation.NameInMap("FailUserIds")
         private String failUserIds;
 
-        @NameInMap("SuccessNum")
+        @com.aliyun.core.annotation.NameInMap("SuccessNum")
         private Long successNum;
 
         private AddWhitelistInfo(Builder builder) {
@@ -193,13 +192,13 @@ public class UpdateMcubeWhitelistResponseBody extends TeaModel {
 
     }
     public static class AddWhitelistResult extends TeaModel {
-        @NameInMap("AddWhitelistInfo")
+        @com.aliyun.core.annotation.NameInMap("AddWhitelistInfo")
         private AddWhitelistInfo addWhitelistInfo;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private AddWhitelistResult(Builder builder) {

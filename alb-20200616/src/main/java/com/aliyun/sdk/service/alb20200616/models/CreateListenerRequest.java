@@ -1,91 +1,96 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateListenerRequest} extends {@link RequestModel}
  *
  * <p>CreateListenerRequest</p>
  */
 public class CreateListenerRequest extends Request {
-    @Query
-    @NameInMap("CaCertificates")
-    private java.util.List < CaCertificates> caCertificates;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaCertificates")
+    private java.util.List<CaCertificates> caCertificates;
 
-    @Query
-    @NameInMap("CaEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaEnabled")
     private Boolean caEnabled;
 
-    @Query
-    @NameInMap("Certificates")
-    private java.util.List < Certificates> certificates;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
+    private java.util.List<Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DefaultActions")
-    @Validation(required = true)
-    private java.util.List < DefaultActions> defaultActions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultActions")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DefaultActions> defaultActions;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("GzipEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GzipEnabled")
     private Boolean gzipEnabled;
 
-    @Query
-    @NameInMap("Http2Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Http2Enabled")
     private Boolean http2Enabled;
 
-    @Query
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @Query
-    @NameInMap("ListenerDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerDescription")
     private String listenerDescription;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("QuicConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuicConfig")
     private QuicConfig quicConfig;
 
-    @Query
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @Query
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("XForwardedForConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
 
     private CreateListenerRequest(Builder builder) {
@@ -126,7 +131,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return caCertificates
      */
-    public java.util.List < CaCertificates> getCaCertificates() {
+    public java.util.List<CaCertificates> getCaCertificates() {
         return this.caCertificates;
     }
 
@@ -140,7 +145,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return certificates
      */
-    public java.util.List < Certificates> getCertificates() {
+    public java.util.List<Certificates> getCertificates() {
         return this.certificates;
     }
 
@@ -154,7 +159,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return defaultActions
      */
-    public java.util.List < DefaultActions> getDefaultActions() {
+    public java.util.List<DefaultActions> getDefaultActions() {
         return this.defaultActions;
     }
 
@@ -238,7 +243,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -250,11 +255,11 @@ public class CreateListenerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateListenerRequest, Builder> {
-        private java.util.List < CaCertificates> caCertificates; 
+        private java.util.List<CaCertificates> caCertificates; 
         private Boolean caEnabled; 
-        private java.util.List < Certificates> certificates; 
+        private java.util.List<Certificates> certificates; 
         private String clientToken; 
-        private java.util.List < DefaultActions> defaultActions; 
+        private java.util.List<DefaultActions> defaultActions; 
         private Boolean dryRun; 
         private Boolean gzipEnabled; 
         private Boolean http2Enabled; 
@@ -266,7 +271,7 @@ public class CreateListenerRequest extends Request {
         private QuicConfig quicConfig; 
         private Integer requestTimeout; 
         private String securityPolicyId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private XForwardedForConfig xForwardedForConfig; 
 
         private Builder() {
@@ -296,20 +301,23 @@ public class CreateListenerRequest extends Request {
         } 
 
         /**
-         * A list of certificates.
+         * <p>The certificate authority (CA) certificates. You can specify only one CA certificate.</p>
          */
-        public Builder caCertificates(java.util.List < CaCertificates> caCertificates) {
+        public Builder caCertificates(java.util.List<CaCertificates> caCertificates) {
             this.putQueryParameter("CaCertificates", caCertificates);
             this.caCertificates = caCertificates;
             return this;
         }
 
         /**
-         * Specifies whether to enable mutual authentication. Valid values:
-         * <p>
+         * <p>Specifies whether to enable mutual authentication. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables mutual authentication.</li>
+         * <li><strong>false</strong> (default): disables mutual authentication.</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default):
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder caEnabled(Boolean caEnabled) {
             this.putQueryParameter("CaEnabled", caEnabled);
@@ -318,21 +326,23 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * A list of certificates.
+         * <p>The details about each certificate.</p>
          */
-        public Builder certificates(java.util.List < Certificates> certificates) {
+        public Builder certificates(java.util.List<Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
             this.certificates = certificates;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -341,20 +351,24 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The actions of the forwarding rule.
+         * <p>The actions of the forwarding rule.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder defaultActions(java.util.List < DefaultActions> defaultActions) {
+        public Builder defaultActions(java.util.List<DefaultActions> defaultActions) {
             this.putQueryParameter("DefaultActions", defaultActions);
             this.defaultActions = defaultActions;
             return this;
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a precheck. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without creating a listener. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error code is returned based on the cause of the failure. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the API request. If the request passes the precheck, a 2xx HTTP status code is returned and the system proceeds to create a listener.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -363,11 +377,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable `GZIP` compression to compress specific types of files. Valid values:
-         * <p>
+         * <p>Specifies whether to enable <code>Gzip</code> compression to compress specific types of files. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables Gzip compression.</li>
+         * <li><strong>false</strong>: disables Gzip compression.</li>
+         * </ul>
          * 
-         * *   **true** (default)
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder gzipEnabled(Boolean gzipEnabled) {
             this.putQueryParameter("GzipEnabled", gzipEnabled);
@@ -376,13 +393,17 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable `HTTP/2`. Valid values:
-         * <p>
+         * <p>Specifies whether to enable <code>HTTP/2</code>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables HTTP/2.</li>
+         * <li><strong>false</strong>: disables HTTP/2.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only HTTPS listeners support this parameter.</p>
+         * </blockquote>
          * 
-         * *   **true** (default)
-         * *   **false**
-         * 
-         * > This parameter is available only when you create an HTTPS listener.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder http2Enabled(Boolean http2Enabled) {
             this.putQueryParameter("Http2Enabled", http2Enabled);
@@ -391,14 +412,13 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The timeout period of an idle connection. Unit: seconds.
-         * <p>
+         * <p>The timeout period of an idle connection. Unit: seconds.</p>
+         * <p>Valid values: <strong>1 to 60</strong>.</p>
+         * <p>Default value: <strong>15</strong>.</p>
+         * <p>If no requests are received within the specified timeout period, ALB closes the current connection. When a new request is received, ALB establishes a new connection.</p>
          * 
-         * Valid values: **1 to 60**.
-         * 
-         * Default value: **15**.
-         * 
-         * If no requests are received within the specified timeout period, ALB closes the current connection. When a new request is received, ALB establishes a new connection.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -407,10 +427,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The name of the listener.
-         * <p>
+         * <p>The name of the listener.</p>
+         * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). Regular expressions are supported.</p>
          * 
-         * The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). Regular expressions are supported.
+         * <strong>example:</strong>
+         * <p>HTTP_80</p>
          */
         public Builder listenerDescription(String listenerDescription) {
             this.putQueryParameter("ListenerDescription", listenerDescription);
@@ -419,10 +440,12 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ALB instance.
-         * <p>
+         * <p>The frontend port that is used by the ALB instance.</p>
+         * <p>Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1 to 65535**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -431,10 +454,12 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The listener protocol.
-         * <p>
+         * <p>The listener protocol.</p>
+         * <p>Valid values: <strong>HTTP</strong>, <strong>HTTPS</strong>, and <strong>QUIC</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **HTTP**, **HTTPS**, and **QUIC**.
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -443,7 +468,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The ALB instance ID.
+         * <p>The ID of the ALB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-n5qw04uq8vavfe****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -452,7 +481,7 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Selects a QUIC listener and associates it with the HTTPS listener of the ALB instance.
+         * <p>Select a QUIC listener and associate it with the ALB instance.</p>
          */
         public Builder quicConfig(QuicConfig quicConfig) {
             this.putQueryParameter("QuicConfig", quicConfig);
@@ -461,14 +490,13 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The timeout period of a request. Unit: seconds.
-         * <p>
+         * <p>The timeout period of a request. Unit: seconds.</p>
+         * <p>Valid values: <strong>1 to 180</strong>.</p>
+         * <p>Default value: <strong>60</strong>.</p>
+         * <p>If no response is received from the backend server during the request timeout period, ALB sends an <code>HTTP 504</code> error code to the client.</p>
          * 
-         * Valid values: **1 to 180**.
-         * 
-         * Default value: **60**.
-         * 
-         * If no response is received from the backend server during the request timeout period, ALB sends an `HTTP 504` error code to the client.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);
@@ -477,12 +505,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The ID of the security policy. System and custom security policies are supported.
-         * <p>
+         * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
+         * <p>Default value: <strong>tls_cipher_policy_1_0</strong> (system security policy).</p>
+         * <blockquote>
+         * <p> Only HTTPS listeners support this parameter.</p>
+         * </blockquote>
          * 
-         * Default value: **tls_cipher_policy\_1\_0** (system security policy).
-         * 
-         * > This parameter is available only when you create an HTTPS listener.
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_0</p>
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putQueryParameter("SecurityPolicyId", securityPolicyId);
@@ -491,16 +521,16 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The configuration of the XForward header.
+         * <p>The configuration of the XForward header.</p>
          */
         public Builder xForwardedForConfig(XForwardedForConfig xForwardedForConfig) {
             this.putQueryParameter("XForwardedForConfig", xForwardedForConfig);
@@ -515,8 +545,14 @@ public class CreateListenerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class CaCertificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
         private CaCertificates(Builder builder) {
@@ -542,7 +578,13 @@ public class CreateListenerRequest extends Request {
             private String certificateId; 
 
             /**
-             * CertificateId.
+             * <p>The ID of the CA certificate.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set <strong>CaEnabled</strong> to <strong>true</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>12315790212_166f8204689_1714763408_70998****</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -556,8 +598,14 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class Certificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
         private Certificates(Builder builder) {
@@ -583,10 +631,13 @@ public class CreateListenerRequest extends Request {
             private String certificateId; 
 
             /**
-             * The ID of the certificate. Only server certificates are supported. You can specify a maximum of 20 certificate IDs.
-             * <p>
+             * <p>The ID of the certificate. Only server certificates are supported. You can specify at most 20 certificates IDs.</p>
+             * <blockquote>
+             * <p> This parameter is required when you set <strong>ListenerProtocol</strong> to <strong>HTTPS</strong> or <strong>QUIC</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is required if **ListenerProtocol** is set to **HTTPS** or **QUIC**.
+             * <strong>example:</strong>
+             * <p>12315790212_166f8204689_1714763408_70998****</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -600,9 +651,15 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverGroupId;
 
         private ServerGroupTuples(Builder builder) {
@@ -628,7 +685,11 @@ public class CreateListenerRequest extends Request {
             private String serverGroupId; 
 
             /**
-             * The ID of the server group to which requests are forwarded.
+             * <p>The ID of the server group to which requests are forwarded.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-cige6j****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -642,10 +703,16 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
-        @Validation(required = true)
-        private java.util.List < ServerGroupTuples> serverGroupTuples;
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
             this.serverGroupTuples = builder.serverGroupTuples;
@@ -662,17 +729,18 @@ public class CreateListenerRequest extends Request {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < ServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<ServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
-            private java.util.List < ServerGroupTuples> serverGroupTuples; 
+            private java.util.List<ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * The server group to which requests are forwarded.
+             * <p>The destination server group to which requests are forwarded.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -684,13 +752,19 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class DefaultActions extends TeaModel {
-        @NameInMap("ForwardGroupConfig")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private DefaultActions(Builder builder) {
@@ -725,7 +799,8 @@ public class CreateListenerRequest extends Request {
             private String type; 
 
             /**
-             * Specifies the configurations of the forwarding action. You can specify a maximum of 20 configurations.
+             * <p>The configuration of the forwarding action. You can specify at most 20 actions.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -733,10 +808,12 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The type of the action. You can specify only one action type.
-             * <p>
+             * <p>The action. You can specify only one type. Valid value example:</p>
+             * <p><strong>ForwardGroup</strong>: forwards requests to multiple server groups.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Set the value to **ForwardGroup** to forward requests to multiple vServer groups.
+             * <strong>example:</strong>
+             * <p>ForwardGroup</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -750,11 +827,17 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class QuicConfig extends TeaModel {
-        @NameInMap("QuicListenerId")
+        @com.aliyun.core.annotation.NameInMap("QuicListenerId")
         private String quicListenerId;
 
-        @NameInMap("QuicUpgradeEnabled")
+        @com.aliyun.core.annotation.NameInMap("QuicUpgradeEnabled")
         private Boolean quicUpgradeEnabled;
 
         private QuicConfig(Builder builder) {
@@ -789,10 +872,13 @@ public class CreateListenerRequest extends Request {
             private Boolean quicUpgradeEnabled; 
 
             /**
-             * The ID of the QUIC listener that you want to associate with the HTTPS listener. Only HTTPS listeners support this parameter. This parameter is required when **QuicUpgradeEnabled** is set to **true**.
-             * <p>
+             * <p>The ID of the QUIC listener that you want to associate with the ALB instance. This parameter is required if you set <strong>QuicUpgradeEnabled</strong> to <strong>true</strong>.</p>
+             * <blockquote>
+             * <p> The original listener and the QUIC listener must belong to the same ALB instance.</p>
+             * </blockquote>
              * 
-             * > You must add the HTTPS listener and the QUIC listener to the same ALB instance. In addition, make sure that the QUIC listener has never been associated with another listener.
+             * <strong>example:</strong>
+             * <p>lsr-bp1bpn0kn908w4nbw****</p>
              */
             public Builder quicListenerId(String quicListenerId) {
                 this.quicListenerId = quicListenerId;
@@ -800,13 +886,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable QUIC upgrade. Valid values:
-             * <p>
+             * <p>Specifies whether to enable QUIC upgrade. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>:</li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder quicUpgradeEnabled(Boolean quicUpgradeEnabled) {
                 this.quicUpgradeEnabled = quicUpgradeEnabled;
@@ -820,11 +910,17 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -859,7 +955,10 @@ public class CreateListenerRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -867,7 +966,10 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -881,50 +983,62 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForClientCertClientVerifyAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertClientVerifyAlias")
         private String xForwardedForClientCertClientVerifyAlias;
 
-        @NameInMap("XForwardedForClientCertClientVerifyEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertClientVerifyEnabled")
         private Boolean xForwardedForClientCertClientVerifyEnabled;
 
-        @NameInMap("XForwardedForClientCertFingerprintAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertFingerprintAlias")
         private String xForwardedForClientCertFingerprintAlias;
 
-        @NameInMap("XForwardedForClientCertFingerprintEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertFingerprintEnabled")
         private Boolean xForwardedForClientCertFingerprintEnabled;
 
-        @NameInMap("XForwardedForClientCertIssuerDNAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertIssuerDNAlias")
         private String xForwardedForClientCertIssuerDNAlias;
 
-        @NameInMap("XForwardedForClientCertIssuerDNEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertIssuerDNEnabled")
         private Boolean xForwardedForClientCertIssuerDNEnabled;
 
-        @NameInMap("XForwardedForClientCertSubjectDNAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertSubjectDNAlias")
         private String xForwardedForClientCertSubjectDNAlias;
 
-        @NameInMap("XForwardedForClientCertSubjectDNEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertSubjectDNEnabled")
         private Boolean xForwardedForClientCertSubjectDNEnabled;
 
-        @NameInMap("XForwardedForClientSourceIpsEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSourceIpsEnabled")
         private Boolean xForwardedForClientSourceIpsEnabled;
 
-        @NameInMap("XForwardedForClientSourceIpsTrusted")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSourceIpsTrusted")
         private String xForwardedForClientSourceIpsTrusted;
 
-        @NameInMap("XForwardedForClientSrcPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSrcPortEnabled")
         private Boolean xForwardedForClientSrcPortEnabled;
 
-        @NameInMap("XForwardedForEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForEnabled")
         private Boolean xForwardedForEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForHostEnabled")
+        private Boolean xForwardedForHostEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProcessingMode")
+        private String xForwardedForProcessingMode;
+
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XForwardedForSLBIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForSLBIdEnabled")
         private Boolean xForwardedForSLBIdEnabled;
 
-        @NameInMap("XForwardedForSLBPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForSLBPortEnabled")
         private Boolean xForwardedForSLBPortEnabled;
 
         private XForwardedForConfig(Builder builder) {
@@ -940,6 +1054,8 @@ public class CreateListenerRequest extends Request {
             this.xForwardedForClientSourceIpsTrusted = builder.xForwardedForClientSourceIpsTrusted;
             this.xForwardedForClientSrcPortEnabled = builder.xForwardedForClientSrcPortEnabled;
             this.xForwardedForEnabled = builder.xForwardedForEnabled;
+            this.xForwardedForHostEnabled = builder.xForwardedForHostEnabled;
+            this.xForwardedForProcessingMode = builder.xForwardedForProcessingMode;
             this.xForwardedForProtoEnabled = builder.xForwardedForProtoEnabled;
             this.xForwardedForSLBIdEnabled = builder.xForwardedForSLBIdEnabled;
             this.xForwardedForSLBPortEnabled = builder.xForwardedForSLBPortEnabled;
@@ -1038,6 +1154,20 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
+         * @return xForwardedForHostEnabled
+         */
+        public Boolean getXForwardedForHostEnabled() {
+            return this.xForwardedForHostEnabled;
+        }
+
+        /**
+         * @return xForwardedForProcessingMode
+         */
+        public String getXForwardedForProcessingMode() {
+            return this.xForwardedForProcessingMode;
+        }
+
+        /**
          * @return xForwardedForProtoEnabled
          */
         public Boolean getXForwardedForProtoEnabled() {
@@ -1071,17 +1201,21 @@ public class CreateListenerRequest extends Request {
             private String xForwardedForClientSourceIpsTrusted; 
             private Boolean xForwardedForClientSrcPortEnabled; 
             private Boolean xForwardedForEnabled; 
+            private Boolean xForwardedForHostEnabled; 
+            private String xForwardedForProcessingMode; 
             private Boolean xForwardedForProtoEnabled; 
             private Boolean xForwardedForSLBIdEnabled; 
             private Boolean xForwardedForSLBPortEnabled; 
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when you set <strong>XForwardedForClientCertClientVerifyEnabled</strong> to <strong>true</strong>.</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <blockquote>
+             * <p>Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_client-verify-alias_123456</p>
              */
             public Builder xForwardedForClientCertClientVerifyAlias(String xForwardedForClientCertClientVerifyAlias) {
                 this.xForwardedForClientCertClientVerifyAlias = xForwardedForClientCertClientVerifyAlias;
@@ -1089,13 +1223,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Clientcert-clientverify` header to retrieve the verification result of the client certificate. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-clientverify</code> header to retrieve the verification result of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertClientVerifyEnabled(Boolean xForwardedForClientCertClientVerifyEnabled) {
                 this.xForwardedForClientCertClientVerifyEnabled = xForwardedForClientCertClientVerifyEnabled;
@@ -1103,12 +1241,14 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertFingerprintEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_finger-print-alias_123456</p>
              */
             public Builder xForwardedForClientCertFingerprintAlias(String xForwardedForClientCertFingerprintAlias) {
                 this.xForwardedForClientCertFingerprintAlias = xForwardedForClientCertFingerprintAlias;
@@ -1116,13 +1256,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Clientcert-fingerprint` header to retrieve the fingerprint of the client certificate. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-fingerprint</code> header to retrieve the fingerprint of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertFingerprintEnabled(Boolean xForwardedForClientCertFingerprintEnabled) {
                 this.xForwardedForClientCertFingerprintEnabled = xForwardedForClientCertFingerprintEnabled;
@@ -1130,12 +1274,14 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertIssuerDNEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_issue-dn-alias_123456</p>
              */
             public Builder xForwardedForClientCertIssuerDNAlias(String xForwardedForClientCertIssuerDNAlias) {
                 this.xForwardedForClientCertIssuerDNAlias = xForwardedForClientCertIssuerDNAlias;
@@ -1143,13 +1289,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Clientcert-issuerdn` header to retrieve information about the authority that issues the client certificate. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-issuerdn</code> header to retrieve information about the authority that issues the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertIssuerDNEnabled(Boolean xForwardedForClientCertIssuerDNEnabled) {
                 this.xForwardedForClientCertIssuerDNEnabled = xForwardedForClientCertIssuerDNEnabled;
@@ -1157,12 +1307,14 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.
-             * <p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertSubjectDNEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * The name must be 1 to 40 characters in length, and can contain letters, hyphens (-), underscores (\_), and digits.
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>test_subject-dn-alias_123456</p>
              */
             public Builder xForwardedForClientCertSubjectDNAlias(String xForwardedForClientCertSubjectDNAlias) {
                 this.xForwardedForClientCertSubjectDNAlias = xForwardedForClientCertSubjectDNAlias;
@@ -1170,13 +1322,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Clientcert-subjectdn` header to retrieve information about the owner of the client certificate. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-subjectdn</code> header to retrieve information about the owner of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientCertSubjectDNEnabled(Boolean xForwardedForClientCertSubjectDNEnabled) {
                 this.xForwardedForClientCertSubjectDNEnabled = xForwardedForClientCertSubjectDNEnabled;
@@ -1184,13 +1340,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Client-Ip` header to obtain the source IP address of the ALB instance. Valid values:
-             * <p>
+             * <p>Specifies whether to allow the ALB instance to retrieve client IP addresses from the X-Forwarded-For header. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> HTTP and HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener. The feature specified by this parameter is unavailable by default. To use the feature, contact your account manager.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForClientSourceIpsEnabled(Boolean xForwardedForClientSourceIpsEnabled) {
                 this.xForwardedForClientSourceIpsEnabled = xForwardedForClientSourceIpsEnabled;
@@ -1198,10 +1358,11 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The trusted proxy IP address.
-             * <p>
+             * <p>The trusted proxy IP address.</p>
+             * <p>ALB instances traverse the IP addresses in the <code>X-Forwarded-For</code> header from the rightmost IP address to the leftmost IP address. The first IP address that is not on the trusted IP address list is considered the client IP address. Requests from the client IP address are throttled.</p>
              * 
-             * ALB traverses `X-Forwarded-For` backward and selects the first IP address that is not in the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.
+             * <strong>example:</strong>
+             * <p>10.1.1.0/24</p>
              */
             public Builder xForwardedForClientSourceIpsTrusted(String xForwardedForClientSourceIpsTrusted) {
                 this.xForwardedForClientSourceIpsTrusted = xForwardedForClientSourceIpsTrusted;
@@ -1209,13 +1370,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Client-Port` header to retrieve the client port. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Forwarded-Client-srcport</code> header to retrieve the client port. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> HTTP and HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTP or HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForClientSrcPortEnabled(Boolean xForwardedForClientSrcPortEnabled) {
                 this.xForwardedForClientSrcPortEnabled = xForwardedForClientSrcPortEnabled;
@@ -1223,13 +1388,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-For` header to retrieve client IP addresses. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Forwarded-For</code> header to retrieve client IP addresses. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> HTTP and HTTPS listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true** (default)
-             * *   **false**
-             * 
-             * > This parameter is available only when you create an HTTP or HTTPS listener.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder xForwardedForEnabled(Boolean xForwardedForEnabled) {
                 this.xForwardedForEnabled = xForwardedForEnabled;
@@ -1237,13 +1406,33 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:
-             * <p>
+             * XForwardedForHostEnabled.
+             */
+            public Builder xForwardedForHostEnabled(Boolean xForwardedForHostEnabled) {
+                this.xForwardedForHostEnabled = xForwardedForHostEnabled;
+                return this;
+            }
+
+            /**
+             * XForwardedForProcessingMode.
+             */
+            public Builder xForwardedForProcessingMode(String xForwardedForProcessingMode) {
+                this.xForwardedForProcessingMode = xForwardedForProcessingMode;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForProtoEnabled(Boolean xForwardedForProtoEnabled) {
                 this.xForwardedForProtoEnabled = xForwardedForProtoEnabled;
@@ -1251,13 +1440,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForSLBIdEnabled(Boolean xForwardedForSLBIdEnabled) {
                 this.xForwardedForSLBIdEnabled = xForwardedForSLBIdEnabled;
@@ -1265,13 +1458,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Forwarded-Port` header to retrieve the listener port of the ALB instance. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Forwarded-Port</code> header to retrieve the listener port of the ALB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false** (default)
-             * 
-             * > This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForSLBPortEnabled(Boolean xForwardedForSLBPortEnabled) {
                 this.xForwardedForSLBPortEnabled = xForwardedForSLBPortEnabled;

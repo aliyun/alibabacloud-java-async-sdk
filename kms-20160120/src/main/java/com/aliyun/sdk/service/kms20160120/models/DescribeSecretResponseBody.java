@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecretResponseBody</p>
  */
 public class DescribeSecretResponseBody extends TeaModel {
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("AutomaticRotation")
+    @com.aliyun.core.annotation.NameInMap("AutomaticRotation")
     private String automaticRotation;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DKMSInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DKMSInstanceId")
     private String DKMSInstanceId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EncryptionKeyId")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKeyId")
     private String encryptionKeyId;
 
-    @NameInMap("ExtendedConfig")
+    @com.aliyun.core.annotation.NameInMap("ExtendedConfig")
     private String extendedConfig;
 
-    @NameInMap("LastRotationDate")
+    @com.aliyun.core.annotation.NameInMap("LastRotationDate")
     private String lastRotationDate;
 
-    @NameInMap("NextRotationDate")
+    @com.aliyun.core.annotation.NameInMap("NextRotationDate")
     private String nextRotationDate;
 
-    @NameInMap("PlannedDeleteTime")
+    @com.aliyun.core.annotation.NameInMap("PlannedDeleteTime")
     private String plannedDeleteTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RotationInterval")
+    @com.aliyun.core.annotation.NameInMap("RotationInterval")
     private String rotationInterval;
 
-    @NameInMap("SecretName")
+    @com.aliyun.core.annotation.NameInMap("SecretName")
     private String secretName;
 
-    @NameInMap("SecretType")
+    @com.aliyun.core.annotation.NameInMap("SecretType")
     private String secretType;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private DescribeSecretResponseBody(Builder builder) {
@@ -382,10 +381,10 @@ public class DescribeSecretResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -443,7 +442,7 @@ public class DescribeSecretResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

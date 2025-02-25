@@ -1,115 +1,120 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListExecutionsRequest</p>
  */
 public class ListExecutionsRequest extends Request {
-    @Query
-    @NameInMap("Categories")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Categories")
     private String categories;
 
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("Depth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Depth")
     private String depth;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndDateAfter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDateAfter")
     private String endDateAfter;
 
-    @Query
-    @NameInMap("EndDateBefore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDateBefore")
     private String endDateBefore;
 
-    @Query
-    @NameInMap("ExecutedBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutedBy")
     private String executedBy;
 
-    @Query
-    @NameInMap("ExecutionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionId")
     private String executionId;
 
-    @Query
-    @NameInMap("IncludeChildExecution")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeChildExecution")
     private Boolean includeChildExecution;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ParentExecutionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentExecutionId")
     private String parentExecutionId;
 
-    @Query
-    @NameInMap("RamRole")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRole")
     private String ramRole;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceTemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTemplateName")
     private String resourceTemplateName;
 
-    @Query
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
-    @Query
-    @NameInMap("StartDateAfter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDateAfter")
     private String startDateAfter;
 
-    @Query
-    @NameInMap("StartDateBefore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDateBefore")
     private String startDateBefore;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private ListExecutionsRequest(Builder builder) {
@@ -318,7 +323,7 @@ public class ListExecutionsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -353,7 +358,7 @@ public class ListExecutionsRequest extends Request {
         private String startDateAfter; 
         private String startDateBefore; 
         private String status; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String templateName; 
 
         private Builder() {
@@ -390,7 +395,10 @@ public class ListExecutionsRequest extends Request {
         } 
 
         /**
-         * The types of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger. You can specify only one of the Categories and Category parameters. We recommend that you specify Categories.
+         * <p>The types of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger. You can specify only one of the Categories and Category parameters. We recommend that you specify Categories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;TimerTrigger&quot;、&quot;EventTrigger&quot;]</p>
          */
         public Builder categories(String categories) {
             this.putQueryParameter("Categories", categories);
@@ -399,7 +407,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.
+         * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Other</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -408,7 +419,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The depth of execution. Valid values: RootDepth and FirstChildDepth. If you set this parameter to RootDepth, only the parent execution is returned. If you set this parameter to FirstChildDepth, only the child executions at the first level are returned. You can specify only one of the Depth and IncludeChildExecution parameters. We recommend that you specify Depth.
+         * <p>The depth of execution. Valid values: RootDepth and FirstChildDepth. If you set this parameter to RootDepth, only the parent execution is returned. If you set this parameter to FirstChildDepth, only the child executions at the first level are returned. You can specify only one of the Depth and IncludeChildExecution parameters. We recommend that you specify Depth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RootDepth</p>
          */
         public Builder depth(String depth) {
             this.putQueryParameter("Depth", depth);
@@ -417,7 +431,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The description of the execution.
+         * <p>The description of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -426,7 +443,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The earliest end time. The executions that stop running at or later than the specified time are queried.
+         * <p>The earliest end time. The executions that stop running at or later than the specified time are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder endDateAfter(String endDateAfter) {
             this.putQueryParameter("EndDateAfter", endDateAfter);
@@ -435,7 +455,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The latest end time. The executions that stop running at or earlier than the specified time are queried.
+         * <p>The latest end time. The executions that stop running at or earlier than the specified time are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder endDateBefore(String endDateBefore) {
             this.putQueryParameter("EndDateBefore", endDateBefore);
@@ -444,7 +467,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The executor.
+         * <p>The executor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vme</p>
          */
         public Builder executedBy(String executedBy) {
             this.putQueryParameter("ExecutedBy", executedBy);
@@ -453,7 +479,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the execution.
+         * <p>The ID of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -462,7 +491,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to include child executions. Default value: False.
+         * <p>Specifies whether to include child executions. Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeChildExecution(Boolean includeChildExecution) {
             this.putQueryParameter("IncludeChildExecution", includeChildExecution);
@@ -471,7 +503,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -480,11 +515,14 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The execution mode. Valid values:
-         * <p>
+         * <p>The execution mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automatic</strong></li>
+         * <li><strong>Debug</strong></li>
+         * </ul>
          * 
-         * *   **Automatic**
-         * *   **Debug**
+         * <strong>example:</strong>
+         * <p>Automatic</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -493,7 +531,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -502,7 +543,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the parent execution.
+         * <p>The ID of the parent execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         public Builder parentExecutionId(String parentExecutionId) {
             this.putQueryParameter("ParentExecutionId", parentExecutionId);
@@ -511,7 +555,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The RAM role.
+         * <p>The RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOSServiceRole</p>
          */
         public Builder ramRole(String ramRole) {
             this.putQueryParameter("RamRole", ramRole);
@@ -520,7 +567,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -529,7 +579,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instances you want to query belong.
+         * <p>The ID of the resource group to which the instances you want to query belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -538,7 +591,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the Elastic Compute Service (ECS) resource.
+         * <p>The ID of the Elastic Compute Service (ECS) resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -547,7 +603,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The name of the resource template.
+         * <p>The name of the resource template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-ECS-TEST</p>
          */
         public Builder resourceTemplateName(String resourceTemplateName) {
             this.putQueryParameter("ResourceTemplateName", resourceTemplateName);
@@ -556,12 +615,15 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The field that is used to sort the executions to query. Valid values:
-         * <p>
+         * <p>The field that is used to sort the executions to query. Valid values:</p>
+         * <ul>
+         * <li><strong>StartDate</strong>: specifies that the executions are sorted based on the time when they are created. This is the default value.</li>
+         * <li><strong>EndDate</strong>: specifies that the executions are sorted based on the time when they stop running.</li>
+         * <li><strong>Status</strong>: specifies that the executions are sorted based on their states.</li>
+         * </ul>
          * 
-         * *   **StartDate**: specifies that the executions are sorted based on the time when they are created. This is the default value.
-         * *   **EndDate**: specifies that the executions are sorted based on the time when they stop running.
-         * *   **Status**: specifies that the executions are sorted based on their states.
+         * <strong>example:</strong>
+         * <p>StartDate</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -570,11 +632,14 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the results. Valid values:</p>
+         * <ul>
+         * <li><strong>Ascending</strong>: ascending order.</li>
+         * <li><strong>Descending</strong>: descending order. This is the default value.</li>
+         * </ul>
          * 
-         * *   **Ascending**: ascending order.
-         * *   **Descending**: descending order. This is the default value.
+         * <strong>example:</strong>
+         * <p>Ascending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -583,7 +648,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The earliest start time. The executions that start to run at or later than the specified time are queried.
+         * <p>The earliest start time. The executions that start to run at or later than the specified time are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder startDateAfter(String startDateAfter) {
             this.putQueryParameter("StartDateAfter", startDateAfter);
@@ -592,7 +660,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The latest start time. The executions that start to run at or earlier than the specified point in time are queried.
+         * <p>The latest start time. The executions that start to run at or earlier than the specified point in time are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         public Builder startDateBefore(String startDateBefore) {
             this.putQueryParameter("StartDateBefore", startDateBefore);
@@ -601,7 +672,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.
+         * <p>The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -610,9 +684,12 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The tags for the execution.
+         * <p>The tags for the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -620,7 +697,10 @@ public class ListExecutionsRequest extends Request {
         }
 
         /**
-         * The name of the template. All templates whose names contain the specified template name are queried.
+         * <p>The name of the template. All templates whose names contain the specified template name are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

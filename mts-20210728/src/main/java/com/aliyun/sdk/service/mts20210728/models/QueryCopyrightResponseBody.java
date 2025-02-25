@@ -78,7 +78,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
         }
 
         /**
-         * 状态码
+         * StatusCode.
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -262,7 +262,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * 回调url
+             * Callback.
              */
             public Builder callback(String callback) {
                 this.callback = callback;
@@ -270,7 +270,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * GmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -278,7 +278,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * GmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -286,7 +286,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 水印视频输入
+             * Input.
              */
             public Builder input(String input) {
                 this.input = input;
@@ -294,7 +294,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -302,7 +302,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 水印强度
+             * Level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -310,7 +310,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 水印信息
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -318,7 +318,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 水印信息id
+             * MessageId.
              */
             public Builder messageId(Long messageId) {
                 this.messageId = messageId;
@@ -326,7 +326,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 水印视频输出
+             * Output.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -334,7 +334,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 任务结果
+             * Result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -342,7 +342,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +350,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 用户数据
+             * UserData.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -358,7 +358,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

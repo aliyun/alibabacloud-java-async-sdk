@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsGroupListRequest} extends {@link RequestModel}
  *
  * <p>OnsGroupListRequest</p>
  */
 public class OnsGroupListRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("GroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
     private String groupType;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private OnsGroupListRequest(Builder builder) {
@@ -96,10 +96,11 @@ public class OnsGroupListRequest extends Request {
         } 
 
         /**
-         * This parameter is required only when you query specific consumer groups by using the fuzzy query method. If this parameter is not configured, the system queries all consumer groups that can be accessed by the current account.
-         * <p>
+         * <p>This parameter is required only when you query specific consumer groups by using the fuzzy search method. If this parameter is not configured, the system queries all consumer groups that can be accessed by the current account.</p>
+         * <p>If you set this parameter to GID_ABC, the information about the consumer groups whose IDs contain GID_ABC is returned. For example, the information about the GID_test_GID_ABC_123 and GID_ABC_356 consumer groups is returned.</p>
          * 
-         * If you set this parameter to GID_ABC, the information about the consumer groups whose IDs contain GID_ABC is returned. For example, the information about the GID_test_GID_ABC\_123 and GID_ABC\_356 consumer groups is returned.
+         * <strong>example:</strong>
+         * <p>GID_test_group_id</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -108,11 +109,14 @@ public class OnsGroupListRequest extends Request {
         }
 
         /**
-         * The protocol over which the queried consumer groups consume messages. All clients in a consumer group communicate with the Message Queue for Apache RocketMQ broker over the same protocol. A consumer group cannot contain TCP clients and HTTP clients at the same time. You must create different consumer groups for TCP clients and HTTP clients. Valid values:
-         * <p>
+         * <p>The protocol over which the queried consumer group publishes and subscribes to messages. All clients in a consumer group communicate with the ApsaraMQ for RocketMQ broker over the same protocol. You must create different consumer groups for TCP clients and HTTP clients. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: specifies that the consumer group publishes or subscribes to messages over TCP. This value is the default value.</li>
+         * <li><strong>http</strong>: specifies that the consumer group publishes or subscribes to messages over HTTP.</li>
+         * </ul>
          * 
-         * *   **tcp**: specifies the consumer groups that consume messages over TCP. This is the default value.
-         * *   **http**: indicates that the consumer group consumes messages over HTTP.
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -121,7 +125,10 @@ public class OnsGroupListRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the consumer group you want to query belongs.
+         * <p>The ID of the instance to which the consumer group you want to query belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +137,7 @@ public class OnsGroupListRequest extends Request {
         }
 
         /**
-         * The list of tags that are attached to the consumer group. A maximum of 20 tags can be included in the list.
+         * <p>The list of tags that are attached to the consumer group. A maximum of 20 tags can be included in the list.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -145,13 +152,19 @@ public class OnsGroupListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link OnsGroupListRequest} extends {@link TeaModel}
+     *
+     * <p>OnsGroupListRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {
@@ -186,11 +199,15 @@ public class OnsGroupListRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag that is attached to the consumer group. This parameter is not required. If you configure this parameter, you must configure the **Tag.N.Value** parameter.**** If you configure both the Tag.N.Key and Tag.N.Value parameters, the group IDs are filtered based on the specified tag. If you do not configure these parameters, all group IDs are queried.
-             * <p>
+             * <p>The key of the tag that is attached to the consumer group. This parameter is not required. If you configure this parameter, you must configure the <strong>Key</strong> parameter.**** If you configure both the Key and Value parameters, the consumer groups are filtered based on the specified tag. If you do not configure these parameters, all consumer groups are queried.</p>
+             * <ul>
+             * <li>The value of this parameter cannot be an empty string.</li>
+             * <li>The tag value must be 1 to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   The value of this parameter cannot be an empty string.
-             * *   The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>CartService</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,11 +215,15 @@ public class OnsGroupListRequest extends Request {
             }
 
             /**
-             * The value of the tag that is attached to the group. This parameter is not required. If you configure this parameter, you must configure the **Tag.N.Value** parameter.**** If you configure both the Tag.N.Key and Tag.N.Value parameters, the group IDs are filtered based on the specified tag. If you do not configure these parameters, all group IDs are queried.
-             * <p>
+             * <p>The value of the tag that is attached to the group. This parameter is not required. If you configure this parameter, you must configure the <strong>Key</strong> parameter.**** If you configure both the Key and Value parameters, the consumer groups are filtered based on the specified tag. If you do not configure these parameters, all consumer groups are queried.</p>
+             * <ul>
+             * <li>The value of this parameter can be an empty string.</li>
+             * <li>The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   The value of this parameter can be an empty string.
-             * *   The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>ServiceA</p>
              */
             public Builder value(String value) {
                 this.value = value;

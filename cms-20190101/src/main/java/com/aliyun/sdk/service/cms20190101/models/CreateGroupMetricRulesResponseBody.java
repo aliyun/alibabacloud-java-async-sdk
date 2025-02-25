@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupMetricRulesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGroupMetricRulesResponseBody</p>
  */
 public class CreateGroupMetricRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateGroupMetricRulesResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call is successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>461CF2CD-2FC3-4B26-8645-7BD27E7D0F1D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +122,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the alert rules.
+         * <p>The details of the alert rules.</p>
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -121,11 +130,14 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid value:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid value:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * - true: The call is successful.
-         * - false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,20 +150,26 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGroupMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGroupMetricRulesResponseBody</p>
+     */
     public static class AlertResult extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private AlertResult(Builder builder) {
@@ -213,10 +231,13 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The status code that is returned for the alert rule.
-             * <p>
+             * <p>The status code that is returned for the alert rule.</p>
+             * <blockquote>
+             * <p> The status code 200 indicates that the call is successful.</p>
+             * </blockquote>
              * 
-             * >  The status code 200 indicates that the call is successful.
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -224,7 +245,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned for the alert rule.
+             * <p>The error message that is returned for the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric not found.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -232,7 +256,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456789</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -240,7 +267,10 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert rule.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_Rule1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -248,11 +278,14 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert rule was created. Valid value:
-             * <p>
+             * <p>Indicates whether the alert rule was created. Valid value:</p>
+             * <ul>
+             * <li>true: The alert rule was created.</li>
+             * <li>false: The alert rule failed to be created.</li>
+             * </ul>
              * 
-             * - true: The alert rule was created.
-             * - false: The alert rule failed to be created.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -266,8 +299,14 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateGroupMetricRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGroupMetricRulesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("AlertResult")
+        @com.aliyun.core.annotation.NameInMap("AlertResult")
         private java.util.List < AlertResult> alertResult;
 
         private Resources(Builder builder) {

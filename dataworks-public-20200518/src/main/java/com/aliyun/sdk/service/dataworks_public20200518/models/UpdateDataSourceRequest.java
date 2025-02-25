@@ -1,41 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDataSourceRequest} extends {@link RequestModel}
  *
  * <p>UpdateDataSourceRequest</p>
  */
 public class UpdateDataSourceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Query
-    @NameInMap("DataSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dataSourceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private Integer envType;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private UpdateDataSourceRequest(Builder builder) {
@@ -126,7 +130,7 @@ public class UpdateDataSourceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -135,7 +139,163 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * The ID of the data source that you want to update. You can call the [ListDataSources](~~211431~~) operation to obtain the ID.
+         * <p>The details about the data source. You are not allowed to change the type of the data source. For example, you are not allowed to change the data source type from MaxCompute to MySQL. Examples of details of some common data sources:</p>
+         * <ul>
+         * <li><p>odps</p>
+         * <pre><code>{
+         *   &quot;accessId&quot;: &quot;xssssss&quot;,
+         *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+         *   &quot;authType&quot;: 2,
+         *   &quot;endpoint&quot;: &quot;http://service.odps.aliyun.com/api&quot;,
+         *   &quot;project&quot;: &quot;xsaxsax&quot;,
+         *   &quot;tag&quot;: &quot;public&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>mysql</p>
+         * <pre><code>{
+         *   &quot;database&quot;: &quot;xsaxsa&quot;,
+         *   &quot;instanceName&quot;: &quot;rm-xsaxsa&quot;,
+         *   &quot;password&quot;: &quot;xsaxsa&quot;,
+         *   &quot;rdsOwnerId&quot;: &quot;xasxsa&quot;,
+         *   &quot;regionId&quot;: &quot;cn-shanghai&quot;,
+         *   &quot;tag&quot;: &quot;rds&quot;,
+         *   &quot;username&quot;: &quot;xsaxsa&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>rds</p>
+         * <pre><code>{
+         *   &quot;configType&quot;: 1,
+         *   &quot;tag&quot;: &quot;rds&quot;,
+         *   &quot;database&quot;: &quot;xsaxsa&quot;,
+         *   &quot;username&quot;: &quot;xsaxsa&quot;,
+         *   &quot;password&quot;: &quot;xssaxsa$32050&quot;,
+         *   &quot;instanceName&quot;: &quot;rm-xsaxs&quot;,
+         *   &quot;rdsOwnerId&quot;: &quot;11111111&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>oss</p>
+         * <pre><code>{
+         *   &quot;accessId&quot;: &quot;sssssxx&quot;,
+         *   &quot;accessKey&quot;: &quot;xsaxaxsaxs&quot;,
+         *   &quot;bucket&quot;: &quot;xsa-xs-xs&quot;,
+         *   &quot;endpoint&quot;: &quot;http://oss-cn-shanghai.aliyuncs.com&quot;,
+         *   &quot;tag&quot;: &quot;public&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>sqlserver</p>
+         * <pre><code>{
+         *   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs&quot;,
+         *   &quot;password&quot;: &quot;sdasda$fs&quot;,
+         *   &quot;tag&quot;: &quot;public&quot;,
+         *   &quot;username&quot;: &quot;sxaxacdacdd&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>polardb</p>
+         * <pre><code>{
+         *   &quot;clusterId&quot;: &quot;pc-sdadsadsa&quot;,
+         *   &quot;database&quot;: &quot;dsadsadsa&quot;,
+         *   &quot;ownerId&quot;: &quot;121212122&quot;,
+         *   &quot;password&quot;: &quot;sdasdafssa&quot;,
+         *   &quot;region&quot;: &quot;cn-shanghai&quot;,
+         *   &quot;tag&quot;: &quot;polardb&quot;,
+         *   &quot;username&quot;: &quot;asdadsads&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>oracle</p>
+         * <pre><code>{
+         *   &quot;jdbcUrl&quot;: &quot;jdbc:oracle:saaa:@xxxxx:1521:PROD&quot;,
+         *   &quot;password&quot;: &quot;sxasaxsa&quot;,
+         *   &quot;tag&quot;: &quot;public&quot;,
+         *   &quot;username&quot;: &quot;sasfadfa&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>mongodb</p>
+         * <pre><code>{
+         *   &quot;address&quot;: &quot;[\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\&quot;]&quot;,
+         *   &quot;database&quot;: &quot;admin&quot;,
+         *   &quot;password&quot;: &quot;sadsda@&quot;,
+         *   &quot;tag&quot;: &quot;public&quot;,
+         *   &quot;username&quot;: &quot;dsadsadas&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>emr</p>
+         * <pre><code>{
+         *   &quot;accessId&quot;: &quot;xsaxsa&quot;,
+         *   &quot;emrClusterId&quot;: &quot;C-dsads&quot;,
+         *   &quot;emrResourceQueueName&quot;: &quot;default&quot;,
+         *   &quot;emrEndpoint&quot;: &quot;emr.aliyuncs.com&quot;,
+         *   &quot;accessKey&quot;: &quot;dsadsad&quot;,
+         *   &quot;emrUserId&quot;: &quot;224833315798889783&quot;,
+         *   &quot;name&quot;: &quot;sasdsadsa&quot;,
+         *   &quot;emrAccessMode&quot;: &quot;simple&quot;,
+         *   &quot;region&quot;: &quot;cn-shanghai&quot;,
+         *   &quot;authType&quot;: &quot;2&quot;,
+         *   &quot;emrProjectId&quot;: &quot;FP-sdadsad&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>postgresql</p>
+         * <pre><code>{
+         *   &quot;jdbcUrl&quot;: &quot;jdbc:postgresql://xxxx:1921/ssss&quot;,
+         *   &quot;password&quot;: &quot;sdadsads&quot;,
+         *   &quot;tag&quot;: &quot;public&quot;,
+         *   &quot;username&quot;: &quot;sdsasda&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>analyticdb_for_mysql</p>
+         * <pre><code>{
+         *   &quot;instanceId&quot;: &quot;am-sadsada&quot;,
+         *   &quot;database&quot;: &quot;xsxsx&quot;,
+         *   &quot;username&quot;: &quot;xsxsa&quot;,
+         *   &quot;password&quot;: &quot;asdadsa&quot;,
+         *   &quot;connectionString&quot;: &quot;am-xssxsxs.ads.aliyuncs.com:3306&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>hybriddb_for_postgresql</p>
+         * <pre><code>{
+         *   &quot;connectionString&quot;: &quot;gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com&quot;,
+         *   &quot;database&quot;: &quot;xsaxsaxas&quot;,
+         *   &quot;password&quot;: &quot;xsaxsaxsa@11&quot;,
+         *   &quot;instanceId&quot;: &quot;gp-xsaxsaxsa&quot;,
+         *   &quot;port&quot;: &quot;541132&quot;,
+         *   &quot;ownerId&quot;: &quot;xsaxsaxsas&quot;,
+         *   &quot;username&quot;: &quot;sadsad&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>holo</p>
+         * <pre><code>{
+         *   &quot;accessId&quot;: &quot;xsaxsaxs&quot;,
+         *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+         *   &quot;database&quot;: &quot;xsaxsaxsa&quot;,
+         *   &quot;instanceId&quot;: &quot;xsaxa&quot;,
+         *   &quot;tag&quot;: &quot;aliyun&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * <li><p>kafka</p>
+         * <pre><code>{
+         *   &quot;instanceId&quot;: &quot;xsax-cn-xsaxsa&quot;,
+         *   &quot;regionId&quot;: &quot;cn-shanghai&quot;,
+         *   &quot;tag&quot;: &quot;aliyun&quot;,
+         *   &quot;ownerId&quot;: &quot;1212121212112&quot;
+         * }
+         * </code></pre>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;accessId&quot;:&quot;xssssss&quot;,&quot;accessKey&quot;:&quot;xsaxsaxsa&quot;,&quot;authType&quot;:2,&quot;endpoint&quot;:&quot;<a href="http://service.odps.aliyun.com/api%22,%22project%22:%22xsaxsax%22,%22tag%22:%22public%22%7D">http://service.odps.aliyun.com/api&quot;,&quot;project&quot;:&quot;xsaxsax&quot;,&quot;tag&quot;:&quot;public&quot;}</a></p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -144,7 +304,11 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * Indicates whether the data source is updated.
+         * <p>The ID of the data source. You can call the <a href="https://help.aliyun.com/document_detail/2780072.html">ListDataSources</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -153,219 +317,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * The details about the data source that you want to update.
-         * <p>
+         * <p>The description of the data source.</p>
          * 
-         * You are not allowed to change the type of the data source. For example, you are not allowed to change the data source type from MaxCompute to mysql.
-         * 
-         * Examples of details of some common data sources:
-         * 
-         * *   odps
-         * 
-         * ```
-         * 
-         * {
-         *   "accessId": "xssssss",
-         *   "accessKey": "xsaxsaxsa",
-         *   "authType": 2,
-         *   "endpoint": "http://service.odps.aliyun.com/api",
-         *   "project": "xsaxsax",
-         *   "tag": "public"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   mysql
-         * 
-         * ```
-         * 
-         * {
-         *   "database": "xsaxsa",
-         *   "instanceName": "rm-xsaxsa",
-         *   "password": "xsaxsa",
-         *   "rdsOwnerId": "xasxsa",
-         *   "regionId": "cn-shanghai",
-         *   "tag": "rds",
-         *   "username": "xsaxsa"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   rds
-         * 
-         * ```
-         * 
-         * {
-         *   "configType": 1,
-         *   "tag": "rds",
-         *   "database": "xsaxsa",
-         *   "username": "xsaxsa",
-         *   "password": "xssaxsa$32050",
-         *   "instanceName": "rm-xsaxs",
-         *   "rdsOwnerId": "11111111"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   oss
-         * 
-         * ```
-         * 
-         * {
-         *   "accessId": "sssssxx",
-         *   "accessKey": "xsaxaxsaxs",
-         *   "bucket": "xsa-xs-xs",
-         *   "endpoint": "http://oss-cn-shanghai.aliyuncs.com",
-         *   "tag": "public"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   sqlserver
-         * 
-         * ```
-         * 
-         * {
-         *   "jdbcUrl": "jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cnv:123;DatabaseName=xsxs-xsxs",
-         *   "password": "sdasda$fs",
-         *   "tag": "public",
-         *   "username": "sxaxacdacdd"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   polardb
-         * 
-         * ```
-         * 
-         * {
-         *   "clusterId": "pc-sdadsadsa",
-         *   "database": "dsadsadsa",
-         *   "ownerId": "121212122",
-         *   "password": "sdasdafssa",
-         *   "region": "cn-shanghai",
-         *   "tag": "polardb",
-         *   "username": "asdadsads"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   oracle
-         * 
-         * ```
-         * 
-         * {
-         *   "jdbcUrl": "jdbc:oracle:saaa:@xxxxx:1521:PROD",
-         *   "password": "sxasaxsa",
-         *   "tag": "public",
-         *   "username": "sasfadfa"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   mongodb
-         * 
-         * ```
-         * 
-         * {
-         *   "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",
-         *   "database": "admin",
-         *   "password": "sadsda@",
-         *   "tag": "public",
-         *   "username": "dsadsadas"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   emr
-         * 
-         * ```
-         * 
-         * {
-         *   "accessId": "xsaxsa",
-         *   "emrClusterId": "C-dsads",
-         *   "emrResourceQueueName": "default",
-         *   "emrEndpoint": "emr.aliyuncs.com",
-         *   "accessKey": "dsadsad",
-         *   "emrUserId": "224833315798889783",
-         *   "name": "sasdsadsa",
-         *   "emrAccessMode": "simple",
-         *   "region": "cn-shanghai",
-         *   "authType": "2",
-         *   "emrProjectId": "FP-sdadsad"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   postgresql
-         * 
-         * ```
-         * 
-         * {
-         *   "jdbcUrl": "jdbc:postgresql://xxxx:1921/ssss",
-         *   "password": "sdadsads",
-         *   "tag": "public",
-         *   "username": "sdsasda"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   analyticdb_for_mysql
-         * 
-         * ```
-         * 
-         * {
-         *   "instanceId": "am-sadsada",
-         *   "database": "xsxsx",
-         *   "username": "xsxsa",
-         *   "password": "asdadsa",
-         *   "connectionString": "am-xssxsxs.ads.aliyuncs.com:3306"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   hybriddb_for_postgresql
-         * 
-         * ```
-         * 
-         * {
-         *   "connectionString": "gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com",
-         *   "database": "xsaxsaxas",
-         *   "password": "xsaxsaxsa@11",
-         *   "instanceId": "gp-xsaxsaxsa",
-         *   "port": "541132",
-         *   "ownerId": "xsaxsaxsas",
-         *   "username": "sadsad"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   holo
-         * 
-         * ```
-         * 
-         * {
-         *   "accessId": "xsaxsaxs",
-         *   "accessKey": "xsaxsaxsa",
-         *   "database": "xsaxsaxsa",
-         *   "instanceId": "xsaxa",
-         *   "tag": "aliyun"
-         * }
-         *                                 
-         * ```
-         * 
-         * *   kafka
-         * 
-         * ```
-         * 
-         * {
-         *   "instanceId": "xsax-cn-xsaxsa",
-         *   "regionId": "cn-shanghai",
-         *   "tag": "aliyun",
-         *   "ownerId": "1212121212112"
-         * }
-         *                                 
-         * ```
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -374,7 +329,14 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * The status of the data source. The parameter is deprecated. Do not use this parameter.
+         * <p>The environment in which the data source resides. Valid values:</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -383,7 +345,10 @@ public class UpdateDataSourceRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The status of the data source. This parameter is deprecated. Do not use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -1,30 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppInfoRequest} extends {@link RequestModel}
  *
  * <p>CreateAppInfoRequest</p>
  */
 public class CreateAppInfoRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     private CreateAppInfoRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
         this.description = builder.description;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -54,9 +64,17 @@ public class CreateAppInfoRequest extends Request {
         return this.description;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppInfoRequest, Builder> {
         private String appName; 
         private String description; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -66,14 +84,19 @@ public class CreateAppInfoRequest extends Request {
             super(request);
             this.appName = request.appName;
             this.description = request.description;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * The name of the application. The application name must be unique.
-         * <p>
+         * <p>The name of the application. The application name must be unique.</p>
+         * <ul>
+         * <li>The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -82,15 +105,30 @@ public class CreateAppInfoRequest extends Request {
         }
 
         /**
-         * The description of the application.
-         * <p>
+         * <p>The description of the application.</p>
+         * <ul>
+         * <li>The description can contain up to 512 characters in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
          * 
-         * *   The description can contain up to 512 characters in length.
-         * *   The value must be encoded in UTF-8.
+         * <strong>example:</strong>
+         * <p>myfirstapp</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzko7fsuj****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

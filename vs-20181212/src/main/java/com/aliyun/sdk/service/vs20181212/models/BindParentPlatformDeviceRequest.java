@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindParentPlatformDeviceRequest} extends {@link RequestModel}
  *
  * <p>BindParentPlatformDeviceRequest</p>
  */
 public class BindParentPlatformDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ParentPlatformId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentPlatformId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentPlatformId;
 
     private BindParentPlatformDeviceRequest(Builder builder) {
@@ -76,15 +81,18 @@ public class BindParentPlatformDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(BindParentPlatformDeviceRequest response) {
-            super(response);
-            this.deviceId = response.deviceId;
-            this.ownerId = response.ownerId;
-            this.parentPlatformId = response.parentPlatformId;
+        private Builder(BindParentPlatformDeviceRequest request) {
+            super(request);
+            this.deviceId = request.deviceId;
+            this.ownerId = request.ownerId;
+            this.parentPlatformId = request.parentPlatformId;
         } 
 
         /**
-         * DeviceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -102,7 +110,10 @@ public class BindParentPlatformDeviceRequest extends Request {
         }
 
         /**
-         * ParentPlatformId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>361*****212-cn-qingdao</p>
          */
         public Builder parentPlatformId(String parentPlatformId) {
             this.putQueryParameter("ParentPlatformId", parentPlatformId);

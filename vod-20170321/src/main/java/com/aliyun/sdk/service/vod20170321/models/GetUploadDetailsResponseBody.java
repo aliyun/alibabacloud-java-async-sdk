@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>GetUploadDetailsResponseBody</p>
  */
 public class GetUploadDetailsResponseBody extends TeaModel {
-    @NameInMap("ForbiddenMediaIds")
-    private java.util.List < String > forbiddenMediaIds;
+    @com.aliyun.core.annotation.NameInMap("ForbiddenMediaIds")
+    private java.util.List<String> forbiddenMediaIds;
 
-    @NameInMap("NonExistMediaIds")
-    private java.util.List < String > nonExistMediaIds;
+    @com.aliyun.core.annotation.NameInMap("NonExistMediaIds")
+    private java.util.List<String> nonExistMediaIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadDetails")
-    private java.util.List < UploadDetails> uploadDetails;
+    @com.aliyun.core.annotation.NameInMap("UploadDetails")
+    private java.util.List<UploadDetails> uploadDetails;
 
     private GetUploadDetailsResponseBody(Builder builder) {
         this.forbiddenMediaIds = builder.forbiddenMediaIds;
@@ -42,14 +47,14 @@ public class GetUploadDetailsResponseBody extends TeaModel {
     /**
      * @return forbiddenMediaIds
      */
-    public java.util.List < String > getForbiddenMediaIds() {
+    public java.util.List<String> getForbiddenMediaIds() {
         return this.forbiddenMediaIds;
     }
 
     /**
      * @return nonExistMediaIds
      */
-    public java.util.List < String > getNonExistMediaIds() {
+    public java.util.List<String> getNonExistMediaIds() {
         return this.nonExistMediaIds;
     }
 
@@ -63,34 +68,37 @@ public class GetUploadDetailsResponseBody extends TeaModel {
     /**
      * @return uploadDetails
      */
-    public java.util.List < UploadDetails> getUploadDetails() {
+    public java.util.List<UploadDetails> getUploadDetails() {
         return this.uploadDetails;
     }
 
     public static final class Builder {
-        private java.util.List < String > forbiddenMediaIds; 
-        private java.util.List < String > nonExistMediaIds; 
+        private java.util.List<String> forbiddenMediaIds; 
+        private java.util.List<String> nonExistMediaIds; 
         private String requestId; 
-        private java.util.List < UploadDetails> uploadDetails; 
+        private java.util.List<UploadDetails> uploadDetails; 
 
         /**
-         * The IDs of the media files that cannot be accessed.
+         * <p>The IDs of the media files that cannot be accessed.</p>
          */
-        public Builder forbiddenMediaIds(java.util.List < String > forbiddenMediaIds) {
+        public Builder forbiddenMediaIds(java.util.List<String> forbiddenMediaIds) {
             this.forbiddenMediaIds = forbiddenMediaIds;
             return this;
         }
 
         /**
-         * The IDs of the media files that do not exist.
+         * <p>The IDs of the media files that do not exist.</p>
          */
-        public Builder nonExistMediaIds(java.util.List < String > nonExistMediaIds) {
+        public Builder nonExistMediaIds(java.util.List<String> nonExistMediaIds) {
             this.nonExistMediaIds = nonExistMediaIds;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E290613-04F4-47F4-795D30732077****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +106,9 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The upload details.
+         * <p>The upload details.</p>
          */
-        public Builder uploadDetails(java.util.List < UploadDetails> uploadDetails) {
+        public Builder uploadDetails(java.util.List<UploadDetails> uploadDetails) {
             this.uploadDetails = uploadDetails;
             return this;
         }
@@ -111,44 +119,50 @@ public class GetUploadDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUploadDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUploadDetailsResponseBody</p>
+     */
     public static class UploadDetails extends TeaModel {
-        @NameInMap("CompletionTime")
+        @com.aliyun.core.annotation.NameInMap("CompletionTime")
         private String completionTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeviceModel")
+        @com.aliyun.core.annotation.NameInMap("DeviceModel")
         private String deviceModel;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UploadIP")
+        @com.aliyun.core.annotation.NameInMap("UploadIP")
         private String uploadIP;
 
-        @NameInMap("UploadRatio")
+        @com.aliyun.core.annotation.NameInMap("UploadRatio")
         private Float uploadRatio;
 
-        @NameInMap("UploadSize")
+        @com.aliyun.core.annotation.NameInMap("UploadSize")
         private Long uploadSize;
 
-        @NameInMap("UploadSource")
+        @com.aliyun.core.annotation.NameInMap("UploadSource")
         private String uploadSource;
 
-        @NameInMap("UploadStatus")
+        @com.aliyun.core.annotation.NameInMap("UploadStatus")
         private String uploadStatus;
 
         private UploadDetails(Builder builder) {
@@ -282,7 +296,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             private String uploadStatus; 
 
             /**
-             * The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-28T09:45:07Z</p>
              */
             public Builder completionTime(String completionTime) {
                 this.completionTime = completionTime;
@@ -290,7 +307,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-28T09:42:07Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -298,7 +318,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The device model.
+             * <p>The device model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chrome</p>
              */
             public Builder deviceModel(String deviceModel) {
                 this.deviceModel = deviceModel;
@@ -306,7 +329,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the uploaded file. Unit: byte.
+             * <p>The size of the uploaded file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -314,7 +340,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the uploaded audio or video.
+             * <p>The ID of the uploaded audio or video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61ccbdb06fa83012be4d8083f6****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -322,7 +351,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-28T09:43:12Z</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -330,7 +362,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the video. For more information about the valid values and value description of the parameter, see the "Status: the status of a video" section of the [Basic structures](~~52839~~) topic.
+             * <p>The status of the video. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Uploading</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +373,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the media file.
+             * <p>The title of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test details</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -346,7 +384,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server that uploads the media file.
+             * <p>The IP address of the server that uploads the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder uploadIP(String uploadIP) {
                 this.uploadIP = uploadIP;
@@ -354,7 +395,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The upload ratio.
+             * <p>The upload ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.038</p>
              */
             public Builder uploadRatio(Float uploadRatio) {
                 this.uploadRatio = uploadRatio;
@@ -362,7 +406,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The upload size. Unit: byte.
+             * <p>The upload size. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>346</p>
              */
             public Builder uploadSize(Long uploadSize) {
                 this.uploadSize = uploadSize;
@@ -370,7 +417,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to upload the media file.
+             * <p>The method that is used to upload the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebSDK</p>
              */
             public Builder uploadSource(String uploadSource) {
                 this.uploadSource = uploadSource;
@@ -378,7 +428,10 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a URL-based upload job" section of the [Basic structures](~~52839~~) topic.
+             * <p>The status of the upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Uploading</p>
              */
             public Builder uploadStatus(String uploadStatus) {
                 this.uploadStatus = uploadStatus;

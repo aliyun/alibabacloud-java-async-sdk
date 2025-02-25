@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAppCodeRequest} extends {@link RequestModel}
  *
  * <p>ResetAppCodeRequest</p>
  */
 public class ResetAppCodeRequest extends Request {
-    @Query
-    @NameInMap("AppCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appCode;
 
-    @Query
-    @NameInMap("NewAppCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAppCode")
     private String newAppCode;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ResetAppCodeRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class ResetAppCodeRequest extends Request {
         } 
 
         /**
-         * The AppCode of the app.
+         * <p>The AppCode of the app.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -92,7 +101,10 @@ public class ResetAppCodeRequest extends Request {
         }
 
         /**
-         * The new AppCode of the app.
+         * <p>The new AppCode of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6f0e7ab2aa5f4b8fb18421e6edf4fb6c2</p>
          */
         public Builder newAppCode(String newAppCode) {
             this.putQueryParameter("NewAppCode", newAppCode);

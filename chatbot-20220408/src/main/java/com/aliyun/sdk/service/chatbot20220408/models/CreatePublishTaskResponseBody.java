@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePublishTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePublishTaskResponseBody</p>
  */
 public class CreatePublishTaskResponseBody extends TeaModel {
-    @NameInMap("BizTypeList")
+    @com.aliyun.core.annotation.NameInMap("BizTypeList")
     private java.util.List < String > bizTypeList;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Error")
+    @com.aliyun.core.annotation.NameInMap("Error")
     private String error;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Response")
+    @com.aliyun.core.annotation.NameInMap("Response")
     private String response;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CreatePublishTaskResponseBody(Builder builder) {

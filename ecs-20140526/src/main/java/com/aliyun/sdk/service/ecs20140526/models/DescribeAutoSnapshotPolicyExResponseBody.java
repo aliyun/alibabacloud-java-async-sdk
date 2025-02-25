@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
  */
 public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
-    @NameInMap("AutoSnapshotPolicies")
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicies")
     private AutoSnapshotPolicies autoSnapshotPolicies;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoSnapshotPolicyExResponseBody(Builder builder) {
@@ -86,12 +91,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The points in time of the day at which to create automatic snapshots.
-         * <p>
-         * 
-         * The time is displayed in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Multiple points in time can be specified.
-         * 
-         * The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: `["0", "1", ... "23"]`.
+         * <p>Details about the automatic snapshot policies.</p>
          */
         public Builder autoSnapshotPolicies(AutoSnapshotPolicies autoSnapshotPolicies) {
             this.autoSnapshotPolicies = autoSnapshotPolicies;
@@ -99,7 +99,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of automatic snapshot policies.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -107,7 +110,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +121,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the automatic snapshot policies.
+         * <p>The total number of automatic snapshot policies</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -136,11 +148,95 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
+     */
+    public static class CopyEncryptionConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
+        private CopyEncryptionConfiguration(Builder builder) {
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CopyEncryptionConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public static final class Builder {
+            private Boolean encrypted; 
+            private String KMSKeyId; 
+
+            /**
+             * <p>Whether to enable encryption for cross-region snapshot replication. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Key Management Service (KMS) key used to encrypt snapshots in cross-region snapshot replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            public CopyEncryptionConfiguration build() {
+                return new CopyEncryptionConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -175,7 +271,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -183,7 +282,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the automatic snapshot policy.
+             * <p>The tag value of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -197,9 +299,15 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -216,17 +324,17 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -238,56 +346,69 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
+     */
     public static class AutoSnapshotPolicy extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("AutoSnapshotPolicyName")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyName")
         private String autoSnapshotPolicyName;
 
-        @NameInMap("CopiedSnapshotsRetentionDays")
+        @com.aliyun.core.annotation.NameInMap("CopiedSnapshotsRetentionDays")
         private Integer copiedSnapshotsRetentionDays;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CopyEncryptionConfiguration")
+        private CopyEncryptionConfiguration copyEncryptionConfiguration;
+
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DiskNums")
+        @com.aliyun.core.annotation.NameInMap("DiskNums")
         private Integer diskNums;
 
-        @NameInMap("EnableCrossRegionCopy")
+        @com.aliyun.core.annotation.NameInMap("EnableCrossRegionCopy")
         private Boolean enableCrossRegionCopy;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepeatWeekdays")
+        @com.aliyun.core.annotation.NameInMap("RepeatWeekdays")
         private String repeatWeekdays;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RetentionDays")
+        @com.aliyun.core.annotation.NameInMap("RetentionDays")
         private Integer retentionDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TargetCopyRegions")
+        @com.aliyun.core.annotation.NameInMap("TargetCopyRegions")
         private String targetCopyRegions;
 
-        @NameInMap("TimePoints")
+        @com.aliyun.core.annotation.NameInMap("TimePoints")
         private String timePoints;
 
-        @NameInMap("VolumeNums")
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("VolumeNums")
         private Integer volumeNums;
 
         private AutoSnapshotPolicy(Builder builder) {
             this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
             this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
+            this.copyEncryptionConfiguration = builder.copyEncryptionConfiguration;
             this.creationTime = builder.creationTime;
             this.diskNums = builder.diskNums;
             this.enableCrossRegionCopy = builder.enableCrossRegionCopy;
@@ -299,6 +420,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.targetCopyRegions = builder.targetCopyRegions;
             this.timePoints = builder.timePoints;
+            this.type = builder.type;
             this.volumeNums = builder.volumeNums;
         }
 
@@ -329,6 +451,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
          */
         public Integer getCopiedSnapshotsRetentionDays() {
             return this.copiedSnapshotsRetentionDays;
+        }
+
+        /**
+         * @return copyEncryptionConfiguration
+         */
+        public CopyEncryptionConfiguration getCopyEncryptionConfiguration() {
+            return this.copyEncryptionConfiguration;
         }
 
         /**
@@ -409,6 +538,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return volumeNums
          */
         public Integer getVolumeNums() {
@@ -419,6 +555,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private String autoSnapshotPolicyId; 
             private String autoSnapshotPolicyName; 
             private Integer copiedSnapshotsRetentionDays; 
+            private CopyEncryptionConfiguration copyEncryptionConfiguration; 
             private String creationTime; 
             private Integer diskNums; 
             private Boolean enableCrossRegionCopy; 
@@ -430,14 +567,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private Tags tags; 
             private String targetCopyRegions; 
             private String timePoints; 
+            private String type; 
             private Integer volumeNums; 
 
             /**
-             * The retention period of the automatic snapshot. Unit: days. Valid values:
-             * <p>
+             * <p>The ID of the automatic snapshot policy.</p>
              * 
-             * *   \-1: The automatic snapshot is retained until it is deleted.
-             * *   1 to 65536: The automatic snapshot is retained for the specified number of days.
+             * <strong>example:</strong>
+             * <p>sp-bp67acfmxazb4ph****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -445,7 +582,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is in invitational preview and unavailable for general users.
+             * <p>The name of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testAutoSnapshotPolicyName</p>
              */
             public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
                 this.autoSnapshotPolicyName = autoSnapshotPolicyName;
@@ -453,7 +593,12 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the automatic snapshot policy.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
                 this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
@@ -461,11 +606,18 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the automatic snapshot policy. Valid values:
-             * <p>
+             * <p>Encryption configurations for cross-region snapshot replication.</p>
+             */
+            public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
+                this.copyEncryptionConfiguration = copyEncryptionConfiguration;
+                return this;
+            }
+
+            /**
+             * <p>The time when the automatic snapshot policy was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * *   Normal: The automatic snapshot policy is normal.
-             * *   Expire: The automatic snapshot policy cannot be used because your account has overdue payments.
+             * <strong>example:</strong>
+             * <p>2019-12-10T16:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -473,7 +625,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is in invitational preview and unavailable for general users.
+             * <p>The number of disks to which the automatic snapshot policy is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNums(Integer diskNums) {
                 this.diskNums = diskNums;
@@ -481,7 +636,12 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to the days of the week. 1 indicates Monday. One or more days can be specified.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
                 this.enableCrossRegionCopy = enableCrossRegionCopy;
@@ -489,7 +649,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The number of disks to which the automatic snapshot policy is applied.
+             * <p>The region ID of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -497,7 +660,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The number of extended volumes to which the automatic snapshot policy is applied.
+             * <p>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to the days of the week. For example, 1 indicates Monday. One or more days can be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;6&quot;]</p>
              */
             public Builder repeatWeekdays(String repeatWeekdays) {
                 this.repeatWeekdays = repeatWeekdays;
@@ -505,7 +671,10 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the automatic snapshot policy.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2kkmhmhs****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -513,7 +682,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the automatic snapshot policy.
+             * <p>The retention period of the automatic snapshots. Unit: days. Valid values:</p>
+             * <ul>
+             * <li>-1: Automatic snapshots are retained until they are deleted.</li>
+             * <li>1 to 65536: Auto snapshots are retained for the specified number of days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retentionDays(Integer retentionDays) {
                 this.retentionDays = retentionDays;
@@ -521,7 +697,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the automatic snapshot policy.
+             * <p>The status of the automatic snapshot policy. Valid values:</p>
+             * <ul>
+             * <li>Normal: The automatic snapshot policy is normal.</li>
+             * <li>Expire: The automatic snapshot policy cannot be used because your account has overdue payments.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -529,7 +712,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the automatic snapshot policy.
+             * <p>The tags of the automatic snapshot policy.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -537,7 +720,12 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is in invitational preview and unavailable for general users.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder targetCopyRegions(String targetCopyRegions) {
                 this.targetCopyRegions = targetCopyRegions;
@@ -545,7 +733,12 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The points in time of the day at which to create automatic snapshots.</p>
+             * <p>The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, 1 indicates 01:00:00. Multiple points in time can be specified.</p>
+             * <p>The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;1&quot;]</p>
              */
             public Builder timePoints(String timePoints) {
                 this.timePoints = timePoints;
@@ -553,7 +746,25 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The type of the automatic snapshot policy. Valid values:</p>
+             * <ul>
+             * <li>Custom: user-defined snapshot policy.</li>
+             * <li>System: system-defined snapshot policy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The number of extended volumes to which the automatic snapshot policy is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder volumeNums(Integer volumeNums) {
                 this.volumeNums = volumeNums;
@@ -567,9 +778,15 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
+     */
     public static class AutoSnapshotPolicies extends TeaModel {
-        @NameInMap("AutoSnapshotPolicy")
-        private java.util.List < AutoSnapshotPolicy> autoSnapshotPolicy;
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicy")
+        private java.util.List<AutoSnapshotPolicy> autoSnapshotPolicy;
 
         private AutoSnapshotPolicies(Builder builder) {
             this.autoSnapshotPolicy = builder.autoSnapshotPolicy;
@@ -586,17 +803,17 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         /**
          * @return autoSnapshotPolicy
          */
-        public java.util.List < AutoSnapshotPolicy> getAutoSnapshotPolicy() {
+        public java.util.List<AutoSnapshotPolicy> getAutoSnapshotPolicy() {
             return this.autoSnapshotPolicy;
         }
 
         public static final class Builder {
-            private java.util.List < AutoSnapshotPolicy> autoSnapshotPolicy; 
+            private java.util.List<AutoSnapshotPolicy> autoSnapshotPolicy; 
 
             /**
              * AutoSnapshotPolicy.
              */
-            public Builder autoSnapshotPolicy(java.util.List < AutoSnapshotPolicy> autoSnapshotPolicy) {
+            public Builder autoSnapshotPolicy(java.util.List<AutoSnapshotPolicy> autoSnapshotPolicy) {
                 this.autoSnapshotPolicy = autoSnapshotPolicy;
                 return this;
             }

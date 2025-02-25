@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReplicationJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateReplicationJobResponseBody</p>
  */
 public class CreateReplicationJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateReplicationJobResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateReplicationJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The ID of the migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp17bclvg344jlyt****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +61,10 @@ public class CreateReplicationJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8B26B44-0189-443E-9816-D951F59623A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

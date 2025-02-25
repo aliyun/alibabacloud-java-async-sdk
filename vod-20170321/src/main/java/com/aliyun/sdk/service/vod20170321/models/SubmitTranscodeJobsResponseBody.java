@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitTranscodeJobsResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitTranscodeJobsResponseBody</p>
  */
 public class SubmitTranscodeJobsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeJobs")
+    @com.aliyun.core.annotation.NameInMap("TranscodeJobs")
     private TranscodeJobs transcodeJobs;
 
-    @NameInMap("TranscodeTaskId")
+    @com.aliyun.core.annotation.NameInMap("TranscodeTaskId")
     private String transcodeTaskId;
 
     private SubmitTranscodeJobsResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         private String transcodeTaskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,9 +78,10 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The transcoding jobs.
-         * <p>
-         * > This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
+         * <p>The information about the transcoding job.</p>
+         * <blockquote>
+         * <p> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+         * </blockquote>
          */
         public Builder transcodeJobs(TranscodeJobs transcodeJobs) {
             this.transcodeJobs = transcodeJobs;
@@ -80,7 +89,10 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the transcoding job that was submitted.
+         * <p>The ID of the transcoding task that was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9f4a0df7da2c8a81c8c0408c84****</p>
          */
         public Builder transcodeTaskId(String transcodeTaskId) {
             this.transcodeTaskId = transcodeTaskId;
@@ -93,8 +105,14 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobsResponseBody</p>
+     */
     public static class TranscodeJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private TranscodeJob(Builder builder) {
@@ -120,7 +138,13 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the job.
+             * <p>The ID of the transcoding job.</p>
+             * <blockquote>
+             * <p> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>d8921ce8505716cfe86fb112c4****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -134,9 +158,15 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitTranscodeJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitTranscodeJobsResponseBody</p>
+     */
     public static class TranscodeJobs extends TeaModel {
-        @NameInMap("TranscodeJob")
-        private java.util.List < TranscodeJob> transcodeJob;
+        @com.aliyun.core.annotation.NameInMap("TranscodeJob")
+        private java.util.List<TranscodeJob> transcodeJob;
 
         private TranscodeJobs(Builder builder) {
             this.transcodeJob = builder.transcodeJob;
@@ -153,17 +183,17 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
         /**
          * @return transcodeJob
          */
-        public java.util.List < TranscodeJob> getTranscodeJob() {
+        public java.util.List<TranscodeJob> getTranscodeJob() {
             return this.transcodeJob;
         }
 
         public static final class Builder {
-            private java.util.List < TranscodeJob> transcodeJob; 
+            private java.util.List<TranscodeJob> transcodeJob; 
 
             /**
              * TranscodeJob.
              */
-            public Builder transcodeJob(java.util.List < TranscodeJob> transcodeJob) {
+            public Builder transcodeJob(java.util.List<TranscodeJob> transcodeJob) {
                 this.transcodeJob = transcodeJob;
                 return this;
             }

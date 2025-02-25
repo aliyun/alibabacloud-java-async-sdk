@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDcdnKvResponseBody} extends {@link TeaModel}
  *
  * <p>ListDcdnKvResponseBody</p>
  */
 public class ListDcdnKvResponseBody extends TeaModel {
-    @NameInMap("Keys")
+    @com.aliyun.core.annotation.NameInMap("Keys")
     private java.util.List < Keys> keys;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDcdnKvResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class ListDcdnKvResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The keys obtained in this traversal.
+         * <p>The keys obtained in this traversal.</p>
          */
         public Builder keys(java.util.List < Keys> keys) {
             this.keys = keys;
@@ -94,7 +94,10 @@ public class ListDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class ListDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class ListDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class ListDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +143,17 @@ public class ListDcdnKvResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDcdnKvResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDcdnKvResponseBody</p>
+     */
     public static class Keys extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Keys(Builder builder) {
@@ -170,7 +188,10 @@ public class ListDcdnKvResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The value of the key obtained in this traversal.
+             * <p>The value of the key obtained in this traversal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +199,10 @@ public class ListDcdnKvResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the key was updated.
+             * <p>The time when the key was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-13T07:46:03Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

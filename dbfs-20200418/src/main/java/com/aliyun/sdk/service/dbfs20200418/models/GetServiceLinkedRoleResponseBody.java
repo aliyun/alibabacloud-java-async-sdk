@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceLinkedRoleResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceLinkedRoleResponseBody</p>
  */
 public class GetServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @NameInMap("DbfsLinkedRole")
+    @com.aliyun.core.annotation.NameInMap("DbfsLinkedRole")
     private Boolean dbfsLinkedRole;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetServiceLinkedRoleResponseBody(Builder builder) {

@@ -1,41 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateInstancePublicConnectionResponseBody</p>
  */
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
-
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("Message")
-    private String message;
-
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
     private AllocateInstancePublicConnectionResponseBody(Builder builder) {
-        this.code = builder.code;
         this.instanceName = builder.instanceName;
-        this.message = builder.message;
         this.requestId = builder.requestId;
-        this.success = builder.success;
         this.taskId = builder.taskId;
     }
 
@@ -48,24 +41,10 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
-    }
-
-    /**
      * @return instanceName
      */
     public String getInstanceName() {
         return this.instanceName;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -76,13 +55,6 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
     }
 
     /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    /**
      * @return taskId
      */
     public Long getTaskId() {
@@ -90,23 +62,12 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
         private String instanceName; 
-        private String message; 
         private String requestId; 
-        private Boolean success; 
         private Long taskId; 
 
         /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -114,15 +75,10 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ED62C81-9948-5612-81E1-EA3853752306</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,15 +86,10 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
-            return this;
-        }
-
-        /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>498115273</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

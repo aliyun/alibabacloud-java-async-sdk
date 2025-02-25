@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetDcdnDomainConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchSetDcdnDomainConfigsResponseBody</p>
  */
 public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainConfigList")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigList")
     private DomainConfigList domainConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchSetDcdnDomainConfigsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainConfigList.
+         * <p>The list of domain configurations.</p>
          */
         public Builder domainConfigList(DomainConfigList domainConfigList) {
             this.domainConfigList = domainConfigList;
@@ -58,7 +58,10 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchSetDcdnDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchSetDcdnDomainConfigsResponseBody</p>
+     */
     public static class DomainConfigModel extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
         private DomainConfigModel(Builder builder) {
@@ -122,7 +131,10 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * ConfigId.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -130,7 +142,10 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -138,7 +153,10 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>set_resp_header</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -152,8 +170,14 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchSetDcdnDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchSetDcdnDomainConfigsResponseBody</p>
+     */
     public static class DomainConfigList extends TeaModel {
-        @NameInMap("DomainConfigModel")
+        @com.aliyun.core.annotation.NameInMap("DomainConfigModel")
         private java.util.List < DomainConfigModel> domainConfigModel;
 
         private DomainConfigList(Builder builder) {

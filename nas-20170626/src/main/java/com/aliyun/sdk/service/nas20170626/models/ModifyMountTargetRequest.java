@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMountTargetRequest} extends {@link RequestModel}
  *
  * <p>ModifyMountTargetRequest</p>
  */
 public class ModifyMountTargetRequest extends Request {
-    @Query
-    @NameInMap("AccessGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroupName")
     private String accessGroupName;
 
-    @Query
-    @NameInMap("DualStackMountTargetDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DualStackMountTargetDomain")
     private String dualStackMountTargetDomain;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
     private String mountTargetDomain;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ModifyMountTargetRequest(Builder builder) {
@@ -101,17 +106,20 @@ public class ModifyMountTargetRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMountTargetRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.dualStackMountTargetDomain = response.dualStackMountTargetDomain;
-            this.fileSystemId = response.fileSystemId;
-            this.mountTargetDomain = response.mountTargetDomain;
-            this.status = response.status;
+        private Builder(ModifyMountTargetRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.dualStackMountTargetDomain = request.dualStackMountTargetDomain;
+            this.fileSystemId = request.fileSystemId;
+            this.mountTargetDomain = request.mountTargetDomain;
+            this.status = request.status;
         } 
 
         /**
-         * AccessGroupName.
+         * <p>The name of the permission group that is attached to the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>classic-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -120,7 +128,13 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * DualStackMountTargetDomain.
+         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         * <blockquote>
+         * <p> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
             this.putQueryParameter("DualStackMountTargetDomain", dualStackMountTargetDomain);
@@ -129,7 +143,15 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
+         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -138,7 +160,10 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * <p>The IPv4 domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -147,7 +172,18 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the mount target.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Active: The mount target is available.</li>
+         * <li>Inactive: The mount target is unavailable.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only General-purpose File Storage NAS (NAS) file systems support changing the mount target status.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Inactive</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

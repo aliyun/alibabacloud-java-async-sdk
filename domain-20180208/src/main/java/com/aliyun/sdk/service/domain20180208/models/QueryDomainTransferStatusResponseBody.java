@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainTransferStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainTransferStatusResponseBody</p>
  */
 public class QueryDomainTransferStatusResponseBody extends TeaModel {
-    @NameInMap("DomainTransferStatus")
-    private java.util.List < DomainTransferStatus> domainTransferStatus;
+    @com.aliyun.core.annotation.NameInMap("DomainTransferStatus")
+    private java.util.List<DomainTransferStatus> domainTransferStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDomainTransferStatusResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
     /**
      * @return domainTransferStatus
      */
-    public java.util.List < DomainTransferStatus> getDomainTransferStatus() {
+    public java.util.List<DomainTransferStatus> getDomainTransferStatus() {
         return this.domainTransferStatus;
     }
 
@@ -46,13 +51,13 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainTransferStatus> domainTransferStatus; 
+        private java.util.List<DomainTransferStatus> domainTransferStatus; 
         private String requestId; 
 
         /**
          * DomainTransferStatus.
          */
-        public Builder domainTransferStatus(java.util.List < DomainTransferStatus> domainTransferStatus) {
+        public Builder domainTransferStatus(java.util.List<DomainTransferStatus> domainTransferStatus) {
             this.domainTransferStatus = domainTransferStatus;
             return this;
         }
@@ -71,11 +76,17 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainTransferStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainTransferStatusResponseBody</p>
+     */
     public static class DomainTransferStatus extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatusDescription")
+        @com.aliyun.core.annotation.NameInMap("DomainStatusDescription")
         private String domainStatusDescription;
 
         private DomainTransferStatus(Builder builder) {

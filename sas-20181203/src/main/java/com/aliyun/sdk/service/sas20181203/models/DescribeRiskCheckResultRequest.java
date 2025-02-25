@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskCheckResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeRiskCheckResultRequest</p>
  */
 public class DescribeRiskCheckResultRequest extends Request {
-    @Query
-    @NameInMap("AssetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
     private String assetType;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("ItemIds")
-    private java.util.List < String > itemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemIds")
+    private java.util.List<String> itemIds;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryFlag")
     private String queryFlag;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
     private String riskLevel;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeRiskCheckResultRequest(Builder builder) {
@@ -113,7 +118,7 @@ public class DescribeRiskCheckResultRequest extends Request {
     /**
      * @return itemIds
      */
-    public java.util.List < String > getItemIds() {
+    public java.util.List<String> getItemIds() {
         return this.itemIds;
     }
 
@@ -177,7 +182,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         private String assetType; 
         private Integer currentPage; 
         private Long groupId; 
-        private java.util.List < String > itemIds; 
+        private java.util.List<String> itemIds; 
         private String lang; 
         private String name; 
         private Integer pageSize; 
@@ -208,7 +213,10 @@ public class DescribeRiskCheckResultRequest extends Request {
         } 
 
         /**
-         * The cloud service whose configuration check results you want to query. For more information about the check items for the cloud service, see the check item table in the "Response parameters" section of this topic.
+         * <p>The cloud service whose configuration check results you want to query. For more information about the check items for the cloud service, see the check item table in the &quot;Response parameters&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -217,7 +225,10 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -226,17 +237,21 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The type of the check item that you want to query. Valid values:
-         * <p>
+         * <p>The type of the check item that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: identity authentication and permissions</li>
+         * <li><strong>2</strong>: network access control</li>
+         * <li><strong>3</strong>: log audit</li>
+         * <li><strong>4</strong>: data security</li>
+         * <li><strong>5</strong>: monitoring and alerting</li>
+         * <li><strong>6</strong>: basic security protection</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, all types of check items are queried.</p>
+         * </blockquote>
          * 
-         * *   **1**: identity authentication and permissions
-         * *   **2**: network access control
-         * *   **3**: log audit
-         * *   **4**: data security
-         * *   **5**: monitoring and alerting
-         * *   **6**: basic security protection
-         * 
-         * > If you do not specify this parameter, all types of check items are queried.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -245,20 +260,26 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of check items. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
+         * <p>An array that consists of the IDs of check items. For more information about the check item, see the check item table in the &quot;Response parameters&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
-        public Builder itemIds(java.util.List < String > itemIds) {
+        public Builder itemIds(java.util.List<String> itemIds) {
             this.putQueryParameter("ItemIds", itemIds);
             this.itemIds = itemIds;
             return this;
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -267,7 +288,10 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The name of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
+         * <p>The name of the check item. For more information about the check item, see the check item table in the &quot;Response parameters&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALB_NetWorkAccessControl</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -276,7 +300,10 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -285,11 +312,14 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * Specifies whether the check item is supported by the edition of Security Center that you purchase. Valid values:
-         * <p>
+         * <p>Specifies whether the check item is supported by the edition of Security Center that you purchase. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong>: yes</li>
+         * <li><strong>disabled</strong>: no</li>
+         * </ul>
          * 
-         * *   **enabled**: yes
-         * *   **disabled**: no
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder queryFlag(String queryFlag) {
             this.putQueryParameter("QueryFlag", queryFlag);
@@ -307,12 +337,15 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The risk level of the check item that you want to query. Valid values:
-         * <p>
+         * <p>The risk level of the check item that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
          * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -321,7 +354,10 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -330,15 +366,18 @@ public class DescribeRiskCheckResultRequest extends Request {
         }
 
         /**
-         * The status of the check results. Valid values:
-         * <p>
+         * <p>The status of the check results. Valid values:</p>
+         * <ul>
+         * <li><strong>pass</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>running</strong></li>
+         * <li><strong>waiting</strong></li>
+         * <li><strong>ignored</strong></li>
+         * <li><strong>falsePositive</strong></li>
+         * </ul>
          * 
-         * *   **pass**
-         * *   **failed**
-         * *   **running**
-         * *   **waiting**
-         * *   **ignored**
-         * *   **falsePositive**
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

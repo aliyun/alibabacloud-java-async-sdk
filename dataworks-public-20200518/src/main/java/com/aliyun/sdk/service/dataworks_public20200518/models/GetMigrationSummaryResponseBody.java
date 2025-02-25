@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMigrationSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetMigrationSummaryResponseBody</p>
  */
 public class GetMigrationSummaryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMigrationSummaryResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the migration task.
+         * <p>The details of the migration task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,11 +75,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails. You can locate the error based on the request ID.
+         * <strong>example:</strong>
+         * <p>19999A96-71BA-2845-B455-ED620EF4E37F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +86,14 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the migration task.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,32 +106,38 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMigrationSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMigrationSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("MigrationId")
+        @com.aliyun.core.annotation.NameInMap("MigrationId")
         private Long migrationId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OpUser")
+        @com.aliyun.core.annotation.NameInMap("OpUser")
         private String opUser;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -218,7 +235,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the user who manages the migration task.
+             * <p>The ID of the user who created the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>982293332403****</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -226,7 +246,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://shanghai-xxx-oss.oss-cn-shanghai.aliyuncs.com/pre/store/f10_bf47_b4fa7df0860f.zip?Expires=1639540903&OSSAccessKeyId=XXXXXXeF4Lv5j&Signature=qxxxxx">https://shanghai-xxx-oss.oss-cn-shanghai.aliyuncs.com/pre/store/f10_bf47_b4fa7df0860f.zip?Expires=1639540903&amp;OSSAccessKeyId=XXXXXXeF4Lv5j&amp;Signature=qxxxxx</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -234,7 +257,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was modified.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589904000000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -242,7 +268,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the migration task.
+             * <p>The time when the task was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589904000000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -250,7 +279,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the migration task.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder migrationId(Long migrationId) {
                 this.migrationId = migrationId;
@@ -258,7 +290,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was created.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_export_01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,19 +301,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the migration task. Valid values:
-             * <p>
+             * <p>The ID of the user who managed the task.</p>
              * 
-             * *   INIT: The migration task is initiating.
-             * *   EDITING: The migration task is being edited.
-             * *   IMPORTING: The migration task is importing data objects.
-             * *   IMPORT_ERROR: The migration task fails to import data objects.
-             * *   IMPORT_SUCCESS: Data objects are imported.
-             * *   EXPORTING: The migration task is exporting data objects.
-             * *   EXPORT_ERROR: The migration task fails to export data objects.
-             * *   EXPORT_SUCCESS: The migration task successfully exports data objects.
-             * *   REVOKED: The migration task is canceled.
-             * *   PARTIAL_SUCCESS: The migration task successfully imports or exports only some data objects.
+             * <strong>example:</strong>
+             * <p>982293332403****</p>
              */
             public Builder opUser(String opUser) {
                 this.opUser = opUser;
@@ -286,7 +312,10 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the package of the export task.
+             * <p>The ID of the DataWorks workspace to which the migration task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -294,7 +323,22 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DataWorks workspace.
+             * <p>The status of the migration task. Valid values:</p>
+             * <ul>
+             * <li>INIT</li>
+             * <li>EDITING</li>
+             * <li>IMPORTING</li>
+             * <li>IMPORT_ERROR</li>
+             * <li>IMPORT_SUCCESS</li>
+             * <li>EXPORTING</li>
+             * <li>EXPORT_ERROR</li>
+             * <li>EXPORT_SUCCESS</li>
+             * <li>REVOKED</li>
+             * <li>PARTIAL_SUCCESS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPORT_SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;

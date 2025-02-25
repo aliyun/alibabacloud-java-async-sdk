@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClientKeyResponseBody</p>
  */
 public class CreateClientKeyResponseBody extends TeaModel {
-    @NameInMap("ClientKeyId")
+    @com.aliyun.core.annotation.NameInMap("ClientKeyId")
     private String clientKeyId;
 
-    @NameInMap("KeyAlgorithm")
+    @com.aliyun.core.annotation.NameInMap("KeyAlgorithm")
     private String keyAlgorithm;
 
-    @NameInMap("NotAfter")
+    @com.aliyun.core.annotation.NameInMap("NotAfter")
     private String notAfter;
 
-    @NameInMap("NotBefore")
+    @com.aliyun.core.annotation.NameInMap("NotBefore")
     private String notBefore;
 
-    @NameInMap("PrivateKeyData")
+    @com.aliyun.core.annotation.NameInMap("PrivateKeyData")
     private String privateKeyData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateClientKeyResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class CreateClientKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientKeyId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder clientKeyId(String clientKeyId) {
             this.clientKeyId = clientKeyId;
@@ -106,7 +105,7 @@ public class CreateClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyAlgorithm.
+         * The ID of the client key.
          */
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
@@ -114,7 +113,7 @@ public class CreateClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * NotAfter.
+         * The beginning of the validity period of the client key.
          */
         public Builder notAfter(String notAfter) {
             this.notAfter = notAfter;
@@ -122,7 +121,7 @@ public class CreateClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * NotBefore.
+         * The private key of the client key.
          */
         public Builder notBefore(String notBefore) {
             this.notBefore = notBefore;
@@ -130,7 +129,7 @@ public class CreateClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateKeyData.
+         * The algorithm that is used to encrypt the private key of the client key. Currently, only RSA\_2048 is supported.
          */
         public Builder privateKeyData(String privateKeyData) {
             this.privateKeyData = privateKeyData;
@@ -138,7 +137,15 @@ public class CreateClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The beginning of the validity period of the client key.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.
+         * 
+         * > 
+         * 
+         * *   If you do not configure NotBefore, the default value is the time when the client key was created.
+         * *   If you configure NotBefore, you must configure NotAfter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

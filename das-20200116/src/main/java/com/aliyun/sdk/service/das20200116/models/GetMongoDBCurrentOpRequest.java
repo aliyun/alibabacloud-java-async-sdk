@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMongoDBCurrentOpRequest} extends {@link RequestModel}
  *
  * <p>GetMongoDBCurrentOpRequest</p>
  */
 public class GetMongoDBCurrentOpRequest extends Request {
-    @Query
-    @NameInMap("FilterDoc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterDoc")
     private String filterDoc;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
     private GetMongoDBCurrentOpRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class GetMongoDBCurrentOpRequest extends Request {
         } 
 
         /**
-         * The `db.currentOp()` command that is used to filter sessions. For more information, see [db.currentOp()](https://docs.mongodb.com/manual/reference/method/db.currentOp/) of MongoDB Documentation.
+         * <p>The <code>db.currentOp()</code> command that is used to filter sessions. For more information, see <a href="https://docs.mongodb.com/manual/reference/method/db.currentOp/">db.currentOp()</a> of MongoDB Documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;active&quot; : true }</p>
          */
         public Builder filterDoc(String filterDoc) {
             this.putQueryParameter("FilterDoc", filterDoc);
@@ -106,7 +114,11 @@ public class GetMongoDBCurrentOpRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-uf608087********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,10 +127,13 @@ public class GetMongoDBCurrentOpRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify a node ID, the sessions of the primary node are queried by default.
+         * <strong>example:</strong>
+         * <p>23302531</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -127,7 +142,10 @@ public class GetMongoDBCurrentOpRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify the parameter.
+         * <p>A reserved parameter. You do not need to specify the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

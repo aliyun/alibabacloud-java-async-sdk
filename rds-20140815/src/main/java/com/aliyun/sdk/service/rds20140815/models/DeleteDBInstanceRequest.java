@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBInstanceRequest</p>
  */
 public class DeleteDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReleasedKeepPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleasedKeepPolicy")
     private String releasedKeepPolicy;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeleteDBInstanceRequest(Builder builder) {
@@ -125,7 +130,11 @@ public class DeleteDBInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -152,14 +161,18 @@ public class DeleteDBInstanceRequest extends Request {
         }
 
         /**
-         * The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:
-         * <p>
+         * <p>The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:</p>
+         * <ul>
+         * <li><strong>None</strong>: No archived backup files are retained.</li>
+         * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
+         * <li><strong>All</strong>: All archived backup files are retained.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.</p>
+         * </blockquote>
          * 
-         * *   **None**: No archived backup files are retained.
-         * *   **Lastest**: Only the last archived backup file is retained.
-         * *   **All**: All archived backup files are retained.
-         * 
-         * > This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.
+         * <strong>example:</strong>
+         * <p>Lastest</p>
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.putQueryParameter("ReleasedKeepPolicy", releasedKeepPolicy);

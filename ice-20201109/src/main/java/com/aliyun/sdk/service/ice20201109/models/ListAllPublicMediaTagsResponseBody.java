@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllPublicMediaTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAllPublicMediaTagsResponseBody</p>
  */
 public class ListAllPublicMediaTagsResponseBody extends TeaModel {
-    @NameInMap("MediaTagList")
-    private java.util.List < MediaTagList> mediaTagList;
+    @com.aliyun.core.annotation.NameInMap("MediaTagList")
+    private java.util.List<MediaTagList> mediaTagList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAllPublicMediaTagsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     /**
      * @return mediaTagList
      */
-    public java.util.List < MediaTagList> getMediaTagList() {
+    public java.util.List<MediaTagList> getMediaTagList() {
         return this.mediaTagList;
     }
 
@@ -46,19 +51,22 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MediaTagList> mediaTagList; 
+        private java.util.List<MediaTagList> mediaTagList; 
         private String requestId; 
 
         /**
-         * MediaTagList.
+         * <p>The tags of media assets in the public media library.</p>
          */
-        public Builder mediaTagList(java.util.List < MediaTagList> mediaTagList) {
+        public Builder mediaTagList(java.util.List<MediaTagList> mediaTagList) {
             this.mediaTagList = mediaTagList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B45F83B7-7F87-4792-BFE9-63CD2137CAF0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAllPublicMediaTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllPublicMediaTagsResponseBody</p>
+     */
     public static class Options extends TeaModel {
-        @NameInMap("OptionChineseName")
+        @com.aliyun.core.annotation.NameInMap("OptionChineseName")
         private String optionChineseName;
 
-        @NameInMap("OptionEnglishName")
+        @com.aliyun.core.annotation.NameInMap("OptionEnglishName")
         private String optionEnglishName;
 
-        @NameInMap("OptionId")
+        @com.aliyun.core.annotation.NameInMap("OptionId")
         private String optionId;
 
         private Options(Builder builder) {
@@ -122,7 +136,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             private String optionId; 
 
             /**
-             * OptionChineseName.
+             * <p>The option name in Chinese.</p>
              */
             public Builder optionChineseName(String optionChineseName) {
                 this.optionChineseName = optionChineseName;
@@ -130,7 +144,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * OptionEnglishName.
+             * <p>The option name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Angry</p>
              */
             public Builder optionEnglishName(String optionEnglishName) {
                 this.optionEnglishName = optionEnglishName;
@@ -138,7 +155,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * OptionId.
+             * <p>The option ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Angry</p>
              */
             public Builder optionId(String optionId) {
                 this.optionId = optionId;
@@ -152,18 +172,24 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAllPublicMediaTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllPublicMediaTagsResponseBody</p>
+     */
     public static class MediaTagList extends TeaModel {
-        @NameInMap("MediaTagId")
+        @com.aliyun.core.annotation.NameInMap("MediaTagId")
         private String mediaTagId;
 
-        @NameInMap("MediaTagNameChinese")
+        @com.aliyun.core.annotation.NameInMap("MediaTagNameChinese")
         private String mediaTagNameChinese;
 
-        @NameInMap("MediaTagNameEnglish")
+        @com.aliyun.core.annotation.NameInMap("MediaTagNameEnglish")
         private String mediaTagNameEnglish;
 
-        @NameInMap("Options")
-        private java.util.List < Options> options;
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private java.util.List<Options> options;
 
         private MediaTagList(Builder builder) {
             this.mediaTagId = builder.mediaTagId;
@@ -204,7 +230,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         /**
          * @return options
          */
-        public java.util.List < Options> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
@@ -212,10 +238,13 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             private String mediaTagId; 
             private String mediaTagNameChinese; 
             private String mediaTagNameEnglish; 
-            private java.util.List < Options> options; 
+            private java.util.List<Options> options; 
 
             /**
-             * MediaTagId.
+             * <p>The ID of the media tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sticker-gif</p>
              */
             public Builder mediaTagId(String mediaTagId) {
                 this.mediaTagId = mediaTagId;
@@ -223,7 +252,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTagNameChinese.
+             * <p>The name of the media tag in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Gif</p>
              */
             public Builder mediaTagNameChinese(String mediaTagNameChinese) {
                 this.mediaTagNameChinese = mediaTagNameChinese;
@@ -231,7 +263,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTagNameEnglish.
+             * <p>The name of the material tag in English.</p>
              */
             public Builder mediaTagNameEnglish(String mediaTagNameEnglish) {
                 this.mediaTagNameEnglish = mediaTagNameEnglish;
@@ -239,9 +271,9 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * <p>The options.</p>
              */
-            public Builder options(java.util.List < Options> options) {
+            public Builder options(java.util.List<Options> options) {
                 this.options = options;
                 return this;
             }

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConnectionCountRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConnectionCountRecordsResponseBody</p>
  */
 public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
-    @NameInMap("AccessIpRecords")
+    @com.aliyun.core.annotation.NameInMap("AccessIpRecords")
     private java.util.List < AccessIpRecords> accessIpRecords;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserRecords")
+    @com.aliyun.core.annotation.NameInMap("UserRecords")
     private java.util.List < UserRecords> userRecords;
 
     private DescribeConnectionCountRecordsResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         private java.util.List < UserRecords> userRecords; 
 
         /**
-         * The queried client IP addresses.
+         * <p>The queried client IP addresses.</p>
          */
         public Builder accessIpRecords(java.util.List < AccessIpRecords> accessIpRecords) {
             this.accessIpRecords = accessIpRecords;
@@ -82,7 +82,10 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1jj9xqft1po****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -90,7 +93,10 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>562C7F89-FBE6-4A04-AAAA-7EBC25******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried database accounts.
+         * <p>The queried database accounts.</p>
          */
         public Builder userRecords(java.util.List < UserRecords> userRecords) {
             this.userRecords = userRecords;
@@ -111,11 +117,17 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConnectionCountRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConnectionCountRecordsResponseBody</p>
+     */
     public static class AccessIpRecords extends TeaModel {
-        @NameInMap("AccessIp")
+        @com.aliyun.core.annotation.NameInMap("AccessIp")
         private String accessIp;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
         private AccessIpRecords(Builder builder) {
@@ -150,7 +162,10 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42.120.XX.XX</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -158,7 +173,10 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of connections.
+             * <p>The number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -172,11 +190,17 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConnectionCountRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConnectionCountRecordsResponseBody</p>
+     */
     public static class UserRecords extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private UserRecords(Builder builder) {
@@ -211,7 +235,10 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The number of connections.
+             * <p>The number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -219,7 +246,10 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the database account.
+             * <p>The username of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder user(String user) {
                 this.user = user;

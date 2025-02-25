@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMFAAuthenticationSettingsRequest} extends {@link RequestModel}
  *
  * <p>UpdateMFAAuthenticationSettingsRequest</p>
  */
 public class UpdateMFAAuthenticationSettingsRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("MFAAuthenticationSettings")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MFAAuthenticationSettings")
     private String MFAAuthenticationSettings;
 
-    @Query
-    @NameInMap("OperationForRiskLogin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
     private String operationForRiskLogin;
 
     private UpdateMFAAuthenticationSettingsRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,13 +94,16 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable MFA for all users. Valid value:
-         * <p>
+         * <p>Specifies whether to enable MFA for all users. Valid value:</p>
+         * <ul>
+         * <li>Enabled: enables MFA for all users.</li>
+         * <li>Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
+         * <li>Disabled: disables MFA for all users.</li>
+         * <li>OnlyRiskyLogin: MFA is required only for unusual logons.</li>
+         * </ul>
          * 
-         * - Enabled: enables MFA for all users.
-         * - Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](~~450135~~).
-         * - Disabled: disables MFA for all users.
-         * - OnlyRiskyLogin: MFA is required only for unusual logons.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder MFAAuthenticationSettings(String MFAAuthenticationSettings) {
             this.putQueryParameter("MFAAuthenticationSettings", MFAAuthenticationSettings);
@@ -106,12 +112,16 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * Specifies whether MFA is required for users who initiated unusual logons. Valid value:
-         * <p>
+         * <p>Specifies whether MFA is required for users who initiated unusual logons. Valid value:</p>
+         * <ul>
+         * <li><p>Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.</p>
+         * </li>
+         * <li><p>EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</p>
+         * </li>
+         * </ul>
          * 
-         * - Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.
-         * 
-         * - EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.
+         * <strong>example:</strong>
+         * <p>Autonomous</p>
          */
         public Builder operationForRiskLogin(String operationForRiskLogin) {
             this.putQueryParameter("OperationForRiskLogin", operationForRiskLogin);

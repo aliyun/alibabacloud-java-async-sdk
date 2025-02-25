@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,92 +11,92 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartUserAppAsyncEnhanceInMsaRequest</p>
  */
 public class StartUserAppAsyncEnhanceInMsaRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ApkProtector")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApkProtector")
     private Boolean apkProtector;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("AssetsFileList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AssetsFileList")
     private String assetsFileList;
 
-    @Body
-    @NameInMap("Classes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Classes")
     private String classes;
 
-    @Body
-    @NameInMap("DalvikDebugger")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DalvikDebugger")
     private Integer dalvikDebugger;
 
-    @Body
-    @NameInMap("EmulatorEnvironment")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EmulatorEnvironment")
     private Integer emulatorEnvironment;
 
-    @Body
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Body
-    @NameInMap("JavaHook")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JavaHook")
     private Integer javaHook;
 
-    @Body
-    @NameInMap("MemoryDump")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MemoryDump")
     private Integer memoryDump;
 
-    @Body
-    @NameInMap("NativeDebugger")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NativeDebugger")
     private Integer nativeDebugger;
 
-    @Body
-    @NameInMap("NativeHook")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NativeHook")
     private Integer nativeHook;
 
-    @Body
-    @NameInMap("PackageTampered")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PackageTampered")
     private Integer packageTampered;
 
-    @Body
-    @NameInMap("Root")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Root")
     private Integer root;
 
-    @Body
-    @NameInMap("RunMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RunMode")
     private String runMode;
 
-    @Body
-    @NameInMap("SoFileList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SoFileList")
     private String soFileList;
 
-    @Body
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("TotalSwitch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TotalSwitch")
     private Boolean totalSwitch;
 
-    @Body
-    @NameInMap("UseAShield")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseAShield")
     private Boolean useAShield;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private StartUserAppAsyncEnhanceInMsaRequest(Builder builder) {

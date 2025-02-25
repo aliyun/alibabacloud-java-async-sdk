@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigLayer4RemarkRequest} extends {@link RequestModel}
  *
  * <p>ConfigLayer4RemarkRequest</p>
  */
 public class ConfigLayer4RemarkRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Listeners")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Listeners")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listeners;
 
     private ConfigLayer4RemarkRequest(Builder builder) {
@@ -78,19 +83,22 @@ public class ConfigLayer4RemarkRequest extends Request {
         }
 
         /**
-         * The port forwarding rule that you want to manage.
-         * <p>
+         * <p>The port forwarding rule that you want to manage.</p>
+         * <p>This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157484.html">DescribeNetworkRules</a> to query existing port forwarding rules.</p>
+         * </blockquote>
+         * <p>Each port forwarding rule contains the following fields:</p>
+         * <ul>
+         * <li><strong>InstanceId</strong>: the ID of the instance. This field is required and must be of the STRING type.</li>
+         * <li><strong>Protocol</strong>: the forwarding protocol. This field is required and must be of the STRING type. Valid values: <strong>tcp</strong> and <strong>udp</strong>.</li>
+         * <li><strong>FrontendPort</strong>: the forwarding port. This field is required and must be of the INTEGER type.</li>
+         * <li><strong>Remark</strong>: the remarks of the port forwarding rule. This field is required and must be of the STRING type. The value can contain letters, digits, and some special characters, such as <code>, . + - * / _</code>. The value can be up to 200 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.
-         * 
-         * > You can call the [DescribeNetworkRules](~~157484~~) to query existing port forwarding rules.
-         * 
-         * Each port forwarding rule contains the following fields:
-         * 
-         * *   **InstanceId**: the ID of the instance. This field is required and must be of the STRING type.
-         * *   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.
-         * *   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.
-         * *   **Remark**: the remarks of the port forwarding rule. This field is required and must be of the STRING type. The value can contain letters, digits, and some special characters, such as `, . + - * / _`. The value can be up to 200 characters in length.
+         * <strong>example:</strong>
+         * <p>[{&quot;InstanceId&quot;:&quot;ddosDip-sg-4hr2b3l****&quot;,&quot;FrontendPort&quot;:2020,&quot;Protocol&quot;:&quot;udp&quot;,&quot;Remark&quot;:&quot;test&quot;}]</p>
          */
         public Builder listeners(String listeners) {
             this.putQueryParameter("Listeners", listeners);

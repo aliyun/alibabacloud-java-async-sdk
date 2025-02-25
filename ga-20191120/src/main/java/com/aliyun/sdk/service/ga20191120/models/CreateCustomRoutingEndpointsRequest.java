@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomRoutingEndpointsRequest</p>
  */
 public class CreateCustomRoutingEndpointsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EndpointConfigurations")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-    @Query
-    @NameInMap("EndpointGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateCustomRoutingEndpointsRequest(Builder builder) {
@@ -99,7 +98,12 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
         } 
 
         /**
-         * The ID of the endpoint group in which to create endpoints.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,10 +124,7 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
         }
 
         /**
-         * The information about the endpoints.
-         * <p>
-         * 
-         * You can specify information for up to 20 endpoints.
+         * The ID of the endpoint group in which to create endpoints.
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -132,12 +133,7 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,10 +149,10 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -191,12 +187,12 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
             private Integer toPort; 
 
             /**
-             * The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
+             * The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
              * <p>
              * 
              * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
              * 
-             * You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 last ports for each destination.
+             * You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 first ports for each destination.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -204,7 +200,12 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
             }
 
             /**
-             * The returned information.
+             * The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
+             * <p>
+             * 
+             * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
+             * 
+             * You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 last ports for each destination.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -219,11 +220,11 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
 
     }
     public static class PolicyConfigurations extends TeaModel {
-        @NameInMap("Address")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Address")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String address;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PortRanges> portRanges;
 
         private PolicyConfigurations(Builder builder) {
@@ -258,14 +259,12 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
             private java.util.List < PortRanges> portRanges; 
 
             /**
-             * The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.
+             * The IP address of the destination to which traffic is forwarded.
              * <p>
-             * 
-             * If you leave this parameter empty, traffic is forwarded to all destination ports.
              * 
              * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
              * 
-             * You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 port ranges for each destination.
+             * You can specify up to 20 destination IP addresses for each endpoint.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -295,16 +294,16 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
 
     }
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("PolicyConfigurations")
+        @com.aliyun.core.annotation.NameInMap("PolicyConfigurations")
         private java.util.List < PolicyConfigurations> policyConfigurations;
 
-        @NameInMap("TrafficToEndpointPolicy")
+        @com.aliyun.core.annotation.NameInMap("TrafficToEndpointPolicy")
         private String trafficToEndpointPolicy;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EndpointConfigurations(Builder builder) {
@@ -357,14 +356,7 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
             private String type; 
 
             /**
-             * The traffic policy that is used to process traffic to the endpoint. Valid values:
-             * <p>
-             * 
-             * *   **DenyAll** (default): denies all traffic to the endpoint.
-             * *   **AllowAll**: allows all traffic to the endpoint.
-             * *   **AllowCustom**: allows traffic only to specified destinations in the endpoint.
-             * 
-             * If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.
+             * The ID of the vSwitch that is specified as an endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -383,10 +375,14 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
             }
 
             /**
-             * The destination to which traffic is forwarded.
+             * The traffic policy that is used to process traffic to the endpoint. Valid values:
              * <p>
              * 
-             * You can specify up to 20 destinations for each endpoint.
+             * *   **DenyAll** (default): denies all traffic to the endpoint.
+             * *   **AllowAll**: allows all traffic to the endpoint.
+             * *   **AllowCustom**: allows traffic only to specified destinations in the endpoint.
+             * 
+             * If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.
              */
             public Builder trafficToEndpointPolicy(String trafficToEndpointPolicy) {
                 this.trafficToEndpointPolicy = trafficToEndpointPolicy;
@@ -394,7 +390,10 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch that is specified as an endpoint.
+             * The type of endpoint.
+             * <p>
+             * 
+             * Set the value to **PrivateSubNet**, which specifies a private CIDR block. This is the default value.
              */
             public Builder type(String type) {
                 this.type = type;

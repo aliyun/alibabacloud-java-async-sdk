@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPayerForAccountResponseBody} extends {@link TeaModel}
  *
  * <p>GetPayerForAccountResponseBody</p>
  */
 public class GetPayerForAccountResponseBody extends TeaModel {
-    @NameInMap("PayerAccountId")
+    @com.aliyun.core.annotation.NameInMap("PayerAccountId")
     private String payerAccountId;
 
-    @NameInMap("PayerAccountName")
+    @com.aliyun.core.annotation.NameInMap("PayerAccountName")
     private String payerAccountName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPayerForAccountResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the billing account.
+         * <p>The ID of the billing account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172841235500****</p>
          */
         public Builder payerAccountId(String payerAccountId) {
             this.payerAccountId = payerAccountId;
@@ -70,7 +78,10 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the billing account.
+         * <p>The name of the billing account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder payerAccountName(String payerAccountName) {
             this.payerAccountName = payerAccountName;
@@ -78,7 +89,10 @@ public class GetPayerForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

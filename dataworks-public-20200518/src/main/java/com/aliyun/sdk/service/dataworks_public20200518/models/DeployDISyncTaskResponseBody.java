@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeployDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DeployDISyncTaskResponseBody</p>
  */
 public class DeployDISyncTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeployDISyncTaskResponseBody(Builder builder) {
@@ -62,11 +67,11 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:
-         * <p>
-         * 
-         * *   success: The real-time synchronization node or data synchronization solution is deployed.
-         * *   fail: The real-time synchronization node or data synchronization solution fails to be deployed.
+         * <p>Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:</p>
+         * <ul>
+         * <li>success: The real-time synchronization node or data synchronization solution is deployed.</li>
+         * <li>fail: The real-time synchronization node or data synchronization solution fails to be deployed.</li>
+         * </ul>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -74,7 +79,10 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The result of deploying the real-time synchronization node or data synchronization solution.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +90,10 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
+         * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,11 +106,17 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeployDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeployDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -134,7 +151,11 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The reason for the failure to publish a data integration synchronization task.</p>
+             * <p>If the data integration synchronization task is published successfully, the return value of this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>submit and deploy fail.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -142,10 +163,11 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the failure to deploy the real-time synchronization node or data synchronization solution.
-             * <p>
+             * <p>The cause of the failure to deploy the real-time synchronization node or data synchronization solution.</p>
+             * <p>If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.</p>
              * 
-             * If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

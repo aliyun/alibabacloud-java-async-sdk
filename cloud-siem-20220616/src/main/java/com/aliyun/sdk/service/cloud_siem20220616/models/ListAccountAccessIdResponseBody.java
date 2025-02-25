@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccountAccessIdResponseBody</p>
  */
 public class ListAccountAccessIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAccountAccessIdResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +101,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +109,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,11 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,25 +135,25 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessId")
+        @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
 
-        @NameInMap("AccessIdMd5")
+        @com.aliyun.core.annotation.NameInMap("AccessIdMd5")
         private String accessIdMd5;
 
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountStr")
+        @com.aliyun.core.annotation.NameInMap("AccountStr")
         private String accountStr;
 
-        @NameInMap("Bound")
+        @com.aliyun.core.annotation.NameInMap("Bound")
         private Integer bound;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
         private Data(Builder builder) {
@@ -230,7 +233,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * AccessId.
+             * The AccessKey ID of the cloud account that is added to the threat analysis feature.
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -238,7 +241,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * AccessIdMd5.
+             * The MD5 hash value of the AccessKey ID.
              */
             public Builder accessIdMd5(String accessIdMd5) {
                 this.accessIdMd5 = accessIdMd5;
@@ -246,7 +249,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -254,7 +257,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStr.
+             * The information about the cloud account to which the AccessKey ID belongs. The value is in the following format: Alibaba Cloud account ID|Alibaba Cloud account username|AccessKey ID.
              */
             public Builder accountStr(String accountStr) {
                 this.accountStr = accountStr;
@@ -262,7 +265,11 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * Bound.
+             * Indicates whether the cloud account to which the AccessKey ID belongs is added to the threat analysis feature. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder bound(Integer bound) {
                 this.bound = bound;
@@ -270,7 +277,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -278,7 +285,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account that is used to add the third-party cloud account.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;

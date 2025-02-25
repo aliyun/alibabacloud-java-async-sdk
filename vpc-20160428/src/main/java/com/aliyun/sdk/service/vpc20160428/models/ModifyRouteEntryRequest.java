@@ -1,62 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifyRouteEntryRequest</p>
  */
 public class ModifyRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("NewNextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    private String destinationCidrBlock;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewNextHopId")
     private String newNextHopId;
 
-    @Query
-    @NameInMap("NewNextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewNextHopType")
     private String newNextHopType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryId")
     private String routeEntryId;
 
-    @Query
-    @NameInMap("RouteEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryName")
     private String routeEntryName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    private String routeTableId;
 
     private ModifyRouteEntryRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.destinationCidrBlock = builder.destinationCidrBlock;
         this.newNextHopId = builder.newNextHopId;
         this.newNextHopType = builder.newNextHopType;
         this.ownerAccount = builder.ownerAccount;
@@ -66,6 +79,7 @@ public class ModifyRouteEntryRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.routeEntryId = builder.routeEntryId;
         this.routeEntryName = builder.routeEntryName;
+        this.routeTableId = builder.routeTableId;
     }
 
     public static Builder builder() {
@@ -86,6 +100,13 @@ public class ModifyRouteEntryRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return destinationCidrBlock
+     */
+    public String getDestinationCidrBlock() {
+        return this.destinationCidrBlock;
     }
 
     /**
@@ -151,8 +172,16 @@ public class ModifyRouteEntryRequest extends Request {
         return this.routeEntryName;
     }
 
+    /**
+     * @return routeTableId
+     */
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyRouteEntryRequest, Builder> {
         private String description; 
+        private String destinationCidrBlock; 
         private String newNextHopId; 
         private String newNextHopType; 
         private String ownerAccount; 
@@ -162,6 +191,7 @@ public class ModifyRouteEntryRequest extends Request {
         private Long resourceOwnerId; 
         private String routeEntryId; 
         private String routeEntryName; 
+        private String routeTableId; 
 
         private Builder() {
             super();
@@ -170,6 +200,7 @@ public class ModifyRouteEntryRequest extends Request {
         private Builder(ModifyRouteEntryRequest request) {
             super(request);
             this.description = request.description;
+            this.destinationCidrBlock = request.destinationCidrBlock;
             this.newNextHopId = request.newNextHopId;
             this.newNextHopType = request.newNextHopType;
             this.ownerAccount = request.ownerAccount;
@@ -179,13 +210,15 @@ public class ModifyRouteEntryRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.routeEntryId = request.routeEntryId;
             this.routeEntryName = request.routeEntryName;
+            this.routeTableId = request.routeTableId;
         } 
 
         /**
-         * The description of the route entry.
-         * <p>
+         * <p>The description of the route entry.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>EntryDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -194,7 +227,22 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the new next hop instance.
+         * <p>The destination CIDR block of the route entry. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
+         */
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
+            this.destinationCidrBlock = destinationCidrBlock;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the new next hop instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp17y37ytsenqyim****</p>
          */
         public Builder newNextHopId(String newNextHopId) {
             this.putQueryParameter("NewNextHopId", newNextHopId);
@@ -203,7 +251,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The new next hop type of the route.
+         * <p>The new next hop type of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         public Builder newNextHopType(String newNextHopType) {
             this.putQueryParameter("NewNextHopType", newNextHopType);
@@ -230,10 +281,12 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the route belongs.
-         * <p>
+         * <p>The ID of the region to which the route belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +313,10 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the custom route entry.
+         * <p>The ID of the custom route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-acfvgfsghfdd****</p>
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -269,14 +325,27 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * The name of the route entry.
-         * <p>
+         * <p>The name of the route entry.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>EntryName</p>
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
             this.routeEntryName = routeEntryName;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the route table to which the route entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1nk7zk65du3pni8z9td</p>
+         */
+        public Builder routeTableId(String routeTableId) {
+            this.putQueryParameter("RouteTableId", routeTableId);
+            this.routeTableId = routeTableId;
             return this;
         }
 

@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachNetworkInterfaceRequest} extends {@link RequestModel}
  *
  * <p>AttachNetworkInterfaceRequest</p>
  */
 public class AttachNetworkInterfaceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NetworkCardIndex")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkCardIndex")
     private Integer networkCardIndex;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrunkNetworkInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrunkNetworkInstanceId")
     private String trunkNetworkInstanceId;
 
-    @Query
-    @NameInMap("WaitForNetworkConfigurationReady")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WaitForNetworkConfigurationReady")
     private Boolean waitForNetworkConfigurationReady;
 
     private AttachNetworkInterfaceRequest(Builder builder) {
@@ -206,7 +211,11 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp16qstyvxj9gpqw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -215,10 +224,13 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The index of the network interface controller (NIC).
-         * <p>
+         * <p>The index of the network interface controller (NIC).</p>
+         * <blockquote>
+         * <p>The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * </blockquote>
          * 
-         * > The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type of the specified instance supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](~~25378~~).
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder networkCardIndex(Integer networkCardIndex) {
             this.putQueryParameter("NetworkCardIndex", networkCardIndex);
@@ -227,7 +239,11 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp17pdijfczax1huji****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -254,7 +270,11 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,10 +301,13 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the trunk ENI.
-         * <p>
+         * <p>The ID of the trunk ENI.</p>
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
          * 
-         * > This parameter is unavailable.
+         * <strong>example:</strong>
+         * <p>eni-f8zapqwj1v1j4ia3****</p>
          */
         public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
             this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);
@@ -293,7 +316,12 @@ public class AttachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer supported.
+         * <blockquote>
+         * <p>This parameter is no longer supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder waitForNetworkConfigurationReady(Boolean waitForNetworkConfigurationReady) {
             this.putQueryParameter("WaitForNetworkConfigurationReady", waitForNetworkConfigurationReady);

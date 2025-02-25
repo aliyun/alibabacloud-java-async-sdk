@@ -154,7 +154,7 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The definition of the flow.
+         * The flow definition, which follows the FDL syntax standard. Considering compatibility, the system supports the two flow definition specifications.
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -210,7 +210,7 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the RAM role.
+         * The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoModerationResponseBody} extends {@link TeaModel}
  *
  * <p>VideoModerationResponseBody</p>
  */
 public class VideoModerationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VideoModerationResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class VideoModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +125,21 @@ public class VideoModerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VideoModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
+        private String dataId;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {
+            this.dataId = builder.dataId;
             this.taskId = builder.taskId;
         }
 
@@ -128,6 +152,13 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataId
+         */
+        public String getDataId() {
+            return this.dataId;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -135,10 +166,25 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String dataId; 
             private String taskId; 
 
             /**
-             * TaskId.
+             * <p>The ID of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data1234</p>
+             */
+            public Builder dataId(String dataId) {
+                this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

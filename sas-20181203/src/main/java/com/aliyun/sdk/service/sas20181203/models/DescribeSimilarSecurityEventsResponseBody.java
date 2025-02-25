@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimilarSecurityEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSimilarSecurityEventsResponseBody</p>
  */
 public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityEventsResponse")
-    private java.util.List < SecurityEventsResponse> securityEventsResponse;
+    @com.aliyun.core.annotation.NameInMap("SecurityEventsResponse")
+    private java.util.List<SecurityEventsResponse> securityEventsResponse;
 
     private DescribeSimilarSecurityEventsResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     /**
      * @return securityEventsResponse
      */
-    public java.util.List < SecurityEventsResponse> getSecurityEventsResponse() {
+    public java.util.List<SecurityEventsResponse> getSecurityEventsResponse() {
         return this.securityEventsResponse;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < SecurityEventsResponse> securityEventsResponse; 
+        private java.util.List<SecurityEventsResponse> securityEventsResponse; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F4217C8-763F-51EF-84D4-5535E072B2D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the alert events that are triggered by the same rule or of the same alert type.
+         * <p>The information about the alert events that are triggered by the same rule or of the same alert type.</p>
          */
-        public Builder securityEventsResponse(java.util.List < SecurityEventsResponse> securityEventsResponse) {
+        public Builder securityEventsResponse(java.util.List<SecurityEventsResponse> securityEventsResponse) {
             this.securityEventsResponse = securityEventsResponse;
             return this;
         }
@@ -91,17 +99,23 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSimilarSecurityEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSimilarSecurityEventsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,23 +218,29 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSimilarSecurityEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSimilarSecurityEventsResponseBody</p>
+     */
     public static class SecurityEventsResponse extends TeaModel {
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private Long occurrenceTime;
 
-        @NameInMap("SecurityEventId")
+        @com.aliyun.core.annotation.NameInMap("SecurityEventId")
         private Long securityEventId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private SecurityEventsResponse(Builder builder) {
@@ -279,7 +311,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The name of the alert event.
+             * <p>The name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trojan</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -287,31 +322,33 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event. Valid values:
-             * <p>
+             * <p>The type of the alert event. Valid values:</p>
+             * <ul>
+             * <li>Suspicious Process</li>
+             * <li>Webshell</li>
+             * <li>Unusual Logon</li>
+             * <li>Malicious Software</li>
+             * <li>Sensitive File Tampering</li>
+             * <li>Unusual Network Connection</li>
+             * <li>Other</li>
+             * <li>Suspicious Account</li>
+             * <li>Cloud threat detection</li>
+             * <li>Precision defense</li>
+             * <li>Application Whitelist</li>
+             * <li>Persistence</li>
+             * <li>Web Application Threat Detection</li>
+             * <li>Malicious scripts</li>
+             * <li>Malicious Network Activity</li>
+             * <li>K8s Abnormal Behavior</li>
+             * <li>Website backdoor (local engine)</li>
+             * <li>Exploit</li>
+             * <li>Image Scan</li>
+             * <li>Trusted exception</li>
+             * </ul>
+             * <p>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Overview</a>.</p>
              * 
-             * *   Suspicious Process
-             * *   Webshell
-             * *   Unusual Logon
-             * *   Malicious Software
-             * *   Sensitive File Tampering
-             * *   Unusual Network Connection
-             * *   Other
-             * *   Suspicious Account
-             * *   Cloud threat detection
-             * *   Precision defense
-             * *   Application Whitelist
-             * *   Persistence
-             * *   Web Application Threat Detection
-             * *   Malicious scripts
-             * *   Malicious Network Activity
-             * *   K8s Abnormal Behavior
-             * *   Website backdoor (local engine)
-             * *   Exploit
-             * *   Image Scan
-             * *   Trusted exception
-             * 
-             * For more information about alert types, see [Overview](~~68388~~).
+             * <strong>example:</strong>
+             * <p>Malicious Software</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -319,7 +356,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the alert event was last detected. Unit: milliseconds.
+             * <p>The timestamp generated when the alert event was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648544361480</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -327,7 +367,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the alert event was first detected. Unit: milliseconds.
+             * <p>The timestamp generated when the alert event was first detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648457961000</p>
              */
             public Builder occurrenceTime(Long occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -335,7 +378,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert event.
+             * <p>The ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158661</p>
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -343,7 +389,10 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server that was affected by the alert event.
+             * <p>The UUID of the server that was affected by the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qweeqq-13232-daweq-w****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

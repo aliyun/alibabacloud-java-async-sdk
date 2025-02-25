@@ -1,82 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountAndAuthorityRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountAndAuthorityRequest</p>
  */
 public class CreateAccountAndAuthorityRequest extends Request {
-    @Query
-    @NameInMap("AccountDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountDescription")
     private String accountDescription;
 
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountPassword;
 
-    @Query
-    @NameInMap("AllowDatabases")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowDatabases")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowDatabases;
 
-    @Query
-    @NameInMap("AllowDictionaries")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowDictionaries;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DdlAuthority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdlAuthority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean ddlAuthority;
 
-    @Query
-    @NameInMap("DmlAuthority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DmlAuthority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dmlAuthority;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TotalDatabases")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalDatabases")
     private String totalDatabases;
 
-    @Query
-    @NameInMap("TotalDictionaries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalDictionaries")
     private String totalDictionaries;
 
     private CreateAccountAndAuthorityRequest(Builder builder) {
@@ -266,7 +271,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -275,7 +283,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Aa</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -284,7 +295,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDatabases.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1</p>
          */
         public Builder allowDatabases(String allowDatabases) {
             this.putQueryParameter("AllowDatabases", allowDatabases);
@@ -293,7 +307,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDictionaries.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt1</p>
          */
         public Builder allowDictionaries(String allowDictionaries) {
             this.putQueryParameter("AllowDictionaries", allowDictionaries);
@@ -302,7 +319,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1p816075e21****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -311,7 +331,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * DdlAuthority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.putQueryParameter("DdlAuthority", ddlAuthority);
@@ -320,7 +343,10 @@ public class CreateAccountAndAuthorityRequest extends Request {
         }
 
         /**
-         * DmlAuthority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.putQueryParameter("DmlAuthority", dmlAuthority);

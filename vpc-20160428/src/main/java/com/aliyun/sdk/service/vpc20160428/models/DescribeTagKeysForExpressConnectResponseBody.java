@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagKeysForExpressConnectResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagKeysForExpressConnectResponseBody</p>
  */
 public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private TagKeys tagKeys;
 
     private DescribeTagKeysForExpressConnectResponseBody(Builder builder) {
@@ -62,11 +67,14 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +82,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +93,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -95,11 +106,17 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagKeysForExpressConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagKeysForExpressConnectResponseBody</p>
+     */
     public static class TagKey extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TagKey(Builder builder) {
@@ -134,7 +151,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -142,7 +162,10 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates an Express Connect circuit.
+             * <p>The type of the resource. The value is set to <strong>PHYSICALCONNECTION</strong>, which indicates an Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -156,9 +179,15 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagKeysForExpressConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagKeysForExpressConnectResponseBody</p>
+     */
     public static class TagKeys extends TeaModel {
-        @NameInMap("TagKey")
-        private java.util.List < TagKey> tagKey;
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private java.util.List<TagKey> tagKey;
 
         private TagKeys(Builder builder) {
             this.tagKey = builder.tagKey;
@@ -175,17 +204,20 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         /**
          * @return tagKey
          */
-        public java.util.List < TagKey> getTagKey() {
+        public java.util.List<TagKey> getTagKey() {
             return this.tagKey;
         }
 
         public static final class Builder {
-            private java.util.List < TagKey> tagKey; 
+            private java.util.List<TagKey> tagKey; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
-            public Builder tagKey(java.util.List < TagKey> tagKey) {
+            public Builder tagKey(java.util.List<TagKey> tagKey) {
                 this.tagKey = tagKey;
                 return this;
             }

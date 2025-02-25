@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationClientSecretResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationClientSecretResponseBody</p>
  */
 public class CreateApplicationClientSecretResponseBody extends TeaModel {
-    @NameInMap("ApplicationClientSecret")
+    @com.aliyun.core.annotation.NameInMap("ApplicationClientSecret")
     private ApplicationClientSecret applicationClientSecret;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateApplicationClientSecretResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the client key.
+         * <p>The information about the client key.</p>
          */
         public Builder applicationClientSecret(ApplicationClientSecret applicationClientSecret) {
             this.applicationClientSecret = applicationClientSecret;
@@ -58,7 +63,10 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationClientSecretResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationClientSecretResponseBody</p>
+     */
     public static class ApplicationClientSecret extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientSecret")
+        @com.aliyun.core.annotation.NameInMap("ClientSecret")
         private String clientSecret;
 
-        @NameInMap("SecretId")
+        @com.aliyun.core.annotation.NameInMap("SecretId")
         private String secretId;
 
         private ApplicationClientSecret(Builder builder) {
@@ -122,7 +136,10 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             private String secretId; 
 
             /**
-             * The client ID of the application.
+             * <p>The client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -130,7 +147,10 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The client key secret of the application.
+             * <p>The client key secret of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -138,7 +158,10 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The client key ID of the application.
+             * <p>The client key ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sci_k52x2ru63rlkflina5utgkxxxx</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;

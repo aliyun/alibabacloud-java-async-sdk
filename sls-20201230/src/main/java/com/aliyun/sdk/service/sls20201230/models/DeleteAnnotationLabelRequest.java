@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link DeleteAnnotationLabelRequest} extends {@link RequestModel}
  *
  * <p>DeleteAnnotationLabelRequest</p>
  */
 public class DeleteAnnotationLabelRequest extends Request {
-    @Path
-    @NameInMap("labelId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("labelId")
     private String labelId;
 
     private DeleteAnnotationLabelRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class DeleteAnnotationLabelRequest extends Request {
         } 
 
         /**
-         * labelId.
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls_builtin_4e0aba6d9664073513e9954fb57bd799</p>
          */
         public Builder labelId(String labelId) {
             this.putPathParameter("labelId", labelId);

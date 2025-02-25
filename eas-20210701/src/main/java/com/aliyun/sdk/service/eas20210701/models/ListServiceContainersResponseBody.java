@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceContainersResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceContainersResponseBody</p>
  */
 public class ListServiceContainersResponseBody extends TeaModel {
-    @NameInMap("Containers")
-    private java.util.List < ContainerInfo > containers;
+    @com.aliyun.core.annotation.NameInMap("Containers")
+    private java.util.List<ContainerInfo> containers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
     private ListServiceContainersResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListServiceContainersResponseBody extends TeaModel {
     /**
      * @return containers
      */
-    public java.util.List < ContainerInfo > getContainers() {
+    public java.util.List<ContainerInfo> getContainers() {
         return this.containers;
     }
 
@@ -57,20 +62,23 @@ public class ListServiceContainersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContainerInfo > containers; 
+        private java.util.List<ContainerInfo> containers; 
         private String requestId; 
         private String serviceName; 
 
         /**
-         * Containers.
+         * <p>The containers of the service.</p>
          */
-        public Builder containers(java.util.List < ContainerInfo > containers) {
+        public Builder containers(java.util.List<ContainerInfo> containers) {
             this.containers = containers;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListServiceContainersResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

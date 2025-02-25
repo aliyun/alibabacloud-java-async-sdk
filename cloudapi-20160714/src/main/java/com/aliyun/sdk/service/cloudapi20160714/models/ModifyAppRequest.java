@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppRequest</p>
  */
 public class ModifyAppRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appId;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ModifyAppRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class ModifyAppRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -108,7 +113,7 @@ public class ModifyAppRequest extends Request {
         private String description; 
         private String extend; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -125,7 +130,11 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the app.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20112314518278</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -134,10 +143,11 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.
-         * <p>
+         * <p>The value must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
+         * <p>This parameter is required only when you want to modify the value.</p>
          * 
-         * If you do not want to modify the existing value, do not specify this parameter.
+         * <strong>example:</strong>
+         * <p>jiedian_pord</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -146,10 +156,11 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The description of the application. The description can be up to 180 characters in length.
-         * <p>
+         * <p>The description of the app. The description can contain a maximum of 180 characters in length.</p>
+         * <p>This parameter is required only when you want to modify the value.</p>
          * 
-         * If you do not want to modify the existing value, do not specify this parameter.
+         * <strong>example:</strong>
+         * <p>modidyTest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -158,7 +169,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>扩展信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110461946884</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -176,9 +190,12 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -191,12 +208,18 @@ public class ModifyAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAppRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -231,10 +254,12 @@ public class ModifyAppRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -242,10 +267,11 @@ public class ModifyAppRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

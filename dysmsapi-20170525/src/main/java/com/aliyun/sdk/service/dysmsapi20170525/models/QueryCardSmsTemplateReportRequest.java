@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCardSmsTemplateReportRequest} extends {@link RequestModel}
  *
  * <p>QueryCardSmsTemplateReportRequest</p>
  */
 public class QueryCardSmsTemplateReportRequest extends Request {
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Query
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    @Query
-    @NameInMap("TemplateCodes")
-    @Validation(required = true)
-    private java.util.List < String > templateCodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCodes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> templateCodes;
 
     private QueryCardSmsTemplateReportRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class QueryCardSmsTemplateReportRequest extends Request {
     /**
      * @return templateCodes
      */
-    public java.util.List < String > getTemplateCodes() {
+    public java.util.List<String> getTemplateCodes() {
         return this.templateCodes;
     }
 
     public static final class Builder extends Request.Builder<QueryCardSmsTemplateReportRequest, Builder> {
         private String endDate; 
         private String startDate; 
-        private java.util.List < String > templateCodes; 
+        private java.util.List<String> templateCodes; 
 
         private Builder() {
             super();
@@ -83,7 +88,10 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-11 00:00:01</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -92,7 +100,10 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-10 00:00:01</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -101,9 +112,10 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         }
 
         /**
-         * TemplateCodes.
+         * <p>The array of message templates.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder templateCodes(java.util.List < String > templateCodes) {
+        public Builder templateCodes(java.util.List<String> templateCodes) {
             this.putQueryParameter("TemplateCodes", templateCodes);
             this.templateCodes = templateCodes;
             return this;

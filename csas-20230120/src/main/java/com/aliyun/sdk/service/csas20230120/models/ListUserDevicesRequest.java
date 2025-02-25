@@ -1,94 +1,108 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserDevicesRequest} extends {@link RequestModel}
  *
  * <p>ListUserDevicesRequest</p>
  */
 public class ListUserDevicesRequest extends Request {
-    @Query
-    @NameInMap("AppStatuses")
-    private java.util.List < String > appStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppStatuses")
+    private java.util.List<String> appStatuses;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersions")
+    private java.util.List<String> appVersions;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long currentPage;
 
-    @Query
-    @NameInMap("Department")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Department")
     private String department;
 
-    @Query
-    @NameInMap("DeviceBelong")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceBelong")
     private String deviceBelong;
 
-    @Query
-    @NameInMap("DeviceStatuses")
-    private java.util.List < String > deviceStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceStatuses")
+    private java.util.List<String> deviceStatuses;
 
-    @Query
-    @NameInMap("DeviceTags")
-    private java.util.List < String > deviceTags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTags")
+    private java.util.List<String> deviceTags;
 
-    @Query
-    @NameInMap("DeviceTypes")
-    private java.util.List < String > deviceTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTypes")
+    private java.util.List<String> deviceTypes;
 
-    @Query
-    @NameInMap("DlpStatuses")
-    private java.util.List < String > dlpStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DlpStatuses")
+    private java.util.List<String> dlpStatuses;
 
-    @Query
-    @NameInMap("Hostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
-    @Query
-    @NameInMap("IaStatuses")
-    private java.util.List < String > iaStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IaStatuses")
+    private java.util.List<String> iaStatuses;
 
-    @Query
-    @NameInMap("Mac")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InnerIp")
+    private String innerIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mac")
     private String mac;
 
-    @Query
-    @NameInMap("NacStatuses")
-    private java.util.List < String > nacStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NacStatuses")
+    private java.util.List<String> nacStatuses;
 
-    @Query
-    @NameInMap("PaStatuses")
-    private java.util.List < String > paStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaStatuses")
+    private java.util.List<String> paStatuses;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("SaseUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaseUserId")
     private String saseUserId;
 
-    @Query
-    @NameInMap("SharingStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SharingStatus")
     private Boolean sharingStatus;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private ListUserDevicesRequest(Builder builder) {
         super(builder);
         this.appStatuses = builder.appStatuses;
+        this.appVersions = builder.appVersions;
         this.currentPage = builder.currentPage;
         this.department = builder.department;
         this.deviceBelong = builder.deviceBelong;
@@ -98,6 +112,7 @@ public class ListUserDevicesRequest extends Request {
         this.dlpStatuses = builder.dlpStatuses;
         this.hostname = builder.hostname;
         this.iaStatuses = builder.iaStatuses;
+        this.innerIp = builder.innerIp;
         this.mac = builder.mac;
         this.nacStatuses = builder.nacStatuses;
         this.paStatuses = builder.paStatuses;
@@ -124,8 +139,15 @@ public class ListUserDevicesRequest extends Request {
     /**
      * @return appStatuses
      */
-    public java.util.List < String > getAppStatuses() {
+    public java.util.List<String> getAppStatuses() {
         return this.appStatuses;
+    }
+
+    /**
+     * @return appVersions
+     */
+    public java.util.List<String> getAppVersions() {
+        return this.appVersions;
     }
 
     /**
@@ -152,28 +174,28 @@ public class ListUserDevicesRequest extends Request {
     /**
      * @return deviceStatuses
      */
-    public java.util.List < String > getDeviceStatuses() {
+    public java.util.List<String> getDeviceStatuses() {
         return this.deviceStatuses;
     }
 
     /**
      * @return deviceTags
      */
-    public java.util.List < String > getDeviceTags() {
+    public java.util.List<String> getDeviceTags() {
         return this.deviceTags;
     }
 
     /**
      * @return deviceTypes
      */
-    public java.util.List < String > getDeviceTypes() {
+    public java.util.List<String> getDeviceTypes() {
         return this.deviceTypes;
     }
 
     /**
      * @return dlpStatuses
      */
-    public java.util.List < String > getDlpStatuses() {
+    public java.util.List<String> getDlpStatuses() {
         return this.dlpStatuses;
     }
 
@@ -187,8 +209,15 @@ public class ListUserDevicesRequest extends Request {
     /**
      * @return iaStatuses
      */
-    public java.util.List < String > getIaStatuses() {
+    public java.util.List<String> getIaStatuses() {
         return this.iaStatuses;
+    }
+
+    /**
+     * @return innerIp
+     */
+    public String getInnerIp() {
+        return this.innerIp;
     }
 
     /**
@@ -201,14 +230,14 @@ public class ListUserDevicesRequest extends Request {
     /**
      * @return nacStatuses
      */
-    public java.util.List < String > getNacStatuses() {
+    public java.util.List<String> getNacStatuses() {
         return this.nacStatuses;
     }
 
     /**
      * @return paStatuses
      */
-    public java.util.List < String > getPaStatuses() {
+    public java.util.List<String> getPaStatuses() {
         return this.paStatuses;
     }
 
@@ -248,19 +277,21 @@ public class ListUserDevicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUserDevicesRequest, Builder> {
-        private java.util.List < String > appStatuses; 
+        private java.util.List<String> appStatuses; 
+        private java.util.List<String> appVersions; 
         private Long currentPage; 
         private String department; 
         private String deviceBelong; 
-        private java.util.List < String > deviceStatuses; 
-        private java.util.List < String > deviceTags; 
-        private java.util.List < String > deviceTypes; 
-        private java.util.List < String > dlpStatuses; 
+        private java.util.List<String> deviceStatuses; 
+        private java.util.List<String> deviceTags; 
+        private java.util.List<String> deviceTypes; 
+        private java.util.List<String> dlpStatuses; 
         private String hostname; 
-        private java.util.List < String > iaStatuses; 
+        private java.util.List<String> iaStatuses; 
+        private String innerIp; 
         private String mac; 
-        private java.util.List < String > nacStatuses; 
-        private java.util.List < String > paStatuses; 
+        private java.util.List<String> nacStatuses; 
+        private java.util.List<String> paStatuses; 
         private Long pageSize; 
         private String saseUserId; 
         private Boolean sharingStatus; 
@@ -274,6 +305,7 @@ public class ListUserDevicesRequest extends Request {
         private Builder(ListUserDevicesRequest request) {
             super(request);
             this.appStatuses = request.appStatuses;
+            this.appVersions = request.appVersions;
             this.currentPage = request.currentPage;
             this.department = request.department;
             this.deviceBelong = request.deviceBelong;
@@ -283,6 +315,7 @@ public class ListUserDevicesRequest extends Request {
             this.dlpStatuses = request.dlpStatuses;
             this.hostname = request.hostname;
             this.iaStatuses = request.iaStatuses;
+            this.innerIp = request.innerIp;
             this.mac = request.mac;
             this.nacStatuses = request.nacStatuses;
             this.paStatuses = request.paStatuses;
@@ -296,14 +329,26 @@ public class ListUserDevicesRequest extends Request {
         /**
          * AppStatuses.
          */
-        public Builder appStatuses(java.util.List < String > appStatuses) {
+        public Builder appStatuses(java.util.List<String> appStatuses) {
             this.putQueryParameter("AppStatuses", appStatuses);
             this.appStatuses = appStatuses;
             return this;
         }
 
         /**
-         * CurrentPage.
+         * AppVersions.
+         */
+        public Builder appVersions(java.util.List<String> appVersions) {
+            this.putQueryParameter("AppVersions", appVersions);
+            this.appVersions = appVersions;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -332,7 +377,7 @@ public class ListUserDevicesRequest extends Request {
         /**
          * DeviceStatuses.
          */
-        public Builder deviceStatuses(java.util.List < String > deviceStatuses) {
+        public Builder deviceStatuses(java.util.List<String> deviceStatuses) {
             this.putQueryParameter("DeviceStatuses", deviceStatuses);
             this.deviceStatuses = deviceStatuses;
             return this;
@@ -341,7 +386,7 @@ public class ListUserDevicesRequest extends Request {
         /**
          * DeviceTags.
          */
-        public Builder deviceTags(java.util.List < String > deviceTags) {
+        public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putQueryParameter("DeviceTags", deviceTags);
             this.deviceTags = deviceTags;
             return this;
@@ -350,7 +395,7 @@ public class ListUserDevicesRequest extends Request {
         /**
          * DeviceTypes.
          */
-        public Builder deviceTypes(java.util.List < String > deviceTypes) {
+        public Builder deviceTypes(java.util.List<String> deviceTypes) {
             this.putQueryParameter("DeviceTypes", deviceTypes);
             this.deviceTypes = deviceTypes;
             return this;
@@ -359,7 +404,7 @@ public class ListUserDevicesRequest extends Request {
         /**
          * DlpStatuses.
          */
-        public Builder dlpStatuses(java.util.List < String > dlpStatuses) {
+        public Builder dlpStatuses(java.util.List<String> dlpStatuses) {
             this.putQueryParameter("DlpStatuses", dlpStatuses);
             this.dlpStatuses = dlpStatuses;
             return this;
@@ -377,9 +422,18 @@ public class ListUserDevicesRequest extends Request {
         /**
          * IaStatuses.
          */
-        public Builder iaStatuses(java.util.List < String > iaStatuses) {
+        public Builder iaStatuses(java.util.List<String> iaStatuses) {
             this.putQueryParameter("IaStatuses", iaStatuses);
             this.iaStatuses = iaStatuses;
+            return this;
+        }
+
+        /**
+         * InnerIp.
+         */
+        public Builder innerIp(String innerIp) {
+            this.putQueryParameter("InnerIp", innerIp);
+            this.innerIp = innerIp;
             return this;
         }
 
@@ -395,7 +449,7 @@ public class ListUserDevicesRequest extends Request {
         /**
          * NacStatuses.
          */
-        public Builder nacStatuses(java.util.List < String > nacStatuses) {
+        public Builder nacStatuses(java.util.List<String> nacStatuses) {
             this.putQueryParameter("NacStatuses", nacStatuses);
             this.nacStatuses = nacStatuses;
             return this;
@@ -404,14 +458,17 @@ public class ListUserDevicesRequest extends Request {
         /**
          * PaStatuses.
          */
-        public Builder paStatuses(java.util.List < String > paStatuses) {
+        public Builder paStatuses(java.util.List<String> paStatuses) {
             this.putQueryParameter("PaStatuses", paStatuses);
             this.paStatuses = paStatuses;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

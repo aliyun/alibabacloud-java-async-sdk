@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeTaskRequest</p>
  */
 public class DescribeTaskRequest extends Request {
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private DescribeTaskRequest(Builder builder) {
@@ -74,15 +79,18 @@ public class DescribeTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTaskRequest response) {
-            super(response);
-            this.resourceGroupId = response.resourceGroupId;
-            this.taskId = response.taskId;
-            this.token = response.token;
+        private Builder(DescribeTaskRequest request) {
+            super(request);
+            this.resourceGroupId = request.resourceGroupId;
+            this.taskId = request.taskId;
+            this.token = request.token;
         } 
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvywqfey5njq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -91,7 +99,10 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-*********************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -100,7 +111,10 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01W3ZZOQ</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

@@ -76,15 +76,15 @@ public class DescribePreCheckResultRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePreCheckResultRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
-            this.taskId = response.taskId;
+        private Builder(DescribePreCheckResultRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -93,7 +93,7 @@ public class DescribePreCheckResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class DescribePreCheckResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the precheck task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

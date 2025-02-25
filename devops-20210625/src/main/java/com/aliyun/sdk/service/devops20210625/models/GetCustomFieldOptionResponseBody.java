@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomFieldOptionResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomFieldOptionResponseBody</p>
  */
 public class GetCustomFieldOptionResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("fileds")
-    private java.util.List < Fileds> fileds;
+    @com.aliyun.core.annotation.NameInMap("fileds")
+    private java.util.List<Fileds> fileds;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetCustomFieldOptionResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
     /**
      * @return fileds
      */
-    public java.util.List < Fileds> getFileds() {
+    public java.util.List<Fileds> getFileds() {
         return this.fileds;
     }
 
@@ -81,7 +86,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMsg; 
-        private java.util.List < Fileds> fileds; 
+        private java.util.List<Fileds> fileds; 
         private String requestId; 
         private Boolean success; 
 
@@ -104,7 +109,7 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
         /**
          * fileds.
          */
-        public Builder fileds(java.util.List < Fileds> fileds) {
+        public Builder fileds(java.util.List<Fileds> fileds) {
             this.fileds = fileds;
             return this;
         }
@@ -131,26 +136,32 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomFieldOptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomFieldOptionResponseBody</p>
+     */
     public static class Fileds extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private Long level;
 
-        @NameInMap("position")
+        @com.aliyun.core.annotation.NameInMap("position")
         private Long position;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
-        @NameInMap("valueEn")
+        @com.aliyun.core.annotation.NameInMap("valueEn")
         private String valueEn;
 
         private Fileds(Builder builder) {

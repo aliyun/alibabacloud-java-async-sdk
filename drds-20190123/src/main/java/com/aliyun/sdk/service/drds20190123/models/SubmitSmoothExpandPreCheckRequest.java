@@ -77,15 +77,19 @@ public class SubmitSmoothExpandPreCheckRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitSmoothExpandPreCheckRequest response) {
-            super(response);
-            this.dbInstType = response.dbInstType;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(SubmitSmoothExpandPreCheckRequest request) {
+            super(request);
+            this.dbInstType = request.dbInstType;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DbInstType.
+         * The type of the database. Valid values:
+         * <p>
+         * 
+         * *   RDS
+         * *   POLARDB
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -94,7 +98,7 @@ public class SubmitSmoothExpandPreCheckRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the PolarDB-X database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -103,7 +107,7 @@ public class SubmitSmoothExpandPreCheckRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

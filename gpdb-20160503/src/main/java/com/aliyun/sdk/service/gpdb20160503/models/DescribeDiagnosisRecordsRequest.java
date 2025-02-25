@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosisRecordsRequest</p>
  */
 public class DescribeDiagnosisRecordsRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Database")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String database;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryCondition")
     private String queryCondition;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DescribeDiagnosisRecordsRequest(Builder builder) {
@@ -182,10 +187,14 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -194,7 +203,11 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -203,7 +216,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-07T07:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,7 +228,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The keyword of the SQL statement.
+         * <p>The keyword of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -221,7 +240,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The order of fields in the console. You do not need to specify this parameter.
+         * <p>The order of fields in the console. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -230,7 +252,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,14 +264,16 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -255,20 +282,25 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The filter condition on queries. Specify the value in the JSON format. Valid values:
-         * <p>
+         * <p>The filter condition on queries. Specify the value in the JSON format. Valid values:</p>
+         * <ul>
+         * <li><p><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: filters the top 100 queries that are the most time-consuming.</p>
+         * </li>
+         * <li><p><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: filters completed queries.</p>
+         * </li>
+         * <li><p><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: filters running queries.</p>
+         * </li>
+         * <li><p><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: filters the queries that consume a period of 30 milliseconds to less than 50 milliseconds. You can customize a filter condition by setting <strong>Min</strong> and <strong>Max</strong>.</p>
+         * <ul>
+         * <li>If only <strong>Min</strong> is specified, the queries that consume a period of time that is greater than the Min value are filtered.</li>
+         * <li>If only <strong>Max</strong> is specified, the queries that consume a period of time that is less than the Max value are filtered.</li>
+         * <li>If both <strong>Min</strong> and <strong>Max</strong> are specified, the queries that consume a period of time that is greater than or equal to the <strong>Min</strong> value and less than or equal to the <strong>Max</strong> value are filtered.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   `{"Type":"maxCost", "Value":"100"}`: filters the top 100 queries that are the most time-consuming.
-         * 
-         * *   `{"Type":"status","Value":"finished"}`: filters completed queries.
-         * 
-         * *   `{"Type":"status","Value":"running"}`: filters running queries.
-         * 
-         * *   `{"Type":"cost","Min":"30","Max":"50"}`: filters the queries that consume a period of 30 milliseconds to less than 50 milliseconds. You can customize a filter condition by setting **Min** and **Max**.
-         * 
-         *     *   If only **Min** is specified, the queries that consume a period of time that is greater than the Min value are filtered.
-         *     *   If only **Max** is specified, the queries that consume a period of time that is less than the Max value are filtered.
-         *     *   If both **Min** and **Max** are specified, the queries that consume a period of time that is greater than or equal to the **Min** value and less than or equal to the **Max** value are filtered.
+         * <strong>example:</strong>
+         * <p>{ &quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot; }</p>
          */
         public Builder queryCondition(String queryCondition) {
             this.putQueryParameter("QueryCondition", queryCondition);
@@ -277,7 +309,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-07T06:59Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -286,7 +321,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

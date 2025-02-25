@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentDownloadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentDownloadUrlResponseBody</p>
  */
 public class GetAgentDownloadUrlResponseBody extends TeaModel {
-    @NameInMap("ArmsAgentDownloadUrl")
+    @com.aliyun.core.annotation.NameInMap("ArmsAgentDownloadUrl")
     private String armsAgentDownloadUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAgentDownloadUrlResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The download URL of the ARMS agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://arms-apm-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/2.7.1.1/">http://arms-apm-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/2.7.1.1/</a></p>
          */
         public Builder armsAgentDownloadUrl(String armsAgentDownloadUrl) {
             this.armsAgentDownloadUrl = armsAgentDownloadUrl;
@@ -58,7 +66,10 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Obtains the download URL of the Application Real-Time Monitoring Service (ARMS) agent.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14043452-D486-4EA1-80C9-BA73FB81****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

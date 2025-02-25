@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetaCollectionEntitiesRequest} extends {@link RequestModel}
  *
  * <p>ListMetaCollectionEntitiesRequest</p>
  */
 public class ListMetaCollectionEntitiesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CollectionQualifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectionQualifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collectionQualifiedName;
 
-    @Query
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListMetaCollectionEntitiesRequest(Builder builder) {
@@ -134,10 +139,11 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The type of the entities.
-         * <p>
+         * <p>The unique identifier of the collection.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.
+         * <strong>example:</strong>
+         * <p>album.12345</p>
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -146,7 +152,11 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * <p>The type of the entities.</p>
+         * <p>For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -155,7 +165,10 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The paging information. This parameter specifies the start point of the query.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -164,7 +177,10 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12222</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -173,7 +189,10 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The object returned.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnSpecificStagingConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnSpecificStagingConfigRequest</p>
  */
 public class DeleteDcdnSpecificStagingConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configId;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DeleteDcdnSpecificStagingConfigRequest(Builder builder) {
@@ -98,10 +98,12 @@ public class DeleteDcdnSpecificStagingConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).
-         * <p>
+         * <p>The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).</p>
+         * <p>You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.
+         * <strong>example:</strong>
+         * <p>2317</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -110,7 +112,11 @@ public class DeleteDcdnSpecificStagingConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each call.
+         * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

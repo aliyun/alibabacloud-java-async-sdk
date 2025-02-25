@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDisableFwSwitchRequest} extends {@link RequestModel}
  *
  * <p>PutDisableFwSwitchRequest</p>
  */
 public class PutDisableFwSwitchRequest extends Request {
-    @Query
-    @NameInMap("IpaddrList")
-    private java.util.List < String > ipaddrList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpaddrList")
+    private java.util.List<String> ipaddrList;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegionList")
-    private java.util.List < String > regionList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionList")
+    private java.util.List<String> regionList;
 
-    @Query
-    @NameInMap("ResourceTypeList")
-    private java.util.List < String > resourceTypeList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypeList")
+    private java.util.List<String> resourceTypeList;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     @Deprecated
     private String sourceIp;
 
@@ -58,7 +63,7 @@ public class PutDisableFwSwitchRequest extends Request {
     /**
      * @return ipaddrList
      */
-    public java.util.List < String > getIpaddrList() {
+    public java.util.List<String> getIpaddrList() {
         return this.ipaddrList;
     }
 
@@ -72,14 +77,14 @@ public class PutDisableFwSwitchRequest extends Request {
     /**
      * @return regionList
      */
-    public java.util.List < String > getRegionList() {
+    public java.util.List<String> getRegionList() {
         return this.regionList;
     }
 
     /**
      * @return resourceTypeList
      */
-    public java.util.List < String > getResourceTypeList() {
+    public java.util.List<String> getResourceTypeList() {
         return this.resourceTypeList;
     }
 
@@ -91,10 +96,10 @@ public class PutDisableFwSwitchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutDisableFwSwitchRequest, Builder> {
-        private java.util.List < String > ipaddrList; 
+        private java.util.List<String> ipaddrList; 
         private String lang; 
-        private java.util.List < String > regionList; 
-        private java.util.List < String > resourceTypeList; 
+        private java.util.List<String> regionList; 
+        private java.util.List<String> resourceTypeList; 
         private String sourceIp; 
 
         private Builder() {
@@ -111,23 +116,29 @@ public class PutDisableFwSwitchRequest extends Request {
         } 
 
         /**
-         * The IP addresses.
-         * <p>
+         * <p>The IP addresses.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;192.0.XX.XX&quot;,&quot;192.0.XX.XX&quot;]</p>
          */
-        public Builder ipaddrList(java.util.List < String > ipaddrList) {
+        public Builder ipaddrList(java.util.List<String> ipaddrList) {
             this.putQueryParameter("IpaddrList", ipaddrList);
             this.ipaddrList = ipaddrList;
             return this;
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,31 +147,40 @@ public class PutDisableFwSwitchRequest extends Request {
         }
 
         /**
-         * The regions.
-         * <p>
+         * <p>The regions.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;cn-hangzhou&quot;,&quot;cn-shanghai&quot;]</p>
          */
-        public Builder regionList(java.util.List < String > regionList) {
+        public Builder regionList(java.util.List<String> regionList) {
             this.putQueryParameter("RegionList", regionList);
             this.regionList = regionList;
             return this;
         }
 
         /**
-         * The types of the assets.
-         * <p>
+         * <p>The types of the assets.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;EcsPublicIp&quot;,&quot;NatEip&quot;]</p>
          */
-        public Builder resourceTypeList(java.util.List < String > resourceTypeList) {
+        public Builder resourceTypeList(java.util.List<String> resourceTypeList) {
             this.putQueryParameter("ResourceTypeList", resourceTypeList);
             this.resourceTypeList = resourceTypeList;
             return this;
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

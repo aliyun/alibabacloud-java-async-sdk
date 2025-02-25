@@ -1,50 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVSwitchesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVSwitchesRequest</p>
  */
 public class DescribeVSwitchesRequest extends Request {
-    @Query
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @Query
-    @NameInMap("NetworkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
-    @Query
-    @NameInMap("OrderByParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByParams")
     private String orderByParams;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VSwitchName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchName")
     private String vSwitchName;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private DescribeVSwitchesRequest(Builder builder) {
         super(builder);
@@ -55,7 +55,6 @@ public class DescribeVSwitchesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.vSwitchId = builder.vSwitchId;
         this.vSwitchName = builder.vSwitchName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -120,13 +119,6 @@ public class DescribeVSwitchesRequest extends Request {
         return this.vSwitchName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeVSwitchesRequest, Builder> {
         private String ensRegionId; 
         private String networkId; 
@@ -135,7 +127,6 @@ public class DescribeVSwitchesRequest extends Request {
         private Integer pageSize; 
         private String vSwitchId; 
         private String vSwitchName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -150,11 +141,13 @@ public class DescribeVSwitchesRequest extends Request {
             this.pageSize = request.pageSize;
             this.vSwitchId = request.vSwitchId;
             this.vSwitchName = request.vSwitchName;
-            this.version = request.version;
         } 
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-xian-unicom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -163,7 +156,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * <p>The ID of the VPC to which the vSwitches belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -172,7 +168,11 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * OrderByParams.
+         * <p>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}.</p>
+         * <p>By default, the nodes are sorted by IDs in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;EnsRegionId&quot;:&quot;desc&quot;}</p>
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -181,7 +181,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +193,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +205,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5m9xhlq8oh***</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -208,20 +217,14 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testVSwitchName</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
             this.vSwitchName = vSwitchName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

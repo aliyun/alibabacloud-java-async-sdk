@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LogisticsOrderResult} extends {@link TeaModel}
  *
  * <p>LogisticsOrderResult</p>
  */
 public class LogisticsOrderResult extends TeaModel {
-    @NameInMap("dataProvider")
+    @com.aliyun.core.annotation.NameInMap("dataProvider")
     private String dataProvider;
 
-    @NameInMap("dataProviderTitle")
+    @com.aliyun.core.annotation.NameInMap("dataProviderTitle")
     private String dataProviderTitle;
 
-    @NameInMap("goods")
-    private java.util.List < Good > goods;
+    @com.aliyun.core.annotation.NameInMap("goods")
+    private java.util.List<Good> goods;
 
-    @NameInMap("logisticsCompanyCode")
+    @com.aliyun.core.annotation.NameInMap("logisticsCompanyCode")
     private String logisticsCompanyCode;
 
-    @NameInMap("logisticsCompanyName")
+    @com.aliyun.core.annotation.NameInMap("logisticsCompanyName")
     private String logisticsCompanyName;
 
-    @NameInMap("logisticsDetailList")
-    private java.util.List < LogisticsDetail > logisticsDetailList;
+    @com.aliyun.core.annotation.NameInMap("logisticsDetailList")
+    private java.util.List<LogisticsDetail> logisticsDetailList;
 
-    @NameInMap("mailNo")
+    @com.aliyun.core.annotation.NameInMap("mailNo")
     private String mailNo;
 
     private LogisticsOrderResult(Builder builder) {
@@ -68,7 +73,7 @@ public class LogisticsOrderResult extends TeaModel {
     /**
      * @return goods
      */
-    public java.util.List < Good > getGoods() {
+    public java.util.List<Good> getGoods() {
         return this.goods;
     }
 
@@ -89,7 +94,7 @@ public class LogisticsOrderResult extends TeaModel {
     /**
      * @return logisticsDetailList
      */
-    public java.util.List < LogisticsDetail > getLogisticsDetailList() {
+    public java.util.List<LogisticsDetail> getLogisticsDetailList() {
         return this.logisticsDetailList;
     }
 
@@ -103,10 +108,10 @@ public class LogisticsOrderResult extends TeaModel {
     public static final class Builder {
         private String dataProvider; 
         private String dataProviderTitle; 
-        private java.util.List < Good > goods; 
+        private java.util.List<Good> goods; 
         private String logisticsCompanyCode; 
         private String logisticsCompanyName; 
-        private java.util.List < LogisticsDetail > logisticsDetailList; 
+        private java.util.List<LogisticsDetail> logisticsDetailList; 
         private String mailNo; 
 
         /**
@@ -128,7 +133,7 @@ public class LogisticsOrderResult extends TeaModel {
         /**
          * goods.
          */
-        public Builder goods(java.util.List < Good > goods) {
+        public Builder goods(java.util.List<Good> goods) {
             this.goods = goods;
             return this;
         }
@@ -152,7 +157,7 @@ public class LogisticsOrderResult extends TeaModel {
         /**
          * logisticsDetailList.
          */
-        public Builder logisticsDetailList(java.util.List < LogisticsDetail > logisticsDetailList) {
+        public Builder logisticsDetailList(java.util.List<LogisticsDetail> logisticsDetailList) {
             this.logisticsDetailList = logisticsDetailList;
             return this;
         }

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditLogFilterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuditLogFilterResponseBody</p>
  */
 public class DescribeAuditLogFilterResponseBody extends TeaModel {
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private String roleType;
 
     private DescribeAuditLogFilterResponseBody(Builder builder) {
@@ -62,16 +67,19 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         private String roleType; 
 
         /**
-         * The type of the audit log entries. Valid values:
-         * <p>
+         * <p>The type of the audit log entries. Valid values:</p>
+         * <ul>
+         * <li><strong>admin</strong>: O&amp;M and management operations</li>
+         * <li><strong>slow</strong>: slow query logs</li>
+         * <li><strong>query</strong>: query operations</li>
+         * <li><strong>insert</strong>: insert operations</li>
+         * <li><strong>update</strong>: update operations</li>
+         * <li><strong>delete</strong>: delete operations</li>
+         * <li><strong>command</strong>: protocol commands such as the aggregate method</li>
+         * </ul>
          * 
-         * *   **admin**: O\&M and management operations
-         * *   **slow**: slow query logs
-         * *   **query**: query operations
-         * *   **insert**: insert operations
-         * *   **update**: update operations
-         * *   **delete**: delete operations
-         * *   **command**: protocol commands such as the aggregate method
+         * <strong>example:</strong>
+         * <p>admin,slow,insert,query,update,delete,command</p>
          */
         public Builder filter(String filter) {
             this.filter = filter;
@@ -79,7 +87,10 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BAFB0B3-2A54-5B65-B13E-3937CF08FEE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -87,7 +98,10 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         }
 
         /**
-         * The role of the node.
+         * <p>The role of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logic</p>
          */
         public Builder roleType(String roleType) {
             this.roleType = roleType;

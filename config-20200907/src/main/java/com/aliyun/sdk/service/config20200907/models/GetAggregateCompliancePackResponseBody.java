@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateCompliancePackResponseBody</p>
  */
 public class GetAggregateCompliancePackResponseBody extends TeaModel {
-    @NameInMap("CompliancePack")
+    @com.aliyun.core.annotation.NameInMap("CompliancePack")
     private CompliancePack compliancePack;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregateCompliancePackResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the compliance package.
+         * <p>The details of the compliance package.</p>
          */
         public Builder compliancePack(CompliancePack compliancePack) {
             this.compliancePack = compliancePack;
@@ -58,7 +63,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateCompliancePackResponseBody</p>
+     */
     public static class ConfigRuleParameters extends TeaModel {
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
         private ConfigRuleParameters(Builder builder) {
@@ -122,7 +136,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private Boolean required; 
 
             /**
-             * The name of the input parameter.
+             * <p>The name of the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bandwidth</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -130,7 +147,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the input parameter.
+             * <p>The value of the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -138,11 +158,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the input parameter is required. Valid values:
-             * <p>
+             * <p>Indicates whether the input parameter was required. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true: The input parameter is required.
-             * *   false: The input parameter is optional.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -156,26 +179,32 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateCompliancePackResponseBody</p>
+     */
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleParameters")
-        private java.util.List < ConfigRuleParameters> configRuleParameters;
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
+        private java.util.List<ConfigRuleParameters> configRuleParameters;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ManagedRuleIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
         private String managedRuleIdentifier;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private ConfigRules(Builder builder) {
@@ -213,7 +242,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         /**
          * @return configRuleParameters
          */
-        public java.util.List < ConfigRuleParameters> getConfigRuleParameters() {
+        public java.util.List<ConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
         }
 
@@ -248,14 +277,17 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public static final class Builder {
             private String configRuleId; 
             private String configRuleName; 
-            private java.util.List < ConfigRuleParameters> configRuleParameters; 
+            private java.util.List<ConfigRuleParameters> configRuleParameters; 
             private String description; 
             private String managedRuleIdentifier; 
             private String resourceTypesScope; 
             private Integer riskLevel; 
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-a260626622af0005****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -263,7 +295,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the rule.</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -271,15 +306,18 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameters of the rule.
+             * <p>The details of the input parameter of the rule.</p>
              */
-            public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
+            public Builder configRuleParameters(java.util.List<ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
                 return this;
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -287,7 +325,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the managed rule.
+             * <p>The ID of the rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -295,7 +336,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).
+             * <p>The type of the resource evaluated based on the rule. Multiple resource types are separated with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::EIP::EipAddress</p>
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -303,12 +347,15 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -322,28 +369,200 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateCompliancePackResponseBody</p>
+     */
+    public static class ExcludeTagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private ExcludeTagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExcludeTagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ExcludeTagsScope build() {
+                return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateCompliancePackResponseBody</p>
+     */
+    public static class TagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private TagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public TagsScope build() {
+                return new TagsScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateCompliancePackResponseBody</p>
+     */
     public static class Scope extends TeaModel {
-        @NameInMap("ExcludeResourceIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ExcludeRegionIdsScope")
+        private String excludeRegionIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ExcludeResourceGroupIdsScope")
+        private String excludeResourceGroupIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
         private String excludeResourceIdsScope;
 
-        @NameInMap("RegionIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
+        private java.util.List<ExcludeTagsScope> excludeTagsScope;
+
+        @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
         private String regionIdsScope;
 
-        @NameInMap("ResourceGroupIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
         private String resourceGroupIdsScope;
 
-        @NameInMap("TagKeyScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceIdsScope")
+        private String resourceIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("TagKeyScope")
         private String tagKeyScope;
 
-        @NameInMap("TagValueScope")
+        @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
+        @com.aliyun.core.annotation.NameInMap("TagsScope")
+        private java.util.List<TagsScope> tagsScope;
+
         private Scope(Builder builder) {
+            this.excludeRegionIdsScope = builder.excludeRegionIdsScope;
+            this.excludeResourceGroupIdsScope = builder.excludeResourceGroupIdsScope;
             this.excludeResourceIdsScope = builder.excludeResourceIdsScope;
+            this.excludeTagsScope = builder.excludeTagsScope;
             this.regionIdsScope = builder.regionIdsScope;
             this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
+            this.resourceIdsScope = builder.resourceIdsScope;
             this.tagKeyScope = builder.tagKeyScope;
             this.tagValueScope = builder.tagValueScope;
+            this.tagsScope = builder.tagsScope;
         }
 
         public static Builder builder() {
@@ -355,10 +574,31 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
 
         /**
+         * @return excludeRegionIdsScope
+         */
+        public String getExcludeRegionIdsScope() {
+            return this.excludeRegionIdsScope;
+        }
+
+        /**
+         * @return excludeResourceGroupIdsScope
+         */
+        public String getExcludeResourceGroupIdsScope() {
+            return this.excludeResourceGroupIdsScope;
+        }
+
+        /**
          * @return excludeResourceIdsScope
          */
         public String getExcludeResourceIdsScope() {
             return this.excludeResourceIdsScope;
+        }
+
+        /**
+         * @return excludeTagsScope
+         */
+        public java.util.List<ExcludeTagsScope> getExcludeTagsScope() {
+            return this.excludeTagsScope;
         }
 
         /**
@@ -376,6 +616,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceIdsScope
+         */
+        public String getResourceIdsScope() {
+            return this.resourceIdsScope;
+        }
+
+        /**
          * @return tagKeyScope
          */
         public String getTagKeyScope() {
@@ -389,15 +636,52 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             return this.tagValueScope;
         }
 
+        /**
+         * @return tagsScope
+         */
+        public java.util.List<TagsScope> getTagsScope() {
+            return this.tagsScope;
+        }
+
         public static final class Builder {
+            private String excludeRegionIdsScope; 
+            private String excludeResourceGroupIdsScope; 
             private String excludeResourceIdsScope; 
+            private java.util.List<ExcludeTagsScope> excludeTagsScope; 
             private String regionIdsScope; 
             private String resourceGroupIdsScope; 
+            private String resourceIdsScope; 
             private String tagKeyScope; 
             private String tagValueScope; 
+            private java.util.List<TagsScope> tagsScope; 
 
             /**
-             * The ID of the resource that is not evaluated by using the compliance package.
+             * <p>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
+             */
+            public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
+                this.excludeRegionIdsScope = excludeRegionIdsScope;
+                return this;
+            }
+
+            /**
+             * <p>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzc7r7rhx****</p>
+             */
+            public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+                this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource that is not evaluated by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-8vbf3x310fn56ijfd****</p>
              */
             public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
                 this.excludeResourceIdsScope = excludeResourceIdsScope;
@@ -405,7 +689,18 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region whose resources were evaluated by using the compliance package.
+             * <p>The scope of the tag that is excluded.</p>
+             */
+            public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
+                this.excludeTagsScope = excludeTagsScope;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the region whose resources were evaluated by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionIdsScope(String regionIdsScope) {
                 this.regionIdsScope = regionIdsScope;
@@ -413,7 +708,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group whose resources are evaluated by using the compliance package.
+             * <p>The ID of the resource group whose resources are evaluated by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzc7r7rhx****</p>
              */
             public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
                 this.resourceGroupIdsScope = resourceGroupIdsScope;
@@ -421,7 +719,21 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the resource that is evaluated by using the compliance package.
+             * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-8vbf3x310fn56ijfd****</p>
+             */
+            public Builder resourceIdsScope(String resourceIdsScope) {
+                this.resourceIdsScope = resourceIdsScope;
+                return this;
+            }
+
+            /**
+             * <p>The tag key of the resource that is evaluated by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder tagKeyScope(String tagKeyScope) {
                 this.tagKeyScope = tagKeyScope;
@@ -429,10 +741,21 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource that is evaluated by using the compliance package.
+             * <p>The tag value of the resource that is evaluated by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValueScope(String tagValueScope) {
                 this.tagValueScope = tagValueScope;
+                return this;
+            }
+
+            /**
+             * <p>The tag scope.</p>
+             */
+            public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
+                this.tagsScope = tagsScope;
                 return this;
             }
 
@@ -443,39 +766,48 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAggregateCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateCompliancePackResponseBody</p>
+     */
     public static class CompliancePack extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CompliancePackTemplateId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateId")
         private String compliancePackTemplateId;
 
-        @NameInMap("ConfigRules")
-        private java.util.List < ConfigRules> configRules;
+        @com.aliyun.core.annotation.NameInMap("ConfigRules")
+        private java.util.List<ConfigRules> configRules;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private Scope scope;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateContent")
+        private String templateContent;
 
         private CompliancePack(Builder builder) {
             this.accountId = builder.accountId;
@@ -489,6 +821,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             this.riskLevel = builder.riskLevel;
             this.scope = builder.scope;
             this.status = builder.status;
+            this.templateContent = builder.templateContent;
         }
 
         public static Builder builder() {
@@ -537,7 +870,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         /**
          * @return configRules
          */
-        public java.util.List < ConfigRules> getConfigRules() {
+        public java.util.List<ConfigRules> getConfigRules() {
             return this.configRules;
         }
 
@@ -576,21 +909,32 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return templateContent
+         */
+        public String getTemplateContent() {
+            return this.templateContent;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private String aggregatorId; 
             private String compliancePackId; 
             private String compliancePackName; 
             private String compliancePackTemplateId; 
-            private java.util.List < ConfigRules> configRules; 
+            private java.util.List<ConfigRules> configRules; 
             private Long createTimestamp; 
             private String description; 
             private Integer riskLevel; 
             private Scope scope; 
             private String status; 
+            private String templateContent; 
 
             /**
-             * The ID of the management account to which the compliance package belongs.
+             * <p>The ID of the management account to which the compliance package belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -598,7 +942,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account group.
+             * <p>The ID of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-f632626622af0079****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -606,7 +953,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package.
+             * <p>The ID of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-fdc8626622af00f9****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -614,7 +964,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compliance package.
+             * <p>The name of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the compliance package.</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -622,7 +975,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package template.
+             * <p>The ID of the compliance package template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-5f26ff4e06a300c4****</p>
              */
             public Builder compliancePackTemplateId(String compliancePackTemplateId) {
                 this.compliancePackTemplateId = compliancePackTemplateId;
@@ -630,15 +986,18 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The rules in the compliance package.
+             * <p>The rules in the compliance package.</p>
              */
-            public Builder configRules(java.util.List < ConfigRules> configRules) {
+            public Builder configRules(java.util.List<ConfigRules> configRules) {
                 this.configRules = configRules;
                 return this;
             }
 
             /**
-             * The timestamp when the compliance package was created. Unit: milliseconds.
+             * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624243657000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -646,7 +1005,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the compliance package.
+             * <p>The description of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the compliance package.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -654,12 +1016,15 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
-             * <p>
+             * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -667,7 +1032,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The evaluation scope of the compliance package.
+             * <p>The evaluation scope of the compliance package.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -675,14 +1040,53 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the compliance package. Valid values:
-             * <p>
+             * <p>The status of the compliance package. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: The compliance package was normal.</li>
+             * <li>CREATING: The compliance package was being created.</li>
+             * </ul>
              * 
-             * *   ACTIVE: The compliance package was normal.
-             * *   CREATING: The compliance package was being created.
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;configRuleTemplates&quot;: [
+             *     {
+             *       &quot;configRuleName&quot;: &quot;OSS-test-name&quot;,
+             *       &quot;scope&quot;: {
+             *         &quot;complianceResourceTypes&quot;: [
+             *           &quot;ACS::OSS::Bucket&quot;
+             *         ]
+             *       },
+             *       &quot;description&quot;: &quot;test-description&quot;,
+             *       &quot;source&quot;: {
+             *         &quot;owner&quot;: &quot;ALIYUN&quot;,
+             *         &quot;identifier&quot;: &quot;oss-bucket-referer-xxx&quot;,
+             *         &quot;sourceDetails&quot;: [
+             *           {
+             *             &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+             *           }
+             *         ]
+             *       },
+             *       &quot;inputParameters&quot;: {
+             *         &quot;allowEmptyReferer&quot;: &quot;true&quot;,
+             *         &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
+             *       }
+             *     }
+             *   ]
+             * }</p>
+             */
+            public Builder templateContent(String templateContent) {
+                this.templateContent = templateContent;
                 return this;
             }
 

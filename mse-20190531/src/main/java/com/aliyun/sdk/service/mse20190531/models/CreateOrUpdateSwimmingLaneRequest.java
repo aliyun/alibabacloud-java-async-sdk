@@ -1,67 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateSwimmingLaneRequest</p>
  */
 public class CreateOrUpdateSwimmingLaneRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @Query
-    @NameInMap("EnableRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRules")
     private Boolean enableRules;
 
-    @Query
-    @NameInMap("EntryRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryRule")
     @Deprecated
     private String entryRule;
 
-    @Body
-    @NameInMap("EntryRules")
-    private java.util.List < EntryRules> entryRules;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntryRules")
+    private java.util.List<EntryRules> entryRules;
 
-    @Query
-    @NameInMap("GatewaySwimmingLaneRouteJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewaySwimmingLaneRouteJson")
     private GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String namespace;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathIndependentPercentageEnable")
+    private Boolean pathIndependentPercentageEnable;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String tag;
 
     private CreateOrUpdateSwimmingLaneRequest(Builder builder) {
@@ -76,6 +85,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         this.id = builder.id;
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.pathIndependentPercentageEnable = builder.pathIndependentPercentageEnable;
         this.regionId = builder.regionId;
         this.tag = builder.tag;
     }
@@ -124,7 +134,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     /**
      * @return entryRules
      */
-    public java.util.List < EntryRules> getEntryRules() {
+    public java.util.List<EntryRules> getEntryRules() {
         return this.entryRules;
     }
 
@@ -164,6 +174,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     }
 
     /**
+     * @return pathIndependentPercentageEnable
+     */
+    public Boolean getPathIndependentPercentageEnable() {
+        return this.pathIndependentPercentageEnable;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -182,12 +199,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Boolean enable; 
         private Boolean enableRules; 
         private String entryRule; 
-        private java.util.List < EntryRules> entryRules; 
+        private java.util.List<EntryRules> entryRules; 
         private GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson; 
         private Long groupId; 
         private Long id; 
         private String name; 
         private String namespace; 
+        private Boolean pathIndependentPercentageEnable; 
         private String regionId; 
         private String tag; 
 
@@ -207,12 +225,16 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.id = request.id;
             this.name = request.name;
             this.namespace = request.namespace;
+            this.pathIndependentPercentageEnable = request.pathIndependentPercentageEnable;
             this.regionId = request.regionId;
             this.tag = request.tag;
         } 
 
         /**
-         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
+         * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -221,7 +243,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the lane.
+         * <p>Specifies whether to enable the lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -230,7 +255,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.
+         * <p>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableRules(Boolean enableRules) {
             this.putQueryParameter("EnableRules", enableRules);
@@ -239,7 +267,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The JSON string.
+         * <p>The JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder entryRule(String entryRule) {
             this.putQueryParameter("EntryRule", entryRule);
@@ -250,14 +281,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * EntryRules.
          */
-        public Builder entryRules(java.util.List < EntryRules> entryRules) {
+        public Builder entryRules(java.util.List<EntryRules> entryRules) {
             this.putBodyParameter("EntryRules", entryRules);
             this.entryRules = entryRules;
             return this;
         }
 
         /**
-         * The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.
+         * <p>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</p>
          */
         public Builder gatewaySwimmingLaneRouteJson(GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson) {
             String gatewaySwimmingLaneRouteJsonShrink = shrink(gatewaySwimmingLaneRouteJson, "GatewaySwimmingLaneRouteJson", "json");
@@ -267,13 +298,17 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:****
-         * <p>
+         * <p>The language of the response. Valid values:****</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>zh-CN</strong>.</p>
+         * </blockquote>
          * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English
-         * 
-         * > Default value: **zh-CN**.
+         * <strong>example:</strong>
+         * <p>115</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -282,7 +317,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.
+         * <p>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -291,7 +329,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The name of the lane.
+         * <p>The name of the lane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test lane</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -309,7 +351,19 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * PathIndependentPercentageEnable.
+         */
+        public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+            this.putQueryParameter("PathIndependentPercentageEnable", pathIndependentPercentageEnable);
+            this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +372,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The tag.
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -333,35 +390,41 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class RestItems extends TeaModel {
-        @NameInMap("Cond")
+        @com.aliyun.core.annotation.NameInMap("Cond")
         private String cond;
 
-        @NameInMap("Datum")
+        @com.aliyun.core.annotation.NameInMap("Datum")
         private String datum;
 
-        @NameInMap("Divisor")
+        @com.aliyun.core.annotation.NameInMap("Divisor")
         private Integer divisor;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameList")
-        private java.util.List < String > nameList;
+        @com.aliyun.core.annotation.NameInMap("NameList")
+        private java.util.List<String> nameList;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
 
-        @NameInMap("Remainder")
+        @com.aliyun.core.annotation.NameInMap("Remainder")
         private Integer remainder;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RestItems(Builder builder) {
@@ -416,7 +479,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -460,7 +523,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String datum; 
             private Integer divisor; 
             private String name; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String operator; 
             private Integer rate; 
             private Integer remainder; 
@@ -492,7 +555,11 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the lane.
+             * <p>The name of the lane.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test lane</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -502,7 +569,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * NameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -554,18 +621,24 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class EntryRules extends TeaModel {
-        @NameInMap("Condition")
+        @com.aliyun.core.annotation.NameInMap("Condition")
         private String condition;
 
-        @NameInMap("Paths")
-        private java.util.List < String > paths;
+        @com.aliyun.core.annotation.NameInMap("Paths")
+        private java.util.List<String> paths;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RestItems")
-        private java.util.List < RestItems> restItems;
+        @com.aliyun.core.annotation.NameInMap("RestItems")
+        private java.util.List<RestItems> restItems;
 
         private EntryRules(Builder builder) {
             this.condition = builder.condition;
@@ -592,7 +665,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
@@ -606,15 +679,15 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return restItems
          */
-        public java.util.List < RestItems> getRestItems() {
+        public java.util.List<RestItems> getRestItems() {
             return this.restItems;
         }
 
         public static final class Builder {
             private String condition; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> paths; 
             private Integer priority; 
-            private java.util.List < RestItems> restItems; 
+            private java.util.List<RestItems> restItems; 
 
             /**
              * Condition.
@@ -627,7 +700,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * Paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -643,7 +716,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * RestItems.
              */
-            public Builder restItems(java.util.List < RestItems> restItems) {
+            public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
                 return this;
             }
@@ -655,17 +728,23 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
     public static class Conditions extends TeaModel {
-        @NameInMap("Cond")
+        @com.aliyun.core.annotation.NameInMap("Cond")
         private String cond;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Conditions(Builder builder) {
@@ -718,12 +797,15 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String value; 
 
             /**
-             * The matching condition. Valid values:
-             * <p>
+             * <p>The matching condition. Valid values:</p>
+             * <ul>
+             * <li>PRE: prefix matching</li>
+             * <li>EQUAL: exact matching</li>
+             * <li>ERGULAR: regular expression matching</li>
+             * </ul>
              * 
-             * *   PRE: prefix matching
-             * *   EQUAL: exact matching
-             * *   ERGULAR: regular expression matching
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -731,7 +813,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -739,11 +824,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The type of the parameter. Valid values:
-             * <p>
+             * <p>The type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>header</li>
+             * <li>param</li>
+             * </ul>
              * 
-             * *   header
-             * *   param
+             * <strong>example:</strong>
+             * <p>header</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -751,7 +839,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaoming</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -765,24 +856,117 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
-    public static class GatewaySwimmingLaneRouteJson extends TeaModel {
-        @NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
+    public static class RouteIndependentPercentageList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private Integer percentage;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
+        private Long routeId;
+
+        private RouteIndependentPercentageList(Builder builder) {
+            this.percentage = builder.percentage;
+            this.routeId = builder.routeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteIndependentPercentageList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return percentage
+         */
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        /**
+         * @return routeId
+         */
+        public Long getRouteId() {
+            return this.routeId;
+        }
+
+        public static final class Builder {
+            private Integer percentage; 
+            private Long routeId; 
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * RouteId.
+             */
+            public Builder routeId(Long routeId) {
+                this.routeId = routeId;
+                return this;
+            }
+
+            public RouteIndependentPercentageList build() {
+                return new RouteIndependentPercentageList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneRequest} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneRequest</p>
+     */
+    public static class GatewaySwimmingLaneRouteJson extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanaryModel")
+        private Integer canaryModel;
+
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private String condition;
+
+        @com.aliyun.core.annotation.NameInMap("Conditions")
+        private java.util.List<Conditions> conditions;
+
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("RouteIdList")
-        private java.util.List < Long > routeIdList;
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private Integer percentage;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIdList")
+        private java.util.List<Long> routeIdList;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageEnable")
+        private Boolean routeIndependentPercentageEnable;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageList")
+        private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList;
 
         private GatewaySwimmingLaneRouteJson(Builder builder) {
+            this.canaryModel = builder.canaryModel;
+            this.condition = builder.condition;
             this.conditions = builder.conditions;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.percentage = builder.percentage;
             this.routeIdList = builder.routeIdList;
+            this.routeIndependentPercentageEnable = builder.routeIndependentPercentageEnable;
+            this.routeIndependentPercentageList = builder.routeIndependentPercentageList;
         }
 
         public static Builder builder() {
@@ -794,9 +978,23 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
+         * @return canaryModel
+         */
+        public Integer getCanaryModel() {
+            return this.canaryModel;
+        }
+
+        /**
+         * @return condition
+         */
+        public String getCondition() {
+            return this.condition;
+        }
+
+        /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -815,28 +1013,73 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
+         * @return percentage
+         */
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        /**
          * @return routeIdList
          */
-        public java.util.List < Long > getRouteIdList() {
+        public java.util.List<Long> getRouteIdList() {
             return this.routeIdList;
         }
 
+        /**
+         * @return routeIndependentPercentageEnable
+         */
+        public Boolean getRouteIndependentPercentageEnable() {
+            return this.routeIndependentPercentageEnable;
+        }
+
+        /**
+         * @return routeIndependentPercentageList
+         */
+        public java.util.List<RouteIndependentPercentageList> getRouteIndependentPercentageList() {
+            return this.routeIndependentPercentageList;
+        }
+
         public static final class Builder {
-            private java.util.List < Conditions> conditions; 
+            private Integer canaryModel; 
+            private String condition; 
+            private java.util.List<Conditions> conditions; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
-            private java.util.List < Long > routeIdList; 
+            private Integer percentage; 
+            private java.util.List<Long> routeIdList; 
+            private Boolean routeIndependentPercentageEnable; 
+            private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList; 
 
             /**
-             * The matching conditions.
+             * CanaryModel.
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder canaryModel(Integer canaryModel) {
+                this.canaryModel = canaryModel;
+                return this;
+            }
+
+            /**
+             * Condition.
+             */
+            public Builder condition(String condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * <p>The matching conditions.</p>
+             */
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
 
             /**
-             * The ID of the gateway.
+             * <p>The ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -844,7 +1087,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-84efde2ee1464260bdb17a5b****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -852,10 +1098,34 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * The route IDs.
+             * Percentage.
              */
-            public Builder routeIdList(java.util.List < Long > routeIdList) {
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * <p>The route IDs.</p>
+             */
+            public Builder routeIdList(java.util.List<Long> routeIdList) {
                 this.routeIdList = routeIdList;
+                return this;
+            }
+
+            /**
+             * RouteIndependentPercentageEnable.
+             */
+            public Builder routeIndependentPercentageEnable(Boolean routeIndependentPercentageEnable) {
+                this.routeIndependentPercentageEnable = routeIndependentPercentageEnable;
+                return this;
+            }
+
+            /**
+             * RouteIndependentPercentageList.
+             */
+            public Builder routeIndependentPercentageList(java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList) {
+                this.routeIndependentPercentageList = routeIndependentPercentageList;
                 return this;
             }
 

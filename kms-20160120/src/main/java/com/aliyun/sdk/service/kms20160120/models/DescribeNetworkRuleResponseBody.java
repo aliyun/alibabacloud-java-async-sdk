@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkRuleResponseBody</p>
  */
 public class DescribeNetworkRuleResponseBody extends TeaModel {
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourcePrivateIp")
+    @com.aliyun.core.annotation.NameInMap("SourcePrivateIp")
     private String sourcePrivateIp;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeNetworkRuleResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * Arn.
+         * The ARN of the access control rule.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -94,7 +93,7 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -102,7 +101,7 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +109,7 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SourcePrivateIp.
+         * The private IP address or private CIDR block.
          */
         public Builder sourcePrivateIp(String sourcePrivateIp) {
             this.sourcePrivateIp = sourcePrivateIp;
@@ -118,7 +117,7 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The network type. Only private IP addresses are supported. The value is fixed as Private.
          */
         public Builder type(String type) {
             this.type = type;

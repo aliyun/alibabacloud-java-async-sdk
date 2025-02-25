@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomCertificateRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomCertificateRequest</p>
  */
 public class CreateCustomCertificateRequest extends Request {
-    @Query
-    @NameInMap("ApiPassthrough")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiPassthrough")
     private ApiPassthrough apiPassthrough;
 
-    @Query
-    @NameInMap("Csr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Csr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String csr;
 
-    @Query
-    @NameInMap("EnableCrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrl")
     private Long enableCrl;
 
-    @Query
-    @NameInMap("Immediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Immediately")
     private Integer immediately;
 
-    @Query
-    @NameInMap("ParentIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentIdentifier;
 
-    @Query
-    @NameInMap("Validity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Validity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String validity;
 
     private CreateCustomCertificateRequest(Builder builder) {
@@ -127,7 +132,7 @@ public class CreateCustomCertificateRequest extends Request {
         } 
 
         /**
-         * The passthrough parameters.
+         * <p>The passthrough parameters.</p>
          */
         public Builder apiPassthrough(ApiPassthrough apiPassthrough) {
             this.putQueryParameter("ApiPassthrough", apiPassthrough);
@@ -136,7 +141,17 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         /**
-         * The content of the CSR. You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see [How do I create a CSR file?](~~42218~~)
+         * <p>The content of the CSR. You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST-----
+         * MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
+         * ...
+         * ...
+         * ...
+         * vbIgMQIhAKHDWD6/WAMbtezAt4bysJ/BZIDz1jPWuUR5GV4TJ/mS
+         * -----END CERTIFICATE REQUEST-----</p>
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -145,7 +160,14 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         /**
-         * EnableCrl.
+         * <p>include the CRL address.</p>
+         * <ul>
+         * <li>0- No</li>
+         * <li>1- Yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableCrl(Long enableCrl) {
             this.putQueryParameter("EnableCrl", enableCrl);
@@ -154,12 +176,15 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately issue the certificate. Valid values:
-         * <p>
+         * <p>Specifies whether to immediately issue the certificate. Valid values:</p>
+         * <ul>
+         * <li>0: asynchronously issues the certificate.</li>
+         * <li>1: immediately issues the certificate.</li>
+         * <li>2: immediately issues the certificate and returns the certificate chain.</li>
+         * </ul>
          * 
-         * *   0: asynchronously issues the certificate.
-         * *   1: immediately issues the certificate.
-         * *   2: immediately issues the certificate and returns the certificate chain.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder immediately(Integer immediately) {
             this.putQueryParameter("Immediately", immediately);
@@ -168,7 +193,11 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         /**
-         * The identifier of the certificate.
+         * <p>The identifier of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ed4068c-6f1b-6deb-8e32-3f8439a851cb</p>
          */
         public Builder parentIdentifier(String parentIdentifier) {
             this.putQueryParameter("ParentIdentifier", parentIdentifier);
@@ -177,19 +206,28 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the certificate. The value cannot exceed the validity period of the certificate instance. Relative time and absolute time are supported.
-         * <p>
+         * <p>The validity period of the certificate. The value cannot exceed the validity period of the certificate instance. Relative time and absolute time are supported.</p>
+         * <p>Units of relative time: year, month, and day.</p>
+         * <ul>
+         * <li>Use y to specify years.</li>
+         * <li>Use m to specify months.</li>
+         * <li>Use d to specify days.</li>
+         * </ul>
+         * <p>Absolute time: Use Greenwich Mean Time (GMT). Format: <code>yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;</code></p>
+         * <ul>
+         * <li>Format of the end time: $NotAfter</li>
+         * <li>Format of the start time and end time: $NotBefore/$NotAfter</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Units of relative time: year, month, and day.
-         * 
-         * *   Use y to specify years.
-         * *   Use m to specify months.
-         * *   Use d to specify days.
-         * 
-         * Absolute time: Use Greenwich Mean Time (GMT). Format: `yyyy-MM-dd\"T\"HH:mm:ss\"Z\"`
-         * 
-         * *   Format of the end time: $NotAfter
-         * *   Format of the start time and end time: $NotBefore/$NotAfter
+         * <strong>example:</strong>
+         * <p>Relative time:
+         *  ● 1y
+         *  ● 3m
+         *  ● 7d
+         * Absolute time: 
+         * ● 2006-01-02T15:04:05Z 
+         * ● 2006-01-02T15:04:05Z/2023-03-09T17:48:13Z</p>
          */
         public Builder validity(String validity) {
             this.putQueryParameter("Validity", validity);
@@ -204,29 +242,35 @@ public class CreateCustomCertificateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCustomCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomCertificateRequest</p>
+     */
     public static class KeyUsage extends TeaModel {
-        @NameInMap("ContentCommitment")
+        @com.aliyun.core.annotation.NameInMap("ContentCommitment")
         private Boolean contentCommitment;
 
-        @NameInMap("DataEncipherment")
+        @com.aliyun.core.annotation.NameInMap("DataEncipherment")
         private Boolean dataEncipherment;
 
-        @NameInMap("DecipherOnly")
+        @com.aliyun.core.annotation.NameInMap("DecipherOnly")
         private Boolean decipherOnly;
 
-        @NameInMap("DigitalSignature")
+        @com.aliyun.core.annotation.NameInMap("DigitalSignature")
         private Boolean digitalSignature;
 
-        @NameInMap("EncipherOnly")
+        @com.aliyun.core.annotation.NameInMap("EncipherOnly")
         private Boolean encipherOnly;
 
-        @NameInMap("KeyAgreement")
+        @com.aliyun.core.annotation.NameInMap("KeyAgreement")
         private Boolean keyAgreement;
 
-        @NameInMap("KeyEncipherment")
+        @com.aliyun.core.annotation.NameInMap("KeyEncipherment")
         private Boolean keyEncipherment;
 
-        @NameInMap("NonRepudiation")
+        @com.aliyun.core.annotation.NameInMap("NonRepudiation")
         private Boolean nonRepudiation;
 
         private KeyUsage(Builder builder) {
@@ -315,7 +359,10 @@ public class CreateCustomCertificateRequest extends Request {
             private Boolean nonRepudiation; 
 
             /**
-             * The original name of the parameter is NonRepudiation.
+             * <p>The original name of the parameter is NonRepudiation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder contentCommitment(Boolean contentCommitment) {
                 this.contentCommitment = contentCommitment;
@@ -323,7 +370,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * Specifies whether the key can be used for data encryption.
+             * <p>Specifies whether the key can be used for data encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dataEncipherment(Boolean dataEncipherment) {
                 this.dataEncipherment = dataEncipherment;
@@ -331,7 +381,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * Specifies whether the key can be used only for data decryption.
+             * <p>Specifies whether the key can be used only for data decryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder decipherOnly(Boolean decipherOnly) {
                 this.decipherOnly = decipherOnly;
@@ -339,7 +392,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * Specifies whether the key can be used for digital signing. If you set this parameter to true, the private key of the certificate can be used to generate digital signatures, and the public key of the certificate can be used to verify digital signatures.
+             * <p>Specifies whether the key can be used for digital signing. If you set this parameter to true, the private key of the certificate can be used to generate digital signatures, and the public key of the certificate can be used to verify digital signatures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder digitalSignature(Boolean digitalSignature) {
                 this.digitalSignature = digitalSignature;
@@ -347,7 +403,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * Specifies whether the key can be used only for data encryption.
+             * <p>Specifies whether the key can be used only for data encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encipherOnly(Boolean encipherOnly) {
                 this.encipherOnly = encipherOnly;
@@ -355,7 +414,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * Specifies whether the key can be used for key agreement.
+             * <p>Specifies whether the key can be used for key agreement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder keyAgreement(Boolean keyAgreement) {
                 this.keyAgreement = keyAgreement;
@@ -363,7 +425,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * Specifies whether the key can be used for data encipherment.
+             * <p>Specifies whether the key can be used for data encipherment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder keyEncipherment(Boolean keyEncipherment) {
                 this.keyEncipherment = keyEncipherment;
@@ -371,7 +436,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * Specifies whether the key can be used for non-repudiation. This parameter is renamed ContentCommitment in the X.509 standard.
+             * <p>Specifies whether the key can be used for non-repudiation. This parameter is renamed ContentCommitment in the X.509 standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nonRepudiation(Boolean nonRepudiation) {
                 this.nonRepudiation = nonRepudiation;
@@ -385,12 +453,18 @@ public class CreateCustomCertificateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomCertificateRequest</p>
+     */
     public static class SubjectAlternativeNames extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SubjectAlternativeNames(Builder builder) {
@@ -425,13 +499,17 @@ public class CreateCustomCertificateRequest extends Request {
             private String value; 
 
             /**
-             * The type of the alias. Valid values:
-             * <p>
+             * <p>The type of the alias. Valid values:</p>
+             * <ul>
+             * <li>rfc822Name: email address</li>
+             * <li>dNSName: domain name</li>
+             * <li>uniformResourceIdentifier: URI</li>
+             * <li>iPAddress: IP address</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   rfc822Name: email address
-             * *   dNSName: domain name
-             * *   uniformResourceIdentifier: URI
-             * *   iPAddress: IP address
+             * <strong>example:</strong>
+             * <p>dNSName</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -439,7 +517,17 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The alias that meets the requirement of a specified type.
+             * <p>The alias that meets the requirement of a specified type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rfc822Name:
+             * <a href="mailto:exmaple@certqa.cn">exmaple@certqa.cn</a></p>
+             * <p>dNSName:
+             * <a href="http://www.certqa.cn">www.certqa.cn</a></p>
+             * <p>uniformResourceIdentifier:
+             * acs:ecs:regionid:15619224785*****:instance/i-bp1bzvz55uz27hf*****</p>
+             * <p>iPAddress:
+             * 127.0.0.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -453,18 +541,24 @@ public class CreateCustomCertificateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomCertificateRequest</p>
+     */
     public static class Extensions extends TeaModel {
-        @NameInMap("Criticals")
-        private java.util.List < String > criticals;
+        @com.aliyun.core.annotation.NameInMap("Criticals")
+        private java.util.List<String> criticals;
 
-        @NameInMap("ExtendedKeyUsages")
-        private java.util.List < String > extendedKeyUsages;
+        @com.aliyun.core.annotation.NameInMap("ExtendedKeyUsages")
+        private java.util.List<String> extendedKeyUsages;
 
-        @NameInMap("KeyUsage")
+        @com.aliyun.core.annotation.NameInMap("KeyUsage")
         private KeyUsage keyUsage;
 
-        @NameInMap("SubjectAlternativeNames")
-        private java.util.List < SubjectAlternativeNames> subjectAlternativeNames;
+        @com.aliyun.core.annotation.NameInMap("SubjectAlternativeNames")
+        private java.util.List<SubjectAlternativeNames> subjectAlternativeNames;
 
         private Extensions(Builder builder) {
             this.criticals = builder.criticals;
@@ -484,14 +578,14 @@ public class CreateCustomCertificateRequest extends Request {
         /**
          * @return criticals
          */
-        public java.util.List < String > getCriticals() {
+        public java.util.List<String> getCriticals() {
             return this.criticals;
         }
 
         /**
          * @return extendedKeyUsages
          */
-        public java.util.List < String > getExtendedKeyUsages() {
+        public java.util.List<String> getExtendedKeyUsages() {
             return this.extendedKeyUsages;
         }
 
@@ -505,34 +599,34 @@ public class CreateCustomCertificateRequest extends Request {
         /**
          * @return subjectAlternativeNames
          */
-        public java.util.List < SubjectAlternativeNames> getSubjectAlternativeNames() {
+        public java.util.List<SubjectAlternativeNames> getSubjectAlternativeNames() {
             return this.subjectAlternativeNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > criticals; 
-            private java.util.List < String > extendedKeyUsages; 
+            private java.util.List<String> criticals; 
+            private java.util.List<String> extendedKeyUsages; 
             private KeyUsage keyUsage; 
-            private java.util.List < SubjectAlternativeNames> subjectAlternativeNames; 
+            private java.util.List<SubjectAlternativeNames> subjectAlternativeNames; 
 
             /**
-             * Criticals.
+             * <p>If it is a necessary parameter, the critical list contains the parameter name.</p>
              */
-            public Builder criticals(java.util.List < String > criticals) {
+            public Builder criticals(java.util.List<String> criticals) {
                 this.criticals = criticals;
                 return this;
             }
 
             /**
-             * The extended key usage.
+             * <p>The extended key usage.</p>
              */
-            public Builder extendedKeyUsages(java.util.List < String > extendedKeyUsages) {
+            public Builder extendedKeyUsages(java.util.List<String> extendedKeyUsages) {
                 this.extendedKeyUsages = extendedKeyUsages;
                 return this;
             }
 
             /**
-             * The key usage.
+             * <p>The key usage.</p>
              */
             public Builder keyUsage(KeyUsage keyUsage) {
                 this.keyUsage = keyUsage;
@@ -540,9 +634,9 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The aliases of the entities.
+             * <p>The aliases of the entities.</p>
              */
-            public Builder subjectAlternativeNames(java.util.List < SubjectAlternativeNames> subjectAlternativeNames) {
+            public Builder subjectAlternativeNames(java.util.List<SubjectAlternativeNames> subjectAlternativeNames) {
                 this.subjectAlternativeNames = subjectAlternativeNames;
                 return this;
             }
@@ -554,11 +648,17 @@ public class CreateCustomCertificateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomCertificateRequest</p>
+     */
     public static class CustomAttributes extends TeaModel {
-        @NameInMap("ObjectIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ObjectIdentifier")
         private String objectIdentifier;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CustomAttributes(Builder builder) {
@@ -593,7 +693,25 @@ public class CreateCustomCertificateRequest extends Request {
             private String value; 
 
             /**
-             * ObjectIdentifier.
+             * <p>Custom attribute type as:</p>
+             * <ul>
+             * <li>2.5.4.6 : country</li>
+             * <li>2.5.4.10 : organization</li>
+             * <li>2.5.4.11 : organizational unit</li>
+             * <li>2.5.4.12 : title</li>
+             * <li>2.5.4.3 : common name</li>
+             * <li>2.5.4.9 : street</li>
+             * <li>2.5.4.5 : serial number</li>
+             * <li>2.5.4.7 : locality</li>
+             * <li>2.5.4.8 : state</li>
+             * <li>1.3.6.1.4.1.37244.1.1 : Matter Operational Certificate - Node ID</li>
+             * <li>1.3.6.1.4.1.37244.1.5 : Matter Operational Certificate - Fabric ID</li>
+             * <li>1.3.6.1.4.1.37244.2.1 : Matter Device Attestation Certificate Vender ID (VID)</li>
+             * <li>1.3.6.1.4.1.37244.2.2 : Matter Device Attestation Certificate Product ID (PID).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2.5.4.3</p>
              */
             public Builder objectIdentifier(String objectIdentifier) {
                 this.objectIdentifier = objectIdentifier;
@@ -601,7 +719,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The alias that meets the requirement of a specified type.
+             * <p>Custom attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -615,26 +736,32 @@ public class CreateCustomCertificateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomCertificateRequest</p>
+     */
     public static class Subject extends TeaModel {
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("CustomAttributes")
-        private java.util.List < CustomAttributes> customAttributes;
+        @com.aliyun.core.annotation.NameInMap("CustomAttributes")
+        private java.util.List<CustomAttributes> customAttributes;
 
-        @NameInMap("Locality")
+        @com.aliyun.core.annotation.NameInMap("Locality")
         private String locality;
 
-        @NameInMap("Organization")
+        @com.aliyun.core.annotation.NameInMap("Organization")
         private String organization;
 
-        @NameInMap("OrganizationUnit")
+        @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
         private String organizationUnit;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Subject(Builder builder) {
@@ -672,7 +799,7 @@ public class CreateCustomCertificateRequest extends Request {
         /**
          * @return customAttributes
          */
-        public java.util.List < CustomAttributes> getCustomAttributes() {
+        public java.util.List<CustomAttributes> getCustomAttributes() {
             return this.customAttributes;
         }
 
@@ -707,14 +834,17 @@ public class CreateCustomCertificateRequest extends Request {
         public static final class Builder {
             private String commonName; 
             private String country; 
-            private java.util.List < CustomAttributes> customAttributes; 
+            private java.util.List<CustomAttributes> customAttributes; 
             private String locality; 
             private String organization; 
             private String organizationUnit; 
             private String state; 
 
             /**
-             * The common name of the certificate user.
+             * <p>The common name of the certificate user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bob</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -722,7 +852,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The code of the country. The value is an alpha-2 country code that complies with the ISO 3166-1 standard. For more information about country codes, visit <https://www.iso.org/obp/ui/#search/code/>.
+             * <p>The code of the country. The value is an alpha-2 country code that complies with the ISO 3166-1 standard. For more information about country codes, visit <a href="https://www.iso.org/obp/ui/#search/code/">https://www.iso.org/obp/ui/#search/code/</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -730,15 +863,18 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * CustomAttributes.
+             * <p>Customize the Subject attributes of the certificate.</p>
              */
-            public Builder customAttributes(java.util.List < CustomAttributes> customAttributes) {
+            public Builder customAttributes(java.util.List<CustomAttributes> customAttributes) {
                 this.customAttributes = customAttributes;
                 return this;
             }
 
             /**
-             * The name of the city in which the organization is located. The value can contain letters.
+             * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -746,7 +882,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The name of the organization.
+             * <p>The name of the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX company</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -754,7 +893,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The name of the department or branch in the organization.
+             * <p>The name of the department or branch in the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX department</p>
              */
             public Builder organizationUnit(String organizationUnit) {
                 this.organizationUnit = organizationUnit;
@@ -762,7 +904,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The name of the province or state in which the organization associated with the certificate is located.
+             * <p>The name of the province or state in which the organization associated with the certificate is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -776,14 +921,20 @@ public class CreateCustomCertificateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomCertificateRequest</p>
+     */
     public static class ApiPassthrough extends TeaModel {
-        @NameInMap("Extensions")
+        @com.aliyun.core.annotation.NameInMap("Extensions")
         private Extensions extensions;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private Subject subject;
 
         private ApiPassthrough(Builder builder) {
@@ -827,7 +978,7 @@ public class CreateCustomCertificateRequest extends Request {
             private Subject subject; 
 
             /**
-             * The extensions of the certificate.
+             * <p>The extensions of the certificate.</p>
              */
             public Builder extensions(Extensions extensions) {
                 this.extensions = extensions;
@@ -835,7 +986,10 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * SerialNumber.
+             * <p>The serial number MUST be a positive integer assigned by the CA to each certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16889526086333</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -843,7 +997,7 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The name of the entity that uses the certificate.
+             * <p>The name of the entity that uses the certificate.</p>
              */
             public Builder subject(Subject subject) {
                 this.subject = subject;

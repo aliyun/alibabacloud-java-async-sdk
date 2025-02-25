@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouterInterfaceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyRouterInterfaceSpecRequest</p>
  */
 public class ModifyRouterInterfaceSpecRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouterInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routerInterfaceId;
 
-    @Query
-    @NameInMap("Spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
     private ModifyRouterInterfaceSpecRequest(Builder builder) {
@@ -155,12 +160,14 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,10 +194,12 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the region where the router interface is deployed.
-         * <p>
+         * <p>The ID of the region where the router interface is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,7 +226,11 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the router interface.
+         * <p>The ID of the router interface.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2zeo3xzyf38r4urzd****</p>
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);
@@ -226,23 +239,28 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * The specification of the router interface. Valid specifications and bandwidth values:
-         * <p>
+         * <p>The specification of the router interface. Valid specifications and bandwidth values:</p>
+         * <ul>
+         * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
+         * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
+         * <li><strong>Small.1</strong>: 10 Mbit/s</li>
+         * <li><strong>Small.2</strong>: 20 Mbit/s</li>
+         * <li><strong>Small.5</strong>: 50 Mbit/s</li>
+         * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
+         * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
+         * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
+         * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
+         * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
+         * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
+         * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+         * </ul>
+         * <blockquote>
+         * <p> When <strong>Role</strong> is set to <strong>AcceptingSide</strong>, set <strong>Spec</strong> to <strong>Negative</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Mini.2**: 2 Mbit/s
-         * *   **Mini.5**: 5 Mbit/s
-         * *   **Small.1**: 10 Mbit/s
-         * *   **Small.2**: 20 Mbit/s
-         * *   **Small.5**: 50 Mbit/s
-         * *   **Middle.1**: 100 Mbit/s
-         * *   **Middle.2**: 200 Mbit/s
-         * *   **Middle.5**: 500 Mbit/s
-         * *   **Large.1**: 1,000 Mbit/s
-         * *   **Large.2**: 2,000 Mbit/s
-         * *   **Large.5**: 5,000 Mbit/s
-         * *   **Xlarge.1**: 10,000 Mbit/s
-         * 
-         * >  When **Role** is set to **AcceptingSide**, set **Spec** to **Negative**.
+         * <strong>example:</strong>
+         * <p>Small.1</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveSnapshotTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveSnapshotTemplatesResponseBody</p>
  */
 public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @NameInMap("TemplateList")
-    private java.util.List < TemplateList> templateList;
+    @com.aliyun.core.annotation.NameInMap("TemplateList")
+    private java.util.List<TemplateList> templateList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLiveSnapshotTemplatesResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     /**
      * @return templateList
      */
-    public java.util.List < TemplateList> getTemplateList() {
+    public java.util.List<TemplateList> getTemplateList() {
         return this.templateList;
     }
 
@@ -94,11 +99,14 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private String sortBy; 
-        private java.util.List < TemplateList> templateList; 
+        private java.util.List<TemplateList> templateList; 
         private Long totalCount; 
 
         /**
-         * PageNo.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -106,7 +114,10 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +125,10 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order of the results by creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -130,15 +147,18 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateList.
+         * <p>The list of the templates.</p>
          */
-        public Builder templateList(java.util.List < TemplateList> templateList) {
+        public Builder templateList(java.util.List<TemplateList> templateList) {
             this.templateList = templateList;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -151,20 +171,26 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveSnapshotTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveSnapshotTemplatesResponseBody</p>
+     */
     public static class TemplateList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TemplateList(Builder builder) {
@@ -226,7 +252,10 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T02:48:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -234,7 +263,10 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -242,7 +274,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -250,7 +282,10 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeInterval.
+             * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -258,7 +293,15 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the template.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder type(String type) {
                 this.type = type;

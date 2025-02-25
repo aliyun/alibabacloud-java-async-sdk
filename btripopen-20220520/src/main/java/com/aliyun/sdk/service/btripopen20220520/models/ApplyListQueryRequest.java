@@ -1,67 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyListQueryRequest} extends {@link RequestModel}
  *
  * <p>ApplyListQueryRequest</p>
  */
 public class ApplyListQueryRequest extends Request {
-    @Query
-    @NameInMap("all_apply")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("all_apply")
     private Boolean allApply;
 
-    @Query
-    @NameInMap("depart_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("depart_id")
     private String departId;
 
-    @Query
-    @NameInMap("end_time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("end_time")
     private String endTime;
 
-    @Query
-    @NameInMap("gmt_modified")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gmt_modified")
     private String gmtModified;
 
-    @Query
-    @NameInMap("only_shang_lv_apply")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("only_shang_lv_apply")
     private Boolean onlyShangLvApply;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("start_time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("start_time")
     private String startTime;
 
-    @Query
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private Integer type;
 
-    @Query
-    @NameInMap("union_no")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("union_no")
     private String unionNo;
 
-    @Query
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ApplyListQueryRequest(Builder builder) {

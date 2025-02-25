@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-mpaas20201028</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>alibabacloud-mpaas20201028</name>
   <description>Alibaba Cloud mPaaS (20201028) Async SDK for Java
@@ -41,7 +41,7 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
-    <service.version>0.2.4-beta</service.version>
+    <service.version>0.2.8-beta</service.version>
   </properties>
   <dependencies>
     <dependency>

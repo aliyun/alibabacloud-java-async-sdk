@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cloudcontrol20220830;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cloudcontrol20220830.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -23,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
     CompletableFuture<DeleteResourceResponse> deleteResource(DeleteResourceRequest request);
+
+    CompletableFuture<GetPriceResponse> getPrice(GetPriceRequest request);
 
     CompletableFuture<GetResourceTypeResponse> getResourceType(GetResourceTypeRequest request);
 

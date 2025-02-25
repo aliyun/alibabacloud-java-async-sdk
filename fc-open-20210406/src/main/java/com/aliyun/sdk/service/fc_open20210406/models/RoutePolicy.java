@@ -52,7 +52,7 @@ public class RoutePolicy extends TeaModel {
         private java.util.List < PolicyItem > policyItems; 
 
         /**
-         * 条件模式：灰度规则项的逻辑运算。 枚举值： AND:  全部灰度规则项满足则命中。 OR: 任意一个灰度规则项满足则命中。
+         * condition.
          */
         public Builder condition(String condition) {
             this.condition = condition;
@@ -60,7 +60,7 @@ public class RoutePolicy extends TeaModel {
         }
 
         /**
-         * 灰度规则项数组
+         * policyItems.
          */
         public Builder policyItems(java.util.List < PolicyItem > policyItems) {
             this.policyItems = policyItems;

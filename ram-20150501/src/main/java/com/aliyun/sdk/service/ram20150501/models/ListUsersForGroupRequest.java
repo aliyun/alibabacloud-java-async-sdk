@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersForGroupRequest} extends {@link RequestModel}
  *
  * <p>ListUsersForGroupRequest</p>
  */
 public class ListUsersForGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @Query
-    @NameInMap("MaxItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxItems")
     private Integer maxItems;
 
     private ListUsersForGroupRequest(Builder builder) {
@@ -74,15 +79,18 @@ public class ListUsersForGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ListUsersForGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
+        private Builder(ListUsersForGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -91,7 +99,10 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * Marker.
+         * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -100,7 +111,11 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * MaxItems.
+         * <p>The number of entries to return. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be <code>true</code>.</p>
+         * <p>Valid values: 1 to 1000. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);

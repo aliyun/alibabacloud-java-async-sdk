@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeViewMetric} extends {@link TeaModel}
  *
  * <p>NodeViewMetric</p>
  */
 public class NodeViewMetric extends TeaModel {
-    @NameInMap("CPUUsageRate")
+    @com.aliyun.core.annotation.NameInMap("CPUUsageRate")
     private String CPUUsageRate;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("DiskReadRate")
+    @com.aliyun.core.annotation.NameInMap("DiskReadRate")
     private String diskReadRate;
 
-    @NameInMap("DiskWriteRate")
+    @com.aliyun.core.annotation.NameInMap("DiskWriteRate")
     private String diskWriteRate;
 
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("MachineGroupID")
+    @com.aliyun.core.annotation.NameInMap("MachineGroupID")
     private String machineGroupID;
 
-    @NameInMap("MemoryUsageRate")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsageRate")
     private String memoryUsageRate;
 
-    @NameInMap("NetworkInputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkInputRate")
     private String networkInputRate;
 
-    @NameInMap("NetworkOutputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkOutputRate")
     private String networkOutputRate;
 
-    @NameInMap("NodeID")
+    @com.aliyun.core.annotation.NameInMap("NodeID")
     private String nodeID;
 
-    @NameInMap("NodeStatus")
+    @com.aliyun.core.annotation.NameInMap("NodeStatus")
     private String nodeStatus;
 
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @NameInMap("RequestCPU")
+    @com.aliyun.core.annotation.NameInMap("RequestCPU")
     private Long requestCPU;
 
-    @NameInMap("RequestGPU")
+    @com.aliyun.core.annotation.NameInMap("RequestGPU")
     private Long requestGPU;
 
-    @NameInMap("RequestMemory")
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
     private Long requestMemory;
 
-    @NameInMap("TaskIdMap")
-    private java.util.Map < String, ? > taskIdMap;
+    @com.aliyun.core.annotation.NameInMap("TaskIdMap")
+    private java.util.Map<String, ?> taskIdMap;
 
-    @NameInMap("TotalCPU")
+    @com.aliyun.core.annotation.NameInMap("TotalCPU")
     private Long totalCPU;
 
-    @NameInMap("TotalGPU")
+    @com.aliyun.core.annotation.NameInMap("TotalGPU")
     private Long totalGPU;
 
-    @NameInMap("TotalMemory")
+    @com.aliyun.core.annotation.NameInMap("TotalMemory")
     private Long totalMemory;
 
-    @NameInMap("TotalTasks")
+    @com.aliyun.core.annotation.NameInMap("TotalTasks")
     private Long totalTasks;
 
-    @NameInMap("UserIDs")
-    private java.util.List < String > userIDs;
+    @com.aliyun.core.annotation.NameInMap("UserIDs")
+    private java.util.List<String> userIDs;
 
-    @NameInMap("UserNumber")
+    @com.aliyun.core.annotation.NameInMap("UserNumber")
     private String userNumber;
 
     private NodeViewMetric(Builder builder) {
@@ -219,7 +224,7 @@ public class NodeViewMetric extends TeaModel {
     /**
      * @return taskIdMap
      */
-    public java.util.Map < String, ? > getTaskIdMap() {
+    public java.util.Map<String, ?> getTaskIdMap() {
         return this.taskIdMap;
     }
 
@@ -254,7 +259,7 @@ public class NodeViewMetric extends TeaModel {
     /**
      * @return userIDs
      */
-    public java.util.List < String > getUserIDs() {
+    public java.util.List<String> getUserIDs() {
         return this.userIDs;
     }
 
@@ -281,12 +286,12 @@ public class NodeViewMetric extends TeaModel {
         private Long requestCPU; 
         private Long requestGPU; 
         private Long requestMemory; 
-        private java.util.Map < String, ? > taskIdMap; 
+        private java.util.Map<String, ?> taskIdMap; 
         private Long totalCPU; 
         private Long totalGPU; 
         private Long totalMemory; 
         private Long totalTasks; 
-        private java.util.List < String > userIDs; 
+        private java.util.List<String> userIDs; 
         private String userNumber; 
 
         /**
@@ -412,7 +417,7 @@ public class NodeViewMetric extends TeaModel {
         /**
          * TaskIdMap.
          */
-        public Builder taskIdMap(java.util.Map < String, ? > taskIdMap) {
+        public Builder taskIdMap(java.util.Map<String, ?> taskIdMap) {
             this.taskIdMap = taskIdMap;
             return this;
         }
@@ -452,7 +457,7 @@ public class NodeViewMetric extends TeaModel {
         /**
          * UserIDs.
          */
-        public Builder userIDs(java.util.List < String > userIDs) {
+        public Builder userIDs(java.util.List<String> userIDs) {
             this.userIDs = userIDs;
             return this;
         }

@@ -1,84 +1,84 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreviewStackRequest} extends {@link RequestModel}
  *
  * <p>PreviewStackRequest</p>
  */
 public class PreviewStackRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DisableRollback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableRollback")
     private Boolean disableRollback;
 
-    @Query
-    @NameInMap("EnablePreConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnablePreConfig")
     private Boolean enablePreConfig;
 
-    @Query
-    @NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
     private Long parallelism;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @Query
-    @NameInMap("StackName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackName")
     private String stackName;
 
-    @Query
-    @NameInMap("StackPolicyBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyBody")
     private String stackPolicyBody;
 
-    @Query
-    @NameInMap("StackPolicyURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyURL")
     private String stackPolicyURL;
 
-    @Query
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateScratchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
     private String templateScratchId;
 
-    @Query
-    @NameInMap("TemplateScratchRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchRegionId")
     private String templateScratchRegionId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
-    @Query
-    @NameInMap("TimeoutInMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
     private Long timeoutInMinutes;
 
     private PreviewStackRequest(Builder builder) {
@@ -279,10 +279,10 @@ public class PreviewStackRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-         * <p>
-         * The token can be up to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).\
-         * For more information, see [Ensure idempotence](~~134212~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.<br>The token can be up to 64 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -291,11 +291,14 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable rollback for the resources when the stack fails to be created. Valid values:
-         * <p>
+         * <p>Specifies whether to disable rollback for the resources when the stack fails to be created. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putQueryParameter("DisableRollback", disableRollback);
@@ -304,13 +307,15 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the parameters that you want to use in compliance precheck.
-         * <p>
+         * <p>Specifies whether to query the parameters that you want to use in compliance precheck.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enablePreConfig(Boolean enablePreConfig) {
             this.putQueryParameter("EnablePreConfig", enablePreConfig);
@@ -319,12 +324,14 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The maximum number of concurrent operations that can be performed on resources. This parameter takes effect only for Terraform stacks.
-         * <p>
+         * <p>The maximum number of concurrent operations that can be performed on resources. This parameter takes effect only for Terraform stacks.</p>
+         * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
+         * <blockquote>
+         * <p>If you set this parameter to an integer greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, the default value of Terraform is used. In most cases, the default value of Terraform is 10.</p>
+         * </blockquote>
          * 
-         * By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.
-         * 
-         * > If you set this parameter to an integer greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, the default value of Terraform is used. In most cases, the default value of Terraform is 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parallelism(Long parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -333,7 +340,7 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The parameters of the stack.
+         * <p>The parameters of the stack.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -342,7 +349,11 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -351,13 +362,16 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The stack ID. You can use this parameter to preview a stack that you want to update.
-         * <p>
+         * <p>The stack ID. You can use this parameter to preview a stack that you want to update.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You must and can specify only one of StackName and StackId.</li>
+         * <li>In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * 
-         * 
-         * > -  You must and can specify only one of StackName and StackId.
-         * > - In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -366,10 +380,13 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The stack name. You can use this parameter to preview the stack that you want to create. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
-         * <p>
+         * <p>The stack name. You can use this parameter to preview the stack that you want to create. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of StackName and StackId.</p>
+         * </blockquote>
          * 
-         * > You must and can specify only one of StackName and StackId.
+         * <strong>example:</strong>
+         * <p>MyStack</p>
          */
         public Builder stackName(String stackName) {
             this.putQueryParameter("StackName", stackName);
@@ -378,10 +395,13 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
-         * <p>
+         * <p>The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.</p>
+         * <blockquote>
+         * <p>You can specify only one of StackPolicyBody and StackPolicyURL.</p>
+         * </blockquote>
          * 
-         * > You can specify only one of StackPolicyBody and StackPolicyURL.
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;Update:<em>&quot;, &quot;Resource&quot;: &quot;</em>&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: &quot;*&quot;}]}</p>
          */
         public Builder stackPolicyBody(String stackPolicyBody) {
             this.putQueryParameter("StackPolicyBody", stackPolicyBody);
@@ -390,12 +410,14 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+         * <blockquote>
+         * <p>You can specify only one of StackPolicyBody and StackPolicyURL.</p>
+         * </blockquote>
+         * <p>The URL can be up to 1,350 bytes in length.</p>
          * 
-         * > You can specify only one of StackPolicyBody and StackPolicyURL.
-         * 
-         * The URL can be up to 1,350 bytes in length.
+         * <strong>example:</strong>
+         * <p>oss://ros-stack-policy/demo</p>
          */
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);
@@ -404,22 +426,22 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
-         * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }
 
         /**
-         * The template ID. This parameter applies to shared and private templates.
-         * <p>
+         * <p>The template ID. This parameter applies to shared and private templates.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -428,12 +450,14 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The scenario ID.
-         * <p>
+         * <p>The scenario ID.</p>
+         * <p>For more information about how to query the scenario ID, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * For more information about how to query the scenario ID, see [ListTemplateScratches](~~363050~~).
-         * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>ts-aa9c62feab844a6b****</p>
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -442,10 +466,11 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The region ID of the scenario. The default value is the same as the value of RegionId.
-         * <p>
+         * <p>The region ID of the scenario. The default value is the same as the value of RegionId.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder templateScratchRegionId(String templateScratchRegionId) {
             this.putQueryParameter("TemplateScratchRegionId", templateScratchRegionId);
@@ -454,10 +479,13 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+         * <blockquote>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+         * </blockquote>
          * 
-         * > You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -466,7 +494,10 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The version of the template. This parameter takes effect only when TemplateId is specified.
+         * <p>The version of the template. This parameter takes effect only when TemplateId is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -475,12 +506,12 @@ public class PreviewStackRequest extends Request {
         }
 
         /**
-         * The timeout period for creating the stack.
-         * <p>
+         * <p>The timeout period for creating the stack.</p>
+         * <p>Unit: minutes.</p>
+         * <p>Default value: 60.</p>
          * 
-         * Unit: minutes.
-         * 
-         * Default value: 60.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutInMinutes(Long timeoutInMinutes) {
             this.putQueryParameter("TimeoutInMinutes", timeoutInMinutes);
@@ -495,13 +526,19 @@ public class PreviewStackRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PreviewStackRequest} extends {@link TeaModel}
+     *
+     * <p>PreviewStackRequest</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -536,10 +573,14 @@ public class PreviewStackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of the parameter N. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template. Maximum value of N: 200.
-             * <p>
+             * <p>The name of the parameter N. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template. Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p>If you specify Parameters, you must specify Parameters.N.ParameterKey.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > If you specify Parameters, you must specify Parameters.N.ParameterKey.
+             * <strong>example:</strong>
+             * <p>ALIYUN::AccountId</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -547,10 +588,14 @@ public class PreviewStackRequest extends Request {
             }
 
             /**
-             * The value of parameter N. Maximum value of N: 200.
-             * <p>
+             * <p>The value of parameter N. Maximum value of N: 200.</p>
+             * <blockquote>
+             * <p>If you specify Parameters, you must specify Parameters.N.ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > If you specify Parameters, you must specify Parameters.N.ParameterValue.
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

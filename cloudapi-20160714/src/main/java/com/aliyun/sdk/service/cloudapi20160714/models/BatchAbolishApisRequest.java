@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAbolishApisRequest} extends {@link RequestModel}
  *
  * <p>BatchAbolishApisRequest</p>
  */
 public class BatchAbolishApisRequest extends Request {
-    @Query
-    @NameInMap("Api")
-    @Validation(required = true)
-    private java.util.List < Api> api;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Api")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Api> api;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private BatchAbolishApisRequest(Builder builder) {
@@ -43,7 +48,7 @@ public class BatchAbolishApisRequest extends Request {
     /**
      * @return api
      */
-    public java.util.List < Api> getApi() {
+    public java.util.List<Api> getApi() {
         return this.api;
     }
 
@@ -55,7 +60,7 @@ public class BatchAbolishApisRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchAbolishApisRequest, Builder> {
-        private java.util.List < Api> api; 
+        private java.util.List<Api> api; 
         private String securityToken; 
 
         private Builder() {
@@ -69,9 +74,10 @@ public class BatchAbolishApisRequest extends Request {
         } 
 
         /**
-         * Api.
+         * <p>The APIs that you want to operate.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder api(java.util.List < Api> api) {
+        public Builder api(java.util.List<Api> api) {
             this.putQueryParameter("Api", api);
             this.api = api;
             return this;
@@ -93,19 +99,25 @@ public class BatchAbolishApisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchAbolishApisRequest} extends {@link TeaModel}
+     *
+     * <p>BatchAbolishApisRequest</p>
+     */
     public static class Api extends TeaModel {
-        @NameInMap("ApiUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String apiUid;
 
-        @NameInMap("GroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String groupId;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private Api(Builder builder) {
@@ -158,7 +170,11 @@ public class BatchAbolishApisRequest extends Request {
             private String stageName; 
 
             /**
-             * ApiUid.
+             * <p>The ID of the API.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>994f72dcdaf04af0b38022c65fdbd1ac</p>
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -166,7 +182,11 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the API group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ced5ab777f7b440398ea70e4470124de</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -174,7 +194,10 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * StageId.
+             * <p>The ID of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>979fd16250644d5b82173534f465ac77</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -182,7 +205,10 @@ public class BatchAbolishApisRequest extends Request {
             }
 
             /**
-             * StageName.
+             * <p>The name of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

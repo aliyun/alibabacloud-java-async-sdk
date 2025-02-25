@@ -20,15 +20,10 @@ public class ListFlowsRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     private ListFlowsRequest(Builder builder) {
         super(builder);
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
-        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -58,17 +53,9 @@ public class ListFlowsRequest extends Request {
         return this.nextToken;
     }
 
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static final class Builder extends Request.Builder<ListFlowsRequest, Builder> {
         private Integer limit; 
         private String nextToken; 
-        private String requestId; 
 
         private Builder() {
             super();
@@ -78,7 +65,6 @@ public class ListFlowsRequest extends Request {
             super(request);
             this.limit = request.limit;
             this.nextToken = request.nextToken;
-            this.requestId = request.requestId;
         } 
 
         /**
@@ -96,15 +82,6 @@ public class ListFlowsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

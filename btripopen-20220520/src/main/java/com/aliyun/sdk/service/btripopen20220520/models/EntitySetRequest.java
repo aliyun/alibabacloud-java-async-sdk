@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntitySetRequest} extends {@link RequestModel}
  *
  * <p>EntitySetRequest</p>
  */
 public class EntitySetRequest extends Request {
-    @Body
-    @NameInMap("entity_d_o_list")
-    private java.util.List < EntityDOList> entityDOList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("entity_d_o_list")
+    private java.util.List<EntityDOList> entityDOList;
 
-    @Body
-    @NameInMap("thirdpart_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thirdpart_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdpartId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private EntitySetRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class EntitySetRequest extends Request {
     /**
      * @return entityDOList
      */
-    public java.util.List < EntityDOList> getEntityDOList() {
+    public java.util.List<EntityDOList> getEntityDOList() {
         return this.entityDOList;
     }
 
@@ -67,7 +72,7 @@ public class EntitySetRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EntitySetRequest, Builder> {
-        private java.util.List < EntityDOList> entityDOList; 
+        private java.util.List<EntityDOList> entityDOList; 
         private String thirdpartId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -85,7 +90,7 @@ public class EntitySetRequest extends Request {
         /**
          * entity_d_o_list.
          */
-        public Builder entityDOList(java.util.List < EntityDOList> entityDOList) {
+        public Builder entityDOList(java.util.List<EntityDOList> entityDOList) {
             String entityDOListShrink = shrink(entityDOList, "entity_d_o_list", "json");
             this.putBodyParameter("entity_d_o_list", entityDOListShrink);
             this.entityDOList = entityDOList;
@@ -93,7 +98,10 @@ public class EntitySetRequest extends Request {
         }
 
         /**
-         * thirdpart_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340049</p>
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putBodyParameter("thirdpart_id", thirdpartId);
@@ -117,13 +125,19 @@ public class EntitySetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EntitySetRequest} extends {@link TeaModel}
+     *
+     * <p>EntitySetRequest</p>
+     */
     public static class EntityDOList extends TeaModel {
-        @NameInMap("entity_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityId;
 
-        @NameInMap("entity_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityType;
 
         private EntityDOList(Builder builder) {
@@ -158,7 +172,10 @@ public class EntitySetRequest extends Request {
             private String entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -166,7 +183,10 @@ public class EntitySetRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGroupRequest</p>
  */
 public class CreateGroupRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private CreateGroupRequest(Builder builder) {
@@ -61,14 +66,18 @@ public class CreateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGroupRequest response) {
-            super(response);
-            this.comments = response.comments;
-            this.groupName = response.groupName;
+        private Builder(CreateGroupRequest request) {
+            super(request);
+            this.comments = request.comments;
+            this.groupName = request.groupName;
         } 
 
         /**
-         * Comments.
+         * <p>The description.</p>
+         * <p>The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -77,7 +86,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the user group.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

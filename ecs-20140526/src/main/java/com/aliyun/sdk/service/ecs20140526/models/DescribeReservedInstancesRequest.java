@@ -1,89 +1,94 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReservedInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeReservedInstancesRequest</p>
  */
 public class DescribeReservedInstancesRequest extends Request {
-    @Query
-    @NameInMap("AllocationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationType")
     private String allocationType;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @Query
-    @NameInMap("LockReason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LockReason")
     private String lockReason;
 
-    @Query
-    @NameInMap("OfferingType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfferingType")
     private String offeringType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReservedInstanceId")
-    private java.util.List < String > reservedInstanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
+    private java.util.List<String> reservedInstanceId;
 
-    @Query
-    @NameInMap("ReservedInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedInstanceName")
     private String reservedInstanceName;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("Status")
-    private java.util.List < String > status;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private java.util.List<String> status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeReservedInstancesRequest(Builder builder) {
@@ -194,7 +199,7 @@ public class DescribeReservedInstancesRequest extends Request {
     /**
      * @return reservedInstanceId
      */
-    public java.util.List < String > getReservedInstanceId() {
+    public java.util.List<String> getReservedInstanceId() {
         return this.reservedInstanceId;
     }
 
@@ -229,14 +234,14 @@ public class DescribeReservedInstancesRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -258,13 +263,13 @@ public class DescribeReservedInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < String > reservedInstanceId; 
+        private java.util.List<String> reservedInstanceId; 
         private String reservedInstanceName; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scope; 
-        private java.util.List < String > status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> status; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -294,13 +299,15 @@ public class DescribeReservedInstancesRequest extends Request {
         } 
 
         /**
-         * The allocation type. Valid values:
-         * <p>
+         * <p>The allocation type of the reserved instances. Valid values:</p>
+         * <ul>
+         * <li>Normal: queries all reserved instances that belong to the current account.</li>
+         * <li>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</li>
+         * </ul>
+         * <p>Default value: Normal.</p>
          * 
-         * *   Normal: queries all reserved instances that belong to the current account.
-         * *   Shared: queries reserved instances that are shared between the main account and linked accounts.
-         * 
-         * Default value: Normal.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder allocationType(String allocationType) {
             this.putQueryParameter("AllocationType", allocationType);
@@ -309,7 +316,13 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Instance families](~~25378~~).
+         * <p>The instance type of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <blockquote>
+         * <p> Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -318,7 +331,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance family. For more information, see [Instance families](~~25378~~).
+         * <p>The instance family of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -327,11 +343,14 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The reason why the instance is locked. Valid values:
-         * <p>
+         * <p>The reason why the reserved instance is locked. Valid values:</p>
+         * <ul>
+         * <li>financial: The reserved instance is locked because the account has overdue payments or the service expires.</li>
+         * <li>security: The reserved instance is locked due to security reasons.</li>
+         * </ul>
          * 
-         * *   financial: You have an overdue payment in your account, or the reserved instance has expired.
-         * *   security: The reserved instance is locked for security reasons.
+         * <strong>example:</strong>
+         * <p>security</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -340,12 +359,15 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The payment option of the reserved instances. Valid values:
-         * <p>
+         * <p>The payment option of the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>No Upfront</li>
+         * <li>Partial Upfront</li>
+         * <li>All Upfront</li>
+         * </ul>
          * 
-         * *   No Upfront
-         * *   Partial Upfront
-         * *   All Upfront
+         * <strong>example:</strong>
+         * <p>All Upfront</p>
          */
         public Builder offeringType(String offeringType) {
             this.putQueryParameter("OfferingType", offeringType);
@@ -372,10 +394,11 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -384,10 +407,11 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -396,7 +420,11 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,16 +433,25 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of reserved instance N. Valid values of N: 1 to 100.
+         * <p>The IDs of reserved instances. You can specify up to 100 IDs of reserved instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-bpzhex2ulpzf53****</p>
          */
-        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+        public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
             this.reservedInstanceId = reservedInstanceId;
             return this;
         }
 
         /**
-         * The name of the reserved instance.
+         * <p>The name of the reserved instance.</p>
+         * <blockquote>
+         * <p> Only exact search is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testReservedInstanceName</p>
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -441,13 +478,14 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The scope of the reserved instances. Valid values:
-         * <p>
+         * <p>The scope level of the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>Region: regional</li>
+         * <li>Zone: zonal</li>
+         * </ul>
          * 
-         * *   Region
-         * *   Zone
-         * 
-         * Default value: Region.
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -456,31 +494,31 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The status of reserved instance N. Valid values of N: 1 to 100. Valid values:
-         * <p>
+         * <p>The status of the reserved instances.</p>
          * 
-         * *   Creating
-         * *   Active
-         * *   Expired
-         * *   Updating
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;
         }
 
         /**
-         * The tags to add to the instances.
+         * <p>The tags of the reserved instance. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the reserved instance. This parameter is valid and required if you set Scope to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-z</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -495,11 +533,17 @@ public class DescribeReservedInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReservedInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeReservedInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -534,10 +578,13 @@ public class DescribeReservedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
-             * <p>
+             * <p>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <blockquote>
+             * <p> If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * </blockquote>
              * 
-             * Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -545,7 +592,10 @@ public class DescribeReservedInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.
+             * <p>The value of tag N of the reserved instance. The tag value cannot be empty and can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

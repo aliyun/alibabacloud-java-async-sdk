@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSpecsResponseBody</p>
  */
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("InstanceSpecs")
-    private java.util.List < InstanceSpecs> instanceSpecs;
+    @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
+    private java.util.List<InstanceSpecs> instanceSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSpecsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     /**
      * @return instanceSpecs
      */
-    public java.util.List < InstanceSpecs> getInstanceSpecs() {
+    public java.util.List<InstanceSpecs> getInstanceSpecs() {
         return this.instanceSpecs;
     }
 
@@ -46,19 +51,22 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceSpecs> instanceSpecs; 
+        private java.util.List<InstanceSpecs> instanceSpecs; 
         private String requestId; 
 
         /**
-         * An array that consists of the specifications of instances.
+         * <p>The details of the specifications of the instance.</p>
          */
-        public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
+        public Builder instanceSpecs(java.util.List<InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E3A9B5F-5DDB-593D-A1E6-F1F451DB5E0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,56 +79,62 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecsResponseBody</p>
+     */
     public static class InstanceSpecs extends TeaModel {
-        @NameInMap("BandwidthMbps")
+        @com.aliyun.core.annotation.NameInMap("BandwidthMbps")
         private Integer bandwidthMbps;
 
-        @NameInMap("BaseBandwidth")
+        @com.aliyun.core.annotation.NameInMap("BaseBandwidth")
         private Integer baseBandwidth;
 
-        @NameInMap("ConnLimit")
+        @com.aliyun.core.annotation.NameInMap("ConnLimit")
         private Long connLimit;
 
-        @NameInMap("CpsLimit")
+        @com.aliyun.core.annotation.NameInMap("CpsLimit")
         private Long cpsLimit;
 
-        @NameInMap("DefenseCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseCount")
         private Integer defenseCount;
 
-        @NameInMap("DomainLimit")
+        @com.aliyun.core.annotation.NameInMap("DomainLimit")
         private Integer domainLimit;
 
-        @NameInMap("ElasticBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ElasticBandwidth")
         private Integer elasticBandwidth;
 
-        @NameInMap("ElasticBw")
+        @com.aliyun.core.annotation.NameInMap("ElasticBw")
         private Integer elasticBw;
 
-        @NameInMap("ElasticBwModel")
+        @com.aliyun.core.annotation.NameInMap("ElasticBwModel")
         private String elasticBwModel;
 
-        @NameInMap("ElasticQps")
+        @com.aliyun.core.annotation.NameInMap("ElasticQps")
         private Long elasticQps;
 
-        @NameInMap("ElasticQpsMode")
+        @com.aliyun.core.annotation.NameInMap("ElasticQpsMode")
         private String elasticQpsMode;
 
-        @NameInMap("FunctionVersion")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private String functionVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PortLimit")
+        @com.aliyun.core.annotation.NameInMap("PortLimit")
         private Integer portLimit;
 
-        @NameInMap("QpsLimit")
+        @com.aliyun.core.annotation.NameInMap("QpsLimit")
         private Integer qpsLimit;
 
-        @NameInMap("RealLimitBw")
+        @com.aliyun.core.annotation.NameInMap("RealLimitBw")
         private Long realLimitBw;
 
-        @NameInMap("SiteLimit")
+        @com.aliyun.core.annotation.NameInMap("SiteLimit")
         private Integer siteLimit;
 
         private InstanceSpecs(Builder builder) {
@@ -290,7 +304,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer siteLimit; 
 
             /**
-             * The clean bandwidth of normal services. Unit: Mbit/s.
+             * <p>The clean bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bandwidthMbps(Integer bandwidthMbps) {
                 this.bandwidthMbps = bandwidthMbps;
@@ -298,7 +315,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The basic protection bandwidth. Unit: Gbit/s.
+             * <p>The basic protection bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder baseBandwidth(Integer baseBandwidth) {
                 this.baseBandwidth = baseBandwidth;
@@ -306,7 +326,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of concurrent connections of the instance.
+             * <p>The specification of concurrent connections of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder connLimit(Long connLimit) {
                 this.connLimit = connLimit;
@@ -314,7 +337,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of new connections of the instance.
+             * <p>The specification of new connections of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder cpsLimit(Long cpsLimit) {
                 this.cpsLimit = cpsLimit;
@@ -322,10 +348,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available advanced mitigation sessions for this month. If **-1** is returned, advanced mitigation capabilities are unlimited.
-             * <p>
+             * <p>The number of available advanced mitigation sessions for this month. <strong>-1</strong>: unlimited</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the request parameter <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **RegionId** is set to **ap-southeast-1**. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Premium instances are queried.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder defenseCount(Integer defenseCount) {
                 this.defenseCount = defenseCount;
@@ -333,7 +362,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of domain names that can be protected by the instance.
+             * <p>The number of domain names that can be protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder domainLimit(Integer domainLimit) {
                 this.domainLimit = domainLimit;
@@ -341,7 +373,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable protection bandwidth. Unit: Gbit/s.
+             * <p>The burstable protection bandwidth. Unit: Gbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder elasticBandwidth(Integer elasticBandwidth) {
                 this.elasticBandwidth = elasticBandwidth;
@@ -349,7 +384,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable clean bandwidth. Unit: Mbit/s.
+             * <p>The burstable clean bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder elasticBw(Integer elasticBw) {
                 this.elasticBw = elasticBw;
@@ -357,11 +395,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the burstable clean bandwidth. Valid values:
-             * <p>
+             * <p>The metering method of the burstable clean bandwidth. Valid values:</p>
+             * <ul>
+             * <li><strong>day</strong>: the metering method of daily 95th percentile</li>
+             * <li><strong>month</strong>: the metering method of monthly 95th percentile</li>
+             * </ul>
              * 
-             * *   **day**: the metering method of daily 95th percentile
-             * *   **month**: the metering method of monthly 95th percentile
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder elasticBwModel(String elasticBwModel) {
                 this.elasticBwModel = elasticBwModel;
@@ -369,7 +410,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticQps.
+             * <p>The burstable QPS. Unit: QPS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder elasticQps(Long elasticQps) {
                 this.elasticQps = elasticQps;
@@ -377,7 +421,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticQpsMode.
+             * <p>The metering method of the burstable QPS. Valid values:</p>
+             * <ul>
+             * <li><strong>day</strong>: the metering method of daily 95th percentile</li>
+             * <li><strong>month</strong>: the metering method of monthly 95th percentile</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder elasticQpsMode(String elasticQpsMode) {
                 this.elasticQpsMode = elasticQpsMode;
@@ -385,14 +436,17 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The function plan of the instance. Valid values:
-             * <p>
+             * <p>The function plan of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: Standard</li>
+             * <li><strong>enhance</strong>: Enhanced</li>
+             * <li><strong>cnhk</strong>: Chinese Mainland Acceleration (CMA)</li>
+             * <li><strong>cnhk_default</strong>: Secure Chinese Mainland Acceleration (Sec-CMA) standard</li>
+             * <li><strong>cnhk_enhance</strong>: Sec-CMA enhanced</li>
+             * </ul>
              * 
-             * *   **default**: Standard
-             * *   **enhance**: Enhanced
-             * *   **cnhk**: Chinese Mainland Acceleration (CMA)
-             * *   **cnhk_default**: Secure Chinese Mainland Acceleration (Sec-CMA) standard function plan
-             * *   **cnhk_enhance**: Sec-CMA enhanced function plan
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -400,7 +454,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-zvp2eibz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -408,7 +465,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ports that can be protected by the instance.
+             * <p>The number of ports that can be protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder portLimit(Integer portLimit) {
                 this.portLimit = portLimit;
@@ -416,7 +476,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The clean queries per second (QPS) of normal services.
+             * <p>The clean QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder qpsLimit(Integer qpsLimit) {
                 this.qpsLimit = qpsLimit;
@@ -424,7 +487,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例业务带宽限速值。取值：0～15360，0表示不限速。单位：mbps。
+             * <p>The threshold of the clean bandwidth. Valid values: 0 to 15360. The value 0 indicates that rate limiting is never triggered. Unit: Mbit/s</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder realLimitBw(Long realLimitBw) {
                 this.realLimitBw = realLimitBw;
@@ -432,7 +498,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sites that can be protected by the instance.
+             * <p>The number of sites that can be protected by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder siteLimit(Integer siteLimit) {
                 this.siteLimit = siteLimit;

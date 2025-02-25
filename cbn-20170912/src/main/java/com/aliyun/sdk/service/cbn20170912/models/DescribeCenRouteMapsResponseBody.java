@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenRouteMapsResponseBody</p>
  */
 public class DescribeCenRouteMapsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteMaps")
+    @com.aliyun.core.annotation.NameInMap("RouteMaps")
     private RouteMaps routeMaps;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenRouteMapsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The community set on which actions are performed.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,10 +102,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.
-         * <p>
+         * <p>The number of entries returned per page.</p>
          * 
-         * >  The destination route table IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to route tables in the current region.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -105,7 +113,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24CE1987-D1D1-5324-9BAD-2750B60E6ABB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +124,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the CEN instance.
+         * <p>The information about the routing policy.</p>
          */
         public Builder routeMaps(RouteMaps routeMaps) {
             this.routeMaps = routeMaps;
@@ -121,11 +132,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the source network instance IDs are excluded.
-         * <p>
+         * <p>The total number of entries returned.</p>
          * 
-         * *   **false** (default): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
-         * *   **true**: A route is match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,9 +148,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class DestinationChildInstanceTypes extends TeaModel {
-        @NameInMap("DestinationChildInstanceType")
-        private java.util.List < String > destinationChildInstanceType;
+        @com.aliyun.core.annotation.NameInMap("DestinationChildInstanceType")
+        private java.util.List<String> destinationChildInstanceType;
 
         private DestinationChildInstanceTypes(Builder builder) {
             this.destinationChildInstanceType = builder.destinationChildInstanceType;
@@ -157,17 +173,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationChildInstanceType
          */
-        public java.util.List < String > getDestinationChildInstanceType() {
+        public java.util.List<String> getDestinationChildInstanceType() {
             return this.destinationChildInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationChildInstanceType; 
+            private java.util.List<String> destinationChildInstanceType; 
 
             /**
              * DestinationChildInstanceType.
              */
-            public Builder destinationChildInstanceType(java.util.List < String > destinationChildInstanceType) {
+            public Builder destinationChildInstanceType(java.util.List<String> destinationChildInstanceType) {
                 this.destinationChildInstanceType = destinationChildInstanceType;
                 return this;
             }
@@ -179,9 +195,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class DestinationCidrBlocks extends TeaModel {
-        @NameInMap("DestinationCidrBlock")
-        private java.util.List < String > destinationCidrBlock;
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+        private java.util.List<String> destinationCidrBlock;
 
         private DestinationCidrBlocks(Builder builder) {
             this.destinationCidrBlock = builder.destinationCidrBlock;
@@ -198,17 +220,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationCidrBlock
          */
-        public java.util.List < String > getDestinationCidrBlock() {
+        public java.util.List<String> getDestinationCidrBlock() {
             return this.destinationCidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationCidrBlock; 
+            private java.util.List<String> destinationCidrBlock; 
 
             /**
              * DestinationCidrBlock.
              */
-            public Builder destinationCidrBlock(java.util.List < String > destinationCidrBlock) {
+            public Builder destinationCidrBlock(java.util.List<String> destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
                 return this;
             }
@@ -220,9 +242,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class DestinationInstanceIds extends TeaModel {
-        @NameInMap("DestinationInstanceId")
-        private java.util.List < String > destinationInstanceId;
+        @com.aliyun.core.annotation.NameInMap("DestinationInstanceId")
+        private java.util.List<String> destinationInstanceId;
 
         private DestinationInstanceIds(Builder builder) {
             this.destinationInstanceId = builder.destinationInstanceId;
@@ -239,17 +267,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationInstanceId
          */
-        public java.util.List < String > getDestinationInstanceId() {
+        public java.util.List<String> getDestinationInstanceId() {
             return this.destinationInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationInstanceId; 
+            private java.util.List<String> destinationInstanceId; 
 
             /**
              * DestinationInstanceId.
              */
-            public Builder destinationInstanceId(java.util.List < String > destinationInstanceId) {
+            public Builder destinationInstanceId(java.util.List<String> destinationInstanceId) {
                 this.destinationInstanceId = destinationInstanceId;
                 return this;
             }
@@ -261,9 +289,62 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
+    public static class DestinationRegionIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
+        private java.util.List<String> destinationRegionId;
+
+        private DestinationRegionIds(Builder builder) {
+            this.destinationRegionId = builder.destinationRegionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DestinationRegionIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return destinationRegionId
+         */
+        public java.util.List<String> getDestinationRegionId() {
+            return this.destinationRegionId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> destinationRegionId; 
+
+            /**
+             * DestinationRegionId.
+             */
+            public Builder destinationRegionId(java.util.List<String> destinationRegionId) {
+                this.destinationRegionId = destinationRegionId;
+                return this;
+            }
+
+            public DestinationRegionIds build() {
+                return new DestinationRegionIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class DestinationRouteTableIds extends TeaModel {
-        @NameInMap("DestinationRouteTableId")
-        private java.util.List < String > destinationRouteTableId;
+        @com.aliyun.core.annotation.NameInMap("DestinationRouteTableId")
+        private java.util.List<String> destinationRouteTableId;
 
         private DestinationRouteTableIds(Builder builder) {
             this.destinationRouteTableId = builder.destinationRouteTableId;
@@ -280,17 +361,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationRouteTableId
          */
-        public java.util.List < String > getDestinationRouteTableId() {
+        public java.util.List<String> getDestinationRouteTableId() {
             return this.destinationRouteTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationRouteTableId; 
+            private java.util.List<String> destinationRouteTableId; 
 
             /**
              * DestinationRouteTableId.
              */
-            public Builder destinationRouteTableId(java.util.List < String > destinationRouteTableId) {
+            public Builder destinationRouteTableId(java.util.List<String> destinationRouteTableId) {
                 this.destinationRouteTableId = destinationRouteTableId;
                 return this;
             }
@@ -302,9 +383,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class MatchAsns extends TeaModel {
-        @NameInMap("MatchAsn")
-        private java.util.List < String > matchAsn;
+        @com.aliyun.core.annotation.NameInMap("MatchAsn")
+        private java.util.List<String> matchAsn;
 
         private MatchAsns(Builder builder) {
             this.matchAsn = builder.matchAsn;
@@ -321,17 +408,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return matchAsn
          */
-        public java.util.List < String > getMatchAsn() {
+        public java.util.List<String> getMatchAsn() {
             return this.matchAsn;
         }
 
         public static final class Builder {
-            private java.util.List < String > matchAsn; 
+            private java.util.List<String> matchAsn; 
 
             /**
              * MatchAsn.
              */
-            public Builder matchAsn(java.util.List < String > matchAsn) {
+            public Builder matchAsn(java.util.List<String> matchAsn) {
                 this.matchAsn = matchAsn;
                 return this;
             }
@@ -343,9 +430,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class MatchCommunitySet extends TeaModel {
-        @NameInMap("MatchCommunity")
-        private java.util.List < String > matchCommunity;
+        @com.aliyun.core.annotation.NameInMap("MatchCommunity")
+        private java.util.List<String> matchCommunity;
 
         private MatchCommunitySet(Builder builder) {
             this.matchCommunity = builder.matchCommunity;
@@ -362,17 +455,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return matchCommunity
          */
-        public java.util.List < String > getMatchCommunity() {
+        public java.util.List<String> getMatchCommunity() {
             return this.matchCommunity;
         }
 
         public static final class Builder {
-            private java.util.List < String > matchCommunity; 
+            private java.util.List<String> matchCommunity; 
 
             /**
              * MatchCommunity.
              */
-            public Builder matchCommunity(java.util.List < String > matchCommunity) {
+            public Builder matchCommunity(java.util.List<String> matchCommunity) {
                 this.matchCommunity = matchCommunity;
                 return this;
             }
@@ -384,9 +477,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class OperateCommunitySet extends TeaModel {
-        @NameInMap("OperateCommunity")
-        private java.util.List < String > operateCommunity;
+        @com.aliyun.core.annotation.NameInMap("OperateCommunity")
+        private java.util.List<String> operateCommunity;
 
         private OperateCommunitySet(Builder builder) {
             this.operateCommunity = builder.operateCommunity;
@@ -403,17 +502,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return operateCommunity
          */
-        public java.util.List < String > getOperateCommunity() {
+        public java.util.List<String> getOperateCommunity() {
             return this.operateCommunity;
         }
 
         public static final class Builder {
-            private java.util.List < String > operateCommunity; 
+            private java.util.List<String> operateCommunity; 
 
             /**
              * OperateCommunity.
              */
-            public Builder operateCommunity(java.util.List < String > operateCommunity) {
+            public Builder operateCommunity(java.util.List<String> operateCommunity) {
                 this.operateCommunity = operateCommunity;
                 return this;
             }
@@ -425,9 +524,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class PrependAsPath extends TeaModel {
-        @NameInMap("AsPath")
-        private java.util.List < String > asPath;
+        @com.aliyun.core.annotation.NameInMap("AsPath")
+        private java.util.List<String> asPath;
 
         private PrependAsPath(Builder builder) {
             this.asPath = builder.asPath;
@@ -444,17 +549,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return asPath
          */
-        public java.util.List < String > getAsPath() {
+        public java.util.List<String> getAsPath() {
             return this.asPath;
         }
 
         public static final class Builder {
-            private java.util.List < String > asPath; 
+            private java.util.List<String> asPath; 
 
             /**
              * AsPath.
              */
-            public Builder asPath(java.util.List < String > asPath) {
+            public Builder asPath(java.util.List<String> asPath) {
                 this.asPath = asPath;
                 return this;
             }
@@ -466,9 +571,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class RouteTypes extends TeaModel {
-        @NameInMap("RouteType")
-        private java.util.List < String > routeType;
+        @com.aliyun.core.annotation.NameInMap("RouteType")
+        private java.util.List<String> routeType;
 
         private RouteTypes(Builder builder) {
             this.routeType = builder.routeType;
@@ -485,17 +596,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return routeType
          */
-        public java.util.List < String > getRouteType() {
+        public java.util.List<String> getRouteType() {
             return this.routeType;
         }
 
         public static final class Builder {
-            private java.util.List < String > routeType; 
+            private java.util.List<String> routeType; 
 
             /**
              * RouteType.
              */
-            public Builder routeType(java.util.List < String > routeType) {
+            public Builder routeType(java.util.List<String> routeType) {
                 this.routeType = routeType;
                 return this;
             }
@@ -507,9 +618,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class SourceChildInstanceTypes extends TeaModel {
-        @NameInMap("SourceChildInstanceType")
-        private java.util.List < String > sourceChildInstanceType;
+        @com.aliyun.core.annotation.NameInMap("SourceChildInstanceType")
+        private java.util.List<String> sourceChildInstanceType;
 
         private SourceChildInstanceTypes(Builder builder) {
             this.sourceChildInstanceType = builder.sourceChildInstanceType;
@@ -526,17 +643,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceChildInstanceType
          */
-        public java.util.List < String > getSourceChildInstanceType() {
+        public java.util.List<String> getSourceChildInstanceType() {
             return this.sourceChildInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceChildInstanceType; 
+            private java.util.List<String> sourceChildInstanceType; 
 
             /**
              * SourceChildInstanceType.
              */
-            public Builder sourceChildInstanceType(java.util.List < String > sourceChildInstanceType) {
+            public Builder sourceChildInstanceType(java.util.List<String> sourceChildInstanceType) {
                 this.sourceChildInstanceType = sourceChildInstanceType;
                 return this;
             }
@@ -548,9 +665,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class SourceInstanceIds extends TeaModel {
-        @NameInMap("SourceInstanceId")
-        private java.util.List < String > sourceInstanceId;
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
+        private java.util.List<String> sourceInstanceId;
 
         private SourceInstanceIds(Builder builder) {
             this.sourceInstanceId = builder.sourceInstanceId;
@@ -567,17 +690,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceInstanceId
          */
-        public java.util.List < String > getSourceInstanceId() {
+        public java.util.List<String> getSourceInstanceId() {
             return this.sourceInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceInstanceId; 
+            private java.util.List<String> sourceInstanceId; 
 
             /**
              * SourceInstanceId.
              */
-            public Builder sourceInstanceId(java.util.List < String > sourceInstanceId) {
+            public Builder sourceInstanceId(java.util.List<String> sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
                 return this;
             }
@@ -589,9 +712,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class SourceRegionIds extends TeaModel {
-        @NameInMap("SourceRegionId")
-        private java.util.List < String > sourceRegionId;
+        @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+        private java.util.List<String> sourceRegionId;
 
         private SourceRegionIds(Builder builder) {
             this.sourceRegionId = builder.sourceRegionId;
@@ -608,17 +737,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceRegionId
          */
-        public java.util.List < String > getSourceRegionId() {
+        public java.util.List<String> getSourceRegionId() {
             return this.sourceRegionId;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceRegionId; 
+            private java.util.List<String> sourceRegionId; 
 
             /**
              * SourceRegionId.
              */
-            public Builder sourceRegionId(java.util.List < String > sourceRegionId) {
+            public Builder sourceRegionId(java.util.List<String> sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
                 return this;
             }
@@ -630,9 +759,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class SourceRouteTableIds extends TeaModel {
-        @NameInMap("SourceRouteTableId")
-        private java.util.List < String > sourceRouteTableId;
+        @com.aliyun.core.annotation.NameInMap("SourceRouteTableId")
+        private java.util.List<String> sourceRouteTableId;
 
         private SourceRouteTableIds(Builder builder) {
             this.sourceRouteTableId = builder.sourceRouteTableId;
@@ -649,17 +784,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceRouteTableId
          */
-        public java.util.List < String > getSourceRouteTableId() {
+        public java.util.List<String> getSourceRouteTableId() {
             return this.sourceRouteTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceRouteTableId; 
+            private java.util.List<String> sourceRouteTableId; 
 
             /**
              * SourceRouteTableId.
              */
-            public Builder sourceRouteTableId(java.util.List < String > sourceRouteTableId) {
+            public Builder sourceRouteTableId(java.util.List<String> sourceRouteTableId) {
                 this.sourceRouteTableId = sourceRouteTableId;
                 return this;
             }
@@ -671,98 +806,107 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class RouteMap extends TeaModel {
-        @NameInMap("AsPathMatchMode")
+        @com.aliyun.core.annotation.NameInMap("AsPathMatchMode")
         private String asPathMatchMode;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenRegionId")
+        @com.aliyun.core.annotation.NameInMap("CenRegionId")
         private String cenRegionId;
 
-        @NameInMap("CidrMatchMode")
+        @com.aliyun.core.annotation.NameInMap("CidrMatchMode")
         private String cidrMatchMode;
 
-        @NameInMap("CommunityMatchMode")
+        @com.aliyun.core.annotation.NameInMap("CommunityMatchMode")
         private String communityMatchMode;
 
-        @NameInMap("CommunityOperateMode")
+        @com.aliyun.core.annotation.NameInMap("CommunityOperateMode")
         private String communityOperateMode;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationChildInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("DestinationChildInstanceTypes")
         private DestinationChildInstanceTypes destinationChildInstanceTypes;
 
-        @NameInMap("DestinationCidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlocks")
         private DestinationCidrBlocks destinationCidrBlocks;
 
-        @NameInMap("DestinationInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("DestinationInstanceIds")
         private DestinationInstanceIds destinationInstanceIds;
 
-        @NameInMap("DestinationInstanceIdsReverseMatch")
+        @com.aliyun.core.annotation.NameInMap("DestinationInstanceIdsReverseMatch")
         private Boolean destinationInstanceIdsReverseMatch;
 
-        @NameInMap("DestinationRouteTableIds")
+        @com.aliyun.core.annotation.NameInMap("DestinationRegionIds")
+        private DestinationRegionIds destinationRegionIds;
+
+        @com.aliyun.core.annotation.NameInMap("DestinationRouteTableIds")
         private DestinationRouteTableIds destinationRouteTableIds;
 
-        @NameInMap("MapResult")
+        @com.aliyun.core.annotation.NameInMap("MapResult")
         private String mapResult;
 
-        @NameInMap("MatchAddressType")
+        @com.aliyun.core.annotation.NameInMap("MatchAddressType")
         private String matchAddressType;
 
-        @NameInMap("MatchAsns")
+        @com.aliyun.core.annotation.NameInMap("MatchAsns")
         private MatchAsns matchAsns;
 
-        @NameInMap("MatchCommunitySet")
+        @com.aliyun.core.annotation.NameInMap("MatchCommunitySet")
         private MatchCommunitySet matchCommunitySet;
 
-        @NameInMap("NextPriority")
+        @com.aliyun.core.annotation.NameInMap("NextPriority")
         private Integer nextPriority;
 
-        @NameInMap("OperateCommunitySet")
+        @com.aliyun.core.annotation.NameInMap("OperateCommunitySet")
         private OperateCommunitySet operateCommunitySet;
 
-        @NameInMap("Preference")
+        @com.aliyun.core.annotation.NameInMap("Preference")
         private Integer preference;
 
-        @NameInMap("PrependAsPath")
+        @com.aliyun.core.annotation.NameInMap("PrependAsPath")
         private PrependAsPath prependAsPath;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RouteMapId")
+        @com.aliyun.core.annotation.NameInMap("RouteMapId")
         private String routeMapId;
 
-        @NameInMap("RouteTypes")
+        @com.aliyun.core.annotation.NameInMap("RouteTypes")
         private RouteTypes routeTypes;
 
-        @NameInMap("SourceChildInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("SourceChildInstanceTypes")
         private SourceChildInstanceTypes sourceChildInstanceTypes;
 
-        @NameInMap("SourceInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceIds")
         private SourceInstanceIds sourceInstanceIds;
 
-        @NameInMap("SourceInstanceIdsReverseMatch")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceIdsReverseMatch")
         private Boolean sourceInstanceIdsReverseMatch;
 
-        @NameInMap("SourceRegionIds")
+        @com.aliyun.core.annotation.NameInMap("SourceRegionIds")
         private SourceRegionIds sourceRegionIds;
 
-        @NameInMap("SourceRouteTableIds")
+        @com.aliyun.core.annotation.NameInMap("SourceRouteTableIds")
         private SourceRouteTableIds sourceRouteTableIds;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
         private String transitRouterRouteTableId;
 
-        @NameInMap("TransmitDirection")
+        @com.aliyun.core.annotation.NameInMap("TransmitDirection")
         private String transmitDirection;
 
         private RouteMap(Builder builder) {
@@ -777,6 +921,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             this.destinationCidrBlocks = builder.destinationCidrBlocks;
             this.destinationInstanceIds = builder.destinationInstanceIds;
             this.destinationInstanceIdsReverseMatch = builder.destinationInstanceIdsReverseMatch;
+            this.destinationRegionIds = builder.destinationRegionIds;
             this.destinationRouteTableIds = builder.destinationRouteTableIds;
             this.mapResult = builder.mapResult;
             this.matchAddressType = builder.matchAddressType;
@@ -882,6 +1027,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
          */
         public Boolean getDestinationInstanceIdsReverseMatch() {
             return this.destinationInstanceIdsReverseMatch;
+        }
+
+        /**
+         * @return destinationRegionIds
+         */
+        public DestinationRegionIds getDestinationRegionIds() {
+            return this.destinationRegionIds;
         }
 
         /**
@@ -1036,6 +1188,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             private DestinationCidrBlocks destinationCidrBlocks; 
             private DestinationInstanceIds destinationInstanceIds; 
             private Boolean destinationInstanceIdsReverseMatch; 
+            private DestinationRegionIds destinationRegionIds; 
             private DestinationRouteTableIds destinationRouteTableIds; 
             private String mapResult; 
             private String matchAddressType; 
@@ -1058,7 +1211,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             private String transmitDirection; 
 
             /**
-             * The IDs of the source route tables to which the routes belong.
+             * <p>The match method that is used to match routes based on the AS path.</p>
+             * <ul>
+             * <li><strong>Include</strong>: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.</li>
+             * <li><strong>Complete</strong>: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Include</p>
              */
             public Builder asPathMatchMode(String asPathMatchMode) {
                 this.asPathMatchMode = asPathMatchMode;
@@ -1066,7 +1226,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned.
+             * <p>The CEN instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-wx12mmlt17ld82****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -1074,7 +1237,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The region ID of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder cenRegionId(String cenRegionId) {
                 this.cenRegionId = cenRegionId;
@@ -1082,11 +1248,18 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The action performed on a route that meets the match conditions.
-             * <p>
+             * <p>The match method that is used to evaluate routes based on the prefix. Valid values:</p>
+             * <ul>
+             * <li><strong>Include</strong>: fuzzy match. A route is a match if the route prefix is included in the match conditions.</li>
+             * </ul>
+             * <p>For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is applied, the route whose prefix is 10.10.1.0/24 meets the match condition.</p>
+             * <ul>
+             * <li><strong>Complete</strong>: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.</li>
+             * </ul>
+             * <p>For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.</p>
              * 
-             * *   **Permit**: the route is permitted.
-             * *   **Deny**: the route is denied.
+             * <strong>example:</strong>
+             * <p>Include</p>
              */
             public Builder cidrMatchMode(String cidrMatchMode) {
                 this.cidrMatchMode = cidrMatchMode;
@@ -1094,16 +1267,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The direction in which the routing policy is applied. Valid values:
-             * <p>
+             * <p>The match method that is used to match routes against the community.</p>
+             * <ul>
+             * <li><strong>Include</strong>: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.</li>
+             * <li><strong>Complete</strong>: exact match. A route meets the match condition only if the community of the route is the same as the community specified in the match condition.</li>
+             * </ul>
              * 
-             * *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
-             * 
-             *     For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
-             * 
-             * *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
-             * 
-             *     For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.
+             * <strong>example:</strong>
+             * <p>Include</p>
              */
             public Builder communityMatchMode(String communityMatchMode) {
                 this.communityMatchMode = communityMatchMode;
@@ -1111,7 +1282,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the routing policy.
+             * <p>The action that is performed on the community of the route.</p>
+             * <ul>
+             * <li><strong>Additive</strong>: adds the community to the route.</li>
+             * <li><strong>Replace</strong>: replaces the original community of the route.</li>
+             * </ul>
+             * <p>This parameter specifies the action to be performed when a route meets the match condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Additive</p>
              */
             public Builder communityOperateMode(String communityOperateMode) {
                 this.communityOperateMode = communityOperateMode;
@@ -1119,7 +1298,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The AS paths based on which the routes are compared.
+             * <p>The description of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1127,7 +1309,16 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationChildInstanceTypes.
+             * <p>The types of destination network instances to which the routes belong.</p>
+             * <ul>
+             * <li><strong>VPC</strong></li>
+             * <li><strong>VBR</strong></li>
+             * <li><strong>CCN</strong></li>
+             * <li><strong>VPN</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> The destination route tables take effect only if the routing policy is applied to the egress gateway direction, and the type of the destination route tables is the same as that of the network instance in the current region.</p>
+             * </blockquote>
              */
             public Builder destinationChildInstanceTypes(DestinationChildInstanceTypes destinationChildInstanceTypes) {
                 this.destinationChildInstanceTypes = destinationChildInstanceTypes;
@@ -1135,7 +1326,8 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the returned page.
+             * <p>The prefix list against which routes are matched.</p>
+             * <p>IPv4 and IPv6 addresses are supported.</p>
              */
             public Builder destinationCidrBlocks(DestinationCidrBlocks destinationCidrBlocks) {
                 this.destinationCidrBlocks = destinationCidrBlocks;
@@ -1143,7 +1335,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationInstanceIds.
+             * <p>The IDs of the destination network instances to which the routes point.</p>
+             * <blockquote>
+             * <p> The destination route tables take effect only if the routing policy is applied to the egress gateway direction, and the ID the destination instance is the same as that of the network instance in the current region.</p>
+             * </blockquote>
              */
             public Builder destinationInstanceIds(DestinationInstanceIds destinationInstanceIds) {
                 this.destinationInstanceIds = destinationInstanceIds;
@@ -1151,7 +1346,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the routing policy.
+             * <p>Indicates whether the destination network instance IDs are excluded.</p>
+             * <ul>
+             * <li><strong>false</strong> (default): A route is a match if its destination network instance ID is in the list specified by <strong>DestinationInstanceIds.N</strong>.</li>
+             * <li><strong>true</strong>: A route is a match if its destination network instance ID is not in the list specified by <strong>DestinationInstanceIds.N</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder destinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
                 this.destinationInstanceIdsReverseMatch = destinationInstanceIdsReverseMatch;
@@ -1159,13 +1361,18 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The types of source network instance to which the routes belong.
-             * <p>
-             * 
-             * *   **VPC**: virtual private cloud (VPC)
-             * *   **VBR**: virtual border router (VBR)
-             * *   **CCN**: Cloud Connect Network (CCN) instance
-             * *   **VPN**: IPsec-VPN connection
+             * <p>The IDs of the destination regions for the routing policy.</p>
+             */
+            public Builder destinationRegionIds(DestinationRegionIds destinationRegionIds) {
+                this.destinationRegionIds = destinationRegionIds;
+                return this;
+            }
+
+            /**
+             * <p>The IDs of the destination route tables to which the routes belong. You can enter at most 32 route table IDs.</p>
+             * <blockquote>
+             * <p> The destination route tables take effect only if the routing policy is applied to the egress gateway direction, and the destination route table IDs are in the current region.</p>
+             * </blockquote>
              */
             public Builder destinationRouteTableIds(DestinationRouteTableIds destinationRouteTableIds) {
                 this.destinationRouteTableIds = destinationRouteTableIds;
@@ -1173,10 +1380,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the routing policy is applied.
-             * <p>
+             * <p>The action performed on a route that meets the match conditions.</p>
+             * <ul>
+             * <li><strong>Permit</strong>: the route is permitted.</li>
+             * <li><strong>Deny</strong>: the route is denied.</li>
+             * </ul>
              * 
-             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+             * <strong>example:</strong>
+             * <p>Deny</p>
              */
             public Builder mapResult(String mapResult) {
                 this.mapResult = mapResult;
@@ -1184,7 +1395,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the source network instances to which the routes belong.
+             * <p>The type of IP address to be matched against the match condition. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong>: IPv4 addresses</li>
+             * <li><strong>IPv6</strong>: IPv6 addresses</li>
+             * <li>If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder matchAddressType(String matchAddressType) {
                 this.matchAddressType = matchAddressType;
@@ -1192,7 +1411,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchAsns.
+             * <p>The AS paths against which routes are matched.</p>
              */
             public Builder matchAsns(MatchAsns matchAsns) {
                 this.matchAsns = matchAsns;
@@ -1200,7 +1419,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchCommunitySet.
+             * <p>The community set against which routes are matched.</p>
              */
             public Builder matchCommunitySet(MatchCommunitySet matchCommunitySet) {
                 this.matchCommunitySet = matchCommunitySet;
@@ -1208,16 +1427,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The match method that is used to match routes based on the prefix. Valid values:
-             * <p>
+             * <p>The priority of the routing policy that you want to associate with the current one.</p>
              * 
-             * *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
-             * 
-             *     For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.
-             * 
-             * *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
-             * 
-             *     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder nextPriority(Integer nextPriority) {
                 this.nextPriority = nextPriority;
@@ -1225,7 +1438,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateCommunitySet.
+             * <p>The community set on which actions are performed.</p>
              */
             public Builder operateCommunitySet(OperateCommunitySet operateCommunitySet) {
                 this.operateCommunitySet = operateCommunitySet;
@@ -1233,7 +1446,12 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The prefixes of the routes.
+             * <p>The new priority of the route.</p>
+             * <p>A smaller value indicates a higher priority.</p>
+             * <p>This parameter indicates the action to be performed when a route meets the match condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder preference(Integer preference) {
                 this.preference = preference;
@@ -1241,7 +1459,8 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * PrependAsPath.
+             * <p>The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.</p>
+             * <p>This parameter indicates the action to be performed when a route meets the match condition.</p>
              */
             public Builder prependAsPath(PrependAsPath prependAsPath) {
                 this.prependAsPath = prependAsPath;
@@ -1249,7 +1468,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the routing policy is applied.
+             * <p>The priority of the routing policy. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1257,12 +1479,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of IP address to be matched against the match condition. Valid values:
-             * <p>
+             * <p>The routing policy ID.</p>
              * 
-             * *   **IPv4**: IPv4 addresses
-             * *   **IPv6**: IPv6 addresses
-             * *   If no value is returned, both IPv4 and IPv6 addresses are matched against the match condition.
+             * <strong>example:</strong>
+             * <p>cenrmap-y40mxdvf7joc12****</p>
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -1270,7 +1490,12 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTypes.
+             * <p>The type of route that is compared. Valid values:</p>
+             * <ul>
+             * <li><strong>System</strong>: system routes that are automatically generated by the system.</li>
+             * <li><strong>Custom</strong>: custom routes that are manually added.</li>
+             * <li><strong>BGP</strong>: routes that are advertised over BGP.</li>
+             * </ul>
              */
             public Builder routeTypes(RouteTypes routeTypes) {
                 this.routeTypes = routeTypes;
@@ -1278,7 +1503,13 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The community set based on which the routes are compared.
+             * <p>The types of source network instances to which the routes belong.</p>
+             * <ul>
+             * <li><strong>VPC</strong></li>
+             * <li><strong>VBR</strong></li>
+             * <li><strong>CCN</strong></li>
+             * <li><strong>VPN</strong></li>
+             * </ul>
              */
             public Builder sourceChildInstanceTypes(SourceChildInstanceTypes sourceChildInstanceTypes) {
                 this.sourceChildInstanceTypes = sourceChildInstanceTypes;
@@ -1286,7 +1517,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The direction in which the routing policy is applied.
+             * <p>The IDs of the source network instances to which the routes belong.</p>
              */
             public Builder sourceInstanceIds(SourceInstanceIds sourceInstanceIds) {
                 this.sourceInstanceIds = sourceInstanceIds;
@@ -1294,7 +1525,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing policy.
+             * <p>Indicates whether the source network instance IDs are excluded.</p>
+             * <ul>
+             * <li><strong>false</strong> (default): A route is a match if its source network instance ID is in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
+             * <li><strong>true</strong>: A route is match if its source network instance ID is not in the list specified by <strong>SourceInstanceIds.N</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
                 this.sourceInstanceIdsReverseMatch = sourceInstanceIdsReverseMatch;
@@ -1302,12 +1540,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the routing policy. Valid values:
-             * <p>
-             * 
-             * *   **Creating**: The routing policy is being created.
-             * *   **Active**: The routing policy is available.
-             * *   **Deleting**: The routing policy is being deleted.
+             * <p>The IDs of the source regions to which the routes belong.</p>
              */
             public Builder sourceRegionIds(SourceRegionIds sourceRegionIds) {
                 this.sourceRegionIds = sourceRegionIds;
@@ -1315,7 +1548,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the routing policies of a Cloud Enterprise Network (CEN) instance.
+             * <p>The IDs of the source route tables to which the routes belong.</p>
              */
             public Builder sourceRouteTableIds(SourceRouteTableIds sourceRouteTableIds) {
                 this.sourceRouteTableIds = sourceRouteTableIds;
@@ -1323,12 +1556,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The new priority of the route.
-             * <p>
+             * <p>The status of the routing policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Active</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * A smaller value indicates a higher priority.
-             * 
-             * This parameter indicates the action to be performed when a route meets the match condition.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1336,13 +1572,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The action that is performed on the community of the route.
-             * <p>
+             * <p>The route table ID of the transit router with which the routing policy is associated.</p>
              * 
-             * *   **Additive**: adds the community to the route.
-             * *   **Replace**: replaces the original community of the route.
-             * 
-             * This parameter indicates the action to be performed when a route meets the match condition.
+             * <strong>example:</strong>
+             * <p>vtb-gw8nx3515m1mbd1z1****</p>
              */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;
@@ -1350,7 +1583,10 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing policy.
+             * <p>The direction in which the routing policy is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegionOut</p>
              */
             public Builder transmitDirection(String transmitDirection) {
                 this.transmitDirection = transmitDirection;
@@ -1364,9 +1600,15 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenRouteMapsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenRouteMapsResponseBody</p>
+     */
     public static class RouteMaps extends TeaModel {
-        @NameInMap("RouteMap")
-        private java.util.List < RouteMap> routeMap;
+        @com.aliyun.core.annotation.NameInMap("RouteMap")
+        private java.util.List<RouteMap> routeMap;
 
         private RouteMaps(Builder builder) {
             this.routeMap = builder.routeMap;
@@ -1383,17 +1625,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return routeMap
          */
-        public java.util.List < RouteMap> getRouteMap() {
+        public java.util.List<RouteMap> getRouteMap() {
             return this.routeMap;
         }
 
         public static final class Builder {
-            private java.util.List < RouteMap> routeMap; 
+            private java.util.List<RouteMap> routeMap; 
 
             /**
              * RouteMap.
              */
-            public Builder routeMap(java.util.List < RouteMap> routeMap) {
+            public Builder routeMap(java.util.List<RouteMap> routeMap) {
                 this.routeMap = routeMap;
                 return this;
             }

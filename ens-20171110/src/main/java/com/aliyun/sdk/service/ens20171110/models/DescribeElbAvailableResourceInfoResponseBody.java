@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElbAvailableResourceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElbAvailableResourceInfoResponseBody</p>
  */
 public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
-    @NameInMap("ElbAvailableResourceInfo")
-    private java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo;
+    @com.aliyun.core.annotation.NameInMap("ElbAvailableResourceInfo")
+    private java.util.List<ElbAvailableResourceInfo> elbAvailableResourceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElbAvailableResourceInfoResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     /**
      * @return elbAvailableResourceInfo
      */
-    public java.util.List < ElbAvailableResourceInfo> getElbAvailableResourceInfo() {
+    public java.util.List<ElbAvailableResourceInfo> getElbAvailableResourceInfo() {
         return this.elbAvailableResourceInfo;
     }
 
@@ -46,19 +51,22 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo; 
+        private java.util.List<ElbAvailableResourceInfo> elbAvailableResourceInfo; 
         private String requestId; 
 
         /**
-         * ElbAvailableResourceInfo.
+         * <p>The information about resources.</p>
          */
-        public Builder elbAvailableResourceInfo(java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo) {
+        public Builder elbAvailableResourceInfo(java.util.List<ElbAvailableResourceInfo> elbAvailableResourceInfo) {
             this.elbAvailableResourceInfo = elbAvailableResourceInfo;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25AAD194-4A37-51CF-B1CA-1E86FDAC23A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElbAvailableResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElbAvailableResourceInfoResponseBody</p>
+     */
     public static class ElbAvailableResourceInfo extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("CanBuyCount")
+        @com.aliyun.core.annotation.NameInMap("CanBuyCount")
         private String canBuyCount;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("LoadBalancerSpec")
-        private java.util.List < String > loadBalancerSpec;
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
+        private java.util.List<String> loadBalancerSpec;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private ElbAvailableResourceInfo(Builder builder) {
@@ -142,7 +156,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         /**
          * @return loadBalancerSpec
          */
-        public java.util.List < String > getLoadBalancerSpec() {
+        public java.util.List<String> getLoadBalancerSpec() {
             return this.loadBalancerSpec;
         }
 
@@ -165,12 +179,15 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             private String canBuyCount; 
             private String enName; 
             private String ensRegionId; 
-            private java.util.List < String > loadBalancerSpec; 
+            private java.util.List<String> loadBalancerSpec; 
             private String name; 
             private String province; 
 
             /**
-             * Area.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SouthEast</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -178,7 +195,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CanBuyCount.
+             * <p>The number of resources that you can purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder canBuyCount(String canBuyCount) {
                 this.canBuyCount = canBuyCount;
@@ -186,7 +206,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guangdong-10</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -194,7 +217,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the Edge Node Service (ENS) node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guangdong-10</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -202,15 +228,18 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerSpec.
+             * <p>The specifications of the ELB instances.</p>
              */
-            public Builder loadBalancerSpec(java.util.List < String > loadBalancerSpec) {
+            public Builder loadBalancerSpec(java.util.List<String> loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
                 return this;
             }
 
             /**
-             * Name.
+             * <p>The Chinese name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +247,10 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province where the node is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shanghai</p>
              */
             public Builder province(String province) {
                 this.province = province;

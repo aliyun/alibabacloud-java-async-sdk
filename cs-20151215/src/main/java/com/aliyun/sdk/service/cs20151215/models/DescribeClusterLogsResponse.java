@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterLogsResponse} extends {@link TeaModel}
  *
  * <p>DescribeClusterLogsResponse</p>
  */
 public class DescribeClusterLogsResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < DescribeClusterLogsResponseBody> body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<DescribeClusterLogsResponseBody> body;
 
     private DescribeClusterLogsResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class DescribeClusterLogsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class DescribeClusterLogsResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribeClusterLogsResponseBody> getBody() {
+    public java.util.List<DescribeClusterLogsResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribeClusterLogsResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribeClusterLogsResponseBody> body);
+        Builder body(java.util.List<DescribeClusterLogsResponseBody> body);
 
         @Override
         DescribeClusterLogsResponse build();
@@ -77,9 +79,9 @@ public class DescribeClusterLogsResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeClusterLogsResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribeClusterLogsResponseBody> body; 
+        private java.util.List<DescribeClusterLogsResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class DescribeClusterLogsResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class DescribeClusterLogsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribeClusterLogsResponseBody> body) {
+        public Builder body(java.util.List<DescribeClusterLogsResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -126,20 +128,26 @@ public class DescribeClusterLogsResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterLogsResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterLogsResponse</p>
+     */
     public static class DescribeClusterLogsResponseBody extends TeaModel {
-        @NameInMap("ID")
+        @com.aliyun.core.annotation.NameInMap("ID")
         private Long id;
 
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("cluster_log")
+        @com.aliyun.core.annotation.NameInMap("cluster_log")
         private String clusterLog;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private DescribeClusterLogsResponseBody(Builder builder) {
@@ -201,7 +209,10 @@ public class DescribeClusterLogsResponse extends Response {
             private String updated; 
 
             /**
-             * The ID of the log entry.
+             * <p>The ID of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>590749245</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -209,7 +220,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c23421cfa74454bc8b37163fd19af***</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -217,7 +231,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The log content.
+             * <p>The log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start to update cluster status to CREATE_COMPLETE</p>
              */
             public Builder clusterLog(String clusterLog) {
                 this.clusterLog = clusterLog;
@@ -225,7 +242,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The time when the log entry was generated.
+             * <p>The time when the log entry was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-11T10:11:51+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -233,7 +253,10 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * The time when the log entry was updated.
+             * <p>The time when the log entry was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-11T10:11:51+08:00</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

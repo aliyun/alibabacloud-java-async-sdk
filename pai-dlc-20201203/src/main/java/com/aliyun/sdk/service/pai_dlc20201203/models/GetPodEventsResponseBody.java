@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPodEventsResponseBody} extends {@link TeaModel}
  *
  * <p>GetPodEventsResponseBody</p>
  */
 public class GetPodEventsResponseBody extends TeaModel {
-    @NameInMap("Events")
-    private java.util.List < String > events;
+    @com.aliyun.core.annotation.NameInMap("Events")
+    private java.util.List<String> events;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("PodId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("PodId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String podId;
 
-    @NameInMap("PodUid")
+    @com.aliyun.core.annotation.NameInMap("PodUid")
     private String podUid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPodEventsResponseBody(Builder builder) {
@@ -47,7 +52,7 @@ public class GetPodEventsResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < String > getEvents() {
+    public java.util.List<String> getEvents() {
         return this.events;
     }
 
@@ -80,7 +85,7 @@ public class GetPodEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > events; 
+        private java.util.List<String> events; 
         private String jobId; 
         private String podId; 
         private String podUid; 
@@ -89,7 +94,7 @@ public class GetPodEventsResponseBody extends TeaModel {
         /**
          * Events.
          */
-        public Builder events(java.util.List < String > events) {
+        public Builder events(java.util.List<String> events) {
             this.events = events;
             return this;
         }
@@ -103,7 +108,10 @@ public class GetPodEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PodId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc-20210126170216-*****-chief-0</p>
          */
         public Builder podId(String podId) {
             this.podId = podId;

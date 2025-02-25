@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTraceByConfigurationResponseBody</p>
  */
 public class DescribeTraceByConfigurationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Traces")
+    @com.aliyun.core.annotation.NameInMap("Traces")
     private java.util.List < Traces> traces;
 
     private DescribeTraceByConfigurationResponseBody(Builder builder) {
@@ -112,37 +111,37 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
     } 
 
     public static class EventDetails extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private String ext;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("HandleIp")
+        @com.aliyun.core.annotation.NameInMap("HandleIp")
         private String handleIp;
 
-        @NameInMap("LogDate")
+        @com.aliyun.core.annotation.NameInMap("LogDate")
         private String logDate;
 
-        @NameInMap("RequestIp")
+        @com.aliyun.core.annotation.NameInMap("RequestIp")
         private String requestIp;
 
-        @NameInMap("ResponseIp")
+        @com.aliyun.core.annotation.NameInMap("ResponseIp")
         private String responseIp;
 
-        @NameInMap("Ts")
+        @com.aliyun.core.annotation.NameInMap("Ts")
         private String ts;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EventDetails(Builder builder) {
@@ -353,10 +352,10 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
 
     }
     public static class EventGroups extends TeaModel {
-        @NameInMap("EventDetails")
+        @com.aliyun.core.annotation.NameInMap("EventDetails")
         private java.util.List < EventDetails> eventDetails;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
         private EventGroups(Builder builder) {
@@ -414,10 +413,10 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
 
     }
     public static class Traces extends TeaModel {
-        @NameInMap("EventGroups")
+        @com.aliyun.core.annotation.NameInMap("EventGroups")
         private java.util.List < EventGroups> eventGroups;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Traces(Builder builder) {

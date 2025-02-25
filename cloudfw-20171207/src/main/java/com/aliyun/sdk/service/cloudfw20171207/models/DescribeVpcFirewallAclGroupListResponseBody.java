@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallAclGroupListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcFirewallAclGroupListResponseBody</p>
  */
 public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
-    @NameInMap("AclGroupList")
-    private java.util.List < AclGroupList> aclGroupList;
+    @com.aliyun.core.annotation.NameInMap("AclGroupList")
+    private java.util.List<AclGroupList> aclGroupList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVpcFirewallAclGroupListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     /**
      * @return aclGroupList
      */
-    public java.util.List < AclGroupList> getAclGroupList() {
+    public java.util.List<AclGroupList> getAclGroupList() {
         return this.aclGroupList;
     }
 
@@ -57,20 +62,23 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AclGroupList> aclGroupList; 
+        private java.util.List<AclGroupList> aclGroupList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * An array that consists of the information about the policy group.
+         * <p>The information about the policy groups.</p>
          */
-        public Builder aclGroupList(java.util.List < AclGroupList> aclGroupList) {
+        public Builder aclGroupList(java.util.List<AclGroupList> aclGroupList) {
             this.aclGroupList = aclGroupList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the policy groups that are returned.
+         * <p>The total number of the policy groups that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +102,26 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcFirewallAclGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcFirewallAclGroupListResponseBody</p>
+     */
     public static class AclGroupList extends TeaModel {
-        @NameInMap("AclGroupId")
+        @com.aliyun.core.annotation.NameInMap("AclGroupId")
         private String aclGroupId;
 
-        @NameInMap("AclGroupName")
+        @com.aliyun.core.annotation.NameInMap("AclGroupName")
         private String aclGroupName;
 
-        @NameInMap("AclRuleCount")
+        @com.aliyun.core.annotation.NameInMap("AclRuleCount")
         private Integer aclRuleCount;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private String memberUid;
 
         private AclGroupList(Builder builder) {
@@ -166,18 +183,19 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             private String memberUid; 
 
             /**
-             * The ID of the policy group.
-             * <p>
+             * <p>The ID of the policy group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
+             * <p>Example: cen-ervw0g12b5jbw****</p>
+             * </li>
+             * <li><p>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.</p>
+             * <p>Example: vfw-a42bbb7b887148c9****</p>
+             * </li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.
-             * 
-             *     Example: cen-ervw0g12b5jbw\*\*\*\*
-             * 
-             * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.
-             * 
-             *     Example: vfw-a42bbb7b887148c9\*\*\*\*
+             * <strong>example:</strong>
+             * <p>vfw-a42bbb7b887148c9****</p>
              */
             public Builder aclGroupId(String aclGroupId) {
                 this.aclGroupId = aclGroupId;
@@ -185,11 +203,14 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy group. Valid values:
-             * <p>
+             * <p>The name of the policy group. Valid values:</p>
+             * <ul>
+             * <li>If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.</li>
+             * <li>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance name of the VPC firewall.</li>
+             * </ul>
              * 
-             * *   If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.
-             * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.
+             * <strong>example:</strong>
+             * <p>group_test</p>
              */
             public Builder aclGroupName(String aclGroupName) {
                 this.aclGroupName = aclGroupName;
@@ -197,7 +218,10 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * AclRuleCount.
+             * <p>The number of access control policies in the policy group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder aclRuleCount(Integer aclRuleCount) {
                 this.aclRuleCount = aclRuleCount;
@@ -205,7 +229,14 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>是否是默认防火墙。取值：</p>
+             * <ul>
+             * <li><strong>true</strong>：是默认防火墙。</li>
+             * <li><strong>false</strong>：不是默认防火墙。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -213,7 +244,10 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the member that is managed by your Alibaba Cloud account.
+             * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>258039427902****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;

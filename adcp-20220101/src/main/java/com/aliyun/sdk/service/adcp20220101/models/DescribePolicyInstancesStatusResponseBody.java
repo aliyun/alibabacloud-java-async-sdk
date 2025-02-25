@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyInstancesStatusResponseBody</p>
  */
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private Policies policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePolicyInstancesStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     } 
 
     public static class PolicyClusters extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PolicyClusters(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the associated cluster.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -118,7 +117,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the deployment.
+             * The status of the policy deployment.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -133,22 +132,22 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     }
     public static class PolicyInstances extends TeaModel {
-        @NameInMap("PolicyCategory")
+        @com.aliyun.core.annotation.NameInMap("PolicyCategory")
         private String policyCategory;
 
-        @NameInMap("PolicyClusters")
+        @com.aliyun.core.annotation.NameInMap("PolicyClusters")
         private java.util.List < PolicyClusters> policyClusters;
 
-        @NameInMap("PolicyDescription")
+        @com.aliyun.core.annotation.NameInMap("PolicyDescription")
         private String policyDescription;
 
-        @NameInMap("PolicyInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("PolicyInstancesCount")
         private Long policyInstancesCount;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicySeverity")
+        @com.aliyun.core.annotation.NameInMap("PolicySeverity")
         private String policySeverity;
 
         private PolicyInstances(Builder builder) {
@@ -243,7 +242,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.
+             * The number of policy instances that are deployed. If this parameter is left empty, no policy instance is deployed.
              */
             public Builder policyInstancesCount(Long policyInstancesCount) {
                 this.policyInstancesCount = policyInstancesCount;
@@ -251,7 +250,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * The policy name.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -274,10 +273,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     }
     public static class SeverityInfo extends TeaModel {
-        @NameInMap("SeverityCount")
+        @com.aliyun.core.annotation.NameInMap("SeverityCount")
         private String severityCount;
 
-        @NameInMap("SeverityType")
+        @com.aliyun.core.annotation.NameInMap("SeverityType")
         private String severityType;
 
         private SeverityInfo(Builder builder) {
@@ -320,7 +319,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level.
+             * The severity level of the policy.
              */
             public Builder severityType(String severityType) {
                 this.severityType = severityType;
@@ -335,10 +334,10 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("PolicyInstances")
+        @com.aliyun.core.annotation.NameInMap("PolicyInstances")
         private java.util.List < PolicyInstances> policyInstances;
 
-        @NameInMap("SeverityInfo")
+        @com.aliyun.core.annotation.NameInMap("SeverityInfo")
         private java.util.List < SeverityInfo> severityInfo;
 
         private Policies(Builder builder) {

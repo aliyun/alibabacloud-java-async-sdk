@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerSpecRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoadBalancerSpecRequest</p>
  */
 public class DescribeLoadBalancerSpecRequest extends Request {
-    @Query
-    @NameInMap("LoadBalancerSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
     private String loadBalancerSpec;
 
     private DescribeLoadBalancerSpecRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class DescribeLoadBalancerSpecRequest extends Request {
         } 
 
         /**
-         * LoadBalancerSpec.
+         * <p>The specifications of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elb.s2.small</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);

@@ -1,3 +1,6 @@
+2024-12-09 Version: 1.0.1
+- Update SDK jdk15on to jdk18on.
+
 2023-12-22 Version: 1.0.0
 - Generated java-async 2023-03-05 for captcha.
 

@@ -32,8 +32,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("ap-northeast-2-pop", "hbase.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "hbase.aliyuncs.com"),
-            new TeaPair("cn-beijing", "hbase.aliyuncs.com"),
+            new TeaPair("ap-south-1", "hbase.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "hbase.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "hbase.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "hbase.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "hbase.aliyuncs.com"),
@@ -41,39 +41,30 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-edge-1", "hbase.aliyuncs.com"),
             new TeaPair("cn-fujian", "hbase.aliyuncs.com"),
             new TeaPair("cn-haidian-cm12-c01", "hbase.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "hbase.aliyuncs.com"),
             new TeaPair("cn-hangzhou-bj-b01", "hbase.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "hbase.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-prod-1", "hbase.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-1", "hbase.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-2", "hbase.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-3", "hbase.aliyuncs.com"),
             new TeaPair("cn-hangzhou-test-306", "hbase.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "hbase.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "hbase.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "hbase.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "hbase.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "hbase.aliyuncs.com"),
             new TeaPair("cn-shanghai-et15-b01", "hbase.aliyuncs.com"),
             new TeaPair("cn-shanghai-et2-b01", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "hbase.aliyuncs.com"),
             new TeaPair("cn-shanghai-inner", "hbase.aliyuncs.com"),
             new TeaPair("cn-shanghai-internal-test-1", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "hbase.aliyuncs.com"),
             new TeaPair("cn-shenzhen-inner", "hbase.aliyuncs.com"),
             new TeaPair("cn-shenzhen-st4-d01", "hbase.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "hbase.aliyuncs.com"),
             new TeaPair("cn-wuhan", "hbase.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "hbase.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "hbase.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "hbase.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "hbase.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "hbase.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "hbase.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "hbase.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "hbase.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "hbase.aliyuncs.com"),
-            new TeaPair("us-west-1", "hbase.aliyuncs.com")
+            new TeaPair("eu-west-1-oxs", "hbase.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "hbase.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -83,6 +74,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddUserHdfsInfo  AddUserHdfsInfoRequest
+     * @return AddUserHdfsInfoResponse
+     */
     @Override
     public CompletableFuture<AddUserHdfsInfoResponse> addUserHdfsInfo(AddUserHdfsInfoRequest request) {
         try {
@@ -97,6 +92,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AllocatePublicNetworkAddress  AllocatePublicNetworkAddressRequest
+     * @return AllocatePublicNetworkAddressResponse
+     */
     @Override
     public CompletableFuture<AllocatePublicNetworkAddressResponse> allocatePublicNetworkAddress(AllocatePublicNetworkAddressRequest request) {
         try {
@@ -111,6 +110,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
+     * @return CancelActiveOperationTasksResponse
+     */
+    @Override
+    public CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelActiveOperationTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelActiveOperationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelActiveOperationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CheckComponentsVersion  CheckComponentsVersionRequest
+     * @return CheckComponentsVersionResponse
+     */
     @Override
     public CompletableFuture<CheckComponentsVersionResponse> checkComponentsVersion(CheckComponentsVersionRequest request) {
         try {
@@ -125,6 +146,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseBackup  CloseBackupRequest
+     * @return CloseBackupResponse
+     */
     @Override
     public CompletableFuture<CloseBackupResponse> closeBackup(CloseBackupRequest request) {
         try {
@@ -139,6 +164,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConvertInstance  ConvertInstanceRequest
+     * @return ConvertInstanceResponse
+     */
     @Override
     public CompletableFuture<ConvertInstanceResponse> convertInstance(ConvertInstanceRequest request) {
         try {
@@ -153,6 +182,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccount  CreateAccountRequest
+     * @return CreateAccountResponse
+     */
+    @Override
+    public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateBackupPlan  CreateBackupPlanRequest
+     * @return CreateBackupPlanResponse
+     */
     @Override
     public CompletableFuture<CreateBackupPlanResponse> createBackupPlan(CreateBackupPlanRequest request) {
         try {
@@ -167,6 +218,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
+     */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
         try {
@@ -181,6 +236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGlobalResource  CreateGlobalResourceRequest
+     * @return CreateGlobalResourceResponse
+     */
     @Override
     public CompletableFuture<CreateGlobalResourceResponse> createGlobalResource(CreateGlobalResourceRequest request) {
         try {
@@ -195,6 +254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHBaseSlbServer  CreateHBaseSlbServerRequest
+     * @return CreateHBaseSlbServerResponse
+     */
     @Override
     public CompletableFuture<CreateHBaseSlbServerResponse> createHBaseSlbServer(CreateHBaseSlbServerRequest request) {
         try {
@@ -209,6 +272,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHbaseHaSlb  CreateHbaseHaSlbRequest
+     * @return CreateHbaseHaSlbResponse
+     */
     @Override
     public CompletableFuture<CreateHbaseHaSlbResponse> createHbaseHaSlb(CreateHbaseHaSlbRequest request) {
         try {
@@ -223,6 +290,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMultiZoneCluster  CreateMultiZoneClusterRequest
+     * @return CreateMultiZoneClusterResponse
+     */
     @Override
     public CompletableFuture<CreateMultiZoneClusterResponse> createMultiZoneCluster(CreateMultiZoneClusterRequest request) {
         try {
@@ -237,6 +308,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRestorePlan  CreateRestorePlanRequest
+     * @return CreateRestorePlanResponse
+     */
     @Override
     public CompletableFuture<CreateRestorePlanResponse> createRestorePlan(CreateRestorePlanRequest request) {
         try {
@@ -251,6 +326,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServerlessCluster  CreateServerlessClusterRequest
+     * @return CreateServerlessClusterResponse
+     */
     @Override
     public CompletableFuture<CreateServerlessClusterResponse> createServerlessCluster(CreateServerlessClusterRequest request) {
         try {
@@ -265,6 +344,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccount  DeleteAccountRequest
+     * @return DeleteAccountResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteGlobalResource  DeleteGlobalResourceRequest
+     * @return DeleteGlobalResourceResponse
+     */
     @Override
     public CompletableFuture<DeleteGlobalResourceResponse> deleteGlobalResource(DeleteGlobalResourceRequest request) {
         try {
@@ -279,6 +380,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHBaseHaDB  DeleteHBaseHaDBRequest
+     * @return DeleteHBaseHaDBResponse
+     */
     @Override
     public CompletableFuture<DeleteHBaseHaDBResponse> deleteHBaseHaDB(DeleteHBaseHaDBRequest request) {
         try {
@@ -293,6 +398,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHBaseSlbServer  DeleteHBaseSlbServerRequest
+     * @return DeleteHBaseSlbServerResponse
+     */
     @Override
     public CompletableFuture<DeleteHBaseSlbServerResponse> deleteHBaseSlbServer(DeleteHBaseSlbServerRequest request) {
         try {
@@ -307,6 +416,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHbaseHaSlb  DeleteHbaseHaSlbRequest
+     * @return DeleteHbaseHaSlbResponse
+     */
     @Override
     public CompletableFuture<DeleteHbaseHaSlbResponse> deleteHbaseHaSlb(DeleteHbaseHaSlbRequest request) {
         try {
@@ -321,6 +434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -335,6 +452,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMultiZoneCluster  DeleteMultiZoneClusterRequest
+     * @return DeleteMultiZoneClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteMultiZoneClusterResponse> deleteMultiZoneCluster(DeleteMultiZoneClusterRequest request) {
         try {
@@ -349,6 +470,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteServerlessCluster  DeleteServerlessClusterRequest
+     * @return DeleteServerlessClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteServerlessClusterResponse> deleteServerlessCluster(DeleteServerlessClusterRequest request) {
         try {
@@ -363,6 +488,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserHdfsInfo  DeleteUserHdfsInfoRequest
+     * @return DeleteUserHdfsInfoResponse
+     */
     @Override
     public CompletableFuture<DeleteUserHdfsInfoResponse> deleteUserHdfsInfo(DeleteUserHdfsInfoRequest request) {
         try {
@@ -377,6 +506,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccounts  DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAccounts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAccountsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAccountsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTaskType  DescribeActiveOperationTaskTypeRequest
+     * @return DescribeActiveOperationTaskTypeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeActiveOperationTaskTypeResponse> describeActiveOperationTaskType(DescribeActiveOperationTaskTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeActiveOperationTaskType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeActiveOperationTaskTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeActiveOperationTaskTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
+     * @return DescribeActiveOperationTasksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeActiveOperationTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeActiveOperationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeActiveOperationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAvailableResource  DescribeAvailableResourceRequest
+     * @return DescribeAvailableResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request) {
         try {
@@ -391,6 +578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPlanConfig  DescribeBackupPlanConfigRequest
+     * @return DescribeBackupPlanConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPlanConfigResponse> describeBackupPlanConfig(DescribeBackupPlanConfigRequest request) {
         try {
@@ -405,6 +596,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
         try {
@@ -419,6 +614,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupStatus  DescribeBackupStatusRequest
+     * @return DescribeBackupStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupStatusResponse> describeBackupStatus(DescribeBackupStatusRequest request) {
         try {
@@ -433,6 +632,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupSummary  DescribeBackupSummaryRequest
+     * @return DescribeBackupSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupSummaryResponse> describeBackupSummary(DescribeBackupSummaryRequest request) {
         try {
@@ -447,6 +650,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupTables  DescribeBackupTablesRequest
+     * @return DescribeBackupTablesResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupTablesResponse> describeBackupTables(DescribeBackupTablesRequest request) {
         try {
@@ -461,6 +668,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request) {
         try {
@@ -475,6 +686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterConnection  DescribeClusterConnectionRequest
+     * @return DescribeClusterConnectionResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterConnectionResponse> describeClusterConnection(DescribeClusterConnectionRequest request) {
         try {
@@ -489,6 +704,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeColdStorage  DescribeColdStorageRequest
+     * @return DescribeColdStorageResponse
+     */
     @Override
     public CompletableFuture<DescribeColdStorageResponse> describeColdStorage(DescribeColdStorageRequest request) {
         try {
@@ -503,6 +722,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBInstanceUsage  DescribeDBInstanceUsageRequest
+     * @return DescribeDBInstanceUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceUsageResponse> describeDBInstanceUsage(DescribeDBInstanceUsageRequest request) {
         try {
@@ -517,6 +740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeletedInstances  DescribeDeletedInstancesRequest
+     * @return DescribeDeletedInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeDeletedInstancesResponse> describeDeletedInstances(DescribeDeletedInstancesRequest request) {
         try {
@@ -531,6 +758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiskWarningLine  DescribeDiskWarningLineRequest
+     * @return DescribeDiskWarningLineResponse
+     */
     @Override
     public CompletableFuture<DescribeDiskWarningLineResponse> describeDiskWarningLine(DescribeDiskWarningLineRequest request) {
         try {
@@ -545,6 +776,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEndpoints  DescribeEndpointsRequest
+     * @return DescribeEndpointsResponse
+     */
     @Override
     public CompletableFuture<DescribeEndpointsResponse> describeEndpoints(DescribeEndpointsRequest request) {
         try {
@@ -559,6 +794,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstance  DescribeInstanceRequest
+     * @return DescribeInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceResponse> describeInstance(DescribeInstanceRequest request) {
         try {
@@ -573,6 +812,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceType  DescribeInstanceTypeRequest
+     * @return DescribeInstanceTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceTypeResponse> describeInstanceType(DescribeInstanceTypeRequest request) {
         try {
@@ -587,6 +830,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request) {
         try {
@@ -601,6 +848,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIpWhitelist  DescribeIpWhitelistRequest
+     * @return DescribeIpWhitelistResponse
+     */
     @Override
     public CompletableFuture<DescribeIpWhitelistResponse> describeIpWhitelist(DescribeIpWhitelistRequest request) {
         try {
@@ -615,6 +866,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMultiZoneAvailableRegions  DescribeMultiZoneAvailableRegionsRequest
+     * @return DescribeMultiZoneAvailableRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeMultiZoneAvailableRegionsResponse> describeMultiZoneAvailableRegions(DescribeMultiZoneAvailableRegionsRequest request) {
         try {
@@ -629,6 +884,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMultiZoneAvailableResource  DescribeMultiZoneAvailableResourceRequest
+     * @return DescribeMultiZoneAvailableResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeMultiZoneAvailableResourceResponse> describeMultiZoneAvailableResource(DescribeMultiZoneAvailableResourceRequest request) {
         try {
@@ -643,6 +902,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMultiZoneCluster  DescribeMultiZoneClusterRequest
+     * @return DescribeMultiZoneClusterResponse
+     */
     @Override
     public CompletableFuture<DescribeMultiZoneClusterResponse> describeMultiZoneCluster(DescribeMultiZoneClusterRequest request) {
         try {
@@ -657,6 +920,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRecoverableTimeRange  DescribeRecoverableTimeRangeRequest
+     * @return DescribeRecoverableTimeRangeResponse
+     */
     @Override
     public CompletableFuture<DescribeRecoverableTimeRangeResponse> describeRecoverableTimeRange(DescribeRecoverableTimeRangeRequest request) {
         try {
@@ -671,6 +938,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -685,6 +956,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestoreFullDetails  DescribeRestoreFullDetailsRequest
+     * @return DescribeRestoreFullDetailsResponse
+     */
     @Override
     public CompletableFuture<DescribeRestoreFullDetailsResponse> describeRestoreFullDetails(DescribeRestoreFullDetailsRequest request) {
         try {
@@ -699,6 +974,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestoreIncrDetail  DescribeRestoreIncrDetailRequest
+     * @return DescribeRestoreIncrDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeRestoreIncrDetailResponse> describeRestoreIncrDetail(DescribeRestoreIncrDetailRequest request) {
         try {
@@ -713,6 +992,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestoreSchemaDetails  DescribeRestoreSchemaDetailsRequest
+     * @return DescribeRestoreSchemaDetailsResponse
+     */
     @Override
     public CompletableFuture<DescribeRestoreSchemaDetailsResponse> describeRestoreSchemaDetails(DescribeRestoreSchemaDetailsRequest request) {
         try {
@@ -727,6 +1010,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestoreSummary  DescribeRestoreSummaryRequest
+     * @return DescribeRestoreSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeRestoreSummaryResponse> describeRestoreSummary(DescribeRestoreSummaryRequest request) {
         try {
@@ -741,6 +1028,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestoreTables  DescribeRestoreTablesRequest
+     * @return DescribeRestoreTablesResponse
+     */
     @Override
     public CompletableFuture<DescribeRestoreTablesResponse> describeRestoreTables(DescribeRestoreTablesRequest request) {
         try {
@@ -755,6 +1046,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityGroups  DescribeSecurityGroupsRequest
+     * @return DescribeSecurityGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityGroupsResponse> describeSecurityGroups(DescribeSecurityGroupsRequest request) {
         try {
@@ -769,6 +1064,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServerlessCluster  DescribeServerlessClusterRequest
+     * @return DescribeServerlessClusterResponse
+     */
     @Override
     public CompletableFuture<DescribeServerlessClusterResponse> describeServerlessCluster(DescribeServerlessClusterRequest request) {
         try {
@@ -783,6 +1082,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSubDomain  DescribeSubDomainRequest
+     * @return DescribeSubDomainResponse
+     */
     @Override
     public CompletableFuture<DescribeSubDomainResponse> describeSubDomain(DescribeSubDomainRequest request) {
         try {
@@ -797,6 +1100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableHBaseueBackup  EnableHBaseueBackupRequest
+     * @return EnableHBaseueBackupResponse
+     */
     @Override
     public CompletableFuture<EnableHBaseueBackupResponse> enableHBaseueBackup(EnableHBaseueBackupRequest request) {
         try {
@@ -811,6 +1118,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableHBaseueModule  EnableHBaseueModuleRequest
+     * @return EnableHBaseueModuleResponse
+     */
     @Override
     public CompletableFuture<EnableHBaseueModuleResponse> enableHBaseueModule(EnableHBaseueModuleRequest request) {
         try {
@@ -825,6 +1136,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EvaluateMultiZoneResource  EvaluateMultiZoneResourceRequest
+     * @return EvaluateMultiZoneResourceResponse
+     */
     @Override
     public CompletableFuture<EvaluateMultiZoneResourceResponse> evaluateMultiZoneResource(EvaluateMultiZoneResourceRequest request) {
         try {
@@ -839,6 +1154,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMultimodeCmsUrl  GetMultimodeCmsUrlRequest
+     * @return GetMultimodeCmsUrlResponse
+     */
     @Override
     public CompletableFuture<GetMultimodeCmsUrlResponse> getMultimodeCmsUrl(GetMultimodeCmsUrlRequest request) {
         try {
@@ -853,6 +1172,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Grant  GrantRequest
+     * @return GrantResponse
+     */
+    @Override
+    public CompletableFuture<GrantResponse> grant(GrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("Grant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GrantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListHBaseInstances  ListHBaseInstancesRequest
+     * @return ListHBaseInstancesResponse
+     */
     @Override
     public CompletableFuture<ListHBaseInstancesResponse> listHBaseInstances(ListHBaseInstancesRequest request) {
         try {
@@ -867,6 +1208,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceServiceConfigHistories  ListInstanceServiceConfigHistoriesRequest
+     * @return ListInstanceServiceConfigHistoriesResponse
+     */
     @Override
     public CompletableFuture<ListInstanceServiceConfigHistoriesResponse> listInstanceServiceConfigHistories(ListInstanceServiceConfigHistoriesRequest request) {
         try {
@@ -881,6 +1226,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceServiceConfigurations  ListInstanceServiceConfigurationsRequest
+     * @return ListInstanceServiceConfigurationsResponse
+     */
     @Override
     public CompletableFuture<ListInstanceServiceConfigurationsResponse> listInstanceServiceConfigurations(ListInstanceServiceConfigurationsRequest request) {
         try {
@@ -895,6 +1244,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -909,6 +1262,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTags  ListTagsRequest
+     * @return ListTagsResponse
+     */
     @Override
     public CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request) {
         try {
@@ -923,6 +1280,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccountPassword  ModifyAccountPasswordRequest
+     * @return ModifyAccountPasswordResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAccountPassword").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAccountPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAccountPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
+     * @return ModifyActiveOperationTasksResponse
+     */
+    @Override
+    public CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyActiveOperationTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyActiveOperationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyActiveOperationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyBackupPlanConfig  ModifyBackupPlanConfigRequest
+     * @return ModifyBackupPlanConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPlanConfigResponse> modifyBackupPlanConfig(ModifyBackupPlanConfigRequest request) {
         try {
@@ -937,6 +1334,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
         try {
@@ -951,6 +1352,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClusterDeletionProtection  ModifyClusterDeletionProtectionRequest
+     * @return ModifyClusterDeletionProtectionResponse
+     */
     @Override
     public CompletableFuture<ModifyClusterDeletionProtectionResponse> modifyClusterDeletionProtection(ModifyClusterDeletionProtectionRequest request) {
         try {
@@ -965,6 +1370,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDiskWarningLine  ModifyDiskWarningLineRequest
+     * @return ModifyDiskWarningLineResponse
+     */
     @Override
     public CompletableFuture<ModifyDiskWarningLineResponse> modifyDiskWarningLine(ModifyDiskWarningLineRequest request) {
         try {
@@ -979,6 +1388,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceMaintainTime  ModifyInstanceMaintainTimeRequest
+     * @return ModifyInstanceMaintainTimeResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceMaintainTimeResponse> modifyInstanceMaintainTime(ModifyInstanceMaintainTimeRequest request) {
         try {
@@ -993,6 +1406,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceName  ModifyInstanceNameRequest
+     * @return ModifyInstanceNameResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceNameResponse> modifyInstanceName(ModifyInstanceNameRequest request) {
         try {
@@ -1007,6 +1424,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceServiceConfig  ModifyInstanceServiceConfigRequest
+     * @return ModifyInstanceServiceConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceServiceConfigResponse> modifyInstanceServiceConfig(ModifyInstanceServiceConfigRequest request) {
         try {
@@ -1021,6 +1442,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceType  ModifyInstanceTypeRequest
+     * @return ModifyInstanceTypeResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceTypeResponse> modifyInstanceType(ModifyInstanceTypeRequest request) {
         try {
@@ -1035,6 +1460,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIpWhitelist  ModifyIpWhitelistRequest
+     * @return ModifyIpWhitelistResponse
+     */
     @Override
     public CompletableFuture<ModifyIpWhitelistResponse> modifyIpWhitelist(ModifyIpWhitelistRequest request) {
         try {
@@ -1049,6 +1478,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyMultiZoneClusterNodeType  ModifyMultiZoneClusterNodeTypeRequest
+     * @return ModifyMultiZoneClusterNodeTypeResponse
+     */
     @Override
     public CompletableFuture<ModifyMultiZoneClusterNodeTypeResponse> modifyMultiZoneClusterNodeType(ModifyMultiZoneClusterNodeTypeRequest request) {
         try {
@@ -1063,6 +1496,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySecurityGroups  ModifySecurityGroupsRequest
+     * @return ModifySecurityGroupsResponse
+     */
     @Override
     public CompletableFuture<ModifySecurityGroupsResponse> modifySecurityGroups(ModifySecurityGroupsRequest request) {
         try {
@@ -1077,6 +1514,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUIAccountPassword  ModifyUIAccountPasswordRequest
+     * @return ModifyUIAccountPasswordResponse
+     */
     @Override
     public CompletableFuture<ModifyUIAccountPasswordResponse> modifyUIAccountPassword(ModifyUIAccountPasswordRequest request) {
         try {
@@ -1091,6 +1532,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest
+     * @return MoveResourceGroupResponse
+     */
     @Override
     public CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request) {
         try {
@@ -1105,6 +1550,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenBackup  OpenBackupRequest
+     * @return OpenBackupResponse
+     */
     @Override
     public CompletableFuture<OpenBackupResponse> openBackup(OpenBackupRequest request) {
         try {
@@ -1119,6 +1568,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PurgeInstance  PurgeInstanceRequest
+     * @return PurgeInstanceResponse
+     */
     @Override
     public CompletableFuture<PurgeInstanceResponse> purgeInstance(PurgeInstanceRequest request) {
         try {
@@ -1133,6 +1586,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryHBaseHaDB  QueryHBaseHaDBRequest
+     * @return QueryHBaseHaDBResponse
+     */
     @Override
     public CompletableFuture<QueryHBaseHaDBResponse> queryHBaseHaDB(QueryHBaseHaDBRequest request) {
         try {
@@ -1147,6 +1604,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryXpackRelateDB  QueryXpackRelateDBRequest
+     * @return QueryXpackRelateDBResponse
+     */
     @Override
     public CompletableFuture<QueryXpackRelateDBResponse> queryXpackRelateDB(QueryXpackRelateDBRequest request) {
         try {
@@ -1161,6 +1622,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RelateDbForHBaseHa  RelateDbForHBaseHaRequest
+     * @return RelateDbForHBaseHaResponse
+     */
     @Override
     public CompletableFuture<RelateDbForHBaseHaResponse> relateDbForHBaseHa(RelateDbForHBaseHaRequest request) {
         try {
@@ -1175,6 +1640,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleasePublicNetworkAddress  ReleasePublicNetworkAddressRequest
+     * @return ReleasePublicNetworkAddressResponse
+     */
     @Override
     public CompletableFuture<ReleasePublicNetworkAddressResponse> releasePublicNetworkAddress(ReleasePublicNetworkAddressRequest request) {
         try {
@@ -1189,6 +1658,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
     @Override
     public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
         try {
@@ -1203,6 +1676,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeColdStorageSize  ResizeColdStorageSizeRequest
+     * @return ResizeColdStorageSizeResponse
+     */
     @Override
     public CompletableFuture<ResizeColdStorageSizeResponse> resizeColdStorageSize(ResizeColdStorageSizeRequest request) {
         try {
@@ -1217,6 +1694,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeDiskSize  ResizeDiskSizeRequest
+     * @return ResizeDiskSizeResponse
+     */
     @Override
     public CompletableFuture<ResizeDiskSizeResponse> resizeDiskSize(ResizeDiskSizeRequest request) {
         try {
@@ -1231,6 +1712,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeMultiZoneClusterDiskSize  ResizeMultiZoneClusterDiskSizeRequest
+     * @return ResizeMultiZoneClusterDiskSizeResponse
+     */
     @Override
     public CompletableFuture<ResizeMultiZoneClusterDiskSizeResponse> resizeMultiZoneClusterDiskSize(ResizeMultiZoneClusterDiskSizeRequest request) {
         try {
@@ -1245,6 +1730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeMultiZoneClusterNodeCount  ResizeMultiZoneClusterNodeCountRequest
+     * @return ResizeMultiZoneClusterNodeCountResponse
+     */
     @Override
     public CompletableFuture<ResizeMultiZoneClusterNodeCountResponse> resizeMultiZoneClusterNodeCount(ResizeMultiZoneClusterNodeCountRequest request) {
         try {
@@ -1259,6 +1748,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeNodeCount  ResizeNodeCountRequest
+     * @return ResizeNodeCountResponse
+     */
     @Override
     public CompletableFuture<ResizeNodeCountResponse> resizeNodeCount(ResizeNodeCountRequest request) {
         try {
@@ -1273,6 +1766,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartInstance  RestartInstanceRequest
+     * @return RestartInstanceResponse
+     */
     @Override
     public CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request) {
         try {
@@ -1287,6 +1784,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Revoke  RevokeRequest
+     * @return RevokeResponse
+     */
+    @Override
+    public CompletableFuture<RevokeResponse> revoke(RevokeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("Revoke").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SwitchHbaseHaSlb  SwitchHbaseHaSlbRequest
+     * @return SwitchHbaseHaSlbResponse
+     */
     @Override
     public CompletableFuture<SwitchHbaseHaSlbResponse> switchHbaseHaSlb(SwitchHbaseHaSlbRequest request) {
         try {
@@ -1301,6 +1820,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SwitchService  SwitchServiceRequest
+     * @return SwitchServiceResponse
+     */
+    @Override
+    public CompletableFuture<SwitchServiceResponse> switchService(SwitchServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SwitchService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SwitchServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SwitchServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1315,6 +1856,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnTagResources  UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     */
     @Override
     public CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request) {
         try {
@@ -1329,6 +1874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeMinorVersion  UpgradeMinorVersionRequest
+     * @return UpgradeMinorVersionResponse
+     */
     @Override
     public CompletableFuture<UpgradeMinorVersionResponse> upgradeMinorVersion(UpgradeMinorVersionRequest request) {
         try {
@@ -1343,6 +1892,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeMultiZoneCluster  UpgradeMultiZoneClusterRequest
+     * @return UpgradeMultiZoneClusterResponse
+     */
     @Override
     public CompletableFuture<UpgradeMultiZoneClusterResponse> upgradeMultiZoneCluster(UpgradeMultiZoneClusterRequest request) {
         try {
@@ -1357,6 +1910,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of XpackRelateDB  XpackRelateDBRequest
+     * @return XpackRelateDBResponse
+     */
     @Override
     public CompletableFuture<XpackRelateDBResponse> xpackRelateDB(XpackRelateDBRequest request) {
         try {

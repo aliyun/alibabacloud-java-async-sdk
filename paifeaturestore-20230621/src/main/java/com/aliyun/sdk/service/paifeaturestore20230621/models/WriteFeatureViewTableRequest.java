@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WriteFeatureViewTableRequest} extends {@link RequestModel}
  *
  * <p>WriteFeatureViewTableRequest</p>
  */
 public class WriteFeatureViewTableRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("FeatureViewId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("FeatureViewId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureViewId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mode;
 
-    @Body
-    @NameInMap("Partitions")
-    private java.util.Map < String, java.util.Map<String, ?>> partitions;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Partitions")
+    private java.util.Map<String, java.util.Map<String, ?>> partitions;
 
-    @Body
-    @NameInMap("UrlDatasource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UrlDatasource")
     private UrlDatasource urlDatasource;
 
     private WriteFeatureViewTableRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class WriteFeatureViewTableRequest extends Request {
     /**
      * @return partitions
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getPartitions() {
+    public java.util.Map<String, java.util.Map<String, ?>> getPartitions() {
         return this.partitions;
     }
 
@@ -109,7 +114,7 @@ public class WriteFeatureViewTableRequest extends Request {
         private String featureViewId; 
         private String regionId; 
         private String mode; 
-        private java.util.Map < String, java.util.Map<String, ?>> partitions; 
+        private java.util.Map<String, java.util.Map<String, ?>> partitions; 
         private UrlDatasource urlDatasource; 
 
         private Builder() {
@@ -127,7 +132,10 @@ public class WriteFeatureViewTableRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -136,7 +144,10 @@ public class WriteFeatureViewTableRequest extends Request {
         }
 
         /**
-         * FeatureViewId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder featureViewId(String featureViewId) {
             this.putPathParameter("FeatureViewId", featureViewId);
@@ -154,7 +165,10 @@ public class WriteFeatureViewTableRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Merge</p>
          */
         public Builder mode(String mode) {
             this.putBodyParameter("Mode", mode);
@@ -165,7 +179,7 @@ public class WriteFeatureViewTableRequest extends Request {
         /**
          * Partitions.
          */
-        public Builder partitions(java.util.Map < String, java.util.Map<String, ?>> partitions) {
+        public Builder partitions(java.util.Map<String, java.util.Map<String, ?>> partitions) {
             this.putBodyParameter("Partitions", partitions);
             this.partitions = partitions;
             return this;
@@ -187,14 +201,20 @@ public class WriteFeatureViewTableRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link WriteFeatureViewTableRequest} extends {@link TeaModel}
+     *
+     * <p>WriteFeatureViewTableRequest</p>
+     */
     public static class UrlDatasource extends TeaModel {
-        @NameInMap("Delimiter")
+        @com.aliyun.core.annotation.NameInMap("Delimiter")
         private String delimiter;
 
-        @NameInMap("OmitHeader")
+        @com.aliyun.core.annotation.NameInMap("OmitHeader")
         private Boolean omitHeader;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private UrlDatasource(Builder builder) {

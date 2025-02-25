@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnIpaDomainCidrResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnIpaDomainCidrResponseBody</p>
  */
 public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
-    @NameInMap("Cidr")
+    @com.aliyun.core.annotation.NameInMap("Cidr")
     private java.util.List < String > cidr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnIpaDomainCidrResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cidr.
+         * <p>The back-to-origin IPv4 and IPv6 CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1.1.1.0/24&quot;,&quot;2.2.2.0/24&quot;,&quot;1111:2222:3333:4444:5555:0:0:0/80&quot;]</p>
          */
         public Builder cidr(java.util.List < String > cidr) {
             this.cidr = cidr;
@@ -58,7 +61,10 @@ public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

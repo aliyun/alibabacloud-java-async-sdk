@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.kms20160120;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.kms20160120.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -126,6 +127,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CertificatePublicKeyVerifyResponse> certificatePublicKeyVerify(CertificatePublicKeyVerifyRequest request);
 
+    /**
+      * ### [](#)Limits
+      * You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.
+      *
+     */
     CompletableFuture<ConnectKmsInstanceResponse> connectKmsInstance(ConnectKmsInstanceRequest request);
 
     /**
@@ -136,6 +142,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request);
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based AAP:
+      * 1.Create a network access rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access KMS. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind network access rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. This topic describes how to create an AAP.
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+     */
     CompletableFuture<CreateApplicationAccessPointResponse> createApplicationAccessPoint(CreateApplicationAccessPointRequest request);
 
     /**
@@ -145,10 +159,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateCertificateResponse> createCertificate(CreateCertificateRequest request);
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP.
+      * ### Precautions
+      * A client key has a validity period. After a client key expires, applications into which the client key is integrated cannot access the required KMS instance. You must replace the client key before the client key expires. We recommend that you delete the expired client key in KMS after the new client key is used.
+      *
+     */
     CompletableFuture<CreateClientKeyResponse> createClientKey(CreateClientKeyRequest request);
 
     /**
-      * Creates a customer master key (CMK).
+      * KMS supports common symmetric keys and asymmetric keys. For more information, see [Key types and specifications](~~480161~~).
       *
      */
     CompletableFuture<CreateKeyResponse> createKey(CreateKeyRequest request);
@@ -163,8 +187,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateKeyVersionResponse> createKeyVersion(CreateKeyVersionRequest request);
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a KMS instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance.
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets. For more information, see [CreatePolicy](~~2539454~~).
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+     */
     CompletableFuture<CreateNetworkRuleResponse> createNetworkRule(CreateNetworkRuleRequest request);
 
+    /**
+      * To perform cryptographic operations and retrieve secret values, self-managed applications must use a client key to access a Key Management Service (KMS) instance. The following process shows how to create a client key-based application access point (AAP):
+      * 1.Create an access control rule: You can configure the private IP addresses or private CIDR blocks that are allowed to access a KMS instance. For more information, see [CreateNetworkRule](~~2539407~~).
+      * 2.Create a permission policy: You can configure the keys and secrets that are allowed to access and bind access control rules to the keys and secrets.
+      * 3.Create an AAP: You can configure an authentication method and bind a permission policy to an AAP. For more information, see [CreateApplicationAccessPoint](~~2539467~~).
+      * 4.Create a client key: You can configure the encryption password and validity period of a client key and bind the client key to an AAP. For more information, see [CreateClientKey](~~2539509~~).
+      *
+     */
     CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
 
     /**
@@ -181,6 +221,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request);
 
+    /**
+      * Before you delete an AAP, make sure that the AAP is no longer in use. If you delete an AAP that is in use, applications that use the AAP cannot access Key Management Service (KMS). Exercise caution when you delete an AAP.
+      *
+     */
     CompletableFuture<DeleteApplicationAccessPointResponse> deleteApplicationAccessPoint(DeleteApplicationAccessPointRequest request);
 
     /**
@@ -190,6 +234,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteCertificateResponse> deleteCertificate(DeleteCertificateRequest request);
 
+    /**
+      * Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.
+      *
+     */
     CompletableFuture<DeleteClientKeyResponse> deleteClientKey(DeleteClientKeyRequest request);
 
     /**
@@ -200,8 +248,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteKeyMaterialResponse> deleteKeyMaterial(DeleteKeyMaterialRequest request);
 
+    /**
+      * Before you delete a network access rule, make sure that the network access rule is not bound to permission policies. Otherwise, related applications cannot access Key Management Service (KMS).
+      *
+     */
     CompletableFuture<DeleteNetworkRuleResponse> deleteNetworkRule(DeleteNetworkRuleRequest request);
 
+    /**
+      * Before you delete a permission policy, make sure that the permission policy is not associated with application access points (AAPs). Otherwise, related applications cannot access Key Management Service (KMS).
+      *
+     */
     CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request);
 
     /**
@@ -237,6 +293,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePolicyResponse> describePolicy(DescribePolicyRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Kms\\&api=DescribeRegions\\&type=RPC\\&version=2016-01-20)
+      *
+     */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
@@ -312,6 +373,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClientKeyResponse> getClientKey(GetClientKeyRequest request);
 
+    CompletableFuture<GetKeyPolicyResponse> getKeyPolicy(GetKeyPolicyRequest request);
+
     CompletableFuture<GetKmsInstanceResponse> getKmsInstance(GetKmsInstanceRequest request);
 
     /**
@@ -335,6 +398,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPublicKeyResponse> getPublicKey(GetPublicKeyRequest request);
 
     CompletableFuture<GetRandomPasswordResponse> getRandomPassword(GetRandomPasswordRequest request);
+
+    CompletableFuture<GetSecretPolicyResponse> getSecretPolicy(GetSecretPolicyRequest request);
 
     /**
       * If you do not specify a version number or stage label, Secrets Manager returns the secret value of the version marked with ACSCurrent.
@@ -463,6 +528,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SetDeletionProtectionResponse> setDeletionProtection(SetDeletionProtectionRequest request);
 
+    CompletableFuture<SetKeyPolicyResponse> setKeyPolicy(SetKeyPolicyRequest request);
+
+    CompletableFuture<SetSecretPolicyResponse> setSecretPolicy(SetSecretPolicyRequest request);
+
     /**
       * You can add up to 10 tags to a CMK, secret, or certificate.
       * In this example, the tags `[{"TagKey":"S1key1","TagValue":"S1val1"},{"TagKey":"S1key2","TagValue":"S2val2"}]` are added to the CMK whose ID is `08c33a6f-4e0a-4a1b-a3fa-7ddf****`.
@@ -470,6 +539,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<TagResourceResponse> tagResource(TagResourceRequest request);
 
+    /**
+      * You can add multiple tags to multiple keys or multiple secrets at a time.
+      *
+     */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
@@ -480,10 +553,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UntagResourceResponse> untagResource(UntagResourceRequest request);
 
+    /**
+      * You can remove multiple tags from multiple keys or multiple secrets at a time. You cannot remove tags that start with aliyun or acs:.
+      * If you enter multiple tag keys in the request parameters and only some of the tag keys are associated with resources, the operation can be called and the tags whose keys are associated with resources are removed from the resources.
+      *
+     */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request);
 
+    /**
+      * The update takes effect immediately after an AAP information is updated. Exercise caution when you perform this operation. You can update the description of an AAP and the permission policies that are associated with the AAP. You cannot update the name of the AAP.
+      *
+     */
     CompletableFuture<UpdateApplicationAccessPointResponse> updateApplicationAccessPoint(UpdateApplicationAccessPointRequest request);
 
     /**
@@ -498,10 +580,26 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateKeyDescriptionResponse> updateKeyDescription(UpdateKeyDescriptionRequest request);
 
+    /**
+      * If your own applications are deployed in multiple VPCs in the same region, you can associate the VPCs except the VPC in which the KMS instance resides with the KMS instance. This topic describes how to configure the VPCs.
+      * The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, the applications in these VPCs can access the KMS instance.
+      * > If the VPCs belong to different Alibaba Cloud accounts, you must first configure resource sharing to share the vSwitches of other Alibaba Cloud accounts with the Alibaba Cloud account to which the KMS instance belongs. For more information, see [Access a KMS instance from multiple VPCs in the same region](~~2393236~~).
+      *
+     */
     CompletableFuture<UpdateKmsInstanceBindVpcResponse> updateKmsInstanceBindVpc(UpdateKmsInstanceBindVpcRequest request);
 
+    /**
+      * - You can update only private IP addresses and description of an access control rule. You cannot update the name and network type of an access control rule.
+      * - Updating an access control rule affects all permission policies that are bound to the access control rule. Exercise caution when you perform this operation.
+      *
+     */
     CompletableFuture<UpdateNetworkRuleResponse> updateNetworkRule(UpdateNetworkRuleRequest request);
 
+    /**
+      * - You can update the role-based access control (RBAC) permissions, accessible resources, access control rules, and description of a permission policy. You cannot update the name or scope of a permission policy.
+      * - Updating a permission policy affects all application access points (AAPs) that are bound to the permission policy. Exercise caution when you perform this operation.
+      *
+     */
     CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
 
     /**

@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerProcessTaskResponseBody} extends {@link TeaModel}
  *
  * <p>TriggerProcessTaskResponseBody</p>
  */
 public class TriggerProcessTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TriggerProcessTaskResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class TriggerProcessTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58A518BC-E4A8-5BD7-AFEA-366046ED9073</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

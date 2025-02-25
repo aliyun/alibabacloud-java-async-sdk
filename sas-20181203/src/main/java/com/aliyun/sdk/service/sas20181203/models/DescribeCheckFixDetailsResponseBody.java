@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckFixDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckFixDetailsResponseBody</p>
  */
 public class DescribeCheckFixDetailsResponseBody extends TeaModel {
-    @NameInMap("CheckFixDetails")
-    private java.util.List < CheckFixDetails> checkFixDetails;
+    @com.aliyun.core.annotation.NameInMap("CheckFixDetails")
+    private java.util.List<CheckFixDetails> checkFixDetails;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCheckFixDetailsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     /**
      * @return checkFixDetails
      */
-    public java.util.List < CheckFixDetails> getCheckFixDetails() {
+    public java.util.List<CheckFixDetails> getCheckFixDetails() {
         return this.checkFixDetails;
     }
 
@@ -57,20 +62,23 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckFixDetails> checkFixDetails; 
+        private java.util.List<CheckFixDetails> checkFixDetails; 
         private Integer count; 
         private String requestId; 
 
         /**
-         * An array that consists of the parameters.
+         * <p>An array that consists of the parameters.</p>
          */
-        public Builder checkFixDetails(java.util.List < CheckFixDetails> checkFixDetails) {
+        public Builder checkFixDetails(java.util.List<CheckFixDetails> checkFixDetails) {
             this.checkFixDetails = checkFixDetails;
             return this;
         }
 
         /**
-         * The number of risk items that can be fixed.
+         * <p>The number of risk items that can be fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -78,7 +86,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DBF1E27-98D8-5EC2-9CF3-4A2E26F6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,32 +102,38 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckFixDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckFixDetailsResponseBody</p>
+     */
     public static class ParamList extends TeaModel {
-        @NameInMap("EnumValue")
+        @com.aliyun.core.annotation.NameInMap("EnumValue")
         private String enumValue;
 
-        @NameInMap("MaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Integer maxValue;
 
-        @NameInMap("MinValue")
+        @com.aliyun.core.annotation.NameInMap("MinValue")
         private Integer minValue;
 
-        @NameInMap("ParamDefaultValue")
+        @com.aliyun.core.annotation.NameInMap("ParamDefaultValue")
         private String paramDefaultValue;
 
-        @NameInMap("ParamDesc")
+        @com.aliyun.core.annotation.NameInMap("ParamDesc")
         private String paramDesc;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private Integer paramType;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamList(Builder builder) {
@@ -214,7 +231,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.
+             * <p>The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0,1,2,3</p>
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -222,7 +242,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the rule parameter.
+             * <p>The maximum value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -230,7 +253,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the rule parameter.
+             * <p>The minimum value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -238,7 +264,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the rule parameter.
+             * <p>The default value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -246,7 +275,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule parameter.
+             * <p>The description of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The setting value is 0 means no definition, 1 means success, 2 means failure, 3 means success and failure</p>
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -254,7 +286,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule parameter.
+             * <p>The name of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>range_val</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -262,11 +297,14 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule parameter. Valid values:
-             * <p>
+             * <p>The type of the rule parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: input</li>
+             * <li><strong>2</strong>: selection</li>
+             * </ul>
              * 
-             * *   **1**: input
-             * *   **2**: selection
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paramType(Integer paramType) {
                 this.paramType = paramType;
@@ -274,7 +312,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pwd_reuse.system_auth</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -282,7 +323,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The specified value of the rule parameter.
+             * <p>The specified value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -296,29 +340,35 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCheckFixDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckFixDetailsResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private Integer defaultValue;
 
-        @NameInMap("Optional")
+        @com.aliyun.core.annotation.NameInMap("Optional")
         private Integer optional;
 
-        @NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        @com.aliyun.core.annotation.NameInMap("ParamList")
+        private java.util.List<ParamList> paramList;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Integer value;
 
-        @NameInMap("VarName")
+        @com.aliyun.core.annotation.NameInMap("VarName")
         private String varName;
 
         private Rules(Builder builder) {
@@ -364,7 +414,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -400,14 +450,17 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private Long checkId; 
             private Integer defaultValue; 
             private Integer optional; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private String ruleDesc; 
             private String ruleId; 
             private Integer value; 
             private String varName; 
 
             /**
-             * The ID of the risk item.
+             * <p>The ID of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -415,7 +468,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the rule.
+             * <p>The default value of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultValue(Integer defaultValue) {
                 this.defaultValue = defaultValue;
@@ -423,11 +479,14 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is optional. Valid values:
-             * <p>
+             * <p>Indicates whether the rule is optional. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder optional(Integer optional) {
                 this.optional = optional;
@@ -435,15 +494,18 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the rule parameters.
+             * <p>An array that consists of the rule parameters.</p>
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(/etc/system-auth)Force users not to reuse the number of recently used passwords between 5 and 24</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -451,7 +513,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pwd_reuse.system_auth</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -459,7 +524,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The specified value of the rule parameter.
+             * <p>The specified value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder value(Integer value) {
                 this.value = value;
@@ -467,7 +535,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the variable.
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>open</p>
              */
             public Builder varName(String varName) {
                 this.varName = varName;
@@ -481,18 +552,24 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCheckFixDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckFixDetailsResponseBody</p>
+     */
     public static class CheckFixDetails extends TeaModel {
-        @NameInMap("CheckDesc")
+        @com.aliyun.core.annotation.NameInMap("CheckDesc")
         private String checkDesc;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
         private CheckFixDetails(Builder builder) {
             this.checkDesc = builder.checkDesc;
@@ -533,7 +610,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -541,10 +618,13 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private String checkDesc; 
             private Long checkId; 
             private String checkItem; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
-             * The detailed description of the risk item.
+             * <p>The detailed description of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Force users not to reuse recently used passwords to reduce the risk of password guessing attacks</p>
              */
             public Builder checkDesc(String checkDesc) {
                 this.checkDesc = checkDesc;
@@ -552,7 +632,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the risk item.
+             * <p>The ID of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -560,7 +643,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the risk item.
+             * <p>The description of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ensure password reuse is limited</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -568,9 +654,9 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the rules that are supported by the risk item.
+             * <p>An array consisting of the rules that are supported by the risk item.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

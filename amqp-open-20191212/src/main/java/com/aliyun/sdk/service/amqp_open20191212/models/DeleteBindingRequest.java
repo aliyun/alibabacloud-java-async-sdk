@@ -1,50 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBindingRequest} extends {@link RequestModel}
  *
  * <p>DeleteBindingRequest</p>
  */
 public class DeleteBindingRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BindingKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindingKey")
     private String bindingKey;
 
-    @Body
-    @NameInMap("BindingType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindingType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindingType;
 
-    @Body
-    @NameInMap("DestinationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DestinationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationName;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("SourceExchange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceExchange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceExchange;
 
-    @Body
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private DeleteBindingRequest(Builder builder) {
@@ -145,7 +148,7 @@ public class DeleteBindingRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -154,7 +157,10 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * BindingKey.
+         * <p>The binding key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.test.</p>
          */
         public Builder bindingKey(String bindingKey) {
             this.putBodyParameter("BindingKey", bindingKey);
@@ -163,7 +169,15 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * BindingType.
+         * <p>The type of the object that you want to unbind from the source exchange. Valid values:</p>
+         * <ul>
+         * <li><strong>QUEUE</strong></li>
+         * <li><strong>EXCHANGE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QUEUE</p>
          */
         public Builder bindingType(String bindingType) {
             this.putBodyParameter("BindingType", bindingType);
@@ -172,7 +186,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * DestinationName.
+         * <p>The name of the object that you want to unbind from the source exchange.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoQueue</p>
          */
         public Builder destinationName(String destinationName) {
             this.putBodyParameter("DestinationName", destinationName);
@@ -181,7 +199,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-v0h1kb9nu***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -190,7 +212,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * SourceExchange.
+         * <p>The name of the source exchange.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NormalEX</p>
          */
         public Builder sourceExchange(String sourceExchange) {
             this.putBodyParameter("SourceExchange", sourceExchange);
@@ -199,7 +225,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * <p>The vhost name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);

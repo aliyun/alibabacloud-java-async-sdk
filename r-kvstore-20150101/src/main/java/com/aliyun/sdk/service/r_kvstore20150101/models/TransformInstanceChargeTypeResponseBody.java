@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformInstanceChargeTypeResponseBody} extends {@link TeaModel}
  *
  * <p>TransformInstanceChargeTypeResponseBody</p>
  */
 public class TransformInstanceChargeTypeResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TransformInstanceChargeTypeResponseBody(Builder builder) {
@@ -62,11 +62,13 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The new billing method. Valid values:
-         * <p>
+         * <p>The time when the instance expires.</p>
+         * <blockquote>
+         * <p> A value is returned for this parameter only if the instance was changed from pay-as-you-go to subscription.</p>
+         * </blockquote>
          * 
-         * *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.
-         * *   **PostPaid**: pay-as-you-go.
+         * <strong>example:</strong>
+         * <p>2021-05-13T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -74,7 +76,10 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **TransformInstanceChargeType**.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20881824000****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -82,7 +87,10 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82C791FB-8979-489E-853D-706D7743****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

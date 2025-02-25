@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeEdgeMachinesRequest</p>
  */
 public class DescribeEdgeMachinesRequest extends Request {
-    @Query
-    @NameInMap("hostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hostname")
     private String hostname;
 
-    @Query
-    @NameInMap("life_state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("life_state")
     private String lifeState;
 
-    @Query
-    @NameInMap("model")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("model")
     private String model;
 
-    @Query
-    @NameInMap("online_state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("online_state")
     private String onlineState;
 
-    @Query
-    @NameInMap("page_number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_number")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Long pageSize;
 
     private DescribeEdgeMachinesRequest(Builder builder) {
@@ -124,7 +129,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         } 
 
         /**
-         * The `hostname` of the cloud-native box.
+         * <p>The <code>hostname</code> of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-v-b010-ssdfw****</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("hostname", hostname);
@@ -133,7 +141,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The lifecycle status.
+         * <p>The lifecycle status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>activated/waitOnline/deleting</p>
          */
         public Builder lifeState(String lifeState) {
             this.putQueryParameter("life_state", lifeState);
@@ -142,7 +153,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The type of cloud-native box.
+         * <p>The type of cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-V-B010</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("model", model);
@@ -151,11 +165,14 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The status of the cloud-native box. Valid values:
-         * <p>
+         * <p>The status of the cloud-native box. Valid values:</p>
+         * <ul>
+         * <li><code>offline</code></li>
+         * <li><code>online</code></li>
+         * </ul>
          * 
-         * *   `offline`
-         * *   `online`
+         * <strong>example:</strong>
+         * <p>offline/online</p>
          */
         public Builder onlineState(String onlineState) {
             this.putQueryParameter("online_state", onlineState);
@@ -164,7 +181,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -173,7 +193,10 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);

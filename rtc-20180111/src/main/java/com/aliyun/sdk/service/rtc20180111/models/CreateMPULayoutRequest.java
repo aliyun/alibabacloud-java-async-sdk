@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMPULayoutRequest} extends {@link RequestModel}
  *
  * <p>CreateMPULayoutRequest</p>
  */
 public class CreateMPULayoutRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("AudioMixCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioMixCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer audioMixCount;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Panes")
-    @Validation(required = true)
-    private java.util.List < Panes> panes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Panes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Panes> panes;
 
     private CreateMPULayoutRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class CreateMPULayoutRequest extends Request {
     /**
      * @return panes
      */
-    public java.util.List < Panes> getPanes() {
+    public java.util.List<Panes> getPanes() {
         return this.panes;
     }
 
@@ -97,23 +102,26 @@ public class CreateMPULayoutRequest extends Request {
         private Integer audioMixCount; 
         private String name; 
         private Long ownerId; 
-        private java.util.List < Panes> panes; 
+        private java.util.List<Panes> panes; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateMPULayoutRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.audioMixCount = response.audioMixCount;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.panes = response.panes;
+        private Builder(CreateMPULayoutRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.audioMixCount = request.audioMixCount;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.panes = request.panes;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +130,10 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
-         * AudioMixCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder audioMixCount(Integer audioMixCount) {
             this.putQueryParameter("AudioMixCount", audioMixCount);
@@ -149,9 +160,9 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
-         * Panes.
+         * <p>This parameter is required.</p>
          */
-        public Builder panes(java.util.List < Panes> panes) {
+        public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
             this.panes = panes;
             return this;
@@ -164,27 +175,33 @@ public class CreateMPULayoutRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMPULayoutRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMPULayoutRequest</p>
+     */
     public static class Panes extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("MajorPane")
+        @com.aliyun.core.annotation.NameInMap("MajorPane")
         private Integer majorPane;
 
-        @NameInMap("PaneId")
+        @com.aliyun.core.annotation.NameInMap("PaneId")
         private Integer paneId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Panes(Builder builder) {
             this.height = builder.height;
@@ -193,7 +210,7 @@ public class CreateMPULayoutRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -247,10 +264,10 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -260,7 +277,7 @@ public class CreateMPULayoutRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Height.
@@ -313,8 +330,8 @@ public class CreateMPULayoutRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

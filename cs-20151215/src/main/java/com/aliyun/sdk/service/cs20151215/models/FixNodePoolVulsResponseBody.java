@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FixNodePoolVulsResponseBody} extends {@link TeaModel}
  *
  * <p>FixNodePoolVulsResponseBody</p>
  */
 public class FixNodePoolVulsResponseBody extends TeaModel {
-    @NameInMap("task_id")
+    @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
     private FixNodePoolVulsResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class FixNodePoolVulsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the CVE patching task.
+         * <p>The ID of the CVE patching task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-60fea8ad2e277f087900****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

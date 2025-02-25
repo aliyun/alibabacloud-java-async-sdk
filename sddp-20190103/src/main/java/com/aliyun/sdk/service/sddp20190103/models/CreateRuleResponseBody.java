@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRuleResponseBody</p>
  */
 public class CreateRuleResponseBody extends TeaModel {
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Integer id;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateRuleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The unique ID of the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -58,7 +66,10 @@ public class CreateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208B016D-4CB9-4A85-96A5-0B8ED1EBF271</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

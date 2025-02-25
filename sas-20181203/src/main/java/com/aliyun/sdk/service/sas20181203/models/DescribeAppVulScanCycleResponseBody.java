@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppVulScanCycleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppVulScanCycleResponseBody</p>
  */
 public class DescribeAppVulScanCycleResponseBody extends TeaModel {
-    @NameInMap("Cycle")
+    @com.aliyun.core.annotation.NameInMap("Cycle")
     private String cycle;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAppVulScanCycleResponseBody(Builder builder) {
@@ -50,12 +55,15 @@ public class DescribeAppVulScanCycleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The scan cycle for application vulnerabilities.
-         * <p>
+         * <p>The scan cycle for application vulnerabilities.</p>
+         * <ul>
+         * <li>1week</li>
+         * <li>2weeks</li>
+         * <li>3days</li>
+         * </ul>
          * 
-         * *   1week
-         * *   2weeks
-         * *   3days
+         * <strong>example:</strong>
+         * <p>1week</p>
          */
         public Builder cycle(String cycle) {
             this.cycle = cycle;
@@ -63,7 +71,10 @@ public class DescribeAppVulScanCycleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>934E6D2A-0123-5A99-88BA-80DC27634E22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

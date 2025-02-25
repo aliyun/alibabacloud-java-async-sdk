@@ -1,101 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAffectedMaliciousFileImagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAffectedMaliciousFileImagesRequest</p>
  */
 public class DescribeAffectedMaliciousFileImagesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("ContainerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerId")
     private String containerId;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
-    @Query
-    @NameInMap("ImageDigest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageDigest")
     private String imageDigest;
 
-    @Query
-    @NameInMap("ImageLayer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageLayer")
     private String imageLayer;
 
-    @Query
-    @NameInMap("ImageTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageTag")
     private String imageTag;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Levels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Levels")
     private String levels;
 
-    @Query
-    @NameInMap("MaliciousMd5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaliciousMd5")
     private String maliciousMd5;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageSize;
 
-    @Query
-    @NameInMap("Pod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pod")
     private String pod;
 
-    @Query
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
-    @Query
-    @NameInMap("RepoInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoInstanceId")
     private String repoInstanceId;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @Query
-    @NameInMap("RepoNamespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNamespace")
     private String repoNamespace;
 
-    @Query
-    @NameInMap("RepoRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoRegionId")
     private String repoRegionId;
 
-    @Query
-    @NameInMap("ScanRange")
-    private java.util.List < String > scanRange;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRange")
+    private java.util.List<String> scanRange;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeAffectedMaliciousFileImagesRequest(Builder builder) {
@@ -272,7 +277,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
     /**
      * @return scanRange
      */
-    public java.util.List < String > getScanRange() {
+    public java.util.List<String> getScanRange() {
         return this.scanRange;
     }
 
@@ -303,7 +308,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
-        private java.util.List < String > scanRange; 
+        private java.util.List<String> scanRange; 
         private String status; 
 
         private Builder() {
@@ -336,10 +341,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>c60b77fe62093480db6164a3c2fa5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -348,7 +356,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>minikube</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -357,7 +368,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The ID of the container.
+         * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc20a1024011c44b6a8710d6f8b****</p>
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -366,7 +380,11 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -375,7 +393,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The name of the container image.
+         * <p>The name of the container image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -384,7 +405,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The image digest.
+         * <p>The image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a5e103187b31a94592a47a5858617f7a179ead61df7606****</p>
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -393,7 +417,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The image layer.
+         * <p>The image layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27213ad375b53628dd152a5ca****</p>
          */
         public Builder imageLayer(String imageLayer) {
             this.putQueryParameter("ImageLayer", imageLayer);
@@ -402,7 +429,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The tag that is added to the image.
+         * <p>The tag that is added to the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -411,11 +441,14 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -424,12 +457,15 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The severity level of the malicious image sample. Separate multiple severity levels with commas (,). Valid values:
-         * <p>
+         * <p>The severity level of the malicious image sample. Separate multiple severity levels with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
          * 
-         * *   **serious**
-         * *   **suspicious**
-         * *   **remind**
+         * <strong>example:</strong>
+         * <p>serious,suspicious</p>
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -438,10 +474,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The MD5 hash value of the malicious image sample.
-         * <p>
+         * <p>The MD5 hash value of the malicious image sample.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedMaliciousFiles~~">DescribeGroupedMaliciousFiles</a> operation to query the MD5 hash values of malicious image samples.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedMaliciousFiles](~~DescribeGroupedMaliciousFiles~~) operation to query the MD5 hash values of malicious image samples.
+         * <strong>example:</strong>
+         * <p>d836968041f7683b5459****</p>
          */
         public Builder maliciousMd5(String maliciousMd5) {
             this.putQueryParameter("MaliciousMd5", maliciousMd5);
@@ -450,7 +489,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-002</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -459,7 +501,11 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -468,7 +514,10 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The pod.
+         * <p>The pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22222-7xsqq</p>
          */
         public Builder pod(String pod) {
             this.putQueryParameter("Pod", pod);
@@ -477,10 +526,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
-         * <p>
+         * <p>The ID of the image repository.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of image repositories from the value of the <strong>RepoId</strong> response parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListRepository](~~451339~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
+         * <strong>example:</strong>
+         * <p>crr-vridcl4****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -489,10 +541,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The ID of the container image.
-         * <p>
+         * <p>The ID of the container image.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of container images from the value of the <strong>InstanceId</strong> response parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListRepository](~~451339~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
+         * <strong>example:</strong>
+         * <p>cri-datvailb****</p>
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -501,10 +556,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
-         * <p>
+         * <p>The name of the image repository.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported.</p>
+         * </blockquote>
          * 
-         * >  Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>centos</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -513,10 +571,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The namespace to which the image repository belongs.
-         * <p>
+         * <p>The namespace to which the image repository belongs.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported.</p>
+         * </blockquote>
          * 
-         * >  Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>hanghai-namespace</p>
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -525,22 +586,24 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The region ID of the image repository. Valid values:
-         * <p>
+         * <p>The region ID of the image repository. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+         * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+         * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+         * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+         * <li><strong>us-east-1</strong>: US (Virginia)</li>
+         * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
+         * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+         * <li><strong>eu-west-1</strong>: UK (London)</li>
+         * </ul>
          * 
-         * *   **cn-beijing**: China (Beijing)
-         * *   **cn-zhangjiakou**: China (Zhangjiakou)
-         * *   **cn-hangzhou**: China (Hangzhou)
-         * *   **cn-shanghai**: China (Shanghai)
-         * *   **cn-shenzhen**: China (Shenzhen)
-         * *   **cn-hongkong**: China (Hong Kong)
-         * *   **ap-southeast-1**: Singapore
-         * *   **ap-southeast-5**: Indonesia (Jakarta)
-         * *   **us-east-1**: US (Virginia)
-         * *   **us-west-1**: US (Silicon Valley)
-         * *   **eu-central-1**: Germany (Frankfurt)
-         * *   **eu-west-1**: UK (London)
-         * *   **ap-south-1**: India (Mumbai)
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -549,22 +612,25 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * <p>The types of the assets that you want to scan.</p>
          */
-        public Builder scanRange(java.util.List < String > scanRange) {
+        public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
             return this;
         }
 
         /**
-         * The status of the malicious image sample. Valid values:
-         * <p>
+         * <p>The status of the malicious image sample. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The malicious image sample is not handled.</li>
+         * <li><strong>1</strong>: The malicious image sample is handled.</li>
+         * <li><strong>2</strong>: The malicious image sample is being verified.</li>
+         * <li><strong>3</strong>: The malicious image sample is added to the whitelist.</li>
+         * </ul>
          * 
-         * *   **0**: The malicious image sample is not handled.
-         * *   **1**: The malicious image sample is handled.
-         * *   **2**: The malicious image sample is being verified.
-         * *   **3**: The malicious image sample is added to the whitelist.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

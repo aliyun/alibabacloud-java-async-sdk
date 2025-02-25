@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TrainOrderQueryResponseBody</p>
  */
 public class TrainOrderQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TrainOrderQueryResponseBody(Builder builder) {
@@ -151,62 +156,68 @@ public class TrainOrderQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class ChangeTicketInfoList extends TeaModel {
-        @NameInMap("change_coach_no")
+        @com.aliyun.core.annotation.NameInMap("change_coach_no")
         private String changeCoachNo;
 
-        @NameInMap("change_gap_fee")
+        @com.aliyun.core.annotation.NameInMap("change_gap_fee")
         private Double changeGapFee;
 
-        @NameInMap("change_handling_fee")
+        @com.aliyun.core.annotation.NameInMap("change_handling_fee")
         private Double changeHandlingFee;
 
-        @NameInMap("change_seat_no")
+        @com.aliyun.core.annotation.NameInMap("change_seat_no")
         private String changeSeatNo;
 
-        @NameInMap("change_seat_type_name")
+        @com.aliyun.core.annotation.NameInMap("change_seat_type_name")
         private String changeSeatTypeName;
 
-        @NameInMap("change_service_fee")
+        @com.aliyun.core.annotation.NameInMap("change_service_fee")
         private Double changeServiceFee;
 
-        @NameInMap("change_train_no")
+        @com.aliyun.core.annotation.NameInMap("change_train_no")
         private String changeTrainNo;
 
-        @NameInMap("change_train_type_name")
+        @com.aliyun.core.annotation.NameInMap("change_train_type_name")
         private String changeTrainTypeName;
 
-        @NameInMap("check_in_time")
+        @com.aliyun.core.annotation.NameInMap("check_in_time")
         private String checkInTime;
 
-        @NameInMap("check_out_time")
+        @com.aliyun.core.annotation.NameInMap("check_out_time")
         private String checkOutTime;
 
-        @NameInMap("end_time")
+        @com.aliyun.core.annotation.NameInMap("end_time")
         private String endTime;
 
-        @NameInMap("from_station_name")
+        @com.aliyun.core.annotation.NameInMap("from_station_name")
         private String fromStationName;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("origin_ticket_no")
+        @com.aliyun.core.annotation.NameInMap("origin_ticket_no")
         private String originTicketNo;
 
-        @NameInMap("out_ticket_status")
+        @com.aliyun.core.annotation.NameInMap("out_ticket_status")
         private String outTicketStatus;
 
-        @NameInMap("start_time")
+        @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
-        @NameInMap("to_station_name")
+        @com.aliyun.core.annotation.NameInMap("to_station_name")
         private String toStationName;
 
         private ChangeTicketInfoList(Builder builder) {
@@ -552,11 +563,17 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class InvoiceInfo extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private InvoiceInfo(Builder builder) {
@@ -613,62 +630,68 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class OrderBaseInfo extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("btrip_title")
+        @com.aliyun.core.annotation.NameInMap("btrip_title")
         private String btripTitle;
 
-        @NameInMap("contact_name")
+        @com.aliyun.core.annotation.NameInMap("contact_name")
         private String contactName;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
-        @NameInMap("depart_name")
+        @com.aliyun.core.annotation.NameInMap("depart_name")
         private String departName;
 
-        @NameInMap("exceed_apply_id")
+        @com.aliyun.core.annotation.NameInMap("exceed_apply_id")
         private String exceedApplyId;
 
-        @NameInMap("exceed_third_part_apply_id")
+        @com.aliyun.core.annotation.NameInMap("exceed_third_part_apply_id")
         private String exceedThirdPartApplyId;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("thirdpart_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
-        @NameInMap("trip_type")
+        @com.aliyun.core.annotation.NameInMap("trip_type")
         private Integer tripType;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private OrderBaseInfo(Builder builder) {
@@ -912,7 +935,10 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 火车票超标审批id
+             * <p>火车票超标审批id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1422113021033961000</p>
              */
             public Builder exceedApplyId(String exceedApplyId) {
                 this.exceedApplyId = exceedApplyId;
@@ -920,7 +946,10 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 火车票超标审批三方id
+             * <p>火车票超标审批三方id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022113021030003600001715</p>
              */
             public Builder exceedThirdPartApplyId(String exceedThirdPartApplyId) {
                 this.exceedThirdPartApplyId = exceedThirdPartApplyId;
@@ -1014,35 +1043,41 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class PassengerInfoList extends TeaModel {
-        @NameInMap("cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("cost_center_number")
+        @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_id")
+        @com.aliyun.core.annotation.NameInMap("project_id")
         private Long projectId;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("thirdpart_project_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_project_id")
         private String thirdpartProjectId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private PassengerInfoList(Builder builder) {
@@ -1235,26 +1270,32 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class PriceInfoList extends TeaModel {
-        @NameInMap("category_code")
+        @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("passenger_name")
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
         private String passengerName;
 
-        @NameInMap("pay_type")
+        @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Double price;
 
-        @NameInMap("trade_id")
+        @com.aliyun.core.annotation.NameInMap("trade_id")
         private String tradeId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private PriceInfoList(Builder builder) {
@@ -1396,20 +1437,26 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class RefundTicketInfoList extends TeaModel {
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
 
-        @NameInMap("refund_service_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_service_fee")
         private Double refundServiceFee;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
         private RefundTicketInfoList(Builder builder) {
@@ -1517,59 +1564,65 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class TicketInfoList extends TeaModel {
-        @NameInMap("changed")
+        @com.aliyun.core.annotation.NameInMap("changed")
         private Boolean changed;
 
-        @NameInMap("check_in_time")
+        @com.aliyun.core.annotation.NameInMap("check_in_time")
         private String checkInTime;
 
-        @NameInMap("check_out_time")
+        @com.aliyun.core.annotation.NameInMap("check_out_time")
         private String checkOutTime;
 
-        @NameInMap("coach_no")
+        @com.aliyun.core.annotation.NameInMap("coach_no")
         private String coachNo;
 
-        @NameInMap("end_time")
+        @com.aliyun.core.annotation.NameInMap("end_time")
         private String endTime;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modify")
+        @com.aliyun.core.annotation.NameInMap("gmt_modify")
         private String gmtModify;
 
-        @NameInMap("out_ticket_status")
+        @com.aliyun.core.annotation.NameInMap("out_ticket_status")
         private String outTicketStatus;
 
-        @NameInMap("pay_type")
+        @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
-        @NameInMap("seat_no")
+        @com.aliyun.core.annotation.NameInMap("seat_no")
         private String seatNo;
 
-        @NameInMap("seat_type_name")
+        @com.aliyun.core.annotation.NameInMap("seat_type_name")
         private String seatTypeName;
 
-        @NameInMap("service_fee")
+        @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
-        @NameInMap("start_time")
+        @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Double ticketPrice;
 
-        @NameInMap("ticket_status")
+        @com.aliyun.core.annotation.NameInMap("ticket_status")
         private Integer ticketStatus;
 
-        @NameInMap("train_type_name")
+        @com.aliyun.core.annotation.NameInMap("train_type_name")
         private String trainTypeName;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private TicketInfoList(Builder builder) {
@@ -1898,29 +1951,35 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class TrainInfo extends TeaModel {
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("from_city_ad_code")
+        @com.aliyun.core.annotation.NameInMap("from_city_ad_code")
         private String fromCityAdCode;
 
-        @NameInMap("from_station_name")
+        @com.aliyun.core.annotation.NameInMap("from_station_name")
         private String fromStationName;
 
-        @NameInMap("run_time")
+        @com.aliyun.core.annotation.NameInMap("run_time")
         private Long runTime;
 
-        @NameInMap("to_city_ad_code")
+        @com.aliyun.core.annotation.NameInMap("to_city_ad_code")
         private String toCityAdCode;
 
-        @NameInMap("to_station_name")
+        @com.aliyun.core.annotation.NameInMap("to_station_name")
         private String toStationName;
 
-        @NameInMap("train_no")
+        @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
 
         private TrainInfo(Builder builder) {
@@ -2079,29 +2138,35 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainOrderQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("change_ticket_info_list")
-        private java.util.List < ChangeTicketInfoList> changeTicketInfoList;
+        @com.aliyun.core.annotation.NameInMap("change_ticket_info_list")
+        private java.util.List<ChangeTicketInfoList> changeTicketInfoList;
 
-        @NameInMap("invoice_info")
+        @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
 
-        @NameInMap("order_base_info")
+        @com.aliyun.core.annotation.NameInMap("order_base_info")
         private OrderBaseInfo orderBaseInfo;
 
-        @NameInMap("passenger_info_list")
-        private java.util.List < PassengerInfoList> passengerInfoList;
+        @com.aliyun.core.annotation.NameInMap("passenger_info_list")
+        private java.util.List<PassengerInfoList> passengerInfoList;
 
-        @NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        @com.aliyun.core.annotation.NameInMap("price_info_list")
+        private java.util.List<PriceInfoList> priceInfoList;
 
-        @NameInMap("refund_ticket_info_list")
-        private java.util.List < RefundTicketInfoList> refundTicketInfoList;
+        @com.aliyun.core.annotation.NameInMap("refund_ticket_info_list")
+        private java.util.List<RefundTicketInfoList> refundTicketInfoList;
 
-        @NameInMap("ticket_info_list")
-        private java.util.List < TicketInfoList> ticketInfoList;
+        @com.aliyun.core.annotation.NameInMap("ticket_info_list")
+        private java.util.List<TicketInfoList> ticketInfoList;
 
-        @NameInMap("train_info")
+        @com.aliyun.core.annotation.NameInMap("train_info")
         private TrainInfo trainInfo;
 
         private Module(Builder builder) {
@@ -2126,7 +2191,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         /**
          * @return changeTicketInfoList
          */
-        public java.util.List < ChangeTicketInfoList> getChangeTicketInfoList() {
+        public java.util.List<ChangeTicketInfoList> getChangeTicketInfoList() {
             return this.changeTicketInfoList;
         }
 
@@ -2147,28 +2212,28 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         /**
          * @return passengerInfoList
          */
-        public java.util.List < PassengerInfoList> getPassengerInfoList() {
+        public java.util.List<PassengerInfoList> getPassengerInfoList() {
             return this.passengerInfoList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
         /**
          * @return refundTicketInfoList
          */
-        public java.util.List < RefundTicketInfoList> getRefundTicketInfoList() {
+        public java.util.List<RefundTicketInfoList> getRefundTicketInfoList() {
             return this.refundTicketInfoList;
         }
 
         /**
          * @return ticketInfoList
          */
-        public java.util.List < TicketInfoList> getTicketInfoList() {
+        public java.util.List<TicketInfoList> getTicketInfoList() {
             return this.ticketInfoList;
         }
 
@@ -2180,19 +2245,19 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeTicketInfoList> changeTicketInfoList; 
+            private java.util.List<ChangeTicketInfoList> changeTicketInfoList; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerInfoList> passengerInfoList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
-            private java.util.List < RefundTicketInfoList> refundTicketInfoList; 
-            private java.util.List < TicketInfoList> ticketInfoList; 
+            private java.util.List<PassengerInfoList> passengerInfoList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
+            private java.util.List<RefundTicketInfoList> refundTicketInfoList; 
+            private java.util.List<TicketInfoList> ticketInfoList; 
             private TrainInfo trainInfo; 
 
             /**
              * change_ticket_info_list.
              */
-            public Builder changeTicketInfoList(java.util.List < ChangeTicketInfoList> changeTicketInfoList) {
+            public Builder changeTicketInfoList(java.util.List<ChangeTicketInfoList> changeTicketInfoList) {
                 this.changeTicketInfoList = changeTicketInfoList;
                 return this;
             }
@@ -2216,7 +2281,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * passenger_info_list.
              */
-            public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
+            public Builder passengerInfoList(java.util.List<PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;
                 return this;
             }
@@ -2224,7 +2289,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }
@@ -2232,7 +2297,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * refund_ticket_info_list.
              */
-            public Builder refundTicketInfoList(java.util.List < RefundTicketInfoList> refundTicketInfoList) {
+            public Builder refundTicketInfoList(java.util.List<RefundTicketInfoList> refundTicketInfoList) {
                 this.refundTicketInfoList = refundTicketInfoList;
                 return this;
             }
@@ -2240,7 +2305,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * ticket_info_list.
              */
-            public Builder ticketInfoList(java.util.List < TicketInfoList> ticketInfoList) {
+            public Builder ticketInfoList(java.util.List<TicketInfoList> ticketInfoList) {
                 this.ticketInfoList = ticketInfoList;
                 return this;
             }

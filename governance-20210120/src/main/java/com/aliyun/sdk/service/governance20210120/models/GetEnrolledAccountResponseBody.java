@@ -1,58 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
  *
  * <p>GetEnrolledAccountResponseBody</p>
  */
 public class GetEnrolledAccountResponseBody extends TeaModel {
-    @NameInMap("AccountUid")
+    @com.aliyun.core.annotation.NameInMap("AccountUid")
     private Long accountUid;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("BaselineId")
+    private String baselineId;
+
+    @com.aliyun.core.annotation.NameInMap("BaselineItems")
+    private java.util.List < BaselineItems> baselineItems;
+
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("ErrorInfo")
+    @com.aliyun.core.annotation.NameInMap("ErrorInfo")
     private ErrorInfo errorInfo;
 
-    @NameInMap("FolderId")
+    @com.aliyun.core.annotation.NameInMap("FolderId")
     private String folderId;
 
-    @NameInMap("Initialized")
+    @com.aliyun.core.annotation.NameInMap("Initialized")
     private Boolean initialized;
 
-    @NameInMap("Inputs")
+    @com.aliyun.core.annotation.NameInMap("Inputs")
     private Inputs inputs;
 
-    @NameInMap("MasterAccountUid")
+    @com.aliyun.core.annotation.NameInMap("MasterAccountUid")
     private Long masterAccountUid;
 
-    @NameInMap("PayerAccountUid")
+    @com.aliyun.core.annotation.NameInMap("PayerAccountUid")
     private Long payerAccountUid;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private java.util.List < Progress> progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private GetEnrolledAccountResponseBody(Builder builder) {
         this.accountUid = builder.accountUid;
+        this.baselineId = builder.baselineId;
+        this.baselineItems = builder.baselineItems;
         this.createTime = builder.createTime;
         this.displayName = builder.displayName;
         this.errorInfo = builder.errorInfo;
@@ -80,6 +88,20 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
      */
     public Long getAccountUid() {
         return this.accountUid;
+    }
+
+    /**
+     * @return baselineId
+     */
+    public String getBaselineId() {
+        return this.baselineId;
+    }
+
+    /**
+     * @return baselineItems
+     */
+    public java.util.List < BaselineItems> getBaselineItems() {
+        return this.baselineItems;
     }
 
     /**
@@ -168,6 +190,8 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long accountUid; 
+        private String baselineId; 
+        private java.util.List < BaselineItems> baselineItems; 
         private String createTime; 
         private String displayName; 
         private ErrorInfo errorInfo; 
@@ -182,7 +206,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * 账号ID
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12868156179*****</p>
          */
         public Builder accountUid(Long accountUid) {
             this.accountUid = accountUid;
@@ -190,7 +217,29 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * <p>The ID of the baseline that is implemented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1adadfadsf***</p>
+         */
+        public Builder baselineId(String baselineId) {
+            this.baselineId = baselineId;
+            return this;
+        }
+
+        /**
+         * <p>An array that contains baseline items.</p>
+         */
+        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+            this.baselineItems = baselineItems;
+            return this;
+        }
+
+        /**
+         * <p>The time when the account was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -198,7 +247,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 账号显示名称
+         * <p>The display name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-account</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -206,7 +258,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * <p>The error message.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the value of <code>Status</code> is <code>Failed</code> or <code>ScheduleFailed</code>.</p>
+         * </blockquote>
          */
         public Builder errorInfo(ErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
@@ -214,7 +269,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 父资源夹ID
+         * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-5ESoku****</p>
          */
         public Builder folderId(String folderId) {
             this.folderId = folderId;
@@ -222,7 +280,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 是否初始化完成
+         * <p>Indicates whether the initialization is complete. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder initialized(Boolean initialized) {
             this.initialized = initialized;
@@ -230,7 +295,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 注册账号时的输入参数
+         * <p>The input parameters that are used when the account was registered.</p>
          */
         public Builder inputs(Inputs inputs) {
             this.inputs = inputs;
@@ -238,7 +303,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 所属的Master账号ID
+         * <p>The ID of the management account of the resource directory to which the account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552*****</p>
          */
         public Builder masterAccountUid(Long masterAccountUid) {
             this.masterAccountUid = masterAccountUid;
@@ -246,7 +314,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 结算账号ID
+         * <p>The ID of the settlement account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552*****</p>
          */
         public Builder payerAccountUid(Long payerAccountUid) {
             this.payerAccountUid = payerAccountUid;
@@ -254,7 +325,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 基线实施进度
+         * <p>The progress of the applying the baseline to the account.</p>
          */
         public Builder progress(java.util.List < Progress> progress) {
             this.progress = progress;
@@ -262,7 +333,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -270,7 +344,18 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 账号注册状态
+         * <p>The status of the account. Valid values:</p>
+         * <ul>
+         * <li>Pending: The account is pending to be created.</li>
+         * <li>Running: The account is being created.</li>
+         * <li>Finished: The account is created.</li>
+         * <li>Failed: The account fails to be created.</li>
+         * <li>Scheduling: The account is being scheduled.</li>
+         * <li>ScheduleFailed: The account fails to be scheduled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -278,7 +363,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 更新时间
+         * <p>The time when the information about the account was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -291,118 +379,23 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     } 
 
-    public static class ErrorInfo extends TeaModel {
-        @NameInMap("Code")
-        private String code;
-
-        @NameInMap("Message")
-        private String message;
-
-        @NameInMap("Recommend")
-        private String recommend;
-
-        @NameInMap("RequestId")
-        private String requestId;
-
-        private ErrorInfo(Builder builder) {
-            this.code = builder.code;
-            this.message = builder.message;
-            this.recommend = builder.recommend;
-            this.requestId = builder.requestId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ErrorInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return code
-         */
-        public String getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return recommend
-         */
-        public String getRecommend() {
-            return this.recommend;
-        }
-
-        /**
-         * @return requestId
-         */
-        public String getRequestId() {
-            return this.requestId;
-        }
-
-        public static final class Builder {
-            private String code; 
-            private String message; 
-            private String recommend; 
-            private String requestId; 
-
-            /**
-             * 错误码
-             */
-            public Builder code(String code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * 错误信息
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * 错误处理建议
-             */
-            public Builder recommend(String recommend) {
-                this.recommend = recommend;
-                return this;
-            }
-
-            /**
-             * 请求ID
-             */
-            public Builder requestId(String requestId) {
-                this.requestId = requestId;
-                return this;
-            }
-
-            public ErrorInfo build() {
-                return new ErrorInfo(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class BaselineItems extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private BaselineItems(Builder builder) {
@@ -455,7 +448,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * 基线项配置
+             * <p>The configurations of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -463,7 +459,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项名称
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -471,7 +470,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 是否跳过基线项
+             * <p>Indicates whether baseline item is skipped. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -479,7 +485,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项版本
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -493,24 +502,342 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
+    public static class ErrorInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Recommend")
+        private String recommend;
+
+        @com.aliyun.core.annotation.NameInMap("RequestId")
+        private String requestId;
+
+        private ErrorInfo(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+            this.recommend = builder.recommend;
+            this.requestId = builder.requestId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ErrorInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return recommend
+         */
+        public String getRecommend() {
+            return this.recommend;
+        }
+
+        /**
+         * @return requestId
+         */
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+            private String recommend; 
+            private String requestId; 
+
+            /**
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CompliancePackExists</p>
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The compliance pack already exists.</p>
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * <p>The recommended solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists%5C%5Cu0026product=Config">https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists\\u0026product=Config</a></p>
+             */
+            public Builder recommend(String recommend) {
+                this.recommend = recommend;
+                return this;
+            }
+
+            /**
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6D5EAA86-2D41-5CB7-8DA7-B60093ACAA4E</p>
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            public ErrorInfo build() {
+                return new ErrorInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
+    public static class InputsBaselineItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Skip")
+        private Boolean skip;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        private InputsBaselineItems(Builder builder) {
+            this.config = builder.config;
+            this.name = builder.name;
+            this.skip = builder.skip;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputsBaselineItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return skip
+         */
+        public Boolean getSkip() {
+            return this.skip;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String config; 
+            private String name; 
+            private Boolean skip; 
+            private String version; 
+
+            /**
+             * <p>The configurations of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;governance&quot;,&quot;Email&quot;:&quot;wibud****@gmail.com&quot;,&quot;Mobile&quot;:&quot;1234&quot;,&quot;Position&quot;:&quot;Other&quot;}]}</p>
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether baseline item is skipped. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder skip(Boolean skip) {
+                this.skip = skip;
+                return this;
+            }
+
+            /**
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public InputsBaselineItems build() {
+                return new InputsBaselineItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class Inputs extends TeaModel {
-        @NameInMap("AccountNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("AccountNamePrefix")
         private String accountNamePrefix;
 
-        @NameInMap("AccountUid")
+        @com.aliyun.core.annotation.NameInMap("AccountUid")
         private Long accountUid;
 
-        @NameInMap("BaselineItems")
-        private java.util.List < BaselineItems> baselineItems;
+        @com.aliyun.core.annotation.NameInMap("BaselineItems")
+        private java.util.List < InputsBaselineItems> baselineItems;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("PayerAccountUid")
+        @com.aliyun.core.annotation.NameInMap("PayerAccountUid")
         private Long payerAccountUid;
+
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List < Tag> tag;
 
         private Inputs(Builder builder) {
             this.accountNamePrefix = builder.accountNamePrefix;
@@ -519,6 +846,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             this.displayName = builder.displayName;
             this.folderId = builder.folderId;
             this.payerAccountUid = builder.payerAccountUid;
+            this.tag = builder.tag;
         }
 
         public static Builder builder() {
@@ -546,7 +874,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * @return baselineItems
          */
-        public java.util.List < BaselineItems> getBaselineItems() {
+        public java.util.List < InputsBaselineItems> getBaselineItems() {
             return this.baselineItems;
         }
 
@@ -571,16 +899,27 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             return this.payerAccountUid;
         }
 
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
         public static final class Builder {
             private String accountNamePrefix; 
             private Long accountUid; 
-            private java.util.List < BaselineItems> baselineItems; 
+            private java.util.List < InputsBaselineItems> baselineItems; 
             private String displayName; 
             private String folderId; 
             private Long payerAccountUid; 
+            private java.util.List < Tag> tag; 
 
             /**
-             * 账号名称前缀
+             * <p>The prefix of the account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-account</p>
              */
             public Builder accountNamePrefix(String accountNamePrefix) {
                 this.accountNamePrefix = accountNamePrefix;
@@ -588,7 +927,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 账号ID
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12868156179*****</p>
              */
             public Builder accountUid(Long accountUid) {
                 this.accountUid = accountUid;
@@ -596,15 +938,18 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项配置数组
+             * <p>The baseline items.</p>
              */
-            public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+            public Builder baselineItems(java.util.List < InputsBaselineItems> baselineItems) {
                 this.baselineItems = baselineItems;
                 return this;
             }
 
             /**
-             * 账号展示名称
+             * <p>The display name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-account</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -612,7 +957,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 父资源夹ID
+             * <p>The ID of the parent folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-5ESoku****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -620,10 +968,21 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 结算账号ID
+             * <p>The ID of the settlement account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19534534552*****</p>
              */
             public Builder payerAccountUid(Long payerAccountUid) {
                 this.payerAccountUid = payerAccountUid;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
                 return this;
             }
 
@@ -634,11 +993,17 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class Progress extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Progress(Builder builder) {
@@ -673,7 +1038,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 基线项名称
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -681,7 +1049,16 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项实施状态
+             * <p>The status of applying the baseline to the account. Valid values:</p>
+             * <ul>
+             * <li>Pending: The baseline is pending to be applied to the account.</li>
+             * <li>Running: The baseline is being applied to the account.</li>
+             * <li>Finished: : The baseline is applied to the account.</li>
+             * <li>Failed: : The baseline fails to be applied to the account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

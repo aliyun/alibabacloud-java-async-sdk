@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourcesResponseBody</p>
  */
 public class GetResourcesResponseBody extends TeaModel {
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("resource")
+    @com.aliyun.core.annotation.NameInMap("resource")
     private Resource resource;
 
-    @NameInMap("resources")
+    @com.aliyun.core.annotation.NameInMap("resources")
     private java.util.List < Resources> resources;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private GetResourcesResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class GetResourcesResponseBody extends TeaModel {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("resourceAttributes")
+        @com.aliyun.core.annotation.NameInMap("resourceAttributes")
         private java.util.Map < String, ? > resourceAttributes;
 
-        @NameInMap("resourceId")
+        @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
 
         private Resource(Builder builder) {
@@ -213,10 +212,10 @@ public class GetResourcesResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("resourceAttributes")
+        @com.aliyun.core.annotation.NameInMap("resourceAttributes")
         private java.util.Map < String, ? > resourceAttributes;
 
-        @NameInMap("resourceId")
+        @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
 
         private Resources(Builder builder) {

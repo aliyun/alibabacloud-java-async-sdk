@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSwimmingLaneGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateSwimmingLaneGroupResponseBody</p>
  */
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOrUpdateSwimmingLaneGroupResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +102,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +113,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,10 +135,11 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true: The request was successful. false: The request failed.</p>
          * 
-         * true: The request was successful. false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,42 +152,55 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateSwimmingLaneGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSwimmingLaneGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppIds")
+        @com.aliyun.core.annotation.NameInMap("AppIds")
         private String appIds;
 
-        @NameInMap("DbGrayEnable")
+        @com.aliyun.core.annotation.NameInMap("CanaryModel")
+        private Integer canaryModel;
+
+        @com.aliyun.core.annotation.NameInMap("DbGrayEnable")
         private String dbGrayEnable;
 
-        @NameInMap("EntryApp")
+        @com.aliyun.core.annotation.NameInMap("EntryApp")
         private String entryApp;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MessageQueueFilterSide")
+        @com.aliyun.core.annotation.NameInMap("MessageQueueFilterSide")
         private String messageQueueFilterSide;
 
-        @NameInMap("MessageQueueGrayEnable")
+        @com.aliyun.core.annotation.NameInMap("MessageQueueGrayEnable")
         private Boolean messageQueueGrayEnable;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RecordCanaryDetail")
+        @com.aliyun.core.annotation.NameInMap("Paths")
+        private String paths;
+
+        @com.aliyun.core.annotation.NameInMap("RecordCanaryDetail")
         private Boolean recordCanaryDetail;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
             this.appIds = builder.appIds;
+            this.canaryModel = builder.canaryModel;
             this.dbGrayEnable = builder.dbGrayEnable;
             this.entryApp = builder.entryApp;
             this.id = builder.id;
@@ -177,6 +208,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.paths = builder.paths;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.region = builder.region;
             this.userId = builder.userId;
@@ -195,6 +227,13 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
          */
         public String getAppIds() {
             return this.appIds;
+        }
+
+        /**
+         * @return canaryModel
+         */
+        public Integer getCanaryModel() {
+            return this.canaryModel;
         }
 
         /**
@@ -247,6 +286,13 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return paths
+         */
+        public String getPaths() {
+            return this.paths;
+        }
+
+        /**
          * @return recordCanaryDetail
          */
         public Boolean getRecordCanaryDetail() {
@@ -269,6 +315,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appIds; 
+            private Integer canaryModel; 
             private String dbGrayEnable; 
             private String entryApp; 
             private Long id; 
@@ -276,6 +323,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             private Boolean messageQueueGrayEnable; 
             private String name; 
             private String namespace; 
+            private String paths; 
             private Boolean recordCanaryDetail; 
             private String region; 
             private String userId; 
@@ -285,6 +333,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder appIds(String appIds) {
                 this.appIds = appIds;
+                return this;
+            }
+
+            /**
+             * CanaryModel.
+             */
+            public Builder canaryModel(Integer canaryModel) {
+                this.canaryModel = canaryModel;
                 return this;
             }
 
@@ -341,6 +397,14 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * Paths.
+             */
+            public Builder paths(String paths) {
+                this.paths = paths;
                 return this;
             }
 

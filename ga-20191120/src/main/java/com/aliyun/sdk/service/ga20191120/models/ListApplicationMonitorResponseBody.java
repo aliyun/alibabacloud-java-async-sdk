@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationMonitorResponseBody</p>
  */
 public class ListApplicationMonitorResponseBody extends TeaModel {
-    @NameInMap("ApplicationMonitors")
+    @com.aliyun.core.annotation.NameInMap("ApplicationMonitors")
     private java.util.List < ApplicationMonitors> applicationMonitors;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationMonitorResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
     } 
 
     public static class ApplicationMonitors extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("DetectEnable")
+        @com.aliyun.core.annotation.NameInMap("DetectEnable")
         private Boolean detectEnable;
 
-        @NameInMap("DetectThreshold")
+        @com.aliyun.core.annotation.NameInMap("DetectThreshold")
         private Integer detectThreshold;
 
-        @NameInMap("DetectTimes")
+        @com.aliyun.core.annotation.NameInMap("DetectTimes")
         private Integer detectTimes;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("OptionsJson")
+        @com.aliyun.core.annotation.NameInMap("OptionsJson")
         private String optionsJson;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private ApplicationMonitors(Builder builder) {

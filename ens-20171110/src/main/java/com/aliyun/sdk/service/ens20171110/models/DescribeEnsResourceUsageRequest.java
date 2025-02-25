@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsResourceUsageRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnsResourceUsageRequest</p>
  */
 public class DescribeEnsResourceUsageRequest extends Request {
-    @Query
-    @NameInMap("ExpiredEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredEndTime")
     private String expiredEndTime;
 
-    @Query
-    @NameInMap("ExpiredStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredStartTime")
     private String expiredStartTime;
 
     private DescribeEnsResourceUsageRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class DescribeEnsResourceUsageRequest extends Request {
         } 
 
         /**
-         * ExpiredEndTime.
+         * <p>The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-15T09:07:23Z</p>
          */
         public Builder expiredEndTime(String expiredEndTime) {
             this.putQueryParameter("ExpiredEndTime", expiredEndTime);
@@ -77,7 +85,10 @@ public class DescribeEnsResourceUsageRequest extends Request {
         }
 
         /**
-         * ExpiredStartTime.
+         * <p>The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-15T09:07:23Z</p>
          */
         public Builder expiredStartTime(String expiredStartTime) {
             this.putQueryParameter("ExpiredStartTime", expiredStartTime);

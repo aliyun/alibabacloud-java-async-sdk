@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDSEntityResponseBody} extends {@link TeaModel}
  *
  * <p>ListDSEntityResponseBody</p>
  */
 public class ListDSEntityResponseBody extends TeaModel {
-    @NameInMap("Entities")
+    @com.aliyun.core.annotation.NameInMap("Entities")
     private java.util.List < Entities> entities;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDSEntityResponseBody(Builder builder) {
@@ -131,35 +131,41 @@ public class ListDSEntityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDSEntityResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDSEntityResponseBody</p>
+     */
     public static class Entities extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private String createUserId;
 
-        @NameInMap("CreateUserName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserName")
         private String createUserName;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private Long entityId;
 
-        @NameInMap("EntityName")
+        @com.aliyun.core.annotation.NameInMap("EntityName")
         private String entityName;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ModifyUserId")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserId")
         private String modifyUserId;
 
-        @NameInMap("ModifyUserName")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserName")
         private String modifyUserName;
 
-        @NameInMap("SysEntityCode")
+        @com.aliyun.core.annotation.NameInMap("SysEntityCode")
         private String sysEntityCode;
 
         private Entities(Builder builder) {

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDingTalkRequest} extends {@link RequestModel}
  *
  * <p>DescribeDingTalkRequest</p>
  */
 public class DescribeDingTalkRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RuleActionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleActionName")
     private String ruleActionName;
 
     private DescribeDingTalkRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class DescribeDingTalkRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.Default value: 1.
+         * <p>The number of the page to return.Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -91,7 +99,10 @@ public class DescribeDingTalkRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.Default value: 20.
+         * <p>The number of entries to return on each page.Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +111,10 @@ public class DescribeDingTalkRequest extends Request {
         }
 
         /**
-         * The name of the notification.
+         * <p>The name of the notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vulnerability notification</p>
          */
         public Builder ruleActionName(String ruleActionName) {
             this.putQueryParameter("RuleActionName", ruleActionName);

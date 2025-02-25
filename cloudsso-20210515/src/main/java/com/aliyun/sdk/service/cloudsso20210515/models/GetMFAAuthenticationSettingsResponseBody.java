@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMFAAuthenticationSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>GetMFAAuthenticationSettingsResponseBody</p>
  */
 public class GetMFAAuthenticationSettingsResponseBody extends TeaModel {
-    @NameInMap("MFAAuthenticationAdvanceSettings")
+    @com.aliyun.core.annotation.NameInMap("MFAAuthenticationAdvanceSettings")
     private String MFAAuthenticationAdvanceSettings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMFAAuthenticationSettingsResponseBody(Builder builder) {
@@ -50,12 +50,15 @@ public class GetMFAAuthenticationSettingsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether MFA is enabled for all users. Valid values:
-         * <p>
+         * <p>Indicates whether MFA is enabled for all users. Valid values:</p>
+         * <ul>
+         * <li>Enabled: MFA is enabled for all users.</li>
+         * <li>Byuser: User-specific settings are applied.</li>
+         * <li>Disabled: MFA is disabled for all users.</li>
+         * </ul>
          * 
-         * *   Enabled: MFA is enabled for all users.
-         * *   Byuser: User-specific settings are applied.
-         * *   Disabled: MFA is disabled for all users.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder MFAAuthenticationAdvanceSettings(String MFAAuthenticationAdvanceSettings) {
             this.MFAAuthenticationAdvanceSettings = MFAAuthenticationAdvanceSettings;
@@ -63,7 +66,10 @@ public class GetMFAAuthenticationSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2BC00C5-76A2-5FFC-A340-927940A98377</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

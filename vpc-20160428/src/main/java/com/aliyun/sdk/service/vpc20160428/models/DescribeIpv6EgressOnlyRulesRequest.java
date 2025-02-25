@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpv6EgressOnlyRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpv6EgressOnlyRulesRequest</p>
  */
 public class DescribeIpv6EgressOnlyRulesRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("Ipv6EgressOnlyRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6EgressOnlyRuleId")
     private String ipv6EgressOnlyRuleId;
 
-    @Query
-    @NameInMap("Ipv6GatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipv6GatewayId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeIpv6EgressOnlyRulesRequest(Builder builder) {
@@ -211,7 +216,10 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance that is associated with the IPv6 address to which the egress-only rule is applied.
+         * <p>The ID of the instance that is associated with the IPv6 address to which the egress-only rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -220,10 +228,14 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * The type of the instance to which you want to apply the egress-only rule. Set the value to
-         * <p>
+         * <p>The type of the instance to which you want to apply the egress-only rule. Valid values:</p>
+         * <ul>
+         * <li>IPv6Address (default)</li>
+         * <li>IPv6Prefix</li>
+         * </ul>
          * 
-         * **Ipv6Address**, which specifies that the egress-only rule applies to an IPv6 address.
+         * <strong>example:</strong>
+         * <p>Ipv6Address</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -232,7 +244,10 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * The ID of the egress-only rule that you want to query.
+         * <p>The ID of the egress-only rule that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6py-bp1rr7fq1md8pbb3k****</p>
          */
         public Builder ipv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
             this.putQueryParameter("Ipv6EgressOnlyRuleId", ipv6EgressOnlyRuleId);
@@ -241,7 +256,11 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 gateway.
+         * <p>The ID of the IPv6 gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
          */
         public Builder ipv6GatewayId(String ipv6GatewayId) {
             this.putQueryParameter("Ipv6GatewayId", ipv6GatewayId);
@@ -250,7 +269,10 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rulename</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -277,7 +299,10 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -286,7 +311,10 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -295,7 +323,11 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

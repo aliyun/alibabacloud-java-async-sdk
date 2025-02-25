@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotLinksResponseBody} extends {@link TeaModel}
  *
  * <p>ListSnapshotLinksResponseBody</p>
  */
 public class ListSnapshotLinksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotLinks")
+    @com.aliyun.core.annotation.NameInMap("SnapshotLinks")
     private java.util.List < SnapshotLinks> snapshotLinks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSnapshotLinksResponseBody(Builder builder) {
@@ -131,8 +131,14 @@ public class ListSnapshotLinksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSnapshotLinksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotLinksResponseBody</p>
+     */
     public static class EcsList extends TeaModel {
-        @NameInMap("EcsId")
+        @com.aliyun.core.annotation.NameInMap("EcsId")
         private String ecsId;
 
         private EcsList(Builder builder) {
@@ -172,29 +178,35 @@ public class ListSnapshotLinksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotLinksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotLinksResponseBody</p>
+     */
     public static class SnapshotLinks extends TeaModel {
-        @NameInMap("EcsList")
+        @com.aliyun.core.annotation.NameInMap("EcsList")
         private java.util.List < EcsList> ecsList;
 
-        @NameInMap("FsId")
+        @com.aliyun.core.annotation.NameInMap("FsId")
         private String fsId;
 
-        @NameInMap("FsName")
+        @com.aliyun.core.annotation.NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("LinkId")
+        @com.aliyun.core.annotation.NameInMap("LinkId")
         private String linkId;
 
-        @NameInMap("SnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private Integer snapshotCount;
 
-        @NameInMap("SourceSize")
+        @com.aliyun.core.annotation.NameInMap("SourceSize")
         private Integer sourceSize;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private SnapshotLinks(Builder builder) {

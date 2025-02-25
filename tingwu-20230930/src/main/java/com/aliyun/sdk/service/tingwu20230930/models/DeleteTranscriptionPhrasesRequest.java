@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTranscriptionPhrasesRequest} extends {@link RequestModel}
  *
  * <p>DeleteTranscriptionPhrasesRequest</p>
  */
 public class DeleteTranscriptionPhrasesRequest extends Request {
-    @Path
-    @NameInMap("PhraseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("PhraseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phraseId;
 
     private DeleteTranscriptionPhrasesRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class DeleteTranscriptionPhrasesRequest extends Request {
         } 
 
         /**
-         * PhraseId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a93b91141c0f422fa114af203f8b****</p>
          */
         public Builder phraseId(String phraseId) {
             this.putPathParameter("PhraseId", phraseId);

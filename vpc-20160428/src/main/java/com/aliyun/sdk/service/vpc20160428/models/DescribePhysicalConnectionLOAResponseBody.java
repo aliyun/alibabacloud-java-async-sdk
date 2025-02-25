@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhysicalConnectionLOAResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhysicalConnectionLOAResponseBody</p>
  */
 public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
-    @NameInMap("PhysicalConnectionLOAType")
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionLOAType")
     private PhysicalConnectionLOAType physicalConnectionLOAType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePhysicalConnectionLOAResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The LOA information about the Express Connect circuit.
+         * <p>The LOA information about the Express Connect circuit.</p>
          */
         public Builder physicalConnectionLOAType(PhysicalConnectionLOAType physicalConnectionLOAType) {
             this.physicalConnectionLOAType = physicalConnectionLOAType;
@@ -58,7 +63,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>318BB676-0A2B-43A0-9AD8-F1D34E93750F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhysicalConnectionLOAResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionLOAResponseBody</p>
+     */
     public static class PMInfo extends TeaModel {
-        @NameInMap("PMCertificateNo")
+        @com.aliyun.core.annotation.NameInMap("PMCertificateNo")
         private String PMCertificateNo;
 
-        @NameInMap("PMCertificateType")
+        @com.aliyun.core.annotation.NameInMap("PMCertificateType")
         private String PMCertificateType;
 
-        @NameInMap("PMContactInfo")
+        @com.aliyun.core.annotation.NameInMap("PMContactInfo")
         private String PMContactInfo;
 
-        @NameInMap("PMGender")
+        @com.aliyun.core.annotation.NameInMap("PMGender")
         private String PMGender;
 
-        @NameInMap("PMName")
+        @com.aliyun.core.annotation.NameInMap("PMName")
         private String PMName;
 
         private PMInfo(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String PMName; 
 
             /**
-             * The identity document number of the construction worker.
+             * <p>The identity document number of the construction worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345671****</p>
              */
             public Builder PMCertificateNo(String PMCertificateNo) {
                 this.PMCertificateNo = PMCertificateNo;
@@ -154,12 +171,15 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The identity document type of the construction worker. Valid values:
-             * <p>
+             * <p>The identity document type of the construction worker. Valid values:</p>
+             * <ul>
+             * <li><strong>IDCard</strong></li>
+             * <li><strong>Passport</strong></li>
+             * <li><strong>Other</strong></li>
+             * </ul>
              * 
-             * *   **IDCard**
-             * *   **Passport**
-             * *   **Other**
+             * <strong>example:</strong>
+             * <p>Other</p>
              */
             public Builder PMCertificateType(String PMCertificateType) {
                 this.PMCertificateType = PMCertificateType;
@@ -167,7 +187,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the construction worker.
+             * <p>The phone number of the construction worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18910010****</p>
              */
             public Builder PMContactInfo(String PMContactInfo) {
                 this.PMContactInfo = PMContactInfo;
@@ -175,11 +198,14 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The gender of the construction worker. Valid values:
-             * <p>
+             * <p>The gender of the construction worker. Valid values:</p>
+             * <ul>
+             * <li><strong>Male</strong></li>
+             * <li><strong>Female</strong></li>
+             * </ul>
              * 
-             * *   **Male**
-             * *   **Female**
+             * <strong>example:</strong>
+             * <p>Male</p>
              */
             public Builder PMGender(String PMGender) {
                 this.PMGender = PMGender;
@@ -187,7 +213,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the construction worker.
+             * <p>The name of the construction worker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder PMName(String PMName) {
                 this.PMName = PMName;
@@ -201,9 +230,15 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionLOAResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionLOAResponseBody</p>
+     */
     public static class PhysicalConnectionLOATypePMInfo extends TeaModel {
-        @NameInMap("PMInfo")
-        private java.util.List < PMInfo> PMInfo;
+        @com.aliyun.core.annotation.NameInMap("PMInfo")
+        private java.util.List<PMInfo> PMInfo;
 
         private PhysicalConnectionLOATypePMInfo(Builder builder) {
             this.PMInfo = builder.PMInfo;
@@ -220,17 +255,17 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         /**
          * @return PMInfo
          */
-        public java.util.List < PMInfo> getPMInfo() {
+        public java.util.List<PMInfo> getPMInfo() {
             return this.PMInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PMInfo> PMInfo; 
+            private java.util.List<PMInfo> PMInfo; 
 
             /**
              * PMInfo.
              */
-            public Builder PMInfo(java.util.List < PMInfo> PMInfo) {
+            public Builder PMInfo(java.util.List<PMInfo> PMInfo) {
                 this.PMInfo = PMInfo;
                 return this;
             }
@@ -242,44 +277,50 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionLOAResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionLOAResponseBody</p>
+     */
     public static class PhysicalConnectionLOAType extends TeaModel {
-        @NameInMap("CompanyLocalizedName")
+        @com.aliyun.core.annotation.NameInMap("CompanyLocalizedName")
         private String companyLocalizedName;
 
-        @NameInMap("CompanyName")
+        @com.aliyun.core.annotation.NameInMap("CompanyName")
         private String companyName;
 
-        @NameInMap("ConstructionTime")
+        @com.aliyun.core.annotation.NameInMap("ConstructionTime")
         private String constructionTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineLabel")
+        @com.aliyun.core.annotation.NameInMap("LineLabel")
         private String lineLabel;
 
-        @NameInMap("LineSPContactInfo")
+        @com.aliyun.core.annotation.NameInMap("LineSPContactInfo")
         private String lineSPContactInfo;
 
-        @NameInMap("LineServiceProvider")
+        @com.aliyun.core.annotation.NameInMap("LineServiceProvider")
         private String lineServiceProvider;
 
-        @NameInMap("LineType")
+        @com.aliyun.core.annotation.NameInMap("LineType")
         private String lineType;
 
-        @NameInMap("LoaUrl")
+        @com.aliyun.core.annotation.NameInMap("LoaUrl")
         private String loaUrl;
 
-        @NameInMap("PMInfo")
+        @com.aliyun.core.annotation.NameInMap("PMInfo")
         private PhysicalConnectionLOATypePMInfo PMInfo;
 
-        @NameInMap("SI")
+        @com.aliyun.core.annotation.NameInMap("SI")
         private String si;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PhysicalConnectionLOAType(Builder builder) {
@@ -413,7 +454,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the construction company.
+             * <p>The name of the construction company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company</p>
              */
             public Builder companyLocalizedName(String companyLocalizedName) {
                 this.companyLocalizedName = companyLocalizedName;
@@ -421,7 +465,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organization that requires the Express Connect circuit.
+             * <p>The name of the organization that requires the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1234</p>
              */
             public Builder companyName(String companyName) {
                 this.companyName = companyName;
@@ -429,7 +476,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The time when construction starts.
+             * <p>The time when construction starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-26T08:00:00Z</p>
              */
             public Builder constructionTime(String constructionTime) {
                 this.constructionTime = constructionTime;
@@ -437,7 +487,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Express Connect circuit.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1ca4wca27****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -445,7 +498,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The circuit code provided by the connectivity provider.
+             * <p>The circuit code provided by the connectivity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa111</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -453,7 +509,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The label of the cable in the data center.
+             * <p>The label of the cable in the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbb222</p>
              */
             public Builder lineLabel(String lineLabel) {
                 this.lineLabel = lineLabel;
@@ -461,7 +520,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The contact information about line O\&M.
+             * <p>The contact information about line O&amp;M.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1388888****</p>
              */
             public Builder lineSPContactInfo(String lineSPContactInfo) {
                 this.lineSPContactInfo = lineSPContactInfo;
@@ -469,13 +531,16 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The ISP. Valid values:
-             * <p>
+             * <p>The ISP. Valid values:</p>
+             * <ul>
+             * <li><strong>China Telecom</strong></li>
+             * <li><strong>China Unicom</strong></li>
+             * <li><strong>China Mobile</strong></li>
+             * <li><strong>Other ISPs in China</strong></li>
+             * </ul>
              * 
-             * *   **China Telecom**
-             * *   **China Unicom**
-             * *   **China Mobile**
-             * *   **Other ISPs in China**
+             * <strong>example:</strong>
+             * <p>Other ISPs in China</p>
              */
             public Builder lineServiceProvider(String lineServiceProvider) {
                 this.lineServiceProvider = lineServiceProvider;
@@ -483,13 +548,16 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Express Connect circuit. Valid values:
-             * <p>
+             * <p>The type of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>MSTP</strong></li>
+             * <li><strong>MPLSVPN</strong></li>
+             * <li><strong>FIBRE</strong></li>
+             * <li><strong>Other</strong></li>
+             * </ul>
              * 
-             * *   **MSTP**
-             * *   **MPLSVPN**
-             * *   **FIBRE**
-             * *   **Other**
+             * <strong>example:</strong>
+             * <p>FIBRE</p>
              */
             public Builder lineType(String lineType) {
                 this.lineType = lineType;
@@ -497,7 +565,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL of the LOA file.
+             * <p>The download URL of the LOA file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://******</p>
              */
             public Builder loaUrl(String loaUrl) {
                 this.loaUrl = loaUrl;
@@ -505,7 +576,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the construction workers.
+             * <p>The information about the construction workers.</p>
              */
             public Builder PMInfo(PhysicalConnectionLOATypePMInfo PMInfo) {
                 this.PMInfo = PMInfo;
@@ -513,7 +584,10 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The on-site construction company.
+             * <p>The on-site construction company.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctcu</p>
              */
             public Builder si(String si) {
                 this.si = si;
@@ -521,16 +595,19 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the LOA. Valid values:
-             * <p>
+             * <p>The status of the LOA. Valid values:</p>
+             * <ul>
+             * <li><strong>Applying</strong>: The LOA is pending for approval.</li>
+             * <li><strong>Accept</strong>: The LOA is approved.</li>
+             * <li><strong>Available</strong>: The LOA is available.</li>
+             * <li><strong>Rejected</strong>: The LOA is rejected.</li>
+             * <li><strong>Completing</strong>: The Express Connect circuit is under construction.</li>
+             * <li><strong>Complete</strong>: The Express Connect circuit is installed.</li>
+             * <li><strong>Deleted</strong>: The LOA is deleted.</li>
+             * </ul>
              * 
-             * *   **Applying**: The LOA is pending for approval.
-             * *   **Accept**: The LOA is approved.
-             * *   **Available**: The LOA is available.
-             * *   **Rejected**: The LOA is rejected.
-             * *   **Completing**: The Express Connect circuit is under construction.
-             * *   **Complete**: The Express Connect circuit is installed.
-             * *   **Deleted**: The LOA is deleted.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

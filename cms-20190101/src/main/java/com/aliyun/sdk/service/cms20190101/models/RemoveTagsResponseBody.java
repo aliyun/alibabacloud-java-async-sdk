@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTagsResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveTagsResponseBody</p>
  */
 public class RemoveTagsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private Tag tag;
 
     private RemoveTagsResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class RemoveTagsResponseBody extends TeaModel {
         private Tag tag; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Illegal parameters.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,10 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>195390D2-69D0-4D9E-81AA-A7F5BC1B91EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,11 +122,14 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -125,7 +137,7 @@ public class RemoveTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The deleted tags.
+         * <p>The deleted tags.</p>
          */
         public Builder tag(Tag tag) {
             this.tag = tag;
@@ -138,8 +150,14 @@ public class RemoveTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveTagsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < String > tags;
 
         private Tag(Builder builder) {

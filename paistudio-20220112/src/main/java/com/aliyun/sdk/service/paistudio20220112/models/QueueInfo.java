@@ -1,52 +1,105 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueueInfo} extends {@link TeaModel}
  *
  * <p>QueueInfo</p>
  */
 public class QueueInfo extends TeaModel {
-    @NameInMap("GmtEnqueuedTime")
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("CodeType")
+    private String codeType;
+
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
+    private String gmtCreatedTime;
+
+    @com.aliyun.core.annotation.NameInMap("GmtDequeuedTime")
+    private String gmtDequeuedTime;
+
+    @com.aliyun.core.annotation.NameInMap("GmtEnqueuedTime")
     private String gmtEnqueuedTime;
 
-    @NameInMap("GmtPositionModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtPositionModifiedTime")
     private String gmtPositionModifiedTime;
 
-    @NameInMap("Position")
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.NameInMap("Position")
     private Long position;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @NameInMap("QueueStrategy")
+    @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
 
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @NameInMap("WorkloadId")
+    @com.aliyun.core.annotation.NameInMap("Reason")
+    private String reason;
+
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    private ResourceAmount resource;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    private String userName;
+
+    @com.aliyun.core.annotation.NameInMap("WorkloadId")
     private String workloadId;
 
-    @NameInMap("WorkloadType")
+    @com.aliyun.core.annotation.NameInMap("WorkloadName")
+    private String workloadName;
+
+    @com.aliyun.core.annotation.NameInMap("WorkloadStatus")
+    private String workloadStatus;
+
+    @com.aliyun.core.annotation.NameInMap("WorkloadType")
     private String workloadType;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private QueueInfo(Builder builder) {
+        this.code = builder.code;
+        this.codeType = builder.codeType;
+        this.gmtCreatedTime = builder.gmtCreatedTime;
+        this.gmtDequeuedTime = builder.gmtDequeuedTime;
         this.gmtEnqueuedTime = builder.gmtEnqueuedTime;
         this.gmtPositionModifiedTime = builder.gmtPositionModifiedTime;
+        this.name = builder.name;
         this.position = builder.position;
         this.priority = builder.priority;
         this.queueStrategy = builder.queueStrategy;
         this.quotaId = builder.quotaId;
+        this.reason = builder.reason;
+        this.resource = builder.resource;
+        this.status = builder.status;
+        this.userId = builder.userId;
+        this.userName = builder.userName;
         this.workloadId = builder.workloadId;
+        this.workloadName = builder.workloadName;
+        this.workloadStatus = builder.workloadStatus;
         this.workloadType = builder.workloadType;
         this.workspaceId = builder.workspaceId;
     }
@@ -57,6 +110,34 @@ public class QueueInfo extends TeaModel {
 
     public static QueueInfo create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return codeType
+     */
+    public String getCodeType() {
+        return this.codeType;
+    }
+
+    /**
+     * @return gmtCreatedTime
+     */
+    public String getGmtCreatedTime() {
+        return this.gmtCreatedTime;
+    }
+
+    /**
+     * @return gmtDequeuedTime
+     */
+    public String getGmtDequeuedTime() {
+        return this.gmtDequeuedTime;
     }
 
     /**
@@ -71,6 +152,13 @@ public class QueueInfo extends TeaModel {
      */
     public String getGmtPositionModifiedTime() {
         return this.gmtPositionModifiedTime;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -102,10 +190,59 @@ public class QueueInfo extends TeaModel {
     }
 
     /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * @return resource
+     */
+    public ResourceAmount getResource() {
+        return this.resource;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
+     * @return userName
+     */
+    public String getUserName() {
+        return this.userName;
+    }
+
+    /**
      * @return workloadId
      */
     public String getWorkloadId() {
         return this.workloadId;
+    }
+
+    /**
+     * @return workloadName
+     */
+    public String getWorkloadName() {
+        return this.workloadName;
+    }
+
+    /**
+     * @return workloadStatus
+     */
+    public String getWorkloadStatus() {
+        return this.workloadStatus;
     }
 
     /**
@@ -123,15 +260,59 @@ public class QueueInfo extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String codeType; 
+        private String gmtCreatedTime; 
+        private String gmtDequeuedTime; 
         private String gmtEnqueuedTime; 
         private String gmtPositionModifiedTime; 
+        private String name; 
         private Long position; 
         private Long priority; 
         private String queueStrategy; 
         private String quotaId; 
+        private String reason; 
+        private ResourceAmount resource; 
+        private String status; 
+        private String userId; 
+        private String userName; 
         private String workloadId; 
+        private String workloadName; 
+        private String workloadStatus; 
         private String workloadType; 
         private String workspaceId; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * CodeType.
+         */
+        public Builder codeType(String codeType) {
+            this.codeType = codeType;
+            return this;
+        }
+
+        /**
+         * GmtCreatedTime.
+         */
+        public Builder gmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
+            return this;
+        }
+
+        /**
+         * GmtDequeuedTime.
+         */
+        public Builder gmtDequeuedTime(String gmtDequeuedTime) {
+            this.gmtDequeuedTime = gmtDequeuedTime;
+            return this;
+        }
 
         /**
          * GmtEnqueuedTime.
@@ -146,6 +327,14 @@ public class QueueInfo extends TeaModel {
          */
         public Builder gmtPositionModifiedTime(String gmtPositionModifiedTime) {
             this.gmtPositionModifiedTime = gmtPositionModifiedTime;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 
@@ -182,10 +371,66 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+
+        /**
+         * Resource.
+         */
+        public Builder resource(ResourceAmount resource) {
+            this.resource = resource;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+
+        /**
+         * UserName.
+         */
+        public Builder userName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+
+        /**
          * WorkloadId.
          */
         public Builder workloadId(String workloadId) {
             this.workloadId = workloadId;
+            return this;
+        }
+
+        /**
+         * WorkloadName.
+         */
+        public Builder workloadName(String workloadName) {
+            this.workloadName = workloadName;
+            return this;
+        }
+
+        /**
+         * WorkloadStatus.
+         */
+        public Builder workloadStatus(String workloadStatus) {
+            this.workloadStatus = workloadStatus;
             return this;
         }
 

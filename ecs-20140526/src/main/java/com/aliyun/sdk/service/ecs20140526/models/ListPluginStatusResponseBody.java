@@ -1,34 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPluginStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListPluginStatusResponseBody</p>
  */
 public class ListPluginStatusResponseBody extends TeaModel {
-    @NameInMap("InstancePluginStatusSet")
+    @com.aliyun.core.annotation.NameInMap("InstancePluginStatusSet")
     private InstancePluginStatusSet instancePluginStatusSet;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListPluginStatusResponseBody(Builder builder) {
         this.instancePluginStatusSet = builder.instancePluginStatusSet;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +57,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
      */
     public InstancePluginStatusSet getInstancePluginStatusSet() {
         return this.instancePluginStatusSet;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,13 +96,14 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private InstancePluginStatusSet instancePluginStatusSet; 
+        private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The states of the Cloud Assistant plug-ins on the ECS instances.
+         * <p>The states of Cloud Assistant plug-ins on the instances.</p>
          */
         public Builder instancePluginStatusSet(InstancePluginStatusSet instancePluginStatusSet) {
             this.instancePluginStatusSet = instancePluginStatusSet;
@@ -94,7 +111,21 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +133,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +144,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +155,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +171,26 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPluginStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPluginStatusResponseBody</p>
+     */
     public static class PluginStatus extends TeaModel {
-        @NameInMap("FirstHeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("FirstHeartbeatTime")
         private String firstHeartbeatTime;
 
-        @NameInMap("LastHeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("LastHeartbeatTime")
         private String lastHeartbeatTime;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginStatus")
+        @com.aliyun.core.annotation.NameInMap("PluginStatus")
         private String pluginStatus;
 
-        @NameInMap("PluginVersion")
+        @com.aliyun.core.annotation.NameInMap("PluginVersion")
         private String pluginVersion;
 
         private PluginStatus(Builder builder) {
@@ -206,7 +252,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private String pluginVersion; 
 
             /**
-             * The first time when Cloud Assistant reported the state of the plug-in.
+             * <p>The first time when Cloud Assistant reported the state of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-19T09:15:46Z</p>
              */
             public Builder firstHeartbeatTime(String firstHeartbeatTime) {
                 this.firstHeartbeatTime = firstHeartbeatTime;
@@ -214,7 +263,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when Cloud Assistant reported the state of the plug-in.
+             * <p>The last time when Cloud Assistant reported the state of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-19T09:15:46Z</p>
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -222,7 +274,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -230,16 +285,19 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Cloud Assistant plug-in. Valid values:
-             * <p>
+             * <p>The state of the Cloud Assistant plug-in. Valid values:</p>
+             * <ul>
+             * <li>NotInstalled: The plug-in is not installed.</li>
+             * <li>Installed: The one-time plug-in is installed.</li>
+             * <li>Running: The long-running plug-in is running.</li>
+             * <li>Stopped: The long-running plug-in is not running.</li>
+             * <li>Crashed: The plug-in is abnormal.</li>
+             * <li>Removed: The plug-in is uninstalled.</li>
+             * <li>Unknown: The state of the plug-in is unknown.</li>
+             * </ul>
              * 
-             * *   NotInstalled
-             * *   Installed
-             * *   Running
-             * *   Stopped
-             * *   Crashed
-             * *   Removed
-             * *   Unknown
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder pluginStatus(String pluginStatus) {
                 this.pluginStatus = pluginStatus;
@@ -247,7 +305,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * <p>The version of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1</p>
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -261,9 +322,15 @@ public class ListPluginStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPluginStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPluginStatusResponseBody</p>
+     */
     public static class PluginStatusSet extends TeaModel {
-        @NameInMap("PluginStatus")
-        private java.util.List < PluginStatus> pluginStatus;
+        @com.aliyun.core.annotation.NameInMap("PluginStatus")
+        private java.util.List<PluginStatus> pluginStatus;
 
         private PluginStatusSet(Builder builder) {
             this.pluginStatus = builder.pluginStatus;
@@ -280,26 +347,29 @@ public class ListPluginStatusResponseBody extends TeaModel {
         /**
          * @return pluginStatus
          */
-        public java.util.List < PluginStatus> getPluginStatus() {
+        public java.util.List<PluginStatus> getPluginStatus() {
             return this.pluginStatus;
         }
 
         public static final class Builder {
-            private java.util.List < PluginStatus> pluginStatus; 
+            private java.util.List<PluginStatus> pluginStatus; 
 
             /**
-             * The state of the Cloud Assistant plug-in. Valid values:
-             * <p>
+             * <p>The state of the Cloud Assistant plug-in. Valid values:</p>
+             * <ul>
+             * <li>NotInstalled: The plug-in is not installed.</li>
+             * <li>Installed: The one-time plug-in is installed.</li>
+             * <li>Running: The long-running plug-in is running.</li>
+             * <li>Stopped: The long-running plug-in is not running.</li>
+             * <li>Crashed: The plug-in is abnormal.</li>
+             * <li>Removed: The plug-in is uninstalled.</li>
+             * <li>Unknown: The state of the plug-in is unknown.</li>
+             * </ul>
              * 
-             * *   NotInstalled
-             * *   Installed
-             * *   Running
-             * *   Stopped
-             * *   Crashed
-             * *   Removed
-             * *   Unknown
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
-            public Builder pluginStatus(java.util.List < PluginStatus> pluginStatus) {
+            public Builder pluginStatus(java.util.List<PluginStatus> pluginStatus) {
                 this.pluginStatus = pluginStatus;
                 return this;
             }
@@ -311,11 +381,17 @@ public class ListPluginStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPluginStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPluginStatusResponseBody</p>
+     */
     public static class InstancePluginStatus extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PluginStatusSet")
+        @com.aliyun.core.annotation.NameInMap("PluginStatusSet")
         private PluginStatusSet pluginStatusSet;
 
         private InstancePluginStatus(Builder builder) {
@@ -350,7 +426,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
             private PluginStatusSet pluginStatusSet; 
 
             /**
-             * The instance ID.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -358,7 +437,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The states of the Cloud Assistant plug-ins.
+             * <p>The queried Cloud Assistant plug-ins.</p>
              */
             public Builder pluginStatusSet(PluginStatusSet pluginStatusSet) {
                 this.pluginStatusSet = pluginStatusSet;
@@ -372,9 +451,15 @@ public class ListPluginStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPluginStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPluginStatusResponseBody</p>
+     */
     public static class InstancePluginStatusSet extends TeaModel {
-        @NameInMap("InstancePluginStatus")
-        private java.util.List < InstancePluginStatus> instancePluginStatus;
+        @com.aliyun.core.annotation.NameInMap("InstancePluginStatus")
+        private java.util.List<InstancePluginStatus> instancePluginStatus;
 
         private InstancePluginStatusSet(Builder builder) {
             this.instancePluginStatus = builder.instancePluginStatus;
@@ -391,17 +476,17 @@ public class ListPluginStatusResponseBody extends TeaModel {
         /**
          * @return instancePluginStatus
          */
-        public java.util.List < InstancePluginStatus> getInstancePluginStatus() {
+        public java.util.List<InstancePluginStatus> getInstancePluginStatus() {
             return this.instancePluginStatus;
         }
 
         public static final class Builder {
-            private java.util.List < InstancePluginStatus> instancePluginStatus; 
+            private java.util.List<InstancePluginStatus> instancePluginStatus; 
 
             /**
              * InstancePluginStatus.
              */
-            public Builder instancePluginStatus(java.util.List < InstancePluginStatus> instancePluginStatus) {
+            public Builder instancePluginStatus(java.util.List<InstancePluginStatus> instancePluginStatus) {
                 this.instancePluginStatus = instancePluginStatus;
                 return this;
             }

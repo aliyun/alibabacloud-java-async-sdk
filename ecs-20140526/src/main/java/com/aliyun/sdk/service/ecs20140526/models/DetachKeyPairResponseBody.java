@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>DetachKeyPairResponseBody</p>
  */
 public class DetachKeyPairResponseBody extends TeaModel {
-    @NameInMap("FailCount")
+    @com.aliyun.core.annotation.NameInMap("FailCount")
     private String failCount;
 
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DetachKeyPairResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The number of instances from which the SSH key pair failed to be unbound.
+         * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failCount(String failCount) {
             this.failCount = failCount;
@@ -94,7 +102,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the key pair.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -102,7 +113,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The result set of the unbind operation.
+         * <p>The result set of the unbind operation.</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -118,7 +132,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances from which you want to unbind the SSH key pair.
+         * <p>The total number of instances from which you want to unbind the SSH key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachKeyPairResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
         private Result(Builder builder) {
@@ -194,7 +217,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The operation status code that is returned. 200 indicates that the operation is successful.
+             * <p>The operation status code that is returned. 200 indicates that the operation is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -202,7 +228,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1d6tsvznfghy7y****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +239,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the operation. For example, if the value of `Code` is 200, the value of `Message` is `successful`.
+             * <p>The result of the operation. For example, if the value of <code>Code</code> is 200, the value of <code>Message</code> is <code>successful</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -218,7 +250,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is successful.
+             * <p>Indicates whether the operation is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -232,9 +267,15 @@ public class DetachKeyPairResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachKeyPairResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
         private Results(Builder builder) {
             this.result = builder.result;
@@ -251,17 +292,17 @@ public class DetachKeyPairResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
 
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

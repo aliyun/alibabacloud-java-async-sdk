@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableHoneypotResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvailableHoneypotResponseBody</p>
  */
 public class ListAvailableHoneypotResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAvailableHoneypotResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -103,14 +108,17 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +126,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The number of images that are used for the honeypot.
+         * <p>The number of images that are used for the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -126,15 +137,18 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the information about the images that are used for the honeypot.
+         * <p>An array consisting of the information about the images that are used for the honeypot.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +156,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +167,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C24D883-984D-52FD-BB66-5F89F86E4837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +178,14 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,32 +198,38 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvailableHoneypotResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableHoneypotResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HoneypotImageDisplayName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotImageDisplayName")
         private String honeypotImageDisplayName;
 
-        @NameInMap("HoneypotImageId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotImageId")
         private String honeypotImageId;
 
-        @NameInMap("HoneypotImageName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotImageName")
         private String honeypotImageName;
 
-        @NameInMap("HoneypotImageType")
+        @com.aliyun.core.annotation.NameInMap("HoneypotImageType")
         private String honeypotImageType;
 
-        @NameInMap("HoneypotImageVersion")
+        @com.aliyun.core.annotation.NameInMap("HoneypotImageVersion")
         private String honeypotImageVersion;
 
-        @NameInMap("Multiports")
+        @com.aliyun.core.annotation.NameInMap("Multiports")
         private String multiports;
 
-        @NameInMap("Proto")
+        @com.aliyun.core.annotation.NameInMap("Proto")
         private String proto;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private String servicePort;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
         private Data(Builder builder) {
@@ -298,7 +327,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             private String template; 
 
             /**
-             * The display name of the image.
+             * <p>The display name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RuoYi</p>
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -306,7 +338,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha256:007095d6de9c7a343e9fc1f74a7efc9c5de9d5454789d2fa505a1b3fc62****</p>
              */
             public Builder honeypotImageId(String honeypotImageId) {
                 this.honeypotImageId = honeypotImageId;
@@ -314,7 +349,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image that is used for the honeypot.
+             * <p>The name of the image that is used for the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruoyi</p>
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -322,7 +360,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image.
+             * <p>The type of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Web</p>
              */
             public Builder honeypotImageType(String honeypotImageType) {
                 this.honeypotImageType = honeypotImageType;
@@ -330,7 +371,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.2</p>
              */
             public Builder honeypotImageVersion(String honeypotImageVersion) {
                 this.honeypotImageVersion = honeypotImageVersion;
@@ -338,15 +382,18 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is supported by the honeypot. The value is in the JSON format. Valid values:
-             * <p>
+             * <p>The port that is supported by the honeypot. The value is in the JSON format. Valid values:</p>
+             * <ul>
+             * <li><strong>log_type</strong>: the log type</li>
+             * <li><strong>proto</strong>: the supported protocol</li>
+             * <li><strong>description</strong>: the description</li>
+             * <li><strong>ports</strong>: the supported ports</li>
+             * <li><strong>port_str</strong>: the supported port number of the string type</li>
+             * <li><strong>type</strong>: the type</li>
+             * </ul>
              * 
-             * *   **log_type**: the log type
-             * *   **proto**: the supported protocol
-             * *   **description**: the description
-             * *   **ports**: the supported ports
-             * *   **port_str**: the supported port number of the string type
-             * *   **type**: the type
+             * <strong>example:</strong>
+             * <p>[{&quot;log_type&quot;:&quot;web&quot;,&quot;proto&quot;:&quot;tcp&quot;,&quot;description&quot;:&quot;webServerPort&quot;,&quot;ports&quot;:[80.0],&quot;port_str&quot;:&quot;80&quot;,&quot;type&quot;:&quot;web&quot;}]</p>
              */
             public Builder multiports(String multiports) {
                 this.multiports = multiports;
@@ -354,7 +401,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is supported by the honeypot.
+             * <p>The protocol that is supported by the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -362,7 +412,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The service port of the honeypot.
+             * <p>The service port of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27017.0</p>
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -370,7 +423,10 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration template of the honeypot.
+             * <p>The configuration template of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder template(String template) {
                 this.template = template;

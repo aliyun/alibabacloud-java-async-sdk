@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
-    @NameInMap("DbsInstance")
+    @com.aliyun.core.annotation.NameInMap("DbsInstance")
     private String dbsInstance;
 
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @NameInMap("PreferredNextBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredNextBackupTime")
     private String preferredNextBackupTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
@@ -122,7 +122,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The following parameters are no longer used. Ignore the parameters.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -130,7 +130,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of the backup data. Unit: days.
+         * <p>The retention period of the backup data. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -138,7 +141,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * DbsInstance.
+         * <p>Indicates whether the backup-as-a-service feature is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The backup-as-a-service feature is enabled for the instance.</li>
+         * <li><strong>0</strong>: The backup-as-a-service feature is disabled for the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dbsInstance(String dbsInstance) {
             this.dbsInstance = dbsInstance;
@@ -146,11 +156,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether incremental data backup is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether incremental data backup is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Incremental data backup is enabled.</li>
+         * <li><strong>0</strong>: Incremental data backup is disabled.</li>
+         * </ul>
          * 
-         * *   **1**: Incremental data backup is enabled.
-         * *   **0**: Incremental data backup is disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -158,16 +171,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The backup cycle. Valid values:
-         * <p>
+         * <p>The backup cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
+         * <strong>example:</strong>
+         * <p>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -175,7 +191,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time range during which the backup was created. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05:00Z-06:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -183,7 +202,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The next backup time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The next backup time. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-14T05:28Z</p>
          */
         public Builder preferredNextBackupTime(String preferredNextBackupTime) {
             this.preferredNextBackupTime = preferredNextBackupTime;
@@ -191,7 +213,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90B82DB7-FB28-4CC2-ADBF-1F8659F3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,26 +229,32 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
     public static class AccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
         private String authAction;
 
-        @NameInMap("AuthPrincipalDisplayName")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
         private String authPrincipalDisplayName;
 
-        @NameInMap("AuthPrincipalOwnerId")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
         private String authPrincipalOwnerId;
 
-        @NameInMap("AuthPrincipalType")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
         private String authPrincipalType;
 
-        @NameInMap("EncodedDiagnosticMessage")
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
         private String encodedDiagnosticMessage;
 
-        @NameInMap("NoPermissionType")
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
         private String noPermissionType;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private AccessDeniedDetail(Builder builder) {
@@ -303,7 +334,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * AuthAction.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -311,7 +345,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -319,7 +356,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -327,7 +367,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -335,7 +378,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -343,7 +389,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -351,7 +400,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

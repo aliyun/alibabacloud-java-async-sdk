@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackResourceRequest} extends {@link RequestModel}
  *
  * <p>GetStackResourceRequest</p>
  */
 public class GetStackResourceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("LogicalResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logicalResourceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceAttributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceAttributes")
     private java.util.List < String > resourceAttributes;
 
-    @Query
-    @NameInMap("ShowResourceAttributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowResourceAttributes")
     private Boolean showResourceAttributes;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
     private GetStackResourceRequest(Builder builder) {
@@ -127,11 +127,14 @@ public class GetStackResourceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the resource properties. Valid values:
-         * <p>
+         * <p>Specifies whether to query the resource properties. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,10 +143,14 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The name of resource property N that you want to query.
-         * <p>
+         * <p>The name of resource property N that you want to query.</p>
+         * <blockquote>
+         * <p> Maximum value of N: 20.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Maximum value of N: 20.
+         * <strong>example:</strong>
+         * <p>WebServer</p>
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -152,7 +159,11 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The logical ID of the resource defined in the template.
+         * <p>The logical ID of the resource defined in the template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,23 +172,23 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The status of the resource. Valid values:
-         * <p>
-         * 
-         * *   CREATE_COMPLETE
-         * *   CREATE_FAILED
-         * *   CREATE_IN_PROGRESS
-         * *   UPDATE_IN_PROGRESS
-         * *   UPDATE_FAILED
-         * *   UPDATE_COMPLETE
-         * *   DELETE_IN_PROGRESS
-         * *   DELETE_FAILED
-         * *   CHECK_IN_PROGRESS
-         * *   CHECK_FAILED
-         * *   CHECK_COMPLETE
-         * *   IMPORT_IN_PROGRESS
-         * *   IMPORT_FAILED
-         * *   IMPORT_COMPLETE
+         * <p>The status of the resource. Valid values:</p>
+         * <ul>
+         * <li>CREATE_COMPLETE</li>
+         * <li>CREATE_FAILED</li>
+         * <li>CREATE_IN_PROGRESS</li>
+         * <li>UPDATE_IN_PROGRESS</li>
+         * <li>UPDATE_FAILED</li>
+         * <li>UPDATE_COMPLETE</li>
+         * <li>DELETE_IN_PROGRESS</li>
+         * <li>DELETE_FAILED</li>
+         * <li>CHECK_IN_PROGRESS</li>
+         * <li>CHECK_FAILED</li>
+         * <li>CHECK_COMPLETE</li>
+         * <li>IMPORT_IN_PROGRESS</li>
+         * <li>IMPORT_FAILED</li>
+         * <li>IMPORT_COMPLETE</li>
+         * </ul>
          */
         public Builder resourceAttributes(java.util.List < String > resourceAttributes) {
             this.putQueryParameter("ResourceAttributes", resourceAttributes);
@@ -186,7 +197,10 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The name of resource property N that you want to query.
+         * <p>The name of resource property N that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showResourceAttributes(Boolean showResourceAttributes) {
             this.putQueryParameter("ShowResourceAttributes", showResourceAttributes);
@@ -195,7 +209,11 @@ public class GetStackResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the stack belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The ID of the region to which the stack belongs. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);

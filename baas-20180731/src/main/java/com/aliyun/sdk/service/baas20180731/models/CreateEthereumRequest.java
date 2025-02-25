@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEthereumRequest</p>
  */
 public class CreateEthereumRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Consensus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Consensus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consensus;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Difficulty")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Difficulty")
     private String difficulty;
 
-    @Body
-    @NameInMap("Gas")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Gas")
     private String gas;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NetworkId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
-    @Body
-    @NameInMap("Node")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Node")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Node> node;
 
-    @Body
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
     private CreateEthereumRequest(Builder builder) {
@@ -257,7 +256,7 @@ public class CreateEthereumRequest extends Request {
     } 
 
     public static class Node extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Node(Builder builder) {

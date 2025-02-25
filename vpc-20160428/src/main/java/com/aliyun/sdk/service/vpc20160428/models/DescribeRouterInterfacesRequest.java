@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouterInterfacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeRouterInterfacesRequest</p>
  */
 public class DescribeRouterInterfacesRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("IncludeReservationData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeReservationData")
     private Boolean includeReservationData;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private DescribeRouterInterfacesRequest(Builder builder) {
         super(builder);
@@ -84,7 +89,7 @@ public class DescribeRouterInterfacesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -147,12 +152,12 @@ public class DescribeRouterInterfacesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<DescribeRouterInterfacesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Boolean includeReservationData; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -161,7 +166,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -182,20 +187,23 @@ public class DescribeRouterInterfacesRequest extends Request {
         } 
 
         /**
-         * The filter information.
+         * <p>The filter information.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * Specifies whether renewal data is included. Valid values:
-         * <p>
+         * <p>Specifies whether renewal data is included. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -213,7 +221,10 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -222,7 +233,10 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,10 +245,12 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * The region ID of the router interface.
-         * <p>
+         * <p>The region ID of the router interface.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,10 +259,11 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * Resource Group ID.
-         * <p>
+         * <p>Resource Group ID.</p>
+         * <p>For more information about resource groups, please refer to <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group?</a></p>
          * 
-         * For more information about resource groups, please refer to [What is a Resource Group?](~~94475~~)
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -273,9 +290,9 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -288,12 +305,18 @@ public class DescribeRouterInterfacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouterInterfacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeRouterInterfacesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
-        private java.util.List < String > value;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -318,30 +341,34 @@ public class DescribeRouterInterfacesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
-             * The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
-             * <p>
+             * <p>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</p>
+             * <ul>
+             * <li><strong>RouterInterfaceId</strong>: the ID of the router interface.</li>
+             * <li><strong>RouterId</strong>: the ID of the router.</li>
+             * <li><strong>RouterType</strong>: the router type. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</li>
+             * <li><strong>RouterInterfaceOwnerId</strong>: the ID of the Alibaba Cloud account to which the router interface belongs.</li>
+             * <li><strong>OppositeInterfaceId</strong>: the ID of the peer router interface.</li>
+             * <li><strong>OppositeRouterType</strong>: the type of the peer router interface. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</li>
+             * <li><strong>OppositeRouterId</strong>: the ID of the peer router.</li>
+             * <li><strong>OppositeInterfaceOwnerId</strong>: the ID of the Alibaba Cloud account to which the peer router interface belongs.</li>
+             * <li><strong>Status</strong>: the status of the router interface.</li>
+             * <li><strong>Name</strong>: the name of the router interface.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.</p>
+             * </blockquote>
              * 
-             * *   **RouterInterfaceId**: the ID of the router interface.
-             * *   **RouterId**: the ID of the router.
-             * *   **RouterType**: the router type. Valid values: **VRouter** and **VBR**.
-             * *   **RouterInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the router interface belongs.
-             * *   **OppositeInterfaceId**: the ID of the peer router interface.
-             * *   **OppositeRouterType**: the type of the peer router interface. Valid values: **VRouter** and **VBR**.
-             * *   **OppositeRouterId**: the ID of the peer router.
-             * *   **OppositeInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the peer router interface belongs.
-             * *   **Status**: the status of the router interface.
-             * *   **Name**: the name of the router interface.
-             * 
-             * >  The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.
+             * <strong>example:</strong>
+             * <p>Filter.1.Status</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -349,9 +376,12 @@ public class DescribeRouterInterfacesRequest extends Request {
             }
 
             /**
-             * Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.
+             * <p>Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Filter.1.Active 1</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }
@@ -363,11 +393,17 @@ public class DescribeRouterInterfacesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouterInterfacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeRouterInterfacesRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -402,10 +438,11 @@ public class DescribeRouterInterfacesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.
-             * <p>
+             * <p>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</p>
+             * <p>A tag key can support up to 128 characters, cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, and cannot contain &quot;http://&quot; or &quot;https://&quot;.</p>
              * 
-             * A tag key can support up to 128 characters, cannot start with \"aliyun\" or \"acs:\", and cannot contain \"http://\" or \"https://\".
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -413,10 +450,11 @@ public class DescribeRouterInterfacesRequest extends Request {
             }
 
             /**
-             * The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.
-             * <p>
+             * <p>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</p>
+             * <p>A maximum of 128 characters are supported, it cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, and it cannot contain &quot;http://&quot; or &quot;https://&quot;.</p>
              * 
-             * A maximum of 128 characters are supported, it cannot start with \"aliyun\" or \"acs:\", and it cannot contain \"http://\" or \"https://\".
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessControlListsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessControlListsResponseBody</p>
  */
 public class DescribeAccessControlListsResponseBody extends TeaModel {
-    @NameInMap("Acls")
+    @com.aliyun.core.annotation.NameInMap("Acls")
     private Acls acls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessControlListsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Acls.
+         * <p>The ACLs.</p>
          */
         public Builder acls(Acls acls) {
             this.acls = acls;
@@ -94,7 +99,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessControlListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessControlListsResponseBody</p>
+     */
     public static class Acl extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclName")
+        @com.aliyun.core.annotation.NameInMap("AclName")
         private String aclName;
 
-        @NameInMap("AddressIPVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
         private Acl(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             private String addressIPVersion; 
 
             /**
-             * AclId.
+             * <p>The ID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-3nsohdozz0ru8fi5onwz1</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -190,7 +216,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * <p>The name of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testAcl</p>
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -198,7 +227,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressIPVersion.
+             * <p>访问控制策略组的IP版本。</p>
+             * <ul>
+             * <li><strong>IPv4</strong>。</li>
+             * <li><strong>IPv6</strong>。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -212,9 +248,15 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessControlListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessControlListsResponseBody</p>
+     */
     public static class Acls extends TeaModel {
-        @NameInMap("Acl")
-        private java.util.List < Acl> acl;
+        @com.aliyun.core.annotation.NameInMap("Acl")
+        private java.util.List<Acl> acl;
 
         private Acls(Builder builder) {
             this.acl = builder.acl;
@@ -231,17 +273,17 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         /**
          * @return acl
          */
-        public java.util.List < Acl> getAcl() {
+        public java.util.List<Acl> getAcl() {
             return this.acl;
         }
 
         public static final class Builder {
-            private java.util.List < Acl> acl; 
+            private java.util.List<Acl> acl; 
 
             /**
              * Acl.
              */
-            public Builder acl(java.util.List < Acl> acl) {
+            public Builder acl(java.util.List<Acl> acl) {
                 this.acl = acl;
                 return this;
             }

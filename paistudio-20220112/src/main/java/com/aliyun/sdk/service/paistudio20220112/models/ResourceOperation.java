@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResourceOperation} extends {@link TeaModel}
  *
  * <p>ResourceOperation</p>
  */
 public class ResourceOperation extends TeaModel {
-    @NameInMap("CreatorId")
+    @com.aliyun.core.annotation.NameInMap("CreatorId")
     private String creatorId;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtEndTime")
+    @com.aliyun.core.annotation.NameInMap("GmtEndTime")
     private String gmtEndTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("GmtStartTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStartTime")
     private String gmtStartTime;
 
-    @NameInMap("ObjectId")
+    @com.aliyun.core.annotation.NameInMap("ObjectId")
     private String objectId;
 
-    @NameInMap("ObjectType")
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
     private String objectType;
 
-    @NameInMap("OperationDescription")
+    @com.aliyun.core.annotation.NameInMap("OperationDescription")
     private String operationDescription;
 
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("OperationSpecJson")
+    @com.aliyun.core.annotation.NameInMap("OperationSpecJson")
     private String operationSpecJson;
 
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ResourceOperation(Builder builder) {

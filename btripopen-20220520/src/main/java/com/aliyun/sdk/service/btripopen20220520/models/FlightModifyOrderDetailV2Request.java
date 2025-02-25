@@ -1,35 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyOrderDetailV2Request} extends {@link RequestModel}
  *
  * <p>FlightModifyOrderDetailV2Request</p>
  */
 public class FlightModifyOrderDetailV2Request extends Request {
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("modify_apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modify_apply_id")
     private String modifyApplyId;
 
-    @Query
-    @NameInMap("need_query_service_fee")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("need_query_service_fee")
     private Boolean needQueryServiceFee;
 
-    @Query
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private String orderId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_modify_apply_id")
+    private String outModifyApplyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
+    private String outOrderId;
+
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightModifyOrderDetailV2Request(Builder builder) {
@@ -38,6 +51,8 @@ public class FlightModifyOrderDetailV2Request extends Request {
         this.modifyApplyId = builder.modifyApplyId;
         this.needQueryServiceFee = builder.needQueryServiceFee;
         this.orderId = builder.orderId;
+        this.outModifyApplyId = builder.outModifyApplyId;
+        this.outOrderId = builder.outOrderId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -83,6 +98,20 @@ public class FlightModifyOrderDetailV2Request extends Request {
     }
 
     /**
+     * @return outModifyApplyId
+     */
+    public String getOutModifyApplyId() {
+        return this.outModifyApplyId;
+    }
+
+    /**
+     * @return outOrderId
+     */
+    public String getOutOrderId() {
+        return this.outOrderId;
+    }
+
+    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
@@ -94,6 +123,8 @@ public class FlightModifyOrderDetailV2Request extends Request {
         private String modifyApplyId; 
         private Boolean needQueryServiceFee; 
         private String orderId; 
+        private String outModifyApplyId; 
+        private String outOrderId; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -106,6 +137,8 @@ public class FlightModifyOrderDetailV2Request extends Request {
             this.modifyApplyId = request.modifyApplyId;
             this.needQueryServiceFee = request.needQueryServiceFee;
             this.orderId = request.orderId;
+            this.outModifyApplyId = request.outModifyApplyId;
+            this.outOrderId = request.outOrderId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -142,6 +175,24 @@ public class FlightModifyOrderDetailV2Request extends Request {
         public Builder orderId(String orderId) {
             this.putQueryParameter("order_id", orderId);
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * out_modify_apply_id.
+         */
+        public Builder outModifyApplyId(String outModifyApplyId) {
+            this.putQueryParameter("out_modify_apply_id", outModifyApplyId);
+            this.outModifyApplyId = outModifyApplyId;
+            return this;
+        }
+
+        /**
+         * out_order_id.
+         */
+        public Builder outOrderId(String outOrderId) {
+            this.putQueryParameter("out_order_id", outOrderId);
+            this.outOrderId = outOrderId;
             return this;
         }
 

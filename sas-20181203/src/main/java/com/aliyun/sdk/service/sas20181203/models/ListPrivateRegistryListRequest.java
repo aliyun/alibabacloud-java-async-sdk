@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateRegistryListRequest} extends {@link RequestModel}
  *
  * <p>ListPrivateRegistryListRequest</p>
  */
 public class ListPrivateRegistryListRequest extends Request {
-    @Query
-    @NameInMap("RegistryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistryType")
     private String registryType;
 
     private ListPrivateRegistryListRequest(Builder builder) {
@@ -54,13 +59,16 @@ public class ListPrivateRegistryListRequest extends Request {
         } 
 
         /**
-         * The type of the image repository. Valid values:
-         * <p>
+         * <p>The type of the image repository. Valid values:</p>
+         * <ul>
+         * <li><strong>acr</strong>: Container Registry</li>
+         * <li><strong>harbor</strong>: Harbor</li>
+         * <li><strong>quay</strong>: Quay</li>
+         * <li><strong>CI/CD</strong>: Jenkins</li>
+         * </ul>
          * 
-         * *   **acr**: Container Registry
-         * *   **harbor**: Harbor
-         * *   **quay**: Quay
-         * *   **CI/CD**: Jenkins
+         * <strong>example:</strong>
+         * <p>harbor</p>
          */
         public Builder registryType(String registryType) {
             this.putQueryParameter("RegistryType", registryType);

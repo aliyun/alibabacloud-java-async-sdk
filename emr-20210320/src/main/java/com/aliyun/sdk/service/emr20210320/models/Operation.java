@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Operation} extends {@link TeaModel}
  *
  * <p>Operation</p>
  */
 public class Operation extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("OperationState")
+    @com.aliyun.core.annotation.NameInMap("OperationState")
     private String operationState;
 
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("StateChangeReason")
+    @com.aliyun.core.annotation.NameInMap("StateChangeReason")
     private OperationStateChangeReason stateChangeReason;
 
     private Operation(Builder builder) {
@@ -134,7 +139,10 @@ public class Operation extends TeaModel {
         private OperationStateChangeReason stateChangeReason; 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -142,7 +150,10 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 创建时间。
+         * <p>创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1628589439114</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -150,7 +161,10 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 描述。
+         * <p>描述。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -158,7 +172,10 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 结束时间。
+         * <p>结束时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1628589439114</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -166,7 +183,10 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 操作ID。
+         * <p>操作ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-13c37a77c505****</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -174,7 +194,10 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 操作状态。
+         * <p>操作状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder operationState(String operationState) {
             this.operationState = operationState;
@@ -182,7 +205,10 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 操作类型。
+         * <p>操作类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder operationType(String operationType) {
             this.operationType = operationType;
@@ -190,7 +216,10 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 开始时间。
+         * <p>开始时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1628589439114</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -198,7 +227,7 @@ public class Operation extends TeaModel {
         }
 
         /**
-         * 状态转换原因。
+         * <p>状态转换原因。</p>
          */
         public Builder stateChangeReason(OperationStateChangeReason stateChangeReason) {
             this.stateChangeReason = stateChangeReason;

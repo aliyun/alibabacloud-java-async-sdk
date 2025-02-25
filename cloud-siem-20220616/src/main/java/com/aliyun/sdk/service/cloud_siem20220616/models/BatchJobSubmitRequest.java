@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchJobSubmitRequest</p>
  */
 public class BatchJobSubmitRequest extends Request {
-    @Body
-    @NameInMap("JsonConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JsonConfig")
     private String jsonConfig;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private BatchJobSubmitRequest(Builder builder) {
@@ -68,7 +67,7 @@ public class BatchJobSubmitRequest extends Request {
         } 
 
         /**
-         * JsonConfig.
+         * The detail config of task.
          */
         public Builder jsonConfig(String jsonConfig) {
             this.putBodyParameter("JsonConfig", jsonConfig);
@@ -77,7 +76,11 @@ public class BatchJobSubmitRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

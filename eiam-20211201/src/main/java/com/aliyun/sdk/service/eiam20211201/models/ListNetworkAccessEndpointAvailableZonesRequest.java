@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessEndpointAvailableZonesRequest} extends {@link RequestModel}
  *
  * <p>ListNetworkAccessEndpointAvailableZonesRequest</p>
  */
 public class ListNetworkAccessEndpointAvailableZonesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("NaeRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NaeRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String naeRegionId;
 
     private ListNetworkAccessEndpointAvailableZonesRequest(Builder builder) {
@@ -78,7 +83,11 @@ public class ListNetworkAccessEndpointAvailableZonesRequest extends Request {
         }
 
         /**
-         * 专属网络端点支持的地域
+         * <p>专属网络端点支持的地域</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder naeRegionId(String naeRegionId) {
             this.putQueryParameter("NaeRegionId", naeRegionId);

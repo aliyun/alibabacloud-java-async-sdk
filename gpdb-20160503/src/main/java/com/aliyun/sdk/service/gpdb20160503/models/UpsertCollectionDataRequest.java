@@ -1,48 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpsertCollectionDataRequest} extends {@link RequestModel}
  *
  * <p>UpsertCollectionDataRequest</p>
  */
 public class UpsertCollectionDataRequest extends Request {
-    @Query
-    @NameInMap("Collection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("NamespacePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespacePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespacePassword;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("Rows")
-    private java.util.List < Rows> rows;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rows")
+    private java.util.List<Rows> rows;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
 
     private UpsertCollectionDataRequest(Builder builder) {
         super(builder);
@@ -53,6 +61,7 @@ public class UpsertCollectionDataRequest extends Request {
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.rows = builder.rows;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -113,8 +122,15 @@ public class UpsertCollectionDataRequest extends Request {
     /**
      * @return rows
      */
-    public java.util.List < Rows> getRows() {
+    public java.util.List<Rows> getRows() {
         return this.rows;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public static final class Builder extends Request.Builder<UpsertCollectionDataRequest, Builder> {
@@ -124,7 +140,8 @@ public class UpsertCollectionDataRequest extends Request {
         private String namespacePassword; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < Rows> rows; 
+        private java.util.List<Rows> rows; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -139,10 +156,15 @@ public class UpsertCollectionDataRequest extends Request {
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.rows = request.rows;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * Collection.
+         * <p>The name of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -151,7 +173,13 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -160,7 +188,13 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The name of the namespace. Default value: public.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -169,7 +203,11 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * <p>The password of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -187,7 +225,14 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,10 +243,22 @@ public class UpsertCollectionDataRequest extends Request {
         /**
          * Rows.
          */
-        public Builder rows(java.util.List < Rows> rows) {
+        public Builder rows(java.util.List<Rows> rows) {
             String rowsShrink = shrink(rows, "Rows", "json");
             this.putBodyParameter("Rows", rowsShrink);
             this.rows = rows;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
@@ -212,16 +269,22 @@ public class UpsertCollectionDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpsertCollectionDataRequest} extends {@link TeaModel}
+     *
+     * <p>UpsertCollectionDataRequest</p>
+     */
     public static class Rows extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Metadata")
-        private java.util.Map < String, String > metadata;
+        @com.aliyun.core.annotation.NameInMap("Metadata")
+        private java.util.Map<String, String> metadata;
 
-        @NameInMap("Vector")
-        @Validation(required = true)
-        private java.util.List < Double > vector;
+        @com.aliyun.core.annotation.NameInMap("Vector")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<Double> vector;
 
         private Rows(Builder builder) {
             this.id = builder.id;
@@ -247,21 +310,21 @@ public class UpsertCollectionDataRequest extends Request {
         /**
          * @return metadata
          */
-        public java.util.Map < String, String > getMetadata() {
+        public java.util.Map<String, String> getMetadata() {
             return this.metadata;
         }
 
         /**
          * @return vector
          */
-        public java.util.List < Double > getVector() {
+        public java.util.List<Double> getVector() {
             return this.vector;
         }
 
         public static final class Builder {
             private String id; 
-            private java.util.Map < String, String > metadata; 
-            private java.util.List < Double > vector; 
+            private java.util.Map<String, String> metadata; 
+            private java.util.List<Double> vector; 
 
             /**
              * Id.
@@ -274,15 +337,15 @@ public class UpsertCollectionDataRequest extends Request {
             /**
              * Metadata.
              */
-            public Builder metadata(java.util.Map < String, String > metadata) {
+            public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
                 return this;
             }
 
             /**
-             * Vector.
+             * <p>This parameter is required.</p>
              */
-            public Builder vector(java.util.List < Double > vector) {
+            public Builder vector(java.util.List<Double> vector) {
                 this.vector = vector;
                 return this;
             }

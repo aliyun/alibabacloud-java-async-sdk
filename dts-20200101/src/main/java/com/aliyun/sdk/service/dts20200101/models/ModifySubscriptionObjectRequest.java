@@ -1,37 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySubscriptionObjectRequest} extends {@link RequestModel}
  *
  * <p>ModifySubscriptionObjectRequest</p>
  */
 public class ModifySubscriptionObjectRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SubscriptionInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionInstanceId;
 
-    @Query
-    @NameInMap("SubscriptionObject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionObject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionObject;
 
     private ModifySubscriptionObjectRequest(Builder builder) {
@@ -39,6 +48,7 @@ public class ModifySubscriptionObjectRequest extends Request {
         this.accountId = builder.accountId;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionInstanceId = builder.subscriptionInstanceId;
         this.subscriptionObject = builder.subscriptionObject;
     }
@@ -78,6 +88,13 @@ public class ModifySubscriptionObjectRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionInstanceId
      */
     public String getSubscriptionInstanceId() {
@@ -95,6 +112,7 @@ public class ModifySubscriptionObjectRequest extends Request {
         private String accountId; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String subscriptionInstanceId; 
         private String subscriptionObject; 
 
@@ -107,12 +125,16 @@ public class ModifySubscriptionObjectRequest extends Request {
             this.accountId = request.accountId;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subscriptionInstanceId = request.subscriptionInstanceId;
             this.subscriptionObject = request.subscriptionObject;
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -139,7 +161,23 @@ public class ModifySubscriptionObjectRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsl8zl9ek6292****</p>
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);
@@ -148,7 +186,11 @@ public class ModifySubscriptionObjectRequest extends Request {
         }
 
         /**
-         * The objects from which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](~~141902~~).
+         * <p>The objects from which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">SubscriptionObjects</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;DBName&quot;:&quot;dtstestdata&quot;}]</p>
          */
         public Builder subscriptionObject(String subscriptionObject) {
             this.putQueryParameter("SubscriptionObject", subscriptionObject);

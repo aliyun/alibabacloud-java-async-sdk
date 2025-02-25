@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatGatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateNatGatewayRequest</p>
  */
 public class CreateNatGatewayRequest extends Request {
-    @Query
-    @NameInMap("BandwidthPackage")
-    @Validation(required = true)
-    private java.util.List < BandwidthPackage> bandwidthPackage;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackage")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<BandwidthPackage> bandwidthPackage;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateNatGatewayRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class CreateNatGatewayRequest extends Request {
     /**
      * @return bandwidthPackage
      */
-    public java.util.List < BandwidthPackage> getBandwidthPackage() {
+    public java.util.List<BandwidthPackage> getBandwidthPackage() {
         return this.bandwidthPackage;
     }
 
@@ -153,7 +158,7 @@ public class CreateNatGatewayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNatGatewayRequest, Builder> {
-        private java.util.List < BandwidthPackage> bandwidthPackage; 
+        private java.util.List<BandwidthPackage> bandwidthPackage; 
         private String clientToken; 
         private String description; 
         private String name; 
@@ -183,9 +188,9 @@ public class CreateNatGatewayRequest extends Request {
         } 
 
         /**
-         * BandwidthPackage.
+         * <p>This parameter is required.</p>
          */
-        public Builder bandwidthPackage(java.util.List < BandwidthPackage> bandwidthPackage) {
+        public Builder bandwidthPackage(java.util.List<BandwidthPackage> bandwidthPackage) {
             this.putQueryParameter("BandwidthPackage", bandwidthPackage);
             this.bandwidthPackage = bandwidthPackage;
             return this;
@@ -237,7 +242,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +269,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -279,14 +284,20 @@ public class CreateNatGatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNatGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayRequest</p>
+     */
     public static class BandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("IpCount")
+        @com.aliyun.core.annotation.NameInMap("IpCount")
         private Integer ipCount;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private BandwidthPackage(Builder builder) {

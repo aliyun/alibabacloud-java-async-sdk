@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePrometheusGlobalViewRequest} extends {@link RequestModel}
  *
  * <p>DeletePrometheusGlobalViewRequest</p>
  */
 public class DeletePrometheusGlobalViewRequest extends Request {
-    @Query
-    @NameInMap("GlobalViewClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalViewClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalViewClusterId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeletePrometheusGlobalViewRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DeletePrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * The ID of the global aggregation instance.
+         * <p>The ID of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global-v2-cn-1670100631025794-amaykca4</p>
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -79,7 +88,11 @@ public class DeletePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

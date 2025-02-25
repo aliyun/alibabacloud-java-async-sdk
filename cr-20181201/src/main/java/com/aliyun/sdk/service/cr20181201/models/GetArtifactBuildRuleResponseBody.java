@@ -24,6 +24,9 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     private Boolean isSuccess;
 
+    @NameInMap("Parameters")
+    private Parameters parameters;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -38,6 +41,7 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         this.buildRuleId = builder.buildRuleId;
         this.code = builder.code;
         this.isSuccess = builder.isSuccess;
+        this.parameters = builder.parameters;
         this.requestId = builder.requestId;
         this.scopeId = builder.scopeId;
         this.scopeType = builder.scopeType;
@@ -80,6 +84,13 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return parameters
+     */
+    public Parameters getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -105,6 +116,7 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         private String buildRuleId; 
         private String code; 
         private Boolean isSuccess; 
+        private Parameters parameters; 
         private String requestId; 
         private String scopeId; 
         private String scopeType; 
@@ -142,6 +154,14 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
+         * Parameters.
+         */
+        public Builder parameters(Parameters parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -171,4 +191,45 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
 
     } 
 
+    public static class Parameters extends TeaModel {
+        @NameInMap("ImageIndexOnly")
+        private Boolean imageIndexOnly;
+
+        private Parameters(Builder builder) {
+            this.imageIndexOnly = builder.imageIndexOnly;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return imageIndexOnly
+         */
+        public Boolean getImageIndexOnly() {
+            return this.imageIndexOnly;
+        }
+
+        public static final class Builder {
+            private Boolean imageIndexOnly; 
+
+            /**
+             * ImageIndexOnly.
+             */
+            public Builder imageIndexOnly(Boolean imageIndexOnly) {
+                this.imageIndexOnly = imageIndexOnly;
+                return this;
+            }
+
+            public Parameters build() {
+                return new Parameters(this);
+            } 
+
+        } 
+
+    }
 }

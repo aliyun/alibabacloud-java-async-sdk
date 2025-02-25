@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorHBaseTablesRequest} extends {@link RequestModel}
  *
  * <p>ListDoctorHBaseTablesRequest</p>
  */
 public class ListDoctorHBaseTablesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DateTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dateTime;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TableNames")
-    private java.util.List < String > tableNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableNames")
+    private java.util.List<String> tableNames;
 
     private ListDoctorHBaseTablesRequest(Builder builder) {
         super(builder);
@@ -124,7 +129,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
     /**
      * @return tableNames
      */
-    public java.util.List < String > getTableNames() {
+    public java.util.List<String> getTableNames() {
         return this.tableNames;
     }
 
@@ -136,7 +141,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         private String orderBy; 
         private String orderType; 
         private String regionId; 
-        private java.util.List < String > tableNames; 
+        private java.util.List<String> tableNames; 
 
         private Builder() {
             super();
@@ -155,7 +160,11 @@ public class ListDoctorHBaseTablesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +173,11 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * <p>The query date.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -173,7 +186,10 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * <p>The maximum number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -182,7 +198,10 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * <p>Marks the current position to start reading. If this field is empty, the data is read from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -191,7 +210,14 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The field that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>tableSize</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tableSize</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -200,7 +226,14 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The order in which you want to sort the query results. Valid value:</p>
+         * <ul>
+         * <li>ASC: in ascending order</li>
+         * <li>DESC: in descending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -209,7 +242,11 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,9 +255,12 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * TableNames.
+         * <p>The table names, which are used to filter the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder tableNames(java.util.List < String > tableNames) {
+        public Builder tableNames(java.util.List<String> tableNames) {
             this.putQueryParameter("TableNames", tableNames);
             this.tableNames = tableNames;
             return this;

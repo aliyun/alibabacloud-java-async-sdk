@@ -1,87 +1,92 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociatePhysicalConnectionToVirtualBorderRouterRequest} extends {@link RequestModel}
  *
  * <p>AssociatePhysicalConnectionToVirtualBorderRouterRequest</p>
  */
 public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Request {
-    @Query
-    @NameInMap("CircuitCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CircuitCode")
     private String circuitCode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EnableIpv6")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
     private String enableIpv6;
 
-    @Query
-    @NameInMap("LocalGatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
     private String localGatewayIp;
 
-    @Query
-    @NameInMap("LocalIpv6GatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalIpv6GatewayIp")
     private String localIpv6GatewayIp;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerGatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
     private String peerGatewayIp;
 
-    @Query
-    @NameInMap("PeerIpv6GatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerIpv6GatewayIp")
     private String peerIpv6GatewayIp;
 
-    @Query
-    @NameInMap("PeeringIpv6SubnetMask")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeeringIpv6SubnetMask")
     private String peeringIpv6SubnetMask;
 
-    @Query
-    @NameInMap("PeeringSubnetMask")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
     private String peeringSubnetMask;
 
-    @Query
-    @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String physicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VbrId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrId;
 
-    @Query
-    @NameInMap("VlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vlanId;
 
     private AssociatePhysicalConnectionToVirtualBorderRouterRequest(Builder builder) {
@@ -282,10 +287,13 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         } 
 
         /**
-         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
-         * <p>
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+         * <blockquote>
+         * <p> Only the Express Connect circuit owner can specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  Only the Express Connect circuit owner can specify this parameter.
+         * <strong>example:</strong>
+         * <p>longtel001</p>
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -294,12 +302,14 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -308,11 +318,14 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * Specifies whether to enable IPv6. Valid values:
-         * <p>
+         * <p>Specifies whether to enable IPv6. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableIpv6(String enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -321,7 +334,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The IP address of the gateway device on the Alibaba Cloud side.
+         * <p>The IP address of the gateway device on the Alibaba Cloud side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder localGatewayIp(String localGatewayIp) {
             this.putQueryParameter("LocalGatewayIp", localGatewayIp);
@@ -330,7 +346,10 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The IPv6 address of the gateway device on the Alibaba Cloud side.
+         * <p>The IPv6 address of the gateway device on the Alibaba Cloud side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
          */
         public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
             this.putQueryParameter("LocalIpv6GatewayIp", localIpv6GatewayIp);
@@ -357,11 +376,14 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The IP address of the gateway device on the user side.
-         * <p>
+         * <p>The IP address of the gateway device on the user side.</p>
+         * <ul>
+         * <li>Only the owner of the VBR can set or modify this parameter.</li>
+         * <li>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</li>
+         * </ul>
          * 
-         * *   Only the owner of the VBR can set or modify this parameter.
-         * *   When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder peerGatewayIp(String peerGatewayIp) {
             this.putQueryParameter("PeerGatewayIp", peerGatewayIp);
@@ -370,11 +392,14 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The IPv6 address of the gateway device in the data center.
-         * <p>
+         * <p>The IPv6 address of the gateway device in the data center.</p>
+         * <ul>
+         * <li>Only the owner of the VBR can specify or modify this parameter.</li>
+         * <li>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</li>
+         * </ul>
          * 
-         * *   Only the owner of the VBR can specify or modify this parameter.
-         * *   When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
+         * <strong>example:</strong>
+         * <p>2001:XXXX:4:4:4:4:4:4</p>
          */
         public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
             this.putQueryParameter("PeerIpv6GatewayIp", peerIpv6GatewayIp);
@@ -383,10 +408,11 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The subnet mask of the IPv6 addresses of the gateway devices on the user side and Alibaba Cloud side.
-         * <p>
+         * <p>The subnet mask of the IPv6 addresses of the gateway devices on the user side and Alibaba Cloud side.</p>
+         * <p>The two IPv6 addresses must fall within the same subnet.</p>
          * 
-         * The two IPv6 addresses must fall within the same subnet.
+         * <strong>example:</strong>
+         * <p>2408:4004:cc:400::/56</p>
          */
         public Builder peeringIpv6SubnetMask(String peeringIpv6SubnetMask) {
             this.putQueryParameter("PeeringIpv6SubnetMask", peeringIpv6SubnetMask);
@@ -395,10 +421,11 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The subnet mask of the IP addresses of the VBR and the gateway device in the data center.
-         * <p>
+         * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
+         * <p>The two IP addresses must fall within the same subnet.</p>
          * 
-         * The two IP addresses must fall within the same subnet.
+         * <strong>example:</strong>
+         * <p>255.255.255.0</p>
          */
         public Builder peeringSubnetMask(String peeringSubnetMask) {
             this.putQueryParameter("PeeringSubnetMask", peeringSubnetMask);
@@ -407,7 +434,11 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The ID of the Express Connect circuit.
+         * <p>The ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1qrb3044eqixog****</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -416,10 +447,12 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -446,7 +479,11 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-bp186tnz6rijyhj******</p>
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);
@@ -455,10 +492,14 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The VLAN ID of the VBR. Valid values: **0 to 2999**.
-         * <p>
+         * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>.</p>
+         * <blockquote>
+         * <p> Only the Express Connect circuit owner can specify this parameter. Two VBRs associated with the same Express Connect circuit cannot use the same VLAN ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Only the Express Connect circuit owner can specify this parameter. Two VBRs associated with the same Express Connect circuit cannot use the same VLAN ID.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder vlanId(String vlanId) {
             this.putQueryParameter("VlanId", vlanId);

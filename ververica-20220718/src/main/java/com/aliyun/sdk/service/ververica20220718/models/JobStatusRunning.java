@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobStatusRunning} extends {@link TeaModel}
  *
  * <p>JobStatusRunning</p>
  */
 public class JobStatusRunning extends TeaModel {
-    @NameInMap("observedFlinkJobRestarts")
+    @com.aliyun.core.annotation.NameInMap("observedFlinkJobRestarts")
     private Long observedFlinkJobRestarts;
 
-    @NameInMap("observedFlinkJobStatus")
+    @com.aliyun.core.annotation.NameInMap("observedFlinkJobStatus")
     private String observedFlinkJobStatus;
 
     private JobStatusRunning(Builder builder) {

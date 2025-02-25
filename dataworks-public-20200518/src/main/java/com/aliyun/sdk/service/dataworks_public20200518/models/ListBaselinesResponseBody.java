@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselinesResponseBody} extends {@link TeaModel}
  *
  * <p>ListBaselinesResponseBody</p>
  */
 public class ListBaselinesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListBaselinesResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListBaselinesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103630001</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The user does not exist. 276571706358178756</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527ab****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,14 @@ public class ListBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +175,17 @@ public class ListBaselinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBaselinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselinesResponseBody</p>
+     */
     public static class OverTimeSettings extends TeaModel {
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private OverTimeSettings(Builder builder) {
@@ -190,7 +220,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * Cycle.
+             * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, the value of this parameter cannot exceed 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -198,7 +231,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -212,35 +248,41 @@ public class ListBaselinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBaselinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselinesResponseBody</p>
+     */
     public static class Baselines extends TeaModel {
-        @NameInMap("AlertEnabled")
+        @com.aliyun.core.annotation.NameInMap("AlertEnabled")
         private Boolean alertEnabled;
 
-        @NameInMap("AlertMarginThreshold")
+        @com.aliyun.core.annotation.NameInMap("AlertMarginThreshold")
         private Integer alertMarginThreshold;
 
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("BaselineType")
+        @com.aliyun.core.annotation.NameInMap("BaselineType")
         private String baselineType;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("OverTimeSettings")
-        private java.util.List < OverTimeSettings> overTimeSettings;
+        @com.aliyun.core.annotation.NameInMap("OverTimeSettings")
+        private java.util.List<OverTimeSettings> overTimeSettings;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Baselines(Builder builder) {
@@ -309,7 +351,7 @@ public class ListBaselinesResponseBody extends TeaModel {
         /**
          * @return overTimeSettings
          */
-        public java.util.List < OverTimeSettings> getOverTimeSettings() {
+        public java.util.List<OverTimeSettings> getOverTimeSettings() {
             return this.overTimeSettings;
         }
 
@@ -341,13 +383,16 @@ public class ListBaselinesResponseBody extends TeaModel {
             private String baselineName; 
             private String baselineType; 
             private Boolean enabled; 
-            private java.util.List < OverTimeSettings> overTimeSettings; 
+            private java.util.List<OverTimeSettings> overTimeSettings; 
             private String owner; 
             private Integer priority; 
             private Long projectId; 
 
             /**
-             * AlertEnabled.
+             * <p>Indicates whether the alerting feature is enabled. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder alertEnabled(Boolean alertEnabled) {
                 this.alertEnabled = alertEnabled;
@@ -355,7 +400,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertMarginThreshold.
+             * <p>The alert margin threshold for the baseline instance. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder alertMarginThreshold(Integer alertMarginThreshold) {
                 this.alertMarginThreshold = alertMarginThreshold;
@@ -363,7 +411,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineId.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -371,7 +422,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineName.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BaselineName</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -379,7 +433,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineType.
+             * <p>The type of the baseline. Valid values: DAILY and HOURLY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder baselineType(String baselineType) {
                 this.baselineType = baselineType;
@@ -387,7 +444,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the baseline is enabled. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -395,15 +455,18 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * OverTimeSettings.
+             * <p>The settings of the committed completion time of the baseline.</p>
              */
-            public Builder overTimeSettings(java.util.List < OverTimeSettings> overTimeSettings) {
+            public Builder overTimeSettings(java.util.List<OverTimeSettings> overTimeSettings) {
                 this.overTimeSettings = overTimeSettings;
                 return this;
             }
 
             /**
-             * Owner.
+             * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs can be specified. The IDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -411,7 +474,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the baseline. Valid values: {1,2,5,7,8}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -419,7 +485,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the baseline belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -433,17 +502,23 @@ public class ListBaselinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBaselinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselinesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Baselines")
-        private java.util.List < Baselines> baselines;
+        @com.aliyun.core.annotation.NameInMap("Baselines")
+        private java.util.List<Baselines> baselines;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private String pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
 
         private Data(Builder builder) {
@@ -464,7 +539,7 @@ public class ListBaselinesResponseBody extends TeaModel {
         /**
          * @return baselines
          */
-        public java.util.List < Baselines> getBaselines() {
+        public java.util.List<Baselines> getBaselines() {
             return this.baselines;
         }
 
@@ -490,21 +565,24 @@ public class ListBaselinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Baselines> baselines; 
+            private java.util.List<Baselines> baselines; 
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
 
             /**
-             * Baselines.
+             * <p>The baselines.</p>
              */
-            public Builder baselines(java.util.List < Baselines> baselines) {
+            public Builder baselines(java.util.List<Baselines> baselines) {
                 this.baselines = baselines;
                 return this;
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -512,7 +590,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -520,7 +601,10 @@ public class ListBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of baselines returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

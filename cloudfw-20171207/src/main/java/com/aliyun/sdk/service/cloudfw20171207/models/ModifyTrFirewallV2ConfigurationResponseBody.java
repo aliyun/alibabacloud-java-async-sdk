@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTrFirewallV2ConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTrFirewallV2ConfigurationResponseBody</p>
  */
 public class ModifyTrFirewallV2ConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyTrFirewallV2ConfigurationResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyTrFirewallV2ConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A74C8FDD-2BEF-52D5-8B01-EB6FD94606F9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

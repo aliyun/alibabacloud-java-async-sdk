@@ -1,74 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AlertEvent} extends {@link TeaModel}
  *
  * <p>AlertEvent</p>
  */
 public class AlertEvent extends TeaModel {
-    @NameInMap("AlertName")
+    @com.aliyun.core.annotation.NameInMap("AlertName")
     private String alertName;
 
-    @NameInMap("AlertStatus")
+    @com.aliyun.core.annotation.NameInMap("AlertStatus")
     private String alertStatus;
 
-    @NameInMap("CustomLabels")
+    @com.aliyun.core.annotation.NameInMap("Arn")
+    private String arn;
+
+    @com.aliyun.core.annotation.NameInMap("Content")
+    private String content;
+
+    @com.aliyun.core.annotation.NameInMap("CustomLabels")
     private java.util.Map < String, ? > customLabels;
 
-    @NameInMap("DeDupId")
+    @com.aliyun.core.annotation.NameInMap("DeDupId")
     private String deDupId;
 
-    @NameInMap("Details")
+    @com.aliyun.core.annotation.NameInMap("Details")
     private String details;
 
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @NameInMap("Expression")
+    @com.aliyun.core.annotation.NameInMap("EventType")
+    private String eventType;
+
+    @com.aliyun.core.annotation.NameInMap("Expression")
     private String expression;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @NameInMap("ResourceInfo")
+    @com.aliyun.core.annotation.NameInMap("Product")
+    private String product;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceInfo")
     private java.util.Map < String, ? > resourceInfo;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private String severity;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Summary")
+    @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private AlertEvent(Builder builder) {
         this.alertName = builder.alertName;
         this.alertStatus = builder.alertStatus;
+        this.arn = builder.arn;
+        this.content = builder.content;
         this.customLabels = builder.customLabels;
         this.deDupId = builder.deDupId;
         this.details = builder.details;
         this.eventName = builder.eventName;
+        this.eventType = builder.eventType;
         this.expression = builder.expression;
         this.metrics = builder.metrics;
+        this.product = builder.product;
         this.resourceInfo = builder.resourceInfo;
         this.ruleName = builder.ruleName;
         this.severity = builder.severity;
@@ -102,6 +118,20 @@ public class AlertEvent extends TeaModel {
     }
 
     /**
+     * @return arn
+     */
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return this.content;
+    }
+
+    /**
      * @return customLabels
      */
     public java.util.Map < String, ? > getCustomLabels() {
@@ -130,6 +160,13 @@ public class AlertEvent extends TeaModel {
     }
 
     /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    /**
      * @return expression
      */
     public String getExpression() {
@@ -141,6 +178,13 @@ public class AlertEvent extends TeaModel {
      */
     public java.util.List < Metrics> getMetrics() {
         return this.metrics;
+    }
+
+    /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
     }
 
     /**
@@ -202,12 +246,16 @@ public class AlertEvent extends TeaModel {
     public static final class Builder {
         private String alertName; 
         private String alertStatus; 
+        private String arn; 
+        private String content; 
         private java.util.Map < String, ? > customLabels; 
         private String deDupId; 
         private String details; 
         private String eventName; 
+        private String eventType; 
         private String expression; 
         private java.util.List < Metrics> metrics; 
+        private String product; 
         private java.util.Map < String, ? > resourceInfo; 
         private String ruleName; 
         private String severity; 
@@ -230,6 +278,22 @@ public class AlertEvent extends TeaModel {
          */
         public Builder alertStatus(String alertStatus) {
             this.alertStatus = alertStatus;
+            return this;
+        }
+
+        /**
+         * Arn.
+         */
+        public Builder arn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+
+        /**
+         * Content.
+         */
+        public Builder content(String content) {
+            this.content = content;
             return this;
         }
 
@@ -266,6 +330,14 @@ public class AlertEvent extends TeaModel {
         }
 
         /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
          * Expression.
          */
         public Builder expression(String expression) {
@@ -278,6 +350,14 @@ public class AlertEvent extends TeaModel {
          */
         public Builder metrics(java.util.List < Metrics> metrics) {
             this.metrics = metrics;
+            return this;
+        }
+
+        /**
+         * Product.
+         */
+        public Builder product(String product) {
+            this.product = product;
             return this;
         }
 
@@ -351,32 +431,38 @@ public class AlertEvent extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AlertEvent} extends {@link TeaModel}
+     *
+     * <p>AlertEvent</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("CurValue")
+        @com.aliyun.core.annotation.NameInMap("CurValue")
         private String curValue;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("MetricNameEn")
+        @com.aliyun.core.annotation.NameInMap("MetricNameEn")
         private String metricNameEn;
 
-        @NameInMap("MetricNameZh")
+        @com.aliyun.core.annotation.NameInMap("MetricNameZh")
         private String metricNameZh;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("UnitFactor")
+        @com.aliyun.core.annotation.NameInMap("UnitFactor")
         private Float unitFactor;
 
         private Metrics(Builder builder) {

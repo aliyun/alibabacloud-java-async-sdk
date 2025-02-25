@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBProxyInstanceKernelVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBProxyInstanceKernelVersionRequest</p>
  */
 public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SwitchTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
     private String switchTime;
 
-    @Query
-    @NameInMap("UpgradeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeTime")
     private String upgradeTime;
 
     private UpgradeDBProxyInstanceKernelVersionRequest(Builder builder) {
@@ -139,7 +144,11 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -148,7 +157,10 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -184,10 +196,13 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> If you set <strong>UpgradeTime</strong> to <strong>SpecifyTime</strong>, you must specify SwitchTime.</p>
+         * </blockquote>
          * 
-         * > If you set **UpgradeTime** to **SpecificTime**, you must specify SwitchTime.
+         * <strong>example:</strong>
+         * <p>2019-07-10T13:15:12Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -196,18 +211,21 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * The time when you want to upgrade the database proxy version of the instance. Valid values:
-         * <p>
+         * <p>The time when you want to upgrade the database proxy version of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>MaintainTime</strong> (default): performs the upgrade during the maintenance window that you specified. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">Modify the maintenance window</a>.</li>
+         * <li><strong>Immediate</strong>: performs the upgrade immediately.</li>
+         * <li><strong>SpecifyTime</strong>: performs the upgrade at a specified point in time.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li><strong>If the instance runs MySQL, you can set this parameter to <strong>MaintainTime</strong>, <strong>Immediate</strong>, or SpecifyTime</strong>.</li>
+         * <li>If the instance runs PostgreSQL, you can set this parameter to <strong>MaintainTime</strong> or <strong>Immediate</strong>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **MaintainTime** (default): performs the upgrade during the maintenance window that you specified. For more information, see [Modify the maintenance window](~~610402~~).
-         * *   **Immediate**: performs the upgrade immediately.
-         * *   **SpecificTime**: performs the upgrade at a specified point in time.
-         * 
-         * > 
-         * 
-         * *   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.
-         * 
-         * *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.
+         * <strong>example:</strong>
+         * <p>MaintainTime</p>
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("UpgradeTime", upgradeTime);

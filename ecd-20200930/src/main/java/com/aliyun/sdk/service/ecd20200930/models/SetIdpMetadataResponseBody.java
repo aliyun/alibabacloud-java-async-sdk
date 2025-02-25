@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetIdpMetadataResponseBody} extends {@link TeaModel}
  *
  * <p>SetIdpMetadataResponseBody</p>
  */
 public class SetIdpMetadataResponseBody extends TeaModel {
-    @NameInMap("IdpEntityId")
+    @com.aliyun.core.annotation.NameInMap("IdpEntityId")
     private String idpEntityId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetIdpMetadataResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class SetIdpMetadataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The entity ID obtained after the IdP metadata file is parsed.
+         * <p>The entity ID obtained after the IdP metadata file is parsed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test****.cn/adfs/services/trust">http://test****.cn/adfs/services/trust</a></p>
          */
         public Builder idpEntityId(String idpEntityId) {
             this.idpEntityId = idpEntityId;
@@ -58,7 +66,10 @@ public class SetIdpMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

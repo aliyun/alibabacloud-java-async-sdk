@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterParametersResponseBody</p>
  */
 public class DescribeDBClusterParametersResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("ParameterNumbers")
+    @com.aliyun.core.annotation.NameInMap("ParameterNumbers")
     private String parameterNumbers;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private Parameters parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningParameters")
+    @com.aliyun.core.annotation.NameInMap("RunningParameters")
     private RunningParameters runningParameters;
 
     private DescribeDBClusterParametersResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         private RunningParameters runningParameters; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1s826a1up******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -130,12 +138,15 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine that the cluster runs. Valid values:
-         * <p>
+         * <p>The database engine that the clusters runs. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -143,15 +154,24 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine. 
-         * <p>
+         * <p>The version of the database engine. </p>
+         * <ul>
+         * <li>Valid values for the MySQL database engine:   <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * </li>
+         * <li>Valid value for the PostgreSQL database engine:    <ul>
+         * <li><strong>11</strong></li>
+         * <li><strong>14</strong></li>
+         * </ul>
+         * </li>
+         * <li>Valid value for the Oracle database engine:  <strong>11</strong></li>
+         * </ul>
          * 
-         * - Valid values for the MySQL database engine:    - **5.6**
-         *   - **5.7**
-         *   - **8.0**
-         * - Valid value for the PostgreSQL database engine:    - **11**
-         *   - **14**
-         * - Valid value for the Oracle database engine: **11**
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -159,7 +179,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster engine.
+         * <p>The cluster engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -167,7 +190,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of parameters.
+         * <p>The number of parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parameterNumbers(String parameterNumbers) {
             this.parameterNumbers = parameterNumbers;
@@ -175,7 +201,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.
+         * <p>A comparison of parameters between the source RDS instance and the destination PolarDB cluster.</p>
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -183,7 +209,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -191,7 +220,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The parameters that are in use.
+         * <p>The parameters of the PolarDB cluster.</p>
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -204,36 +233,58 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterParametersResponseBody</p>
+     */
     public static class ParametersParameters extends TeaModel {
-        @NameInMap("IsEqual")
+        @com.aliyun.core.annotation.NameInMap("IsEqual")
         private String isEqual;
 
-        @NameInMap("distParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("IsInstancePolarDBKey")
+        private String isInstancePolarDBKey;
+
+        @com.aliyun.core.annotation.NameInMap("IsInstanceRdsKey")
+        private String isInstanceRdsKey;
+
+        @com.aliyun.core.annotation.NameInMap("IsPolarDBKey")
+        private String isPolarDBKey;
+
+        @com.aliyun.core.annotation.NameInMap("IsRdsKey")
+        private String isRdsKey;
+
+        @com.aliyun.core.annotation.NameInMap("distParameterDescription")
         private String distParameterDescription;
 
-        @NameInMap("distParameterName")
+        @com.aliyun.core.annotation.NameInMap("distParameterName")
         private String distParameterName;
 
-        @NameInMap("distParameterOptional")
+        @com.aliyun.core.annotation.NameInMap("distParameterOptional")
         private String distParameterOptional;
 
-        @NameInMap("distParameterValue")
+        @com.aliyun.core.annotation.NameInMap("distParameterValue")
         private String distParameterValue;
 
-        @NameInMap("rdsParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterDescription")
         private String rdsParameterDescription;
 
-        @NameInMap("rdsParameterName")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterName")
         private String rdsParameterName;
 
-        @NameInMap("rdsParameterOptional")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterOptional")
         private String rdsParameterOptional;
 
-        @NameInMap("rdsParameterValue")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterValue")
         private String rdsParameterValue;
 
         private ParametersParameters(Builder builder) {
             this.isEqual = builder.isEqual;
+            this.isInstancePolarDBKey = builder.isInstancePolarDBKey;
+            this.isInstanceRdsKey = builder.isInstanceRdsKey;
+            this.isPolarDBKey = builder.isPolarDBKey;
+            this.isRdsKey = builder.isRdsKey;
             this.distParameterDescription = builder.distParameterDescription;
             this.distParameterName = builder.distParameterName;
             this.distParameterOptional = builder.distParameterOptional;
@@ -257,6 +308,34 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
          */
         public String getIsEqual() {
             return this.isEqual;
+        }
+
+        /**
+         * @return isInstancePolarDBKey
+         */
+        public String getIsInstancePolarDBKey() {
+            return this.isInstancePolarDBKey;
+        }
+
+        /**
+         * @return isInstanceRdsKey
+         */
+        public String getIsInstanceRdsKey() {
+            return this.isInstanceRdsKey;
+        }
+
+        /**
+         * @return isPolarDBKey
+         */
+        public String getIsPolarDBKey() {
+            return this.isPolarDBKey;
+        }
+
+        /**
+         * @return isRdsKey
+         */
+        public String getIsRdsKey() {
+            return this.isRdsKey;
         }
 
         /**
@@ -317,6 +396,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String isEqual; 
+            private String isInstancePolarDBKey; 
+            private String isInstanceRdsKey; 
+            private String isPolarDBKey; 
+            private String isRdsKey; 
             private String distParameterDescription; 
             private String distParameterName; 
             private String distParameterOptional; 
@@ -327,7 +410,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String rdsParameterValue; 
 
             /**
-             * Indicates whether the source parameters and current parameters have the same value.
+             * <p>Indicates whether the source and current parameters have the same value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isEqual(String isEqual) {
                 this.isEqual = isEqual;
@@ -335,7 +421,70 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter of the current cluster.
+             * <p>Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The parameter is a primary parameter of the destination cluster.</li>
+             * <li><strong>0</strong>: The parameter is not a primary parameter of the destination cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder isInstancePolarDBKey(String isInstancePolarDBKey) {
+                this.isInstancePolarDBKey = isInstancePolarDBKey;
+                return this;
+            }
+
+            /**
+             * <p>Indicate whether the parameter is a primary parameter of the source instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The parameter is a primary parameter of the source instance.</li>
+             * <li><strong>0</strong>: The parameter is not a primary parameter of the source instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder isInstanceRdsKey(String isInstanceRdsKey) {
+                this.isInstanceRdsKey = isInstanceRdsKey;
+                return this;
+            }
+
+            /**
+             * <p>Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The parameter is a primary parameter of the destination cluster.</li>
+             * <li><strong>0</strong>: The parameter is not a primary parameter of the destination cluster.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder isPolarDBKey(String isPolarDBKey) {
+                this.isPolarDBKey = isPolarDBKey;
+                return this;
+            }
+
+            /**
+             * <p>Indicate whether the parameter is a primary parameter of the source instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The parameter is a primary parameter of the source instance.</li>
+             * <li><strong>0</strong>: The parameter is not a primary parameter of the source instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder isRdsKey(String isRdsKey) {
+                this.isRdsKey = isRdsKey;
+                return this;
+            }
+
+            /**
+             * <p>The description of the parameter of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The server&quot;s default character set.</p>
              */
             public Builder distParameterDescription(String distParameterDescription) {
                 this.distParameterDescription = distParameterDescription;
@@ -343,7 +492,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter of the current cluster.
+             * <p>The name of the parameter of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>character_set_server</p>
              */
             public Builder distParameterName(String distParameterName) {
                 this.distParameterName = distParameterName;
@@ -351,7 +503,13 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The valid values of the parameter of the current cluster.
+             * <p>The valid values of the parameter of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>utf8</li>
+             * <li>gbk</li>
+             * </ul>
              */
             public Builder distParameterOptional(String distParameterOptional) {
                 this.distParameterOptional = distParameterOptional;
@@ -359,7 +517,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter of the current cluster.
+             * <p>The value of the parameter of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder distParameterValue(String distParameterValue) {
                 this.distParameterValue = distParameterValue;
@@ -367,7 +528,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter of the source instance.
+             * <p>The description of the parameter of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The server&quot;s default character set.</p>
              */
             public Builder rdsParameterDescription(String rdsParameterDescription) {
                 this.rdsParameterDescription = rdsParameterDescription;
@@ -375,7 +539,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter of the source instance.
+             * <p>The name of the parameter of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>character_set_server</p>
              */
             public Builder rdsParameterName(String rdsParameterName) {
                 this.rdsParameterName = rdsParameterName;
@@ -383,7 +550,13 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The valid values of the parameter of the source instance.
+             * <p>The valid values of the parameter of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>utf8</li>
+             * <li>gbk</li>
+             * </ul>
              */
             public Builder rdsParameterOptional(String rdsParameterOptional) {
                 this.rdsParameterOptional = rdsParameterOptional;
@@ -391,7 +564,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter of the source instance.
+             * <p>The value of the parameter of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder rdsParameterValue(String rdsParameterValue) {
                 this.rdsParameterValue = rdsParameterValue;
@@ -405,9 +581,15 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterParametersResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("Parameters")
-        private java.util.List < ParametersParameters> parameters;
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private java.util.List<ParametersParameters> parameters;
 
         private Parameters(Builder builder) {
             this.parameters = builder.parameters;
@@ -424,17 +606,17 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < ParametersParameters> getParameters() {
+        public java.util.List<ParametersParameters> getParameters() {
             return this.parameters;
         }
 
         public static final class Builder {
-            private java.util.List < ParametersParameters> parameters; 
+            private java.util.List<ParametersParameters> parameters; 
 
             /**
-             * A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.
+             * <p>A comparison of parameters between the source RDS instance and the destination PolarDB cluster.</p>
              */
-            public Builder parameters(java.util.List < ParametersParameters> parameters) {
+            public Builder parameters(java.util.List<ParametersParameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -446,41 +628,47 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterParametersResponseBody</p>
+     */
     public static class Parameter extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DefaultParameterValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultParameterValue")
         private String defaultParameterValue;
 
-        @NameInMap("Factor")
+        @com.aliyun.core.annotation.NameInMap("Factor")
         private String factor;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Boolean forceRestart;
 
-        @NameInMap("IsModifiable")
+        @com.aliyun.core.annotation.NameInMap("IsModifiable")
         private Boolean isModifiable;
 
-        @NameInMap("IsNodeAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsNodeAvailable")
         private String isNodeAvailable;
 
-        @NameInMap("ParamRelyRule")
+        @com.aliyun.core.annotation.NameInMap("ParamRelyRule")
         private String paramRelyRule;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterStatus")
+        @com.aliyun.core.annotation.NameInMap("ParameterStatus")
         private String parameterStatus;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameter(Builder builder) {
@@ -605,7 +793,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The valid values of the parameter.
+             * <p>The valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[utf8|latin1|gbk|utf8mb4]</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -613,12 +804,15 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter value. Valid values:
-             * <p>
+             * <p>The data type of the parameter value. Valid values:</p>
+             * <ul>
+             * <li><strong>INT</strong></li>
+             * <li><strong>STRING</strong></li>
+             * <li><strong>B</strong></li>
+             * </ul>
              * 
-             * *   **INT**
-             * *   **STRING**
-             * *   **B**
+             * <strong>example:</strong>
+             * <p>INT</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -626,7 +820,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder defaultParameterValue(String defaultParameterValue) {
                 this.defaultParameterValue = defaultParameterValue;
@@ -634,7 +831,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.
+             * <p>A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder factor(String factor) {
                 this.factor = factor;
@@ -642,11 +842,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:
-             * <p>
+             * <p>Indicates whether a cluster restart is required for the parameter modification to take effect. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -654,11 +857,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter can be modified. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isModifiable(Boolean isModifiable) {
                 this.isModifiable = isModifiable;
@@ -666,11 +872,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is a global parameter. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The parameter is a global parameter. The modified parameter value is synchronized to other nodes.</li>
+             * <li><strong>1</strong>: The parameter is not a global parameter. You can specify the nodes to which the modified parameter value can be synchronized.</li>
+             * </ul>
              * 
-             * *   **0**: yes. The modified parameter value is synchronized to other nodes.
-             * *   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;
@@ -678,7 +887,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The dependencies of the parameter.
+             * <p>The dependencies of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -686,7 +898,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The server&quot;s default character set.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -694,7 +909,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>character_set_server</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -702,11 +920,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the parameter. Valid values:
-             * <p>
+             * <p>The status of the parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **Modifying**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder parameterStatus(String parameterStatus) {
                 this.parameterStatus = parameterStatus;
@@ -714,7 +935,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -728,9 +952,15 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterParametersResponseBody</p>
+     */
     public static class RunningParameters extends TeaModel {
-        @NameInMap("Parameter")
-        private java.util.List < Parameter> parameter;
+        @com.aliyun.core.annotation.NameInMap("Parameter")
+        private java.util.List<Parameter> parameter;
 
         private RunningParameters(Builder builder) {
             this.parameter = builder.parameter;
@@ -747,17 +977,17 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.List < Parameter> getParameter() {
+        public java.util.List<Parameter> getParameter() {
             return this.parameter;
         }
 
         public static final class Builder {
-            private java.util.List < Parameter> parameter; 
+            private java.util.List<Parameter> parameter; 
 
             /**
              * Parameter.
              */
-            public Builder parameter(java.util.List < Parameter> parameter) {
+            public Builder parameter(java.util.List<Parameter> parameter) {
                 this.parameter = parameter;
                 return this;
             }

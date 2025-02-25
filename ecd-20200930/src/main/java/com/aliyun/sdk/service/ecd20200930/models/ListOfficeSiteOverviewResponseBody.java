@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOfficeSiteOverviewResponseBody} extends {@link TeaModel}
  *
  * <p>ListOfficeSiteOverviewResponseBody</p>
  */
 public class ListOfficeSiteOverviewResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("OfficeSiteOverviewResults")
-    private java.util.List < OfficeSiteOverviewResults> officeSiteOverviewResults;
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteOverviewResults")
+    private java.util.List<OfficeSiteOverviewResults> officeSiteOverviewResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListOfficeSiteOverviewResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
     /**
      * @return officeSiteOverviewResults
      */
-    public java.util.List < OfficeSiteOverviewResults> getOfficeSiteOverviewResults() {
+    public java.util.List<OfficeSiteOverviewResults> getOfficeSiteOverviewResults() {
         return this.officeSiteOverviewResults;
     }
 
@@ -58,11 +63,14 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < OfficeSiteOverviewResults> officeSiteOverviewResults; 
+        private java.util.List<OfficeSiteOverviewResults> officeSiteOverviewResults; 
         private String requestId; 
 
         /**
-         * The token that is used to start the next query. If this parameter is empty, all results are returned.
+         * <p>The token that is used to start the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,15 +78,18 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the workspaces.
+         * <p>The office network information.</p>
          */
-        public Builder officeSiteOverviewResults(java.util.List < OfficeSiteOverviewResults> officeSiteOverviewResults) {
+        public Builder officeSiteOverviewResults(java.util.List<OfficeSiteOverviewResults> officeSiteOverviewResults) {
             this.officeSiteOverviewResults = officeSiteOverviewResults;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,44 +102,50 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOfficeSiteOverviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOfficeSiteOverviewResponseBody</p>
+     */
     public static class OfficeSiteOverviewResults extends TeaModel {
-        @NameInMap("HasExpiredEdsCount")
+        @com.aliyun.core.annotation.NameInMap("HasExpiredEdsCount")
         private Integer hasExpiredEdsCount;
 
-        @NameInMap("HasExpiredEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("HasExpiredEdsCountForGroup")
         private Integer hasExpiredEdsCountForGroup;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OfficeSiteStatus")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteStatus")
         private String officeSiteStatus;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RunningEdsCount")
+        @com.aliyun.core.annotation.NameInMap("RunningEdsCount")
         private Integer runningEdsCount;
 
-        @NameInMap("RunningEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("RunningEdsCountForGroup")
         private Integer runningEdsCountForGroup;
 
-        @NameInMap("TotalEdsCount")
+        @com.aliyun.core.annotation.NameInMap("TotalEdsCount")
         private Integer totalEdsCount;
 
-        @NameInMap("TotalEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("TotalEdsCountForGroup")
         private Integer totalEdsCountForGroup;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
-        @NameInMap("WillExpiredEdsCount")
+        @com.aliyun.core.annotation.NameInMap("WillExpiredEdsCount")
         private Integer willExpiredEdsCount;
 
-        @NameInMap("WillExpiredEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("WillExpiredEdsCountForGroup")
         private Integer willExpiredEdsCountForGroup;
 
         private OfficeSiteOverviewResults(Builder builder) {
@@ -262,7 +279,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             private Integer willExpiredEdsCountForGroup; 
 
             /**
-             * The number of expired cloud desktops in the workspace.
+             * <p>The number of expired cloud computers in the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder hasExpiredEdsCount(Integer hasExpiredEdsCount) {
                 this.hasExpiredEdsCount = hasExpiredEdsCount;
@@ -270,7 +290,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of expired cloud desktops in the desktop group.
+             * <p>The number of expired cloud computers in the cloud computer pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder hasExpiredEdsCountForGroup(Integer hasExpiredEdsCountForGroup) {
                 this.hasExpiredEdsCountForGroup = hasExpiredEdsCountForGroup;
@@ -278,7 +301,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-363353****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -286,7 +312,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>The office network name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -294,7 +323,75 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the workspace.
+             * <p>The office network status.</p>
+             * <p>Default values:</p>
+             * <ul>
+             * <li><p>CONFIGUSERFAILED</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>REGISTERING</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>REGISTERED</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>NEEDCONFIGTRUST</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CONFIGUSERING</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CONFIGTRUSTFAILED</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>ERROR</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CONFIGTRUSTING</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>NEEDCONFIGUSER</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>REGISTERED</p>
              */
             public Builder officeSiteStatus(String officeSiteStatus) {
                 this.officeSiteStatus = officeSiteStatus;
@@ -302,7 +399,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the workspace.
+             * <p>The ID of the region where the office network resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -310,7 +410,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running cloud desktops in the workspace.
+             * <p>The number of cloud computers that are running in the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningEdsCount(Integer runningEdsCount) {
                 this.runningEdsCount = runningEdsCount;
@@ -318,7 +421,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running cloud desktops in the desktop group.
+             * <p>The number of running cloud computers in the cloud computer pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningEdsCountForGroup(Integer runningEdsCountForGroup) {
                 this.runningEdsCountForGroup = runningEdsCountForGroup;
@@ -326,7 +432,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud desktops in the workspace.
+             * <p>The total number of cloud computers in the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalEdsCount(Integer totalEdsCount) {
                 this.totalEdsCount = totalEdsCount;
@@ -334,7 +443,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud desktops in the desktop group.
+             * <p>The total number of cloud computers in the cloud computer pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalEdsCountForGroup(Integer totalEdsCountForGroup) {
                 this.totalEdsCountForGroup = totalEdsCountForGroup;
@@ -342,7 +454,16 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) type of the workspace.
+             * <p>The office network type and its suitable VPC type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>standard (default): standard, exclusive VPC</li>
+             * <li>customized: custom, user VPC</li>
+             * <li>basic: basic, shared VPC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -350,7 +471,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are about to expire in the workspace.
+             * <p>The number of cloud computers that are about to expire in the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder willExpiredEdsCount(Integer willExpiredEdsCount) {
                 this.willExpiredEdsCount = willExpiredEdsCount;
@@ -358,7 +482,10 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are about to expire in the desktop group.
+             * <p>The number of cloud computers that are about to expire in the cloud computer pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder willExpiredEdsCountForGroup(Integer willExpiredEdsCountForGroup) {
                 this.willExpiredEdsCountForGroup = willExpiredEdsCountForGroup;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountInfoResponseBody</p>
  */
 public class GetAccountInfoResponseBody extends TeaModel {
-    @NameInMap("AccountInfo")
+    @com.aliyun.core.annotation.NameInMap("AccountInfo")
     private AccountInfo accountInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountInfoResponseBody(Builder builder) {
@@ -71,40 +76,66 @@ public class GetAccountInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountInfoResponseBody</p>
+     */
     public static class AccountInfo extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("MonthFreeCount")
+        @com.aliyun.core.annotation.NameInMap("DohEnabled")
+        private Boolean dohEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("DohResolveAllEnabled")
+        private Boolean dohResolveAllEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("MonthDohResolveCount")
+        private Long monthDohResolveCount;
+
+        @com.aliyun.core.annotation.NameInMap("MonthFreeCount")
         private Integer monthFreeCount;
 
-        @NameInMap("MonthHttpsResolveCount")
+        @com.aliyun.core.annotation.NameInMap("MonthHttpsResolveCount")
         private Integer monthHttpsResolveCount;
 
-        @NameInMap("MonthResolveCount")
+        @com.aliyun.core.annotation.NameInMap("MonthResolveCount")
         private Integer monthResolveCount;
 
-        @NameInMap("SignSecret")
+        @com.aliyun.core.annotation.NameInMap("PackageCount")
+        private Integer packageCount;
+
+        @com.aliyun.core.annotation.NameInMap("SignSecret")
         private String signSecret;
 
-        @NameInMap("SignedCount")
+        @com.aliyun.core.annotation.NameInMap("SignedCount")
         private Long signedCount;
 
-        @NameInMap("UnsignedCount")
+        @com.aliyun.core.annotation.NameInMap("UnsignedCount")
         private Long unsignedCount;
 
-        @NameInMap("UnsignedEnabled")
+        @com.aliyun.core.annotation.NameInMap("UnsignedEnabled")
         private Boolean unsignedEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("UserStatus")
+        private Integer userStatus;
 
         private AccountInfo(Builder builder) {
             this.accountId = builder.accountId;
+            this.dohEnabled = builder.dohEnabled;
+            this.dohResolveAllEnabled = builder.dohResolveAllEnabled;
+            this.monthDohResolveCount = builder.monthDohResolveCount;
             this.monthFreeCount = builder.monthFreeCount;
             this.monthHttpsResolveCount = builder.monthHttpsResolveCount;
             this.monthResolveCount = builder.monthResolveCount;
+            this.packageCount = builder.packageCount;
             this.signSecret = builder.signSecret;
             this.signedCount = builder.signedCount;
             this.unsignedCount = builder.unsignedCount;
             this.unsignedEnabled = builder.unsignedEnabled;
+            this.userStatus = builder.userStatus;
         }
 
         public static Builder builder() {
@@ -120,6 +151,27 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         public String getAccountId() {
             return this.accountId;
+        }
+
+        /**
+         * @return dohEnabled
+         */
+        public Boolean getDohEnabled() {
+            return this.dohEnabled;
+        }
+
+        /**
+         * @return dohResolveAllEnabled
+         */
+        public Boolean getDohResolveAllEnabled() {
+            return this.dohResolveAllEnabled;
+        }
+
+        /**
+         * @return monthDohResolveCount
+         */
+        public Long getMonthDohResolveCount() {
+            return this.monthDohResolveCount;
         }
 
         /**
@@ -141,6 +193,13 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         public Integer getMonthResolveCount() {
             return this.monthResolveCount;
+        }
+
+        /**
+         * @return packageCount
+         */
+        public Integer getPackageCount() {
+            return this.packageCount;
         }
 
         /**
@@ -171,21 +230,57 @@ public class GetAccountInfoResponseBody extends TeaModel {
             return this.unsignedEnabled;
         }
 
+        /**
+         * @return userStatus
+         */
+        public Integer getUserStatus() {
+            return this.userStatus;
+        }
+
         public static final class Builder {
             private String accountId; 
+            private Boolean dohEnabled; 
+            private Boolean dohResolveAllEnabled; 
+            private Long monthDohResolveCount; 
             private Integer monthFreeCount; 
             private Integer monthHttpsResolveCount; 
             private Integer monthResolveCount; 
+            private Integer packageCount; 
             private String signSecret; 
             private Long signedCount; 
             private Long unsignedCount; 
             private Boolean unsignedEnabled; 
+            private Integer userStatus; 
 
             /**
              * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * DohEnabled.
+             */
+            public Builder dohEnabled(Boolean dohEnabled) {
+                this.dohEnabled = dohEnabled;
+                return this;
+            }
+
+            /**
+             * DohResolveAllEnabled.
+             */
+            public Builder dohResolveAllEnabled(Boolean dohResolveAllEnabled) {
+                this.dohResolveAllEnabled = dohResolveAllEnabled;
+                return this;
+            }
+
+            /**
+             * MonthDohResolveCount.
+             */
+            public Builder monthDohResolveCount(Long monthDohResolveCount) {
+                this.monthDohResolveCount = monthDohResolveCount;
                 return this;
             }
 
@@ -210,6 +305,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
              */
             public Builder monthResolveCount(Integer monthResolveCount) {
                 this.monthResolveCount = monthResolveCount;
+                return this;
+            }
+
+            /**
+             * PackageCount.
+             */
+            public Builder packageCount(Integer packageCount) {
+                this.packageCount = packageCount;
                 return this;
             }
 
@@ -242,6 +345,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
              */
             public Builder unsignedEnabled(Boolean unsignedEnabled) {
                 this.unsignedEnabled = unsignedEnabled;
+                return this;
+            }
+
+            /**
+             * UserStatus.
+             */
+            public Builder userStatus(Integer userStatus) {
+                this.userStatus = userStatus;
                 return this;
             }
 

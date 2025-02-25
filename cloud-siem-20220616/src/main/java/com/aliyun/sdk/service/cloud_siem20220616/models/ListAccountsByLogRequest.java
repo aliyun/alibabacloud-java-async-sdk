@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccountsByLogRequest</p>
  */
 public class ListAccountsByLogRequest extends Request {
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("LogCodes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogCodes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > logCodes;
 
-    @Body
-    @NameInMap("ProdCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProdCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String prodCode;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
 
     private ListAccountsByLogRequest(Builder builder) {
         super(builder);
@@ -37,6 +44,8 @@ public class ListAccountsByLogRequest extends Request {
         this.logCodes = builder.logCodes;
         this.prodCode = builder.prodCode;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
@@ -80,11 +89,27 @@ public class ListAccountsByLogRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
     public static final class Builder extends Request.Builder<ListAccountsByLogRequest, Builder> {
         private String cloudCode; 
         private java.util.List < String > logCodes; 
         private String prodCode; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
@@ -96,10 +121,12 @@ public class ListAccountsByLogRequest extends Request {
             this.logCodes = request.logCodes;
             this.prodCode = request.prodCode;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
-         * CloudCode.
+         * The code that is used for multi-cloud environments.
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -108,7 +135,7 @@ public class ListAccountsByLogRequest extends Request {
         }
 
         /**
-         * LogCodes.
+         * The codes of logs. The value is a JSON array.
          */
         public Builder logCodes(java.util.List < String > logCodes) {
             this.putBodyParameter("LogCodes", logCodes);
@@ -117,7 +144,7 @@ public class ListAccountsByLogRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * The code of the service.
          */
         public Builder prodCode(String prodCode) {
             this.putBodyParameter("ProdCode", prodCode);
@@ -126,11 +153,36 @@ public class ListAccountsByLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

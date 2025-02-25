@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoSnapshotPolicyResponseBody</p>
  */
 public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
-    @NameInMap("AutoSnapshotPolicies")
-    private java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies;
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicies")
+    private java.util.List<AutoSnapshotPolicies> autoSnapshotPolicies;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAutoSnapshotPolicyResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
      * @return autoSnapshotPolicies
      */
-    public java.util.List < AutoSnapshotPolicies> getAutoSnapshotPolicies() {
+    public java.util.List<AutoSnapshotPolicies> getAutoSnapshotPolicies() {
         return this.autoSnapshotPolicies;
     }
 
@@ -57,20 +62,23 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies; 
+        private java.util.List<AutoSnapshotPolicies> autoSnapshotPolicies; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * Details of the automatic snapshot policies.
+         * <p>The details of the queried automatic snapshot policies.</p>
          */
-        public Builder autoSnapshotPolicies(java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies) {
+        public Builder autoSnapshotPolicies(java.util.List<AutoSnapshotPolicies> autoSnapshotPolicies) {
             this.autoSnapshotPolicies = autoSnapshotPolicies;
             return this;
         }
 
         /**
-         * The token that is used to start the next query. If this parameter is empty, all results haven been returned.
+         * <p>The token that is used to start the next query. If this parameter is empty, all results haven been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7F6612E-59CC-59F9-9DD1-91867FCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,32 +102,38 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyResponseBody</p>
+     */
     public static class AutoSnapshotPolicies extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("DesktopNum")
+        @com.aliyun.core.annotation.NameInMap("DesktopNum")
         private Integer desktopNum;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RetentionDays")
+        @com.aliyun.core.annotation.NameInMap("RetentionDays")
         private String retentionDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimePoints")
+        @com.aliyun.core.annotation.NameInMap("TimePoints")
         private String timePoints;
 
         private AutoSnapshotPolicies(Builder builder) {
@@ -214,7 +231,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             private String timePoints; 
 
             /**
-             * The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.
+             * <p>The time when the automatic snapshot policy was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-11T09:14:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -222,7 +242,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression that is used to create the snapshot.
+             * <p>The cron expression that specifies when Elastic Desktop Service creates snapshots on the cloud computers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 5,7 ? * 2/2</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -230,7 +253,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are associated with the automatic snapshot policy.
+             * <p>The number of cloud computers to which the automatic snapshot policy is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder desktopNum(Integer desktopNum) {
                 this.desktopNum = desktopNum;
@@ -238,7 +264,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the automatic snapshot policy.
+             * <p>The ID of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-3e3bmfcdkjfl1****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -246,7 +275,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the automatic snapshot policy.
+             * <p>The name of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snapshot01</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -254,7 +286,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the automatic snapshot policy resides.
+             * <p>The ID of the region to which the automatic snapshot policy belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -262,11 +297,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the automatic snapshot. Unit: days. Valid values:
-             * <p>
+             * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
              * 
-             * *   \-1: The snapshot is permanently retained.
-             * *   1 to 65536: The automatic snapshot is retained for the specified number of days.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder retentionDays(String retentionDays) {
                 this.retentionDays = retentionDays;
@@ -274,11 +308,26 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the automatic snapshot policy. Valid values:
-             * <p>
+             * <p>The status of the automatic snapshot policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Expire: The automatic snapshot policy cannot be used because you have overdue payments in your account.</p>
+             * <!-- -->
              * 
-             * *   Normal: The automatic snapshot policy is normal.
-             * *   Expire: The automatic snapshot policy cannot be used because your account has an overdue payment.
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Normal: The automatic snapshot policy is normal.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -286,12 +335,11 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time at which automatic snapshots are created.
-             * <p>
+             * <p>The points in time at which the auto snapshots were created.</p>
+             * <p>The parameter values are a JSON array. Example: <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. A maximum of 24 points in time are returned. The points in time are separated with commas (,).</p>
              * 
-             * The time is displayed in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Multiple points in time can be specified.
-             * 
-             * The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: `["0", "1", ... "23"]`.
+             * <strong>example:</strong>
+             * <p>[&quot;17&quot;,&quot;18&quot;]</p>
              */
             public Builder timePoints(String timePoints) {
                 this.timePoints = timePoints;

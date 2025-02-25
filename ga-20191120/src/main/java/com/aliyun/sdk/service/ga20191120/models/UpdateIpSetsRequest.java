@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIpSetsRequest</p>
  */
 public class UpdateIpSetsRequest extends Request {
-    @Query
-    @NameInMap("IpSets")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpSets")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < IpSets> ipSets;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateIpSetsRequest(Builder builder) {
@@ -95,12 +94,12 @@ public class UpdateIpSetsRequest extends Request {
     } 
 
     public static class IpSets extends TeaModel {
-        @NameInMap("Bandwidth")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer bandwidth;
 
-        @NameInMap("IpSetId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IpSetId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ipSetId;
 
         private IpSets(Builder builder) {
@@ -135,10 +134,10 @@ public class UpdateIpSetsRequest extends Request {
             private String ipSetId; 
 
             /**
-             * The new bandwidth of the acceleration region. Unit: Mbit/s.
+             * The new bandwidth that you want to allocate to the acceleration regions. Unit: Mbit/s.
              * <p>
              * 
-             * You can specify the bandwidth for up to 100 acceleration regions.
+             * You must allocate at least 2 Mbit/s of bandwidth to each acceleration region. You can specify the bandwidth for up to 100 acceleration regions.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -146,7 +145,7 @@ public class UpdateIpSetsRequest extends Request {
             }
 
             /**
-             * The ID of the acceleration region that you want to modify.
+             * The IDs of the acceleration regions that you want to modify.
              * <p>
              * 
              * You can specify the IDs of up to 100 acceleration regions.

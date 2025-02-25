@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspaceDashboardSync} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspaceDashboardSync</p>
  */
 public class GrafanaWorkspaceDashboardSync extends TeaModel {
-    @NameInMap("dashboardTitle")
+    @com.aliyun.core.annotation.NameInMap("dashboardTitle")
     private String dashboardTitle;
 
-    @NameInMap("dashboardURL")
+    @com.aliyun.core.annotation.NameInMap("dashboardURL")
     private String dashboardURL;
 
-    @NameInMap("dashboardUid")
+    @com.aliyun.core.annotation.NameInMap("dashboardUid")
     private String dashboardUid;
 
-    @NameInMap("folderId")
+    @com.aliyun.core.annotation.NameInMap("folderId")
     private String folderId;
 
-    @NameInMap("folderTitle")
+    @com.aliyun.core.annotation.NameInMap("folderTitle")
     private String folderTitle;
 
-    @NameInMap("folderURL")
+    @com.aliyun.core.annotation.NameInMap("folderURL")
     private String folderURL;
 
-    @NameInMap("folderUid")
+    @com.aliyun.core.annotation.NameInMap("folderUid")
     private String folderUid;
 
-    @NameInMap("orgId")
+    @com.aliyun.core.annotation.NameInMap("orgId")
     private String orgId;
 
-    @NameInMap("orgName")
+    @com.aliyun.core.annotation.NameInMap("orgName")
     private String orgName;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private GrafanaWorkspaceDashboardSync(Builder builder) {

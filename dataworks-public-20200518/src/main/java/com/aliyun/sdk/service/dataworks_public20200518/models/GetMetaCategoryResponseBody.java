@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaCategoryResponseBody</p>
  */
 public class GetMetaCategoryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaCategoryResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,32 +171,38 @@ public class GetMetaCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaCategoryResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Depth")
+        @com.aliyun.core.annotation.NameInMap("Depth")
         private Integer depth;
 
-        @NameInMap("LastOperatorId")
+        @com.aliyun.core.annotation.NameInMap("LastOperatorId")
         private String lastOperatorId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("ParentCategoryId")
+        @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
         private Long parentCategoryId;
 
         private DataEntityList(Builder builder) {
@@ -274,7 +300,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private Long parentCategoryId; 
 
             /**
-             * The ID of the category.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -282,7 +311,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the category.
+             * <p>The remarks of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category 1</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -290,7 +322,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the category was created.
+             * <p>The time when the category was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -298,7 +333,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of category levels.
+             * <p>The number of category levels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -306,7 +344,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user that performed the last operation.
+             * <p>The ID of the user that performed the last operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder lastOperatorId(String lastOperatorId) {
                 this.lastOperatorId = lastOperatorId;
@@ -314,7 +355,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the category was last modified.
+             * <p>The time when the category was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -322,7 +366,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +377,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the category owner.
+             * <p>The category owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -338,7 +388,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * <p>The parent category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder parentCategoryId(Long parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;
@@ -352,17 +405,23 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataEntityList")
-        private java.util.List < DataEntityList> dataEntityList;
+        @com.aliyun.core.annotation.NameInMap("DataEntityList")
+        private java.util.List<DataEntityList> dataEntityList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -383,7 +442,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         /**
          * @return dataEntityList
          */
-        public java.util.List < DataEntityList> getDataEntityList() {
+        public java.util.List<DataEntityList> getDataEntityList() {
             return this.dataEntityList;
         }
 
@@ -409,21 +468,24 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataEntityList> dataEntityList; 
+            private java.util.List<DataEntityList> dataEntityList; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Long totalCount; 
 
             /**
-             * The information about the category tree.
+             * <p>The information about the category tree.</p>
              */
-            public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
+            public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -431,7 +493,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +504,10 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of categories.
+             * <p>The total number of categories returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

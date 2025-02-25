@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountPrivilegesRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountPrivilegesRequest</p>
  */
 public class ModifyAccountPrivilegesRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPrivileges")
-    @Validation(required = true)
-    private java.util.List < AccountPrivileges> accountPrivileges;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPrivileges")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<AccountPrivileges> accountPrivileges;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyAccountPrivilegesRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
     /**
      * @return accountPrivileges
      */
-    public java.util.List < AccountPrivileges> getAccountPrivileges() {
+    public java.util.List<AccountPrivileges> getAccountPrivileges() {
         return this.accountPrivileges;
     }
 
@@ -83,7 +88,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyAccountPrivilegesRequest, Builder> {
         private String accountName; 
-        private java.util.List < AccountPrivileges> accountPrivileges; 
+        private java.util.List<AccountPrivileges> accountPrivileges; 
         private String DBClusterId; 
         private String regionId; 
 
@@ -100,7 +105,11 @@ public class ModifyAccountPrivilegesRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -109,9 +118,10 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * The permissions of the database account.
+         * <p>The permissions that you want to grant to the database account.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder accountPrivileges(java.util.List < AccountPrivileges> accountPrivileges) {
+        public Builder accountPrivileges(java.util.List<AccountPrivileges> accountPrivileges) {
             String accountPrivilegesShrink = shrink(accountPrivileges, "AccountPrivileges", "json");
             this.putQueryParameter("AccountPrivileges", accountPrivilegesShrink);
             this.accountPrivileges = accountPrivileges;
@@ -119,7 +129,11 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1k5p066e1a****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -128,7 +142,11 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,14 +161,20 @@ public class ModifyAccountPrivilegesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAccountPrivilegesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAccountPrivilegesRequest</p>
+     */
     public static class PrivilegeObject extends TeaModel {
-        @NameInMap("Column")
+        @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private PrivilegeObject(Builder builder) {
@@ -194,7 +218,10 @@ public class ModifyAccountPrivilegesRequest extends Request {
             private String table; 
 
             /**
-             * The columns on which the database account has permissions. This parameter is required if the PrivilegeType parameter is set to Column.
+             * <p>The columns on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -202,7 +229,10 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The databases on which the database account has permissions. This parameter is required if the PrivilegeType parameter is set to Database, Table, or Column.
+             * <p>The databases on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Database, Table, or Column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tsdb1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -210,7 +240,10 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The tables on which the database account has permissions. This parameter is required if the PrivilegeType parameter is set to Table or Column.
+             * <p>The tables on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Table or Column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -224,15 +257,21 @@ public class ModifyAccountPrivilegesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAccountPrivilegesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAccountPrivilegesRequest</p>
+     */
     public static class AccountPrivileges extends TeaModel {
-        @NameInMap("PrivilegeObject")
+        @com.aliyun.core.annotation.NameInMap("PrivilegeObject")
         private PrivilegeObject privilegeObject;
 
-        @NameInMap("PrivilegeType")
+        @com.aliyun.core.annotation.NameInMap("PrivilegeType")
         private String privilegeType;
 
-        @NameInMap("Privileges")
-        private java.util.List < String > privileges;
+        @com.aliyun.core.annotation.NameInMap("Privileges")
+        private java.util.List<String> privileges;
 
         private AccountPrivileges(Builder builder) {
             this.privilegeObject = builder.privilegeObject;
@@ -265,17 +304,17 @@ public class ModifyAccountPrivilegesRequest extends Request {
         /**
          * @return privileges
          */
-        public java.util.List < String > getPrivileges() {
+        public java.util.List<String> getPrivileges() {
             return this.privileges;
         }
 
         public static final class Builder {
             private PrivilegeObject privilegeObject; 
             private String privilegeType; 
-            private java.util.List < String > privileges; 
+            private java.util.List<String> privileges; 
 
             /**
-             * The objects on which the permission takes effect, including databases, tables, and columns.
+             * <p>The objects on which you want to grant permissions, including databases, tables, and columns.</p>
              */
             public Builder privilegeObject(PrivilegeObject privilegeObject) {
                 this.privilegeObject = privilegeObject;
@@ -283,7 +322,10 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The permission level of the database account. You can call the `DescribeEnabledPrivileges` operation to query the permission level of the database account.
+             * <p>The permission level that you want to assign to the database account. You can call the <code>DescribeEnabledPrivileges</code> operation to query the permission level that can be assigned to the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder privilegeType(String privilegeType) {
                 this.privilegeType = privilegeType;
@@ -291,9 +333,9 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The permissions that you want to modify. You can call the `DescribeEnabledPrivileges` operation to query the permissions of the database account.
+             * <p>The permissions that you want to grant to the database account.</p>
              */
-            public Builder privileges(java.util.List < String > privileges) {
+            public Builder privileges(java.util.List<String> privileges) {
                 this.privileges = privileges;
                 return this;
             }

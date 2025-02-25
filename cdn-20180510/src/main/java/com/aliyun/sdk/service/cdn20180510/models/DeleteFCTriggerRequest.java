@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFCTriggerRequest} extends {@link RequestModel}
  *
  * <p>DeleteFCTriggerRequest</p>
  */
 public class DeleteFCTriggerRequest extends Request {
-    @Query
-    @NameInMap("TriggerARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerARN;
 
     private DeleteFCTriggerRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteFCTriggerRequest extends Request {
         } 
 
         /**
-         * The trigger that corresponds to the Function Compute service.
+         * <p>The trigger that corresponds to the Function Compute service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:cdn:{RegionID}:{AccountID}:{Filter}</p>
          */
         public Builder triggerARN(String triggerARN) {
             this.putQueryParameter("TriggerARN", triggerARN);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitParentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationalUnitParentsResponseBody</p>
  */
 public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
-    @NameInMap("Parents")
-    private java.util.List < Parents> parents;
+    @com.aliyun.core.annotation.NameInMap("Parents")
+    private java.util.List<Parents> parents;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListOrganizationalUnitParentsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     /**
      * @return parents
      */
-    public java.util.List < Parents> getParents() {
+    public java.util.List<Parents> getParents() {
         return this.parents;
     }
 
@@ -46,13 +51,13 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Parents> parents; 
+        private java.util.List<Parents> parents; 
         private String requestId; 
 
         /**
          * Parents.
          */
-        public Builder parents(java.util.List < Parents> parents) {
+        public Builder parents(java.util.List<Parents> parents) {
             this.parents = parents;
             return this;
         }
@@ -71,11 +76,17 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationalUnitParentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationalUnitParentsResponseBody</p>
+     */
     public static class Parents extends TeaModel {
-        @NameInMap("OrganizationalUnitId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
         private Parents(Builder builder) {
@@ -110,7 +121,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
             private String parentId; 
 
             /**
-             * 组织ID
+             * <p>组织ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_4lag76zc2km5ssg5vsmm2lznvu</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -118,7 +132,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
             }
 
             /**
-             * 父组织ID
+             * <p>父组织ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_x3beoyepv2ls5iwuge3xhjkwbm</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;

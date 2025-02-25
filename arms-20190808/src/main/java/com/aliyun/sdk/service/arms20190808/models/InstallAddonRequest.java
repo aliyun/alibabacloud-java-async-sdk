@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAddonRequest} extends {@link RequestModel}
  *
  * <p>InstallAddonRequest</p>
  */
 public class InstallAddonRequest extends Request {
-    @Query
-    @NameInMap("AddonVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddonVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addonVersion;
 
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ReleaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseName")
     private String releaseName;
 
-    @Query
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Values")
     private String values;
 
     private InstallAddonRequest(Builder builder) {
@@ -155,7 +160,11 @@ public class InstallAddonRequest extends Request {
         } 
 
         /**
-         * Version of Addon.
+         * <p>The version of the add-on.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);
@@ -164,7 +173,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Locale, the default is Chinese zh.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -173,7 +185,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Whether to test run. The default value is false.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -182,7 +197,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -191,7 +210,11 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Name of Addon.
+         * <p>The name of the add-on.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -200,7 +223,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,7 +235,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The release name after installation, if not specified, generates the default rule name.
+         * <p>The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql-xxxxx</p>
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("ReleaseName", releaseName);
@@ -218,7 +247,10 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Config information.
+         * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;host&quot;:&quot;mysql-service.default&quot;,&quot;port&quot;:3306,&quot;username&quot;:&quot;root&quot;,&quot;password&quot;:&quot;roots&quot;}</p>
          */
         public Builder values(String values) {
             this.putQueryParameter("Values", values);

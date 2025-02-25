@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutMonitorGroupDynamicRuleRequest} extends {@link RequestModel}
  *
  * <p>PutMonitorGroupDynamicRuleRequest</p>
  */
 public class PutMonitorGroupDynamicRuleRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("GroupRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < GroupRules> groupRules;
 
-    @Query
-    @NameInMap("IsAsync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAsync")
     private Boolean isAsync;
 
     private PutMonitorGroupDynamicRuleRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -93,7 +97,8 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         }
 
         /**
-         * None.
+         * <p>None.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder groupRules(java.util.List < GroupRules> groupRules) {
             this.putQueryParameter("GroupRules", groupRules);
@@ -102,11 +107,14 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         }
 
         /**
-         * The mode for creating the alert rule. Valid values:
-         * <p>
+         * <p>The mode for creating the alert rule. Valid values:</p>
+         * <ul>
+         * <li>true: creates asynchronously</li>
+         * <li>false (default): creates synchronously</li>
+         * </ul>
          * 
-         * *   true: creates asynchronously
-         * *   false (default): creates synchronously
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isAsync(Boolean isAsync) {
             this.putQueryParameter("IsAsync", isAsync);
@@ -121,17 +129,23 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutMonitorGroupDynamicRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutMonitorGroupDynamicRuleRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Function")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Function")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String function;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Filters(Builder builder) {
@@ -175,13 +189,17 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:
-             * <p>
+             * <p>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</p>
+             * <ul>
+             * <li>contains: contains</li>
+             * <li>notContains: does not contain</li>
+             * <li>startWith: starts with a prefix</li>
+             * <li>endWith: ends with a suffix</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   contains: contains
-             * *   notContains: does not contain
-             * *   startWith: starts with a prefix
-             * *   endWith: ends with a suffix
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder function(String function) {
                 this.function = function;
@@ -189,10 +207,12 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * The name of the field based on which instances are filtered. Valid values of N: 1 to 3.
-             * <p>
+             * <p>The name of the field based on which instances are filtered. Valid values of N: 1 to 3.</p>
+             * <p>Only hostnames are supported. Example: hostName.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Only hostnames are supported. Example: hostName.
+             * <strong>example:</strong>
+             * <p>hostName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -200,7 +220,11 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * The value to be matched with the specified field. Valid values of N: 1 to 3.
+             * <p>The value to be matched with the specified field. Valid values of N: 1 to 3.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -214,17 +238,23 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutMonitorGroupDynamicRuleRequest} extends {@link TeaModel}
+     *
+     * <p>PutMonitorGroupDynamicRuleRequest</p>
+     */
     public static class GroupRules extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("FilterRelation")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FilterRelation")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String filterRelation;
 
-        @NameInMap("Filters")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Filters")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < Filters> filters;
 
         private GroupRules(Builder builder) {
@@ -268,12 +298,16 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             private java.util.List < Filters> filters; 
 
             /**
-             * The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:
-             * <p>
+             * <p>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</p>
+             * <ul>
+             * <li>ecs: Elastic Compute Service (ECS)</li>
+             * <li>rds: ApsaraDB RDS</li>
+             * <li>slb: Server Load Balancer (SLB)</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   ecs: Elastic Compute Service (ECS)
-             * *   rds: ApsaraDB RDS
-             * *   slb: Server Load Balancer (SLB)
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -281,11 +315,15 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:
-             * <p>
+             * <p>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</p>
+             * <ul>
+             * <li>and: The instances that meet all the conditional expressions are automatically added to the application group.</li>
+             * <li>or: The instances that meet one of the conditional expressions are automatically added to the application group.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   and: The instances that meet all the conditional expressions are automatically added to the application group.
-             * *   or: The instances that meet one of the conditional expressions are automatically added to the application group.
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder filterRelation(String filterRelation) {
                 this.filterRelation = filterRelation;
@@ -293,7 +331,8 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
             }
 
             /**
-             * None.
+             * <p>None.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;

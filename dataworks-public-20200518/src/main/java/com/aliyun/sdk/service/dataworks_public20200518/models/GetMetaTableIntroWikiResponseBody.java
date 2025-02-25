@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableIntroWikiResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableIntroWikiResponseBody</p>
  */
 public class GetMetaTableIntroWikiResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableIntroWikiResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data returned.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,23 +171,29 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableIntroWikiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableIntroWikiResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Data(Builder builder) {
@@ -238,7 +264,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * The description of the metatable.
+             * <p>The description of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p># Business requirements\n\n&amp;lt;a name=&amp;quot;xiw5n&amp;quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -246,7 +275,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was created.
+             * <p>The time when the metatable was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584444247000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -254,7 +286,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the metatable.
+             * <p>The creator of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -262,7 +297,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who created the metatable.
+             * <p>The name of the user who creates the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -270,7 +308,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was modified.
+             * <p>The time when the metatable was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584444247000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -278,7 +319,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;

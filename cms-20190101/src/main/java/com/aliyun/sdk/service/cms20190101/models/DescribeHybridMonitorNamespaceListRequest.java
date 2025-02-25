@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridMonitorNamespaceListRequest} extends {@link RequestModel}
  *
  * <p>DescribeHybridMonitorNamespaceListRequest</p>
  */
 public class DescribeHybridMonitorNamespaceListRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ShowTaskStatistic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowTaskStatistic")
     private Boolean showTaskStatistic;
 
     private DescribeHybridMonitorNamespaceListRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         } 
 
         /**
-         * The keyword that is used to search for namespaces.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -119,10 +122,11 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <p>The name can contain letters, digits, and hyphens (-).</p>
          * 
-         * The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>aliyun-test</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,10 +135,11 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Page numbers start from 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,10 +148,11 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Page numbers start from 1. Default value: 10.</p>
          * 
-         * A minimum of 1 entry can be returned on each page. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,11 +161,14 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:
-         * <p>
+         * <p>Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default value)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showTaskStatistic(Boolean showTaskStatistic) {
             this.putQueryParameter("ShowTaskStatistic", showTaskStatistic);

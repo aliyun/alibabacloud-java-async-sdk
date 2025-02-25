@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WorkflowInstance</p>
  */
 public class WorkflowInstance extends TeaModel {
-    @NameInMap("BatchProgress")
+    @com.aliyun.core.annotation.NameInMap("BatchProgress")
     private Integer batchProgress;
 
-    @NameInMap("DlfWorkflowId")
+    @com.aliyun.core.annotation.NameInMap("DlfWorkflowId")
     private String dlfWorkflowId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("ExternalInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ExternalInstanceId")
     private String externalInstanceId;
 
-    @NameInMap("RuntimeLogs")
+    @com.aliyun.core.annotation.NameInMap("RuntimeLogs")
     private java.util.List < LogInfo > runtimeLogs;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private WorkflowInstance(Builder builder) {

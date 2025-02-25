@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetForgetPasswordConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetForgetPasswordConfigurationRequest</p>
  */
 public class SetForgetPasswordConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AuthenticationChannels")
-    @Validation(maxLength = 32)
-    private java.util.List < String > authenticationChannels;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationChannels")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
+    private java.util.List<String> authenticationChannels;
 
-    @Query
-    @NameInMap("ForgetPasswordStatus")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForgetPasswordStatus")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String forgetPasswordStatus;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
     private SetForgetPasswordConfigurationRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class SetForgetPasswordConfigurationRequest extends Request {
     /**
      * @return authenticationChannels
      */
-    public java.util.List < String > getAuthenticationChannels() {
+    public java.util.List<String> getAuthenticationChannels() {
         return this.authenticationChannels;
     }
 
@@ -82,7 +87,7 @@ public class SetForgetPasswordConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetForgetPasswordConfigurationRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > authenticationChannels; 
+        private java.util.List<String> authenticationChannels; 
         private String forgetPasswordStatus; 
         private String instanceId; 
 
@@ -108,16 +113,23 @@ public class SetForgetPasswordConfigurationRequest extends Request {
         }
 
         /**
-         * 身份认证渠道。枚举取值:email(邮件)、sms(短信)
+         * <p>The authentication channels. Valid values: email and sms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
-        public Builder authenticationChannels(java.util.List < String > authenticationChannels) {
+        public Builder authenticationChannels(java.util.List<String> authenticationChannels) {
             this.putQueryParameter("AuthenticationChannels", authenticationChannels);
             this.authenticationChannels = authenticationChannels;
             return this;
         }
 
         /**
-         * 忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)
+         * <p>The status of the forgot password feature. Valid values: enabled and disabled.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder forgetPasswordStatus(String forgetPasswordStatus) {
             this.putQueryParameter("ForgetPasswordStatus", forgetPasswordStatus);
@@ -126,7 +138,11 @@ public class SetForgetPasswordConfigurationRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eiam-111ccc1111</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

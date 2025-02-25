@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationMonitorResponseBody</p>
  */
 public class DescribeApplicationMonitorResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @NameInMap("DetectEnable")
+    @com.aliyun.core.annotation.NameInMap("DetectEnable")
     private Boolean detectEnable;
 
-    @NameInMap("DetectThreshold")
+    @com.aliyun.core.annotation.NameInMap("DetectThreshold")
     private Integer detectThreshold;
 
-    @NameInMap("DetectTimes")
+    @com.aliyun.core.annotation.NameInMap("DetectTimes")
     private Integer detectTimes;
 
-    @NameInMap("IspCityList")
+    @com.aliyun.core.annotation.NameInMap("IspCityList")
     private java.util.List < IspCityList> ispCityList;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("OptionsJson")
+    @com.aliyun.core.annotation.NameInMap("OptionsJson")
     private String optionsJson;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SilenceTime")
+    @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Integer silenceTime;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private DescribeApplicationMonitorResponseBody(Builder builder) {
@@ -294,18 +293,14 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the application monitor task. Valid values:
+         * The status of the origin probing task. Valid values:
          * <p>
          * 
-         * - **init**
-         * 
-         * - **active**
-         * 
-         * - **updating**
-         * 
-         * - **inactive**
-         * 
-         * - **deleting**
+         * *   **init**
+         * *   **active**
+         * *   **updating**
+         * *   **inactive**
+         * *   **deleting**
          */
         public Builder state(String state) {
             this.state = state;
@@ -335,16 +330,16 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     } 
 
     public static class IspCityList extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private IspCityList(Builder builder) {
@@ -397,7 +392,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The ID of the city where the probe point of the ISP is deployed.
+             * The ID of the city in which the probe point of the ISP is deployed.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -405,7 +400,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city where the probe point of the ISP is deployed.
+             * The name of the city in which the probe point of the ISP is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;

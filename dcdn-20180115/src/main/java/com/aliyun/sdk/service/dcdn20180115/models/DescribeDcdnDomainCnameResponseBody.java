@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainCnameResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainCnameResponseBody</p>
  */
 public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
-    @NameInMap("CnameDatas")
+    @com.aliyun.core.annotation.NameInMap("CnameDatas")
     private CnameDatas cnameDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainCnameResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The CNAME information.
+         * <p>The CNAME information.</p>
          */
         public Builder cnameDatas(CnameDatas cnameDatas) {
             this.cnameDatas = cnameDatas;
@@ -58,7 +58,10 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainCnameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainCnameResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
@@ -122,7 +131,10 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The CNAME assigned to the domain name.
+             * <p>The CNAME assigned to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -130,7 +142,10 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +153,10 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.
+             * <p>The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -152,8 +170,14 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainCnameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainCnameResponseBody</p>
+     */
     public static class CnameDatas extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
 
         private CnameDatas(Builder builder) {

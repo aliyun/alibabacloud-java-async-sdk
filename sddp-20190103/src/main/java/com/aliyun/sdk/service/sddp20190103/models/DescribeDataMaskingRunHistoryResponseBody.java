@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataMaskingRunHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataMaskingRunHistoryResponseBody</p>
  */
 public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataMaskingRunHistoryResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,13 +85,16 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The execution information about the de-identification task.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-4******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,62 +148,68 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataMaskingRunHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataMaskingRunHistoryResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("ConflictCount")
+        @com.aliyun.core.annotation.NameInMap("ConflictCount")
         private Long conflictCount;
 
-        @NameInMap("DstType")
+        @com.aliyun.core.annotation.NameInMap("DstType")
         private Integer dstType;
 
-        @NameInMap("DstTypeCode")
+        @com.aliyun.core.annotation.NameInMap("DstTypeCode")
         private String dstTypeCode;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("FailCode")
+        @com.aliyun.core.annotation.NameInMap("FailCode")
         private String failCode;
 
-        @NameInMap("FailMsg")
+        @com.aliyun.core.annotation.NameInMap("FailMsg")
         private String failMsg;
 
-        @NameInMap("HasDownloadFile")
+        @com.aliyun.core.annotation.NameInMap("HasDownloadFile")
         private Integer hasDownloadFile;
 
-        @NameInMap("HasSubProcess")
+        @com.aliyun.core.annotation.NameInMap("HasSubProcess")
         private Integer hasSubProcess;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MaskingCount")
+        @com.aliyun.core.annotation.NameInMap("MaskingCount")
         private Long maskingCount;
 
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private Integer percentage;
 
-        @NameInMap("RunIndex")
+        @com.aliyun.core.annotation.NameInMap("RunIndex")
         private Integer runIndex;
 
-        @NameInMap("SrcTableName")
+        @com.aliyun.core.annotation.NameInMap("SrcTableName")
         private String srcTableName;
 
-        @NameInMap("SrcType")
+        @com.aliyun.core.annotation.NameInMap("SrcType")
         private Integer srcType;
 
-        @NameInMap("SrcTypeCode")
+        @com.aliyun.core.annotation.NameInMap("SrcTypeCode")
         private String srcTypeCode;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Items(Builder builder) {
@@ -374,7 +397,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * ConflictCount.
+             * <p>The number of rows that are in conflict with the data to be de-identified in the destination table to which the data to be de-identified is moved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder conflictCount(Long conflictCount) {
                 this.conflictCount = conflictCount;
@@ -382,7 +408,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DstType.
+             * <p>The type of the service to which the de-identified data belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dstType(Integer dstType) {
                 this.dstType = dstType;
@@ -390,7 +419,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DstTypeCode.
+             * <p>The service that stores the de-identified data. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder dstTypeCode(String dstTypeCode) {
                 this.dstTypeCode = dstTypeCode;
@@ -398,7 +430,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the de-identification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582251233000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -406,7 +441,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * FailCode.
+             * <p>The error code that is returned when the de-identification task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>masking_task_not_found</p>
              */
             public Builder failCode(String failCode) {
                 this.failCode = failCode;
@@ -414,7 +452,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * FailMsg.
+             * <p>The reason why the de-identification task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder failMsg(String failMsg) {
                 this.failMsg = failMsg;
@@ -422,7 +463,14 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * HasDownloadFile.
+             * <p>Indicates whether a file is available for download.</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hasDownloadFile(Integer hasDownloadFile) {
                 this.hasDownloadFile = hasDownloadFile;
@@ -430,7 +478,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * HasSubProcess.
+             * <p>The number of created subtasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder hasSubProcess(Integer hasSubProcess) {
                 this.hasSubProcess = hasSubProcess;
@@ -438,7 +489,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the task execution record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -446,7 +500,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * MaskingCount.
+             * <p>The number of rows that are de-identified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maskingCount(Long maskingCount) {
                 this.maskingCount = maskingCount;
@@ -454,7 +511,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The progress of the de-identification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -462,7 +522,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * RunIndex.
+             * <p>The number of times that the de-identification task is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runIndex(Integer runIndex) {
                 this.runIndex = runIndex;
@@ -470,7 +533,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SrcTableName.
+             * <p>The name of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder srcTableName(String srcTableName) {
                 this.srcTableName = srcTableName;
@@ -478,7 +544,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SrcType.
+             * <p>The type of the service to which the data to be de-identified belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder srcType(Integer srcType) {
                 this.srcType = srcType;
@@ -486,7 +555,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SrcTypeCode.
+             * <p>The service to which the data to be de-identified belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder srcTypeCode(String srcTypeCode) {
                 this.srcTypeCode = srcTypeCode;
@@ -494,7 +566,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the de-identification task was executed. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582251233000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -502,7 +577,18 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the de-identification task. Valid values:</p>
+             * <ul>
+             * <li><strong>-1</strong>: waiting</li>
+             * <li><strong>0</strong>: being executed</li>
+             * <li><strong>1</strong>: executed</li>
+             * <li><strong>2</strong>: failed to be executed</li>
+             * <li><strong>3</strong>: terminated</li>
+             * <li><strong>4</strong>: partially failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -510,7 +596,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the identification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mt4HBgtw1B******</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -518,7 +607,14 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The mode in which the de-identification task is executed. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: manual</li>
+             * <li><strong>2</strong>: scheduled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

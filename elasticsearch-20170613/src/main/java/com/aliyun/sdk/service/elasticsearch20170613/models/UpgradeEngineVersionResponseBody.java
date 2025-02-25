@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeEngineVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeEngineVersionResponseBody</p>
  */
 public class UpgradeEngineVersionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private UpgradeEngineVersionResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The verification information.
+         * <p>The verification information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DC*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,14 +61,14 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the error. Valid values:
-         * <p>
-         * 
-         * *   clusterStatus: the health status of the cluster.
-         * *   clusterConfigYml: Cluster YML File
-         * *   clusterConfigPlugins: Cluster Configuration File
-         * *   clusterResource: cluster resources
-         * *   clusterSnapshot: cluster snapshot
+         * <p>The type of the error. Valid values:</p>
+         * <ul>
+         * <li>clusterStatus: the health status of the cluster.</li>
+         * <li>clusterConfigYml: Cluster YML File</li>
+         * <li>clusterConfigPlugins: Cluster Configuration File</li>
+         * <li>clusterResource: cluster resources</li>
+         * <li>clusterSnapshot: cluster snapshot</li>
+         * </ul>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,14 +81,20 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpgradeEngineVersionResponseBody</p>
+     */
     public static class ValidateResult extends TeaModel {
-        @NameInMap("errorCode")
+        @com.aliyun.core.annotation.NameInMap("errorCode")
         private String errorCode;
 
-        @NameInMap("errorMsg")
+        @com.aliyun.core.annotation.NameInMap("errorMsg")
         private String errorMsg;
 
-        @NameInMap("errorType")
+        @com.aliyun.core.annotation.NameInMap("errorType")
         private String errorType;
 
         private ValidateResult(Builder builder) {
@@ -145,11 +154,14 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The verification is passed. Valid values:
-             * <p>
+             * <p>The verification is passed. Valid values:</p>
+             * <ul>
+             * <li>success: through</li>
+             * <li>failed: failed</li>
+             * </ul>
              * 
-             * *   success: through
-             * *   failed: failed
+             * <strong>example:</strong>
+             * <p>clusterStatus</p>
              */
             public Builder errorType(String errorType) {
                 this.errorType = errorType;
@@ -163,14 +175,20 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpgradeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpgradeEngineVersionResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("validateResult")
+        @com.aliyun.core.annotation.NameInMap("validateResult")
         private java.util.List < ValidateResult> validateResult;
 
-        @NameInMap("validateType")
+        @com.aliyun.core.annotation.NameInMap("validateType")
         private String validateType;
 
         private Result(Builder builder) {
@@ -222,7 +240,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
              */
             public Builder validateResult(java.util.List < ValidateResult> validateResult) {
                 this.validateResult = validateResult;
@@ -230,7 +248,10 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * <p>The error code returned if the request failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>checkClusterHealth</p>
              */
             public Builder validateType(String validateType) {
                 this.validateType = validateType;

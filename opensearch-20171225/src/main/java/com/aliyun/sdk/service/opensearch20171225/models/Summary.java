@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Summary</p>
  */
 public class Summary extends TeaModel {
-    @NameInMap("active")
+    @com.aliyun.core.annotation.NameInMap("active")
     private Boolean active;
 
-    @NameInMap("meta")
+    @com.aliyun.core.annotation.NameInMap("meta")
     private Meta meta;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     private Summary(Builder builder) {
@@ -92,19 +91,19 @@ public class Summary extends TeaModel {
     } 
 
     public static class Meta extends TeaModel {
-        @NameInMap("element")
+        @com.aliyun.core.annotation.NameInMap("element")
         private String element;
 
-        @NameInMap("ellipsis")
+        @com.aliyun.core.annotation.NameInMap("ellipsis")
         private String ellipsis;
 
-        @NameInMap("field")
+        @com.aliyun.core.annotation.NameInMap("field")
         private String field;
 
-        @NameInMap("len")
+        @com.aliyun.core.annotation.NameInMap("len")
         private Integer len;
 
-        @NameInMap("snippet")
+        @com.aliyun.core.annotation.NameInMap("snippet")
         private String snippet;
 
         private Meta(Builder builder) {

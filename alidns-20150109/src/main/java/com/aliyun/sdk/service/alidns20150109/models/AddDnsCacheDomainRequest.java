@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDnsCacheDomainRequest} extends {@link RequestModel}
  *
  * <p>AddDnsCacheDomainRequest</p>
  */
 public class AddDnsCacheDomainRequest extends Request {
-    @Query
-    @NameInMap("CacheTtlMax")
-    @Validation(required = true, maximum = 86400, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheTtlMax")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 86400, minimum = 30)
     private Integer cacheTtlMax;
 
-    @Query
-    @NameInMap("CacheTtlMin")
-    @Validation(required = true, maximum = 86400, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheTtlMin")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 86400, minimum = 30)
     private Integer cacheTtlMin;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("SourceDnsServer")
-    @Validation(required = true)
-    private java.util.List < SourceDnsServer> sourceDnsServer;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDnsServer")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<SourceDnsServer> sourceDnsServer;
 
-    @Query
-    @NameInMap("SourceEdns")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEdns")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceEdns;
 
-    @Query
-    @NameInMap("SourceProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceProtocol;
 
     private AddDnsCacheDomainRequest(Builder builder) {
@@ -126,7 +131,7 @@ public class AddDnsCacheDomainRequest extends Request {
     /**
      * @return sourceDnsServer
      */
-    public java.util.List < SourceDnsServer> getSourceDnsServer() {
+    public java.util.List<SourceDnsServer> getSourceDnsServer() {
         return this.sourceDnsServer;
     }
 
@@ -151,7 +156,7 @@ public class AddDnsCacheDomainRequest extends Request {
         private String instanceId; 
         private String lang; 
         private String remark; 
-        private java.util.List < SourceDnsServer> sourceDnsServer; 
+        private java.util.List<SourceDnsServer> sourceDnsServer; 
         private String sourceEdns; 
         private String sourceProtocol; 
 
@@ -173,7 +178,11 @@ public class AddDnsCacheDomainRequest extends Request {
         } 
 
         /**
-         * The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.
+         * <p>The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder cacheTtlMax(Integer cacheTtlMax) {
             this.putQueryParameter("CacheTtlMax", cacheTtlMax);
@@ -182,7 +191,11 @@ public class AddDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.
+         * <p>The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder cacheTtlMin(Integer cacheTtlMin) {
             this.putQueryParameter("CacheTtlMin", cacheTtlMin);
@@ -191,7 +204,11 @@ public class AddDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns.example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -200,7 +217,11 @@ public class AddDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The instance ID of the cache-accelerated domain name.
+         * <p>The instance ID of the cache-accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-cn-j6666</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -209,7 +230,10 @@ public class AddDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -218,7 +242,10 @@ public class AddDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The remarks.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -227,16 +254,21 @@ public class AddDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The origin DNS servers. A maximum of 10 origin DNS servers are supported.
+         * <p>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder sourceDnsServer(java.util.List < SourceDnsServer> sourceDnsServer) {
+        public Builder sourceDnsServer(java.util.List<SourceDnsServer> sourceDnsServer) {
             this.putQueryParameter("SourceDnsServer", sourceDnsServer);
             this.sourceDnsServer = sourceDnsServer;
             return this;
         }
 
         /**
-         * Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.
+         * <p>Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUPPORT</p>
          */
         public Builder sourceEdns(String sourceEdns) {
             this.putQueryParameter("SourceEdns", sourceEdns);
@@ -245,7 +277,11 @@ public class AddDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.
+         * <p>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UDP</p>
          */
         public Builder sourceProtocol(String sourceProtocol) {
             this.putQueryParameter("SourceProtocol", sourceProtocol);
@@ -260,13 +296,19 @@ public class AddDnsCacheDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddDnsCacheDomainRequest} extends {@link TeaModel}
+     *
+     * <p>AddDnsCacheDomainRequest</p>
+     */
     public static class SourceDnsServer extends TeaModel {
-        @NameInMap("Host")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Host")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String host;
 
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String port;
 
         private SourceDnsServer(Builder builder) {
@@ -301,7 +343,11 @@ public class AddDnsCacheDomainRequest extends Request {
             private String port; 
 
             /**
-             * The domain name or IP address of the origin DNS server.
+             * <p>The domain name or IP address of the origin DNS server.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.0.0</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -309,7 +355,11 @@ public class AddDnsCacheDomainRequest extends Request {
             }
 
             /**
-             * The port of the origin DNS server.
+             * <p>The port of the origin DNS server.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53</p>
              */
             public Builder port(String port) {
                 this.port = port;

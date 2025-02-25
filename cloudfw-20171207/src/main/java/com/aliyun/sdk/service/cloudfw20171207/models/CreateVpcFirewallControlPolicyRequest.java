@@ -1,116 +1,126 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcFirewallControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcFirewallControlPolicyRequest</p>
  */
 public class CreateVpcFirewallControlPolicyRequest extends Request {
-    @Query
-    @NameInMap("AclAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclAction;
 
-    @Query
-    @NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @Deprecated
     private String applicationName;
 
-    @Query
-    @NameInMap("ApplicationNameList")
-    private java.util.List < String > applicationNameList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
+    private java.util.List<String> applicationNameList;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("DestPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestPort")
     private String destPort;
 
-    @Query
-    @NameInMap("DestPortGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestPortGroup")
     private String destPortGroup;
 
-    @Query
-    @NameInMap("DestPortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestPortType")
     private String destPortType;
 
-    @Query
-    @NameInMap("Destination")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Destination")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destination;
 
-    @Query
-    @NameInMap("DestinationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationType;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainResolveType")
+    private String domainResolveType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("NewOrder")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewOrder")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newOrder;
 
-    @Query
-    @NameInMap("Proto")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Proto")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String proto;
 
-    @Query
-    @NameInMap("Release")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Release")
     private String release;
 
-    @Query
-    @NameInMap("RepeatDays")
-    private java.util.List < Long > repeatDays;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatDays")
+    private java.util.List<Long> repeatDays;
 
-    @Query
-    @NameInMap("RepeatEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatEndTime")
     private String repeatEndTime;
 
-    @Query
-    @NameInMap("RepeatStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatStartTime")
     private String repeatStartTime;
 
-    @Query
-    @NameInMap("RepeatType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatType")
     private String repeatType;
 
-    @Query
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("VpcFirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallId;
 
     private CreateVpcFirewallControlPolicyRequest(Builder builder) {
@@ -124,6 +134,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         this.destPortType = builder.destPortType;
         this.destination = builder.destination;
         this.destinationType = builder.destinationType;
+        this.domainResolveType = builder.domainResolveType;
         this.endTime = builder.endTime;
         this.lang = builder.lang;
         this.memberUid = builder.memberUid;
@@ -170,7 +181,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     /**
      * @return applicationNameList
      */
-    public java.util.List < String > getApplicationNameList() {
+    public java.util.List<String> getApplicationNameList() {
         return this.applicationNameList;
     }
 
@@ -214,6 +225,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
      */
     public String getDestinationType() {
         return this.destinationType;
+    }
+
+    /**
+     * @return domainResolveType
+     */
+    public String getDomainResolveType() {
+        return this.domainResolveType;
     }
 
     /**
@@ -261,7 +279,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     /**
      * @return repeatDays
      */
-    public java.util.List < Long > getRepeatDays() {
+    public java.util.List<Long> getRepeatDays() {
         return this.repeatDays;
     }
 
@@ -317,20 +335,21 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreateVpcFirewallControlPolicyRequest, Builder> {
         private String aclAction; 
         private String applicationName; 
-        private java.util.List < String > applicationNameList; 
+        private java.util.List<String> applicationNameList; 
         private String description; 
         private String destPort; 
         private String destPortGroup; 
         private String destPortType; 
         private String destination; 
         private String destinationType; 
+        private String domainResolveType; 
         private Long endTime; 
         private String lang; 
         private String memberUid; 
         private String newOrder; 
         private String proto; 
         private String release; 
-        private java.util.List < Long > repeatDays; 
+        private java.util.List<Long> repeatDays; 
         private String repeatEndTime; 
         private String repeatStartTime; 
         private String repeatType; 
@@ -354,6 +373,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
             this.destPortType = request.destPortType;
             this.destination = request.destination;
             this.destinationType = request.destinationType;
+            this.domainResolveType = request.domainResolveType;
             this.endTime = request.endTime;
             this.lang = request.lang;
             this.memberUid = request.memberUid;
@@ -371,12 +391,16 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * The action that Cloud Firewall performs on the traffic. Valid values:
-         * <p>
+         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the traffic.</li>
+         * <li><strong>drop</strong>: blocks the traffic.</li>
+         * <li><strong>log</strong>: monitors the traffic.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - **accept**: allows the traffic.
-         * - **drop**: blocks the traffic.
-         * - **log**: monitors the traffic.
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -385,24 +409,27 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the applications that the access control policy supports. Valid values:
-         * <p>
+         * <p>The type of the applications that the access control policy supports. Valid values:</p>
+         * <ul>
+         * <li><strong>FTP</strong></li>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>HTTPS</strong></li>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SMTP</strong></li>
+         * <li><strong>SMTPS</strong></li>
+         * <li><strong>RDP</strong></li>
+         * <li><strong>VNC</strong></li>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>MQTT</strong></li>
+         * <li><strong>MongoDB</strong></li>
+         * <li><strong>Memcache</strong></li>
+         * <li><strong>SSL</strong></li>
+         * <li><strong>ANY</strong>: all types of applications</li>
+         * </ul>
          * 
-         * - **FTP**
-         * - **HTTP**
-         * - **HTTPS**
-         * - **MySQL**
-         * - **SMTP**
-         * - **SMTPS**
-         * - **RDP**
-         * - **VNC**
-         * - **SSH**
-         * - **Redis**
-         * - **MQTT**
-         * - **MongoDB**
-         * - **Memcache**
-         * - **SSL**
-         * - **ANY**: all types of applications
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -411,16 +438,20 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * ApplicationNameList.
+         * <p>The application types supported by the access control policy.</p>
          */
-        public Builder applicationNameList(java.util.List < String > applicationNameList) {
+        public Builder applicationNameList(java.util.List<String> applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
             this.applicationNameList = applicationNameList;
             return this;
         }
 
         /**
-         * The description of the access control policy.
+         * <p>The description of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -429,10 +460,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The destination port in the access control policy. 
-         * <p>
+         * <p>The destination port in the access control policy. </p>
+         * <blockquote>
+         * <p> If <strong>DestPortType</strong> is set to <code>port</code>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  If **DestPortType** is set to `port`, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder destPort(String destPort) {
             this.putQueryParameter("DestPort", destPort);
@@ -441,10 +475,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The name of the destination port address book in the access control policy. 
-         * <p>
+         * <p>The name of the destination port address book in the access control policy. </p>
+         * <blockquote>
+         * <p> If <strong>DestPortType</strong> is set to <code>group</code>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  If **DestPortType** is set to `group`, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>my_port_group</p>
          */
         public Builder destPortGroup(String destPortGroup) {
             this.putQueryParameter("DestPortGroup", destPortGroup);
@@ -453,11 +490,14 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the destination port in the access control policy. Valid values:
-         * <p>
+         * <p>The type of the destination port in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>port</strong>: port</li>
+         * <li><strong>group</strong>: port address book</li>
+         * </ul>
          * 
-         * - **port**: port
-         * - **group**: port address book
+         * <strong>example:</strong>
+         * <p>port</p>
          */
         public Builder destPortType(String destPortType) {
             this.putQueryParameter("DestPortType", destPortType);
@@ -466,12 +506,16 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The destination address in the access control policy. Valid values:
-         * <p>
+         * <p>The destination address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li>If <strong>DestinationType</strong> is set to <code>net</code>, the value of <strong>Destination</strong> must be a CIDR block.</li>
+         * <li>If <strong>DestinationType</strong> is set to <code>group</code>, the value of <strong>Destination</strong> must be an address book.</li>
+         * <li>If <strong>DestinationType</strong> is set to <code>domain</code>, the value of <strong>Destination</strong> must be a domain name.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - If **DestinationType** is set to `net`, the value of **Destination** must be a CIDR block.
-         * - If **DestinationType** is set to `group`, the value of **Destination** must be an address book.
-         * - If **DestinationType** is set to `domain`, the value of **Destination** must be a domain name.
+         * <strong>example:</strong>
+         * <p>10.2.XX.XX/24</p>
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -480,12 +524,16 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the destination address in the access control policy. Valid values:
-         * <p>
+         * <p>The type of the destination address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>net</strong>: CIDR block</li>
+         * <li><strong>group</strong>: address book</li>
+         * <li><strong>domain</strong>: domain name</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - **net**: CIDR block
-         * - **group**: address book
-         * - **domain**: domain name
+         * <strong>example:</strong>
+         * <p>net</p>
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -494,7 +542,30 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The domain name resolution method of the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>FQDN</strong>: fully qualified domain name (FQDN)-based resolution</li>
+         * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
+         * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DNS</p>
+         */
+        public Builder domainResolveType(String domainResolveType) {
+            this.putQueryParameter("DomainResolveType", domainResolveType);
+            this.domainResolveType = domainResolveType;
+            return this;
+        }
+
+        /**
+         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <blockquote>
+         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1694764800</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -503,11 +574,14 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * - **zh**: Chinese (default)
-         * - **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -516,7 +590,10 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -525,10 +602,12 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The priority of the access control policy. 
-         * <p>
+         * <p>The priority of the access control policy. </p>
+         * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The priority value starts from 1. A smaller priority value indicates a higher priority.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
@@ -537,13 +616,17 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the protocol in the access control policy. Valid values:
-         * <p>
+         * <p>The type of the protocol in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>ANY</strong> (If you are not sure about the protocol type, you can set this parameter to ANY.)</li>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>ICMP</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - **ANY** (If you are not sure about the protocol type, you can set this parameter to ANY.)
-         * - **TCP**
-         * - **UDP**
-         * - **ICMP**
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -552,11 +635,14 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values: 
-         * <p>
+         * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values: </p>
+         * <ul>
+         * <li><strong>true</strong>: enables the access control policy.</li>
+         * <li><strong>false</strong>: disables the access control policy.</li>
+         * </ul>
          * 
-         * - **true**: enables the access control policy.
-         * - **false**: disables the access control policy.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -565,16 +651,35 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatDays.
+         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <ul>
+         * <li>If you set RepeatType to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave this parameter empty. Example: [].</li>
+         * <li>If you set RepeatType to Weekly, you must specify this parameter. Example: [0, 6].</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If you set RepeatType to <code>Monthly</code>, you must specify this parameter. Example: [1, 31].</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
+         * </blockquote>
          */
-        public Builder repeatDays(java.util.List < Long > repeatDays) {
+        public Builder repeatDays(java.util.List<Long> repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
             this.repeatDays = repeatDays;
             return this;
         }
 
         /**
-         * RepeatEndTime.
+         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.</p>
+         * <blockquote>
+         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>23:30</p>
          */
         public Builder repeatEndTime(String repeatEndTime) {
             this.putQueryParameter("RepeatEndTime", repeatEndTime);
@@ -583,7 +688,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatStartTime.
+         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <blockquote>
+         * <p> If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         public Builder repeatStartTime(String repeatStartTime) {
             this.putQueryParameter("RepeatStartTime", repeatStartTime);
@@ -592,7 +703,17 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatType.
+         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+         * <li><strong>None</strong>: The policy takes effect for only once.</li>
+         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Permanent</p>
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -601,11 +722,15 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The source address in the access control policy. 
-         * <p>
+         * <p>The source address in the access control policy. </p>
+         * <ul>
+         * <li>If SourceType is set to <code>net</code>, the value of Source must be a CIDR block.</li>
+         * <li>If SourceType is set to <code>group</code>, the value of Source must be an address book.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - If SourceType is set to `net`, the value of Source must be a CIDR block.
-         * - If SourceType is set to `group`, the value of Source must be an address book.
+         * <strong>example:</strong>
+         * <p>10.2.XX.XX/24</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -614,11 +739,15 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the source address in the access control policy. Valid values:
-         * <p>
+         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>net</strong>: CIDR block</li>
+         * <li><strong>group</strong>: address book</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - **net**: CIDR block
-         * - **group**: address book
+         * <strong>example:</strong>
+         * <p>net</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -627,7 +756,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.</p>
+         * <blockquote>
+         * <p> If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1694761200</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -636,13 +771,18 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the policy group in which you want to create the access control policy. 
-         * <p>
+         * <p>The ID of the policy group in which you want to create the access control policy. </p>
+         * <ul>
+         * <li>If a VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</li>
+         * <li>If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist">DescribeVpcFirewallAclGroupList</a> operation to query the IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * - If a VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.
-         * - If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
-         * 
-         * >  You can call the [DescribeVpcFirewallAclGroupList](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist) operation to query the IDs.
+         * <strong>example:</strong>
+         * <p>vfw-a42bbb7b887148c9****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

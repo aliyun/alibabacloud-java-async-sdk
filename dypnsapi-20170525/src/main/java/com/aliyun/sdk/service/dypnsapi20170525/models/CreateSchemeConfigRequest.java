@@ -1,61 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSchemeConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateSchemeConfigRequest</p>
  */
 public class CreateSchemeConfigRequest extends Request {
-    @Query
-    @NameInMap("AndroidPackageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidPackageName")
     private String androidPackageName;
 
-    @Query
-    @NameInMap("AndroidPackageSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidPackageSign")
     private String androidPackageSign;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("H5Origin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("H5Origin")
     private String h5Origin;
 
-    @Query
-    @NameInMap("H5Url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("H5Url")
     private String h5Url;
 
-    @Query
-    @NameInMap("IosBundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IosBundleId")
     private String iosBundleId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Platform")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String platform;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SchemeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schemeName;
 
     private CreateSchemeConfigRequest(Builder builder) {
@@ -196,7 +196,10 @@ public class CreateSchemeConfigRequest extends Request {
         } 
 
         /**
-         * AndroidPackageName.
+         * <p>The package name. This parameter is required when Platform is set to Android. The name must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (_), and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyun.android</p>
          */
         public Builder androidPackageName(String androidPackageName) {
             this.putQueryParameter("AndroidPackageName", androidPackageName);
@@ -205,7 +208,10 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * AndroidPackageSign.
+         * <p>The package signature. This parameter is required when Platform is set to Android. The signature must be 32 characters in length and can contain digits and letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfsfaawklll1*<em><strong>olkweklk</strong></em></p>
          */
         public Builder androidPackageSign(String androidPackageSign) {
             this.putQueryParameter("AndroidPackageSign", androidPackageSign);
@@ -214,7 +220,10 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The app name, which can be up to 20 characters in length and can contain letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Communications</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -223,7 +232,12 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * H5Origin.
+         * <p>The reserved field. HTML5 apps are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder h5Origin(String h5Origin) {
             this.putQueryParameter("H5Origin", h5Origin);
@@ -232,7 +246,12 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * H5Url.
+         * <p>The reserved field. HTML5 apps are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder h5Url(String h5Url) {
             this.putQueryParameter("H5Url", h5Url);
@@ -241,7 +260,10 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * IosBundleId.
+         * <p>The bundle ID. This parameter is required when OsType is set to iOS. The bundle ID must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (_), and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyun.ios</p>
          */
         public Builder iosBundleId(String iosBundleId) {
             this.putQueryParameter("IosBundleId", iosBundleId);
@@ -259,7 +281,16 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * Platform.
+         * <p>The app platform.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Android</li>
+         * <li>iOS</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Android</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -286,7 +317,11 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * SchemeName.
+         * <p>The service name, which can be up to 10 characters in length and can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);

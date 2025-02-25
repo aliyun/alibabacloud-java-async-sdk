@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExporterRuleListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExporterRuleListResponseBody</p>
  */
 public class DescribeExporterRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datapoints")
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
     private Datapoints datapoints;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeExporterRuleListResponseBody(Builder builder) {
@@ -110,10 +110,13 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +124,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data export rules.
+         * <p>The details of the data export rules.</p>
          */
         public Builder datapoints(Datapoints datapoints) {
             this.datapoints = datapoints;
@@ -129,7 +132,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>susscess</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -137,7 +143,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -145,7 +154,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BA047CA-8BC6-40BC-BC8F-FBECF35F1993</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,11 +165,14 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -165,7 +180,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -178,8 +196,14 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExporterRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExporterRuleListResponseBody</p>
+     */
     public static class DstName extends TeaModel {
-        @NameInMap("DstName")
+        @com.aliyun.core.annotation.NameInMap("DstName")
         private java.util.List < String > dstName;
 
         private DstName(Builder builder) {
@@ -219,32 +243,38 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExporterRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExporterRuleListResponseBody</p>
+     */
     public static class Datapoint extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Describe")
+        @com.aliyun.core.annotation.NameInMap("Describe")
         private String describe;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
 
-        @NameInMap("DstName")
+        @com.aliyun.core.annotation.NameInMap("DstName")
         private DstName dstName;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("TargetWindows")
+        @com.aliyun.core.annotation.NameInMap("TargetWindows")
         private String targetWindows;
 
         private Datapoint(Builder builder) {
@@ -342,7 +372,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             private String targetWindows; 
 
             /**
-             * The time when the rule was created. The value is a UNIX timestamp.
+             * <p>The time when the rule was created. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584024616228</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +383,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Export monitoring data</p>
              */
             public Builder describe(String describe) {
                 this.describe = describe;
@@ -358,7 +394,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The associated dimensions.
+             * <p>The associated dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;instanceId&quot;:&quot;xxxxx&quot;}</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -374,7 +413,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is enabled.
+             * <p>Indicates whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -382,10 +424,13 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
-             * <p>
+             * <p>The name of the metric.</p>
+             * <blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+             * </blockquote>
              * 
-             * > For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -393,10 +438,13 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the service.
-             * <p>
+             * <p>The namespace of the service.</p>
+             * <blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
+             * </blockquote>
              * 
-             * > For more information, see [DescribeMetricMetaList](~~98846~~) or [Appendix 1: Metrics](~~28619~~).
+             * <strong>example:</strong>
+             * <p>acs_ecs_dashboard</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -404,7 +452,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data export rule.
+             * <p>The name of the data export rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myRuleName</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -412,11 +463,13 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The time window of the exported data.\
-             * <p>
-             * Multiple windows are separated with commas (,).
+             * <p>The time window of the exported data.<br>Multiple windows are separated with commas (,).</p>
+             * <blockquote>
+             * <p>Data in a time window of less than 60 seconds cannot be exported.</p>
+             * </blockquote>
              * 
-             * > Data in a time window of less than 60 seconds cannot be exported.
+             * <strong>example:</strong>
+             * <p>60,300</p>
              */
             public Builder targetWindows(String targetWindows) {
                 this.targetWindows = targetWindows;
@@ -430,8 +483,14 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExporterRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExporterRuleListResponseBody</p>
+     */
     public static class Datapoints extends TeaModel {
-        @NameInMap("Datapoint")
+        @com.aliyun.core.annotation.NameInMap("Datapoint")
         private java.util.List < Datapoint> datapoint;
 
         private Datapoints(Builder builder) {

@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetCdnDomainSSLCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>SetCdnDomainSSLCertificateResponseBody</p>
  */
 public class SetCdnDomainSSLCertificateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetCdnDomainSSLCertificateResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class SetCdnDomainSSLCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7C69682-7F88-40DD-A198-10D0309E439D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundDetailResponseBody} extends {@link TeaModel}
  *
  * <p>FlightRefundDetailResponseBody</p>
  */
 public class FlightRefundDetailResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightRefundDetailResponseBody(Builder builder) {
@@ -151,17 +156,23 @@ public class FlightRefundDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailResponseBody</p>
+     */
     public static class RefundFeeList extends TeaModel {
-        @NameInMap("alipay_trade_no")
+        @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Long refundFee;
 
-        @NameInMap("refund_price")
+        @com.aliyun.core.annotation.NameInMap("refund_price")
         private Long refundPrice;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private RefundFeeList(Builder builder) {
@@ -252,35 +263,41 @@ public class FlightRefundDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightRefundDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightRefundDetailResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("btrip_order_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_order_id")
         private Long btripOrderId;
 
-        @NameInMap("btrip_sub_order_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_sub_order_id")
         private Long btripSubOrderId;
 
-        @NameInMap("dis_order_id")
+        @com.aliyun.core.annotation.NameInMap("dis_order_id")
         private String disOrderId;
 
-        @NameInMap("dis_sub_order_id")
+        @com.aliyun.core.annotation.NameInMap("dis_sub_order_id")
         private String disSubOrderId;
 
-        @NameInMap("is_voluntary")
+        @com.aliyun.core.annotation.NameInMap("is_voluntary")
         private Integer isVoluntary;
 
-        @NameInMap("reason")
+        @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Long refundFee;
 
-        @NameInMap("refund_fee_list")
-        private java.util.List < RefundFeeList> refundFeeList;
+        @com.aliyun.core.annotation.NameInMap("refund_fee_list")
+        private java.util.List<RefundFeeList> refundFeeList;
 
-        @NameInMap("refund_price")
+        @com.aliyun.core.annotation.NameInMap("refund_price")
         private Long refundPrice;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Module(Builder builder) {
@@ -356,7 +373,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
         /**
          * @return refundFeeList
          */
-        public java.util.List < RefundFeeList> getRefundFeeList() {
+        public java.util.List<RefundFeeList> getRefundFeeList() {
             return this.refundFeeList;
         }
 
@@ -382,7 +399,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             private Integer isVoluntary; 
             private String reason; 
             private Long refundFee; 
-            private java.util.List < RefundFeeList> refundFeeList; 
+            private java.util.List<RefundFeeList> refundFeeList; 
             private Long refundPrice; 
             private String status; 
 
@@ -445,7 +462,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             /**
              * refund_fee_list.
              */
-            public Builder refundFeeList(java.util.List < RefundFeeList> refundFeeList) {
+            public Builder refundFeeList(java.util.List<RefundFeeList> refundFeeList) {
                 this.refundFeeList = refundFeeList;
                 return this;
             }

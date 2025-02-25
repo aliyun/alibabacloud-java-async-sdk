@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainTransactionStatisticsV2ResponseBody</p>
  */
 public class DescribeAntChainTransactionStatisticsV2ResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAntChainTransactionStatisticsV2ResponseBody(Builder builder) {
@@ -192,19 +191,19 @@ public class DescribeAntChainTransactionStatisticsV2ResponseBody extends TeaMode
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("CreatTime")
+        @com.aliyun.core.annotation.NameInMap("CreatTime")
         private Long creatTime;
 
-        @NameInMap("Dt")
+        @com.aliyun.core.annotation.NameInMap("Dt")
         private Long dt;
 
-        @NameInMap("LastSumBlockHeight")
+        @com.aliyun.core.annotation.NameInMap("LastSumBlockHeight")
         private Long lastSumBlockHeight;
 
-        @NameInMap("TransCount")
+        @com.aliyun.core.annotation.NameInMap("TransCount")
         private Long transCount;
 
         private Result(Builder builder) {

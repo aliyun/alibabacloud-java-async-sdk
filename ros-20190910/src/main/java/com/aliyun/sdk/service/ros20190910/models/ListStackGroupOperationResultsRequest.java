@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackGroupOperationResultsRequest} extends {@link RequestModel}
  *
  * <p>ListStackGroupOperationResultsRequest</p>
  */
 public class ListStackGroupOperationResultsRequest extends Request {
-    @Query
-    @NameInMap("OperationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListStackGroupOperationResultsRequest(Builder builder) {
@@ -98,10 +98,12 @@ public class ListStackGroupOperationResultsRequest extends Request {
         } 
 
         /**
-         * The ID of the operation.
-         * <p>
+         * <p>The ID of the operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to query the operation ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation ID.
+         * <strong>example:</strong>
+         * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);
@@ -110,11 +112,14 @@ public class ListStackGroupOperationResultsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,11 +128,14 @@ public class ListStackGroupOperationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 50.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 50.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -136,10 +144,12 @@ public class ListStackGroupOperationResultsRequest extends Request {
         }
 
         /**
-         * The region ID of the stack group.
-         * <p>
+         * <p>The region ID of the stack group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

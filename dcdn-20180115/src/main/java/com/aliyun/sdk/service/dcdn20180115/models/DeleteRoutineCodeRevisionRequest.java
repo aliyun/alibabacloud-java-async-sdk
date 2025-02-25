@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRoutineCodeRevisionRequest} extends {@link RequestModel}
  *
  * <p>DeleteRoutineCodeRevisionRequest</p>
  */
 public class DeleteRoutineCodeRevisionRequest extends Request {
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("SelectCodeRevision")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SelectCodeRevision")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String selectCodeRevision;
 
     private DeleteRoutineCodeRevisionRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class DeleteRoutineCodeRevisionRequest extends Request {
         } 
 
         /**
-         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+         * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -79,7 +83,11 @@ public class DeleteRoutineCodeRevisionRequest extends Request {
         }
 
         /**
-         * The number of the version that you want to delete.
+         * <p>The number of the version that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder selectCodeRevision(String selectCodeRevision) {
             this.putBodyParameter("SelectCodeRevision", selectCodeRevision);

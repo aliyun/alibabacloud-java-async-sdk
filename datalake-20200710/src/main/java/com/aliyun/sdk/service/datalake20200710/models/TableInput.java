@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableInput</p>
  */
 public class TableInput extends TeaModel {
-    @NameInMap("Cascade")
+    @com.aliyun.core.annotation.NameInMap("Cascade")
     private Boolean cascade;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Integer createTime;
 
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("LastAccessTime")
+    @com.aliyun.core.annotation.NameInMap("LastAccessTime")
     private Integer lastAccessTime;
 
-    @NameInMap("LastAnalyzedTime")
+    @com.aliyun.core.annotation.NameInMap("LastAnalyzedTime")
     private Integer lastAnalyzedTime;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("OwnerType")
+    @com.aliyun.core.annotation.NameInMap("OwnerType")
     private String ownerType;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("PartitionKeys")
+    @com.aliyun.core.annotation.NameInMap("PartitionKeys")
     private java.util.List < FieldSchema > partitionKeys;
 
-    @NameInMap("Privileges")
+    @com.aliyun.core.annotation.NameInMap("Privileges")
     private PrincipalPrivilegeSet privileges;
 
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
-    @NameInMap("RewriteEnabled")
+    @com.aliyun.core.annotation.NameInMap("RewriteEnabled")
     private Boolean rewriteEnabled;
 
-    @NameInMap("Sd")
+    @com.aliyun.core.annotation.NameInMap("Sd")
     private StorageDescriptor sd;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("TableType")
+    @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
-    @NameInMap("Temporary")
+    @com.aliyun.core.annotation.NameInMap("Temporary")
     private Boolean temporary;
 
-    @NameInMap("ViewExpandedText")
+    @com.aliyun.core.annotation.NameInMap("ViewExpandedText")
     private String viewExpandedText;
 
-    @NameInMap("ViewOriginalText")
+    @com.aliyun.core.annotation.NameInMap("ViewOriginalText")
     private String viewOriginalText;
 
     private TableInput(Builder builder) {

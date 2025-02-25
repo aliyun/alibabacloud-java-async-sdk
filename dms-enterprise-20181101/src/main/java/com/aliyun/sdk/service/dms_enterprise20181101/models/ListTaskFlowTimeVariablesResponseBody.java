@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowTimeVariablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowTimeVariablesResponseBody</p>
  */
 public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TimeVariables")
+    @com.aliyun.core.annotation.NameInMap("TimeVariables")
     private TimeVariables timeVariables;
 
     private ListTaskFlowTimeVariablesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         private TimeVariables timeVariables; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC12A3BE-149F-5365-AF33-12CC8C963923</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +124,14 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +139,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * The time variables for the task flow.
+         * <p>The time variables for the task flow.</p>
          */
         public Builder timeVariables(TimeVariables timeVariables) {
             this.timeVariables = timeVariables;
@@ -135,11 +152,17 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowTimeVariablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowTimeVariablesResponseBody</p>
+     */
     public static class TimeVariable extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private String pattern;
 
         private TimeVariable(Builder builder) {
@@ -174,7 +197,10 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
             private String pattern; 
 
             /**
-             * The name of the time variable.
+             * <p>The name of the time variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>time_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +208,10 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the time variable.
+             * <p>The format of the time variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-26|+7h</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -196,9 +225,15 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowTimeVariablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowTimeVariablesResponseBody</p>
+     */
     public static class TimeVariables extends TeaModel {
-        @NameInMap("TimeVariable")
-        private java.util.List < TimeVariable> timeVariable;
+        @com.aliyun.core.annotation.NameInMap("TimeVariable")
+        private java.util.List<TimeVariable> timeVariable;
 
         private TimeVariables(Builder builder) {
             this.timeVariable = builder.timeVariable;
@@ -215,17 +250,17 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         /**
          * @return timeVariable
          */
-        public java.util.List < TimeVariable> getTimeVariable() {
+        public java.util.List<TimeVariable> getTimeVariable() {
             return this.timeVariable;
         }
 
         public static final class Builder {
-            private java.util.List < TimeVariable> timeVariable; 
+            private java.util.List<TimeVariable> timeVariable; 
 
             /**
              * TimeVariable.
              */
-            public Builder timeVariable(java.util.List < TimeVariable> timeVariable) {
+            public Builder timeVariable(java.util.List<TimeVariable> timeVariable) {
                 this.timeVariable = timeVariable;
                 return this;
             }

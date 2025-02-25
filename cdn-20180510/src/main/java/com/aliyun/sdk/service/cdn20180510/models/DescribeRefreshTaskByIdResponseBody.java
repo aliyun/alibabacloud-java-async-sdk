@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRefreshTaskByIdResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRefreshTaskByIdResponseBody</p>
  */
 public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private java.util.List < Tasks> tasks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeRefreshTaskByIdResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0C2EF95-B1EC-4C93-855E-2059A7DA2B7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Details about tasks.
+         * <p>Details about tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -78,7 +81,10 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,26 +97,32 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRefreshTaskByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRefreshTaskByIdResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ObjectPath")
+        @com.aliyun.core.annotation.NameInMap("ObjectPath")
         private String objectPath;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Tasks(Builder builder) {
@@ -190,7 +202,10 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the task was created. The time is displayed in UTC.
+             * <p>The time when the task was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-03T08:54:23Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,12 +213,15 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The error returned when the refresh or prefetch task failed. Valid values:
-             * <p>
+             * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
+             * <ul>
+             * <li><strong>Internal Error</strong></li>
+             * <li><strong>Origin Timeout</strong></li>
+             * <li><strong>Origin Return StatusCode 5XX</strong></li>
+             * </ul>
              * 
-             * *   **Internal Error**
-             * *   **Origin Timeout**
-             * *   **Origin Return StatusCode 5XX**
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -211,7 +229,10 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the object refreshed by the refresh task.
+             * <p>The path of the object refreshed by the refresh task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/abc.jpg">http://example.com/abc.jpg</a></p>
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -219,13 +240,16 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
-             * <p>
+             * <p>The type of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: refreshes an individual file.</li>
+             * <li><strong>directory</strong>: refreshes files in the specified directory.</li>
+             * <li><strong>preload</strong>: prefetches an individual file.</li>
+             * <li><strong>regex</strong>: refreshes content based on a regular expression.</li>
+             * </ul>
              * 
-             * *   **file**: refreshes an individual file.
-             * *   **directory**: refreshes files in the specified directory.
-             * *   **preload**: prefetches an individual file.
-             * *   **regex**: refreshes content based on a regular expression.
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -233,7 +257,10 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task, in percentage.
+             * <p>The progress of the task, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -241,13 +268,16 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>Complete</strong></li>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Refreshing</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * *   **Complete**
-             * *   **Pending**
-             * *   **Refreshing**
-             * *   **Failed**
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -255,7 +285,10 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24840</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

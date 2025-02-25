@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResolveStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetResolveStatisticsResponseBody</p>
  */
 public class GetResolveStatisticsResponseBody extends TeaModel {
-    @NameInMap("DataPoints")
+    @com.aliyun.core.annotation.NameInMap("DataPoints")
     private DataPoints dataPoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetResolveStatisticsResponseBody(Builder builder) {
@@ -71,11 +76,17 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResolveStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResolveStatisticsResponseBody</p>
+     */
     public static class DataPoint extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Integer time;
 
         private DataPoint(Builder builder) {
@@ -132,9 +143,15 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResolveStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResolveStatisticsResponseBody</p>
+     */
     public static class DataPoints extends TeaModel {
-        @NameInMap("DataPoint")
-        private java.util.List < DataPoint> dataPoint;
+        @com.aliyun.core.annotation.NameInMap("DataPoint")
+        private java.util.List<DataPoint> dataPoint;
 
         private DataPoints(Builder builder) {
             this.dataPoint = builder.dataPoint;
@@ -151,17 +168,17 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
         /**
          * @return dataPoint
          */
-        public java.util.List < DataPoint> getDataPoint() {
+        public java.util.List<DataPoint> getDataPoint() {
             return this.dataPoint;
         }
 
         public static final class Builder {
-            private java.util.List < DataPoint> dataPoint; 
+            private java.util.List<DataPoint> dataPoint; 
 
             /**
              * DataPoint.
              */
-            public Builder dataPoint(java.util.List < DataPoint> dataPoint) {
+            public Builder dataPoint(java.util.List<DataPoint> dataPoint) {
                 this.dataPoint = dataPoint;
                 return this;
             }

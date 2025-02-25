@@ -1,52 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterUsedUtilizationRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterUsedUtilizationRequest</p>
  */
 public class DescribeClusterUsedUtilizationRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DedicatedClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedClusterId;
 
-    @Body
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Body
-    @NameInMap("Env")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Env")
     private String env;
 
-    @Body
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Body
-    @NameInMap("OwnerID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OwnerID")
     private String ownerID;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeClusterUsedUtilizationRequest(Builder builder) {
@@ -59,6 +68,7 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         this.metricType = builder.metricType;
         this.ownerID = builder.ownerID;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityToken = builder.securityToken;
     }
 
@@ -132,6 +142,13 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -147,6 +164,7 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         private String metricType; 
         private String ownerID; 
         private String regionId; 
+        private String resourceGroupId; 
         private String securityToken; 
 
         private Builder() {
@@ -163,11 +181,15 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
             this.metricType = request.metricType;
             this.ownerID = request.ownerID;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -176,7 +198,10 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -185,7 +210,11 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. If the **MetricType** parameter is set to **CLUSTER**, enter the ID of the exclusive cluster. Otherwise, set this parameter to a node ID.
+         * <p>The ID of the cluster. If the <strong>MetricType</strong> parameter is set to <strong>CLUSTER</strong>, enter the ID of the exclusive cluster. Otherwise, set this parameter to a node ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nodeid</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putBodyParameter("DedicatedClusterId", dedicatedClusterId);
@@ -194,7 +223,10 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         }
 
         /**
-         * The ID of the data migration or synchronization task.
+         * <p>The ID of the data migration or synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k2gm967v16f****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putBodyParameter("DtsJobId", dtsJobId);
@@ -203,7 +235,10 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         }
 
         /**
-         * The cluster environment. Default value: **ALIYUN**.
+         * <p>The cluster environment. Default value: <strong>ALIYUN</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         public Builder env(String env) {
             this.putBodyParameter("Env", env);
@@ -212,11 +247,14 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the metrics of the cluster or a node. Default value: CLUSTER. Valid values:
-         * <p>
+         * <p>Specifies whether to query the metrics of the cluster or a node. Default value: CLUSTER. Valid values:</p>
+         * <ul>
+         * <li><strong>CLUSTER</strong>: query the metrics of the cluster.</li>
+         * <li><strong>NODE</strong>: query the metrics of a node.</li>
+         * </ul>
          * 
-         * *   **CLUSTER**: query the metrics of the cluster.
-         * *   **NODE**: query the metrics of a node.
+         * <strong>example:</strong>
+         * <p>NODE</p>
          */
         public Builder metricType(String metricType) {
             this.putBodyParameter("MetricType", metricType);
@@ -234,11 +272,26 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the Data Transmission Service (DTS) instance resides.
+         * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePricingModuleResponseBody</p>
  */
 public class DescribePricingModuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribePricingModuleResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This API is not applicable for caller.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C40A8EE0-8084-49FE-B66E-5E1C3B6AE025</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +148,23 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class AttributeValue extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AttributeValue(Builder builder) {
@@ -194,7 +217,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The attribute value that corresponds to the module code.
+             * <p>The attribute value that corresponds to the module code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2 Cores and 4 GB Memory (Basic Edition)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +228,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the module values.
+             * <p>The description of the module values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connections: 4,000 IOPS is related to storage space</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -210,11 +239,14 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the attribute value that corresponds to the module code. Valid values:
-             * <p>
+             * <p>The type of the attribute value that corresponds to the module code. Valid values:</p>
+             * <ul>
+             * <li>single_float: single value</li>
+             * <li>range_float: range value</li>
+             * </ul>
              * 
-             * *   single_float: single value
-             * *   range_float: range value
+             * <strong>example:</strong>
+             * <p>single_string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -222,10 +254,13 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute value that corresponds to the module code.
-             * <p>
+             * <p>The attribute value that corresponds to the module code.</p>
+             * <blockquote>
+             * <p> If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.</p>
+             * </blockquote>
              * 
-             * >  If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.
+             * <strong>example:</strong>
+             * <p>mysql.n2.medium.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -239,9 +274,15 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("AttributeValue")
-        private java.util.List < AttributeValue> attributeValue;
+        @com.aliyun.core.annotation.NameInMap("AttributeValue")
+        private java.util.List<AttributeValue> attributeValue;
 
         private Values(Builder builder) {
             this.attributeValue = builder.attributeValue;
@@ -258,17 +299,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return attributeValue
          */
-        public java.util.List < AttributeValue> getAttributeValue() {
+        public java.util.List<AttributeValue> getAttributeValue() {
             return this.attributeValue;
         }
 
         public static final class Builder {
-            private java.util.List < AttributeValue> attributeValue; 
+            private java.util.List<AttributeValue> attributeValue; 
 
             /**
              * AttributeValue.
              */
-            public Builder attributeValue(java.util.List < AttributeValue> attributeValue) {
+            public Builder attributeValue(java.util.List<AttributeValue> attributeValue) {
                 this.attributeValue = attributeValue;
                 return this;
             }
@@ -280,17 +321,23 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class Attribute extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private Values values;
 
         private Attribute(Builder builder) {
@@ -343,7 +390,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             private Values values; 
 
             /**
-             * The code of the attribute.
+             * <p>The code of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DBInstanceStorage</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -351,7 +401,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the attribute.
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Capacity</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +412,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the attribute.
+             * <p>The unit of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -367,7 +423,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute values.
+             * <p>The attribute values.</p>
              */
             public Builder values(Values values) {
                 this.values = values;
@@ -381,9 +437,15 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class AttributeList extends TeaModel {
-        @NameInMap("Attribute")
-        private java.util.List < Attribute> attribute;
+        @com.aliyun.core.annotation.NameInMap("Attribute")
+        private java.util.List<Attribute> attribute;
 
         private AttributeList(Builder builder) {
             this.attribute = builder.attribute;
@@ -400,17 +462,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return attribute
          */
-        public java.util.List < Attribute> getAttribute() {
+        public java.util.List<Attribute> getAttribute() {
             return this.attribute;
         }
 
         public static final class Builder {
-            private java.util.List < Attribute> attribute; 
+            private java.util.List<Attribute> attribute; 
 
             /**
              * Attribute.
              */
-            public Builder attribute(java.util.List < Attribute> attribute) {
+            public Builder attribute(java.util.List<Attribute> attribute) {
                 this.attribute = attribute;
                 return this;
             }
@@ -422,9 +484,15 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
-        @NameInMap("ConfigList")
-        private java.util.List < String > configList;
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
+        private java.util.List<String> configList;
 
         private ConfigList(Builder builder) {
             this.configList = builder.configList;
@@ -441,17 +509,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return configList
          */
-        public java.util.List < String > getConfigList() {
+        public java.util.List<String> getConfigList() {
             return this.configList;
         }
 
         public static final class Builder {
-            private java.util.List < String > configList; 
+            private java.util.List<String> configList; 
 
             /**
              * ConfigList.
              */
-            public Builder configList(java.util.List < String > configList) {
+            public Builder configList(java.util.List<String> configList) {
                 this.configList = configList;
                 return this;
             }
@@ -463,20 +531,26 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private ConfigList configList;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("PriceType")
+        @com.aliyun.core.annotation.NameInMap("PriceType")
         private String priceType;
 
         private Module(Builder builder) {
@@ -546,7 +620,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The currency. Default value: CNY.
+             * <p>The currency. Default value: CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -554,7 +631,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the pricing module.
+             * <p>The code of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceType</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -562,7 +642,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pricing module.
+             * <p>The name of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -570,15 +653,18 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The price type. Valid values:
-             * <p>
+             * <p>The price type. Valid values:</p>
+             * <ul>
+             * <li>Usage: usage price</li>
+             * <li>Hour: hourly price</li>
+             * <li>Day: daily price</li>
+             * <li>Week: weekly price</li>
+             * <li>Month: monthly price</li>
+             * <li>Year: annual price</li>
+             * </ul>
              * 
-             * *   Usage: usage price
-             * *   Hour: hourly price
-             * *   Day: daily price
-             * *   Week: weekly price
-             * *   Month: monthly price
-             * *   Year: annual price
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;
@@ -592,9 +678,15 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class ModuleList extends TeaModel {
-        @NameInMap("Module")
-        private java.util.List < Module> module;
+        @com.aliyun.core.annotation.NameInMap("Module")
+        private java.util.List<Module> module;
 
         private ModuleList(Builder builder) {
             this.module = builder.module;
@@ -611,17 +703,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return module
          */
-        public java.util.List < Module> getModule() {
+        public java.util.List<Module> getModule() {
             return this.module;
         }
 
         public static final class Builder {
-            private java.util.List < Module> module; 
+            private java.util.List<Module> module; 
 
             /**
              * Module.
              */
-            public Builder module(java.util.List < Module> module) {
+            public Builder module(java.util.List<Module> module) {
                 this.module = module;
                 return this;
             }
@@ -633,11 +725,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePricingModuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePricingModuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AttributeList")
+        @com.aliyun.core.annotation.NameInMap("AttributeList")
         private AttributeList attributeList;
 
-        @NameInMap("ModuleList")
+        @com.aliyun.core.annotation.NameInMap("ModuleList")
         private ModuleList moduleList;
 
         private Data(Builder builder) {
@@ -672,7 +770,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             private ModuleList moduleList; 
 
             /**
-             * The module attributes.
+             * <p>The module attributes.</p>
              */
             public Builder attributeList(AttributeList attributeList) {
                 this.attributeList = attributeList;
@@ -680,7 +778,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
             }
 
             /**
-             * The pricing information of modules.
+             * <p>The pricing information of modules.</p>
              */
             public Builder moduleList(ModuleList moduleList) {
                 this.moduleList = moduleList;

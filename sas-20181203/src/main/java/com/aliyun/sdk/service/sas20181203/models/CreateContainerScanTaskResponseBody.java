@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContainerScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateContainerScanTaskResponseBody</p>
  */
 public class CreateContainerScanTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateContainerScanTaskResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -78,7 +86,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,32 +102,38 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateContainerScanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateContainerScanTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CanCreate")
+        @com.aliyun.core.annotation.NameInMap("CanCreate")
         private Boolean canCreate;
 
-        @NameInMap("CollectTime")
+        @com.aliyun.core.annotation.NameInMap("CollectTime")
         private Long collectTime;
 
-        @NameInMap("ExecTime")
+        @com.aliyun.core.annotation.NameInMap("ExecTime")
         private Long execTime;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Integer finishCount;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -214,7 +231,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Indicates whether you can create more scan tasks.
+             * <p>Indicates whether you can create more scan tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canCreate(Boolean canCreate) {
                 this.canCreate = canCreate;
@@ -222,7 +242,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The collection time.
+             * <p>The collection time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644286364150</p>
              */
             public Builder collectTime(Long collectTime) {
                 this.collectTime = collectTime;
@@ -230,7 +253,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The execution time of the task.
+             * <p>The execution time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644286364150</p>
              */
             public Builder execTime(Long execTime) {
                 this.execTime = execTime;
@@ -238,7 +264,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scan tasks that are complete.
+             * <p>The number of scan tasks that are complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -246,7 +275,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task.
+             * <p>The progress of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -254,7 +286,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the task.
+             * <p>The execution result of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -262,7 +297,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +308,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -278,7 +319,10 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of scan tasks.
+             * <p>The total number of scan tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListPrometheusInstancesRequest</p>
  */
 public class ListPrometheusInstancesRequest extends Request {
-    @Query
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ShowGlobalView")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowGlobalView")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean showGlobalView;
 
     private ListPrometheusInstancesRequest(Builder builder) {
@@ -84,18 +89,22 @@ public class ListPrometheusInstancesRequest extends Request {
         } 
 
         /**
-         * Optional instance types (if left blank, all types of instances will be queried):
-         * <p>
-         * - cloud-product-prometheus 
-         * - ManagedKubernetes
-         * - satellite
-         * - Ask
-         * - remote-write-prometheus
-         * - cloud-monitor-cmee
-         * - ExternalKubernetes
-         * - vpc-prometheus
-         * - cloud-monitor-direct
-         * - Edge Kubernetes
+         * <p>The cluster type. If you do not specify this parameter, all cluster types are queried. Valid values:</p>
+         * <ul>
+         * <li>cloud-product-prometheus: Prometheus instance for cloud services</li>
+         * <li>ManagedKubernetes: ACK managed cluster</li>
+         * <li>satellite: Prometheus instance for ARMS OpenTelemetry</li>
+         * <li>Ask: ACK Serverless cluster</li>
+         * <li>remote-write-prometheus: general-purpose Prometheus instance</li>
+         * <li>cloud-monitor-cmee: Hybrid Cloud Monitoring</li>
+         * <li>ExternalKubernetes: external Kubernetes cluster registered in ACK</li>
+         * <li>vpc-prometheus: Prometheus instance for ECS</li>
+         * <li>cloud-monitor-direct: cloud service self-monitoring</li>
+         * <li>Edge Kubernetes: ACK Edge cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-product-prometheus</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -104,7 +113,11 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -113,11 +126,15 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query global aggregation instances. Valid values:
-         * <p>
+         * <p>Specifies whether to obtain global aggregation instances. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showGlobalView(Boolean showGlobalView) {
             this.putQueryParameter("ShowGlobalView", showGlobalView);

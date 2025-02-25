@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpv6AddressesResponseBody</p>
  */
 public class DescribeIpv6AddressesResponseBody extends TeaModel {
-    @NameInMap("Ipv6Addresses")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Addresses")
     private Ipv6Addresses ipv6Addresses;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpv6AddressesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the IPv6 addresses.
+         * <p>The details of the IPv6 address.</p>
          */
         public Builder ipv6Addresses(Ipv6Addresses ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
@@ -94,7 +99,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Default value: **1**.
+         * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA4486A8-B6AE-469E-AB09-820EF8ECFA2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,35 +148,41 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6AddressesResponseBody</p>
+     */
     public static class Ipv6InternetBandwidth extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("HasReservationData")
+        @com.aliyun.core.annotation.NameInMap("HasReservationData")
         private Boolean hasReservationData;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("Ipv6InternetBandwidthId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6InternetBandwidthId")
         private String ipv6InternetBandwidthId;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ReservationBandwidth")
         private Long reservationBandwidth;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
         private Ipv6InternetBandwidth(Builder builder) {
@@ -266,7 +289,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String reservationOrderType; 
 
             /**
-             * The exclusive Internet bandwidth of the IPv6 address. Unit: Mbit/s.
+             * <p>The dedicated Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -274,12 +300,15 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Internet bandwidth of the IPv6 address. Valid values:
-             * <p>
+             * <p>The status of the Internet bandwidth of the IPv6 address. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * <li><strong>SecurityLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
-             * *   **SecurityLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -287,11 +316,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether renewal data is included.
-             * <p>
+             * <p>Indicates whether renewal data is included. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong> <strong>true</strong> is returned only when <strong>IncludeReservationData</strong> is set to <strong>true</strong> and some orders have not taken effect.</li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true** This parameter returns **true** only if **IncludeReservationData** is set to **true** and some orders have not taken effect.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasReservationData(Boolean hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -299,10 +331,11 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the Internet bandwidth of the IPv6 address.
-             * <p>
+             * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
+             * <p>Only <strong>PostPaid</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
              * 
-             * Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -310,11 +343,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the Internet bandwidth of the IPv6 address. Valid values:
-             * <p>
+             * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
+             * <ul>
+             * <li><strong>PayByTraffic</strong></li>
+             * <li><strong>PayByBandwidth</strong></li>
+             * </ul>
              * 
-             * *   **PayByTraffic**: pay-by-data-transfer
-             * *   **PayByBandwidth**: pay-by-bandwidth
+             * <strong>example:</strong>
+             * <p>PayByTraffic</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -322,7 +358,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the Internet bandwidth of the IPv6 address.
+             * <p>The Internet bandwidth ID of the IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6bw-hp3b35oq1fj50kbv****</p>
              */
             public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
                 this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
@@ -330,7 +369,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the renewal takes effect. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-23T16:00:00Z</p>
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -338,7 +380,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
+             * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder reservationBandwidth(Long reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -346,11 +391,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method that is used after the renewal takes effect.
-             * <p>
+             * <p>The metering method that is used after the renewal takes effect.</p>
+             * <ul>
+             * <li><strong>PayByTraffic</strong></li>
+             * <li><strong>PayByBandwidth</strong></li>
+             * </ul>
              * 
-             * *   **PayByTraffic**: pay-by-data-transfer
-             * *   **PayByBandwidth**: pay-by-bandwidth
+             * <strong>example:</strong>
+             * <p>PayByTraffic</p>
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -358,7 +406,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the renewal order. Only **RENEW** may be returned, which indicates that the order is placed for service renewal.
+             * <p>The type of the renewal order. Only <strong>RENEW</strong> may be returned, which indicates that the order is placed for service renewal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RENEW</p>
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -372,11 +423,17 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6AddressesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -411,7 +468,11 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -419,7 +480,12 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yunke</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -433,9 +499,15 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6AddressesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -452,17 +524,17 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -474,59 +546,72 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6AddressesResponseBody</p>
+     */
     public static class Ipv6Address extends TeaModel {
-        @NameInMap("AllocationTime")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
+        private String addressType;
+
+        @com.aliyun.core.annotation.NameInMap("AllocationTime")
         private String allocationTime;
 
-        @NameInMap("AssociatedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AssociatedInstanceId")
         private String associatedInstanceId;
 
-        @NameInMap("AssociatedInstanceType")
+        @com.aliyun.core.annotation.NameInMap("AssociatedInstanceType")
         private String associatedInstanceType;
 
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
-        @NameInMap("Ipv6AddressDescription")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressDescription")
         private String ipv6AddressDescription;
 
-        @NameInMap("Ipv6AddressId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressId")
         private String ipv6AddressId;
 
-        @NameInMap("Ipv6AddressName")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressName")
         private String ipv6AddressName;
 
-        @NameInMap("Ipv6GatewayId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
         private String ipv6GatewayId;
 
-        @NameInMap("Ipv6InternetBandwidth")
+        @com.aliyun.core.annotation.NameInMap("Ipv6InternetBandwidth")
         private Ipv6InternetBandwidth ipv6InternetBandwidth;
 
-        @NameInMap("Ipv6Isp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
         private String ipv6Isp;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RealBandwidth")
+        @com.aliyun.core.annotation.NameInMap("RealBandwidth")
         private Integer realBandwidth;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+        private Integer serviceManaged;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Ipv6Address(Builder builder) {
+            this.addressType = builder.addressType;
             this.allocationTime = builder.allocationTime;
             this.associatedInstanceId = builder.associatedInstanceId;
             this.associatedInstanceType = builder.associatedInstanceType;
@@ -540,6 +625,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             this.networkType = builder.networkType;
             this.realBandwidth = builder.realBandwidth;
             this.resourceGroupId = builder.resourceGroupId;
+            this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
@@ -552,6 +638,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
         public static Ipv6Address create() {
             return builder().build();
+        }
+
+        /**
+         * @return addressType
+         */
+        public String getAddressType() {
+            return this.addressType;
         }
 
         /**
@@ -646,6 +739,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceManaged
+         */
+        public Integer getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -674,6 +774,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String addressType; 
             private String allocationTime; 
             private String associatedInstanceId; 
             private String associatedInstanceType; 
@@ -687,13 +788,32 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String networkType; 
             private Integer realBandwidth; 
             private String resourceGroupId; 
+            private Integer serviceManaged; 
             private String status; 
             private Tags tags; 
             private String vSwitchId; 
             private String vpcId; 
 
             /**
-             * The time when the IPv6 address was created.
+             * <p>The type of IPv6 address. Valid values:</p>
+             * <ul>
+             * <li>IPv6Address (default): indicates a single IPv6 IP.</li>
+             * <li>IPv6Prefix: indicates IPv6 CIDR.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv6Address</p>
+             */
+            public Builder addressType(String addressType) {
+                this.addressType = addressType;
+                return this;
+            }
+
+            /**
+             * <p>The time when the IPv6 address was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T14:56:09Z</p>
              */
             public Builder allocationTime(String allocationTime) {
                 this.allocationTime = allocationTime;
@@ -701,7 +821,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that is assigned the IPv6 address.
+             * <p>The ID of the instance associated with the IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze72wuqj4y3jl4f****</p>
              */
             public Builder associatedInstanceId(String associatedInstanceId) {
                 this.associatedInstanceId = associatedInstanceId;
@@ -709,7 +832,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance that is assigned the IPv6 address.
+             * <p>The type of instance associated with the IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsInstance</p>
              */
             public Builder associatedInstanceType(String associatedInstanceType) {
                 this.associatedInstanceType = associatedInstanceType;
@@ -717,7 +843,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address of the instance.
+             * <p>The IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -725,7 +854,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6AddressDescription.
+             * <p>The description of the IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipv6AddressDescription(String ipv6AddressDescription) {
                 this.ipv6AddressDescription = ipv6AddressDescription;
@@ -733,7 +865,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPv6 address.
+             * <p>The ID of the IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6-2zen5j4axcp5l5qyy****</p>
              */
             public Builder ipv6AddressId(String ipv6AddressId) {
                 this.ipv6AddressId = ipv6AddressId;
@@ -741,7 +876,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IPv6 address.
+             * <p>The name of the IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipv6AddressName(String ipv6AddressName) {
                 this.ipv6AddressName = ipv6AddressName;
@@ -749,7 +887,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPv6 gateway to which the IPv6 address belongs.
+             * <p>The ID of the IPv6 gateway to which the IPv6 address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6gw-2zewg0l66s73b4k2q****</p>
              */
             public Builder ipv6GatewayId(String ipv6GatewayId) {
                 this.ipv6GatewayId = ipv6GatewayId;
@@ -757,7 +898,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Internet bandwidth of the IPv6 address.
+             * <p>The Internet bandwidth of the IPv6 address.</p>
              */
             public Builder ipv6InternetBandwidth(Ipv6InternetBandwidth ipv6InternetBandwidth) {
                 this.ipv6InternetBandwidth = ipv6InternetBandwidth;
@@ -765,13 +906,16 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The service provider of the IPv6 address. Valid values:
-             * <p>
+             * <p>The ISP of the IPv6 address. Valid values:</p>
+             * <ul>
+             * <li><strong>BGP</strong> (default)</li>
+             * <li><strong>ChinaMobile</strong></li>
+             * <li><strong>ChinaUnicom</strong></li>
+             * <li><strong>ChinaTelecom</strong></li>
+             * </ul>
              * 
-             * *   **BGP** (default)
-             * *   **ChinaMobile**
-             * *   **ChinaUnicom**
-             * *   **ChinaTelecom**
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -779,11 +923,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of communication supported by the IPv6 address. Valid values:
-             * <p>
+             * <p>The type of connection supported by the IPv6 address. Valid values:</p>
+             * <ul>
+             * <li><strong>Private</strong></li>
+             * <li><strong>Public</strong></li>
+             * </ul>
              * 
-             * *   **Private**
-             * *   **Public**
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -791,12 +938,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth value of the IPv6 address.
-             * <p>
+             * <p>The peak bandwidth of the IPv6 address.</p>
              * 
-             * *   If the IPv6 address is associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the EIP bandwidth plan.
-             * *   If the IPv6 address is not associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the Internet bandwidth of the IPv6 address.
-             * *   If the IPv6 address is not associated with an EIP bandwidth plan or an Internet bandwidth plan, the values of **RealBandwidth** and **Bandwidth** are both 0.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder realBandwidth(Integer realBandwidth) {
                 this.realBandwidth = realBandwidth;
@@ -804,7 +949,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -812,11 +960,29 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IPv6 address. Valid values:
-             * <p>
+             * <p>Indicates whether the instance is managed. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder serviceManaged(Integer serviceManaged) {
+                this.serviceManaged = serviceManaged;
+                return this;
+            }
+
+            /**
+             * <p>The status of the IPv6 address.</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -824,7 +990,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag list.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -832,7 +998,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the IPv6 address belongs.
+             * <p>The ID of the vSwitch to which the IPv6 address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-25navfgbue4g****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -840,7 +1009,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the IPv6 address belongs.
+             * <p>The ID of the VPC to which the IPv6 address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp15zckdt37pq72zv****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -854,9 +1026,15 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpv6AddressesResponseBody</p>
+     */
     public static class Ipv6Addresses extends TeaModel {
-        @NameInMap("Ipv6Address")
-        private java.util.List < Ipv6Address> ipv6Address;
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
+        private java.util.List<Ipv6Address> ipv6Address;
 
         private Ipv6Addresses(Builder builder) {
             this.ipv6Address = builder.ipv6Address;
@@ -873,17 +1051,20 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * @return ipv6Address
          */
-        public java.util.List < Ipv6Address> getIpv6Address() {
+        public java.util.List<Ipv6Address> getIpv6Address() {
             return this.ipv6Address;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6Address> ipv6Address; 
+            private java.util.List<Ipv6Address> ipv6Address; 
 
             /**
-             * The IPv6 address of the instance.
+             * <p>The IPv6 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
              */
-            public Builder ipv6Address(java.util.List < Ipv6Address> ipv6Address) {
+            public Builder ipv6Address(java.util.List<Ipv6Address> ipv6Address) {
                 this.ipv6Address = ipv6Address;
                 return this;
             }

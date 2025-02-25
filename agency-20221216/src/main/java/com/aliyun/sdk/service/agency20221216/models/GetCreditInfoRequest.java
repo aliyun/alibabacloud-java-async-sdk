@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCreditInfoRequest} extends {@link RequestModel}
  *
  * <p>GetCreditInfoRequest</p>
  */
 public class GetCreditInfoRequest extends Request {
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long uid;
 
     private GetCreditInfoRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetCreditInfoRequest extends Request {
         } 
 
         /**
-         * Uid.
+         * <p>Sub Account UID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792155717328010</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

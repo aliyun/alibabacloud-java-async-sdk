@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendVerificationRequest} extends {@link RequestModel}
  *
  * <p>SendVerificationRequest</p>
  */
 public class SendVerificationRequest extends Request {
-    @Query
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String target;
 
-    @Query
-    @NameInMap("VerifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifyType;
 
     private SendVerificationRequest(Builder builder) {
@@ -116,18 +116,22 @@ public class SendVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(SendVerificationRequest response) {
-            super(response);
-            this.bizType = response.bizType;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.target = response.target;
-            this.verifyType = response.verifyType;
+        private Builder(SendVerificationRequest request) {
+            super(request);
+            this.bizType = request.bizType;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.target = request.target;
+            this.verifyType = request.verifyType;
         } 
 
         /**
-         * BizType.
+         * <p>The business type. Set the value to <strong>CONTACT</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTACT</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -163,7 +167,11 @@ public class SendVerificationRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>The mobile phone number that receives the SMS verification code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150****0000</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -172,7 +180,11 @@ public class SendVerificationRequest extends Request {
         }
 
         /**
-         * VerifyType.
+         * <p>The mode of sending the SMS verification code. Set the value to <strong>SMS</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS</p>
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

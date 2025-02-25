@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSecFuncInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnSecFuncInfoResponseBody</p>
  */
 public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.List < Content> content;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("HttpStatus")
+    @com.aliyun.core.annotation.NameInMap("HttpStatus")
     private String httpStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetCode")
+    @com.aliyun.core.annotation.NameInMap("RetCode")
     private String retCode;
 
     private DescribeDcdnSecFuncInfoResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         private String retCode; 
 
         /**
-         * The parameters required by the code.
+         * <p>The parameters required by the code.</p>
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -94,7 +94,10 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The description of HTTP responses.
+         * <p>The description of HTTP responses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -102,7 +105,10 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatus(String httpStatus) {
             this.httpStatus = httpStatus;
@@ -110,7 +116,10 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30A3A25A-86B3-4C1D-BAA8-12B8607A5CFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +127,14 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The return value for HTTP requests. Valid values:
-         * <p>
+         * <p>The return value for HTTP requests. Valid values:</p>
+         * <ul>
+         * <li>0: OK.</li>
+         * <li>Values other than 0: an error.</li>
+         * </ul>
          * 
-         * *   0: OK.
-         * *   Values other than 0: an error.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(String retCode) {
             this.retCode = retCode;
@@ -135,11 +147,17 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnSecFuncInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSecFuncInfoResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Content(Builder builder) {
@@ -174,7 +192,10 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The language (Chinese or English).
+             * <p>The language (Chinese or English).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai_defense</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -182,7 +203,10 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The options in the drop-down list.
+             * <p>The options in the drop-down list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai_defense</p>
              */
             public Builder value(String value) {
                 this.value = value;

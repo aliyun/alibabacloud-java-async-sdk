@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExternalAgentRequest} extends {@link RequestModel}
  *
  * <p>DescribeExternalAgentRequest</p>
  */
 public class DescribeExternalAgentRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("AgentMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentMode")
     private String agentMode;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
     private DescribeExternalAgentRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class DescribeExternalAgentRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c106f377e16f34eb1808d6b9362c9****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +101,11 @@ public class DescribeExternalAgentRequest extends Request {
         }
 
         /**
-         * The agent mode.
+         * <p>The permission mode of the agent. Valid values:</p>
+         * <p>admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder agentMode(String agentMode) {
             this.putQueryParameter("AgentMode", agentMode);
@@ -101,13 +114,15 @@ public class DescribeExternalAgentRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the credentials that are used to access the cluster over the internal network.
-         * <p>
+         * <p>Specifies whether to obtain the credentials that are used to access the cluster over the internal network.</p>
+         * <ul>
+         * <li><code>true</code>: obtains the credentials that are used to access the cluster over the internal network.</li>
+         * <li><code>false</code>: obtains the credentials that are used to access the cluster over the Internet.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: obtains the credentials that are used to access the cluster over the internal network.
-         * *   `false`: obtains the credentials that are used to access the cluster over the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

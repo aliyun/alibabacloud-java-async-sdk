@@ -1,3 +1,60 @@
+2025-02-14 Version: 3.0.29
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2025-02-12 Version: 3.0.28
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2025-01-09 Version: 3.0.27
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2025-01-09 Version: 3.0.26
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2025-01-07 Version: 3.0.25
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-12-19 Version: 3.0.24
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-10-19 Version: 3.0.23
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-08-27 Version: 3.0.22
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-08-05 Version: 3.0.21
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-08-05 Version: 3.0.20
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-06-13 Version: 3.0.19
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-05-29 Version: 3.0.18
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-05-27 Version: 3.0.17
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-05-22 Version: 3.0.16
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-05-16 Version: 3.0.15
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-05-11 Version: 3.0.14
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-05-08 Version: 3.0.13
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-03-21 Version: 3.0.12
+- Generated java-async 2016-07-14 for CloudAPI.
+
+2024-01-25 Version: 3.0.11
+- Update Tea.
+
 2023-12-15 Version: 3.0.10
 - Generated java-async 2016-07-14 for CloudAPI.
 

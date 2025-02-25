@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParentPlatformRequest} extends {@link RequestModel}
  *
  * <p>ModifyParentPlatformRequest</p>
  */
 public class ModifyParentPlatformRequest extends Request {
-    @Query
-    @NameInMap("AutoStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoStart")
     private Boolean autoStart;
 
-    @Query
-    @NameInMap("ClientAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientAuth")
     private Boolean clientAuth;
 
-    @Query
-    @NameInMap("ClientPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientPassword")
     private String clientPassword;
 
-    @Query
-    @NameInMap("ClientUsername")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientUsername")
     private String clientUsername;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GbId")
     private String gbId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Long port;
 
     private ModifyParentPlatformRequest(Builder builder) {
@@ -179,19 +184,19 @@ public class ModifyParentPlatformRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyParentPlatformRequest response) {
-            super(response);
-            this.autoStart = response.autoStart;
-            this.clientAuth = response.clientAuth;
-            this.clientPassword = response.clientPassword;
-            this.clientUsername = response.clientUsername;
-            this.description = response.description;
-            this.gbId = response.gbId;
-            this.id = response.id;
-            this.ip = response.ip;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
+        private Builder(ModifyParentPlatformRequest request) {
+            super(request);
+            this.autoStart = request.autoStart;
+            this.clientAuth = request.clientAuth;
+            this.clientPassword = request.clientPassword;
+            this.clientUsername = request.clientUsername;
+            this.description = request.description;
+            this.gbId = request.gbId;
+            this.id = request.id;
+            this.ip = request.ip;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
         } 
 
         /**
@@ -249,7 +254,10 @@ public class ModifyParentPlatformRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>359*****374-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
