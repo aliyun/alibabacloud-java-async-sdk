@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAsyncTaskOutput extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("tasks")
-    private java.util.List < AsyncTask > tasks;
+    private java.util.List<AsyncTask> tasks;
 
     private ListAsyncTaskOutput(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -41,13 +46,13 @@ public class ListAsyncTaskOutput extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < AsyncTask > getTasks() {
+    public java.util.List<AsyncTask> getTasks() {
         return this.tasks;
     }
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < AsyncTask > tasks; 
+        private java.util.List<AsyncTask> tasks; 
 
         /**
          * nextToken.
@@ -60,7 +65,7 @@ public class ListAsyncTaskOutput extends TeaModel {
         /**
          * tasks.
          */
-        public Builder tasks(java.util.List < AsyncTask > tasks) {
+        public Builder tasks(java.util.List<AsyncTask> tasks) {
             this.tasks = tasks;
             return this;
         }

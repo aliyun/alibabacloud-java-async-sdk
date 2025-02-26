@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CustomRuntimeConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("args")
-    private java.util.List < String > args;
+    private java.util.List<String> args;
 
     @com.aliyun.core.annotation.NameInMap("command")
-    private java.util.List < String > command;
+    private java.util.List<String> command;
 
     @com.aliyun.core.annotation.NameInMap("healthCheckConfig")
     private CustomHealthCheckConfig healthCheckConfig;
@@ -42,14 +47,14 @@ public class CustomRuntimeConfig extends TeaModel {
     /**
      * @return args
      */
-    public java.util.List < String > getArgs() {
+    public java.util.List<String> getArgs() {
         return this.args;
     }
 
     /**
      * @return command
      */
-    public java.util.List < String > getCommand() {
+    public java.util.List<String> getCommand() {
         return this.command;
     }
 
@@ -68,15 +73,15 @@ public class CustomRuntimeConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > args; 
-        private java.util.List < String > command; 
+        private java.util.List<String> args; 
+        private java.util.List<String> command; 
         private CustomHealthCheckConfig healthCheckConfig; 
         private Integer port; 
 
         /**
          * args.
          */
-        public Builder args(java.util.List < String > args) {
+        public Builder args(java.util.List<String> args) {
             this.args = args;
             return this;
         }
@@ -84,7 +89,7 @@ public class CustomRuntimeConfig extends TeaModel {
         /**
          * command.
          */
-        public Builder command(java.util.List < String > command) {
+        public Builder command(java.util.List<String> command) {
             this.command = command;
             return this;
         }

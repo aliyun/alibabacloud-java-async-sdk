@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SLSTriggerConfig extends TeaModel {
     private Boolean enable;
 
     @com.aliyun.core.annotation.NameInMap("functionParameter")
-    private java.util.Map < String, String > functionParameter;
+    private java.util.Map<String, String> functionParameter;
 
     @com.aliyun.core.annotation.NameInMap("jobConfig")
     private JobConfig jobConfig;
@@ -53,7 +58,7 @@ public class SLSTriggerConfig extends TeaModel {
     /**
      * @return functionParameter
      */
-    public java.util.Map < String, String > getFunctionParameter() {
+    public java.util.Map<String, String> getFunctionParameter() {
         return this.functionParameter;
     }
 
@@ -80,7 +85,7 @@ public class SLSTriggerConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean enable; 
-        private java.util.Map < String, String > functionParameter; 
+        private java.util.Map<String, String> functionParameter; 
         private JobConfig jobConfig; 
         private SLSTriggerLogConfig logConfig; 
         private SourceConfig sourceConfig; 
@@ -96,7 +101,7 @@ public class SLSTriggerConfig extends TeaModel {
         /**
          * functionParameter.
          */
-        public Builder functionParameter(java.util.Map < String, String > functionParameter) {
+        public Builder functionParameter(java.util.Map<String, String> functionParameter) {
             this.functionParameter = functionParameter;
             return this;
         }

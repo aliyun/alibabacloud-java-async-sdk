@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateAliasInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
-    private java.util.Map < String, Float > additionalVersionWeight;
+    private java.util.Map<String, Float> additionalVersionWeight;
 
     @com.aliyun.core.annotation.NameInMap("description")
     @com.aliyun.core.annotation.Validation(maxLength = 256)
@@ -40,7 +45,7 @@ public class UpdateAliasInput extends TeaModel {
     /**
      * @return additionalVersionWeight
      */
-    public java.util.Map < String, Float > getAdditionalVersionWeight() {
+    public java.util.Map<String, Float> getAdditionalVersionWeight() {
         return this.additionalVersionWeight;
     }
 
@@ -59,14 +64,14 @@ public class UpdateAliasInput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, Float > additionalVersionWeight; 
+        private java.util.Map<String, Float> additionalVersionWeight; 
         private String description; 
         private String versionId; 
 
         /**
          * additionalVersionWeight.
          */
-        public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
+        public Builder additionalVersionWeight(java.util.Map<String, Float> additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
             return this;
         }

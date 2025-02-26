@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TracingConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("params")
-    private java.util.Map < String, String > params;
+    private java.util.Map<String, String> params;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
@@ -34,7 +39,7 @@ public class TracingConfig extends TeaModel {
     /**
      * @return params
      */
-    public java.util.Map < String, String > getParams() {
+    public java.util.Map<String, String> getParams() {
         return this.params;
     }
 
@@ -46,13 +51,13 @@ public class TracingConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > params; 
+        private java.util.Map<String, String> params; 
         private String type; 
 
         /**
          * params.
          */
-        public Builder params(java.util.Map < String, String > params) {
+        public Builder params(java.util.Map<String, String> params) {
             this.params = params;
             return this;
         }

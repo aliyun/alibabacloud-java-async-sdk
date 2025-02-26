@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class HTTPTriggerConfig extends TeaModel {
     private Boolean disableURLInternet;
 
     @com.aliyun.core.annotation.NameInMap("methods")
-    private java.util.List < String > methods;
+    private java.util.List<String> methods;
 
     private HTTPTriggerConfig(Builder builder) {
         this.authConfig = builder.authConfig;
@@ -63,7 +68,7 @@ public class HTTPTriggerConfig extends TeaModel {
     /**
      * @return methods
      */
-    public java.util.List < String > getMethods() {
+    public java.util.List<String> getMethods() {
         return this.methods;
     }
 
@@ -71,7 +76,7 @@ public class HTTPTriggerConfig extends TeaModel {
         private String authConfig; 
         private String authType; 
         private Boolean disableURLInternet; 
-        private java.util.List < String > methods; 
+        private java.util.List<String> methods; 
 
         /**
          * authConfig.
@@ -100,7 +105,7 @@ public class HTTPTriggerConfig extends TeaModel {
         /**
          * methods.
          */
-        public Builder methods(java.util.List < String > methods) {
+        public Builder methods(java.util.List<String> methods) {
             this.methods = methods;
             return this;
         }

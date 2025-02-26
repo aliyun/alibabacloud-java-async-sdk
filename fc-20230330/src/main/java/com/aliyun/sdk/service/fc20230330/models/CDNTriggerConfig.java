@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CDNTriggerConfig extends TeaModel {
     private String eventVersion;
 
     @com.aliyun.core.annotation.NameInMap("filter")
-    private java.util.Map < String, java.util.List<String>> filter;
+    private java.util.Map<String, java.util.List<String>> filter;
 
     @com.aliyun.core.annotation.NameInMap("notes")
     private String notes;
@@ -56,7 +61,7 @@ public class CDNTriggerConfig extends TeaModel {
     /**
      * @return filter
      */
-    public java.util.Map < String, java.util.List<String>> getFilter() {
+    public java.util.Map<String, java.util.List<String>> getFilter() {
         return this.filter;
     }
 
@@ -70,7 +75,7 @@ public class CDNTriggerConfig extends TeaModel {
     public static final class Builder {
         private String eventName; 
         private String eventVersion; 
-        private java.util.Map < String, java.util.List<String>> filter; 
+        private java.util.Map<String, java.util.List<String>> filter; 
         private String notes; 
 
         /**
@@ -92,7 +97,7 @@ public class CDNTriggerConfig extends TeaModel {
         /**
          * filter.
          */
-        public Builder filter(java.util.Map < String, java.util.List<String>> filter) {
+        public Builder filter(java.util.Map<String, java.util.List<String>> filter) {
             this.filter = filter;
             return this;
         }

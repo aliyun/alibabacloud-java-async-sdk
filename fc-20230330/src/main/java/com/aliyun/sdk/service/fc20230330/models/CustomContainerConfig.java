@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,10 +27,10 @@ public class CustomContainerConfig extends TeaModel {
     private String acrInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("command")
-    private java.util.List < String > command;
+    private java.util.List<String> command;
 
     @com.aliyun.core.annotation.NameInMap("entrypoint")
-    private java.util.List < String > entrypoint;
+    private java.util.List<String> entrypoint;
 
     @com.aliyun.core.annotation.NameInMap("healthCheckConfig")
     private CustomHealthCheckConfig healthCheckConfig;
@@ -87,14 +92,14 @@ public class CustomContainerConfig extends TeaModel {
     /**
      * @return command
      */
-    public java.util.List < String > getCommand() {
+    public java.util.List<String> getCommand() {
         return this.command;
     }
 
     /**
      * @return entrypoint
      */
-    public java.util.List < String > getEntrypoint() {
+    public java.util.List<String> getEntrypoint() {
         return this.entrypoint;
     }
 
@@ -137,8 +142,8 @@ public class CustomContainerConfig extends TeaModel {
         private AccelerationInfo accelerationInfo; 
         private String accelerationType; 
         private String acrInstanceId; 
-        private java.util.List < String > command; 
-        private java.util.List < String > entrypoint; 
+        private java.util.List<String> command; 
+        private java.util.List<String> entrypoint; 
         private CustomHealthCheckConfig healthCheckConfig; 
         private String image; 
         private Integer port; 
@@ -172,7 +177,7 @@ public class CustomContainerConfig extends TeaModel {
         /**
          * command.
          */
-        public Builder command(java.util.List < String > command) {
+        public Builder command(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -180,7 +185,7 @@ public class CustomContainerConfig extends TeaModel {
         /**
          * entrypoint.
          */
-        public Builder entrypoint(java.util.List < String > entrypoint) {
+        public Builder entrypoint(java.util.List<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }

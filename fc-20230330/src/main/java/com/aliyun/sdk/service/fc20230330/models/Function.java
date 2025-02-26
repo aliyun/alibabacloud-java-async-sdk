@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class Function extends TeaModel {
     private Integer diskSize;
 
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    private java.util.Map<String, String> environmentVariables;
 
     @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
@@ -79,7 +84,7 @@ public class Function extends TeaModel {
     private String lastUpdateStatusReasonCode;
 
     @com.aliyun.core.annotation.NameInMap("layers")
-    private java.util.List < FunctionLayer > layers;
+    private java.util.List<FunctionLayer> layers;
 
     @com.aliyun.core.annotation.NameInMap("logConfig")
     private LogConfig logConfig;
@@ -109,7 +114,7 @@ public class Function extends TeaModel {
     private String stateReasonCode;
 
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
@@ -233,7 +238,7 @@ public class Function extends TeaModel {
     /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -324,7 +329,7 @@ public class Function extends TeaModel {
     /**
      * @return layers
      */
-    public java.util.List < FunctionLayer > getLayers() {
+    public java.util.List<FunctionLayer> getLayers() {
         return this.layers;
     }
 
@@ -394,7 +399,7 @@ public class Function extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -429,7 +434,7 @@ public class Function extends TeaModel {
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private Integer diskSize; 
-        private java.util.Map < String, String > environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
         private String functionArn; 
         private String functionId; 
         private String functionName; 
@@ -442,7 +447,7 @@ public class Function extends TeaModel {
         private String lastUpdateStatus; 
         private String lastUpdateStatusReason; 
         private String lastUpdateStatusReasonCode; 
-        private java.util.List < FunctionLayer > layers; 
+        private java.util.List<FunctionLayer> layers; 
         private LogConfig logConfig; 
         private Integer memorySize; 
         private NASConfig nasConfig; 
@@ -452,7 +457,7 @@ public class Function extends TeaModel {
         private String state; 
         private String stateReason; 
         private String stateReasonCode; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
@@ -532,7 +537,7 @@ public class Function extends TeaModel {
         /**
          * environmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
@@ -636,7 +641,7 @@ public class Function extends TeaModel {
         /**
          * layers.
          */
-        public Builder layers(java.util.List < FunctionLayer > layers) {
+        public Builder layers(java.util.List<FunctionLayer> layers) {
             this.layers = layers;
             return this;
         }
@@ -716,7 +721,7 @@ public class Function extends TeaModel {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }

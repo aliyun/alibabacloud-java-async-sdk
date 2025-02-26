@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class NASConfig extends TeaModel {
     private Integer groupId;
 
     @com.aliyun.core.annotation.NameInMap("mountPoints")
-    private java.util.List < NASMountConfig > mountPoints;
+    private java.util.List<NASMountConfig> mountPoints;
 
     @com.aliyun.core.annotation.NameInMap("userId")
     private Integer userId;
@@ -45,7 +50,7 @@ public class NASConfig extends TeaModel {
     /**
      * @return mountPoints
      */
-    public java.util.List < NASMountConfig > getMountPoints() {
+    public java.util.List<NASMountConfig> getMountPoints() {
         return this.mountPoints;
     }
 
@@ -58,7 +63,7 @@ public class NASConfig extends TeaModel {
 
     public static final class Builder {
         private Integer groupId; 
-        private java.util.List < NASMountConfig > mountPoints; 
+        private java.util.List<NASMountConfig> mountPoints; 
         private Integer userId; 
 
         /**
@@ -72,7 +77,7 @@ public class NASConfig extends TeaModel {
         /**
          * mountPoints.
          */
-        public Builder mountPoints(java.util.List < NASMountConfig > mountPoints) {
+        public Builder mountPoints(java.util.List<NASMountConfig> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }

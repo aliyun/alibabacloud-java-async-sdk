@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetInstanceLifecycleEventsOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("events")
-    private java.util.List < InstanceEventItem > events;
+    private java.util.List<InstanceEventItem> events;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetInstanceLifecycleEventsOutput extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < InstanceEventItem > getEvents() {
+    public java.util.List<InstanceEventItem> getEvents() {
         return this.events;
     }
 
@@ -46,13 +51,13 @@ public class GetInstanceLifecycleEventsOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceEventItem > events; 
+        private java.util.List<InstanceEventItem> events; 
         private String requestId; 
 
         /**
          * events.
          */
-        public Builder events(java.util.List < InstanceEventItem > events) {
+        public Builder events(java.util.List<InstanceEventItem> events) {
             this.events = events;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListTagResourcesOutput extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagResources")
-    private java.util.List < TagResource > tagResources;
+    private java.util.List<TagResource> tagResources;
 
     private ListTagResourcesOutput(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListTagResourcesOutput extends TeaModel {
     /**
      * @return tagResources
      */
-    public java.util.List < TagResource > getTagResources() {
+    public java.util.List<TagResource> getTagResources() {
         return this.tagResources;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TagResource > tagResources; 
+        private java.util.List<TagResource> tagResources; 
 
         /**
          * NextToken.
@@ -80,7 +85,7 @@ public class ListTagResourcesOutput extends TeaModel {
         /**
          * TagResources.
          */
-        public Builder tagResources(java.util.List < TagResource > tagResources) {
+        public Builder tagResources(java.util.List<TagResource> tagResources) {
             this.tagResources = tagResources;
             return this;
         }

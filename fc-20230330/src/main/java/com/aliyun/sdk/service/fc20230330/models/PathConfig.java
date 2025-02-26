@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,7 +22,7 @@ public class PathConfig extends TeaModel {
     private String functionName;
 
     @com.aliyun.core.annotation.NameInMap("methods")
-    private java.util.List < String > methods;
+    private java.util.List<String> methods;
 
     @com.aliyun.core.annotation.NameInMap("path")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 2048)
@@ -55,7 +60,7 @@ public class PathConfig extends TeaModel {
     /**
      * @return methods
      */
-    public java.util.List < String > getMethods() {
+    public java.util.List<String> getMethods() {
         return this.methods;
     }
 
@@ -82,7 +87,7 @@ public class PathConfig extends TeaModel {
 
     public static final class Builder {
         private String functionName; 
-        private java.util.List < String > methods; 
+        private java.util.List<String> methods; 
         private String path; 
         private String qualifier; 
         private RewriteConfig rewriteConfig; 
@@ -101,7 +106,7 @@ public class PathConfig extends TeaModel {
         /**
          * methods.
          */
-        public Builder methods(java.util.List < String > methods) {
+        public Builder methods(java.util.List<String> methods) {
             this.methods = methods;
             return this;
         }

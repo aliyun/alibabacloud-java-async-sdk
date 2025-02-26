@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class ListInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("instanceStatus")
-    private java.util.List < String > instanceStatus;
+    private java.util.List<String> instanceStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("limit")
@@ -92,14 +97,14 @@ public class ListInstancesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     /**
      * @return instanceStatus
      */
-    public java.util.List < String > getInstanceStatus() {
+    public java.util.List<String> getInstanceStatus() {
         return this.instanceStatus;
     }
 
@@ -141,8 +146,8 @@ public class ListInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String functionName; 
         private Long endTimeMs; 
-        private java.util.List < String > instanceIds; 
-        private java.util.List < String > instanceStatus; 
+        private java.util.List<String> instanceIds; 
+        private java.util.List<String> instanceStatus; 
         private String limit; 
         private String qualifier; 
         private String startKey; 
@@ -191,7 +196,7 @@ public class ListInstancesRequest extends Request {
         /**
          * instanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "instanceIds", "json");
             this.putQueryParameter("instanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -201,7 +206,7 @@ public class ListInstancesRequest extends Request {
         /**
          * instanceStatus.
          */
-        public Builder instanceStatus(java.util.List < String > instanceStatus) {
+        public Builder instanceStatus(java.util.List<String> instanceStatus) {
             String instanceStatusShrink = shrink(instanceStatus, "instanceStatus", "json");
             this.putQueryParameter("instanceStatus", instanceStatusShrink);
             this.instanceStatus = instanceStatus;

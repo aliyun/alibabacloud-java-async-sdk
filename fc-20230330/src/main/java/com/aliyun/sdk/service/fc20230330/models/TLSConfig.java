@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class TLSConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cipherSuites")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > cipherSuites;
+    private java.util.List<String> cipherSuites;
 
     @com.aliyun.core.annotation.NameInMap("maxVersion")
     private String maxVersion;
@@ -40,7 +45,7 @@ public class TLSConfig extends TeaModel {
     /**
      * @return cipherSuites
      */
-    public java.util.List < String > getCipherSuites() {
+    public java.util.List<String> getCipherSuites() {
         return this.cipherSuites;
     }
 
@@ -59,14 +64,14 @@ public class TLSConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > cipherSuites; 
+        private java.util.List<String> cipherSuites; 
         private String maxVersion; 
         private String minVersion; 
 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder cipherSuites(java.util.List < String > cipherSuites) {
+        public Builder cipherSuites(java.util.List<String> cipherSuites) {
             this.cipherSuites = cipherSuites;
             return this;
         }

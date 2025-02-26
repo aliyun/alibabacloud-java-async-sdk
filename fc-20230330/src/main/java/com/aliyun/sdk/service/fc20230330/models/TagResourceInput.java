@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class TagResourceInput extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("tags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, String > tags;
+    private java.util.Map<String, String> tags;
 
     private TagResourceInput(Builder builder) {
         this.resourceArn = builder.resourceArn;
@@ -43,13 +48,13 @@ public class TagResourceInput extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.Map < String, String > getTags() {
+    public java.util.Map<String, String> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private String resourceArn; 
-        private java.util.Map < String, String > tags; 
+        private java.util.Map<String, String> tags; 
 
         /**
          * <p>This parameter is required.</p>
@@ -65,7 +70,7 @@ public class TagResourceInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.Map < String, String > tags) {
+        public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
             return this;
         }
