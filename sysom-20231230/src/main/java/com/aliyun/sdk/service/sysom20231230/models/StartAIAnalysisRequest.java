@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartAIAnalysisRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("analysisTool")
+    private String analysisTool;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("channel")
     private String channel;
 
@@ -43,6 +47,7 @@ public class StartAIAnalysisRequest extends Request {
 
     private StartAIAnalysisRequest(Builder builder) {
         super(builder);
+        this.analysisTool = builder.analysisTool;
         this.channel = builder.channel;
         this.comms = builder.comms;
         this.instance = builder.instance;
@@ -62,6 +67,13 @@ public class StartAIAnalysisRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return analysisTool
+     */
+    public String getAnalysisTool() {
+        return this.analysisTool;
     }
 
     /**
@@ -107,6 +119,7 @@ public class StartAIAnalysisRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartAIAnalysisRequest, Builder> {
+        private String analysisTool; 
         private String channel; 
         private String comms; 
         private String instance; 
@@ -120,6 +133,7 @@ public class StartAIAnalysisRequest extends Request {
 
         private Builder(StartAIAnalysisRequest request) {
             super(request);
+            this.analysisTool = request.analysisTool;
             this.channel = request.channel;
             this.comms = request.comms;
             this.instance = request.instance;
@@ -127,6 +141,15 @@ public class StartAIAnalysisRequest extends Request {
             this.region = request.region;
             this.timeout = request.timeout;
         } 
+
+        /**
+         * analysisTool.
+         */
+        public Builder analysisTool(String analysisTool) {
+            this.putBodyParameter("analysisTool", analysisTool);
+            this.analysisTool = analysisTool;
+            return this;
+        }
 
         /**
          * channel.
