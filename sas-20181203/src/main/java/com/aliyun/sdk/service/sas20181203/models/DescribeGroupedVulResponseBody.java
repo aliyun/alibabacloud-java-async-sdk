@@ -359,7 +359,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * GmtFirst.
+             * <p>The timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639371046000</p>
              */
             public Builder gmtFirst(Long gmtFirst) {
                 this.gmtFirst = gmtFirst;

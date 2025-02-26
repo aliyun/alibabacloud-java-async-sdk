@@ -44,6 +44,18 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Machine")
     private Machine machine;
 
+    @com.aliyun.core.annotation.NameInMap("PostPaidHighestVersion")
+    private String postPaidHighestVersion;
+
+    @com.aliyun.core.annotation.NameInMap("PostPaidHostAutoBind")
+    private String postPaidHostAutoBind;
+
+    @com.aliyun.core.annotation.NameInMap("PostPaidHostAutoBindVersion")
+    private String postPaidHostAutoBindVersion;
+
+    @com.aliyun.core.annotation.NameInMap("PostPaidVersionSummary")
+    private java.util.List<PostPaidVersionSummary> postPaidVersionSummary;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -60,6 +72,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         this.highestVersion = builder.highestVersion;
         this.isMultiVersion = builder.isMultiVersion;
         this.machine = builder.machine;
+        this.postPaidHighestVersion = builder.postPaidHighestVersion;
+        this.postPaidHostAutoBind = builder.postPaidHostAutoBind;
+        this.postPaidHostAutoBindVersion = builder.postPaidHostAutoBindVersion;
+        this.postPaidVersionSummary = builder.postPaidVersionSummary;
         this.requestId = builder.requestId;
         this.versionSummary = builder.versionSummary;
     }
@@ -136,6 +152,34 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     }
 
     /**
+     * @return postPaidHighestVersion
+     */
+    public String getPostPaidHighestVersion() {
+        return this.postPaidHighestVersion;
+    }
+
+    /**
+     * @return postPaidHostAutoBind
+     */
+    public String getPostPaidHostAutoBind() {
+        return this.postPaidHostAutoBind;
+    }
+
+    /**
+     * @return postPaidHostAutoBindVersion
+     */
+    public String getPostPaidHostAutoBindVersion() {
+        return this.postPaidHostAutoBindVersion;
+    }
+
+    /**
+     * @return postPaidVersionSummary
+     */
+    public java.util.List<PostPaidVersionSummary> getPostPaidVersionSummary() {
+        return this.postPaidVersionSummary;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -159,6 +203,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private Integer highestVersion; 
         private Integer isMultiVersion; 
         private Machine machine; 
+        private String postPaidHighestVersion; 
+        private String postPaidHostAutoBind; 
+        private String postPaidHostAutoBindVersion; 
+        private java.util.List<PostPaidVersionSummary> postPaidVersionSummary; 
         private String requestId; 
         private java.util.List<VersionSummary> versionSummary; 
 
@@ -298,6 +346,38 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * PostPaidHighestVersion.
+         */
+        public Builder postPaidHighestVersion(String postPaidHighestVersion) {
+            this.postPaidHighestVersion = postPaidHighestVersion;
+            return this;
+        }
+
+        /**
+         * PostPaidHostAutoBind.
+         */
+        public Builder postPaidHostAutoBind(String postPaidHostAutoBind) {
+            this.postPaidHostAutoBind = postPaidHostAutoBind;
+            return this;
+        }
+
+        /**
+         * PostPaidHostAutoBindVersion.
+         */
+        public Builder postPaidHostAutoBindVersion(String postPaidHostAutoBindVersion) {
+            this.postPaidHostAutoBindVersion = postPaidHostAutoBindVersion;
+            return this;
+        }
+
+        /**
+         * PostPaidVersionSummary.
+         */
+        public Builder postPaidVersionSummary(java.util.List<PostPaidVersionSummary> postPaidVersionSummary) {
+            this.postPaidVersionSummary = postPaidVersionSummary;
+            return this;
+        }
+
+        /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
@@ -335,6 +415,12 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindEcsCount")
         private Integer bindEcsCount;
 
+        @com.aliyun.core.annotation.NameInMap("PostPaidBindCoreCount")
+        private Integer postPaidBindCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("PostPaidBindEcsCount")
+        private Integer postPaidBindEcsCount;
+
         @com.aliyun.core.annotation.NameInMap("RiskCoreCount")
         private Integer riskCoreCount;
 
@@ -356,6 +442,8 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private Machine(Builder builder) {
             this.bindCoreCount = builder.bindCoreCount;
             this.bindEcsCount = builder.bindEcsCount;
+            this.postPaidBindCoreCount = builder.postPaidBindCoreCount;
+            this.postPaidBindEcsCount = builder.postPaidBindEcsCount;
             this.riskCoreCount = builder.riskCoreCount;
             this.riskEcsCount = builder.riskEcsCount;
             this.totalCoreCount = builder.totalCoreCount;
@@ -384,6 +472,20 @@ public class GetAuthSummaryResponseBody extends TeaModel {
          */
         public Integer getBindEcsCount() {
             return this.bindEcsCount;
+        }
+
+        /**
+         * @return postPaidBindCoreCount
+         */
+        public Integer getPostPaidBindCoreCount() {
+            return this.postPaidBindCoreCount;
+        }
+
+        /**
+         * @return postPaidBindEcsCount
+         */
+        public Integer getPostPaidBindEcsCount() {
+            return this.postPaidBindEcsCount;
         }
 
         /**
@@ -431,6 +533,8 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer bindCoreCount; 
             private Integer bindEcsCount; 
+            private Integer postPaidBindCoreCount; 
+            private Integer postPaidBindEcsCount; 
             private Integer riskCoreCount; 
             private Integer riskEcsCount; 
             private Integer totalCoreCount; 
@@ -457,6 +561,22 @@ public class GetAuthSummaryResponseBody extends TeaModel {
              */
             public Builder bindEcsCount(Integer bindEcsCount) {
                 this.bindEcsCount = bindEcsCount;
+                return this;
+            }
+
+            /**
+             * PostPaidBindCoreCount.
+             */
+            public Builder postPaidBindCoreCount(Integer postPaidBindCoreCount) {
+                this.postPaidBindCoreCount = postPaidBindCoreCount;
+                return this;
+            }
+
+            /**
+             * PostPaidBindEcsCount.
+             */
+            public Builder postPaidBindEcsCount(Integer postPaidBindEcsCount) {
+                this.postPaidBindEcsCount = postPaidBindEcsCount;
                 return this;
             }
 
@@ -528,6 +648,133 @@ public class GetAuthSummaryResponseBody extends TeaModel {
 
             public Machine build() {
                 return new Machine(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAuthSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthSummaryResponseBody</p>
+     */
+    public static class PostPaidVersionSummary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthBindType")
+        private String authBindType;
+
+        @com.aliyun.core.annotation.NameInMap("Index")
+        private Integer index;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCoreCount")
+        private Long usedCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("UsedEcsCount")
+        private Long usedEcsCount;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private Integer version;
+
+        private PostPaidVersionSummary(Builder builder) {
+            this.authBindType = builder.authBindType;
+            this.index = builder.index;
+            this.usedCoreCount = builder.usedCoreCount;
+            this.usedEcsCount = builder.usedEcsCount;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PostPaidVersionSummary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authBindType
+         */
+        public String getAuthBindType() {
+            return this.authBindType;
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return usedCoreCount
+         */
+        public Long getUsedCoreCount() {
+            return this.usedCoreCount;
+        }
+
+        /**
+         * @return usedEcsCount
+         */
+        public Long getUsedEcsCount() {
+            return this.usedEcsCount;
+        }
+
+        /**
+         * @return version
+         */
+        public Integer getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String authBindType; 
+            private Integer index; 
+            private Long usedCoreCount; 
+            private Long usedEcsCount; 
+            private Integer version; 
+
+            /**
+             * AuthBindType.
+             */
+            public Builder authBindType(String authBindType) {
+                this.authBindType = authBindType;
+                return this;
+            }
+
+            /**
+             * Index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * UsedCoreCount.
+             */
+            public Builder usedCoreCount(Long usedCoreCount) {
+                this.usedCoreCount = usedCoreCount;
+                return this;
+            }
+
+            /**
+             * UsedEcsCount.
+             */
+            public Builder usedEcsCount(Long usedEcsCount) {
+                this.usedEcsCount = usedEcsCount;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(Integer version) {
+                this.version = version;
+                return this;
+            }
+
+            public PostPaidVersionSummary build() {
+                return new PostPaidVersionSummary(this);
             } 
 
         } 

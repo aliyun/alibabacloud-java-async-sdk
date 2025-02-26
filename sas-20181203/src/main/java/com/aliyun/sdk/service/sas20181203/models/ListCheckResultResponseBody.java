@@ -319,6 +319,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrialPermission")
         private Boolean trialPermission;
 
+        @com.aliyun.core.annotation.NameInMap("TrialPermissionType")
+        private Integer trialPermissionType;
+
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
@@ -342,6 +345,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             this.statusMessage = builder.statusMessage;
             this.taskId = builder.taskId;
             this.trialPermission = builder.trialPermission;
+            this.trialPermissionType = builder.trialPermissionType;
             this.vendor = builder.vendor;
             this.vendorShowName = builder.vendorShowName;
         }
@@ -467,6 +471,13 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return trialPermissionType
+         */
+        public Integer getTrialPermissionType() {
+            return this.trialPermissionType;
+        }
+
+        /**
          * @return vendor
          */
         public String getVendor() {
@@ -497,6 +508,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             private String statusMessage; 
             private String taskId; 
             private Boolean trialPermission; 
+            private Integer trialPermissionType; 
             private String vendor; 
             private String vendorShowName; 
 
@@ -764,6 +776,14 @@ public class ListCheckResultResponseBody extends TeaModel {
              */
             public Builder trialPermission(Boolean trialPermission) {
                 this.trialPermission = trialPermission;
+                return this;
+            }
+
+            /**
+             * TrialPermissionType.
+             */
+            public Builder trialPermissionType(Integer trialPermissionType) {
+                this.trialPermissionType = trialPermissionType;
                 return this;
             }
 

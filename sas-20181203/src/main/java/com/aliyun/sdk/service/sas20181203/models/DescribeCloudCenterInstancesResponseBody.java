@@ -244,6 +244,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PodCount")
         private Integer podCount;
 
+        @com.aliyun.core.annotation.NameInMap("PostPaidFlag")
+        private Integer postPaidFlag;
+
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
@@ -330,6 +333,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.os = builder.os;
             this.osName = builder.osName;
             this.podCount = builder.podCount;
+            this.postPaidFlag = builder.postPaidFlag;
             this.region = builder.region;
             this.regionId = builder.regionId;
             this.regionName = builder.regionName;
@@ -616,6 +620,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return postPaidFlag
+         */
+        public Integer getPostPaidFlag() {
+            return this.postPaidFlag;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -765,6 +776,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String os; 
             private String osName; 
             private Integer podCount; 
+            private Integer postPaidFlag; 
             private String region; 
             private String regionId; 
             private String regionName; 
@@ -1269,6 +1281,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder podCount(Integer podCount) {
                 this.podCount = podCount;
+                return this;
+            }
+
+            /**
+             * PostPaidFlag.
+             */
+            public Builder postPaidFlag(Integer postPaidFlag) {
+                this.postPaidFlag = postPaidFlag;
                 return this;
             }
 

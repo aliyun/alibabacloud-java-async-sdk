@@ -74,11 +74,17 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MVUnusedAuthCount")
     private Integer MVUnusedAuthCount;
 
+    @com.aliyun.core.annotation.NameInMap("MergedVersion")
+    private Integer mergedVersion;
+
     @com.aliyun.core.annotation.NameInMap("NewThreatAnalysis")
     private Integer newThreatAnalysis;
 
     @com.aliyun.core.annotation.NameInMap("OpenTime")
     private Long openTime;
+
+    @com.aliyun.core.annotation.NameInMap("PostPayHostVersion")
+    private Integer postPayHostVersion;
 
     @com.aliyun.core.annotation.NameInMap("PostPayInstanceId")
     private String postPayInstanceId;
@@ -157,8 +163,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.lastTrailEndTime = builder.lastTrailEndTime;
         this.MVAuthCount = builder.MVAuthCount;
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
+        this.mergedVersion = builder.mergedVersion;
         this.newThreatAnalysis = builder.newThreatAnalysis;
         this.openTime = builder.openTime;
+        this.postPayHostVersion = builder.postPayHostVersion;
         this.postPayInstanceId = builder.postPayInstanceId;
         this.postPayModuleSwitch = builder.postPayModuleSwitch;
         this.postPayOpenTime = builder.postPayOpenTime;
@@ -322,6 +330,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return mergedVersion
+     */
+    public Integer getMergedVersion() {
+        return this.mergedVersion;
+    }
+
+    /**
      * @return newThreatAnalysis
      */
     public Integer getNewThreatAnalysis() {
@@ -333,6 +348,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Long getOpenTime() {
         return this.openTime;
+    }
+
+    /**
+     * @return postPayHostVersion
+     */
+    public Integer getPostPayHostVersion() {
+        return this.postPayHostVersion;
     }
 
     /**
@@ -488,8 +510,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long lastTrailEndTime; 
         private Integer MVAuthCount; 
         private Integer MVUnusedAuthCount; 
+        private Integer mergedVersion; 
         private Integer newThreatAnalysis; 
         private Long openTime; 
+        private Integer postPayHostVersion; 
         private String postPayInstanceId; 
         private String postPayModuleSwitch; 
         private Long postPayOpenTime; 
@@ -772,6 +796,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * MergedVersion.
+         */
+        public Builder mergedVersion(Integer mergedVersion) {
+            this.mergedVersion = mergedVersion;
+            return this;
+        }
+
+        /**
          * <p>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: no</li>
@@ -794,6 +826,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder openTime(Long openTime) {
             this.openTime = openTime;
+            return this;
+        }
+
+        /**
+         * PostPayHostVersion.
+         */
+        public Builder postPayHostVersion(Integer postPayHostVersion) {
+            this.postPayHostVersion = postPayHostVersion;
             return this;
         }
 
