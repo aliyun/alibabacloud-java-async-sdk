@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDefaultRole  CreateDefaultRoleRequest
+     * @return CreateDefaultRoleResponse
+     */
+    @Override
+    public CompletableFuture<CreateDefaultRoleResponse> createDefaultRole(CreateDefaultRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDefaultRole").setMethod(HttpMethod.POST).setPathRegex("/webapi/user/create_default_role").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDefaultRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDefaultRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeAccessControlList  DescribeAccessControlListRequest
      * @return DescribeAccessControlListResponse
      */

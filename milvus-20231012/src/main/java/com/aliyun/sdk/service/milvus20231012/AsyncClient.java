@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateDefaultRole  CreateDefaultRoleRequest
+     * @return CreateDefaultRoleResponse
+     */
+    CompletableFuture<CreateDefaultRoleResponse> createDefaultRole(CreateDefaultRoleRequest request);
+
+    /**
      * @param request the request parameters of DescribeAccessControlList  DescribeAccessControlListRequest
      * @return DescribeAccessControlListResponse
      */

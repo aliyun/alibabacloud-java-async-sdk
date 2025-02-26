@@ -497,6 +497,9 @@ public class ListInstancesResponseBody extends TeaModel {
      * <p>ListInstancesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoBackup")
+        private Boolean autoBackup;
+
         @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
@@ -552,6 +555,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private Data(Builder builder) {
+            this.autoBackup = builder.autoBackup;
             this.beginTime = builder.beginTime;
             this.clusterInfo = builder.clusterInfo;
             this.clusterName = builder.clusterName;
@@ -578,6 +582,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoBackup
+         */
+        public Boolean getAutoBackup() {
+            return this.autoBackup;
         }
 
         /**
@@ -707,6 +718,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean autoBackup; 
             private Long beginTime; 
             private ClusterInfo clusterInfo; 
             private String clusterName; 
@@ -725,6 +737,14 @@ public class ListInstancesResponseBody extends TeaModel {
             private String vpcId; 
             private String vswId; 
             private String zoneId; 
+
+            /**
+             * AutoBackup.
+             */
+            public Builder autoBackup(Boolean autoBackup) {
+                this.autoBackup = autoBackup;
+                return this;
+            }
 
             /**
              * BeginTime.
