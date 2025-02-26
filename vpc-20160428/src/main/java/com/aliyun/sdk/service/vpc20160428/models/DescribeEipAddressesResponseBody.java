@@ -91,7 +91,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The details about the EIPs.</p>
+         * <p>Details of the EIPs.</p>
          */
         public Builder eipAddresses(EipAddresses eipAddresses) {
             this.eipAddresses = eipAddresses;
@@ -1412,7 +1412,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceID.
+             * <p>The ID of the service provider to which the managed instance belongs.</p>
+             * <blockquote>
+             * <p>This is only valid when the ServiceManaged parameter is set to True.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>197*************</p>
              */
             public Builder serviceID(Long serviceID) {
                 this.serviceID = serviceID;
@@ -1420,10 +1426,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the resource is created by the service account. Valid values:</p>
+             * <p>Indicates whether the instance is managed. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong></li>
-             * <li><strong>1</strong></li>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
              * </ul>
              * 
              * <strong>example:</strong>

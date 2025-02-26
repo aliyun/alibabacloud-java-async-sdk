@@ -158,7 +158,14 @@ public class DescribePublicIpAddressRequest extends Request {
         } 
 
         /**
-         * IpVersion.
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong> (default)</li>
+         * <li><strong>IPv6</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);

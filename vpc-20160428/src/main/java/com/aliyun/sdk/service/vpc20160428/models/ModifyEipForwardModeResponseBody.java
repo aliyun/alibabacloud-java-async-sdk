@@ -43,7 +43,10 @@ public class ModifyEipForwardModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62C6A6A5-1534-53D9-AB1E-C9307A147ED5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

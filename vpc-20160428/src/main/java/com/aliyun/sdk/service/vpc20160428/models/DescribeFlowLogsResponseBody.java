@@ -403,9 +403,6 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @com.aliyun.core.annotation.NameInMap("TrafficAnalyzerId")
-        private String trafficAnalyzerId;
-
         @com.aliyun.core.annotation.NameInMap("TrafficPath")
         private TrafficPath trafficPath;
 
@@ -431,7 +428,6 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             this.serviceType = builder.serviceType;
             this.status = builder.status;
             this.tags = builder.tags;
-            this.trafficAnalyzerId = builder.trafficAnalyzerId;
             this.trafficPath = builder.trafficPath;
             this.trafficType = builder.trafficType;
         }
@@ -571,13 +567,6 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * @return trafficAnalyzerId
-         */
-        public String getTrafficAnalyzerId() {
-            return this.trafficAnalyzerId;
-        }
-
-        /**
          * @return trafficPath
          */
         public TrafficPath getTrafficPath() {
@@ -610,7 +599,6 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String serviceType; 
             private String status; 
             private Tags tags; 
-            private String trafficAnalyzerId; 
             private TrafficPath trafficPath; 
             private String trafficType; 
 
@@ -833,14 +821,6 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
-                return this;
-            }
-
-            /**
-             * TrafficAnalyzerId.
-             */
-            public Builder trafficAnalyzerId(String trafficAnalyzerId) {
-                this.trafficAnalyzerId = trafficAnalyzerId;
                 return this;
             }
 

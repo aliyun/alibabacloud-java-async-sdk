@@ -81,10 +81,6 @@ public class CreateFlowLogRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TrafficAnalyzerId")
-    private String trafficAnalyzerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficPath")
     private java.util.List<String> trafficPath;
 
@@ -110,7 +106,6 @@ public class CreateFlowLogRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
-        this.trafficAnalyzerId = builder.trafficAnalyzerId;
         this.trafficPath = builder.trafficPath;
         this.trafficType = builder.trafficType;
     }
@@ -234,13 +229,6 @@ public class CreateFlowLogRequest extends Request {
     }
 
     /**
-     * @return trafficAnalyzerId
-     */
-    public String getTrafficAnalyzerId() {
-        return this.trafficAnalyzerId;
-    }
-
-    /**
      * @return trafficPath
      */
     public java.util.List<String> getTrafficPath() {
@@ -270,7 +258,6 @@ public class CreateFlowLogRequest extends Request {
         private Long resourceOwnerId; 
         private String resourceType; 
         private java.util.List<Tag> tag; 
-        private String trafficAnalyzerId; 
         private java.util.List<String> trafficPath; 
         private String trafficType; 
 
@@ -295,7 +282,6 @@ public class CreateFlowLogRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
-            this.trafficAnalyzerId = request.trafficAnalyzerId;
             this.trafficPath = request.trafficPath;
             this.trafficType = request.trafficType;
         } 
@@ -479,15 +465,6 @@ public class CreateFlowLogRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
-            return this;
-        }
-
-        /**
-         * TrafficAnalyzerId.
-         */
-        public Builder trafficAnalyzerId(String trafficAnalyzerId) {
-            this.putQueryParameter("TrafficAnalyzerId", trafficAnalyzerId);
-            this.trafficAnalyzerId = trafficAnalyzerId;
             return this;
         }
 
