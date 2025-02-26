@@ -217,6 +217,9 @@ public class CreateHybridCloudGroupRequest extends Request {
         /**
          * <p>The name of the node group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoGroupName</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -285,7 +288,7 @@ public class CreateHybridCloudGroupRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region ID of the WAF instance. Valid values:</p>
          * <ul>
          * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
          * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
@@ -302,6 +305,9 @@ public class CreateHybridCloudGroupRequest extends Request {
 
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoRamark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

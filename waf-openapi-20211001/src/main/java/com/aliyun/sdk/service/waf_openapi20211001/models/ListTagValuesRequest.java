@@ -133,7 +133,14 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> Obtain the ID of the WAF instance by calling the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-lbj****x10g</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,10 +174,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <p>The region of the WAF instance. Valid values:</p>
          * <ul>
          * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -184,7 +191,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzwwk****cv5i</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

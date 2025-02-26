@@ -1,3 +1,6 @@
+2025-02-26 Version: 5.0.4
+- Generated java-async 2021-10-01 for waf-openapi.
+
 2024-12-30 Version: 5.0.3
 - Generated java-async 2021-10-01 for waf-openapi.
 

@@ -55,7 +55,7 @@ public class CreateDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The information about the domain name.</p>
+         * <p>The information about the domain name that is added.</p>
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -158,7 +158,10 @@ public class CreateDomainResponseBody extends TeaModel {
             }
 
             /**
-             * DomainId.
+             * <p>The name of the protected object that is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;

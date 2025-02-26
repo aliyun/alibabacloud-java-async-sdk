@@ -300,6 +300,9 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
 
             /**
              * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -393,6 +396,9 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
 
             /**
              * <p>The remarks about the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

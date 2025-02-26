@@ -175,6 +175,9 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
+        @com.aliyun.core.annotation.NameInMap("Resources")
+        private java.util.List<String> resources;
+
         private Data(Builder builder) {
             this.abnormalNum = builder.abnormalNum;
             this.allCnt = builder.allCnt;
@@ -198,6 +201,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             this.lastestTs = builder.lastestTs;
             this.matchedHost = builder.matchedHost;
             this.note = builder.note;
+            this.resources = builder.resources;
         }
 
         public static Builder builder() {
@@ -362,6 +366,13 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             return this.note;
         }
 
+        /**
+         * @return resources
+         */
+        public java.util.List<String> getResources() {
+            return this.resources;
+        }
+
         public static final class Builder {
             private Long abnormalNum; 
             private Long allCnt; 
@@ -385,6 +396,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             private Long lastestTs; 
             private String matchedHost; 
             private String note; 
+            private java.util.List<String> resources; 
 
             /**
              * <p>The number of API-related risks.</p>
@@ -671,6 +683,14 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
              */
             public Builder note(String note) {
                 this.note = note;
+                return this;
+            }
+
+            /**
+             * <p>The list of protection objects corresponding to this asset.</p>
+             */
+            public Builder resources(java.util.List<String> resources) {
+                this.resources = resources;
                 return this;
             }
 

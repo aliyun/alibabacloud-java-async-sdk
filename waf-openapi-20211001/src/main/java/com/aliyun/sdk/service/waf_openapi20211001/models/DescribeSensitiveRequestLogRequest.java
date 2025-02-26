@@ -48,7 +48,7 @@ public class DescribeSensitiveRequestLogRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 25, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
@@ -332,10 +332,10 @@ public class DescribeSensitiveRequestLogRequest extends Request {
         }
 
         /**
-         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <p>The region ID of the WAF instance. Valid value:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>

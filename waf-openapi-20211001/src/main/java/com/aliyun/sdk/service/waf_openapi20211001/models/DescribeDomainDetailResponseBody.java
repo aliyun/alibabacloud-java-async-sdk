@@ -936,10 +936,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String backend; 
 
             /**
-             * <p>The IP address or domain name of the origin server.</p>
+             * <p>The back-to-origin IP address or domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.1.XX.XX</p>
+             * <p>[
+             *     &quot;1.1.XX.XX&quot;,
+             *     &quot;2.2.XX.XX&quot;
+             * ]</p>
              */
             public Builder backend(String backend) {
                 this.backend = backend;
@@ -1235,7 +1238,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BackupBackends.
+             * <p>An array of HTTPS listener ports.</p>
              */
             public Builder backupBackends(java.util.List<BackupBackends> backupBackends) {
                 this.backupBackends = backupBackends;

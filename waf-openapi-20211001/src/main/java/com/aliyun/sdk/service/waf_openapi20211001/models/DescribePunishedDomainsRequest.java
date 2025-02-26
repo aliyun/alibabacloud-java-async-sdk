@@ -27,6 +27,10 @@ public class DescribePunishedDomainsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PunishType")
+    private String punishType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -38,6 +42,7 @@ public class DescribePunishedDomainsRequest extends Request {
         super(builder);
         this.domains = builder.domains;
         this.instanceId = builder.instanceId;
+        this.punishType = builder.punishType;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
@@ -70,6 +75,13 @@ public class DescribePunishedDomainsRequest extends Request {
     }
 
     /**
+     * @return punishType
+     */
+    public String getPunishType() {
+        return this.punishType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -86,6 +98,7 @@ public class DescribePunishedDomainsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePunishedDomainsRequest, Builder> {
         private java.util.List<String> domains; 
         private String instanceId; 
+        private String punishType; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
 
@@ -97,12 +110,13 @@ public class DescribePunishedDomainsRequest extends Request {
             super(request);
             this.domains = request.domains;
             this.instanceId = request.instanceId;
+            this.punishType = request.punishType;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * <p>The domain names.</p>
+         * <p>The domain names that are added to WAF.</p>
          */
         public Builder domains(java.util.List<String> domains) {
             this.putQueryParameter("Domains", domains);
@@ -123,6 +137,15 @@ public class DescribePunishedDomainsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PunishType.
+         */
+        public Builder punishType(String punishType) {
+            this.putQueryParameter("PunishType", punishType);
+            this.punishType = punishType;
             return this;
         }
 

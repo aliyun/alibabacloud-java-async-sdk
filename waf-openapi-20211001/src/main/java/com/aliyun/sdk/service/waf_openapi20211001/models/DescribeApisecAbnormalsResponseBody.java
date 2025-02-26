@@ -154,6 +154,9 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastestTime")
         private Long lastestTime;
 
+        @com.aliyun.core.annotation.NameInMap("LatestDiscoverTime")
+        private Long latestDiscoverTime;
+
         @com.aliyun.core.annotation.NameInMap("MatchedHost")
         private String matchedHost;
 
@@ -182,6 +185,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             this.follow = builder.follow;
             this.ignoreTime = builder.ignoreTime;
             this.lastestTime = builder.lastestTime;
+            this.latestDiscoverTime = builder.latestDiscoverTime;
             this.matchedHost = builder.matchedHost;
             this.note = builder.note;
             this.origin = builder.origin;
@@ -302,6 +306,13 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return latestDiscoverTime
+         */
+        public Long getLatestDiscoverTime() {
+            return this.latestDiscoverTime;
+        }
+
+        /**
          * @return matchedHost
          */
         public String getMatchedHost() {
@@ -345,6 +356,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
             private Long follow; 
             private Long ignoreTime; 
             private Long lastestTime; 
+            private Long latestDiscoverTime; 
             private String matchedHost; 
             private String note; 
             private String origin; 
@@ -530,6 +542,14 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
              */
             public Builder lastestTime(Long lastestTime) {
                 this.lastestTime = lastestTime;
+                return this;
+            }
+
+            /**
+             * LatestDiscoverTime.
+             */
+            public Builder latestDiscoverTime(Long latestDiscoverTime) {
+                this.latestDiscoverTime = latestDiscoverTime;
                 return this;
             }
 
