@@ -74,7 +74,7 @@ public class SetAdbSecureRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -83,6 +83,12 @@ public class SetAdbSecureRequest extends Request {
         }
 
         /**
+         * <p>The status of the ADB authentication feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: The ADB authentication feature is disabled.</li>
+         * <li>1: The ADB authentication feature is enabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

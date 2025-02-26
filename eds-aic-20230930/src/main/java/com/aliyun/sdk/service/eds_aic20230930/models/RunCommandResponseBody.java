@@ -55,7 +55,10 @@ public class RunCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InvokeId.
+         * <p>The ID of the command execution. You can use the command execution ID to query the output of a command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-gov2ujrk32v4****</p>
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -63,7 +66,10 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440D7342-5E7C-B2DB-D0B4EAC2BDF1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

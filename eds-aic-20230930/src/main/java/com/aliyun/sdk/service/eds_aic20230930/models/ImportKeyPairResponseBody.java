@@ -55,7 +55,7 @@ public class ImportKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The object that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +136,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
             private String keyPairName; 
 
             /**
-             * GmtCreated.
+             * <p>The time when the ADB key pair was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-05T10:29:22Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -141,7 +147,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairId.
+             * <p>The ID of the ADB key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kp-6v2q33ae4tw3*****</p>
              */
             public Builder keyPairId(String keyPairId) {
                 this.keyPairId = keyPairId;
@@ -149,7 +158,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * <p>The name of the ADB key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKeyPairName</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;

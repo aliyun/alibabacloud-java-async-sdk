@@ -79,7 +79,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * <p>The objects that are returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -87,7 +87,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -95,7 +98,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -401,7 +410,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             private Integer totalChildCount; 
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SendFileFailed</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -409,7 +421,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connect error.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -417,7 +432,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FailedChildCount.
+             * <p>The total number of failed subtasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder failedChildCount(Integer failedChildCount) {
                 this.failedChildCount = failedChildCount;
@@ -425,7 +443,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The end time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-11T08:53:32Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -433,7 +454,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-uto81vfd8t8z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -441,7 +465,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultInstanceName</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -449,7 +476,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The state of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -457,7 +487,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeId.
+             * <p>The ID of the command execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -465,7 +498,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The level of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -473,7 +509,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -481,7 +520,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Param.
+             * <p>The parameters of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param</p>
              */
             public Builder param(String param) {
                 this.param = param;
@@ -489,7 +531,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTaskId.
+             * <p>The ID of the parent task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-41oan3tza16vs****</p>
              */
             public Builder parentTaskId(String parentTaskId) {
                 this.parentTaskId = parentTaskId;
@@ -497,7 +542,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -505,7 +553,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-25nt4kk9whhok****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -513,7 +564,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The execution result of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Success&quot;: True}</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -521,7 +575,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RunningChildCount.
+             * <p>The total number of the subtasks that are running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder runningChildCount(Integer runningChildCount) {
                 this.runningChildCount = runningChildCount;
@@ -529,7 +586,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-11T08:53:32Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -537,7 +597,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessChildCount.
+             * <p>The total number of successfully executed subtasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98</p>
              */
             public Builder successChildCount(Integer successChildCount) {
                 this.successChildCount = successChildCount;
@@ -545,7 +608,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-bp67acfmxazb4p****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -553,7 +619,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The state of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Processing</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -561,7 +630,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StartInstance</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -569,7 +641,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalChildCount.
+             * <p>The total number of subtasks of the current batch task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalChildCount(Integer totalChildCount) {
                 this.totalChildCount = totalChildCount;

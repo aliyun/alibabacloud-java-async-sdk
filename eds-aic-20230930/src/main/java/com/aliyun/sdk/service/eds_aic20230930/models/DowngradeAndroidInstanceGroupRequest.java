@@ -88,7 +88,7 @@ public class DowngradeAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>The IDs of the cloud phone instances that you want to delete.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -97,7 +97,15 @@ public class DowngradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable the auto-payment feature. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables the auto-payment feature. Ensure your account has sufficient balance to use this feature.</li>
+         * <li>false: disables the auto-payment feature. This requires manual payment each time you place an order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -106,6 +114,7 @@ public class DowngradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

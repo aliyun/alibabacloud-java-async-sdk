@@ -55,7 +55,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The object that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +148,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DetachedInstanceIds.
+             * <p>The IDs of the cloud phone instances from which the ADB key pair is successfully detached.</p>
              */
             public Builder detachedInstanceIds(java.util.List<String> detachedInstanceIds) {
                 this.detachedInstanceIds = detachedInstanceIds;
@@ -153,7 +156,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * FailCount.
+             * <p>The number of the cloud phone instances from which the ADB key pair failed to be detached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -161,7 +167,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairId.
+             * <p>The ID of the ADB key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kp-6v2q33ae4tw3a****</p>
              */
             public Builder keyPairId(String keyPairId) {
                 this.keyPairId = keyPairId;
@@ -169,7 +178,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of the cloud phone instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

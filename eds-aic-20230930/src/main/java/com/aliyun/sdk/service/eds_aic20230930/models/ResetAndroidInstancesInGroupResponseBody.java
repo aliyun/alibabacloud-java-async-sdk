@@ -43,7 +43,10 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

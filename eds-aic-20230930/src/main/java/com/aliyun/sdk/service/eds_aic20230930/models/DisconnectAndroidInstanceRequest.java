@@ -12,31 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DetachKeyPairRequest} extends {@link RequestModel}
+ * {@link DisconnectAndroidInstanceRequest} extends {@link RequestModel}
  *
- * <p>DetachKeyPairRequest</p>
+ * <p>DisconnectAndroidInstanceRequest</p>
  */
-public class DetachKeyPairRequest extends Request {
+public class DisconnectAndroidInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceIds;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("KeyPairId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String keyPairId;
-
-    private DetachKeyPairRequest(Builder builder) {
+    private DisconnectAndroidInstanceRequest(Builder builder) {
         super(builder);
         this.instanceIds = builder.instanceIds;
-        this.keyPairId = builder.keyPairId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DetachKeyPairRequest create() {
+    public static DisconnectAndroidInstanceRequest create() {
         return builder().build();
     }
 
@@ -52,29 +47,20 @@ public class DetachKeyPairRequest extends Request {
         return this.instanceIds;
     }
 
-    /**
-     * @return keyPairId
-     */
-    public String getKeyPairId() {
-        return this.keyPairId;
-    }
-
-    public static final class Builder extends Request.Builder<DetachKeyPairRequest, Builder> {
+    public static final class Builder extends Request.Builder<DisconnectAndroidInstanceRequest, Builder> {
         private java.util.List<String> instanceIds; 
-        private String keyPairId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DetachKeyPairRequest request) {
+        private Builder(DisconnectAndroidInstanceRequest request) {
             super(request);
             this.instanceIds = request.instanceIds;
-            this.keyPairId = request.keyPairId;
         } 
 
         /**
-         * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -82,22 +68,9 @@ public class DetachKeyPairRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The ID of the ADB key pair.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>kp-6v2q33ae4tw3a****</p>
-         */
-        public Builder keyPairId(String keyPairId) {
-            this.putQueryParameter("KeyPairId", keyPairId);
-            this.keyPairId = keyPairId;
-            return this;
-        }
-
         @Override
-        public DetachKeyPairRequest build() {
-            return new DetachKeyPairRequest(this);
+        public DisconnectAndroidInstanceRequest build() {
+            return new DisconnectAndroidInstanceRequest(this);
         } 
 
     } 

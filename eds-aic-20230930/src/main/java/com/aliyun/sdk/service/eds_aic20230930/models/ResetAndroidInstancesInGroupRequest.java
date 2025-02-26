@@ -59,7 +59,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>The IDs of the cloud phone instances.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);

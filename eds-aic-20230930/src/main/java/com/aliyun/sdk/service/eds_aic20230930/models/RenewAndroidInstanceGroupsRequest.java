@@ -101,7 +101,15 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables the auto-payment feature. Ensure your account has sufficient balance to use this feature.</li>
+         * <li>false: disables the auto-payment feature. You need to manually complete the payment process.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -110,7 +118,7 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * InstanceGroupIds.
+         * <p>The IDs of the instance groups.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
@@ -119,7 +127,10 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The duration of the renewal, measured in units defined by PeriodUnit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -128,7 +139,15 @@ public class RenewAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the renewal duration. Default value: Month.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);

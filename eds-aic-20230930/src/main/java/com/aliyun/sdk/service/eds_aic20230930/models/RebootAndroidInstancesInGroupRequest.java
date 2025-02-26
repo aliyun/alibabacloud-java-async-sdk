@@ -73,7 +73,7 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>The IDs of the cloud phone instances.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -82,7 +82,15 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * ForceStop.
+         * <p>Specifies whether to enforce a restart operation. If a cloud phone instance fails to stop due to system or network issues, a forced restart can be triggered, though it may result in data loss.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);

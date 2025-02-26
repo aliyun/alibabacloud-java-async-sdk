@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RebootAndroidInstancesInGroupResponseBody} extends {@link TeaModel}
+ * {@link EndCoordinationResponseBody} extends {@link TeaModel}
  *
- * <p>RebootAndroidInstancesInGroupResponseBody</p>
+ * <p>EndCoordinationResponseBody</p>
  */
-public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
+public class EndCoordinationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RebootAndroidInstancesInGroupResponseBody(Builder builder) {
+    private EndCoordinationResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RebootAndroidInstancesInGroupResponseBody create() {
+    public static EndCoordinationResponseBody create() {
         return builder().build();
     }
 
@@ -43,18 +43,15 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>227CBB4C-F5DC-589D-A667-C5CA3D52****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RebootAndroidInstancesInGroupResponseBody build() {
-            return new RebootAndroidInstancesInGroupResponseBody(this);
+        public EndCoordinationResponseBody build() {
+            return new EndCoordinationResponseBody(this);
         } 
 
     } 

@@ -119,6 +119,7 @@ public class SendFileRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the cloud phone instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -128,6 +129,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
+         * <p>The path to which you want to upload the pushed file in the cloud phone instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +142,13 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * UploadEndpoint.
+         * <p>The endpoint of the OSS bucket in which the file is stored.</p>
+         * <blockquote>
+         * <p> Set the value to an internal endpoint when the cloud phone instance and the OSS bucket are in the same region to improve transfer speed without incurring public traffic fees. Sample endpoint: <code>oss-cn-hangzhou-internal.aliyuncs.com</code>. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou.aliyuncs.com</p>
          */
         public Builder uploadEndpoint(String uploadEndpoint) {
             this.putQueryParameter("UploadEndpoint", uploadEndpoint);
@@ -149,6 +157,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
+         * <p>The storage type of the file that you want to upload.</p>
+         * <ul>
+         * <li>Set the value to OSS.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +173,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
+         * <p>The OSS URL of the file.</p>
+         * <blockquote>
+         * <p> The OSS bucket name must start with &quot;cloudphone-saved-bucket-&quot;, for example, &quot;cloudphone-saved-bucket-example&quot;. You must also create an OSS directory to store the backup data. Set the value for UploadUrl in this format: oss://&lt;BucketName&gt;/&lt;OSSDirectoryName&gt;&lt;FileName&gt;.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder uploadUrl(String uploadUrl) {

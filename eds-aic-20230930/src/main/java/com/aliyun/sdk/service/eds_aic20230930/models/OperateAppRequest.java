@@ -87,7 +87,10 @@ public class OperateAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder appId(Integer appId) {
             this.putQueryParameter("AppId", appId);
@@ -96,7 +99,7 @@ public class OperateAppRequest extends Request {
         }
 
         /**
-         * InstanceIdList.
+         * <p>The IDs of the cloud phone instances.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -105,7 +108,16 @@ public class OperateAppRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * <p>The type of the operation.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>stop: closes the app.</li>
+         * <li>restart: reopens the app.</li>
+         * <li>start: open the app.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);

@@ -55,7 +55,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceConnectionModels.
+         * <p>The results of the instance connection tasks.</p>
          */
         public Builder instanceConnectionModels(java.util.List<InstanceConnectionModels> instanceConnectionModels) {
             this.instanceConnectionModels = instanceConnectionModels;
@@ -63,7 +63,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
@@ -160,7 +160,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             private String ticket; 
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-1uzb6heg797z3****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -168,7 +171,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-ajxvwo1u0hqvd****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -176,7 +182,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou@c9f5c2e8-f5c4-4b01-8602-000cae94****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -184,7 +193,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The state of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -192,7 +204,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Ticket.
+             * <p>The ticket used to connect to the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>piVE58_AdmVSVW7SEW3<em>AE5</em>p8mmO5gvItsNOmv4S_f_cNpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV<em>0</em>Cm58slMT1tJw3****</p>
              */
             public Builder ticket(String ticket) {
                 this.ticket = ticket;

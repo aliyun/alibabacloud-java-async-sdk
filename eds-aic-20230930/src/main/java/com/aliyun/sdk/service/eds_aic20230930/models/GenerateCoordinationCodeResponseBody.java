@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RenewAndroidInstanceGroupsResponseBody} extends {@link TeaModel}
+ * {@link GenerateCoordinationCodeResponseBody} extends {@link TeaModel}
  *
- * <p>RenewAndroidInstanceGroupsResponseBody</p>
+ * <p>GenerateCoordinationCodeResponseBody</p>
  */
-public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
+public class GenerateCoordinationCodeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CoordinatorCode")
+    private String coordinatorCode;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RenewAndroidInstanceGroupsResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
+    private GenerateCoordinationCodeResponseBody(Builder builder) {
+        this.coordinatorCode = builder.coordinatorCode;
         this.requestId = builder.requestId;
     }
 
@@ -32,15 +32,15 @@ public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RenewAndroidInstanceGroupsResponseBody create() {
+    public static GenerateCoordinationCodeResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return orderId
+     * @return coordinatorCode
      */
-    public String getOrderId() {
-        return this.orderId;
+    public String getCoordinatorCode() {
+        return this.coordinatorCode;
     }
 
     /**
@@ -51,33 +51,27 @@ public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String orderId; 
+        private String coordinatorCode; 
         private String requestId; 
 
         /**
-         * <p>The ID of the order.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22326560487****</p>
+         * CoordinatorCode.
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder coordinatorCode(String coordinatorCode) {
+            this.coordinatorCode = coordinatorCode;
             return this;
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4B886792-2051-5DB4-8AE6-C8E45D3B4****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RenewAndroidInstanceGroupsResponseBody build() {
-            return new RenewAndroidInstanceGroupsResponseBody(this);
+        public GenerateCoordinationCodeResponseBody build() {
+            return new GenerateCoordinationCodeResponseBody(this);
         } 
 
     } 

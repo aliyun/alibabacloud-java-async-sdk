@@ -67,7 +67,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Data.
+         * <p>The objects that are returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440D7342-5E7C-B2DB-D0B4EAC2BDF1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +86,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -189,7 +195,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * FinishTime.
+             * <p>The end time of the command execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-11 17:45:03</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -197,7 +206,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the cloud phone instance on which the command is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-uto81vfd8t8z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -205,7 +217,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationId.
+             * <p>The ID of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-15775dc8****</p>
              */
             public Builder invocationId(String invocationId) {
                 this.invocationId = invocationId;
@@ -213,7 +228,18 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationStatus.
+             * <p>The execution state of the command.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SUCCESS: The command is successfully executed.</li>
+             * <li>FAILED: The command failed to be executed.</li>
+             * <li>RUNNING: The command is being executed.</li>
+             * <li>PENDING: The command is pending execution.</li>
+             * <li>TIMEOUT: The command execution timed out.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -221,7 +247,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output of the command execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -229,7 +258,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the command execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-11 17:45:03</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

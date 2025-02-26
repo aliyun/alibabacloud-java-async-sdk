@@ -43,7 +43,10 @@ public class UpdateInstanceGroupImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55726272-E40B-530D-914F-5126B19C79B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,10 @@ public class SendFileResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Data.
+         * <p>The objects that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class SendFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +89,10 @@ public class SendFileResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the batch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-ehs0yoedj0xe9****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -149,7 +158,10 @@ public class SendFileResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the batch task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-ehs0yoedj0xe9****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

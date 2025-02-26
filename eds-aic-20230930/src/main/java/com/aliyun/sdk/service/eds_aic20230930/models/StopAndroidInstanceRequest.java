@@ -73,7 +73,7 @@ public class StopAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>The IDs of the cloud phone instances.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -82,7 +82,10 @@ public class StopAndroidInstanceRequest extends Request {
         }
 
         /**
-         * ForceStop.
+         * <p>Specifies whether to enforce a stop operation. If a cloud phone instance fails to stop due to system or network issues, a forced stop can be triggered, though it may result in data loss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);

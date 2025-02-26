@@ -101,7 +101,10 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         } 
 
         /**
-         * EndUserId.
+         * <p>The ID of the user to whom the cloud phone instance is assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -110,7 +113,10 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         }
 
         /**
-         * InstanceGroupId.
+         * <p>The ID of the instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-25nt4kk9whjh****</p>
          */
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);
@@ -119,7 +125,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the cloud phone instances. You can specify 1 to 100 IDs of cloud phone instances.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -128,7 +134,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         }
 
         /**
-         * InstanceTasks.
+         * <p>The instance connection tasks.</p>
          */
         public Builder instanceTasks(java.util.List<InstanceTasks> instanceTasks) {
             this.putQueryParameter("InstanceTasks", instanceTasks);
@@ -188,7 +194,10 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
             private String taskId; 
 
             /**
-             * InstanceId.
+             * <p>The ID of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-fkuit0cmyfvzz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -196,7 +205,10 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou@c9f5c2e8-f5c4-4b01-8602-000cae94****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
