@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyAttachmentResponse> createPolicyAttachment(CreatePolicyAttachmentRequest request);
 
     /**
+     * @param request the request parameters of CreateService  CreateServiceRequest
+     * @return CreateServiceResponse
+     */
+    CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
+
+    /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -208,6 +214,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceOverviewResponse> getResourceOverview(GetResourceOverviewRequest request);
 
     /**
+     * @param request the request parameters of GetService  GetServiceRequest
+     * @return GetServiceResponse
+     */
+    CompletableFuture<GetServiceResponse> getService(GetServiceRequest request);
+
+    /**
      * @param request the request parameters of GetTraceConfig  GetTraceConfigRequest
      * @return GetTraceConfigResponse
      */
@@ -245,6 +257,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHttpApiOperationsResponse> listHttpApiOperations(ListHttpApiOperationsRequest request);
 
     /**
+     * @param request the request parameters of ListHttpApiRoutes  ListHttpApiRoutesRequest
+     * @return ListHttpApiRoutesResponse
+     */
+    CompletableFuture<ListHttpApiRoutesResponse> listHttpApiRoutes(ListHttpApiRoutesRequest request);
+
+    /**
      * @param request the request parameters of ListHttpApis  ListHttpApisRequest
      * @return ListHttpApisResponse
      */
@@ -255,6 +273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPolicyClassesResponse
      */
     CompletableFuture<ListPolicyClassesResponse> listPolicyClasses(ListPolicyClassesRequest request);
+
+    /**
+     * @param request the request parameters of ListServices  ListServicesRequest
+     * @return ListServicesResponse
+     */
+    CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     /**
      * @param request the request parameters of ListSslCerts  ListSslCertsRequest
