@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210220.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class FindIdpListByLoginIdentifierRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AvailableFeatures")
-    private java.util.Map < String, String > availableFeatures;
+    private java.util.Map<String, String> availableFeatures;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientChannel")
@@ -43,7 +48,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SupportTypes")
-    private java.util.List < String > supportTypes;
+    private java.util.List<String> supportTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Uuid")
@@ -78,7 +83,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
     /**
      * @return availableFeatures
      */
-    public java.util.Map < String, String > getAvailableFeatures() {
+    public java.util.Map<String, String> getAvailableFeatures() {
         return this.availableFeatures;
     }
 
@@ -127,7 +132,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
     /**
      * @return supportTypes
      */
-    public java.util.List < String > getSupportTypes() {
+    public java.util.List<String> getSupportTypes() {
         return this.supportTypes;
     }
 
@@ -139,14 +144,14 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FindIdpListByLoginIdentifierRequest, Builder> {
-        private java.util.Map < String, String > availableFeatures; 
+        private java.util.Map<String, String> availableFeatures; 
         private String clientChannel; 
         private String clientId; 
         private String clientIp; 
         private String clientOS; 
         private String clientVersion; 
         private String loginIdentifier; 
-        private java.util.List < String > supportTypes; 
+        private java.util.List<String> supportTypes; 
         private String uuid; 
 
         private Builder() {
@@ -169,7 +174,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
         /**
          * AvailableFeatures.
          */
-        public Builder availableFeatures(java.util.Map < String, String > availableFeatures) {
+        public Builder availableFeatures(java.util.Map<String, String> availableFeatures) {
             String availableFeaturesShrink = shrink(availableFeatures, "AvailableFeatures", "json");
             this.putQueryParameter("AvailableFeatures", availableFeaturesShrink);
             this.availableFeatures = availableFeatures;
@@ -236,7 +241,7 @@ public class FindIdpListByLoginIdentifierRequest extends Request {
         /**
          * SupportTypes.
          */
-        public Builder supportTypes(java.util.List < String > supportTypes) {
+        public Builder supportTypes(java.util.List<String> supportTypes) {
             this.putBodyParameter("SupportTypes", supportTypes);
             this.supportTypes = supportTypes;
             return this;

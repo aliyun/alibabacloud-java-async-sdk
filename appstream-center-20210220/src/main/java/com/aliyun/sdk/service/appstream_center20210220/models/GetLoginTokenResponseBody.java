@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210220.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,13 +48,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
     private String loginToken;
 
     @com.aliyun.core.annotation.NameInMap("MfaTypeList")
-    private java.util.List < MfaTypeList> mfaTypeList;
+    private java.util.List<MfaTypeList> mfaTypeList;
 
     @com.aliyun.core.annotation.NameInMap("NextStage")
     private String nextStage;
 
     @com.aliyun.core.annotation.NameInMap("OfficeSites")
-    private java.util.List < String > officeSites;
+    private java.util.List<String> officeSites;
 
     @com.aliyun.core.annotation.NameInMap("PasswordStrategy")
     private PasswordStrategy passwordStrategy;
@@ -58,7 +63,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     private String phone;
 
     @com.aliyun.core.annotation.NameInMap("Props")
-    private java.util.Map < String, String > props;
+    private java.util.Map<String, String> props;
 
     @com.aliyun.core.annotation.NameInMap("QrCodePng")
     private String qrCodePng;
@@ -85,7 +90,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     private Long tenantId;
 
     @com.aliyun.core.annotation.NameInMap("TenantInfos")
-    private java.util.List < TenantInfos> tenantInfos;
+    private java.util.List<TenantInfos> tenantInfos;
 
     @com.aliyun.core.annotation.NameInMap("VpcRegionId")
     private String vpcRegionId;
@@ -208,7 +213,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     /**
      * @return mfaTypeList
      */
-    public java.util.List < MfaTypeList> getMfaTypeList() {
+    public java.util.List<MfaTypeList> getMfaTypeList() {
         return this.mfaTypeList;
     }
 
@@ -222,7 +227,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     /**
      * @return officeSites
      */
-    public java.util.List < String > getOfficeSites() {
+    public java.util.List<String> getOfficeSites() {
         return this.officeSites;
     }
 
@@ -243,7 +248,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     /**
      * @return props
      */
-    public java.util.Map < String, String > getProps() {
+    public java.util.Map<String, String> getProps() {
         return this.props;
     }
 
@@ -306,7 +311,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     /**
      * @return tenantInfos
      */
-    public java.util.List < TenantInfos> getTenantInfos() {
+    public java.util.List<TenantInfos> getTenantInfos() {
         return this.tenantInfos;
     }
 
@@ -342,12 +347,12 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String keepAliveToken; 
         private String label; 
         private String loginToken; 
-        private java.util.List < MfaTypeList> mfaTypeList; 
+        private java.util.List<MfaTypeList> mfaTypeList; 
         private String nextStage; 
-        private java.util.List < String > officeSites; 
+        private java.util.List<String> officeSites; 
         private PasswordStrategy passwordStrategy; 
         private String phone; 
-        private java.util.Map < String, String > props; 
+        private java.util.Map<String, String> props; 
         private String qrCodePng; 
         private String reason; 
         private String requestId; 
@@ -356,7 +361,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String sessionId; 
         private String tenantAlias; 
         private Long tenantId; 
-        private java.util.List < TenantInfos> tenantInfos; 
+        private java.util.List<TenantInfos> tenantInfos; 
         private String vpcRegionId; 
         private String windowDisplayMode; 
         private String wyId; 
@@ -444,7 +449,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         /**
          * MfaTypeList.
          */
-        public Builder mfaTypeList(java.util.List < MfaTypeList> mfaTypeList) {
+        public Builder mfaTypeList(java.util.List<MfaTypeList> mfaTypeList) {
             this.mfaTypeList = mfaTypeList;
             return this;
         }
@@ -460,7 +465,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         /**
          * OfficeSites.
          */
-        public Builder officeSites(java.util.List < String > officeSites) {
+        public Builder officeSites(java.util.List<String> officeSites) {
             this.officeSites = officeSites;
             return this;
         }
@@ -484,7 +489,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         /**
          * Props.
          */
-        public Builder props(java.util.Map < String, String > props) {
+        public Builder props(java.util.Map<String, String> props) {
             this.props = props;
             return this;
         }
@@ -556,7 +561,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         /**
          * TenantInfos.
          */
-        public Builder tenantInfos(java.util.List < TenantInfos> tenantInfos) {
+        public Builder tenantInfos(java.util.List<TenantInfos> tenantInfos) {
             this.tenantInfos = tenantInfos;
             return this;
         }
@@ -666,7 +671,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     public static class PasswordStrategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantAlternativeChars")
-        private java.util.List < String > tenantAlternativeChars;
+        private java.util.List<String> tenantAlternativeChars;
 
         @com.aliyun.core.annotation.NameInMap("TenantPasswordLength")
         private Integer tenantPasswordLength;
@@ -687,7 +692,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         /**
          * @return tenantAlternativeChars
          */
-        public java.util.List < String > getTenantAlternativeChars() {
+        public java.util.List<String> getTenantAlternativeChars() {
             return this.tenantAlternativeChars;
         }
 
@@ -699,13 +704,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > tenantAlternativeChars; 
+            private java.util.List<String> tenantAlternativeChars; 
             private Integer tenantPasswordLength; 
 
             /**
              * TenantAlternativeChars.
              */
-            public Builder tenantAlternativeChars(java.util.List < String > tenantAlternativeChars) {
+            public Builder tenantAlternativeChars(java.util.List<String> tenantAlternativeChars) {
                 this.tenantAlternativeChars = tenantAlternativeChars;
                 return this;
             }

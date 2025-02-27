@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210220.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,12 +23,16 @@ public class GetLoginTokenRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AvailableFeatures")
-    private java.util.Map < String, String > availableFeatures;
+    private java.util.Map<String, String> availableFeatures;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientName")
+    private String clientName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientOS")
@@ -123,6 +132,10 @@ public class GetLoginTokenRequest extends Request {
     private String phoneVerifyCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProfileRegion")
+    private String profileRegion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -155,6 +168,7 @@ public class GetLoginTokenRequest extends Request {
         this.authenticationCode = builder.authenticationCode;
         this.availableFeatures = builder.availableFeatures;
         this.clientId = builder.clientId;
+        this.clientName = builder.clientName;
         this.clientOS = builder.clientOS;
         this.clientType = builder.clientType;
         this.clientVersion = builder.clientVersion;
@@ -179,6 +193,7 @@ public class GetLoginTokenRequest extends Request {
         this.password = builder.password;
         this.phone = builder.phone;
         this.phoneVerifyCode = builder.phoneVerifyCode;
+        this.profileRegion = builder.profileRegion;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
         this.ssoExtendsCookies = builder.ssoExtendsCookies;
@@ -211,7 +226,7 @@ public class GetLoginTokenRequest extends Request {
     /**
      * @return availableFeatures
      */
-    public java.util.Map < String, String > getAvailableFeatures() {
+    public java.util.Map<String, String> getAvailableFeatures() {
         return this.availableFeatures;
     }
 
@@ -220,6 +235,13 @@ public class GetLoginTokenRequest extends Request {
      */
     public String getClientId() {
         return this.clientId;
+    }
+
+    /**
+     * @return clientName
+     */
+    public String getClientName() {
+        return this.clientName;
     }
 
     /**
@@ -391,6 +413,13 @@ public class GetLoginTokenRequest extends Request {
     }
 
     /**
+     * @return profileRegion
+     */
+    public String getProfileRegion() {
+        return this.profileRegion;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -441,8 +470,9 @@ public class GetLoginTokenRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetLoginTokenRequest, Builder> {
         private String authenticationCode; 
-        private java.util.Map < String, String > availableFeatures; 
+        private java.util.Map<String, String> availableFeatures; 
         private String clientId; 
+        private String clientName; 
         private String clientOS; 
         private String clientType; 
         private String clientVersion; 
@@ -467,6 +497,7 @@ public class GetLoginTokenRequest extends Request {
         private String password; 
         private String phone; 
         private String phoneVerifyCode; 
+        private String profileRegion; 
         private String regionId; 
         private String sessionId; 
         private String ssoExtendsCookies; 
@@ -484,6 +515,7 @@ public class GetLoginTokenRequest extends Request {
             this.authenticationCode = request.authenticationCode;
             this.availableFeatures = request.availableFeatures;
             this.clientId = request.clientId;
+            this.clientName = request.clientName;
             this.clientOS = request.clientOS;
             this.clientType = request.clientType;
             this.clientVersion = request.clientVersion;
@@ -508,6 +540,7 @@ public class GetLoginTokenRequest extends Request {
             this.password = request.password;
             this.phone = request.phone;
             this.phoneVerifyCode = request.phoneVerifyCode;
+            this.profileRegion = request.profileRegion;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
             this.ssoExtendsCookies = request.ssoExtendsCookies;
@@ -529,7 +562,7 @@ public class GetLoginTokenRequest extends Request {
         /**
          * AvailableFeatures.
          */
-        public Builder availableFeatures(java.util.Map < String, String > availableFeatures) {
+        public Builder availableFeatures(java.util.Map<String, String> availableFeatures) {
             String availableFeaturesShrink = shrink(availableFeatures, "AvailableFeatures", "json");
             this.putQueryParameter("AvailableFeatures", availableFeaturesShrink);
             this.availableFeatures = availableFeatures;
@@ -545,6 +578,15 @@ public class GetLoginTokenRequest extends Request {
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
             this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * ClientName.
+         */
+        public Builder clientName(String clientName) {
+            this.putQueryParameter("ClientName", clientName);
+            this.clientName = clientName;
             return this;
         }
 
@@ -761,6 +803,15 @@ public class GetLoginTokenRequest extends Request {
         public Builder phoneVerifyCode(String phoneVerifyCode) {
             this.putQueryParameter("PhoneVerifyCode", phoneVerifyCode);
             this.phoneVerifyCode = phoneVerifyCode;
+            return this;
+        }
+
+        /**
+         * ProfileRegion.
+         */
+        public Builder profileRegion(String profileRegion) {
+            this.putQueryParameter("ProfileRegion", profileRegion);
+            this.profileRegion = profileRegion;
             return this;
         }
 
