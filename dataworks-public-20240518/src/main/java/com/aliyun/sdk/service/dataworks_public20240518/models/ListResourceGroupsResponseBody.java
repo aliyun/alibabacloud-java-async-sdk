@@ -147,7 +147,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>Tag Key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -155,7 +158,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Tag Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -442,7 +448,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunResourceTags.
+             * <p>Alibaba Cloud tag list</p>
              */
             public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
                 this.aliyunResourceTags = aliyunResourceTags;
@@ -549,7 +555,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of resource group. Valid values:</p>
+             * <p>The type of the resource group. Valid values:</p>
              * <ul>
              * <li>CommonV2: serverless resource group</li>
              * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
@@ -579,13 +585,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
              * <li>Normal: The resource group is running or in use.</li>
              * <li>Stop: The resource group is expired.</li>
              * <li>Deleted: The resource group is released or destroyed.</li>
-             * <li>Creating: The resource group is being started.</li>
-             * <li>CreateFailed: The resource group fails to be started.</li>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>CreateFailed: The resource group fails to be created.</li>
              * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
              * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
              * <li>Deleting: The resource group is being released or destroyed.</li>
              * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
              * <li>Timeout: The operations that are performed on the resource group time out.</li>
+             * <li>Freezed: The resource group is frozen.</li>
+             * <li>Starting: The resource group is being started.</li>
              * </ul>
              * 
              * <strong>example:</strong>

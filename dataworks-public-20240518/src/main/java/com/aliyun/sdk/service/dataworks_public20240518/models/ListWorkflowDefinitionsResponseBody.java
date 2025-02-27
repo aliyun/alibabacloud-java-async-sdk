@@ -385,7 +385,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The times when the workflow was last modified. This value is a UNIX timestamp.</p>
+             * <p>The time when the workflow was last modified. This value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1698057323000</p>

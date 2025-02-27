@@ -138,7 +138,10 @@ public class CreateRouteRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Unique identifier of the serverless resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

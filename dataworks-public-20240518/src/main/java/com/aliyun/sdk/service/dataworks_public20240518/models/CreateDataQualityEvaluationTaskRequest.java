@@ -395,14 +395,14 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * <p>阈值表达式。</p>
-             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <p>The threshold expression.</p>
+             * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
              * <ul>
-             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * <li>$checkValue &gt; 0.01</li>
+             * <li>$checkValue &lt; -0.01</li>
+             * <li>abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>
@@ -507,14 +507,14 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * <p>阈值表达式。</p>
-             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <p>The threshold expression.</p>
+             * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
              * <ul>
-             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * <li>$checkValue &gt; 0.01</li>
+             * <li>$checkValue &lt; -0.01</li>
+             * <li>abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>
@@ -618,14 +618,14 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * <p>阈值表达式。</p>
-             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <p>The threshold expression.</p>
+             * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
              * <ul>
-             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * <li>$checkValue &gt; 0.01</li>
+             * <li>$checkValue &lt; -0.01</li>
+             * <li>abs($checkValue) &gt; 0.01</li>
              * </ul>
-             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>$checkValue &gt; 0.01</p>

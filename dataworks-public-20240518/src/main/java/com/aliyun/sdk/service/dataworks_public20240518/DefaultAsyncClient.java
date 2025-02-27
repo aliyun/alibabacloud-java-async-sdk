@@ -3211,6 +3211,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest
      * @return UpdateWorkflowResponse
      */
@@ -3229,6 +3232,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows in the FlowSpec filed, only the first workflow is created. Other specified workflows and the nodes in the workflows are ignored. You can call the UpdateNode operation to update a node.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of UpdateWorkflowDefinition  UpdateWorkflowDefinitionRequest
      * @return UpdateWorkflowDefinitionResponse
      */
