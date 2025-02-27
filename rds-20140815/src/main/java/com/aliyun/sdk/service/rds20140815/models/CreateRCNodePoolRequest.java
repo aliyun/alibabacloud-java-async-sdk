@@ -146,6 +146,10 @@ public class CreateRCNodePoolRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -187,6 +191,7 @@ public class CreateRCNodePoolRequest extends Request {
         this.supportCase = builder.supportCase;
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
+        this.userData = builder.userData;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
     }
@@ -422,6 +427,13 @@ public class CreateRCNodePoolRequest extends Request {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -467,6 +479,7 @@ public class CreateRCNodePoolRequest extends Request {
         private String supportCase; 
         private SystemDisk systemDisk; 
         private java.util.List<Tag> tag; 
+        private String userData; 
         private String vSwitchId; 
         private String zoneId; 
 
@@ -507,12 +520,17 @@ public class CreateRCNodePoolRequest extends Request {
             this.supportCase = request.supportCase;
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
+            this.userData = request.userData;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * Amount.
+         * <p>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>5</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -521,7 +539,17 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -530,7 +558,22 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal for the instance. If you specify the subscription billing method for the instance, you must specify this parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Monthly subscription: The auto-renewal period is one month.</p>
+         * </li>
+         * <li><p>Annually: The auto-renewal period is one year.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -539,7 +582,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -548,7 +594,11 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ACK cluster to which the RDS Custom instance belongs.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c463aaa89e2b84cacacfbf23c4867****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -557,7 +607,14 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * CreateMode.
+         * <p>Specifies whether to add the instance to the ACK cluster. If this parameter is set to <strong>1</strong>, the created instances can be added to the ACK cluster. This allows you to efficiently manage container applications. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: adds the instance to the ACK cluster.</li>
+         * <li><strong>0</strong> (default): does not add the instance to the ACK cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder createMode(String createMode) {
             this.putQueryParameter("CreateMode", createMode);
@@ -566,7 +623,7 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * DataDisk.
+         * <p>The data disks.</p>
          */
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
@@ -576,7 +633,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * DeploymentSetId.
+         * <p>The ID of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-uf6c8qerk019bj1l****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -585,7 +645,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The instance description. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -594,7 +657,14 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is directly created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -603,7 +673,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * HostName.
+         * <p>The instance hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testHost1</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -612,7 +685,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the image used by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-dsvjzw2ii8n4fvr6de</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -621,7 +697,14 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -630,7 +713,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -639,7 +725,11 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The instance type. For more information about the instance types that are supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">Instance types for RDS Custom instances</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.i8.large.2cm</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -648,7 +738,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -657,7 +750,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -666,7 +762,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * IoOptimized.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -675,7 +774,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * <p>The name of the AccessKey pair. You can specify only one name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dell5502</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -684,7 +786,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * NodePoolName.
+         * <p>The name of the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNodePool</p>
          */
         public Builder nodePoolName(String nodePoolName) {
             this.putQueryParameter("NodePoolName", nodePoolName);
@@ -693,7 +798,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password for the root account of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -702,7 +810,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration of the instance. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -711,7 +822,14 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -720,7 +838,11 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -729,7 +851,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -738,7 +863,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * SecurityEnhancementStrategy.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -747,7 +875,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group. You can enter an existing security group ID. If no security groups exist, a security group is automatically created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-m5e9abdu1rtxa12b****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -756,7 +887,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -765,7 +899,10 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * SupportCase.
+         * <p>The supported scenario. If you set the <strong>createMode</strong> parameter to <strong>1</strong>, you must also specify the SupportCase parameter. Valid value: <strong>edge</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edge</p>
          */
         public Builder supportCase(String supportCase) {
             this.putQueryParameter("SupportCase", supportCase);
@@ -774,7 +911,7 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * SystemDisk.
+         * <p>The specification of the system disk.</p>
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
@@ -784,7 +921,7 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -793,7 +930,26 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
+            return this;
+        }
+
+        /**
+         * <p>The vSwitch ID.</p>
+         * <blockquote>
+         * <p> The vSwitch must belong to the same zone as the instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2p****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -802,7 +958,13 @@ public class CreateRCNodePoolRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID of the instance.</p>
+         * <blockquote>
+         * <p> If you specify the VSwitchId parameter, the zone specified by the ZoneId parameter must be the same as the zone in which the specified vSwitch resides. You can leave the ZoneId parameter empty. In this case, the system uses the zone in which the specified vSwitch resides.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -898,7 +1060,10 @@ public class CreateRCNodePoolRequest extends Request {
             private Integer size; 
 
             /**
-             * Category.
+             * <p>The type of the data disk. Set the value to <strong>cloud_essd</strong>, which indicates Enterprise SSDs (ESSDs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -906,7 +1071,10 @@ public class CreateRCNodePoolRequest extends Request {
             }
 
             /**
-             * DeleteWithInstance.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -914,7 +1082,14 @@ public class CreateRCNodePoolRequest extends Request {
             }
 
             /**
-             * Encrypted.
+             * <p>Specifies whether to encrypt the data disk. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -922,7 +1097,16 @@ public class CreateRCNodePoolRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of the ESSD. Valid values:</p>
+             * <ul>
+             * <li><strong>PL0</strong>: A single ESSD delivers up to 10,000 random read/write IOPS.</li>
+             * <li><strong>PL1</strong>: A single ESSD delivers up to 50,000 random read/write IOPS.</li>
+             * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
+             * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -930,7 +1114,10 @@ public class CreateRCNodePoolRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the data disk. Unit: GiB. Valid values: 20 to 65536.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1001,7 +1188,10 @@ public class CreateRCNodePoolRequest extends Request {
             private Integer size; 
 
             /**
-             * Category.
+             * <p>The type of the system disk. Set the value to <strong>cloud_essd</strong>, which indicates ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1009,7 +1199,16 @@ public class CreateRCNodePoolRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of the ESSD. Valid values:</p>
+             * <ul>
+             * <li><strong>PL0</strong>: A single ESSD delivers up to 10,000 random read/write IOPS.</li>
+             * <li><strong>PL1</strong>: A single ESSD delivers up to 50,000 random read/write IOPS.</li>
+             * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
+             * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1017,7 +1216,10 @@ public class CreateRCNodePoolRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 2048.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1076,7 +1278,10 @@ public class CreateRCNodePoolRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag. You can create N tag keys at a time. Valid values of N: <strong>1 to 20</strong>. This parameter cannot be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1084,7 +1289,10 @@ public class CreateRCNodePoolRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can create N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. This parameter can be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

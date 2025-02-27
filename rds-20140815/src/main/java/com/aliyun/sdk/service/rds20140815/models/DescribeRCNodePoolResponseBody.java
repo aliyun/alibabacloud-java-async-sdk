@@ -55,7 +55,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NodePoolList.
+         * <p>The node pool information.</p>
          */
         public Builder nodePoolList(java.util.List<NodePoolList> nodePoolList) {
             this.nodePoolList = nodePoolList;
@@ -63,7 +63,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +160,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * Category.
+             * <p>The type of the data disk. Set the value to <strong>cloud_essd</strong>, which indicates Enterprise SSDs (ESSDs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -165,7 +171,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteWithInstance.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -173,7 +182,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypted.
+             * <p>Indicates whether to encrypt the cloud disk. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -181,7 +197,16 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of the ESSD. Valid values:</p>
+             * <ul>
+             * <li><strong>PL0</strong>: A single ESSD delivers up to 10,000 random read/write IOPS.</li>
+             * <li><strong>PL1</strong>: A single ESSD delivers up to 50,000 random read/write IOPS.</li>
+             * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
+             * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -189,7 +214,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The data disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -260,7 +288,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * Category.
+             * <p>The type of the system disk. Set the value to <strong>cloud_essd</strong>, which indicates ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -268,7 +299,16 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>The performance level of the ESSD. Valid values:</p>
+             * <ul>
+             * <li><strong>PL0</strong>: A single ESSD delivers up to 10,000 random read/write IOPS.</li>
+             * <li><strong>PL1</strong>: A single ESSD delivers up to 50,000 random read/write IOPS.</li>
+             * <li><strong>PL2</strong>: A single ESSD delivers up to 100,000 random read/write IOPS.</li>
+             * <li><strong>PL3</strong>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -276,7 +316,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -335,7 +378,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -343,7 +389,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -738,7 +787,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AutoPay.
+             * <p>Indicates whether to enable automatic payment. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default): enables the feature. You must make sure that your account balance is sufficient.</li>
+             * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
@@ -746,7 +802,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenew.
+             * <p>Indicates whether to enable auto-renewal for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -754,7 +817,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the container cluster in which the RDS Custom instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c463aaa89e2b84cacacfbf23c4867****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -762,7 +828,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * CreateMode.
+             * <p>Indicates whether to add the instance to the ACK cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder createMode(String createMode) {
                 this.createMode = createMode;
@@ -770,7 +839,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * DataDisk.
+             * <p>The data disks.</p>
              */
             public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
@@ -778,7 +847,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentSetId.
+             * <p>The ID of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp18ukv66rlyuffv****</p>
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -786,7 +858,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -794,7 +869,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The instance hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testHost1</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -802,7 +880,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The ID of the image used by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-dsvjzw2ii8n4fvr****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -810,7 +891,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The billing method. Valid value:</p>
+             * <ul>
+             * <li><strong>Prepaid</strong>: subscription</li>
+             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prepaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -818,7 +906,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -826,7 +917,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.i8.large.2cm</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -834,7 +928,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -842,7 +939,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxBandwidthOut.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -850,7 +950,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * IoOptimized.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder ioOptimized(String ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -858,7 +961,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * <p>The key pair name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dell5502</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -866,7 +972,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * NodePoolId.
+             * <p>The node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np31da1b38983f4511b490fc62108a****</p>
              */
             public Builder nodePoolId(String nodePoolId) {
                 this.nodePoolId = nodePoolId;
@@ -874,7 +983,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * NodePoolName.
+             * <p>The name of the node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np31da1b38983f4511b490fc62108a****</p>
              */
             public Builder nodePoolName(String nodePoolName) {
                 this.nodePoolName = nodePoolName;
@@ -882,7 +994,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The password of the root user of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testPassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -890,7 +1005,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * <p>The subscription duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -898,7 +1016,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUnit.
+             * <p>The unit of the subscription period. Valid values:</p>
+             * <ul>
+             * <li><strong>Year</strong></li>
+             * <li><strong>Month</strong> (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Year</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -906,7 +1031,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -914,7 +1042,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmy****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -922,7 +1053,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityEnhancementStrategy.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
                 this.securityEnhancementStrategy = securityEnhancementStrategy;
@@ -930,7 +1064,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-uf6av412xaxixuez****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -938,7 +1075,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * <p>The reserved parameter. This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -946,7 +1086,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDisk.
+             * <p>The specification of the system disk.</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -954,7 +1094,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tags.</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
@@ -962,7 +1102,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-zm0qvgv3sm3sjzbkr****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -970,7 +1113,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

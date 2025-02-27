@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBProxyEndpointResponseBody</p>
  */
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CausalConsistReadTimeout")
+    private String causalConsistReadTimeout;
+
     @com.aliyun.core.annotation.NameInMap("DBProxyConnectString")
     private String DBProxyConnectString;
 
@@ -47,6 +50,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DbProxyEndpointReadWriteMode")
     private String dbProxyEndpointReadWriteMode;
 
+    @com.aliyun.core.annotation.NameInMap("DbProxyEndpointVpcId")
+    private String dbProxyEndpointVpcId;
+
     @com.aliyun.core.annotation.NameInMap("DbProxyEndpointVswitchId")
     private String dbProxyEndpointVswitchId;
 
@@ -69,6 +75,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeDBProxyEndpointResponseBody(Builder builder) {
+        this.causalConsistReadTimeout = builder.causalConsistReadTimeout;
         this.DBProxyConnectString = builder.DBProxyConnectString;
         this.DBProxyConnectStringNetType = builder.DBProxyConnectStringNetType;
         this.DBProxyConnectStringPort = builder.DBProxyConnectStringPort;
@@ -79,6 +86,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         this.DBProxyNodes = builder.DBProxyNodes;
         this.dbProxyEndpointAliases = builder.dbProxyEndpointAliases;
         this.dbProxyEndpointReadWriteMode = builder.dbProxyEndpointReadWriteMode;
+        this.dbProxyEndpointVpcId = builder.dbProxyEndpointVpcId;
         this.dbProxyEndpointVswitchId = builder.dbProxyEndpointVswitchId;
         this.dbProxyEndpointZoneId = builder.dbProxyEndpointZoneId;
         this.endpointConnectItems = builder.endpointConnectItems;
@@ -94,6 +102,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
 
     public static DescribeDBProxyEndpointResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return causalConsistReadTimeout
+     */
+    public String getCausalConsistReadTimeout() {
+        return this.causalConsistReadTimeout;
     }
 
     /**
@@ -167,6 +182,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
 
     /**
+     * @return dbProxyEndpointVpcId
+     */
+    public String getDbProxyEndpointVpcId() {
+        return this.dbProxyEndpointVpcId;
+    }
+
+    /**
      * @return dbProxyEndpointVswitchId
      */
     public String getDbProxyEndpointVswitchId() {
@@ -216,6 +238,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String causalConsistReadTimeout; 
         private String DBProxyConnectString; 
         private String DBProxyConnectStringNetType; 
         private String DBProxyConnectStringPort; 
@@ -226,6 +249,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         private DBProxyNodes DBProxyNodes; 
         private String dbProxyEndpointAliases; 
         private String dbProxyEndpointReadWriteMode; 
+        private String dbProxyEndpointVpcId; 
         private String dbProxyEndpointVswitchId; 
         private String dbProxyEndpointZoneId; 
         private EndpointConnectItems endpointConnectItems; 
@@ -233,6 +257,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         private String readOnlyInstanceMaxDelayTime; 
         private String readOnlyInstanceWeight; 
         private String requestId; 
+
+        /**
+         * CausalConsistReadTimeout.
+         */
+        public Builder causalConsistReadTimeout(String causalConsistReadTimeout) {
+            this.causalConsistReadTimeout = causalConsistReadTimeout;
+            return this;
+        }
 
         /**
          * <p>The proxy endpoint queried.</p>
@@ -356,6 +388,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
          */
         public Builder dbProxyEndpointReadWriteMode(String dbProxyEndpointReadWriteMode) {
             this.dbProxyEndpointReadWriteMode = dbProxyEndpointReadWriteMode;
+            return this;
+        }
+
+        /**
+         * DbProxyEndpointVpcId.
+         */
+        public Builder dbProxyEndpointVpcId(String dbProxyEndpointVpcId) {
+            this.dbProxyEndpointVpcId = dbProxyEndpointVpcId;
             return this;
         }
 

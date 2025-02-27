@@ -23,6 +23,10 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
@@ -45,6 +49,7 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
     private DescribeAccountMaskingPrivilegeRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.DBName = builder.DBName;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -70,6 +75,13 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
     }
 
     /**
@@ -109,6 +121,7 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAccountMaskingPrivilegeRequest, Builder> {
         private String DBInstanceName; 
+        private String DBName; 
         private String ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -122,6 +135,7 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
         private Builder(DescribeAccountMaskingPrivilegeRequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
+            this.DBName = request.DBName;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -135,6 +149,15 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * DBName.
+         */
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 

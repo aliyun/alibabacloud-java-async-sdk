@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteRCNodePoolResponseBody} extends {@link TeaModel}
+ * {@link RevokeRCSecurityGroupPermissionResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteRCNodePoolResponseBody</p>
+ * <p>RevokeRCSecurityGroupPermissionResponseBody</p>
  */
-public class DeleteRCNodePoolResponseBody extends TeaModel {
+public class RevokeRCSecurityGroupPermissionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteRCNodePoolResponseBody(Builder builder) {
+    private RevokeRCSecurityGroupPermissionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class DeleteRCNodePoolResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteRCNodePoolResponseBody create() {
+    public static RevokeRCSecurityGroupPermissionResponseBody create() {
         return builder().build();
     }
 
@@ -43,18 +43,15 @@ public class DeleteRCNodePoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteRCNodePoolResponseBody build() {
-            return new DeleteRCNodePoolResponseBody(this);
+        public RevokeRCSecurityGroupPermissionResponseBody build() {
+            return new RevokeRCSecurityGroupPermissionResponseBody(this);
         } 
 
     } 

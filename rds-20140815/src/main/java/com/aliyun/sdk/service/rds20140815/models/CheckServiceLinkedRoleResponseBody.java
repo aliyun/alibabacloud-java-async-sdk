@@ -89,7 +89,10 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequireServiceLinkedRole.
+         * <p>Indicates whether the service-linked role is required. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireServiceLinkedRole(String requireServiceLinkedRole) {
             this.requireServiceLinkedRole = requireServiceLinkedRole;

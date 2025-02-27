@@ -37,6 +37,10 @@ public class ModifyRCInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
     private ModifyRCInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.hostName = builder.hostName;
@@ -44,6 +48,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         this.password = builder.password;
         this.reboot = builder.reboot;
         this.regionId = builder.regionId;
+        this.securityGroupId = builder.securityGroupId;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyRCInstanceAttributeRequest, Builder> {
         private String hostName; 
         private String instanceId; 
         private String password; 
         private Boolean reboot; 
         private String regionId; 
+        private String securityGroupId; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
             this.password = request.password;
             this.reboot = request.reboot;
             this.regionId = request.regionId;
+            this.securityGroupId = request.securityGroupId;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
             return this;
         }
 

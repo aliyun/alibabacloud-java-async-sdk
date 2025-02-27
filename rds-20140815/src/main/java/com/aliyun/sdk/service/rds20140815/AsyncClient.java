@@ -154,6 +154,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachWhitelistTemplateToInstanceResponse> attachWhitelistTemplateToInstance(AttachWhitelistTemplateToInstanceRequest request);
 
     /**
+     * @param request the request parameters of AuthorizeRCSecurityGroupPermission  AuthorizeRCSecurityGroupPermissionRequest
+     * @return AuthorizeRCSecurityGroupPermissionResponse
+     */
+    CompletableFuture<AuthorizeRCSecurityGroupPermissionResponse> authorizeRCSecurityGroupPermission(AuthorizeRCSecurityGroupPermissionRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -479,23 +485,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>: Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics. If an error message appears when you call this operation, you can search for the error message to view the cause of the error.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/412231.html">Create a serverless ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/412231.html">Create a serverless ApsaraDB RDS for MySQL instance</a>.</li>
      * <li><a href="https://help.aliyun.com/document_detail/148038.html">Create an ApsaraDB RDS for PostgreSQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/607753.html">Create a serverless ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/428615.html">Enable Babelfish for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/428615.html">Create an ApsaraDB RDS for PostgreSQL instance for which Babelfish is enabled</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/148037.html">Create an ApsaraDB RDS for SQL Server instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/603465.html">Create a serverless ApsaraDB RDS for SQL Server instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/148040.html">Create an ApsaraDB RDS for MariaDB instance</a></li>
@@ -1951,6 +1957,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstanceProxyConfigurationResponse> describeDBInstanceProxyConfiguration(DescribeDBInstanceProxyConfigurationRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBInstanceReplication  DescribeDBInstanceReplicationRequest
+     * @return DescribeDBInstanceReplicationResponse
+     */
+    CompletableFuture<DescribeDBInstanceReplicationResponse> describeDBInstanceReplication(DescribeDBInstanceReplicationRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -2732,6 +2744,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRCNodePoolResponse
      */
     CompletableFuture<DescribeRCNodePoolResponse> describeRCNodePool(DescribeRCNodePoolRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCSecurityGroupPermission  DescribeRCSecurityGroupPermissionRequest
+     * @return DescribeRCSecurityGroupPermissionResponse
+     */
+    CompletableFuture<DescribeRCSecurityGroupPermissionResponse> describeRCSecurityGroupPermission(DescribeRCSecurityGroupPermissionRequest request);
 
     /**
      * @param request the request parameters of DescribeRCSnapshots  DescribeRCSnapshotsRequest
@@ -4319,6 +4337,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRCInstanceKeyPairResponse> modifyRCInstanceKeyPair(ModifyRCInstanceKeyPairRequest request);
 
     /**
+     * @param request the request parameters of ModifyRCInstanceNetworkSpec  ModifyRCInstanceNetworkSpecRequest
+     * @return ModifyRCInstanceNetworkSpecResponse
+     */
+    CompletableFuture<ModifyRCInstanceNetworkSpecResponse> modifyRCInstanceNetworkSpec(ModifyRCInstanceNetworkSpecRequest request);
+
+    /**
+     * @param request the request parameters of ModifyRCSecurityGroupPermission  ModifyRCSecurityGroupPermissionRequest
+     * @return ModifyRCSecurityGroupPermissionResponse
+     */
+    CompletableFuture<ModifyRCSecurityGroupPermissionResponse> modifyRCSecurityGroupPermission(ModifyRCSecurityGroupPermissionRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -4704,6 +4734,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
 
     /**
+     * @param request the request parameters of RenewRCInstance  RenewRCInstanceRequest
+     * @return RenewRCInstanceResponse
+     */
+    CompletableFuture<RenewRCInstanceResponse> renewRCInstance(RenewRCInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  The instance must be in the Stopped state.</p>
      * <ul>
@@ -4814,12 +4850,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>MySQL</p>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables</a></p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/613672.html">Restore individual databases and tables of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
      * 
      * @param request the request parameters of RestoreTable  RestoreTableRequest
      * @return RestoreTableResponse
@@ -4872,6 +4914,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeOperatorPermissionResponse
      */
     CompletableFuture<RevokeOperatorPermissionResponse> revokeOperatorPermission(RevokeOperatorPermissionRequest request);
+
+    /**
+     * @param request the request parameters of RevokeRCSecurityGroupPermission  RevokeRCSecurityGroupPermissionRequest
+     * @return RevokeRCSecurityGroupPermissionResponse
+     */
+    CompletableFuture<RevokeRCSecurityGroupPermissionResponse> revokeRCSecurityGroupPermission(RevokeRCSecurityGroupPermissionRequest request);
 
     /**
      * <b>description</b> :

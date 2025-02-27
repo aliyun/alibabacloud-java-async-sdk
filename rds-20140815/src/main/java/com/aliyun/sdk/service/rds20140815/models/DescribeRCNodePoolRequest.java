@@ -87,7 +87,10 @@ public class DescribeRCNodePoolRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the ACK Edge cluster in which the RDS Custom instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c463aaa89e2b84cacacfbf23c4867****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -96,7 +99,10 @@ public class DescribeRCNodePoolRequest extends Request {
         }
 
         /**
-         * NodePoolId.
+         * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodePoolId(String nodePoolId) {
             this.putQueryParameter("NodePoolId", nodePoolId);
@@ -105,7 +111,10 @@ public class DescribeRCNodePoolRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
