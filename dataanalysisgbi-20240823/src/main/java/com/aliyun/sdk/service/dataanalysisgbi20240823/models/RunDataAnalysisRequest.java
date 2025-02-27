@@ -27,6 +27,10 @@ public class RunDataAnalysisRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("agentCtrlParams")
+    private Object agentCtrlParams;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dataRole")
     private java.util.List<String> dataRole;
 
@@ -55,6 +59,7 @@ public class RunDataAnalysisRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.agentCtrlParams = builder.agentCtrlParams;
         this.dataRole = builder.dataRole;
         this.generateSqlOnly = builder.generateSqlOnly;
         this.query = builder.query;
@@ -88,6 +93,13 @@ public class RunDataAnalysisRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return agentCtrlParams
+     */
+    public Object getAgentCtrlParams() {
+        return this.agentCtrlParams;
     }
 
     /**
@@ -135,6 +147,7 @@ public class RunDataAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<RunDataAnalysisRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private Object agentCtrlParams; 
         private java.util.List<String> dataRole; 
         private Boolean generateSqlOnly; 
         private String query; 
@@ -150,6 +163,7 @@ public class RunDataAnalysisRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.agentCtrlParams = request.agentCtrlParams;
             this.dataRole = request.dataRole;
             this.generateSqlOnly = request.generateSqlOnly;
             this.query = request.query;
@@ -176,6 +190,15 @@ public class RunDataAnalysisRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * agentCtrlParams.
+         */
+        public Builder agentCtrlParams(Object agentCtrlParams) {
+            this.putBodyParameter("agentCtrlParams", agentCtrlParams);
+            this.agentCtrlParams = agentCtrlParams;
             return this;
         }
 
