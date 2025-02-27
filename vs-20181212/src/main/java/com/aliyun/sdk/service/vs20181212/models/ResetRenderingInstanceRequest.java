@@ -12,29 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateRenderingDataPackageRequest} extends {@link RequestModel}
+ * {@link ResetRenderingInstanceRequest} extends {@link RequestModel}
  *
- * <p>CreateRenderingDataPackageRequest</p>
+ * <p>ResetRenderingInstanceRequest</p>
  */
-public class CreateRenderingDataPackageRequest extends Request {
+public class ResetRenderingInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Category")
-    private String category;
+    @com.aliyun.core.annotation.NameInMap("ActionName")
+    private String actionName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(maxLength = 64)
-    private String description;
+    @com.aliyun.core.annotation.NameInMap("DataPackageId")
+    private String dataPackageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String renderingInstanceId;
 
-    private CreateRenderingDataPackageRequest(Builder builder) {
+    private ResetRenderingInstanceRequest(Builder builder) {
         super(builder);
-        this.category = builder.category;
-        this.description = builder.description;
+        this.actionName = builder.actionName;
+        this.dataPackageId = builder.dataPackageId;
         this.renderingInstanceId = builder.renderingInstanceId;
     }
 
@@ -42,7 +41,7 @@ public class CreateRenderingDataPackageRequest extends Request {
         return new Builder();
     }
 
-    public static CreateRenderingDataPackageRequest create() {
+    public static ResetRenderingInstanceRequest create() {
         return builder().build();
     }
 
@@ -52,17 +51,17 @@ public class CreateRenderingDataPackageRequest extends Request {
     }
 
     /**
-     * @return category
+     * @return actionName
      */
-    public String getCategory() {
-        return this.category;
+    public String getActionName() {
+        return this.actionName;
     }
 
     /**
-     * @return description
+     * @return dataPackageId
      */
-    public String getDescription() {
-        return this.description;
+    public String getDataPackageId() {
+        return this.dataPackageId;
     }
 
     /**
@@ -72,37 +71,37 @@ public class CreateRenderingDataPackageRequest extends Request {
         return this.renderingInstanceId;
     }
 
-    public static final class Builder extends Request.Builder<CreateRenderingDataPackageRequest, Builder> {
-        private String category; 
-        private String description; 
+    public static final class Builder extends Request.Builder<ResetRenderingInstanceRequest, Builder> {
+        private String actionName; 
+        private String dataPackageId; 
         private String renderingInstanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateRenderingDataPackageRequest request) {
+        private Builder(ResetRenderingInstanceRequest request) {
             super(request);
-            this.category = request.category;
-            this.description = request.description;
+            this.actionName = request.actionName;
+            this.dataPackageId = request.dataPackageId;
             this.renderingInstanceId = request.renderingInstanceId;
         } 
 
         /**
-         * Category.
+         * ActionName.
          */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
+        public Builder actionName(String actionName) {
+            this.putQueryParameter("ActionName", actionName);
+            this.actionName = actionName;
             return this;
         }
 
         /**
-         * Description.
+         * DataPackageId.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder dataPackageId(String dataPackageId) {
+            this.putQueryParameter("DataPackageId", dataPackageId);
+            this.dataPackageId = dataPackageId;
             return this;
         }
 
@@ -119,8 +118,8 @@ public class CreateRenderingDataPackageRequest extends Request {
         }
 
         @Override
-        public CreateRenderingDataPackageRequest build() {
-            return new CreateRenderingDataPackageRequest(this);
+        public ResetRenderingInstanceRequest build() {
+            return new ResetRenderingInstanceRequest(this);
         } 
 
     } 
