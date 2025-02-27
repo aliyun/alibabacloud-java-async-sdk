@@ -101,7 +101,7 @@ public class ListLivePackageChannelGroupsRequest extends Request {
         } 
 
         /**
-         * <p>描述</p>
+         * <p>The channel group name or description. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-group</p>
@@ -113,7 +113,10 @@ public class ListLivePackageChannelGroupsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -122,7 +125,10 @@ public class ListLivePackageChannelGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -131,7 +137,10 @@ public class ListLivePackageChannelGroupsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort order by creation time. Default value: desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

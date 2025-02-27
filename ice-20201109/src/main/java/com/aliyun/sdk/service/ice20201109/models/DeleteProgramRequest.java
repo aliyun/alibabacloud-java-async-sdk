@@ -75,6 +75,7 @@ public class DeleteProgramRequest extends Request {
         } 
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteProgramRequest extends Request {
         }
 
         /**
+         * <p>The name of the program.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

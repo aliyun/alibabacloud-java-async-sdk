@@ -60,7 +60,7 @@ public class DeleteMediaConnectFlowRequest extends Request {
         } 
 
         /**
-         * <p>Flow instance ID</p>
+         * <p>The flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

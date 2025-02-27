@@ -79,7 +79,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         private Integer retcode; 
 
         /**
-         * <p>Response body</p>
+         * <p>The response body.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -87,7 +87,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Interface call description information</p>
+         * <p>The call description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -98,7 +98,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>FB503AEF-118E-1516-89E2-7B227EA1AC20</p>
@@ -109,7 +109,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return status code, 0 indicates success</p>
+         * <p>The returned code. A value of 0 indicates the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -206,7 +206,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * <p>Flow creation time</p>
+             * <p>The time when the flow was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-18T01:29:24Z</p>
@@ -217,7 +217,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flow instance ID</p>
+             * <p>The flow ID.</p>
              * 
              * <strong>example:</strong>
              * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
@@ -228,7 +228,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flow instance name</p>
+             * <p>The flow name.</p>
              * 
              * <strong>example:</strong>
              * <p>AliTestFlow</p>
@@ -239,7 +239,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flow status</p>
+             * <p>The state of the flow.</p>
              * 
              * <strong>example:</strong>
              * <p>online</p>
@@ -250,7 +250,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flow start time</p>
+             * <p>The time when the flow is started.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-18T01:39:24Z</p>

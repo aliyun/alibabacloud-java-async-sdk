@@ -23,6 +23,10 @@ public class GenerateAIAgentCallRequest extends Request {
     private String AIAgentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChatSyncConfig")
+    private ChatSyncConfig chatSyncConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
 
@@ -45,6 +49,7 @@ public class GenerateAIAgentCallRequest extends Request {
     private GenerateAIAgentCallRequest(Builder builder) {
         super(builder);
         this.AIAgentId = builder.AIAgentId;
+        this.chatSyncConfig = builder.chatSyncConfig;
         this.expire = builder.expire;
         this.sessionId = builder.sessionId;
         this.templateConfig = builder.templateConfig;
@@ -70,6 +75,13 @@ public class GenerateAIAgentCallRequest extends Request {
      */
     public String getAIAgentId() {
         return this.AIAgentId;
+    }
+
+    /**
+     * @return chatSyncConfig
+     */
+    public ChatSyncConfig getChatSyncConfig() {
+        return this.chatSyncConfig;
     }
 
     /**
@@ -109,6 +121,7 @@ public class GenerateAIAgentCallRequest extends Request {
 
     public static final class Builder extends Request.Builder<GenerateAIAgentCallRequest, Builder> {
         private String AIAgentId; 
+        private ChatSyncConfig chatSyncConfig; 
         private Long expire; 
         private String sessionId; 
         private AIAgentTemplateConfig templateConfig; 
@@ -122,6 +135,7 @@ public class GenerateAIAgentCallRequest extends Request {
         private Builder(GenerateAIAgentCallRequest request) {
             super(request);
             this.AIAgentId = request.AIAgentId;
+            this.chatSyncConfig = request.chatSyncConfig;
             this.expire = request.expire;
             this.sessionId = request.sessionId;
             this.templateConfig = request.templateConfig;
@@ -138,6 +152,16 @@ public class GenerateAIAgentCallRequest extends Request {
         public Builder AIAgentId(String AIAgentId) {
             this.putQueryParameter("AIAgentId", AIAgentId);
             this.AIAgentId = AIAgentId;
+            return this;
+        }
+
+        /**
+         * ChatSyncConfig.
+         */
+        public Builder chatSyncConfig(ChatSyncConfig chatSyncConfig) {
+            String chatSyncConfigShrink = shrink(chatSyncConfig, "ChatSyncConfig", "json");
+            this.putQueryParameter("ChatSyncConfig", chatSyncConfigShrink);
+            this.chatSyncConfig = chatSyncConfig;
             return this;
         }
 
@@ -194,4 +218,71 @@ public class GenerateAIAgentCallRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateAIAgentCallRequest} extends {@link TeaModel}
+     *
+     * <p>GenerateAIAgentCallRequest</p>
+     */
+    public static class ChatSyncConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IMAIAgentId")
+        private String IMAIAgentId;
+
+        @com.aliyun.core.annotation.NameInMap("ReceiverId")
+        private String receiverId;
+
+        private ChatSyncConfig(Builder builder) {
+            this.IMAIAgentId = builder.IMAIAgentId;
+            this.receiverId = builder.receiverId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChatSyncConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return IMAIAgentId
+         */
+        public String getIMAIAgentId() {
+            return this.IMAIAgentId;
+        }
+
+        /**
+         * @return receiverId
+         */
+        public String getReceiverId() {
+            return this.receiverId;
+        }
+
+        public static final class Builder {
+            private String IMAIAgentId; 
+            private String receiverId; 
+
+            /**
+             * IMAIAgentId.
+             */
+            public Builder IMAIAgentId(String IMAIAgentId) {
+                this.IMAIAgentId = IMAIAgentId;
+                return this;
+            }
+
+            /**
+             * ReceiverId.
+             */
+            public Builder receiverId(String receiverId) {
+                this.receiverId = receiverId;
+                return this;
+            }
+
+            public ChatSyncConfig build() {
+                return new ChatSyncConfig(this);
+            } 
+
+        } 
+
+    }
 }

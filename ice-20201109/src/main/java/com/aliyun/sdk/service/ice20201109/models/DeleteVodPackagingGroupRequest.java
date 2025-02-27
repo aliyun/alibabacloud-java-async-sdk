@@ -59,7 +59,10 @@ public class DeleteVodPackagingGroupRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_hls</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

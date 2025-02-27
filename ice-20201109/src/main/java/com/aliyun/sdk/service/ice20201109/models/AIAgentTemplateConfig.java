@@ -197,11 +197,17 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
+        @com.aliyun.core.annotation.NameInMap("InterruptWords")
+        private java.util.List<String> interruptWords;
+
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
         private java.util.List<LlmHistory> llmHistory;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
         private Integer llmHistoryLimit;
+
+        @com.aliyun.core.annotation.NameInMap("LlmSystemPrompt")
+        private String llmSystemPrompt;
 
         @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
         private Integer maxIdleTime;
@@ -214,6 +220,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("UserOnlineTimeout")
         private Integer userOnlineTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("VadLevel")
+        private Integer vadLevel;
 
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
@@ -243,12 +252,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.interruptWords = builder.interruptWords;
             this.llmHistory = builder.llmHistory;
             this.llmHistoryLimit = builder.llmHistoryLimit;
+            this.llmSystemPrompt = builder.llmSystemPrompt;
             this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
+            this.vadLevel = builder.vadLevel;
             this.voiceId = builder.voiceId;
             this.voiceIdList = builder.voiceIdList;
             this.voiceprintId = builder.voiceprintId;
@@ -329,6 +341,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return interruptWords
+         */
+        public java.util.List<String> getInterruptWords() {
+            return this.interruptWords;
+        }
+
+        /**
          * @return llmHistory
          */
         public java.util.List<LlmHistory> getLlmHistory() {
@@ -340,6 +359,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public Integer getLlmHistoryLimit() {
             return this.llmHistoryLimit;
+        }
+
+        /**
+         * @return llmSystemPrompt
+         */
+        public String getLlmSystemPrompt() {
+            return this.llmSystemPrompt;
         }
 
         /**
@@ -368,6 +394,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public Integer getUserOnlineTimeout() {
             return this.userOnlineTimeout;
+        }
+
+        /**
+         * @return vadLevel
+         */
+        public Integer getVadLevel() {
+            return this.vadLevel;
         }
 
         /**
@@ -422,12 +455,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private java.util.List<String> interruptWords; 
             private java.util.List<LlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
+            private String llmSystemPrompt; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
+            private Integer vadLevel; 
             private String voiceId; 
             private java.util.List<String> voiceIdList; 
             private String voiceprintId; 
@@ -508,6 +544,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * InterruptWords.
+             */
+            public Builder interruptWords(java.util.List<String> interruptWords) {
+                this.interruptWords = interruptWords;
+                return this;
+            }
+
+            /**
              * LlmHistory.
              */
             public Builder llmHistory(java.util.List<LlmHistory> llmHistory) {
@@ -520,6 +564,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder llmHistoryLimit(Integer llmHistoryLimit) {
                 this.llmHistoryLimit = llmHistoryLimit;
+                return this;
+            }
+
+            /**
+             * LlmSystemPrompt.
+             */
+            public Builder llmSystemPrompt(String llmSystemPrompt) {
+                this.llmSystemPrompt = llmSystemPrompt;
                 return this;
             }
 
@@ -552,6 +604,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder userOnlineTimeout(Integer userOnlineTimeout) {
                 this.userOnlineTimeout = userOnlineTimeout;
+                return this;
+            }
+
+            /**
+             * VadLevel.
+             */
+            public Builder vadLevel(Integer vadLevel) {
+                this.vadLevel = vadLevel;
                 return this;
             }
 
@@ -708,11 +768,17 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
+        @com.aliyun.core.annotation.NameInMap("InterruptWords")
+        private java.util.List<String> interruptWords;
+
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
         private java.util.List<VisionChatLlmHistory> llmHistory;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
         private Integer llmHistoryLimit;
+
+        @com.aliyun.core.annotation.NameInMap("LlmSystemPrompt")
+        private String llmSystemPrompt;
 
         @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
         private Integer maxIdleTime;
@@ -725,6 +791,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("UserOnlineTimeout")
         private Integer userOnlineTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("VadLevel")
+        private Integer vadLevel;
 
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
@@ -753,12 +822,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.interruptWords = builder.interruptWords;
             this.llmHistory = builder.llmHistory;
             this.llmHistoryLimit = builder.llmHistoryLimit;
+            this.llmSystemPrompt = builder.llmSystemPrompt;
             this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
+            this.vadLevel = builder.vadLevel;
             this.voiceId = builder.voiceId;
             this.voiceIdList = builder.voiceIdList;
             this.voiceprintId = builder.voiceprintId;
@@ -832,6 +904,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return interruptWords
+         */
+        public java.util.List<String> getInterruptWords() {
+            return this.interruptWords;
+        }
+
+        /**
          * @return llmHistory
          */
         public java.util.List<VisionChatLlmHistory> getLlmHistory() {
@@ -843,6 +922,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public Integer getLlmHistoryLimit() {
             return this.llmHistoryLimit;
+        }
+
+        /**
+         * @return llmSystemPrompt
+         */
+        public String getLlmSystemPrompt() {
+            return this.llmSystemPrompt;
         }
 
         /**
@@ -871,6 +957,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public Integer getUserOnlineTimeout() {
             return this.userOnlineTimeout;
+        }
+
+        /**
+         * @return vadLevel
+         */
+        public Integer getVadLevel() {
+            return this.vadLevel;
         }
 
         /**
@@ -924,12 +1017,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private java.util.List<String> interruptWords; 
             private java.util.List<VisionChatLlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
+            private String llmSystemPrompt; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
+            private Integer vadLevel; 
             private String voiceId; 
             private java.util.List<String> voiceIdList; 
             private String voiceprintId; 
@@ -1002,6 +1098,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * InterruptWords.
+             */
+            public Builder interruptWords(java.util.List<String> interruptWords) {
+                this.interruptWords = interruptWords;
+                return this;
+            }
+
+            /**
              * LlmHistory.
              */
             public Builder llmHistory(java.util.List<VisionChatLlmHistory> llmHistory) {
@@ -1014,6 +1118,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder llmHistoryLimit(Integer llmHistoryLimit) {
                 this.llmHistoryLimit = llmHistoryLimit;
+                return this;
+            }
+
+            /**
+             * LlmSystemPrompt.
+             */
+            public Builder llmSystemPrompt(String llmSystemPrompt) {
+                this.llmSystemPrompt = llmSystemPrompt;
                 return this;
             }
 
@@ -1046,6 +1158,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder userOnlineTimeout(Integer userOnlineTimeout) {
                 this.userOnlineTimeout = userOnlineTimeout;
+                return this;
+            }
+
+            /**
+             * VadLevel.
+             */
+            public Builder vadLevel(Integer vadLevel) {
+                this.vadLevel = vadLevel;
                 return this;
             }
 
@@ -1208,11 +1328,17 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Greeting")
         private String greeting;
 
+        @com.aliyun.core.annotation.NameInMap("InterruptWords")
+        private java.util.List<String> interruptWords;
+
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
         private java.util.List<VoiceChatLlmHistory> llmHistory;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
         private Integer llmHistoryLimit;
+
+        @com.aliyun.core.annotation.NameInMap("LlmSystemPrompt")
+        private String llmSystemPrompt;
 
         @com.aliyun.core.annotation.NameInMap("MaxIdleTime")
         private Integer maxIdleTime;
@@ -1225,6 +1351,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("UserOnlineTimeout")
         private Integer userOnlineTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("VadLevel")
+        private Integer vadLevel;
 
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
@@ -1255,12 +1384,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.gracefulShutdown = builder.gracefulShutdown;
             this.greeting = builder.greeting;
+            this.interruptWords = builder.interruptWords;
             this.llmHistory = builder.llmHistory;
             this.llmHistoryLimit = builder.llmHistoryLimit;
+            this.llmSystemPrompt = builder.llmSystemPrompt;
             this.maxIdleTime = builder.maxIdleTime;
             this.useVoiceprint = builder.useVoiceprint;
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
+            this.vadLevel = builder.vadLevel;
             this.voiceId = builder.voiceId;
             this.voiceIdList = builder.voiceIdList;
             this.voiceprintId = builder.voiceprintId;
@@ -1348,6 +1480,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return interruptWords
+         */
+        public java.util.List<String> getInterruptWords() {
+            return this.interruptWords;
+        }
+
+        /**
          * @return llmHistory
          */
         public java.util.List<VoiceChatLlmHistory> getLlmHistory() {
@@ -1359,6 +1498,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public Integer getLlmHistoryLimit() {
             return this.llmHistoryLimit;
+        }
+
+        /**
+         * @return llmSystemPrompt
+         */
+        public String getLlmSystemPrompt() {
+            return this.llmSystemPrompt;
         }
 
         /**
@@ -1387,6 +1533,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public Integer getUserOnlineTimeout() {
             return this.userOnlineTimeout;
+        }
+
+        /**
+         * @return vadLevel
+         */
+        public Integer getVadLevel() {
+            return this.vadLevel;
         }
 
         /**
@@ -1442,12 +1595,15 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
+            private java.util.List<String> interruptWords; 
             private java.util.List<VoiceChatLlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
+            private String llmSystemPrompt; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
+            private Integer vadLevel; 
             private String voiceId; 
             private java.util.List<String> voiceIdList; 
             private String voiceprintId; 
@@ -1536,6 +1692,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             }
 
             /**
+             * InterruptWords.
+             */
+            public Builder interruptWords(java.util.List<String> interruptWords) {
+                this.interruptWords = interruptWords;
+                return this;
+            }
+
+            /**
              * LlmHistory.
              */
             public Builder llmHistory(java.util.List<VoiceChatLlmHistory> llmHistory) {
@@ -1548,6 +1712,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder llmHistoryLimit(Integer llmHistoryLimit) {
                 this.llmHistoryLimit = llmHistoryLimit;
+                return this;
+            }
+
+            /**
+             * LlmSystemPrompt.
+             */
+            public Builder llmSystemPrompt(String llmSystemPrompt) {
+                this.llmSystemPrompt = llmSystemPrompt;
                 return this;
             }
 
@@ -1580,6 +1752,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder userOnlineTimeout(Integer userOnlineTimeout) {
                 this.userOnlineTimeout = userOnlineTimeout;
+                return this;
+            }
+
+            /**
+             * VadLevel.
+             */
+            public Builder vadLevel(Integer vadLevel) {
+                this.vadLevel = vadLevel;
                 return this;
             }
 

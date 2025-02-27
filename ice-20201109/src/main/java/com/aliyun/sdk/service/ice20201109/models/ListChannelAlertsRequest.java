@@ -144,7 +144,7 @@ public class ListChannelAlertsRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>The alert type.</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -153,7 +153,10 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * GmtEnd.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-21T16:10:45Z</p>
          */
         public Builder gmtEnd(String gmtEnd) {
             this.putQueryParameter("GmtEnd", gmtEnd);
@@ -162,7 +165,10 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * GmtStart.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-21T16:10:45Z</p>
          */
         public Builder gmtStart(String gmtStart) {
             this.putQueryParameter("GmtStart", gmtStart);
@@ -171,7 +177,10 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -180,7 +189,10 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,6 +201,7 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
+         * <p>The ARN of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +214,10 @@ public class ListChannelAlertsRequest extends Request {
         }
 
         /**
-         * SortByModifiedTime.
+         * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortByModifiedTime(String sortByModifiedTime) {
             this.putQueryParameter("SortByModifiedTime", sortByModifiedTime);

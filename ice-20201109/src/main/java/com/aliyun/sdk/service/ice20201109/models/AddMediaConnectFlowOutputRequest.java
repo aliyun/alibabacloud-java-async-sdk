@@ -202,7 +202,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         } 
 
         /**
-         * <p>IP whitelist, in CIDR format, separated by commas if multiple IP segments are provided</p>
+         * <p>The IP address whitelist in CIDR format. Separate multiple CIDR blocks with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>83.17.231.31/32</p>
@@ -214,7 +214,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Flow instance ID</p>
+         * <p>The flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Output name</p>
+         * <p>The output name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,15 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Output protocol</p>
+         * <p>The output type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RTMP-PUSH</li>
+         * <li>SRT-Caller</li>
+         * <li>RTMP-PULL</li>
+         * <li>SRT-Listener</li>
+         * <li>Flow</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +261,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Output address, required when the output type is RTMP-PUSH/SRT-Caller mode</p>
+         * <p>The output URL. This parameter is required when OutputProtocol is set to RTMP-PUSH or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://push.test.alivecdn.com/live/alitest</p>
@@ -265,7 +273,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Paired Flow instance ID, required when the output type is Flow</p>
+         * <p>The ID of the destination flow. This parameter is required when OutputProtocol is set to Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>8666ec062190f00e263012666319a5be</p>
@@ -277,7 +285,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Input name of the paired Flow, required when the output type is Flow</p>
+         * <p>The source name of the destination flow. This parameter is required when OutputProtocol is set to Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestInput</p>
@@ -289,7 +297,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of players</p>
+         * <p>The maximum number of viewers.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -301,7 +309,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>SRT latency, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The latency for the SRT stream. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -313,7 +321,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>SRT passphrase, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The SRT key. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>BETTERG08S01</p>
@@ -325,7 +333,7 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>SRT encryption length, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The encryption key length. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

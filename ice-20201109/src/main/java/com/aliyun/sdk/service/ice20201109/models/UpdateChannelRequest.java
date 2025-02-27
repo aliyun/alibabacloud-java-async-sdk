@@ -131,7 +131,10 @@ public class UpdateChannelRequest extends Request {
         } 
 
         /**
-         * AccessPolicy.
+         * <p>Specifies whether to enable access control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder accessPolicy(Boolean accessPolicy) {
             this.putQueryParameter("AccessPolicy", accessPolicy);
@@ -140,7 +143,10 @@ public class UpdateChannelRequest extends Request {
         }
 
         /**
-         * AccessToken.
+         * <p>The token for accessing the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("AccessToken", accessToken);
@@ -149,6 +155,7 @@ public class UpdateChannelRequest extends Request {
         }
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +168,10 @@ public class UpdateChannelRequest extends Request {
         }
 
         /**
-         * FillerSourceLocationName.
+         * <p>The source location of the filler slate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder fillerSourceLocationName(String fillerSourceLocationName) {
             this.putQueryParameter("FillerSourceLocationName", fillerSourceLocationName);
@@ -170,7 +180,10 @@ public class UpdateChannelRequest extends Request {
         }
 
         /**
-         * FillerSourceName.
+         * <p>The name of the filler slate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySource</p>
          */
         public Builder fillerSourceName(String fillerSourceName) {
             this.putQueryParameter("FillerSourceName", fillerSourceName);
@@ -179,6 +192,7 @@ public class UpdateChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel output configurations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

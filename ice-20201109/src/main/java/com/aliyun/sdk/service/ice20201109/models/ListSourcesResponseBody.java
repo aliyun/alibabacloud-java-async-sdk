@@ -91,7 +91,10 @@ public class ListSourcesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -99,7 +102,10 @@ public class ListSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +113,10 @@ public class ListSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +124,7 @@ public class ListSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * SourceList.
+         * <p>The sources.</p>
          */
         public Builder sourceList(java.util.List<ChannelAssemblySource> sourceList) {
             this.sourceList = sourceList;
@@ -123,7 +132,10 @@ public class ListSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

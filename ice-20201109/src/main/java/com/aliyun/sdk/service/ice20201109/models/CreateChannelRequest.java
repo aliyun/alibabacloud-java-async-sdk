@@ -161,7 +161,10 @@ public class CreateChannelRequest extends Request {
         } 
 
         /**
-         * AccessPolicy.
+         * <p>Specifies whether to enable access control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessPolicy(Boolean accessPolicy) {
             this.putQueryParameter("AccessPolicy", accessPolicy);
@@ -170,7 +173,10 @@ public class CreateChannelRequest extends Request {
         }
 
         /**
-         * AccessToken.
+         * <p>The token for accessing the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("AccessToken", accessToken);
@@ -179,6 +185,7 @@ public class CreateChannelRequest extends Request {
         }
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +198,7 @@ public class CreateChannelRequest extends Request {
         }
 
         /**
+         * <p>The tier of the channel. Valid values: basic and standard.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +211,10 @@ public class CreateChannelRequest extends Request {
         }
 
         /**
-         * FillerSourceLocationName.
+         * <p>The source location of the filler slate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder fillerSourceLocationName(String fillerSourceLocationName) {
             this.putQueryParameter("FillerSourceLocationName", fillerSourceLocationName);
@@ -212,7 +223,10 @@ public class CreateChannelRequest extends Request {
         }
 
         /**
-         * FillerSourceName.
+         * <p>The name of the filler slate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FillerSource</p>
          */
         public Builder fillerSourceName(String fillerSourceName) {
             this.putQueryParameter("FillerSourceName", fillerSourceName);
@@ -221,6 +235,7 @@ public class CreateChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel output configurations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +256,7 @@ public class CreateChannelRequest extends Request {
         }
 
         /**
+         * <p>The playback mode. Valid values: loop and linear.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

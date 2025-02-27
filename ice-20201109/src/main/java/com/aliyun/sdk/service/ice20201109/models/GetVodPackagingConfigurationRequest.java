@@ -59,7 +59,10 @@ public class GetVodPackagingConfigurationRequest extends Request {
         } 
 
         /**
-         * ConfigurationName.
+         * <p>The name of the packaging configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hls_3s</p>
          */
         public Builder configurationName(String configurationName) {
             this.putQueryParameter("ConfigurationName", configurationName);

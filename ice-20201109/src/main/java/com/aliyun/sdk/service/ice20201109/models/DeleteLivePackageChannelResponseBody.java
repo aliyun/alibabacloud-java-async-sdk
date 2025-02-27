@@ -43,7 +43,10 @@ public class DeleteLivePackageChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20B3A1B6-4BD2-5DE6-BCBC-098C9B4F4E91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

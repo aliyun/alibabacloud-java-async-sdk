@@ -103,7 +103,7 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Assets.
+         * <p>The VOD packaging assets.</p>
          */
         public Builder assets(java.util.List<Assets> assets) {
             this.assets = assets;
@@ -111,7 +111,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -119,7 +122,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,14 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order of the assets based on the time when they were ingested. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -143,7 +159,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +220,7 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The URL of the media file. Only M3U8 files stored in OSS are supported.</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -209,7 +228,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The input type. Only Object Storage Service (OSS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -304,7 +326,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             private Input input; 
 
             /**
-             * AssetName.
+             * <p>The name of the VOD packaging asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30min_movie</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -312,7 +337,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the asset was ingested. It follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-21T06:45:32Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -320,7 +348,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The asset description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>movie 30min</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -328,7 +359,10 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the packaging group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vod_hls</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -336,7 +370,7 @@ public class ListVodPackagingAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The asset input configurations.</p>
              */
             public Builder input(Input input) {
                 this.input = input;

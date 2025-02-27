@@ -174,7 +174,12 @@ public class UpdateAdInsertionRequest extends Request {
         } 
 
         /**
-         * <p>内容URL前缀</p>
+         * <p>Specifies whether to enable ad marker passthrough. Default value: OFF.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OFF: Disable.</li>
+         * <li>ON: Enable.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -186,7 +191,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>广告策略服务器URL</p>
+         * <p>The request URL of the ad decision server (ADS). HTTP and HTTPS are supported. The maximum length is 2,048 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +204,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>广告分片的CDN前缀</p>
+         * <p>The CDN prefix for ad segments. HTTP and HTTPS are supported. The maximum length is 512 characters.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -211,7 +216,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>视频内容分片的CDN前缀</p>
+         * <p>The CDN prefix for content segments. HTTP and HTTPS are supported. The maximum length is 512 characters.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -223,7 +228,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>动态配置别名</p>
+         * <p>A JSON string that specifies the player parameter variables and aliases. Format: { &quot;player_params.{name}&quot;: { &quot;{key}&quot;: &quot;{value}&quot; } }. You can add up to 20 player_params.{name} entries. The name field can be up to 150 characters in length. Each player parameter can include up to 50 key-value pairs. A key can be up to 150 characters long, and a value can be up to 500 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;player_params.p1&quot;: { &quot;1&quot;: &quot;abc&quot; } }</p>
@@ -235,7 +240,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>内容URL前缀</p>
+         * <p>The URL prefix for the source content. HTTP and HTTPS are supported. The maximum length is 512 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +253,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The configuration name, which cannot be modified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +266,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>个性化配置阈值</p>
+         * <p>Specifies the maximum duration of underfilled time allowed in an ad break. Unit: seconds. Default value: 8 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -273,7 +278,7 @@ public class UpdateAdInsertionRequest extends Request {
         }
 
         /**
-         * <p>slate广告URL</p>
+         * <p>The HTTP or HTTPS URL of the slate ad. Only MP4 format is supported. The maximum length is 2,048 characters.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></p>

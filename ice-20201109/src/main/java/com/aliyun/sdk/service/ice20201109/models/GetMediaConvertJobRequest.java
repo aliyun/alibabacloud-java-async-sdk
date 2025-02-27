@@ -59,7 +59,10 @@ public class GetMediaConvertJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the transcoding task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

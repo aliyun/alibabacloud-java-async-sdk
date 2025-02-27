@@ -116,6 +116,7 @@ public class ListProgramsRequest extends Request {
         } 
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListProgramsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -137,7 +141,10 @@ public class ListProgramsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +153,10 @@ public class ListProgramsRequest extends Request {
         }
 
         /**
-         * ProgramName.
+         * <p>The name of the program.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>program1</p>
          */
         public Builder programName(String programName) {
             this.putQueryParameter("ProgramName", programName);
@@ -155,7 +165,14 @@ public class ListProgramsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

@@ -116,7 +116,10 @@ public class ListVodPackagingAssetsRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_hls</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -125,7 +128,10 @@ public class ListVodPackagingAssetsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword. The names of the returned assets are prefixed with this keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>movie</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -134,7 +140,10 @@ public class ListVodPackagingAssetsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -143,7 +152,10 @@ public class ListVodPackagingAssetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +164,14 @@ public class ListVodPackagingAssetsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order of the assets based on the time when they were ingested. Valid values:</p>
+         * <ul>
+         * <li>desc (default): descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

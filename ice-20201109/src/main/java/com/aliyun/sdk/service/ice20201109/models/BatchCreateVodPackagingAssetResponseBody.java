@@ -67,7 +67,10 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
         private java.util.List<ResultList> resultList; 
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_hls</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -75,7 +78,10 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +89,7 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
         }
 
         /**
-         * ResultList.
+         * <p>The results of asset ingestion.</p>
          */
         public Builder resultList(java.util.List<ResultList> resultList) {
             this.resultList = resultList;
@@ -153,7 +159,7 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Asset.
+             * <p>The information about the ingested asset.</p>
              */
             public Builder asset(VodPackagingAsset asset) {
                 this.asset = asset;
@@ -161,7 +167,10 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error code for failed ingestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.PackagingAssetAlreadyExists</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -169,7 +178,10 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message for failed ingestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified packagingAsset &quot;inputMovie&quot; already exists</p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -48,17 +48,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>A Flow instance can only have one Input.</li>
+     * <li>A flow can have only one source.</li>
      * </ul>
-     * <h3>Description of Input Types</h3>
+     * <h3><a href="#"></a>Source type</h3>
      * <ul>
-     * <li>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</li>
-     * <li>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</li>
-     * <li>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</li>
-     * <li>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</li>
-     * <li>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</li>
+     * <li>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</li>
+     * <li>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</li>
+     * <li>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</li>
+     * <li>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</li>
+     * <li>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
      * </ul>
      * 
      * @param request the request parameters of AddMediaConnectFlowInput  AddMediaConnectFlowInputRequest
@@ -68,19 +68,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>A Flow instance can have up to 4 outputs.</li>
-     * <li>The output names under the same Flow instance cannot be duplicated.</li>
-     * <li>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</li>
+     * <li>A flow can have a maximum of four outputs.</li>
+     * <li>The output names in the same flow cannot be duplicated.</li>
+     * <li>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</li>
      * </ul>
-     * <h3>Description of Output Types</h3>
+     * <h3><a href="#"></a>Output types</h3>
      * <ul>
-     * <li>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</li>
-     * <li>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</li>
-     * <li>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</li>
-     * <li>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</li>
-     * <li>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</li>
+     * <li>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</li>
+     * <li>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</li>
+     * <li>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</li>
+     * <li>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</li>
+     * <li>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
      * </ul>
      * 
      * @param request the request parameters of AddMediaConnectFlowOutput  AddMediaConnectFlowOutputRequest
@@ -189,18 +189,37 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEditingProjectResponse> createEditingProject(CreateEditingProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>Only <code>HLS</code> is supported.</li>
+     * <li>The segment duration must be from 1 to 30 seconds.</li>
+     * <li>The number of M3U8 segments must be from 2 to 100.
+     * If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateLivePackageChannel  CreateLivePackageChannelRequest
      * @return CreateLivePackageChannelResponse
      */
     CompletableFuture<CreateLivePackageChannelResponse> createLivePackageChannel(CreateLivePackageChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After you create a channel group, the assigned origin domain is returned.</p>
+     * 
      * @param request the request parameters of CreateLivePackageChannelGroup  CreateLivePackageChannelGroupRequest
      * @return CreateLivePackageChannelGroupResponse
      */
     CompletableFuture<CreateLivePackageChannelGroupResponse> createLivePackageChannelGroup(CreateLivePackageChannelGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</p>
+     * 
      * @param request the request parameters of CreateLivePackageOriginEndpoint  CreateLivePackageOriginEndpointRequest
      * @return CreateLivePackageOriginEndpointResponse
      */
@@ -229,15 +248,33 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  The flow names cannot be duplicated in the same region.</p>
      * <ul>
-     * <li>The name of the Flow cannot be duplicated within the same region.</li>
-     * <li>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</li>
+     * <li>Take note of the returned flow ID. You may reference it in other API operations.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateMediaConnectFlow  CreateMediaConnectFlowRequest
      * @return CreateMediaConnectFlowResponse
      */
     CompletableFuture<CreateMediaConnectFlowResponse> createMediaConnectFlow(CreateMediaConnectFlowRequest request);
+
+    /**
+     * @param request the request parameters of CreateMediaLiveChannel  CreateMediaLiveChannelRequest
+     * @return CreateMediaLiveChannelResponse
+     */
+    CompletableFuture<CreateMediaLiveChannelResponse> createMediaLiveChannel(CreateMediaLiveChannelRequest request);
+
+    /**
+     * @param request the request parameters of CreateMediaLiveInput  CreateMediaLiveInputRequest
+     * @return CreateMediaLiveInputResponse
+     */
+    CompletableFuture<CreateMediaLiveInputResponse> createMediaLiveInput(CreateMediaLiveInputRequest request);
+
+    /**
+     * @param request the request parameters of CreateMediaLiveInputSecurityGroup  CreateMediaLiveInputSecurityGroupRequest
+     * @return CreateMediaLiveInputSecurityGroupResponse
+     */
+    CompletableFuture<CreateMediaLiveInputSecurityGroupResponse> createMediaLiveInputSecurityGroup(CreateMediaLiveInputSecurityGroupRequest request);
 
     /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
@@ -402,18 +439,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEditingProjectsResponse> deleteEditingProjects(DeleteEditingProjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You need to provide GroupName and ChannelName as parameters to specify exactly which channel to delete. Before you delete a channel, you must delete the origin endpoints associated with the channel.</p>
+     * 
      * @param request the request parameters of DeleteLivePackageChannel  DeleteLivePackageChannelRequest
      * @return DeleteLivePackageChannelResponse
      */
     CompletableFuture<DeleteLivePackageChannelResponse> deleteLivePackageChannel(DeleteLivePackageChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Make sure that no channels are included in the channel group before you delete it.</p>
+     * 
      * @param request the request parameters of DeleteLivePackageChannelGroup  DeleteLivePackageChannelGroupRequest
      * @return DeleteLivePackageChannelGroupResponse
      */
     CompletableFuture<DeleteLivePackageChannelGroupResponse> deleteLivePackageChannelGroup(DeleteLivePackageChannelGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation is used to delete an origin endpoint associated with a live package channel by specifying <code>GroupName</code>, <code>ChannelName</code>, and <code>EndpointName</code>. This operation will permanently delete the relevant configurations. Exercise caution when you perform this operation.</p>
+     * 
      * @param request the request parameters of DeleteLivePackageOriginEndpoint  DeleteLivePackageOriginEndpointRequest
      * @return DeleteLivePackageOriginEndpointResponse
      */
@@ -457,10 +506,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</li>
-     * <li>You cannot delete a Flow instance that is in the online state.</li>
+     * <li>When a flow is deleted, its source and outputs are also deleted.</li>
+     * <li>When a flow is in the online state, it cannot be deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteMediaConnectFlow  DeleteMediaConnectFlowRequest
@@ -470,10 +519,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When the Flow instance status is online, the input cannot be deleted.</li>
-     * <li>Only after all outputs under the Flow instance have been deleted can the input be deleted.</li>
+     * <li>When a flow is in the online state, its source cannot be deleted.</li>
+     * <li>You can delete the source only after all outputs of the flow have been deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteMediaConnectFlowInput  DeleteMediaConnectFlowInputRequest
@@ -483,9 +532,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When the Flow instance status is online, the output cannot be deleted.</li>
+     * <li>When a flow is in the online state, its outputs cannot be deleted.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteMediaConnectFlowOutput  DeleteMediaConnectFlowOutputRequest
@@ -504,6 +553,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMediaInfosResponse
      */
     CompletableFuture<DeleteMediaInfosResponse> deleteMediaInfos(DeleteMediaInfosRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMediaLiveChannel  DeleteMediaLiveChannelRequest
+     * @return DeleteMediaLiveChannelResponse
+     */
+    CompletableFuture<DeleteMediaLiveChannelResponse> deleteMediaLiveChannel(DeleteMediaLiveChannelRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMediaLiveInput  DeleteMediaLiveInputRequest
+     * @return DeleteMediaLiveInputResponse
+     */
+    CompletableFuture<DeleteMediaLiveInputResponse> deleteMediaLiveInput(DeleteMediaLiveInputRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMediaLiveInputSecurityGroup  DeleteMediaLiveInputSecurityGroupRequest
+     * @return DeleteMediaLiveInputSecurityGroupResponse
+     */
+    CompletableFuture<DeleteMediaLiveInputSecurityGroupResponse> deleteMediaLiveInputSecurityGroup(DeleteMediaLiveInputSecurityGroupRequest request);
 
     /**
      * @param request the request parameters of DeleteMediaMarks  DeleteMediaMarksRequest
@@ -815,18 +882,29 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLiveEditingJobResponse> getLiveEditingJob(GetLiveEditingJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</p>
+     * 
      * @param request the request parameters of GetLivePackageChannel  GetLivePackageChannelRequest
      * @return GetLivePackageChannelResponse
      */
     CompletableFuture<GetLivePackageChannelResponse> getLivePackageChannel(GetLivePackageChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</p>
+     * 
      * @param request the request parameters of GetLivePackageChannelGroup  GetLivePackageChannelGroupRequest
      * @return GetLivePackageChannelGroupResponse
      */
     CompletableFuture<GetLivePackageChannelGroupResponse> getLivePackageChannelGroup(GetLivePackageChannelGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * 
      * @param request the request parameters of GetLivePackageOriginEndpoint  GetLivePackageOriginEndpointRequest
      * @return GetLivePackageOriginEndpointResponse
      */
@@ -870,9 +948,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>The StartTime returned by the interface is only valid when the Flow status is online.</li>
+     * <li>The returned StartTime is valid only when the flow is in the online state.</li>
      * </ul>
      * 
      * @param request the request parameters of GetMediaConnectFlow  GetMediaConnectFlowRequest
@@ -882,9 +960,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * </ul>
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * 
      * @param request the request parameters of GetMediaConnectFlowInput  GetMediaConnectFlowInputRequest
      * @return GetMediaConnectFlowInputResponse
@@ -893,9 +969,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * </ul>
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * 
      * @param request the request parameters of GetMediaConnectFlowOutput  GetMediaConnectFlowOutputRequest
      * @return GetMediaConnectFlowOutputResponse
@@ -922,6 +996,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMediaInfoJobResponse
      */
     CompletableFuture<GetMediaInfoJobResponse> getMediaInfoJob(GetMediaInfoJobRequest request);
+
+    /**
+     * @param request the request parameters of GetMediaLiveChannel  GetMediaLiveChannelRequest
+     * @return GetMediaLiveChannelResponse
+     */
+    CompletableFuture<GetMediaLiveChannelResponse> getMediaLiveChannel(GetMediaLiveChannelRequest request);
+
+    /**
+     * @param request the request parameters of GetMediaLiveInput  GetMediaLiveInputRequest
+     * @return GetMediaLiveInputResponse
+     */
+    CompletableFuture<GetMediaLiveInputResponse> getMediaLiveInput(GetMediaLiveInputRequest request);
+
+    /**
+     * @param request the request parameters of GetMediaLiveInputSecurityGroup  GetMediaLiveInputSecurityGroupRequest
+     * @return GetMediaLiveInputSecurityGroupResponse
+     */
+    CompletableFuture<GetMediaLiveInputSecurityGroupResponse> getMediaLiveInputSecurityGroup(GetMediaLiveInputSecurityGroupRequest request);
 
     /**
      * @param request the request parameters of GetMediaMarks  GetMediaMarksRequest
@@ -1202,18 +1294,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEditingProjectsResponse> listEditingProjects(ListEditingProjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * 
      * @param request the request parameters of ListLivePackageChannelGroups  ListLivePackageChannelGroupsRequest
      * @return ListLivePackageChannelGroupsResponse
      */
     CompletableFuture<ListLivePackageChannelGroupsResponse> listLivePackageChannelGroups(ListLivePackageChannelGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query live package channels by <strong>GroupName</strong> and <strong>Keyword</strong>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</p>
+     * <ul>
+     * <li><strong>GroupName</strong> is required to specify the channel group to which the channel belongs.</li>
+     * <li><strong>Keyword</strong> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</li>
+     * <li><strong>PageNo</strong> and <strong>PageSize</strong> can help control the paging of returned results to facilitate batch processing of data.</li>
+     * <li><strong>SortBy</strong> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
+     * <strong>RequestId</strong> in the response is used for subsequent troubleshooting. <strong>TotalCount</strong> indicates the total number of channels that meet the conditions.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListLivePackageChannels  ListLivePackageChannelsRequest
      * @return ListLivePackageChannelsResponse
      */
     CompletableFuture<ListLivePackageChannelsResponse> listLivePackageChannels(ListLivePackageChannelsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</p>
+     * 
      * @param request the request parameters of ListLivePackageOriginEndpoints  ListLivePackageOriginEndpointsRequest
      * @return ListLivePackageOriginEndpointsResponse
      */
@@ -1281,6 +1391,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMediaInfoJobsResponse
      */
     CompletableFuture<ListMediaInfoJobsResponse> listMediaInfoJobs(ListMediaInfoJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListMediaLiveChannels  ListMediaLiveChannelsRequest
+     * @return ListMediaLiveChannelsResponse
+     */
+    CompletableFuture<ListMediaLiveChannelsResponse> listMediaLiveChannels(ListMediaLiveChannelsRequest request);
+
+    /**
+     * @param request the request parameters of ListMediaLiveInputSecurityGroups  ListMediaLiveInputSecurityGroupsRequest
+     * @return ListMediaLiveInputSecurityGroupsResponse
+     */
+    CompletableFuture<ListMediaLiveInputSecurityGroupsResponse> listMediaLiveInputSecurityGroups(ListMediaLiveInputSecurityGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListMediaLiveInputs  ListMediaLiveInputsRequest
+     * @return ListMediaLiveInputsResponse
+     */
+    CompletableFuture<ListMediaLiveInputsResponse> listMediaLiveInputs(ListMediaLiveInputsRequest request);
 
     /**
      * @param request the request parameters of ListMediaMarks  ListMediaMarksRequest
@@ -1693,6 +1821,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartChannelResponse> startChannel(StartChannelRequest request);
 
     /**
+     * @param request the request parameters of StartMediaLiveChannel  StartMediaLiveChannelRequest
+     * @return StartMediaLiveChannelResponse
+     */
+    CompletableFuture<StartMediaLiveChannelResponse> startMediaLiveChannel(StartMediaLiveChannelRequest request);
+
+    /**
      * @param request the request parameters of StartRtcRobotInstance  StartRtcRobotInstanceRequest
      * @return StartRtcRobotInstanceResponse
      */
@@ -1721,6 +1855,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopChannelResponse
      */
     CompletableFuture<StopChannelResponse> stopChannel(StopChannelRequest request);
+
+    /**
+     * @param request the request parameters of StopMediaLiveChannel  StopMediaLiveChannelRequest
+     * @return StopMediaLiveChannelResponse
+     */
+    CompletableFuture<StopMediaLiveChannelResponse> stopMediaLiveChannel(StopMediaLiveChannelRequest request);
 
     /**
      * @param request the request parameters of StopRtcRobotInstance  StopRtcRobotInstanceRequest
@@ -2078,24 +2218,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</p>
+     * 
      * @param request the request parameters of UpdateLivePackageChannel  UpdateLivePackageChannelRequest
      * @return UpdateLivePackageChannelResponse
      */
     CompletableFuture<UpdateLivePackageChannelResponse> updateLivePackageChannel(UpdateLivePackageChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can choose to update the primary endpoint, secondary endpoint, or both. The response includes the updated ingest endpoint URL, username, and password for the ingest device to reconfigure.</p>
+     * 
      * @param request the request parameters of UpdateLivePackageChannelCredentials  UpdateLivePackageChannelCredentialsRequest
      * @return UpdateLivePackageChannelCredentialsResponse
      */
     CompletableFuture<UpdateLivePackageChannelCredentialsResponse> updateLivePackageChannelCredentials(UpdateLivePackageChannelCredentialsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</p>
+     * 
      * @param request the request parameters of UpdateLivePackageChannelGroup  UpdateLivePackageChannelGroupRequest
      * @return UpdateLivePackageChannelGroupResponse
      */
     CompletableFuture<UpdateLivePackageChannelGroupResponse> updateLivePackageChannelGroup(UpdateLivePackageChannelGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</p>
+     * 
      * @param request the request parameters of UpdateLivePackageOriginEndpoint  UpdateLivePackageOriginEndpointRequest
      * @return UpdateLivePackageOriginEndpointResponse
      */
@@ -2136,9 +2292,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  You can modify the source only when the flow is in the offline state.</p>
      * <ul>
-     * <li>The input can only be modified when the Flow instance status is offline.</li>
-     * <li>The input type cannot be modified.</li>
+     * <li>The source type cannot be modified.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateMediaConnectFlowInput  UpdateMediaConnectFlowInputRequest
@@ -2148,8 +2304,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  You can modify an output only when the flow is in the offline state.</p>
      * <ul>
-     * <li>The output can only be modified when the Flow instance status is offline.</li>
      * <li>The output type cannot be modified.</li>
      * </ul>
      * 
@@ -2172,6 +2328,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMediaInfoResponse
      */
     CompletableFuture<UpdateMediaInfoResponse> updateMediaInfo(UpdateMediaInfoRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMediaLiveChannel  UpdateMediaLiveChannelRequest
+     * @return UpdateMediaLiveChannelResponse
+     */
+    CompletableFuture<UpdateMediaLiveChannelResponse> updateMediaLiveChannel(UpdateMediaLiveChannelRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMediaLiveInput  UpdateMediaLiveInputRequest
+     * @return UpdateMediaLiveInputResponse
+     */
+    CompletableFuture<UpdateMediaLiveInputResponse> updateMediaLiveInput(UpdateMediaLiveInputRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMediaLiveInputSecurityGroup  UpdateMediaLiveInputSecurityGroupRequest
+     * @return UpdateMediaLiveInputSecurityGroupResponse
+     */
+    CompletableFuture<UpdateMediaLiveInputSecurityGroupResponse> updateMediaLiveInputSecurityGroup(UpdateMediaLiveInputSecurityGroupRequest request);
 
     /**
      * @param request the request parameters of UpdateMediaMarks  UpdateMediaMarksRequest

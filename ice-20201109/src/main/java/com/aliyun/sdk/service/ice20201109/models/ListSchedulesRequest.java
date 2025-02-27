@@ -103,6 +103,7 @@ public class ListSchedulesRequest extends Request {
         } 
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ListSchedulesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -124,7 +128,10 @@ public class ListSchedulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,6 +140,7 @@ public class ListSchedulesRequest extends Request {
         }
 
         /**
+         * <p>The time window of the program schedule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

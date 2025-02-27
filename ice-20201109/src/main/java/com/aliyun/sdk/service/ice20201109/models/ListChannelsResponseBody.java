@@ -91,7 +91,7 @@ public class ListChannelsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ChannelList.
+         * <p>The channels.</p>
          */
         public Builder channelList(java.util.List<ChannelAssemblyChannel> channelList) {
             this.channelList = channelList;
@@ -99,7 +99,10 @@ public class ListChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -107,7 +110,10 @@ public class ListChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +121,10 @@ public class ListChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class ListChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of channels returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

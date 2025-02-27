@@ -75,7 +75,7 @@ public class GetMediaConnectFlowOutputRequest extends Request {
         } 
 
         /**
-         * <p>Flow instance ID</p>
+         * <p>The flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * <p>Output name</p>
+         * <p>The name of the output that you want to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -103,7 +103,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * LivePackageChannelGroups.
+         * <p>The channel groups returned.</p>
          */
         public Builder livePackageChannelGroups(java.util.List<LivePackageChannelGroups> livePackageChannelGroups) {
             this.livePackageChannelGroups = livePackageChannelGroups;
@@ -111,7 +111,10 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -119,7 +122,10 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -143,7 +155,10 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -237,7 +252,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             private String originDomain; 
 
             /**
-             * <p>创建时间</p>
+             * <p>The time when the channel group was created. It is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -248,7 +263,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>描述</p>
+             * <p>The channel group description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -256,7 +271,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源一级ID的资源属性字段</p>
+             * <p>The channel group name.</p>
              * 
              * <strong>example:</strong>
              * <p>testChannelGroup</p>
@@ -267,7 +282,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间</p>
+             * <p>The time when the channel group was last modified. It is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-02T12:00:00Z</p>
@@ -278,7 +293,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>源站域名</p>
+             * <p>The origin domain.</p>
              * 
              * <strong>example:</strong>
              * <p>origin.example.com</p>
