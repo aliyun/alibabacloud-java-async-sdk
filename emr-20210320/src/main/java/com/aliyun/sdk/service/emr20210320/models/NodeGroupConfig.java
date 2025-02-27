@@ -23,6 +23,9 @@ public class NodeGroupConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoScalingPolicy")
     private AutoScalingPolicy autoScalingPolicy;
 
+    @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
+    private Boolean compensateWithOnDemand;
+
     @com.aliyun.core.annotation.NameInMap("ComponentTags")
     private java.util.List<String> componentTags;
 
@@ -84,6 +87,7 @@ public class NodeGroupConfig extends TeaModel {
     private NodeGroupConfig(Builder builder) {
         this.additionalSecurityGroupIds = builder.additionalSecurityGroupIds;
         this.autoScalingPolicy = builder.autoScalingPolicy;
+        this.compensateWithOnDemand = builder.compensateWithOnDemand;
         this.componentTags = builder.componentTags;
         this.costOptimizedConfig = builder.costOptimizedConfig;
         this.dataDisks = builder.dataDisks;
@@ -125,6 +129,13 @@ public class NodeGroupConfig extends TeaModel {
      */
     public AutoScalingPolicy getAutoScalingPolicy() {
         return this.autoScalingPolicy;
+    }
+
+    /**
+     * @return compensateWithOnDemand
+     */
+    public Boolean getCompensateWithOnDemand() {
+        return this.compensateWithOnDemand;
     }
 
     /**
@@ -263,6 +274,7 @@ public class NodeGroupConfig extends TeaModel {
     public static final class Builder {
         private java.util.List<String> additionalSecurityGroupIds; 
         private AutoScalingPolicy autoScalingPolicy; 
+        private Boolean compensateWithOnDemand; 
         private java.util.List<String> componentTags; 
         private CostOptimizedConfig costOptimizedConfig; 
         private java.util.List<DataDisk> dataDisks; 
@@ -299,6 +311,14 @@ public class NodeGroupConfig extends TeaModel {
          */
         public Builder autoScalingPolicy(AutoScalingPolicy autoScalingPolicy) {
             this.autoScalingPolicy = autoScalingPolicy;
+            return this;
+        }
+
+        /**
+         * CompensateWithOnDemand.
+         */
+        public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
             return this;
         }
 

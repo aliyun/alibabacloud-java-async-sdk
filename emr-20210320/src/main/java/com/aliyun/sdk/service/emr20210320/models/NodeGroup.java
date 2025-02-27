@@ -20,6 +20,9 @@ public class NodeGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AdditionalSecurityGroupIds")
     private java.util.List<String> additionalSecurityGroupIds;
 
+    @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
+    private Boolean compensateWithOnDemand;
+
     @com.aliyun.core.annotation.NameInMap("CostOptimizedConfig")
     private CostOptimizedConfig costOptimizedConfig;
 
@@ -88,6 +91,7 @@ public class NodeGroup extends TeaModel {
 
     private NodeGroup(Builder builder) {
         this.additionalSecurityGroupIds = builder.additionalSecurityGroupIds;
+        this.compensateWithOnDemand = builder.compensateWithOnDemand;
         this.costOptimizedConfig = builder.costOptimizedConfig;
         this.dataDisks = builder.dataDisks;
         this.deploymentSetStrategy = builder.deploymentSetStrategy;
@@ -125,6 +129,13 @@ public class NodeGroup extends TeaModel {
      */
     public java.util.List<String> getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
+    }
+
+    /**
+     * @return compensateWithOnDemand
+     */
+    public Boolean getCompensateWithOnDemand() {
+        return this.compensateWithOnDemand;
     }
 
     /**
@@ -283,6 +294,7 @@ public class NodeGroup extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> additionalSecurityGroupIds; 
+        private Boolean compensateWithOnDemand; 
         private CostOptimizedConfig costOptimizedConfig; 
         private java.util.List<DataDisk> dataDisks; 
         private String deploymentSetStrategy; 
@@ -314,6 +326,14 @@ public class NodeGroup extends TeaModel {
          */
         public Builder additionalSecurityGroupIds(java.util.List<String> additionalSecurityGroupIds) {
             this.additionalSecurityGroupIds = additionalSecurityGroupIds;
+            return this;
+        }
+
+        /**
+         * CompensateWithOnDemand.
+         */
+        public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
             return this;
         }
 
