@@ -746,9 +746,13 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeatureStatus")
         private FeatureStatus featureStatus;
 
+        @com.aliyun.core.annotation.NameInMap("config")
+        private String config;
+
         private Data(Builder builder) {
             this.feature = builder.feature;
             this.featureStatus = builder.featureStatus;
+            this.config = builder.config;
         }
 
         public static Builder builder() {
@@ -773,9 +777,17 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             return this.featureStatus;
         }
 
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
+        }
+
         public static final class Builder {
             private Feature feature; 
             private FeatureStatus featureStatus; 
+            private String config; 
 
             /**
              * <p>The installation information about the feature.</p>
@@ -790,6 +802,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
              */
             public Builder featureStatus(FeatureStatus featureStatus) {
                 this.featureStatus = featureStatus;
+                return this;
+            }
+
+            /**
+             * config.
+             */
+            public Builder config(String config) {
+                this.config = config;
                 return this;
             }
 

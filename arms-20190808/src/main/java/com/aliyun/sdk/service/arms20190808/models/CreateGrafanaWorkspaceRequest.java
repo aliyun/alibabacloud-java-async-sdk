@@ -366,7 +366,10 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>包年包月的计费周期，取值： Month（默认值）：按月购买。                                 Year：按年购买。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

@@ -196,7 +196,10 @@ public class GetStackRequest extends Request {
         }
 
         /**
-         * SpanID.
+         * <p>Span ID. You can get it from the <strong>Trace Explorer</strong> page of the ARMS console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c32dfa4b******</p>
          */
         public Builder spanID(String spanID) {
             this.putQueryParameter("SpanID", spanID);

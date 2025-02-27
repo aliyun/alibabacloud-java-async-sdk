@@ -22,6 +22,14 @@ public class GetTraceRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Long pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Long pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -38,6 +46,8 @@ public class GetTraceRequest extends Request {
     private GetTraceRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.traceID = builder.traceID;
@@ -64,6 +74,20 @@ public class GetTraceRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -86,6 +110,8 @@ public class GetTraceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTraceRequest, Builder> {
         private Long endTime; 
+        private Long pageNumber; 
+        private Long pageSize; 
         private String regionId; 
         private Long startTime; 
         private String traceID; 
@@ -97,6 +123,8 @@ public class GetTraceRequest extends Request {
         private Builder(GetTraceRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.startTime = request.startTime;
             this.traceID = request.traceID;
@@ -114,6 +142,24 @@ public class GetTraceRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
