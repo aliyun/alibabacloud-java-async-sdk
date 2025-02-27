@@ -23,20 +23,8 @@ public class PAL7Config extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CertId")
     private String certId;
 
-    @com.aliyun.core.annotation.NameInMap("ClientIpConfig")
-    private ClientIpConfig clientIpConfig;
-
-    @com.aliyun.core.annotation.NameInMap("ClientIpRestrictConfig")
-    private ClientIpRestrictConfig clientIpRestrictConfig;
-
-    @com.aliyun.core.annotation.NameInMap("ClientTypeRestrictConfig")
-    private ClientTypeRestrictConfig clientTypeRestrictConfig;
-
     @com.aliyun.core.annotation.NameInMap("DnsConfig")
     private DnsConfig dnsConfig;
-
-    @com.aliyun.core.annotation.NameInMap("IsNtlm")
-    private Boolean isNtlm;
 
     @com.aliyun.core.annotation.NameInMap("JsHookConfig")
     private JsHookConfig jsHookConfig;
@@ -59,11 +47,7 @@ public class PAL7Config extends TeaModel {
     private PAL7Config(Builder builder) {
         this.bypassConfig = builder.bypassConfig;
         this.certId = builder.certId;
-        this.clientIpConfig = builder.clientIpConfig;
-        this.clientIpRestrictConfig = builder.clientIpRestrictConfig;
-        this.clientTypeRestrictConfig = builder.clientTypeRestrictConfig;
         this.dnsConfig = builder.dnsConfig;
-        this.isNtlm = builder.isNtlm;
         this.jsHookConfig = builder.jsHookConfig;
         this.proxyDomainTypes = builder.proxyDomainTypes;
         this.requestHeaderRewriteConfig = builder.requestHeaderRewriteConfig;
@@ -95,38 +79,10 @@ public class PAL7Config extends TeaModel {
     }
 
     /**
-     * @return clientIpConfig
-     */
-    public ClientIpConfig getClientIpConfig() {
-        return this.clientIpConfig;
-    }
-
-    /**
-     * @return clientIpRestrictConfig
-     */
-    public ClientIpRestrictConfig getClientIpRestrictConfig() {
-        return this.clientIpRestrictConfig;
-    }
-
-    /**
-     * @return clientTypeRestrictConfig
-     */
-    public ClientTypeRestrictConfig getClientTypeRestrictConfig() {
-        return this.clientTypeRestrictConfig;
-    }
-
-    /**
      * @return dnsConfig
      */
     public DnsConfig getDnsConfig() {
         return this.dnsConfig;
-    }
-
-    /**
-     * @return isNtlm
-     */
-    public Boolean getIsNtlm() {
-        return this.isNtlm;
     }
 
     /**
@@ -174,11 +130,7 @@ public class PAL7Config extends TeaModel {
     public static final class Builder {
         private BypassConfig bypassConfig; 
         private String certId; 
-        private ClientIpConfig clientIpConfig; 
-        private ClientIpRestrictConfig clientIpRestrictConfig; 
-        private ClientTypeRestrictConfig clientTypeRestrictConfig; 
         private DnsConfig dnsConfig; 
-        private Boolean isNtlm; 
         private JsHookConfig jsHookConfig; 
         private byte[] proxyDomainTypes; 
         private RequestHeaderRewriteConfig requestHeaderRewriteConfig; 
@@ -203,42 +155,10 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * ClientIpConfig.
-         */
-        public Builder clientIpConfig(ClientIpConfig clientIpConfig) {
-            this.clientIpConfig = clientIpConfig;
-            return this;
-        }
-
-        /**
-         * ClientIpRestrictConfig.
-         */
-        public Builder clientIpRestrictConfig(ClientIpRestrictConfig clientIpRestrictConfig) {
-            this.clientIpRestrictConfig = clientIpRestrictConfig;
-            return this;
-        }
-
-        /**
-         * ClientTypeRestrictConfig.
-         */
-        public Builder clientTypeRestrictConfig(ClientTypeRestrictConfig clientTypeRestrictConfig) {
-            this.clientTypeRestrictConfig = clientTypeRestrictConfig;
-            return this;
-        }
-
-        /**
          * DnsConfig.
          */
         public Builder dnsConfig(DnsConfig dnsConfig) {
             this.dnsConfig = dnsConfig;
-            return this;
-        }
-
-        /**
-         * IsNtlm.
-         */
-        public Builder isNtlm(Boolean isNtlm) {
-            this.isNtlm = isNtlm;
             return this;
         }
 
@@ -445,247 +365,6 @@ public class PAL7Config extends TeaModel {
 
             public BypassConfig build() {
                 return new BypassConfig(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link PAL7Config} extends {@link TeaModel}
-     *
-     * <p>PAL7Config</p>
-     */
-    public static class ClientIpConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ClientIpHeaders")
-        private java.util.List<String> clientIpHeaders;
-
-        @com.aliyun.core.annotation.NameInMap("TrustedProxies")
-        private java.util.List<String> trustedProxies;
-
-        private ClientIpConfig(Builder builder) {
-            this.clientIpHeaders = builder.clientIpHeaders;
-            this.trustedProxies = builder.trustedProxies;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ClientIpConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return clientIpHeaders
-         */
-        public java.util.List<String> getClientIpHeaders() {
-            return this.clientIpHeaders;
-        }
-
-        /**
-         * @return trustedProxies
-         */
-        public java.util.List<String> getTrustedProxies() {
-            return this.trustedProxies;
-        }
-
-        public static final class Builder {
-            private java.util.List<String> clientIpHeaders; 
-            private java.util.List<String> trustedProxies; 
-
-            /**
-             * ClientIpHeaders.
-             */
-            public Builder clientIpHeaders(java.util.List<String> clientIpHeaders) {
-                this.clientIpHeaders = clientIpHeaders;
-                return this;
-            }
-
-            /**
-             * TrustedProxies.
-             */
-            public Builder trustedProxies(java.util.List<String> trustedProxies) {
-                this.trustedProxies = trustedProxies;
-                return this;
-            }
-
-            public ClientIpConfig build() {
-                return new ClientIpConfig(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link PAL7Config} extends {@link TeaModel}
-     *
-     * <p>PAL7Config</p>
-     */
-    public static class ClientIpRestrictConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("BlacklistFroms")
-        private java.util.List<String> blacklistFroms;
-
-        @com.aliyun.core.annotation.NameInMap("Mode")
-        private String mode;
-
-        @com.aliyun.core.annotation.NameInMap("WhitelistFroms")
-        private java.util.List<String> whitelistFroms;
-
-        private ClientIpRestrictConfig(Builder builder) {
-            this.blacklistFroms = builder.blacklistFroms;
-            this.mode = builder.mode;
-            this.whitelistFroms = builder.whitelistFroms;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ClientIpRestrictConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return blacklistFroms
-         */
-        public java.util.List<String> getBlacklistFroms() {
-            return this.blacklistFroms;
-        }
-
-        /**
-         * @return mode
-         */
-        public String getMode() {
-            return this.mode;
-        }
-
-        /**
-         * @return whitelistFroms
-         */
-        public java.util.List<String> getWhitelistFroms() {
-            return this.whitelistFroms;
-        }
-
-        public static final class Builder {
-            private java.util.List<String> blacklistFroms; 
-            private String mode; 
-            private java.util.List<String> whitelistFroms; 
-
-            /**
-             * BlacklistFroms.
-             */
-            public Builder blacklistFroms(java.util.List<String> blacklistFroms) {
-                this.blacklistFroms = blacklistFroms;
-                return this;
-            }
-
-            /**
-             * Mode.
-             */
-            public Builder mode(String mode) {
-                this.mode = mode;
-                return this;
-            }
-
-            /**
-             * WhitelistFroms.
-             */
-            public Builder whitelistFroms(java.util.List<String> whitelistFroms) {
-                this.whitelistFroms = whitelistFroms;
-                return this;
-            }
-
-            public ClientIpRestrictConfig build() {
-                return new ClientIpRestrictConfig(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link PAL7Config} extends {@link TeaModel}
-     *
-     * <p>PAL7Config</p>
-     */
-    public static class ClientTypeRestrictConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("BlacklistClients")
-        private java.util.List<String> blacklistClients;
-
-        @com.aliyun.core.annotation.NameInMap("Mode")
-        private String mode;
-
-        @com.aliyun.core.annotation.NameInMap("WhitelistClients")
-        private java.util.List<String> whitelistClients;
-
-        private ClientTypeRestrictConfig(Builder builder) {
-            this.blacklistClients = builder.blacklistClients;
-            this.mode = builder.mode;
-            this.whitelistClients = builder.whitelistClients;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ClientTypeRestrictConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return blacklistClients
-         */
-        public java.util.List<String> getBlacklistClients() {
-            return this.blacklistClients;
-        }
-
-        /**
-         * @return mode
-         */
-        public String getMode() {
-            return this.mode;
-        }
-
-        /**
-         * @return whitelistClients
-         */
-        public java.util.List<String> getWhitelistClients() {
-            return this.whitelistClients;
-        }
-
-        public static final class Builder {
-            private java.util.List<String> blacklistClients; 
-            private String mode; 
-            private java.util.List<String> whitelistClients; 
-
-            /**
-             * BlacklistClients.
-             */
-            public Builder blacklistClients(java.util.List<String> blacklistClients) {
-                this.blacklistClients = blacklistClients;
-                return this;
-            }
-
-            /**
-             * Mode.
-             */
-            public Builder mode(String mode) {
-                this.mode = mode;
-                return this;
-            }
-
-            /**
-             * WhitelistClients.
-             */
-            public Builder whitelistClients(java.util.List<String> whitelistClients) {
-                this.whitelistClients = whitelistClients;
-                return this;
-            }
-
-            public ClientTypeRestrictConfig build() {
-                return new ClientTypeRestrictConfig(this);
             } 
 
         } 
