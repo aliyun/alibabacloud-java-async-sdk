@@ -156,6 +156,9 @@ public class CreateServiceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("aiServiceConfig")
         private AiServiceConfig aiServiceConfig;
 
+        @com.aliyun.core.annotation.NameInMap("dnsServers")
+        private java.util.List<String> dnsServers;
+
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
@@ -171,6 +174,7 @@ public class CreateServiceRequest extends Request {
         private ServiceConfigs(Builder builder) {
             this.addresses = builder.addresses;
             this.aiServiceConfig = builder.aiServiceConfig;
+            this.dnsServers = builder.dnsServers;
             this.groupName = builder.groupName;
             this.name = builder.name;
             this.namespace = builder.namespace;
@@ -197,6 +201,13 @@ public class CreateServiceRequest extends Request {
          */
         public AiServiceConfig getAiServiceConfig() {
             return this.aiServiceConfig;
+        }
+
+        /**
+         * @return dnsServers
+         */
+        public java.util.List<String> getDnsServers() {
+            return this.dnsServers;
         }
 
         /**
@@ -230,6 +241,7 @@ public class CreateServiceRequest extends Request {
         public static final class Builder {
             private java.util.List<String> addresses; 
             private AiServiceConfig aiServiceConfig; 
+            private java.util.List<String> dnsServers; 
             private String groupName; 
             private String name; 
             private String namespace; 
@@ -248,6 +260,14 @@ public class CreateServiceRequest extends Request {
              */
             public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
                 this.aiServiceConfig = aiServiceConfig;
+                return this;
+            }
+
+            /**
+             * dnsServers.
+             */
+            public Builder dnsServers(java.util.List<String> dnsServers) {
+                this.dnsServers = dnsServers;
                 return this;
             }
 
