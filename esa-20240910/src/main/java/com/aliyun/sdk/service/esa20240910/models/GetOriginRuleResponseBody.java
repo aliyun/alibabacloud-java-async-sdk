@@ -35,11 +35,17 @@ public class GetOriginRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OriginHttpsPort")
     private String originHttpsPort;
 
+    @com.aliyun.core.annotation.NameInMap("OriginMtls")
+    private String originMtls;
+
     @com.aliyun.core.annotation.NameInMap("OriginScheme")
     private String originScheme;
 
     @com.aliyun.core.annotation.NameInMap("OriginSni")
     private String originSni;
+
+    @com.aliyun.core.annotation.NameInMap("OriginVerify")
+    private String originVerify;
 
     @com.aliyun.core.annotation.NameInMap("Range")
     private String range;
@@ -69,8 +75,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         this.originHost = builder.originHost;
         this.originHttpPort = builder.originHttpPort;
         this.originHttpsPort = builder.originHttpsPort;
+        this.originMtls = builder.originMtls;
         this.originScheme = builder.originScheme;
         this.originSni = builder.originSni;
+        this.originVerify = builder.originVerify;
         this.range = builder.range;
         this.requestId = builder.requestId;
         this.rule = builder.rule;
@@ -131,6 +139,13 @@ public class GetOriginRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return originMtls
+     */
+    public String getOriginMtls() {
+        return this.originMtls;
+    }
+
+    /**
      * @return originScheme
      */
     public String getOriginScheme() {
@@ -142,6 +157,13 @@ public class GetOriginRuleResponseBody extends TeaModel {
      */
     public String getOriginSni() {
         return this.originSni;
+    }
+
+    /**
+     * @return originVerify
+     */
+    public String getOriginVerify() {
+        return this.originVerify;
     }
 
     /**
@@ -200,8 +222,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         private String originHost; 
         private String originHttpPort; 
         private String originHttpsPort; 
+        private String originMtls; 
         private String originScheme; 
         private String originSni; 
+        private String originVerify; 
         private String range; 
         private String requestId; 
         private String rule; 
@@ -281,6 +305,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
+         * OriginMtls.
+         */
+        public Builder originMtls(String originMtls) {
+            this.originMtls = originMtls;
+            return this;
+        }
+
+        /**
          * <p>Protocol used for the origin request. Value range:</p>
          * <ul>
          * <li>http: Use HTTP protocol for origin.</li>
@@ -304,6 +336,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
          */
         public Builder originSni(String originSni) {
             this.originSni = originSni;
+            return this;
+        }
+
+        /**
+         * OriginVerify.
+         */
+        public Builder originVerify(String originVerify) {
+            this.originVerify = originVerify;
             return this;
         }
 

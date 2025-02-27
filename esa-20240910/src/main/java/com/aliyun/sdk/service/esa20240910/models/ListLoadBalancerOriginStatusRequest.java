@@ -89,7 +89,7 @@ public class ListLoadBalancerOriginStatusRequest extends Request {
         } 
 
         /**
-         * <p>Load balancer ID. When querying multiple load balancers, separate the IDs with commas. A maximum of 100 load balancer IDs can be passed at once. Load balancer IDs can be obtained by calling the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface.</p>
+         * <p>Load balancer ID. When querying multiple load balancers, separate the IDs with commas. A maximum of 100 load balancer IDs can be passed at once. Load balancer IDs can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

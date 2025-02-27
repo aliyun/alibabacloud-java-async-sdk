@@ -34,12 +34,20 @@ public class CreateOriginRuleRequest extends Request {
     private String originHttpsPort;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginMtls")
+    private String originMtls;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OriginScheme")
     private String originScheme;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OriginSni")
     private String originSni;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginVerify")
+    private String originVerify;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Range")
@@ -72,8 +80,10 @@ public class CreateOriginRuleRequest extends Request {
         this.originHost = builder.originHost;
         this.originHttpPort = builder.originHttpPort;
         this.originHttpsPort = builder.originHttpsPort;
+        this.originMtls = builder.originMtls;
         this.originScheme = builder.originScheme;
         this.originSni = builder.originSni;
+        this.originVerify = builder.originVerify;
         this.range = builder.range;
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
@@ -124,6 +134,13 @@ public class CreateOriginRuleRequest extends Request {
     }
 
     /**
+     * @return originMtls
+     */
+    public String getOriginMtls() {
+        return this.originMtls;
+    }
+
+    /**
      * @return originScheme
      */
     public String getOriginScheme() {
@@ -135,6 +152,13 @@ public class CreateOriginRuleRequest extends Request {
      */
     public String getOriginSni() {
         return this.originSni;
+    }
+
+    /**
+     * @return originVerify
+     */
+    public String getOriginVerify() {
+        return this.originVerify;
     }
 
     /**
@@ -184,8 +208,10 @@ public class CreateOriginRuleRequest extends Request {
         private String originHost; 
         private String originHttpPort; 
         private String originHttpsPort; 
+        private String originMtls; 
         private String originScheme; 
         private String originSni; 
+        private String originVerify; 
         private String range; 
         private String rule; 
         private String ruleEnable; 
@@ -203,8 +229,10 @@ public class CreateOriginRuleRequest extends Request {
             this.originHost = request.originHost;
             this.originHttpPort = request.originHttpPort;
             this.originHttpsPort = request.originHttpsPort;
+            this.originMtls = request.originMtls;
             this.originScheme = request.originScheme;
             this.originSni = request.originSni;
+            this.originVerify = request.originVerify;
             this.range = request.range;
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
@@ -262,6 +290,15 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
+         * OriginMtls.
+         */
+        public Builder originMtls(String originMtls) {
+            this.putQueryParameter("OriginMtls", originMtls);
+            this.originMtls = originMtls;
+            return this;
+        }
+
+        /**
          * <p>Protocol used for the origin request. Possible values:</p>
          * <ul>
          * <li>http: Use HTTP protocol for origin requests.</li>
@@ -287,6 +324,15 @@ public class CreateOriginRuleRequest extends Request {
         public Builder originSni(String originSni) {
             this.putQueryParameter("OriginSni", originSni);
             this.originSni = originSni;
+            return this;
+        }
+
+        /**
+         * OriginVerify.
+         */
+        public Builder originVerify(String originVerify) {
+            this.putQueryParameter("OriginVerify", originVerify);
+            this.originVerify = originVerify;
             return this;
         }
 

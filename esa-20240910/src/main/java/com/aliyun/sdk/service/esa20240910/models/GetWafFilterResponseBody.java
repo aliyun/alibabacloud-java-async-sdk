@@ -202,8 +202,14 @@ public class GetWafFilterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private Integer attributes;
 
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
         @com.aliyun.core.annotation.NameInMap("Kind")
         private String kind;
+
+        @com.aliyun.core.annotation.NameInMap("MinPlan")
+        private String minPlan;
 
         @com.aliyun.core.annotation.NameInMap("Negative")
         private Boolean negative;
@@ -225,7 +231,9 @@ public class GetWafFilterResponseBody extends TeaModel {
 
         private Logics(Builder builder) {
             this.attributes = builder.attributes;
+            this.enable = builder.enable;
             this.kind = builder.kind;
+            this.minPlan = builder.minPlan;
             this.negative = builder.negative;
             this.operator = builder.operator;
             this.symbol = builder.symbol;
@@ -250,10 +258,24 @@ public class GetWafFilterResponseBody extends TeaModel {
         }
 
         /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
          * @return kind
          */
         public String getKind() {
             return this.kind;
+        }
+
+        /**
+         * @return minPlan
+         */
+        public String getMinPlan() {
+            return this.minPlan;
         }
 
         /**
@@ -300,7 +322,9 @@ public class GetWafFilterResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer attributes; 
+            private Boolean enable; 
             private String kind; 
+            private String minPlan; 
             private Boolean negative; 
             private String operator; 
             private String symbol; 
@@ -320,6 +344,14 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
              * <p>The type of the value input box. Valid values:</p>
              * <ul>
              * <li>select:single</li>
@@ -333,6 +365,14 @@ public class GetWafFilterResponseBody extends TeaModel {
              */
             public Builder kind(String kind) {
                 this.kind = kind;
+                return this;
+            }
+
+            /**
+             * MinPlan.
+             */
+            public Builder minPlan(String minPlan) {
+                this.minPlan = minPlan;
                 return this;
             }
 
@@ -559,6 +599,9 @@ public class GetWafFilterResponseBody extends TeaModel {
      * <p>GetWafFilterResponseBody</p>
      */
     public static class Fields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
@@ -567,6 +610,9 @@ public class GetWafFilterResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Logics")
         private java.util.List<Logics> logics;
+
+        @com.aliyun.core.annotation.NameInMap("MinPlan")
+        private String minPlan;
 
         @com.aliyun.core.annotation.NameInMap("Selector")
         private Selector selector;
@@ -578,9 +624,11 @@ public class GetWafFilterResponseBody extends TeaModel {
         private String subTip;
 
         private Fields(Builder builder) {
+            this.enable = builder.enable;
             this.key = builder.key;
             this.label = builder.label;
             this.logics = builder.logics;
+            this.minPlan = builder.minPlan;
             this.selector = builder.selector;
             this.sub = builder.sub;
             this.subTip = builder.subTip;
@@ -592,6 +640,13 @@ public class GetWafFilterResponseBody extends TeaModel {
 
         public static Fields create() {
             return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         /**
@@ -616,6 +671,13 @@ public class GetWafFilterResponseBody extends TeaModel {
         }
 
         /**
+         * @return minPlan
+         */
+        public String getMinPlan() {
+            return this.minPlan;
+        }
+
+        /**
          * @return selector
          */
         public Selector getSelector() {
@@ -637,12 +699,22 @@ public class GetWafFilterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enable; 
             private String key; 
             private String label; 
             private java.util.List<Logics> logics; 
+            private String minPlan; 
             private Selector selector; 
             private Boolean sub; 
             private String subTip; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
 
             /**
              * <p>The field for matched objects in the system.</p>
@@ -671,6 +743,14 @@ public class GetWafFilterResponseBody extends TeaModel {
              */
             public Builder logics(java.util.List<Logics> logics) {
                 this.logics = logics;
+                return this;
+            }
+
+            /**
+             * MinPlan.
+             */
+            public Builder minPlan(String minPlan) {
+                this.minPlan = minPlan;
                 return this;
             }
 

@@ -75,7 +75,7 @@ public class DeleteOriginRuleRequest extends Request {
         } 
 
         /**
-         * <p>ConfigId of the configuration, which can be obtained by calling the <a href="~~ListOriginRules~~">ListOriginRules</a> interface.</p>
+         * <p>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2866989.html">ListOriginRules</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

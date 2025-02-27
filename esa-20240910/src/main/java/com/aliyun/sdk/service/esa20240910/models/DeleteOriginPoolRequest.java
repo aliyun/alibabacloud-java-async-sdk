@@ -75,7 +75,7 @@ public class DeleteOriginPoolRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the origin address pool, which can be obtained by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> API.</p>
+         * <p>The ID of the origin address pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
