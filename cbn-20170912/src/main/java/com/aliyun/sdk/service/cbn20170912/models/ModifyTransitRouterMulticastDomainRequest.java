@@ -215,7 +215,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>Multicast domain feature.</p>
          */
         public Builder options(Options options) {
             this.putQueryParameter("Options", options);
@@ -338,7 +338,16 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
             private String igmpv2Support; 
 
             /**
-             * Igmpv2Support.
+             * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Default value: <strong>enable</strong>.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The IGMP feature is in beta testing. To use it, contact your account manager.</li>
+             * <li>The IGMP feature cannot be disabled after it is enabled.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder igmpv2Support(String igmpv2Support) {
                 this.igmpv2Support = igmpv2Support;
