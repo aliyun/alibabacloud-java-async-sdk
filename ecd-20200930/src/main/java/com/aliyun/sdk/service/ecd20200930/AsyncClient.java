@@ -233,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAutoSnapshotPolicyResponse> createAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateBandwidthResourcePackages  CreateBandwidthResourcePackagesRequest
+     * @return CreateBandwidthResourcePackagesResponse
+     */
+    CompletableFuture<CreateBandwidthResourcePackagesResponse> createBandwidthResourcePackages(CreateBandwidthResourcePackagesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</p>
      * 
