@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenericAdvancedSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("industry")
+    private String industry;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("query")
     @com.aliyun.core.annotation.Validation(required = true)
     private String query;
@@ -32,6 +36,7 @@ public class GenericAdvancedSearchRequest extends Request {
 
     private GenericAdvancedSearchRequest(Builder builder) {
         super(builder);
+        this.industry = builder.industry;
         this.query = builder.query;
         this.sessionId = builder.sessionId;
         this.timeRange = builder.timeRange;
@@ -48,6 +53,13 @@ public class GenericAdvancedSearchRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return industry
+     */
+    public String getIndustry() {
+        return this.industry;
     }
 
     /**
@@ -72,6 +84,7 @@ public class GenericAdvancedSearchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenericAdvancedSearchRequest, Builder> {
+        private String industry; 
         private String query; 
         private String sessionId; 
         private String timeRange; 
@@ -82,10 +95,20 @@ public class GenericAdvancedSearchRequest extends Request {
 
         private Builder(GenericAdvancedSearchRequest request) {
             super(request);
+            this.industry = request.industry;
             this.query = request.query;
             this.sessionId = request.sessionId;
             this.timeRange = request.timeRange;
         } 
+
+        /**
+         * industry.
+         */
+        public Builder industry(String industry) {
+            this.putQueryParameter("industry", industry);
+            this.industry = industry;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
