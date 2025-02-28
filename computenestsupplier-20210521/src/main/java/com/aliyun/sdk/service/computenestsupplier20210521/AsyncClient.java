@@ -167,6 +167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceProvisionsResponse> getServiceProvisions(GetServiceProvisionsRequest request);
 
     /**
+     * @param request the request parameters of GetServiceRegistration  GetServiceRegistrationRequest
+     * @return GetServiceRegistrationResponse
+     */
+    CompletableFuture<GetServiceRegistrationResponse> getServiceRegistration(GetServiceRegistrationRequest request);
+
+    /**
      * @param request the request parameters of GetServiceTemplateParameterConstraints  GetServiceTemplateParameterConstraintsRequest
      * @return GetServiceTemplateParameterConstraintsResponse
      */
@@ -231,6 +237,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListServiceInstanceDeployDetailsResponse
      */
     CompletableFuture<ListServiceInstanceDeployDetailsResponse> listServiceInstanceDeployDetails(ListServiceInstanceDeployDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceInstanceLogs  ListServiceInstanceLogsRequest
+     * @return ListServiceInstanceLogsResponse
+     */
+    CompletableFuture<ListServiceInstanceLogsResponse> listServiceInstanceLogs(ListServiceInstanceLogsRequest request);
 
     /**
      * @param request the request parameters of ListServiceInstanceResources  ListServiceInstanceResourcesRequest
