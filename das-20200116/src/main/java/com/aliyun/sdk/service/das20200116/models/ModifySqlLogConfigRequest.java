@@ -22,6 +22,10 @@ public class ModifySqlLogConfigRequest extends Request {
     private Boolean enable;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAudit")
+    private Boolean enableAudit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List<Filters> filters;
 
@@ -45,6 +49,7 @@ public class ModifySqlLogConfigRequest extends Request {
     private ModifySqlLogConfigRequest(Builder builder) {
         super(builder);
         this.enable = builder.enable;
+        this.enableAudit = builder.enableAudit;
         this.filters = builder.filters;
         this.hotRetention = builder.hotRetention;
         this.instanceId = builder.instanceId;
@@ -70,6 +75,13 @@ public class ModifySqlLogConfigRequest extends Request {
      */
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    /**
+     * @return enableAudit
+     */
+    public Boolean getEnableAudit() {
+        return this.enableAudit;
     }
 
     /**
@@ -109,6 +121,7 @@ public class ModifySqlLogConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySqlLogConfigRequest, Builder> {
         private Boolean enable; 
+        private Boolean enableAudit; 
         private java.util.List<Filters> filters; 
         private Integer hotRetention; 
         private String instanceId; 
@@ -122,6 +135,7 @@ public class ModifySqlLogConfigRequest extends Request {
         private Builder(ModifySqlLogConfigRequest request) {
             super(request);
             this.enable = request.enable;
+            this.enableAudit = request.enableAudit;
             this.filters = request.filters;
             this.hotRetention = request.hotRetention;
             this.instanceId = request.instanceId;
@@ -145,6 +159,15 @@ public class ModifySqlLogConfigRequest extends Request {
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * EnableAudit.
+         */
+        public Builder enableAudit(Boolean enableAudit) {
+            this.putQueryParameter("EnableAudit", enableAudit);
+            this.enableAudit = enableAudit;
             return this;
         }
 
