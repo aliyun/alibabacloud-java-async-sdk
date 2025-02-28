@@ -22,6 +22,10 @@ public class CreateDdrInstanceRequest extends Request {
     private String backupSetId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetRegion")
+    private String backupSetRegion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -155,6 +159,7 @@ public class CreateDdrInstanceRequest extends Request {
     private CreateDdrInstanceRequest(Builder builder) {
         super(builder);
         this.backupSetId = builder.backupSetId;
+        this.backupSetRegion = builder.backupSetRegion;
         this.clientToken = builder.clientToken;
         this.connectionMode = builder.connectionMode;
         this.DBInstanceClass = builder.DBInstanceClass;
@@ -206,6 +211,13 @@ public class CreateDdrInstanceRequest extends Request {
      */
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    /**
+     * @return backupSetRegion
+     */
+    public String getBackupSetRegion() {
+        return this.backupSetRegion;
     }
 
     /**
@@ -427,6 +439,7 @@ public class CreateDdrInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDdrInstanceRequest, Builder> {
         private String backupSetId; 
+        private String backupSetRegion; 
         private String clientToken; 
         private String connectionMode; 
         private String DBInstanceClass; 
@@ -466,6 +479,7 @@ public class CreateDdrInstanceRequest extends Request {
         private Builder(CreateDdrInstanceRequest request) {
             super(request);
             this.backupSetId = request.backupSetId;
+            this.backupSetRegion = request.backupSetRegion;
             this.clientToken = request.clientToken;
             this.connectionMode = request.connectionMode;
             this.DBInstanceClass = request.DBInstanceClass;
@@ -511,6 +525,15 @@ public class CreateDdrInstanceRequest extends Request {
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
             this.backupSetId = backupSetId;
+            return this;
+        }
+
+        /**
+         * BackupSetRegion.
+         */
+        public Builder backupSetRegion(String backupSetRegion) {
+            this.putQueryParameter("BackupSetRegion", backupSetRegion);
+            this.backupSetRegion = backupSetRegion;
             return this;
         }
 
