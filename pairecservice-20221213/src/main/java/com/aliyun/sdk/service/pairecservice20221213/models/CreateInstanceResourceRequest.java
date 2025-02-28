@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceResourceRequest</p>
@@ -128,7 +134,10 @@ public class CreateInstanceResourceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -146,7 +155,10 @@ public class CreateInstanceResourceRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataManagement</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -155,7 +167,10 @@ public class CreateInstanceResourceRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>storage</p>
          */
         public Builder group(String group) {
             this.putBodyParameter("Group", group);
@@ -164,7 +179,10 @@ public class CreateInstanceResourceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -173,7 +191,10 @@ public class CreateInstanceResourceRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-test-123</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);

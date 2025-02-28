@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExperimentGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListExperimentGroupsResponseBody</p>
  */
 public class ListExperimentGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExperimentGroups")
-    private java.util.List < ExperimentGroups> experimentGroups;
+    private java.util.List<ExperimentGroups> experimentGroups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
     /**
      * @return experimentGroups
      */
-    public java.util.List < ExperimentGroups> getExperimentGroups() {
+    public java.util.List<ExperimentGroups> getExperimentGroups() {
         return this.experimentGroups;
     }
 
@@ -56,20 +62,23 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ExperimentGroups> experimentGroups; 
+        private java.util.List<ExperimentGroups> experimentGroups; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * ExperimentGroups.
          */
-        public Builder experimentGroups(java.util.List < ExperimentGroups> experimentGroups) {
+        public Builder experimentGroups(java.util.List<ExperimentGroups> experimentGroups) {
             this.experimentGroups = experimentGroups;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +99,12 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExperimentGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExperimentGroupsResponseBody</p>
+     */
     public static class ExperimentGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;

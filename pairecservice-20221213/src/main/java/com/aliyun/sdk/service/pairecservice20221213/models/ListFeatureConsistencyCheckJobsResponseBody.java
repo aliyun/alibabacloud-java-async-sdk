@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureConsistencyCheckJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFeatureConsistencyCheckJobsResponseBody</p>
  */
 public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobs")
-    private java.util.List < FeatureConsistencyCheckJobs> featureConsistencyCheckJobs;
+    private java.util.List<FeatureConsistencyCheckJobs> featureConsistencyCheckJobs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
     /**
      * @return featureConsistencyCheckJobs
      */
-    public java.util.List < FeatureConsistencyCheckJobs> getFeatureConsistencyCheckJobs() {
+    public java.util.List<FeatureConsistencyCheckJobs> getFeatureConsistencyCheckJobs() {
         return this.featureConsistencyCheckJobs;
     }
 
@@ -56,14 +62,14 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FeatureConsistencyCheckJobs> featureConsistencyCheckJobs; 
+        private java.util.List<FeatureConsistencyCheckJobs> featureConsistencyCheckJobs; 
         private String requestId; 
         private String totalCount; 
 
         /**
          * FeatureConsistencyCheckJobs.
          */
-        public Builder featureConsistencyCheckJobs(java.util.List < FeatureConsistencyCheckJobs> featureConsistencyCheckJobs) {
+        public Builder featureConsistencyCheckJobs(java.util.List<FeatureConsistencyCheckJobs> featureConsistencyCheckJobs) {
             this.featureConsistencyCheckJobs = featureConsistencyCheckJobs;
             return this;
         }
@@ -90,6 +96,12 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFeatureConsistencyCheckJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFeatureConsistencyCheckJobsResponseBody</p>
+     */
     public static class FeatureConsistencyCheckJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -110,7 +122,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         private String gmtStartTime;
 
         @com.aliyun.core.annotation.NameInMap("Logs")
-        private java.util.List < String > logs;
+        private java.util.List<String> logs;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -179,7 +191,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         /**
          * @return logs
          */
-        public java.util.List < String > getLogs() {
+        public java.util.List<String> getLogs() {
             return this.logs;
         }
 
@@ -197,7 +209,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             private String featureConsistencyCheckJobId; 
             private String gmtEndTime; 
             private String gmtStartTime; 
-            private java.util.List < String > logs; 
+            private java.util.List<String> logs; 
             private String status; 
 
             /**
@@ -251,7 +263,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             /**
              * Logs.
              */
-            public Builder logs(java.util.List < String > logs) {
+            public Builder logs(java.util.List<String> logs) {
                 this.logs = logs;
                 return this;
             }

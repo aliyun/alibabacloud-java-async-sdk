@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResourceTableResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResourceTableResponseBody</p>
  */
 public class GetInstanceResourceTableResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -56,14 +62,14 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String requestId; 
         private String tableName; 
 
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -90,6 +96,12 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResourceTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResourceTableResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsDimensionField")
         private Boolean isDimensionField;

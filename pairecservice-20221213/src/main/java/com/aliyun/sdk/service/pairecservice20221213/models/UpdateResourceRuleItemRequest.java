@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceRuleItemRequest} extends {@link RequestModel}
  *
  * <p>UpdateResourceRuleItemRequest</p>
@@ -169,7 +175,7 @@ public class UpdateResourceRuleItemRequest extends Request {
         } 
 
         /**
-         * ResourceRuleId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceRuleId(String resourceRuleId) {
             this.putPathParameter("ResourceRuleId", resourceRuleId);
@@ -178,7 +184,7 @@ public class UpdateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * ResourceRuleItemId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceRuleItemId(String resourceRuleItemId) {
             this.putPathParameter("ResourceRuleItemId", resourceRuleItemId);
@@ -205,7 +211,7 @@ public class UpdateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -232,7 +238,7 @@ public class UpdateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

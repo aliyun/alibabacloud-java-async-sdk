@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLaboratoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLaboratoriesResponseBody</p>
  */
 public class ListLaboratoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Laboratories")
-    private java.util.List < Laboratories> laboratories;
+    private java.util.List<Laboratories> laboratories;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListLaboratoriesResponseBody extends TeaModel {
     /**
      * @return laboratories
      */
-    public java.util.List < Laboratories> getLaboratories() {
+    public java.util.List<Laboratories> getLaboratories() {
         return this.laboratories;
     }
 
@@ -56,20 +62,23 @@ public class ListLaboratoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Laboratories> laboratories; 
+        private java.util.List<Laboratories> laboratories; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Laboratories.
          */
-        public Builder laboratories(java.util.List < Laboratories> laboratories) {
+        public Builder laboratories(java.util.List<Laboratories> laboratories) {
             this.laboratories = laboratories;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C0898E5-9220-5443-B2D9-445FF0688215</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +99,12 @@ public class ListLaboratoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLaboratoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLaboratoriesResponseBody</p>
+     */
     public static class Laboratories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketCount")
         private Integer bucketCount;

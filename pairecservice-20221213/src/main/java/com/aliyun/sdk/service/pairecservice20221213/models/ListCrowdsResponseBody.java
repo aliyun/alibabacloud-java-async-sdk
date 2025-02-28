@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCrowdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCrowdsResponseBody</p>
  */
 public class ListCrowdsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Crowds")
-    private java.util.List < Crowds> crowds;
+    private java.util.List<Crowds> crowds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListCrowdsResponseBody extends TeaModel {
     /**
      * @return crowds
      */
-    public java.util.List < Crowds> getCrowds() {
+    public java.util.List<Crowds> getCrowds() {
         return this.crowds;
     }
 
@@ -56,20 +62,23 @@ public class ListCrowdsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Crowds> crowds; 
+        private java.util.List<Crowds> crowds; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Crowds.
          */
-        public Builder crowds(java.util.List < Crowds> crowds) {
+        public Builder crowds(java.util.List<Crowds> crowds) {
             this.crowds = crowds;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +99,12 @@ public class ListCrowdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCrowdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCrowdsResponseBody</p>
+     */
     public static class Crowds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrowdId")
         private String crowdId;

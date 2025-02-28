@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCalculationJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetCalculationJobResponseBody</p>
@@ -27,7 +33,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
     private String gmtRanTime;
 
     @com.aliyun.core.annotation.NameInMap("JobMessage")
-    private java.util.List < String > jobMessage;
+    private java.util.List<String> jobMessage;
 
     @com.aliyun.core.annotation.NameInMap("JobSource")
     private String jobSource;
@@ -96,7 +102,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
     /**
      * @return jobMessage
      */
-    public java.util.List < String > getJobMessage() {
+    public java.util.List<String> getJobMessage() {
         return this.jobMessage;
     }
 
@@ -127,7 +133,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         private String bizDate; 
         private String config; 
         private String gmtRanTime; 
-        private java.util.List < String > jobMessage; 
+        private java.util.List<String> jobMessage; 
         private String jobSource; 
         private String requestId; 
         private String status; 
@@ -175,7 +181,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         /**
          * JobMessage.
          */
-        public Builder jobMessage(java.util.List < String > jobMessage) {
+        public Builder jobMessage(java.util.List<String> jobMessage) {
             this.jobMessage = jobMessage;
             return this;
         }

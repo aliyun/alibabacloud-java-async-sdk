@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateABMetricRequest} extends {@link RequestModel}
  *
  * <p>UpdateABMetricRequest</p>
@@ -15,6 +21,10 @@ public class UpdateABMetricRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ABMetricId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ABMetricId;
+
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Definition")
@@ -79,6 +89,7 @@ public class UpdateABMetricRequest extends Request {
     private UpdateABMetricRequest(Builder builder) {
         super(builder);
         this.ABMetricId = builder.ABMetricId;
+        this.regionId = builder.regionId;
         this.definition = builder.definition;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
@@ -112,6 +123,13 @@ public class UpdateABMetricRequest extends Request {
      */
     public String getABMetricId() {
         return this.ABMetricId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -207,6 +225,7 @@ public class UpdateABMetricRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateABMetricRequest, Builder> {
         private String ABMetricId; 
+        private String regionId; 
         private String definition; 
         private String description; 
         private String instanceId; 
@@ -228,6 +247,7 @@ public class UpdateABMetricRequest extends Request {
         private Builder(UpdateABMetricRequest request) {
             super(request);
             this.ABMetricId = request.ABMetricId;
+            this.regionId = request.regionId;
             this.definition = request.definition;
             this.description = request.description;
             this.instanceId = request.instanceId;
@@ -244,7 +264,10 @@ public class UpdateABMetricRequest extends Request {
         } 
 
         /**
-         * ABMetricId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ABMetricId(String ABMetricId) {
             this.putPathParameter("ABMetricId", ABMetricId);
@@ -253,7 +276,19 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Definition.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sum(click_cnt)</p>
          */
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
@@ -262,7 +297,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -271,7 +306,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -289,7 +327,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -307,7 +348,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Realtime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder realtime(Boolean realtime) {
             this.putBodyParameter("Realtime", realtime);
@@ -334,7 +378,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -352,7 +399,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * TableMetaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.putBodyParameter("TableMetaId", tableMetaId);
@@ -361,7 +411,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResourceRuleItemRequest} extends {@link RequestModel}
  *
  * <p>DeleteResourceRuleItemRequest</p>
@@ -98,7 +104,7 @@ public class DeleteResourceRuleItemRequest extends Request {
         } 
 
         /**
-         * ResourceRuleId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceRuleId(String resourceRuleId) {
             this.putPathParameter("ResourceRuleId", resourceRuleId);
@@ -107,7 +113,7 @@ public class DeleteResourceRuleItemRequest extends Request {
         }
 
         /**
-         * ResourceRuleItemId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceRuleItemId(String resourceRuleItemId) {
             this.putPathParameter("ResourceRuleItemId", resourceRuleItemId);
@@ -125,7 +131,7 @@ public class DeleteResourceRuleItemRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

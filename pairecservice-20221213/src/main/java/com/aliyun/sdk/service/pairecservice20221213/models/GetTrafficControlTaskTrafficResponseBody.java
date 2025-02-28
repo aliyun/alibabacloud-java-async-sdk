@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrafficControlTaskTrafficResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrafficControlTaskTrafficResponseBody</p>
@@ -70,9 +76,15 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTrafficControlTaskTrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrafficControlTaskTrafficResponseBody</p>
+     */
     public static class TargetTraffics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < java.util.Map<String, ?>> data;
+        private java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data;
 
         @com.aliyun.core.annotation.NameInMap("TrafficContorlTargetId")
         private String trafficContorlTargetId;
@@ -93,7 +105,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < java.util.Map<String, ?>> getData() {
+        public java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> getData() {
             return this.data;
         }
 
@@ -105,13 +117,13 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> data; 
+            private java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data; 
             private String trafficContorlTargetId; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < java.util.Map<String, ?>> data) {
+            public Builder data(java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data) {
                 this.data = data;
                 return this;
             }
@@ -131,12 +143,18 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrafficControlTaskTrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrafficControlTaskTrafficResponseBody</p>
+     */
     public static class TrafficControlTaskTrafficInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetTraffics")
-        private java.util.List < TargetTraffics> targetTraffics;
+        private java.util.List<TargetTraffics> targetTraffics;
 
         @com.aliyun.core.annotation.NameInMap("TaskTraffics")
-        private java.util.Map < String, ? > taskTraffics;
+        private java.util.Map<String, TrafficControlTaskTrafficInfoTaskTrafficsValue> taskTraffics;
 
         private TrafficControlTaskTrafficInfo(Builder builder) {
             this.targetTraffics = builder.targetTraffics;
@@ -154,25 +172,25 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         /**
          * @return targetTraffics
          */
-        public java.util.List < TargetTraffics> getTargetTraffics() {
+        public java.util.List<TargetTraffics> getTargetTraffics() {
             return this.targetTraffics;
         }
 
         /**
          * @return taskTraffics
          */
-        public java.util.Map < String, ? > getTaskTraffics() {
+        public java.util.Map<String, TrafficControlTaskTrafficInfoTaskTrafficsValue> getTaskTraffics() {
             return this.taskTraffics;
         }
 
         public static final class Builder {
-            private java.util.List < TargetTraffics> targetTraffics; 
-            private java.util.Map < String, ? > taskTraffics; 
+            private java.util.List<TargetTraffics> targetTraffics; 
+            private java.util.Map<String, TrafficControlTaskTrafficInfoTaskTrafficsValue> taskTraffics; 
 
             /**
              * TargetTraffics.
              */
-            public Builder targetTraffics(java.util.List < TargetTraffics> targetTraffics) {
+            public Builder targetTraffics(java.util.List<TargetTraffics> targetTraffics) {
                 this.targetTraffics = targetTraffics;
                 return this;
             }
@@ -180,7 +198,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             /**
              * TaskTraffics.
              */
-            public Builder taskTraffics(java.util.Map < String, ? > taskTraffics) {
+            public Builder taskTraffics(java.util.Map<String, TrafficControlTaskTrafficInfoTaskTrafficsValue> taskTraffics) {
                 this.taskTraffics = taskTraffics;
                 return this;
             }

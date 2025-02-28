@@ -1,21 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DebugResourceRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DebugResourceRuleResponseBody</p>
  */
 public class DebugResourceRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CurrentValues")
-    private java.util.Map < String, ? > currentValues;
+    private java.util.Map<String, ?> currentValues;
 
     @com.aliyun.core.annotation.NameInMap("OutputValues")
-    private java.util.Map < String, ? > outputValues;
+    private java.util.Map<String, ?> outputValues;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,14 +43,14 @@ public class DebugResourceRuleResponseBody extends TeaModel {
     /**
      * @return currentValues
      */
-    public java.util.Map < String, ? > getCurrentValues() {
+    public java.util.Map<String, ?> getCurrentValues() {
         return this.currentValues;
     }
 
     /**
      * @return outputValues
      */
-    public java.util.Map < String, ? > getOutputValues() {
+    public java.util.Map<String, ?> getOutputValues() {
         return this.outputValues;
     }
 
@@ -56,14 +62,14 @@ public class DebugResourceRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > currentValues; 
-        private java.util.Map < String, ? > outputValues; 
+        private java.util.Map<String, ?> currentValues; 
+        private java.util.Map<String, ?> outputValues; 
         private String requestId; 
 
         /**
          * CurrentValues.
          */
-        public Builder currentValues(java.util.Map < String, ? > currentValues) {
+        public Builder currentValues(java.util.Map<String, ?> currentValues) {
             this.currentValues = currentValues;
             return this;
         }
@@ -71,7 +77,7 @@ public class DebugResourceRuleResponseBody extends TeaModel {
         /**
          * OutputValues.
          */
-        public Builder outputValues(java.util.Map < String, ? > outputValues) {
+        public Builder outputValues(java.util.Map<String, ?> outputValues) {
             this.outputValues = outputValues;
             return this;
         }

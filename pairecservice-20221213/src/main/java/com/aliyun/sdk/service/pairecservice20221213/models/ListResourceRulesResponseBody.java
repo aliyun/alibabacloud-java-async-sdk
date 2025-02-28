@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceRulesResponseBody</p>
@@ -15,7 +21,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceRules")
-    private java.util.List < ResourceRules> resourceRules;
+    private java.util.List<ResourceRules> resourceRules;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -44,7 +50,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
     /**
      * @return resourceRules
      */
-    public java.util.List < ResourceRules> getResourceRules() {
+    public java.util.List<ResourceRules> getResourceRules() {
         return this.resourceRules;
     }
 
@@ -57,7 +63,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceRules> resourceRules; 
+        private java.util.List<ResourceRules> resourceRules; 
         private Long totalCount; 
 
         /**
@@ -71,7 +77,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
         /**
          * ResourceRules.
          */
-        public Builder resourceRules(java.util.List < ResourceRules> resourceRules) {
+        public Builder resourceRules(java.util.List<ResourceRules> resourceRules) {
             this.resourceRules = resourceRules;
             return this;
         }
@@ -90,6 +96,12 @@ public class ListResourceRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceRulesResponseBody</p>
+     */
     public static class RuleItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -211,6 +223,12 @@ public class ListResourceRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceRulesResponseBody</p>
+     */
     public static class ResourceRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -234,7 +252,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
         private String ruleComputingDefinition;
 
         @com.aliyun.core.annotation.NameInMap("RuleItems")
-        private java.util.List < RuleItems> ruleItems;
+        private java.util.List<RuleItems> ruleItems;
 
         private ResourceRules(Builder builder) {
             this.description = builder.description;
@@ -307,7 +325,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
         /**
          * @return ruleItems
          */
-        public java.util.List < RuleItems> getRuleItems() {
+        public java.util.List<RuleItems> getRuleItems() {
             return this.ruleItems;
         }
 
@@ -319,7 +337,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
             private String name; 
             private String resourceRuleId; 
             private String ruleComputingDefinition; 
-            private java.util.List < RuleItems> ruleItems; 
+            private java.util.List<RuleItems> ruleItems; 
 
             /**
              * Description.
@@ -380,7 +398,7 @@ public class ListResourceRulesResponseBody extends TeaModel {
             /**
              * RuleItems.
              */
-            public Builder ruleItems(java.util.List < RuleItems> ruleItems) {
+            public Builder ruleItems(java.util.List<RuleItems> ruleItems) {
                 this.ruleItems = ruleItems;
                 return this;
             }

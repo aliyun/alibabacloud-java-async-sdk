@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScenesResponseBody} extends {@link TeaModel}
  *
  * <p>ListScenesResponseBody</p>
@@ -15,7 +21,7 @@ public class ListScenesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Scenes")
-    private java.util.List < Scenes> scenes;
+    private java.util.List<Scenes> scenes;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -44,7 +50,7 @@ public class ListScenesResponseBody extends TeaModel {
     /**
      * @return scenes
      */
-    public java.util.List < Scenes> getScenes() {
+    public java.util.List<Scenes> getScenes() {
         return this.scenes;
     }
 
@@ -57,11 +63,14 @@ public class ListScenesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Scenes> scenes; 
+        private java.util.List<Scenes> scenes; 
         private Long totalCount; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8987BF7-6028-5B17-80E0-251B7BD67BBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,7 +80,7 @@ public class ListScenesResponseBody extends TeaModel {
         /**
          * Scenes.
          */
-        public Builder scenes(java.util.List < Scenes> scenes) {
+        public Builder scenes(java.util.List<Scenes> scenes) {
             this.scenes = scenes;
             return this;
         }
@@ -90,6 +99,12 @@ public class ListScenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScenesResponseBody</p>
+     */
     public static class Flows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowCode")
         private String flowCode;
@@ -151,12 +166,18 @@ public class ListScenesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScenesResponseBody</p>
+     */
     public static class Scenes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Flows")
-        private java.util.List < Flows> flows;
+        private java.util.List<Flows> flows;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -189,7 +210,7 @@ public class ListScenesResponseBody extends TeaModel {
         /**
          * @return flows
          */
-        public java.util.List < Flows> getFlows() {
+        public java.util.List<Flows> getFlows() {
             return this.flows;
         }
 
@@ -209,7 +230,7 @@ public class ListScenesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < Flows> flows; 
+            private java.util.List<Flows> flows; 
             private String name; 
             private String sceneId; 
 
@@ -224,7 +245,7 @@ public class ListScenesResponseBody extends TeaModel {
             /**
              * Flows.
              */
-            public Builder flows(java.util.List < Flows> flows) {
+            public Builder flows(java.util.List<Flows> flows) {
                 this.flows = flows;
                 return this;
             }

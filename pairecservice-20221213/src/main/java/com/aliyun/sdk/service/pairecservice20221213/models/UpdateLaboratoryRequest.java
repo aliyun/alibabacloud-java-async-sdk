@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLaboratoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateLaboratoryRequest</p>
@@ -15,6 +21,10 @@ public class UpdateLaboratoryRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("LaboratoryId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String laboratoryId;
+
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BucketCount")
@@ -67,6 +77,7 @@ public class UpdateLaboratoryRequest extends Request {
     private UpdateLaboratoryRequest(Builder builder) {
         super(builder);
         this.laboratoryId = builder.laboratoryId;
+        this.regionId = builder.regionId;
         this.bucketCount = builder.bucketCount;
         this.bucketType = builder.bucketType;
         this.buckets = builder.buckets;
@@ -98,6 +109,13 @@ public class UpdateLaboratoryRequest extends Request {
      */
     public String getLaboratoryId() {
         return this.laboratoryId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -179,6 +197,7 @@ public class UpdateLaboratoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateLaboratoryRequest, Builder> {
         private String laboratoryId; 
+        private String regionId; 
         private Integer bucketCount; 
         private String bucketType; 
         private String buckets; 
@@ -198,6 +217,7 @@ public class UpdateLaboratoryRequest extends Request {
         private Builder(UpdateLaboratoryRequest request) {
             super(request);
             this.laboratoryId = request.laboratoryId;
+            this.regionId = request.regionId;
             this.bucketCount = request.bucketCount;
             this.bucketType = request.bucketType;
             this.buckets = request.buckets;
@@ -212,11 +232,23 @@ public class UpdateLaboratoryRequest extends Request {
         } 
 
         /**
-         * LaboratoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder laboratoryId(String laboratoryId) {
             this.putPathParameter("LaboratoryId", laboratoryId);
             this.laboratoryId = laboratoryId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -230,7 +262,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * BucketType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Filter</p>
          */
         public Builder bucketType(String bucketType) {
             this.putBodyParameter("BucketType", bucketType);
@@ -293,7 +328,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -302,7 +340,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>laboratory1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -311,7 +352,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Base</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

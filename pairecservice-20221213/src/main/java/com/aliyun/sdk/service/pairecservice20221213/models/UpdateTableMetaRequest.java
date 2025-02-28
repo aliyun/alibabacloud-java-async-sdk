@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableMetaRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableMetaRequest</p>
@@ -16,6 +22,10 @@ public class UpdateTableMetaRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableMetaId;
 
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -23,7 +33,7 @@ public class UpdateTableMetaRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Fields")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -53,6 +63,7 @@ public class UpdateTableMetaRequest extends Request {
     private UpdateTableMetaRequest(Builder builder) {
         super(builder);
         this.tableMetaId = builder.tableMetaId;
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.fields = builder.fields;
         this.instanceId = builder.instanceId;
@@ -83,6 +94,13 @@ public class UpdateTableMetaRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -92,7 +110,7 @@ public class UpdateTableMetaRequest extends Request {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -133,8 +151,9 @@ public class UpdateTableMetaRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTableMetaRequest, Builder> {
         private String tableMetaId; 
+        private String regionId; 
         private String description; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String instanceId; 
         private String module; 
         private String name; 
@@ -148,6 +167,7 @@ public class UpdateTableMetaRequest extends Request {
         private Builder(UpdateTableMetaRequest request) {
             super(request);
             this.tableMetaId = request.tableMetaId;
+            this.regionId = request.regionId;
             this.description = request.description;
             this.fields = request.fields;
             this.instanceId = request.instanceId;
@@ -158,11 +178,23 @@ public class UpdateTableMetaRequest extends Request {
         } 
 
         /**
-         * TableMetaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.putPathParameter("TableMetaId", tableMetaId);
             this.tableMetaId = tableMetaId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -176,16 +208,19 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * Fields.
+         * <p>This parameter is required.</p>
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("Fields", fields);
             this.fields = fields;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -194,7 +229,10 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * Module.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABTest</p>
          */
         public Builder module(String module) {
             this.putBodyParameter("Module", module);
@@ -203,7 +241,10 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -212,7 +253,10 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-2s416t***</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -221,7 +265,10 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_mysql</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
@@ -236,6 +283,12 @@ public class UpdateTableMetaRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTableMetaRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTableMetaRequest</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
@@ -336,7 +389,10 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * IsDimensionField.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDimensionField(Boolean isDimensionField) {
                 this.isDimensionField = isDimensionField;
@@ -344,7 +400,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * IsPartitionField.
+             * <p>This parameter is required.</p>
              */
             public Builder isPartitionField(String isPartitionField) {
                 this.isPartitionField = isPartitionField;
@@ -352,7 +408,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * Meaning.
+             * <p>This parameter is required.</p>
              */
             public Builder meaning(String meaning) {
                 this.meaning = meaning;
@@ -360,7 +416,10 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -368,7 +427,10 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder type(String type) {
                 this.type = type;

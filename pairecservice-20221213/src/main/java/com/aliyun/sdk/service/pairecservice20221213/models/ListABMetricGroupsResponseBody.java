@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListABMetricGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListABMetricGroupsResponseBody</p>
  */
 public class ListABMetricGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ABMetricGroups")
-    private java.util.List < ABMetricGroups> ABMetricGroups;
+    private java.util.List<ABMetricGroups> ABMetricGroups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
     /**
      * @return ABMetricGroups
      */
-    public java.util.List < ABMetricGroups> getABMetricGroups() {
+    public java.util.List<ABMetricGroups> getABMetricGroups() {
         return this.ABMetricGroups;
     }
 
@@ -56,14 +62,14 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ABMetricGroups> ABMetricGroups; 
+        private java.util.List<ABMetricGroups> ABMetricGroups; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * ABMetricGroups.
          */
-        public Builder ABMetricGroups(java.util.List < ABMetricGroups> ABMetricGroups) {
+        public Builder ABMetricGroups(java.util.List<ABMetricGroups> ABMetricGroups) {
             this.ABMetricGroups = ABMetricGroups;
             return this;
         }
@@ -90,6 +96,12 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListABMetricGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListABMetricGroupsResponseBody</p>
+     */
     public static class ABMetricGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ABMetricGroupId")
         private String ABMetricGroupId;

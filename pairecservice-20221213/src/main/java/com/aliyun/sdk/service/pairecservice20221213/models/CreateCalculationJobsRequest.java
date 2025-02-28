@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCalculationJobsRequest} extends {@link RequestModel}
  *
  * <p>CreateCalculationJobsRequest</p>
@@ -122,7 +128,10 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
-         * ABMetricIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2,3,4</p>
          */
         public Builder ABMetricIds(String ABMetricIds) {
             this.putBodyParameter("ABMetricIds", ABMetricIds);
@@ -131,7 +140,10 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -140,7 +152,10 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -149,7 +164,10 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableMetaResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableMetaResponseBody</p>
@@ -21,7 +27,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -106,7 +112,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -191,7 +197,7 @@ public class GetTableMetaResponseBody extends TeaModel {
         private Boolean canDelete; 
         private String config; 
         private String description; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String gmtCreateTime; 
         private String gmtImportedTime; 
         private String gmtModifiedTime; 
@@ -231,7 +237,7 @@ public class GetTableMetaResponseBody extends TeaModel {
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -330,6 +336,12 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTableMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableMetaResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsDimensionField")
         private Boolean isDimensionField;

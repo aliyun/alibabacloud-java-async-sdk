@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLayerResponseBody} extends {@link TeaModel}
  *
  * <p>GetLayerResponseBody</p>
@@ -141,7 +147,10 @@ public class GetLayerResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE97D06A-2AA0-5AD9-B6CF-8A267924D691</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

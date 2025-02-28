@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateABMetricGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateABMetricGroupRequest</p>
@@ -152,7 +158,10 @@ public class CreateABMetricGroupRequest extends Request {
         }
 
         /**
-         * ABMetricIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder ABMetricIds(String ABMetricIds) {
             this.putBodyParameter("ABMetricIds", ABMetricIds);
@@ -161,7 +170,7 @@ public class CreateABMetricGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -170,7 +179,10 @@ public class CreateABMetricGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -179,7 +191,10 @@ public class CreateABMetricGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>visits</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -188,7 +203,10 @@ public class CreateABMetricGroupRequest extends Request {
         }
 
         /**
-         * Realtime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder realtime(Boolean realtime) {
             this.putBodyParameter("Realtime", realtime);
@@ -197,7 +215,10 @@ public class CreateABMetricGroupRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);

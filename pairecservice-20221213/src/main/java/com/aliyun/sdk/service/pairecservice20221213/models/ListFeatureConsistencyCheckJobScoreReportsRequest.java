@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureConsistencyCheckJobScoreReportsRequest} extends {@link RequestModel}
  *
  * <p>ListFeatureConsistencyCheckJobScoreReportsRequest</p>
@@ -22,7 +28,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludeRequestIds")
-    private java.util.List < String > excludeRequestIds;
+    private java.util.List<String> excludeRequestIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -66,7 +72,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
     /**
      * @return excludeRequestIds
      */
-    public java.util.List < String > getExcludeRequestIds() {
+    public java.util.List<String> getExcludeRequestIds() {
         return this.excludeRequestIds;
     }
 
@@ -80,7 +86,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
     public static final class Builder extends Request.Builder<ListFeatureConsistencyCheckJobScoreReportsRequest, Builder> {
         private String featureConsistencyCheckJobId; 
         private String regionId; 
-        private java.util.List < String > excludeRequestIds; 
+        private java.util.List<String> excludeRequestIds; 
         private String instanceId; 
 
         private Builder() {
@@ -96,7 +102,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
         } 
 
         /**
-         * FeatureConsistencyCheckJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder featureConsistencyCheckJobId(String featureConsistencyCheckJobId) {
             this.putPathParameter("FeatureConsistencyCheckJobId", featureConsistencyCheckJobId);
@@ -116,7 +125,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends Request {
         /**
          * ExcludeRequestIds.
          */
-        public Builder excludeRequestIds(java.util.List < String > excludeRequestIds) {
+        public Builder excludeRequestIds(java.util.List<String> excludeRequestIds) {
             String excludeRequestIdsShrink = shrink(excludeRequestIds, "ExcludeRequestIds", "json");
             this.putQueryParameter("ExcludeRequestIds", excludeRequestIdsShrink);
             this.excludeRequestIds = excludeRequestIds;

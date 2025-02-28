@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReportABMetricGroupRequest} extends {@link RequestModel}
  *
  * <p>ReportABMetricGroupRequest</p>
@@ -15,6 +21,10 @@ public class ReportABMetricGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ABMetricGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ABMetricGroupId;
+
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BaseExperimentId")
@@ -63,6 +73,7 @@ public class ReportABMetricGroupRequest extends Request {
     private ReportABMetricGroupRequest(Builder builder) {
         super(builder);
         this.ABMetricGroupId = builder.ABMetricGroupId;
+        this.regionId = builder.regionId;
         this.baseExperimentId = builder.baseExperimentId;
         this.dimensionFields = builder.dimensionFields;
         this.endDate = builder.endDate;
@@ -93,6 +104,13 @@ public class ReportABMetricGroupRequest extends Request {
      */
     public String getABMetricGroupId() {
         return this.ABMetricGroupId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -167,6 +185,7 @@ public class ReportABMetricGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReportABMetricGroupRequest, Builder> {
         private String ABMetricGroupId; 
+        private String regionId; 
         private String baseExperimentId; 
         private String dimensionFields; 
         private String endDate; 
@@ -185,6 +204,7 @@ public class ReportABMetricGroupRequest extends Request {
         private Builder(ReportABMetricGroupRequest request) {
             super(request);
             this.ABMetricGroupId = request.ABMetricGroupId;
+            this.regionId = request.regionId;
             this.baseExperimentId = request.baseExperimentId;
             this.dimensionFields = request.dimensionFields;
             this.endDate = request.endDate;
@@ -198,7 +218,10 @@ public class ReportABMetricGroupRequest extends Request {
         } 
 
         /**
-         * ABMetricGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ABMetricGroupId(String ABMetricGroupId) {
             this.putPathParameter("ABMetricGroupId", ABMetricGroupId);
@@ -207,7 +230,19 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * BaseExperimentId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder baseExperimentId(String baseExperimentId) {
             this.putBodyParameter("BaseExperimentId", baseExperimentId);
@@ -243,7 +278,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * ExperimentIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3,4,5</p>
          */
         public Builder experimentIds(String experimentIds) {
             this.putBodyParameter("ExperimentIds", experimentIds);
@@ -252,7 +290,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -261,7 +302,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * ReportType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Offline</p>
          */
         public Builder reportType(String reportType) {
             this.putBodyParameter("ReportType", reportType);

@@ -1,21 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReportABMetricGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ReportABMetricGroupResponseBody</p>
  */
 public class ReportABMetricGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExperimentReport")
-    private java.util.Map < String, ExperimentReportValue > experimentReport;
+    private java.util.Map<String, ExperimentReportValue> experimentReport;
 
     @com.aliyun.core.annotation.NameInMap("GroupDimension")
-    private java.util.List < String > groupDimension;
+    private java.util.List<String> groupDimension;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,14 +43,14 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
     /**
      * @return experimentReport
      */
-    public java.util.Map < String, ExperimentReportValue > getExperimentReport() {
+    public java.util.Map<String, ExperimentReportValue> getExperimentReport() {
         return this.experimentReport;
     }
 
     /**
      * @return groupDimension
      */
-    public java.util.List < String > getGroupDimension() {
+    public java.util.List<String> getGroupDimension() {
         return this.groupDimension;
     }
 
@@ -56,14 +62,14 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ExperimentReportValue > experimentReport; 
-        private java.util.List < String > groupDimension; 
+        private java.util.Map<String, ExperimentReportValue> experimentReport; 
+        private java.util.List<String> groupDimension; 
         private String requestId; 
 
         /**
          * ExperimentReport.
          */
-        public Builder experimentReport(java.util.Map < String, ExperimentReportValue > experimentReport) {
+        public Builder experimentReport(java.util.Map<String, ExperimentReportValue> experimentReport) {
             this.experimentReport = experimentReport;
             return this;
         }
@@ -71,7 +77,7 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         /**
          * GroupDimension.
          */
-        public Builder groupDimension(java.util.List < String > groupDimension) {
+        public Builder groupDimension(java.util.List<String> groupDimension) {
             this.groupDimension = groupDimension;
             return this;
         }

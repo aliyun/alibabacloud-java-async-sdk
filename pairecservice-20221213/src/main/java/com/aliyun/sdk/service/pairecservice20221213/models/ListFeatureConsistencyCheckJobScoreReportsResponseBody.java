@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureConsistencyCheckJobScoreReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFeatureConsistencyCheckJobScoreReportsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
     private String ossPath;
 
     @com.aliyun.core.annotation.NameInMap("ReportsOfScoreDiff")
-    private java.util.List < ReportsOfScoreDiff> reportsOfScoreDiff;
+    private java.util.List<ReportsOfScoreDiff> reportsOfScoreDiff;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -55,7 +61,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
     /**
      * @return reportsOfScoreDiff
      */
-    public java.util.List < ReportsOfScoreDiff> getReportsOfScoreDiff() {
+    public java.util.List<ReportsOfScoreDiff> getReportsOfScoreDiff() {
         return this.reportsOfScoreDiff;
     }
 
@@ -69,7 +75,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
     public static final class Builder {
         private String dataPath; 
         private String ossPath; 
-        private java.util.List < ReportsOfScoreDiff> reportsOfScoreDiff; 
+        private java.util.List<ReportsOfScoreDiff> reportsOfScoreDiff; 
         private String requestId; 
 
         /**
@@ -91,7 +97,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         /**
          * ReportsOfScoreDiff.
          */
-        public Builder reportsOfScoreDiff(java.util.List < ReportsOfScoreDiff> reportsOfScoreDiff) {
+        public Builder reportsOfScoreDiff(java.util.List<ReportsOfScoreDiff> reportsOfScoreDiff) {
             this.reportsOfScoreDiff = reportsOfScoreDiff;
             return this;
         }
@@ -110,6 +116,12 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link ListFeatureConsistencyCheckJobScoreReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFeatureConsistencyCheckJobScoreReportsResponseBody</p>
+     */
     public static class ReportsOfScoreDiff extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogItemId")
         private String logItemId;

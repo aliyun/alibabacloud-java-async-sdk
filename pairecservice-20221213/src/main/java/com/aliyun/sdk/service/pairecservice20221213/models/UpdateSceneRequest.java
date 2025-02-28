@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSceneRequest} extends {@link RequestModel}
  *
  * <p>UpdateSceneRequest</p>
@@ -15,13 +21,17 @@ public class UpdateSceneRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Flows")
-    private java.util.List < Flows> flows;
+    private java.util.List<Flows> flows;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -34,6 +44,7 @@ public class UpdateSceneRequest extends Request {
     private UpdateSceneRequest(Builder builder) {
         super(builder);
         this.sceneId = builder.sceneId;
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.flows = builder.flows;
         this.instanceId = builder.instanceId;
@@ -61,6 +72,13 @@ public class UpdateSceneRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -70,7 +88,7 @@ public class UpdateSceneRequest extends Request {
     /**
      * @return flows
      */
-    public java.util.List < Flows> getFlows() {
+    public java.util.List<Flows> getFlows() {
         return this.flows;
     }
 
@@ -90,8 +108,9 @@ public class UpdateSceneRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateSceneRequest, Builder> {
         private String sceneId; 
+        private String regionId; 
         private String description; 
-        private java.util.List < Flows> flows; 
+        private java.util.List<Flows> flows; 
         private String instanceId; 
         private String name; 
 
@@ -102,6 +121,7 @@ public class UpdateSceneRequest extends Request {
         private Builder(UpdateSceneRequest request) {
             super(request);
             this.sceneId = request.sceneId;
+            this.regionId = request.regionId;
             this.description = request.description;
             this.flows = request.flows;
             this.instanceId = request.instanceId;
@@ -118,6 +138,15 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * Description.
          */
         public Builder description(String description) {
@@ -129,7 +158,7 @@ public class UpdateSceneRequest extends Request {
         /**
          * Flows.
          */
-        public Builder flows(java.util.List < Flows> flows) {
+        public Builder flows(java.util.List<Flows> flows) {
             this.putBodyParameter("Flows", flows);
             this.flows = flows;
             return this;
@@ -160,6 +189,12 @@ public class UpdateSceneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSceneRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSceneRequest</p>
+     */
     public static class Flows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowCode")
         private String flowCode;

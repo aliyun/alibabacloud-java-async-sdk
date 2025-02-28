@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEngineConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateEngineConfigRequest</p>
@@ -18,6 +24,10 @@ public class CreateEngineConfigRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConfigValue")
     private String configValue;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Environment")
@@ -35,6 +45,7 @@ public class CreateEngineConfigRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.configValue = builder.configValue;
+        this.description = builder.description;
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
@@ -68,6 +79,13 @@ public class CreateEngineConfigRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return environment
      */
     public String getEnvironment() {
@@ -91,6 +109,7 @@ public class CreateEngineConfigRequest extends Request {
     public static final class Builder extends Request.Builder<CreateEngineConfigRequest, Builder> {
         private String regionId; 
         private String configValue; 
+        private String description; 
         private String environment; 
         private String instanceId; 
         private String name; 
@@ -103,6 +122,7 @@ public class CreateEngineConfigRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.configValue = request.configValue;
+            this.description = request.description;
             this.environment = request.environment;
             this.instanceId = request.instanceId;
             this.name = request.name;
@@ -123,6 +143,15 @@ public class CreateEngineConfigRequest extends Request {
         public Builder configValue(String configValue) {
             this.putBodyParameter("ConfigValue", configValue);
             this.configValue = configValue;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("Description", description);
+            this.description = description;
             return this;
         }
 

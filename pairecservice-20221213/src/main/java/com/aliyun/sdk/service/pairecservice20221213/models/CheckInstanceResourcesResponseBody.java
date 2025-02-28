@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckInstanceResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>CheckInstanceResourcesResponseBody</p>
@@ -15,7 +21,7 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     private CheckInstanceResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,13 +46,13 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         /**
          * RequestId.
@@ -59,7 +65,7 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
         /**
          * Resources.
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -70,6 +76,12 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckInstanceResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckInstanceResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;

@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExperimentRequest} extends {@link RequestModel}
  *
  * <p>CreateExperimentRequest</p>
  */
 public class CreateExperimentRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
@@ -54,6 +64,7 @@ public class CreateExperimentRequest extends Request {
 
     private CreateExperimentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.config = builder.config;
         this.debugCrowdId = builder.debugCrowdId;
         this.debugUsers = builder.debugUsers;
@@ -76,6 +87,13 @@ public class CreateExperimentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -142,6 +160,7 @@ public class CreateExperimentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateExperimentRequest, Builder> {
+        private String regionId; 
         private String config; 
         private String debugCrowdId; 
         private String debugUsers; 
@@ -158,6 +177,7 @@ public class CreateExperimentRequest extends Request {
 
         private Builder(CreateExperimentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.config = request.config;
             this.debugCrowdId = request.debugCrowdId;
             this.debugUsers = request.debugUsers;
@@ -168,6 +188,15 @@ public class CreateExperimentRequest extends Request {
             this.name = request.name;
             this.type = request.type;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Config.
@@ -197,7 +226,10 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -206,7 +238,10 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * ExperimentGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentGroupId(String experimentGroupId) {
             this.putBodyParameter("ExperimentGroupId", experimentGroupId);
@@ -224,7 +259,10 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -233,7 +271,10 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experiment_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -242,7 +283,10 @@ public class CreateExperimentRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

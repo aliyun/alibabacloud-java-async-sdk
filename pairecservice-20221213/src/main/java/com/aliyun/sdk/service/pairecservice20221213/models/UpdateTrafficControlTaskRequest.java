@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrafficControlTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateTrafficControlTaskRequest</p>
@@ -72,8 +78,20 @@ public class UpdateTrafficControlTaskRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreExperimentIds")
+    private String preExperimentIds;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProdExperimentIds")
+    private String prodExperimentIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    private String serviceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -93,7 +111,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TrafficControlTargets")
-    private java.util.List < TrafficControlTargets> trafficControlTargets;
+    private java.util.List<TrafficControlTargets> trafficControlTargets;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserConditionArray")
@@ -128,7 +146,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         this.itemConditionType = builder.itemConditionType;
         this.itemTableMetaId = builder.itemTableMetaId;
         this.name = builder.name;
+        this.preExperimentIds = builder.preExperimentIds;
+        this.prodExperimentIds = builder.prodExperimentIds;
         this.sceneId = builder.sceneId;
+        this.serviceId = builder.serviceId;
         this.startTime = builder.startTime;
         this.statisBaeaviorConditionArray = builder.statisBaeaviorConditionArray;
         this.statisBehaviorConditionExpress = builder.statisBehaviorConditionExpress;
@@ -259,10 +280,31 @@ public class UpdateTrafficControlTaskRequest extends Request {
     }
 
     /**
+     * @return preExperimentIds
+     */
+    public String getPreExperimentIds() {
+        return this.preExperimentIds;
+    }
+
+    /**
+     * @return prodExperimentIds
+     */
+    public String getProdExperimentIds() {
+        return this.prodExperimentIds;
+    }
+
+    /**
      * @return sceneId
      */
     public String getSceneId() {
         return this.sceneId;
+    }
+
+    /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     /**
@@ -296,7 +338,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
     /**
      * @return trafficControlTargets
      */
-    public java.util.List < TrafficControlTargets> getTrafficControlTargets() {
+    public java.util.List<TrafficControlTargets> getTrafficControlTargets() {
         return this.trafficControlTargets;
     }
 
@@ -344,12 +386,15 @@ public class UpdateTrafficControlTaskRequest extends Request {
         private String itemConditionType; 
         private String itemTableMetaId; 
         private String name; 
+        private String preExperimentIds; 
+        private String prodExperimentIds; 
         private String sceneId; 
+        private String serviceId; 
         private String startTime; 
         private String statisBaeaviorConditionArray; 
         private String statisBehaviorConditionExpress; 
         private String statisBehaviorConditionType; 
-        private java.util.List < TrafficControlTargets> trafficControlTargets; 
+        private java.util.List<TrafficControlTargets> trafficControlTargets; 
         private String userConditionArray; 
         private String userConditionExpress; 
         private String userConditionType; 
@@ -376,7 +421,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             this.itemConditionType = request.itemConditionType;
             this.itemTableMetaId = request.itemTableMetaId;
             this.name = request.name;
+            this.preExperimentIds = request.preExperimentIds;
+            this.prodExperimentIds = request.prodExperimentIds;
             this.sceneId = request.sceneId;
+            this.serviceId = request.serviceId;
             this.startTime = request.startTime;
             this.statisBaeaviorConditionArray = request.statisBaeaviorConditionArray;
             this.statisBehaviorConditionExpress = request.statisBehaviorConditionExpress;
@@ -524,11 +572,38 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
+         * PreExperimentIds.
+         */
+        public Builder preExperimentIds(String preExperimentIds) {
+            this.putBodyParameter("PreExperimentIds", preExperimentIds);
+            this.preExperimentIds = preExperimentIds;
+            return this;
+        }
+
+        /**
+         * ProdExperimentIds.
+         */
+        public Builder prodExperimentIds(String prodExperimentIds) {
+            this.putBodyParameter("ProdExperimentIds", prodExperimentIds);
+            this.prodExperimentIds = prodExperimentIds;
+            return this;
+        }
+
+        /**
          * SceneId.
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
             this.sceneId = sceneId;
+            return this;
+        }
+
+        /**
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.putBodyParameter("ServiceId", serviceId);
+            this.serviceId = serviceId;
             return this;
         }
 
@@ -571,7 +646,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         /**
          * TrafficControlTargets.
          */
-        public Builder trafficControlTargets(java.util.List < TrafficControlTargets> trafficControlTargets) {
+        public Builder trafficControlTargets(java.util.List<TrafficControlTargets> trafficControlTargets) {
             this.putBodyParameter("TrafficControlTargets", trafficControlTargets);
             this.trafficControlTargets = trafficControlTargets;
             return this;
@@ -620,6 +695,12 @@ public class UpdateTrafficControlTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTrafficControlTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTrafficControlTaskRequest</p>
+     */
     public static class TrafficControlTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubCrowdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSubCrowdsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SubCrowds")
-    private java.util.List < SubCrowds> subCrowds;
+    private java.util.List<SubCrowds> subCrowds;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -44,7 +50,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
     /**
      * @return subCrowds
      */
-    public java.util.List < SubCrowds> getSubCrowds() {
+    public java.util.List<SubCrowds> getSubCrowds() {
         return this.subCrowds;
     }
 
@@ -57,11 +63,14 @@ public class ListSubCrowdsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SubCrowds> subCrowds; 
+        private java.util.List<SubCrowds> subCrowds; 
         private Long totalCount; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5AEB79E-FAA4-5DCE-8CD7-1CAF549ECC3E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,7 +80,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         /**
          * SubCrowds.
          */
-        public Builder subCrowds(java.util.List < SubCrowds> subCrowds) {
+        public Builder subCrowds(java.util.List<SubCrowds> subCrowds) {
             this.subCrowds = subCrowds;
             return this;
         }
@@ -90,6 +99,12 @@ public class ListSubCrowdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSubCrowdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSubCrowdsResponseBody</p>
+     */
     public static class SubCrowds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;

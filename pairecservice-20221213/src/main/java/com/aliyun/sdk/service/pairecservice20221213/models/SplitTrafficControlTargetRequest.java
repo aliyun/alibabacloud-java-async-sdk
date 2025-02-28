@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SplitTrafficControlTargetRequest} extends {@link RequestModel}
  *
  * <p>SplitTrafficControlTargetRequest</p>
@@ -29,15 +35,15 @@ public class SplitTrafficControlTargetRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SetPoints")
-    private java.util.List < Long > setPoints;
+    private java.util.List<Long> setPoints;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SetValues")
-    private java.util.List < Long > setValues;
+    private java.util.List<Long> setValues;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TimePoints")
-    private java.util.List < Long > timePoints;
+    private java.util.List<Long> timePoints;
 
     private SplitTrafficControlTargetRequest(Builder builder) {
         super(builder);
@@ -94,21 +100,21 @@ public class SplitTrafficControlTargetRequest extends Request {
     /**
      * @return setPoints
      */
-    public java.util.List < Long > getSetPoints() {
+    public java.util.List<Long> getSetPoints() {
         return this.setPoints;
     }
 
     /**
      * @return setValues
      */
-    public java.util.List < Long > getSetValues() {
+    public java.util.List<Long> getSetValues() {
         return this.setValues;
     }
 
     /**
      * @return timePoints
      */
-    public java.util.List < Long > getTimePoints() {
+    public java.util.List<Long> getTimePoints() {
         return this.timePoints;
     }
 
@@ -117,9 +123,9 @@ public class SplitTrafficControlTargetRequest extends Request {
         private String regionId; 
         private String environment; 
         private String instanceId; 
-        private java.util.List < Long > setPoints; 
-        private java.util.List < Long > setValues; 
-        private java.util.List < Long > timePoints; 
+        private java.util.List<Long> setPoints; 
+        private java.util.List<Long> setValues; 
+        private java.util.List<Long> timePoints; 
 
         private Builder() {
             super();
@@ -175,7 +181,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         /**
          * SetPoints.
          */
-        public Builder setPoints(java.util.List < Long > setPoints) {
+        public Builder setPoints(java.util.List<Long> setPoints) {
             this.putBodyParameter("SetPoints", setPoints);
             this.setPoints = setPoints;
             return this;
@@ -184,7 +190,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         /**
          * SetValues.
          */
-        public Builder setValues(java.util.List < Long > setValues) {
+        public Builder setValues(java.util.List<Long> setValues) {
             this.putBodyParameter("SetValues", setValues);
             this.setValues = setValues;
             return this;
@@ -193,7 +199,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         /**
          * TimePoints.
          */
-        public Builder timePoints(java.util.List < Long > timePoints) {
+        public Builder timePoints(java.util.List<Long> timePoints) {
             this.putBodyParameter("TimePoints", timePoints);
             this.timePoints = timePoints;
             return this;

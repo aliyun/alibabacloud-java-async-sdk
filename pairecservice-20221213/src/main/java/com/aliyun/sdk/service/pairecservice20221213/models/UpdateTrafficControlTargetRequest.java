@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrafficControlTargetRequest} extends {@link RequestModel}
  *
  * <p>UpdateTrafficControlTargetRequest</p>
@@ -14,6 +20,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("TrafficControlTargetId")
     private String trafficControlTargetId;
+
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -74,6 +84,7 @@ public class UpdateTrafficControlTargetRequest extends Request {
     private UpdateTrafficControlTargetRequest(Builder builder) {
         super(builder);
         this.trafficControlTargetId = builder.trafficControlTargetId;
+        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.event = builder.event;
         this.itemConditionArray = builder.itemConditionArray;
@@ -108,6 +119,13 @@ public class UpdateTrafficControlTargetRequest extends Request {
      */
     public String getTrafficControlTargetId() {
         return this.trafficControlTargetId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -210,6 +228,7 @@ public class UpdateTrafficControlTargetRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTrafficControlTargetRequest, Builder> {
         private String trafficControlTargetId; 
+        private String regionId; 
         private String endTime; 
         private String event; 
         private String itemConditionArray; 
@@ -232,6 +251,7 @@ public class UpdateTrafficControlTargetRequest extends Request {
         private Builder(UpdateTrafficControlTargetRequest request) {
             super(request);
             this.trafficControlTargetId = request.trafficControlTargetId;
+            this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.event = request.event;
             this.itemConditionArray = request.itemConditionArray;
@@ -254,6 +274,15 @@ public class UpdateTrafficControlTargetRequest extends Request {
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.putPathParameter("TrafficControlTargetId", trafficControlTargetId);
             this.trafficControlTargetId = trafficControlTargetId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

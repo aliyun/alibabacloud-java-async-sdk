@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrafficControlTargetResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrafficControlTargetResponseBody</p>
@@ -370,15 +376,21 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTrafficControlTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrafficControlTargetResponseBody</p>
+     */
     public static class SplitParts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SetPoints")
-        private java.util.List < Long > setPoints;
+        private java.util.List<Long> setPoints;
 
         @com.aliyun.core.annotation.NameInMap("SetValues")
-        private java.util.List < Long > setValues;
+        private java.util.List<Long> setValues;
 
         @com.aliyun.core.annotation.NameInMap("TimePoints")
-        private java.util.List < Long > timePoints;
+        private java.util.List<Long> timePoints;
 
         private SplitParts(Builder builder) {
             this.setPoints = builder.setPoints;
@@ -397,33 +409,33 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         /**
          * @return setPoints
          */
-        public java.util.List < Long > getSetPoints() {
+        public java.util.List<Long> getSetPoints() {
             return this.setPoints;
         }
 
         /**
          * @return setValues
          */
-        public java.util.List < Long > getSetValues() {
+        public java.util.List<Long> getSetValues() {
             return this.setValues;
         }
 
         /**
          * @return timePoints
          */
-        public java.util.List < Long > getTimePoints() {
+        public java.util.List<Long> getTimePoints() {
             return this.timePoints;
         }
 
         public static final class Builder {
-            private java.util.List < Long > setPoints; 
-            private java.util.List < Long > setValues; 
-            private java.util.List < Long > timePoints; 
+            private java.util.List<Long> setPoints; 
+            private java.util.List<Long> setValues; 
+            private java.util.List<Long> timePoints; 
 
             /**
              * SetPoints.
              */
-            public Builder setPoints(java.util.List < Long > setPoints) {
+            public Builder setPoints(java.util.List<Long> setPoints) {
                 this.setPoints = setPoints;
                 return this;
             }
@@ -431,7 +443,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             /**
              * SetValues.
              */
-            public Builder setValues(java.util.List < Long > setValues) {
+            public Builder setValues(java.util.List<Long> setValues) {
                 this.setValues = setValues;
                 return this;
             }
@@ -439,7 +451,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             /**
              * TimePoints.
              */
-            public Builder timePoints(java.util.List < Long > timePoints) {
+            public Builder timePoints(java.util.List<Long> timePoints) {
                 this.timePoints = timePoints;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTableMetaRequest} extends {@link RequestModel}
  *
  * <p>DeleteTableMetaRequest</p>
@@ -16,6 +22,10 @@ public class DeleteTableMetaRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableMetaId;
 
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -24,6 +34,7 @@ public class DeleteTableMetaRequest extends Request {
     private DeleteTableMetaRequest(Builder builder) {
         super(builder);
         this.tableMetaId = builder.tableMetaId;
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
     }
 
@@ -48,6 +59,13 @@ public class DeleteTableMetaRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -56,6 +74,7 @@ public class DeleteTableMetaRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteTableMetaRequest, Builder> {
         private String tableMetaId; 
+        private String regionId; 
         private String instanceId; 
 
         private Builder() {
@@ -65,11 +84,15 @@ public class DeleteTableMetaRequest extends Request {
         private Builder(DeleteTableMetaRequest request) {
             super(request);
             this.tableMetaId = request.tableMetaId;
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
         } 
 
         /**
-         * TableMetaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.putPathParameter("TableMetaId", tableMetaId);
@@ -78,7 +101,16 @@ public class DeleteTableMetaRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

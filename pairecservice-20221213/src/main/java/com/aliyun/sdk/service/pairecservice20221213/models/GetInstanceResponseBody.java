@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
@@ -270,12 +276,18 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class DataManagements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
         @com.aliyun.core.annotation.NameInMap("Meta")
-        private java.util.Map < String, ? > meta;
+        private java.util.Map<String, ?> meta;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -304,7 +316,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, ? > getMeta() {
+        public java.util.Map<String, ?> getMeta() {
             return this.meta;
         }
 
@@ -317,7 +329,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String componentCode; 
-            private java.util.Map < String, ? > meta; 
+            private java.util.Map<String, ?> meta; 
             private String type; 
 
             /**
@@ -331,7 +343,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * Meta.
              */
-            public Builder meta(java.util.Map < String, ? > meta) {
+            public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -351,12 +363,18 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Engines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
         @com.aliyun.core.annotation.NameInMap("Meta")
-        private java.util.Map < String, ? > meta;
+        private java.util.Map<String, ?> meta;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -385,7 +403,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, ? > getMeta() {
+        public java.util.Map<String, ?> getMeta() {
             return this.meta;
         }
 
@@ -398,7 +416,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String componentCode; 
-            private java.util.Map < String, ? > meta; 
+            private java.util.Map<String, ?> meta; 
             private String type; 
 
             /**
@@ -412,7 +430,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * Meta.
              */
-            public Builder meta(java.util.Map < String, ? > meta) {
+            public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -432,12 +450,18 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Monitors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
         @com.aliyun.core.annotation.NameInMap("Meta")
-        private java.util.Map < String, ? > meta;
+        private java.util.Map<String, ?> meta;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -466,7 +490,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, ? > getMeta() {
+        public java.util.Map<String, ?> getMeta() {
             return this.meta;
         }
 
@@ -479,7 +503,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String componentCode; 
-            private java.util.Map < String, ? > meta; 
+            private java.util.Map<String, ?> meta; 
             private String type; 
 
             /**
@@ -493,7 +517,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * Meta.
              */
-            public Builder meta(java.util.Map < String, ? > meta) {
+            public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -513,15 +537,21 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataManagements")
-        private java.util.List < DataManagements> dataManagements;
+        private java.util.List<DataManagements> dataManagements;
 
         @com.aliyun.core.annotation.NameInMap("Engines")
-        private java.util.List < Engines> engines;
+        private java.util.List<Engines> engines;
 
         @com.aliyun.core.annotation.NameInMap("Monitors")
-        private java.util.List < Monitors> monitors;
+        private java.util.List<Monitors> monitors;
 
         private Config(Builder builder) {
             this.dataManagements = builder.dataManagements;
@@ -540,33 +570,33 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return dataManagements
          */
-        public java.util.List < DataManagements> getDataManagements() {
+        public java.util.List<DataManagements> getDataManagements() {
             return this.dataManagements;
         }
 
         /**
          * @return engines
          */
-        public java.util.List < Engines> getEngines() {
+        public java.util.List<Engines> getEngines() {
             return this.engines;
         }
 
         /**
          * @return monitors
          */
-        public java.util.List < Monitors> getMonitors() {
+        public java.util.List<Monitors> getMonitors() {
             return this.monitors;
         }
 
         public static final class Builder {
-            private java.util.List < DataManagements> dataManagements; 
-            private java.util.List < Engines> engines; 
-            private java.util.List < Monitors> monitors; 
+            private java.util.List<DataManagements> dataManagements; 
+            private java.util.List<Engines> engines; 
+            private java.util.List<Monitors> monitors; 
 
             /**
              * DataManagements.
              */
-            public Builder dataManagements(java.util.List < DataManagements> dataManagements) {
+            public Builder dataManagements(java.util.List<DataManagements> dataManagements) {
                 this.dataManagements = dataManagements;
                 return this;
             }
@@ -574,7 +604,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * Engines.
              */
-            public Builder engines(java.util.List < Engines> engines) {
+            public Builder engines(java.util.List<Engines> engines) {
                 this.engines = engines;
                 return this;
             }
@@ -582,7 +612,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * Monitors.
              */
-            public Builder monitors(java.util.List < Monitors> monitors) {
+            public Builder monitors(java.util.List<Monitors> monitors) {
                 this.monitors = monitors;
                 return this;
             }
@@ -594,6 +624,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class OperatingTool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsEnable")
         private Boolean isEnable;
