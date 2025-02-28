@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListFlowsResponse} extends {@link TeaModel}
+ * {@link DescribeRegionsResponse} extends {@link TeaModel}
  *
- * <p>ListFlowsResponse</p>
+ * <p>DescribeRegionsResponse</p>
  */
-public class ListFlowsResponse extends Response {
+public class DescribeRegionsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListFlowsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListFlowsResponseBody body;
+    private DescribeRegionsResponseBody body;
 
-    private ListFlowsResponse(BuilderImpl builder) {
+    private DescribeRegionsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListFlowsResponse create() {
+    public static DescribeRegionsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListFlowsResponse extends Response {
     /**
      * @return body
      */
-    public ListFlowsResponseBody getBody() {
+    public DescribeRegionsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListFlowsResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeRegionsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListFlowsResponseBody body);
+        Builder body(DescribeRegionsResponseBody body);
 
         @Override
-        ListFlowsResponse build();
+        DescribeRegionsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListFlowsResponse, Builder>
+            extends Response.BuilderImpl<DescribeRegionsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListFlowsResponseBody body; 
+        private DescribeRegionsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListFlowsResponse response) {
+        private BuilderImpl(DescribeRegionsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListFlowsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListFlowsResponseBody body) {
+        public Builder body(DescribeRegionsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListFlowsResponse build() {
-            return new ListFlowsResponse(this);
+        public DescribeRegionsResponse build() {
+            return new DescribeRegionsResponse(this);
         } 
 
     } 

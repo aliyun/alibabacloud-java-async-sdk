@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlowsRequest} extends {@link RequestModel}
  *
  * <p>ListFlowsRequest</p>
  */
 public class ListFlowsRequest extends Request {
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private ListFlowsRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class ListFlowsRequest extends Request {
         } 
 
         /**
-         * The number of flows to be queried. Valid values: 1 to 1000.
+         * <p>The number of workflows that you want to query. Valid values: 1 - 999. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -77,7 +85,10 @@ public class ListFlowsRequest extends Request {
         }
 
         /**
-         * The token to start the query.
+         * <p>The token to start the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_nextxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

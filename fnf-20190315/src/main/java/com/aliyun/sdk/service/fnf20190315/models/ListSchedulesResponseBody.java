@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchedulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSchedulesResponseBody</p>
  */
 public class ListSchedulesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Schedules")
-    private java.util.List < Schedules> schedules;
+    @com.aliyun.core.annotation.NameInMap("Schedules")
+    private java.util.List<Schedules> schedules;
 
     private ListSchedulesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,17 +57,20 @@ public class ListSchedulesResponseBody extends TeaModel {
     /**
      * @return schedules
      */
-    public java.util.List < Schedules> getSchedules() {
+    public java.util.List<Schedules> getSchedules() {
         return this.schedules;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Schedules> schedules; 
+        private java.util.List<Schedules> schedules; 
 
         /**
-         * The token for the next query.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNextToken</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +78,10 @@ public class ListSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +89,9 @@ public class ListSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * The time-based schedules that are queried.
+         * <p>The time-based schedules that are queried.</p>
          */
-        public Builder schedules(java.util.List < Schedules> schedules) {
+        public Builder schedules(java.util.List<Schedules> schedules) {
             this.schedules = schedules;
             return this;
         }
@@ -91,29 +102,35 @@ public class ListSchedulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSchedulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchedulesResponseBody</p>
+     */
     public static class Schedules extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("LastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
         private String lastModifiedTime;
 
-        @NameInMap("Payload")
+        @com.aliyun.core.annotation.NameInMap("Payload")
         private String payload;
 
-        @NameInMap("ScheduleId")
+        @com.aliyun.core.annotation.NameInMap("ScheduleId")
         private String scheduleId;
 
-        @NameInMap("ScheduleName")
+        @com.aliyun.core.annotation.NameInMap("ScheduleName")
         private String scheduleName;
 
         private Schedules(Builder builder) {
@@ -202,7 +219,10 @@ public class ListSchedulesResponseBody extends TeaModel {
             private String scheduleName; 
 
             /**
-             * The time when the time-based schedule was created.
+             * <p>The time when the time-based schedule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-01T01:01:01.001Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -210,7 +230,10 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression of the scheduled task.
+             * <p>The cron expression of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 * * * * *</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -218,7 +241,10 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the time-based schedule.
+             * <p>The description of the time-based schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,11 +252,14 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the time-based schedule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the time-based schedule is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -238,7 +267,10 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the time-based schedule was last modified.
+             * <p>The time when the time-based schedule was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-01T01:01:01.001Z</p>
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -246,7 +278,10 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger message of the time-based schedule.
+             * <p>The trigger message of the time-based schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;: &quot;value&quot;}</p>
              */
             public Builder payload(String payload) {
                 this.payload = payload;
@@ -254,7 +289,10 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the time-based schedule.
+             * <p>The ID of the time-based schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testScheduleId</p>
              */
             public Builder scheduleId(String scheduleId) {
                 this.scheduleId = scheduleId;
@@ -262,7 +300,10 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the time-based schedule.
+             * <p>The name of the time-based schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testScheduleName</p>
              */
             public Builder scheduleName(String scheduleName) {
                 this.scheduleName = scheduleName;

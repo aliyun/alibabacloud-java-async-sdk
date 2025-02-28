@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartSyncExecutionRequest} extends {@link RequestModel}
  *
  * <p>StartSyncExecutionRequest</p>
  */
 public class StartSyncExecutionRequest extends Request {
-    @Body
-    @NameInMap("ExecutionName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExecutionName")
     private String executionName;
 
-    @Body
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Body
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
     private StartSyncExecutionRequest(Builder builder) {
@@ -83,15 +88,17 @@ public class StartSyncExecutionRequest extends Request {
         } 
 
         /**
-         * The name of the execution that you want to start. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the execution that you want to start. The name must meet the following conventions:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
+         * <p>Different from the StartExecution operation, in the synchronous execution mode, the execution name is no longer required to be unique within a flow. You can choose to provide an execution name to identify the current execution. In this case, the system adds a UUID to the current execution name. The used format is {ExecutionName}:{UUID}. If you do not specify the execution name, the system automatically generates an execution name.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
-         * 
-         * Different from the StartExecution operation, in the synchronous execution mode, the execution name is no longer required to be unique within a flow. You can choose to provide an execution name to identify the current execution. In this case, the system adds a UUID to the current execution name. The used format is {ExecutionName}:{UUID}. If you do not specify the execution name, the system automatically generates an execution name.
+         * <strong>example:</strong>
+         * <p>my_exec_name</p>
          */
         public Builder executionName(String executionName) {
             this.putBodyParameter("ExecutionName", executionName);
@@ -100,13 +107,11 @@ public class StartSyncExecutionRequest extends Request {
         }
 
         /**
-         * The name of the flow in which you want to start the execution. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:
-         * <p>
+         * <p>The name of the workflow to be executed.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>my_flow_name</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -115,7 +120,10 @@ public class StartSyncExecutionRequest extends Request {
         }
 
         /**
-         * The input of the execution, which is in the JSON format.
+         * <p>The input of the execution, which is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder input(String input) {
             this.putBodyParameter("Input", input);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlowsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFlowsResponseBody</p>
  */
 public class ListFlowsResponseBody extends TeaModel {
-    @NameInMap("Flows")
-    private java.util.List < Flows> flows;
+    @com.aliyun.core.annotation.NameInMap("Flows")
+    private java.util.List<Flows> flows;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFlowsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListFlowsResponseBody extends TeaModel {
     /**
      * @return flows
      */
-    public java.util.List < Flows> getFlows() {
+    public java.util.List<Flows> getFlows() {
         return this.flows;
     }
 
@@ -57,20 +62,23 @@ public class ListFlowsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Flows> flows; 
+        private java.util.List<Flows> flows; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The details of flows.
+         * <p>The details of flows.</p>
          */
-        public Builder flows(java.util.List < Flows> flows) {
+        public Builder flows(java.util.List<Flows> flows) {
             this.flows = flows;
             return this;
         }
 
         /**
-         * The start key for the next query. This parameter is not returned if all results have been returned.
+         * <p>The start key for the next query. This parameter is not returned if all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_nextxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class ListFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,32 +102,38 @@ public class ListFlowsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFlowsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFlowsResponseBody</p>
+     */
     public static class Flows extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Definition")
+        @com.aliyun.core.annotation.NameInMap("Definition")
         private String definition;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExecutionMode")
+        @com.aliyun.core.annotation.NameInMap("ExecutionMode")
         private String executionMode;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
         private String lastModifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Flows(Builder builder) {
@@ -214,7 +231,10 @@ public class ListFlowsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time when the flow was created.
+             * <p>The time when the flow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:01:01.001Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -222,7 +242,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.
+             * <p>The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n - type: pass\n name: mypass</p>
              */
             public Builder definition(String definition) {
                 this.definition = definition;
@@ -230,7 +253,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the flow.
+             * <p>The description of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test flow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +264,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.
+             * <p>The execution mode or the enumeration type. Valid values: Express and Standard. A value of Standard indicates an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder executionMode(String executionMode) {
                 this.executionMode = executionMode;
@@ -246,7 +275,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the flow.
+             * <p>The unique ID of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e589e092-e2c0-4dee-b306-3574ddf5****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -254,7 +286,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the flow was last modified.
+             * <p>The time when the flow was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:01:01.001Z</p>
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -262,7 +297,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the flow.
+             * <p>The name of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +308,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the flow is executed.
+             * <p>The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the flow is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::${accountID}:${role}</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -278,7 +319,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the flow.
+             * <p>The type of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FDL</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateFlowResponseBody</p>
  */
 public class UpdateFlowResponseBody extends TeaModel {
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("Definition")
+    @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("ExternalStorageLocation")
+    @com.aliyun.core.annotation.NameInMap("ExternalStorageLocation")
     private String externalStorageLocation;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("LastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private UpdateFlowResponseBody(Builder builder) {
@@ -146,7 +151,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The time when the flow was created.
+         * <p>The time when the flow was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -154,7 +162,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The flow definition, which follows the FDL syntax standard. Considering compatibility, the system supports the two flow definition specifications.
+         * <p>The flow definition, which follows the FDL syntax standard. Considering compatibility, the system supports the two flow definition specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n  - type: pass\n    name: mypass</p>
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -162,7 +173,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the flow.
+         * <p>The description of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test definition</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -170,7 +184,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The path of the external storage.
+         * <p>The path of the external storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path</p>
          */
         public Builder externalStorageLocation(String externalStorageLocation) {
             this.externalStorageLocation = externalStorageLocation;
@@ -178,7 +195,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the flow.
+         * <p>The unique ID of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e589e092-e2c0-4dee-b306-3574ddfdddf5****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -186,7 +206,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the flow was last modified.
+         * <p>The time when the flow was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -194,7 +217,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the flow.
+         * <p>The name of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -202,7 +228,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +239,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.
+         * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::${accountID}:${role}</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -218,7 +250,10 @@ public class UpdateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the flow.
+         * <p>The type of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDL</p>
          */
         public Builder type(String type) {
             this.type = type;

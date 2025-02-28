@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowRequest} extends {@link RequestModel}
  *
  * <p>CreateFlowRequest</p>
  */
 public class CreateFlowRequest extends Request {
-    @Body
-    @NameInMap("Definition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Definition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String definition;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("ExecutionMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExecutionMode")
     private String executionMode;
 
-    @Body
-    @NameInMap("ExternalStorageLocation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalStorageLocation")
     private String externalStorageLocation;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateFlowRequest(Builder builder) {
@@ -142,7 +147,14 @@ public class CreateFlowRequest extends Request {
         } 
 
         /**
-         * The definition of the flow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports two flow definition specifications.
+         * <p>The definition of the workflow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports two flow definition specifications.</p>
+         * <blockquote>
+         * <p> In the preceding flow definition example, Name:my_flow_name is the workflow name, which must be consistent with the input parameter Name</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version:&nbsp;v1.0<br/>type:&nbsp;flow<br/>steps:<br/>&nbsp;-&nbsp;type:&nbsp;pass<br/>&nbsp;name:&nbsp;mypass</p>
          */
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
@@ -151,7 +163,11 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The description of the flow.
+         * <p>The description of the flow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test flow</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -160,7 +176,10 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The execution mode. Valid values: Express and Standard. Considering compatibility, an empty string is equivalent to the Standard execution mode.
+         * <p>The execution mode. Valid values: Express and Standard. Considering compatibility, an empty string is equivalent to the Standard execution mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder executionMode(String executionMode) {
             this.putBodyParameter("ExecutionMode", executionMode);
@@ -169,7 +188,10 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The path of the external storage.
+         * <p>The path of the external storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path</p>
          */
         public Builder externalStorageLocation(String externalStorageLocation) {
             this.putBodyParameter("ExternalStorageLocation", externalStorageLocation);
@@ -178,13 +200,17 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:
-         * <p>
+         * <p>The name of the flow. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -193,7 +219,10 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.
+         * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:${region}:${accountID}:${role}</p>
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
@@ -202,7 +231,11 @@ public class CreateFlowRequest extends Request {
         }
 
         /**
-         * The type of the flow. Set this parameter to **FDL**.
+         * <p>The type of the flow. Set this parameter to <strong>FDL</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDL</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExecutionRequest} extends {@link RequestModel}
  *
  * <p>DescribeExecutionRequest</p>
  */
 public class DescribeExecutionRequest extends Request {
-    @Query
-    @NameInMap("ExecutionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionName;
 
-    @Query
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Query
-    @NameInMap("WaitTimeSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WaitTimeSeconds")
     private Integer waitTimeSeconds;
 
     private DescribeExecutionRequest(Builder builder) {
@@ -84,13 +89,11 @@ public class DescribeExecutionRequest extends Request {
         } 
 
         /**
-         * The name of the execution, which is unique within a flow. Set this parameter based on the following rules:
-         * <p>
+         * <p>The name of the execution.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>exec</p>
          */
         public Builder executionName(String executionName) {
             this.putQueryParameter("ExecutionName", executionName);
@@ -99,13 +102,11 @@ public class DescribeExecutionRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Set this parameter based on the following rules:
-         * <p>
+         * <p>The name of the workflow.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -114,11 +115,14 @@ public class DescribeExecutionRequest extends Request {
         }
 
         /**
-         * The maximum period of time for long polling waits. Valid values: 0 to 60. Unit: seconds. Configure this parameter based on the following rules:
-         * <p>
+         * <p>The maximum period of time for long polling waits. Valid values: 0 to 60. Unit: seconds. Configure this parameter based on the following rules:</p>
+         * <ul>
+         * <li>If the value is 0, the system immediately returns the current execution status.</li>
+         * <li>If the value is greater than 0, the long polling request waits until the execution ends or the specified period elapses.</li>
+         * </ul>
          * 
-         * *   If the value is 0, the system immediately returns the current execution status.
-         * *   If the value is greater than 0, the long polling request waits until the execution ends or the specified period elapses.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder waitTimeSeconds(Integer waitTimeSeconds) {
             this.putQueryParameter("WaitTimeSeconds", waitTimeSeconds);

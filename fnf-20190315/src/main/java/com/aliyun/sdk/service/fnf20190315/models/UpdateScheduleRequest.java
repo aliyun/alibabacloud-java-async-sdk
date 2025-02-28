@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateScheduleRequest} extends {@link RequestModel}
  *
  * <p>UpdateScheduleRequest</p>
  */
 public class UpdateScheduleRequest extends Request {
-    @Body
-    @NameInMap("CronExpression")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CronExpression")
     private String cronExpression;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @Body
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Body
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private String payload;
 
-    @Body
-    @NameInMap("ScheduleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleName;
 
     private UpdateScheduleRequest(Builder builder) {
@@ -126,7 +131,10 @@ public class UpdateScheduleRequest extends Request {
         } 
 
         /**
-         * The CRON expression.
+         * <p>The CRON expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 * * * * *</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putBodyParameter("CronExpression", cronExpression);
@@ -135,7 +143,10 @@ public class UpdateScheduleRequest extends Request {
         }
 
         /**
-         * The description of the time-based schedule.
+         * <p>The description of the time-based schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -144,11 +155,14 @@ public class UpdateScheduleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the time-based schedule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the time-based schedule. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
@@ -157,13 +171,17 @@ public class UpdateScheduleRequest extends Request {
         }
 
         /**
-         * The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>testFlowName</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -172,7 +190,10 @@ public class UpdateScheduleRequest extends Request {
         }
 
         /**
-         * The trigger message of the time-based schedule. It must be in the JSON format.
+         * <p>The trigger message of the time-based schedule. It must be in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
          */
         public Builder payload(String payload) {
             this.putBodyParameter("Payload", payload);
@@ -181,13 +202,17 @@ public class UpdateScheduleRequest extends Request {
         }
 
         /**
-         * The name of the time-based schedule. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the time-based schedule. The name must meet the following conventions:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>testScheduleName</p>
          */
         public Builder scheduleName(String scheduleName) {
             this.putBodyParameter("ScheduleName", scheduleName);

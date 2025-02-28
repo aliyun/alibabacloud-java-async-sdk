@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExecutionHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetExecutionHistoryResponseBody</p>
  */
 public class GetExecutionHistoryResponseBody extends TeaModel {
-    @NameInMap("Events")
-    private java.util.List < Events> events;
+    @com.aliyun.core.annotation.NameInMap("Events")
+    private java.util.List<Events> events;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetExecutionHistoryResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -57,20 +62,23 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The events.
+         * <p>The events.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
 
         /**
-         * You do not need to specify this parameter for the first request. The returned value of **ScheduleEventId** is used as the token for the next query. No value is returned for the last query.
+         * <p>You do not need to specify this parameter for the first request. The returned value of <strong>ScheduleEventId</strong> is used as the token for the next query. No value is returned for the last query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,23 +102,29 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExecutionHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExecutionHistoryResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("EventDetail")
+        @com.aliyun.core.annotation.NameInMap("EventDetail")
         private String eventDetail;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
-        @NameInMap("ScheduleEventId")
+        @com.aliyun.core.annotation.NameInMap("ScheduleEventId")
         private Long scheduleEventId;
 
-        @NameInMap("StepName")
+        @com.aliyun.core.annotation.NameInMap("StepName")
         private String stepName;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Events(Builder builder) {
@@ -178,7 +195,10 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The details about the execution step.
+             * <p>The details about the execution step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder eventDetail(String eventDetail) {
                 this.eventDetail = eventDetail;
@@ -186,7 +206,10 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the execution step.
+             * <p>The ID of the execution step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -194,7 +217,10 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scheduling step.
+             * <p>The ID of the scheduling step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scheduleEventId(Long scheduleEventId) {
                 this.scheduleEventId = scheduleEventId;
@@ -202,7 +228,10 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the execution step.
+             * <p>The name of the execution step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>passStep</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -210,7 +239,10 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was updated.
+             * <p>The time when the event was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:01:01.001Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -218,30 +250,33 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the execution step. Valid values:
-             * <p>
+             * <p>The type of the execution step. Valid values:</p>
+             * <ul>
+             * <li><strong>StepEntered</strong></li>
+             * <li><strong>StepStarted</strong></li>
+             * <li><strong>StepSucceeded</strong></li>
+             * <li><strong>StepFailed</strong></li>
+             * <li><strong>StepExited</strong></li>
+             * <li><strong>BranchEntered</strong></li>
+             * <li><strong>BranchExited</strong></li>
+             * <li><strong>IterationEntered</strong></li>
+             * <li><strong>IterationExited</strong></li>
+             * <li><strong>TaskScheduled</strong></li>
+             * <li><strong>TaskStarted</strong></li>
+             * <li><strong>TaskSubmitted</strong></li>
+             * <li><strong>TaskSubmitFailed</strong></li>
+             * <li><strong>TaskSucceeded</strong></li>
+             * <li><strong>TaskFailed</strong></li>
+             * <li><strong>TaskTimedOut</strong></li>
+             * <li><strong>ExecutionStarted</strong></li>
+             * <li><strong>ExecutionStopped</strong></li>
+             * <li><strong>ExecutionSucceeded</strong></li>
+             * <li><strong>ExecutionFailed</strong></li>
+             * <li><strong>ExecutionTimedOut</strong></li>
+             * </ul>
              * 
-             * *   **StepEntered**
-             * *   **StepStarted**
-             * *   **StepSucceeded**
-             * *   **StepFailed**
-             * *   **StepExited**
-             * *   **BranchEntered**
-             * *   **BranchExited**
-             * *   **IterationEntered**
-             * *   **IterationExited**
-             * *   **TaskScheduled**
-             * *   **TaskStarted**
-             * *   **TaskSubmitted**
-             * *   **TaskSubmitFailed**
-             * *   **TaskSucceeded**
-             * *   **TaskFailed**
-             * *   **TaskTimedOut**
-             * *   **ExecutionStarted**
-             * *   **ExecutionStopped**
-             * *   **ExecutionSucceeded**
-             * *   **ExecutionFailed**
-             * *   **ExecutionTimedOut**
+             * <strong>example:</strong>
+             * <p>TaskSucceeded</p>
              */
             public Builder type(String type) {
                 this.type = type;

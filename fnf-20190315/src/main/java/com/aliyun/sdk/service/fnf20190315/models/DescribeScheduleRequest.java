@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScheduleRequest} extends {@link RequestModel}
  *
  * <p>DescribeScheduleRequest</p>
  */
 public class DescribeScheduleRequest extends Request {
-    @Query
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Query
-    @NameInMap("ScheduleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleName;
 
     private DescribeScheduleRequest(Builder builder) {
@@ -70,13 +75,17 @@ public class DescribeScheduleRequest extends Request {
         } 
 
         /**
-         * The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>testFlowName</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -85,13 +94,17 @@ public class DescribeScheduleRequest extends Request {
         }
 
         /**
-         * The name of the time-based schedule. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the time-based schedule. The name must meet the following conventions:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>testScheduleName</p>
          */
         public Builder scheduleName(String scheduleName) {
             this.putQueryParameter("ScheduleName", scheduleName);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopExecutionRequest} extends {@link RequestModel}
  *
  * <p>StopExecutionRequest</p>
  */
 public class StopExecutionRequest extends Request {
-    @Body
-    @NameInMap("Cause")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cause")
     private String cause;
 
-    @Body
-    @NameInMap("Error")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Error")
     private String error;
 
-    @Body
-    @NameInMap("ExecutionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExecutionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionName;
 
-    @Body
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
     private StopExecutionRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class StopExecutionRequest extends Request {
         } 
 
         /**
-         * The reason for stopping the execution. The value must be 1 to 4,096 characters in length.
+         * <p>The reason for stopping the execution. The value must be 1 to 4,096 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for test</p>
          */
         public Builder cause(String cause) {
             this.putBodyParameter("Cause", cause);
@@ -107,7 +115,10 @@ public class StopExecutionRequest extends Request {
         }
 
         /**
-         * The error for stopping the execution. The value must be 1 to 128 characters in length.
+         * <p>The error code for stopping the execution. The error code must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nill</p>
          */
         public Builder error(String error) {
             this.putBodyParameter("Error", error);
@@ -116,13 +127,11 @@ public class StopExecutionRequest extends Request {
         }
 
         /**
-         * The name of the execution that you want to stop. You can call the **ListExecutions** operation to obtain the value of this parameter. The name is unique in a flow. Set this parameter based on the following rules:
-         * <p>
+         * <p>The name of the execution to be stopped. You can call the <strong>ListExecutions</strong> operation to obtain the value of this parameter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>exec</p>
          */
         public Builder executionName(String executionName) {
             this.putBodyParameter("ExecutionName", executionName);
@@ -131,13 +140,11 @@ public class StopExecutionRequest extends Request {
         }
 
         /**
-         * The name of the flow in which that you want to stop the execution. You can call the **ListFlows** operation to obtain the value of this parameter. The name is unique within the same region and cannot be modified after the flow is created. Set this parameter based on the following rules:
-         * <p>
+         * <p>The name of the workflow to be stopped. You can call the <strong>ListFlows</strong> operation to obtain the value of this parameter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);

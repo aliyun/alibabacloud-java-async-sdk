@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchedulesRequest} extends {@link RequestModel}
  *
  * <p>ListSchedulesRequest</p>
  */
 public class ListSchedulesRequest extends Request {
-    @Query
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Query
-    @NameInMap("Limit")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer limit;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private ListSchedulesRequest(Builder builder) {
@@ -84,13 +89,17 @@ public class ListSchedulesRequest extends Request {
         } 
 
         /**
-         * The name of the flow that is associated with the time-based schedules. The name is unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the flow that is associated with the time-based schedules. The name is unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:</p>
+         * <ul>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>testFlowName</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -99,7 +108,10 @@ public class ListSchedulesRequest extends Request {
         }
 
         /**
-         * The number of schedules to be queried. Valid values: 1 to 1000.
+         * <p>The number of schedules to be queried. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -108,7 +120,10 @@ public class ListSchedulesRequest extends Request {
         }
 
         /**
-         * For the first query, you do not need to specify this parameter. The system uses the value of the **FlowName** parameter as the value of the **NextToken** parameter. When the query ends, no value is returned for this parameter.
+         * <p>For the first query, you do not need to specify this parameter. The system uses the value of the <strong>FlowName</strong> parameter as the value of the <strong>NextToken</strong> parameter. When the query ends, no value is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNextToken</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

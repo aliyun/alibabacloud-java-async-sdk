@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowRequest} extends {@link RequestModel}
  *
  * <p>UpdateFlowRequest</p>
  */
 public class UpdateFlowRequest extends Request {
-    @Body
-    @NameInMap("Definition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private UpdateFlowRequest(Builder builder) {
@@ -111,7 +116,13 @@ public class UpdateFlowRequest extends Request {
         } 
 
         /**
-         * The flow definition, which follows the flow definition language (FDL) syntax standard. Considering compatibility, the system supports the two flow definition specifications.
+         * <p>The definition of the workflow. The definition must comply with the flow definition language (FDL) syntax. Considering compatibility, the system supports the two workflow definition specifications.</p>
+         * <blockquote>
+         * <p> In the preceding workflow definition example, Name:my_flow_name is the workflow name, which must be consistent with the input parameter Name</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n  - type: pass\n    name: mypass</p>
          */
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
@@ -120,7 +131,10 @@ public class UpdateFlowRequest extends Request {
         }
 
         /**
-         * The description of the flow.
+         * <p>The description of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test definition</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -129,13 +143,11 @@ public class UpdateFlowRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the workflow.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -144,7 +156,10 @@ public class UpdateFlowRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.
+         * <p>The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::${accountID}:${role}</p>
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);
@@ -153,7 +168,10 @@ public class UpdateFlowRequest extends Request {
         }
 
         /**
-         * The type of the flow. Valid value: **FDL**.
+         * <p>The type of the flow. Valid value: <strong>FDL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDL</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

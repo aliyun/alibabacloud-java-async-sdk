@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartExecutionRequest} extends {@link RequestModel}
  *
  * <p>StartExecutionRequest</p>
  */
 public class StartExecutionRequest extends Request {
-    @Body
-    @NameInMap("CallbackFnFTaskToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallbackFnFTaskToken")
     private String callbackFnFTaskToken;
 
-    @Body
-    @NameInMap("ExecutionName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExecutionName")
     private String executionName;
 
-    @Body
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Body
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
     private StartExecutionRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class StartExecutionRequest extends Request {
         } 
 
         /**
-         * Specifies that the **TaskToken**-related tasks are called back after the execution in the flow ends.
+         * <p>Specifies that the <strong>TaskToken</strong>-related tasks are called back after the execution in the flow ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder callbackFnFTaskToken(String callbackFnFTaskToken) {
             this.putBodyParameter("CallbackFnFTaskToken", callbackFnFTaskToken);
@@ -106,13 +114,16 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The name of the execution. The execution name is unique within a workflow. Configure this parameter based on the following rules:
-         * <p>
+         * <p>The name of the execution. The execution name is unique within a workflow. Configure this parameter based on the following rules:</p>
+         * <ul>
+         * <li>The name must start with a letter or an underscore (_).</li>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name is case-sensitive.</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * </ul>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>exec</p>
          */
         public Builder executionName(String executionName) {
             this.putBodyParameter("ExecutionName", executionName);
@@ -121,13 +132,11 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The name of the workflow to be executed. The name is unique within a region and cannot be modified after the workflow is created. Configure this parameter based on the following rules:
-         * <p>
+         * <p>The name of the workflow to be executed.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -136,7 +145,10 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The input of the execution, which is in the JSON format.
+         * <p>The input of the execution, which is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
