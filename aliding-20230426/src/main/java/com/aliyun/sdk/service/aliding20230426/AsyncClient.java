@@ -200,6 +200,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMeetingRoomGroupResponse> createMeetingRoomGroup(CreateMeetingRoomGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateMessage  CreateMessageRequest
+     * @return CreateMessageResponse
+     */
+    CompletableFuture<CreateMessageResponse> createMessage(CreateMessageRequest request);
+
+    /**
      * @param request the request parameters of CreateOrUpdateFormData  CreateOrUpdateFormDataRequest
      * @return CreateOrUpdateFormDataResponse
      */
@@ -222,6 +228,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateReportResponse
      */
     CompletableFuture<CreateReportResponse> createReport(CreateReportRequest request);
+
+    /**
+     * @param request the request parameters of CreateRun  CreateRunRequest
+     * @return CreateRunResponse
+     */
+    CompletableFuture<CreateRunResponse> createRun(CreateRunRequest request);
+
+    ResponseIterable<CreateRunResponseBody> createRunWithResponseIterable(CreateRunRequest request);
 
     /**
      * @param request the request parameters of CreateScenegroup  CreateScenegroupRequest
@@ -258,6 +272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSubscribedCalendarResponse
      */
     CompletableFuture<CreateSubscribedCalendarResponse> createSubscribedCalendar(CreateSubscribedCalendarRequest request);
+
+    /**
+     * @param request the request parameters of CreateThread  CreateThreadRequest
+     * @return CreateThreadResponse
+     */
+    CompletableFuture<CreateThreadResponse> createThread(CreateThreadRequest request);
 
     /**
      * @param request the request parameters of CreateTicket  CreateTicketRequest
@@ -856,6 +876,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFormRemarksResponse> listFormRemarks(ListFormRemarksRequest request);
 
     /**
+     * @param request the request parameters of ListMessage  ListMessageRequest
+     * @return ListMessageResponse
+     */
+    CompletableFuture<ListMessageResponse> listMessage(ListMessageRequest request);
+
+    /**
      * @param request the request parameters of ListMultiDimTableRecords  ListMultiDimTableRecordsRequest
      * @return ListMultiDimTableRecordsResponse
      */
@@ -1100,6 +1126,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RespondEventResponse
      */
     CompletableFuture<RespondEventResponse> respondEvent(RespondEventRequest request);
+
+    /**
+     * @param request the request parameters of RetrieveRun  RetrieveRunRequest
+     * @return RetrieveRunResponse
+     */
+    CompletableFuture<RetrieveRunResponse> retrieveRun(RetrieveRunRequest request);
 
     /**
      * @param request the request parameters of SaveContent  SaveContentRequest
