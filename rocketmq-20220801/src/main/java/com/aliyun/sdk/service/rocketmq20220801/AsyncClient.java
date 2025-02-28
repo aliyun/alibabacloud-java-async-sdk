@@ -43,6 +43,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateDisasterRecoveryPlan  CreateDisasterRecoveryPlanRequest
+     * @return CreateDisasterRecoveryPlanResponse
+     */
+    CompletableFuture<CreateDisasterRecoveryPlanResponse> createDisasterRecoveryPlan(CreateDisasterRecoveryPlanRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -94,6 +100,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteConsumerGroupSubscriptionResponse
      */
     CompletableFuture<DeleteConsumerGroupSubscriptionResponse> deleteConsumerGroupSubscription(DeleteConsumerGroupSubscriptionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDisasterRecoveryItem  DeleteDisasterRecoveryItemRequest
+     * @return DeleteDisasterRecoveryItemResponse
+     */
+    CompletableFuture<DeleteDisasterRecoveryItemResponse> deleteDisasterRecoveryItem(DeleteDisasterRecoveryItemRequest request);
 
     /**
      * @param request the request parameters of DeleteDisasterRecoveryPlan  DeleteDisasterRecoveryPlanRequest
@@ -173,6 +185,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConsumerStackResponse> getConsumerStack(GetConsumerStackRequest request);
 
     /**
+     * @param request the request parameters of GetDisasterRecoveryItem  GetDisasterRecoveryItemRequest
+     * @return GetDisasterRecoveryItemResponse
+     */
+    CompletableFuture<GetDisasterRecoveryItemResponse> getDisasterRecoveryItem(GetDisasterRecoveryItemRequest request);
+
+    /**
+     * @param request the request parameters of GetDisasterRecoveryPlan  GetDisasterRecoveryPlanRequest
+     * @return GetDisasterRecoveryPlanResponse
+     */
+    CompletableFuture<GetDisasterRecoveryPlanResponse> getDisasterRecoveryPlan(GetDisasterRecoveryPlanRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -247,6 +271,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConsumerGroupsResponse
      */
     CompletableFuture<ListConsumerGroupsResponse> listConsumerGroups(ListConsumerGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListDisasterRecoveryCheckpoints  ListDisasterRecoveryCheckpointsRequest
+     * @return ListDisasterRecoveryCheckpointsResponse
+     */
+    CompletableFuture<ListDisasterRecoveryCheckpointsResponse> listDisasterRecoveryCheckpoints(ListDisasterRecoveryCheckpointsRequest request);
+
+    /**
+     * @param request the request parameters of ListDisasterRecoveryItems  ListDisasterRecoveryItemsRequest
+     * @return ListDisasterRecoveryItemsResponse
+     */
+    CompletableFuture<ListDisasterRecoveryItemsResponse> listDisasterRecoveryItems(ListDisasterRecoveryItemsRequest request);
+
+    /**
+     * @param request the request parameters of ListDisasterRecoveryPlans  ListDisasterRecoveryPlansRequest
+     * @return ListDisasterRecoveryPlansResponse
+     */
+    CompletableFuture<ListDisasterRecoveryPlansResponse> listDisasterRecoveryPlans(ListDisasterRecoveryPlansRequest request);
 
     /**
      * @param request the request parameters of ListInstanceAccount  ListInstanceAccountRequest
@@ -338,6 +380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopDisasterRecoveryItemResponse> stopDisasterRecoveryItem(StopDisasterRecoveryItemRequest request);
 
     /**
+     * @param request the request parameters of SyncDisasterRecoveryCheckpoint  SyncDisasterRecoveryCheckpointRequest
+     * @return SyncDisasterRecoveryCheckpointResponse
+     */
+    CompletableFuture<SyncDisasterRecoveryCheckpointResponse> syncDisasterRecoveryCheckpoint(SyncDisasterRecoveryCheckpointRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -359,6 +407,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConsumerGroupResponse
      */
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDisasterRecoveryItem  UpdateDisasterRecoveryItemRequest
+     * @return UpdateDisasterRecoveryItemResponse
+     */
+    CompletableFuture<UpdateDisasterRecoveryItemResponse> updateDisasterRecoveryItem(UpdateDisasterRecoveryItemRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDisasterRecoveryPlan  UpdateDisasterRecoveryPlanRequest
+     * @return UpdateDisasterRecoveryPlanResponse
+     */
+    CompletableFuture<UpdateDisasterRecoveryPlanResponse> updateDisasterRecoveryPlan(UpdateDisasterRecoveryPlanRequest request);
 
     /**
      * <b>description</b> :
