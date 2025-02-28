@@ -129,7 +129,10 @@ public class UpdateRatePlanSpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable auto payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -156,7 +159,14 @@ public class UpdateRatePlanSpecRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The specification update type. Valid values:</p>
+         * <ul>
+         * <li>DOWNGRADE</li>
+         * <li>UPGRADE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);

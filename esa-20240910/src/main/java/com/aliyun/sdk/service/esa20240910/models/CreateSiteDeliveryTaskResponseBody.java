@@ -24,7 +24,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SiteId")
-    private String siteId;
+    private Long siteId;
 
     @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
@@ -61,7 +61,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
     /**
      * @return siteId
      */
-    public String getSiteId() {
+    public Long getSiteId() {
         return this.siteId;
     }
 
@@ -75,7 +75,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String dataCenter; 
         private String requestId; 
-        private String siteId; 
+        private Long siteId; 
         private String taskName; 
 
         /**
@@ -110,7 +110,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>123456****</p>
          */
-        public Builder siteId(String siteId) {
+        public Builder siteId(Long siteId) {
             this.siteId = siteId;
             return this;
         }

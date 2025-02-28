@@ -1856,6 +1856,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can only query the status of a package instance after purchasing and creating it.</p>
+     * 
      * @param request the request parameters of DescribeRatePlanInstanceStatus  DescribeRatePlanInstanceStatusRequest
      * @return DescribeRatePlanInstanceStatusResponse
      */
