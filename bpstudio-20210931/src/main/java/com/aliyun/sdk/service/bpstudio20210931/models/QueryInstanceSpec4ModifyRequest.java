@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class QueryInstanceSpec4ModifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     private QueryInstanceSpec4ModifyRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class QueryInstanceSpec4ModifyRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -83,7 +88,7 @@ public class QueryInstanceSpec4ModifyRequest extends Request {
         private String applicationId; 
         private String instanceId; 
         private String methodName; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
 
         private Builder() {
             super();
@@ -133,7 +138,7 @@ public class QueryInstanceSpec4ModifyRequest extends Request {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putBodyParameter("Parameters", parametersShrink);
             this.parameters = parameters;

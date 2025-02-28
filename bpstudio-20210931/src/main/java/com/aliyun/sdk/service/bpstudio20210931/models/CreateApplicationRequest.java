@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class CreateApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Configuration")
-    private java.util.Map < String, String > configuration;
+    private java.util.Map<String, String> configuration;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -44,7 +49,7 @@ public class CreateApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Variables")
-    private java.util.Map < String, ? > variables;
+    private java.util.Map<String, ?> variables;
 
     private CreateApplicationRequest(Builder builder) {
         super(builder);
@@ -88,14 +93,14 @@ public class CreateApplicationRequest extends Request {
     /**
      * @return configuration
      */
-    public java.util.Map < String, String > getConfiguration() {
+    public java.util.Map<String, String> getConfiguration() {
         return this.configuration;
     }
 
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -123,19 +128,19 @@ public class CreateApplicationRequest extends Request {
     /**
      * @return variables
      */
-    public java.util.Map < String, ? > getVariables() {
+    public java.util.Map<String, ?> getVariables() {
         return this.variables;
     }
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String areaId; 
         private String clientToken; 
-        private java.util.Map < String, String > configuration; 
-        private java.util.List < Instances> instances; 
+        private java.util.Map<String, String> configuration; 
+        private java.util.List<Instances> instances; 
         private String name; 
         private String resourceGroupId; 
         private String templateId; 
-        private java.util.Map < String, ? > variables; 
+        private java.util.Map<String, ?> variables; 
 
         private Builder() {
             super();
@@ -183,7 +188,7 @@ public class CreateApplicationRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;enableMonitor&quot;:&quot;0&quot;, &quot;enableReport&quot;:&quot;1&quot;}</p>
          */
-        public Builder configuration(java.util.Map < String, String > configuration) {
+        public Builder configuration(java.util.Map<String, String> configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
             this.putBodyParameter("Configuration", configurationShrink);
             this.configuration = configuration;
@@ -193,7 +198,7 @@ public class CreateApplicationRequest extends Request {
         /**
          * <p>The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
             this.putBodyParameter("Instances", instancesShrink);
             this.instances = instances;
@@ -248,7 +253,7 @@ public class CreateApplicationRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;variable1&quot;:&quot;1&quot;}</p>
          */
-        public Builder variables(java.util.Map < String, ? > variables) {
+        public Builder variables(java.util.Map<String, ?> variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
             this.putBodyParameter("Variables", variablesShrink);
             this.variables = variables;

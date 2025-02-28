@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -49,7 +54,7 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,7 +74,7 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
@@ -84,7 +89,7 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -192,7 +197,7 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("VariableList")
-        private java.util.List < VariableList> variableList;
+        private java.util.List<VariableList> variableList;
 
         private Data(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -217,13 +222,13 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         /**
          * @return variableList
          */
-        public java.util.List < VariableList> getVariableList() {
+        public java.util.List<VariableList> getVariableList() {
             return this.variableList;
         }
 
         public static final class Builder {
             private String instanceId; 
-            private java.util.List < VariableList> variableList; 
+            private java.util.List<VariableList> variableList; 
 
             /**
              * InstanceId.
@@ -236,7 +241,7 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
             /**
              * VariableList.
              */
-            public Builder variableList(java.util.List < VariableList> variableList) {
+            public Builder variableList(java.util.List<VariableList> variableList) {
                 this.variableList = variableList;
                 return this;
             }

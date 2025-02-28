@@ -162,7 +162,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query all disaster recovery plans.</p>
+     * <p>Queries the information about all disaster recovery plans of the current account.</p>
      * 
      * @param request the request parameters of ListFoCreatedApps  ListFoCreatedAppsRequest
      * @return ListFoCreatedAppsResponse

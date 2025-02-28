@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ModifyApplicationSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceSpec")
-    private java.util.List < InstanceSpec> instanceSpec;
+    private java.util.List<InstanceSpec> instanceSpec;
 
     private ModifyApplicationSpecRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class ModifyApplicationSpecRequest extends Request {
     /**
      * @return instanceSpec
      */
-    public java.util.List < InstanceSpec> getInstanceSpec() {
+    public java.util.List<InstanceSpec> getInstanceSpec() {
         return this.instanceSpec;
     }
 
     public static final class Builder extends Request.Builder<ModifyApplicationSpecRequest, Builder> {
         private String applicationId; 
-        private java.util.List < InstanceSpec> instanceSpec; 
+        private java.util.List<InstanceSpec> instanceSpec; 
 
         private Builder() {
             super();
@@ -83,7 +88,7 @@ public class ModifyApplicationSpecRequest extends Request {
         /**
          * InstanceSpec.
          */
-        public Builder instanceSpec(java.util.List < InstanceSpec> instanceSpec) {
+        public Builder instanceSpec(java.util.List<InstanceSpec> instanceSpec) {
             String instanceSpecShrink = shrink(instanceSpec, "InstanceSpec", "json");
             this.putBodyParameter("InstanceSpec", instanceSpecShrink);
             this.instanceSpec = instanceSpec;
@@ -105,7 +110,7 @@ public class ModifyApplicationSpecRequest extends Request {
      */
     public static class InstanceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Configuration")
-        private java.util.Map < String, ? > configuration;
+        private java.util.Map<String, ?> configuration;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -126,7 +131,7 @@ public class ModifyApplicationSpecRequest extends Request {
         /**
          * @return configuration
          */
-        public java.util.Map < String, ? > getConfiguration() {
+        public java.util.Map<String, ?> getConfiguration() {
             return this.configuration;
         }
 
@@ -138,13 +143,13 @@ public class ModifyApplicationSpecRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > configuration; 
+            private java.util.Map<String, ?> configuration; 
             private String instanceId; 
 
             /**
              * Configuration.
              */
-            public Builder configuration(java.util.Map < String, ? > configuration) {
+            public Builder configuration(java.util.Map<String, ?> configuration) {
                 this.configuration = configuration;
                 return this;
             }

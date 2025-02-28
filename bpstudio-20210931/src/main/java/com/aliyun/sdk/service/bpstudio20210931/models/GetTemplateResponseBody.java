@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -285,7 +290,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String templateId;
 
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private Data(Builder builder) {
             this.createTime = builder.createTime;
@@ -350,7 +355,7 @@ public class GetTemplateResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
@@ -361,7 +366,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String templateId; 
-            private java.util.List < Variables> variables; 
+            private java.util.List<Variables> variables; 
 
             /**
              * <p>The time when the template was created.</p>
@@ -375,10 +380,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Template DescriptionD</p>
+             * <p>Template Description</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>remark</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -432,7 +437,7 @@ public class GetTemplateResponseBody extends TeaModel {
             /**
              * <p>The details of the template variables.</p>
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }

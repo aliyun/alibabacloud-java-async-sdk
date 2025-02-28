@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ExecuteOperationASyncRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Attributes")
-    private java.util.Map < String, ? > attributes;
+    private java.util.Map<String, ?> attributes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -71,7 +76,7 @@ public class ExecuteOperationASyncRequest extends Request {
     /**
      * @return attributes
      */
-    public java.util.Map < String, ? > getAttributes() {
+    public java.util.Map<String, ?> getAttributes() {
         return this.attributes;
     }
 
@@ -105,7 +110,7 @@ public class ExecuteOperationASyncRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExecuteOperationASyncRequest, Builder> {
         private String applicationId; 
-        private java.util.Map < String, ? > attributes; 
+        private java.util.Map<String, ?> attributes; 
         private String clientToken; 
         private String operation; 
         private String resourceGroupId; 
@@ -158,7 +163,7 @@ public class ExecuteOperationASyncRequest extends Request {
          * <!-- --></li>
          * </ul>
          */
-        public Builder attributes(java.util.Map < String, ? > attributes) {
+        public Builder attributes(java.util.Map<String, ?> attributes) {
             String attributesShrink = shrink(attributes, "Attributes", "json");
             this.putBodyParameter("Attributes", attributesShrink);
             this.attributes = attributes;
@@ -181,7 +186,7 @@ public class ExecuteOperationASyncRequest extends Request {
          * <p>This operation type is the operation type of modifying the product, some operation types are generic, and some are used alone. The following is an example of ECS deployment:</p>
          * <ul>
          * <li>The name of the ECS: rename</li>
-         * <li>Specificationof ecs: modifyInstanceType</li>
+         * <li>Specification of ecs: modifyInstanceType</li>
          * <li>Startup of ecs: modifyInstanceType</li>
          * <li>Stop of ecs: modifyInstanceType</li>
          * <li>Restart of ecs: modifyInstanceType</li>
