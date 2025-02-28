@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EntElementVerifyResponseBody} extends {@link TeaModel}
+ * {@link EntElementVerifyV2ResponseBody} extends {@link TeaModel}
  *
- * <p>EntElementVerifyResponseBody</p>
+ * <p>EntElementVerifyV2ResponseBody</p>
  */
-public class EntElementVerifyResponseBody extends TeaModel {
+public class EntElementVerifyV2ResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,7 +29,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    private EntElementVerifyResponseBody(Builder builder) {
+    private EntElementVerifyV2ResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -40,7 +40,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static EntElementVerifyResponseBody create() {
+    public static EntElementVerifyV2ResponseBody create() {
         return builder().build();
     }
 
@@ -113,17 +113,17 @@ public class EntElementVerifyResponseBody extends TeaModel {
             return this;
         }
 
-        public EntElementVerifyResponseBody build() {
-            return new EntElementVerifyResponseBody(this);
+        public EntElementVerifyV2ResponseBody build() {
+            return new EntElementVerifyV2ResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link EntElementVerifyResponseBody} extends {@link TeaModel}
+     * {@link EntElementVerifyV2ResponseBody} extends {@link TeaModel}
      *
-     * <p>EntElementVerifyResponseBody</p>
+     * <p>EntElementVerifyV2ResponseBody</p>
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
@@ -131,9 +131,6 @@ public class EntElementVerifyResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OpenTime")
         private String openTime;
-
-        @com.aliyun.core.annotation.NameInMap("ReasonCode")
-        private String reasonCode;
 
         @com.aliyun.core.annotation.NameInMap("ReasonDetail")
         private String reasonDetail;
@@ -144,7 +141,6 @@ public class EntElementVerifyResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.bizCode = builder.bizCode;
             this.openTime = builder.openTime;
-            this.reasonCode = builder.reasonCode;
             this.reasonDetail = builder.reasonDetail;
             this.status = builder.status;
         }
@@ -172,13 +168,6 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * @return reasonCode
-         */
-        public String getReasonCode() {
-            return this.reasonCode;
-        }
-
-        /**
          * @return reasonDetail
          */
         public String getReasonDetail() {
@@ -195,7 +184,6 @@ public class EntElementVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private String bizCode; 
             private String openTime; 
-            private String reasonCode; 
             private String reasonDetail; 
             private String status; 
 
@@ -212,14 +200,6 @@ public class EntElementVerifyResponseBody extends TeaModel {
              */
             public Builder openTime(String openTime) {
                 this.openTime = openTime;
-                return this;
-            }
-
-            /**
-             * ReasonCode.
-             */
-            public Builder reasonCode(String reasonCode) {
-                this.reasonCode = reasonCode;
                 return this;
             }
 

@@ -12,21 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EntElementVerifyRequest} extends {@link RequestModel}
+ * {@link EntElementVerifyV2Request} extends {@link RequestModel}
  *
- * <p>EntElementVerifyRequest</p>
+ * <p>EntElementVerifyV2Request</p>
  */
-public class EntElementVerifyRequest extends Request {
+public class EntElementVerifyV2Request extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EntName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InfoVerifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String infoVerifyType;
 
     @com.aliyun.core.annotation.Query
@@ -39,25 +41,30 @@ public class EntElementVerifyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LicenseNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String licenseNo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String merchantBizId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String merchantUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserAuthorization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userAuthorization;
 
-    private EntElementVerifyRequest(Builder builder) {
+    private EntElementVerifyV2Request(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.entName = builder.entName;
@@ -75,7 +82,7 @@ public class EntElementVerifyRequest extends Request {
         return new Builder();
     }
 
-    public static EntElementVerifyRequest create() {
+    public static EntElementVerifyV2Request create() {
         return builder().build();
     }
 
@@ -154,7 +161,7 @@ public class EntElementVerifyRequest extends Request {
         return this.userAuthorization;
     }
 
-    public static final class Builder extends Request.Builder<EntElementVerifyRequest, Builder> {
+    public static final class Builder extends Request.Builder<EntElementVerifyV2Request, Builder> {
         private String regionId; 
         private String entName; 
         private String infoVerifyType; 
@@ -170,7 +177,7 @@ public class EntElementVerifyRequest extends Request {
             super();
         } 
 
-        private Builder(EntElementVerifyRequest request) {
+        private Builder(EntElementVerifyV2Request request) {
             super(request);
             this.regionId = request.regionId;
             this.entName = request.entName;
@@ -194,7 +201,7 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * EntName.
+         * <p>This parameter is required.</p>
          */
         public Builder entName(String entName) {
             this.putQueryParameter("EntName", entName);
@@ -203,7 +210,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * InfoVerifyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENT_2META</p>
          */
         public Builder infoVerifyType(String infoVerifyType) {
             this.putQueryParameter("InfoVerifyType", infoVerifyType);
@@ -230,7 +240,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * LicenseNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91330106673959****</p>
          */
         public Builder licenseNo(String licenseNo) {
             this.putQueryParameter("LicenseNo", licenseNo);
@@ -239,7 +252,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c34a77f5ac40a5aa5e6ed20c35****</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -248,7 +264,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mch7x9a2b4c8d3e5f6g1h2i3j4k5****</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -257,7 +276,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000006</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -266,7 +288,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * UserAuthorization.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userAuthorization(String userAuthorization) {
             this.putQueryParameter("UserAuthorization", userAuthorization);
@@ -275,8 +300,8 @@ public class EntElementVerifyRequest extends Request {
         }
 
         @Override
-        public EntElementVerifyRequest build() {
-            return new EntElementVerifyRequest(this);
+        public EntElementVerifyV2Request build() {
+            return new EntElementVerifyV2Request(this);
         } 
 
     } 
