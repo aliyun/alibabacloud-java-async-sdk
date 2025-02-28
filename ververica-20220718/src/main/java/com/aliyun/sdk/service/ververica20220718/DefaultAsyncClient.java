@@ -760,6 +760,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetJobDiagnosis  GetJobDiagnosisRequest
+     * @return GetJobDiagnosisResponse
+     */
+    @Override
+    public CompletableFuture<GetJobDiagnosisResponse> getJobDiagnosis(GetJobDiagnosisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetJobDiagnosis").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/deployments/{deploymentId}/jobs/{jobId}/job-diagnoses/lite").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetJobDiagnosisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetJobDiagnosisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetLatestJobStartLog  GetLatestJobStartLogRequest
      * @return GetLatestJobStartLogResponse
      */
@@ -1421,6 +1439,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateUdfArtifactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateVariable  UpdateVariableRequest
+     * @return UpdateVariableResponse
+     */
+    @Override
+    public CompletableFuture<UpdateVariableResponse> updateVariable(UpdateVariableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateVariable").setMethod(HttpMethod.PATCH).setPathRegex("/api/v2/namespaces/{namespace}/variables/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateVariableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateVariableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

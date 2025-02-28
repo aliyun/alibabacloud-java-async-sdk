@@ -260,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
     /**
+     * @param request the request parameters of GetJobDiagnosis  GetJobDiagnosisRequest
+     * @return GetJobDiagnosisResponse
+     */
+    CompletableFuture<GetJobDiagnosisResponse> getJobDiagnosis(GetJobDiagnosisRequest request);
+
+    /**
      * @param request the request parameters of GetLatestJobStartLog  GetLatestJobStartLogRequest
      * @return GetLatestJobStartLogResponse
      */
@@ -481,6 +487,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUdfArtifactResponse
      */
     CompletableFuture<UpdateUdfArtifactResponse> updateUdfArtifact(UpdateUdfArtifactRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVariable  UpdateVariableRequest
+     * @return UpdateVariableResponse
+     */
+    CompletableFuture<UpdateVariableResponse> updateVariable(UpdateVariableRequest request);
 
     /**
      * @param request the request parameters of ValidateSqlStatement  ValidateSqlStatementRequest
