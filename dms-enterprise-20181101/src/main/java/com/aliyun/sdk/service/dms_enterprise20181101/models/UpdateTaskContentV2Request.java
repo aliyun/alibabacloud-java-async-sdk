@@ -17,17 +17,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTaskContentV2Request</p>
  */
 public class UpdateTaskContentV2Request extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NodeContent")
     private String nodeContent;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
     private UpdateTaskContentV2Request(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.nodeContent = builder.nodeContent;
         this.nodeId = builder.nodeId;
     }
@@ -46,6 +50,13 @@ public class UpdateTaskContentV2Request extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return nodeContent
      */
     public String getNodeContent() {
@@ -60,6 +71,7 @@ public class UpdateTaskContentV2Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTaskContentV2Request, Builder> {
+        private String regionId; 
         private String nodeContent; 
         private String nodeId; 
 
@@ -69,9 +81,19 @@ public class UpdateTaskContentV2Request extends Request {
 
         private Builder(UpdateTaskContentV2Request request) {
             super(request);
+            this.regionId = request.regionId;
             this.nodeContent = request.nodeContent;
             this.nodeId = request.nodeId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * NodeContent.
@@ -83,10 +105,7 @@ public class UpdateTaskContentV2Request extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>449***</p>
+         * NodeId.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

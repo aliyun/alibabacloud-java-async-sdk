@@ -191,7 +191,10 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * RealLoginUserUid.
+         * <p>The ID of the Alibaba Cloud account that is used to call the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21400447956867****</p>
          */
         public Builder realLoginUserUid(String realLoginUserUid) {
             this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
@@ -285,10 +288,10 @@ public class CreateDataCorrectOrderRequest extends Request {
             private Boolean logic; 
 
             /**
-             * <p>The ID of the database. The database can be a physical database or a logical database.</p>
+             * <p>The database ID. The database can be a physical database or a logical database.</p>
              * <ul>
-             * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
-             * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * <li>To query the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * <li>To query the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -300,7 +303,13 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID. You can call the ListInstances or GetInstance operation to query the instance ID.</p>
+             * <blockquote>
+             * <p>The instance change feature is supported only by ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and AnalyticDB for MySQL clusters.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1860****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -473,9 +482,9 @@ public class CreateDataCorrectOrderRequest extends Request {
             private String sqlType; 
 
             /**
-             * <p>The key of the attachment that contains the SQL statements used to change data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+             * <p>The key of the attachment that contains the SQL statements used to change data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of AttachmentKey.</p>
              * <blockquote>
-             * <p> This parameter is required if you set the <strong>SqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+             * <p> This parameter is required if you set <strong>SqlType</strong> to <strong>ATTACHMENT</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -498,7 +507,7 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * <p>The databases in which you want to change data.</p>
+             * <p>The databases whose data you want to change.</p>
              * <p>This parameter is required.</p>
              */
             public Builder dbItemList(java.util.List<DbItemList> dbItemList) {
@@ -507,7 +516,7 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * <p>The estimated number of data rows to be affected by the data change.</p>
+             * <p>The estimated number of data rows that may be affected by the data change.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -519,11 +528,11 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
+             * <p>The mode in which the data change ticket is executed after the ticket is approved. Valid values:</p>
              * <ul>
-             * <li><strong>COMMITOR</strong>: The data change is performed by the user who submits the ticket.</li>
-             * <li><strong>AUTO</strong>: The data change is automatically performed after the ticket is approved.</li>
-             * <li><strong>LAST_AUDITOR</strong>: The data change is performed by the last approver of the ticket.</li>
+             * <li><strong>COMMITOR</strong>: The ticket is executed by the user who submits the ticket.</li>
+             * <li><strong>AUTO</strong>: The ticket is automatically executed after the ticket is approved.</li>
+             * <li><strong>LAST_AUDITOR</strong>: The ticket is executed by the last approver of the ticket.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -535,10 +544,15 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * <p>The SQL statements that you want to execute to change data.</p>
+             * <p>The SQL statements for data change.</p>
              * <blockquote>
-             * <p> This parameter is required if you set the <strong>SqlType</strong> parameter to <strong>TEXT</strong>.</p>
              * </blockquote>
+             * <ul>
+             * <li><p>This parameter is required if you set <strong>SqlType</strong> to <strong>TEXT</strong>.</p>
+             * </li>
+             * <li><p>The size of the SQL statement cannot exceed 15 MB.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>update base_user set id = 1 where id  = 1;</p>
@@ -549,9 +563,9 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * <p>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to the attachment key from the value of the AttachmentKey parameter.</p>
+             * <p>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of AttachmentKey.</p>
              * <blockquote>
-             * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+             * <p> This parameter is required if you set <strong>RollbackSqlType</strong> to <strong>ATTACHMENT</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -563,9 +577,9 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * <p>The SQL statements used to roll back the data change.</p>
+             * <p>The SQL statements for rolling back the data change.</p>
              * <blockquote>
-             * <p>This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>TEXT</strong>.</p>
+             * <p> This parameter is required if you set <strong>RollbackSqlType</strong> to <strong>TEXT</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -579,8 +593,8 @@ public class CreateDataCorrectOrderRequest extends Request {
             /**
              * <p>The format of the SQL statements used to roll back the data change. Valid values:</p>
              * <ul>
-             * <li><strong>TEXT</strong>: text</li>
-             * <li><strong>ATTACHMENT</strong>: attachment</li>
+             * <li><strong>TEXT</strong></li>
+             * <li><strong>ATTACHMENT</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -594,8 +608,8 @@ public class CreateDataCorrectOrderRequest extends Request {
             /**
              * <p>The format of the SQL statements used to change data. Valid values:</p>
              * <ul>
-             * <li><strong>TEXT</strong>: text</li>
-             * <li><strong>ATTACHMENT</strong>: attachment</li>
+             * <li><strong>TEXT</strong></li>
+             * <li><strong>ATTACHMENT</strong></li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

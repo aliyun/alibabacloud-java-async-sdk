@@ -257,7 +257,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UidString.
+         * <p>The UID of the String type. If you specify this parameter, the UID of the Long type is replaced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>322824****:dmstest.wu@A201***</p>
          */
         public Builder uidString(String uidString) {
             this.putQueryParameter("UidString", uidString);

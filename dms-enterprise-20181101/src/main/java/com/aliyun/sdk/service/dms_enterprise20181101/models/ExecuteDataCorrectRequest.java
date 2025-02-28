@@ -160,7 +160,10 @@ public class ExecuteDataCorrectRequest extends Request {
         }
 
         /**
-         * RealLoginUserUid.
+         * <p>The ID of the Alibaba Cloud account that is used to call the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21400447956867****</p>
          */
         public Builder realLoginUserUid(String realLoginUserUid) {
             this.putQueryParameter("RealLoginUserUid", realLoginUserUid);

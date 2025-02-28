@@ -209,7 +209,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private Long preCheckId; 
 
             /**
-             * JobId.
+             * <p>Export task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1385****</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -536,7 +539,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
             private OrderDetail orderDetail; 
 
             /**
-             * <p>The information about the ticket.</p>
+             * <p>The status information.</p>
              */
             public Builder keyInfo(KeyInfo keyInfo) {
                 this.keyInfo = keyInfo;
