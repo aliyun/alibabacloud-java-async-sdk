@@ -56,11 +56,17 @@ public class CreateImagePipelineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageFamily")
+    @Deprecated
     private String imageFamily;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageName")
+    @Deprecated
     private String imageName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOptions")
+    private ImageOptions imageOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImportImageOptions")
@@ -80,6 +86,7 @@ public class CreateImagePipelineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NvmeSupport")
+    @Deprecated
     private String nvmeSupport;
 
     @com.aliyun.core.annotation.Query
@@ -144,6 +151,7 @@ public class CreateImagePipelineRequest extends Request {
         this.description = builder.description;
         this.imageFamily = builder.imageFamily;
         this.imageName = builder.imageName;
+        this.imageOptions = builder.imageOptions;
         this.importImageOptions = builder.importImageOptions;
         this.instanceType = builder.instanceType;
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
@@ -251,6 +259,13 @@ public class CreateImagePipelineRequest extends Request {
      */
     public String getImageName() {
         return this.imageName;
+    }
+
+    /**
+     * @return imageOptions
+     */
+    public ImageOptions getImageOptions() {
+        return this.imageOptions;
     }
 
     /**
@@ -384,6 +399,7 @@ public class CreateImagePipelineRequest extends Request {
         private String description; 
         private String imageFamily; 
         private String imageName; 
+        private ImageOptions imageOptions; 
         private ImportImageOptions importImageOptions; 
         private String instanceType; 
         private Integer internetMaxBandwidthOut; 
@@ -419,6 +435,7 @@ public class CreateImagePipelineRequest extends Request {
             this.description = request.description;
             this.imageFamily = request.imageFamily;
             this.imageName = request.imageName;
+            this.imageOptions = request.imageOptions;
             this.importImageOptions = request.importImageOptions;
             this.instanceType = request.instanceType;
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
@@ -581,6 +598,15 @@ public class CreateImagePipelineRequest extends Request {
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
             this.imageName = imageName;
+            return this;
+        }
+
+        /**
+         * ImageOptions.
+         */
+        public Builder imageOptions(ImageOptions imageOptions) {
+            this.putQueryParameter("ImageOptions", imageOptions);
+            this.imageOptions = imageOptions;
             return this;
         }
 
@@ -822,10 +848,14 @@ public class CreateImagePipelineRequest extends Request {
      * <p>CreateImagePipelineRequest</p>
      */
     public static class AdvancedOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageNameSuffix")
+        private String imageNameSuffix;
+
         @com.aliyun.core.annotation.NameInMap("RetainCloudAssistant")
         private Boolean retainCloudAssistant;
 
         private AdvancedOptions(Builder builder) {
+            this.imageNameSuffix = builder.imageNameSuffix;
             this.retainCloudAssistant = builder.retainCloudAssistant;
         }
 
@@ -838,6 +868,13 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
+         * @return imageNameSuffix
+         */
+        public String getImageNameSuffix() {
+            return this.imageNameSuffix;
+        }
+
+        /**
          * @return retainCloudAssistant
          */
         public Boolean getRetainCloudAssistant() {
@@ -845,7 +882,16 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         public static final class Builder {
+            private String imageNameSuffix; 
             private Boolean retainCloudAssistant; 
+
+            /**
+             * ImageNameSuffix.
+             */
+            public Builder imageNameSuffix(String imageNameSuffix) {
+                this.imageNameSuffix = imageNameSuffix;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to retain Cloud Assistant Agent that is installed during the image building process. During the image building process, the system automatically installs Cloud Assistant Agent on the intermediate instance to run commands. You can choose whether to retain Cloud Assistant Agent that is installed during the image building process in the new image. Valid values:</p>
@@ -868,6 +914,265 @@ public class CreateImagePipelineRequest extends Request {
 
             public AdvancedOptions build() {
                 return new AdvancedOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateImagePipelineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImagePipelineRequest</p>
+     */
+    public static class ImageFeatures extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
+        private String nvmeSupport;
+
+        private ImageFeatures(Builder builder) {
+            this.nvmeSupport = builder.nvmeSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageFeatures create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+        public static final class Builder {
+            private String nvmeSupport; 
+
+            /**
+             * <p>Specifies whether the image created based on the image template supports the NVMe protocol. Valid values:</p>
+             * <ul>
+             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * <li>auto: The system automatically detects whether the image supports the NVMe protocol. The system automatically detects whether the NVMe driver is installed on your image before the new image is built. If you install or uninstall the NVMe driver during the image building process, the detection result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            public ImageFeatures build() {
+                return new ImageFeatures(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateImagePipelineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImagePipelineRequest</p>
+     */
+    public static class ImageTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ImageTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ImageTags build() {
+                return new ImageTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateImagePipelineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImagePipelineRequest</p>
+     */
+    public static class ImageOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
+        private String imageFamily;
+
+        @com.aliyun.core.annotation.NameInMap("ImageFeatures")
+        private ImageFeatures imageFeatures;
+
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private String imageName;
+
+        @com.aliyun.core.annotation.NameInMap("ImageTags")
+        private java.util.List<ImageTags> imageTags;
+
+        private ImageOptions(Builder builder) {
+            this.description = builder.description;
+            this.imageFamily = builder.imageFamily;
+            this.imageFeatures = builder.imageFeatures;
+            this.imageName = builder.imageName;
+            this.imageTags = builder.imageTags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return imageFamily
+         */
+        public String getImageFamily() {
+            return this.imageFamily;
+        }
+
+        /**
+         * @return imageFeatures
+         */
+        public ImageFeatures getImageFeatures() {
+            return this.imageFeatures;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return imageTags
+         */
+        public java.util.List<ImageTags> getImageTags() {
+            return this.imageTags;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String imageFamily; 
+            private ImageFeatures imageFeatures; 
+            private String imageName; 
+            private java.util.List<ImageTags> imageTags; 
+
+            /**
+             * <p>The description of the image template. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
+             */
+            public Builder imageFamily(String imageFamily) {
+                this.imageFamily = imageFamily;
+                return this;
+            }
+
+            /**
+             * ImageFeatures.
+             */
+            public Builder imageFeatures(ImageFeatures imageFeatures) {
+                this.imageFeatures = imageFeatures;
+                return this;
+            }
+
+            /**
+             * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testImageName</p>
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * ImageTags.
+             */
+            public Builder imageTags(java.util.List<ImageTags> imageTags) {
+                this.imageTags = imageTags;
+                return this;
+            }
+
+            public ImageOptions build() {
+                return new ImageOptions(this);
             } 
 
         } 
