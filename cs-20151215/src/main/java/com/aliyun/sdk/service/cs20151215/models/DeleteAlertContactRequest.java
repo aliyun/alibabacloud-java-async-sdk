@@ -60,6 +60,7 @@ public class DeleteAlertContactRequest extends Request {
         } 
 
         /**
+         * <p>The list of alert contact IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder contactIds(java.util.List<Long> contactIds) {

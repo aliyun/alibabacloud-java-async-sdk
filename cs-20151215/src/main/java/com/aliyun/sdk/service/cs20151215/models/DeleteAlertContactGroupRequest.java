@@ -60,6 +60,7 @@ public class DeleteAlertContactGroupRequest extends Request {
         } 
 
         /**
+         * <p>The list of alert contact group IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder contactGroupIds(java.util.List<Long> contactGroupIds) {

@@ -79,8 +79,16 @@ public class ModifyClusterRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("security_group_id")
+    private String securityGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("system_events_logging")
     private SystemEventsLogging systemEventsLogging;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timezone")
+    private String timezone;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vswitch_ids")
@@ -103,7 +111,9 @@ public class ModifyClusterRequest extends Request {
         this.maintenanceWindow = builder.maintenanceWindow;
         this.operationPolicy = builder.operationPolicy;
         this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupId = builder.securityGroupId;
         this.systemEventsLogging = builder.systemEventsLogging;
+        this.timezone = builder.timezone;
         this.vswitchIds = builder.vswitchIds;
     }
 
@@ -226,10 +236,24 @@ public class ModifyClusterRequest extends Request {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return systemEventsLogging
      */
     public SystemEventsLogging getSystemEventsLogging() {
         return this.systemEventsLogging;
+    }
+
+    /**
+     * @return timezone
+     */
+    public String getTimezone() {
+        return this.timezone;
     }
 
     /**
@@ -255,7 +279,9 @@ public class ModifyClusterRequest extends Request {
         private MaintenanceWindow maintenanceWindow; 
         private OperationPolicy operationPolicy; 
         private String resourceGroupId; 
+        private String securityGroupId; 
         private SystemEventsLogging systemEventsLogging; 
+        private String timezone; 
         private java.util.List<String> vswitchIds; 
 
         private Builder() {
@@ -279,7 +305,9 @@ public class ModifyClusterRequest extends Request {
             this.maintenanceWindow = request.maintenanceWindow;
             this.operationPolicy = request.operationPolicy;
             this.resourceGroupId = request.resourceGroupId;
+            this.securityGroupId = request.securityGroupId;
             this.systemEventsLogging = request.systemEventsLogging;
+            this.timezone = request.timezone;
             this.vswitchIds = request.vswitchIds;
         } 
 
@@ -474,11 +502,29 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
+         * security_group_id.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putBodyParameter("security_group_id", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
          * <p>The storage configurations of system events.</p>
          */
         public Builder systemEventsLogging(SystemEventsLogging systemEventsLogging) {
             this.putBodyParameter("system_events_logging", systemEventsLogging);
             this.systemEventsLogging = systemEventsLogging;
+            return this;
+        }
+
+        /**
+         * timezone.
+         */
+        public Builder timezone(String timezone) {
+            this.putBodyParameter("timezone", timezone);
+            this.timezone = timezone;
             return this;
         }
 

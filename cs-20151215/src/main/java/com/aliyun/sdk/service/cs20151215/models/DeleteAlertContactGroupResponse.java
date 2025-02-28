@@ -185,7 +185,14 @@ public class DeleteAlertContactGroupResponse extends Response {
             private String contactGroupId; 
 
             /**
-             * status.
+             * <p>The deletion status.</p>
+             * <ul>
+             * <li>true: The alert contact group was deleted.</li>
+             * <li>false: The alert contact group failed to be deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -193,7 +200,10 @@ public class DeleteAlertContactGroupResponse extends Response {
             }
 
             /**
-             * msg.
+             * <p>The error message returned if the call fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Delete contact group resource failed.</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -201,7 +211,10 @@ public class DeleteAlertContactGroupResponse extends Response {
             }
 
             /**
-             * contact_group_id.
+             * <p>The alert contact group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder contactGroupId(String contactGroupId) {
                 this.contactGroupId = contactGroupId;
