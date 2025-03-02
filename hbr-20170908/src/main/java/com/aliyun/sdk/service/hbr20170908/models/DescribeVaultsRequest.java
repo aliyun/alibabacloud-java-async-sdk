@@ -43,6 +43,10 @@ public class DescribeVaultsRequest extends Request {
     private String vaultId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultName")
+    private String vaultName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VaultRegionId")
     private String vaultRegionId;
 
@@ -58,6 +62,7 @@ public class DescribeVaultsRequest extends Request {
         this.status = builder.status;
         this.tag = builder.tag;
         this.vaultId = builder.vaultId;
+        this.vaultName = builder.vaultName;
         this.vaultRegionId = builder.vaultRegionId;
         this.vaultType = builder.vaultType;
     }
@@ -118,6 +123,13 @@ public class DescribeVaultsRequest extends Request {
     }
 
     /**
+     * @return vaultName
+     */
+    public String getVaultName() {
+        return this.vaultName;
+    }
+
+    /**
      * @return vaultRegionId
      */
     public String getVaultRegionId() {
@@ -138,6 +150,7 @@ public class DescribeVaultsRequest extends Request {
         private String status; 
         private java.util.List<Tag> tag; 
         private String vaultId; 
+        private String vaultName; 
         private String vaultRegionId; 
         private String vaultType; 
 
@@ -153,6 +166,7 @@ public class DescribeVaultsRequest extends Request {
             this.status = request.status;
             this.tag = request.tag;
             this.vaultId = request.vaultId;
+            this.vaultName = request.vaultName;
             this.vaultRegionId = request.vaultRegionId;
             this.vaultType = request.vaultType;
         } 
@@ -232,6 +246,15 @@ public class DescribeVaultsRequest extends Request {
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
             this.vaultId = vaultId;
+            return this;
+        }
+
+        /**
+         * VaultName.
+         */
+        public Builder vaultName(String vaultName) {
+            this.putQueryParameter("VaultName", vaultName);
+            this.vaultName = vaultName;
             return this;
         }
 

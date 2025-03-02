@@ -534,7 +534,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the client group that executes the data synchronization plan. This parameter is required only for data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-***************</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -595,7 +598,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>The ID of the data source. This parameter is required only for data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-****************</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -765,7 +771,7 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>Table store instance details.</p>
+         * <p>The details about the Tablestore instance.</p>
          */
         public Builder otsDetail(OtsDetail otsDetail) {
             String otsDetailShrink = shrink(otsDetail, "OtsDetail", "json");
@@ -847,13 +853,14 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * <p>Data source type, with the following options:</p>
+         * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li><strong>ECS_FILE</strong>: Backs up ECS files</li>
-         * <li><strong>OSS</strong>: Backs up Alibaba Cloud OSS</li>
-         * <li><strong>NAS</strong>: Backs up Alibaba Cloud NAS</li>
-         * <li><strong>OTS</strong>: Backs up Alibaba Cloud OTS</li>
-         * <li><strong>UDM_ECS</strong>: Backs up the entire ECS instance</li>
+         * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+         * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems</li>
+         * <li><strong>OTS</strong>: Tablestore instances</li>
+         * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * <li><strong>SYNC</strong>: data synchronization</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

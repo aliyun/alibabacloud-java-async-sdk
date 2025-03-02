@@ -1078,7 +1078,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CanBeDeleted.
+             * <p>Indicates whether the disk backup point can be deleted. This parameter is valid only if the value of SourceType is UDM_ECS_DISK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canBeDeleted(Boolean canBeDeleted) {
                 this.canBeDeleted = canBeDeleted;
