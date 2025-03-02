@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of GetPhoneNumberIdentificationResult  GetPhoneNumberIdentificationResultRequest
+     * @return GetPhoneNumberIdentificationResultResponse
+     */
     @Override
     public CompletableFuture<GetPhoneNumberIdentificationResultResponse> getPhoneNumberIdentificationResult(GetPhoneNumberIdentificationResultRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPhoneNumberIdentificationUrl  GetPhoneNumberIdentificationUrlRequest
+     * @return GetPhoneNumberIdentificationUrlResponse
+     */
     @Override
     public CompletableFuture<GetPhoneNumberIdentificationUrlResponse> getPhoneNumberIdentificationUrl(GetPhoneNumberIdentificationUrlRequest request) {
         try {

@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20230101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberIdentificationResultRequest} extends {@link RequestModel}
  *
  * <p>GetPhoneNumberIdentificationResultRequest</p>
  */
 public class GetPhoneNumberIdentificationResultRequest extends Request {
-    @Query
-    @NameInMap("AuthCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authCode;
 
-    @Query
-    @NameInMap("OutId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SessionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
-    @Query
-    @NameInMap("SessionPayload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionPayload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionPayload;
 
     private GetPhoneNumberIdentificationResultRequest(Builder builder) {
@@ -157,7 +162,11 @@ public class GetPhoneNumberIdentificationResultRequest extends Request {
         } 
 
         /**
-         * The authorization code.
+         * <p>The authorization code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K***9i7CIe</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -166,7 +175,11 @@ public class GetPhoneNumberIdentificationResultRequest extends Request {
         }
 
         /**
-         * The external ID.
+         * <p>The external ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149b03d2-a749-4e6e-8f5b-34******5815</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -184,7 +197,11 @@ public class GetPhoneNumberIdentificationResultRequest extends Request {
         }
 
         /**
-         * The phone number of the subscriber. The phone number to be verified must be in the Mobile Station International Subscriber Directory Number (MSISDN) format.
+         * <p>The phone number of the subscriber. The phone number to be verified must be in the Mobile Station International Subscriber Directory Number (MSISDN) format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>628211****113</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -211,7 +228,11 @@ public class GetPhoneNumberIdentificationResultRequest extends Request {
         }
 
         /**
-         * The session ID.
+         * <p>The session ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8636b75e2fcb40c53ffecc2b5947115c.149b03d2a7494e6e8f5b34c915245815.707c7f0d93f4409db0761aa5da94ce01.1686******041</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -220,7 +241,11 @@ public class GetPhoneNumberIdentificationResultRequest extends Request {
         }
 
         /**
-         * The session payload.
+         * <p>The session payload.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uQne0vsuNywXVvI4VP5taHsgDNsd3BwcbmrhjXi58WbxBGFW+e8ufMEi9j89YonphV6NZ1PIeKvboHtU1nsSjZMTcoFPfkjqaORIHdSlPb6vmIzqOnJMsP1KPQ8K1JLXSaAKsB2lQ5A9HCkX2HzDEwje14HYQsnPd/Ka2YWgXuL0N8GE9oYi25d4DdlU0XR52YjSj8GMLSgbW7yNxEPvUCOQG83FZfQqmIWG2+0C/fQ3gdG9WI7AeeHZo4IRKGtQnpjKGtZZl8VoLPNIswDqZeeyjCyZlKUXKrAt4Co9c4I4q8G1jZm53COQJ+DuTiWH7w+tois3WJwFV/HmdlAKt8SqpiVrEv47VQ9V+8FYsdKz3A3CRyBVgNj6wYKKbwaI9BdQoOkbYzzA8CfAKO5w1oYVD2nOcYS/AffbPbE31PJj7SdVvKghwPL56OVdjS9Hd0iW0SMBWD0F1iRNCUNHL3ffHcFjJLdhTrMt8VHSRn0nOlvO1ZaWqMQ0yE0q*************************kXTpoQLo0+0h+CEcf90hTg8XdMhj9B0A3SOINceLlmoZb3czvYl00+CC0075DjOX41YtnuAUfaNYPgLIZkjYyq+JopBQFAkxPUbJHC0oCzB9dQahUthWY38OPBs=</p>
          */
         public Builder sessionPayload(String sessionPayload) {
             this.putQueryParameter("SessionPayload", sessionPayload);
