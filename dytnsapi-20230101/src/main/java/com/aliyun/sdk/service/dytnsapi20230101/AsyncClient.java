@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of DescribeNumberHLR  DescribeNumberHLRRequest
+     * @return DescribeNumberHLRResponse
+     */
+    CompletableFuture<DescribeNumberHLRResponse> describeNumberHLR(DescribeNumberHLRRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNumberMccMnc  DescribeNumberMccMncRequest
+     * @return DescribeNumberMccMncResponse
+     */
+    CompletableFuture<DescribeNumberMccMncResponse> describeNumberMccMnc(DescribeNumberMccMncRequest request);
+
+    /**
      * @param request the request parameters of GetPhoneNumberIdentificationResult  GetPhoneNumberIdentificationResultRequest
      * @return GetPhoneNumberIdentificationResultResponse
      */
