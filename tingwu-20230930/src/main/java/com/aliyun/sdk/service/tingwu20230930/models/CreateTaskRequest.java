@@ -1308,6 +1308,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PhraseId")
         private String phraseId;
 
+        @com.aliyun.core.annotation.NameInMap("RealtimeDiarizationEnabled")
+        private Boolean realtimeDiarizationEnabled;
+
         private Transcription(Builder builder) {
             this.additionalStreamOutputLevel = builder.additionalStreamOutputLevel;
             this.audioEventDetectionEnabled = builder.audioEventDetectionEnabled;
@@ -1316,6 +1319,7 @@ public class CreateTaskRequest extends Request {
             this.model = builder.model;
             this.outputLevel = builder.outputLevel;
             this.phraseId = builder.phraseId;
+            this.realtimeDiarizationEnabled = builder.realtimeDiarizationEnabled;
         }
 
         public static Builder builder() {
@@ -1375,6 +1379,13 @@ public class CreateTaskRequest extends Request {
             return this.phraseId;
         }
 
+        /**
+         * @return realtimeDiarizationEnabled
+         */
+        public Boolean getRealtimeDiarizationEnabled() {
+            return this.realtimeDiarizationEnabled;
+        }
+
         public static final class Builder {
             private Integer additionalStreamOutputLevel; 
             private Boolean audioEventDetectionEnabled; 
@@ -1383,6 +1394,7 @@ public class CreateTaskRequest extends Request {
             private String model; 
             private Integer outputLevel; 
             private String phraseId; 
+            private Boolean realtimeDiarizationEnabled; 
 
             /**
              * AdditionalStreamOutputLevel.
@@ -1437,6 +1449,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder phraseId(String phraseId) {
                 this.phraseId = phraseId;
+                return this;
+            }
+
+            /**
+             * RealtimeDiarizationEnabled.
+             */
+            public Builder realtimeDiarizationEnabled(Boolean realtimeDiarizationEnabled) {
+                this.realtimeDiarizationEnabled = realtimeDiarizationEnabled;
                 return this;
             }
 
