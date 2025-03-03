@@ -79,6 +79,10 @@ public class CreateDifyInstanceRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuNodeSpec")
+    private String gpuNodeSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KvStoreAccount")
     private String kvStoreAccount;
 
@@ -109,6 +113,14 @@ public class CreateDifyInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KvStoreType")
     private String kvStoreType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    private String modelId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelOption")
+    private String modelOption;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssPath")
@@ -244,6 +256,7 @@ public class CreateDifyInstanceRequest extends Request {
         this.dbStorageSize = builder.dbStorageSize;
         this.dbStorageType = builder.dbStorageType;
         this.dryRun = builder.dryRun;
+        this.gpuNodeSpec = builder.gpuNodeSpec;
         this.kvStoreAccount = builder.kvStoreAccount;
         this.kvStoreEngineVersion = builder.kvStoreEngineVersion;
         this.kvStoreInstanceClass = builder.kvStoreInstanceClass;
@@ -252,6 +265,8 @@ public class CreateDifyInstanceRequest extends Request {
         this.kvStorePassword = builder.kvStorePassword;
         this.kvStoreResourceId = builder.kvStoreResourceId;
         this.kvStoreType = builder.kvStoreType;
+        this.modelId = builder.modelId;
+        this.modelOption = builder.modelOption;
         this.ossPath = builder.ossPath;
         this.ossResourceId = builder.ossResourceId;
         this.payPeriod = builder.payPeriod;
@@ -401,6 +416,13 @@ public class CreateDifyInstanceRequest extends Request {
     }
 
     /**
+     * @return gpuNodeSpec
+     */
+    public String getGpuNodeSpec() {
+        return this.gpuNodeSpec;
+    }
+
+    /**
      * @return kvStoreAccount
      */
     public String getKvStoreAccount() {
@@ -454,6 +476,20 @@ public class CreateDifyInstanceRequest extends Request {
      */
     public String getKvStoreType() {
         return this.kvStoreType;
+    }
+
+    /**
+     * @return modelId
+     */
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    /**
+     * @return modelOption
+     */
+    public String getModelOption() {
+        return this.modelOption;
     }
 
     /**
@@ -668,6 +704,7 @@ public class CreateDifyInstanceRequest extends Request {
         private String dbStorageSize; 
         private String dbStorageType; 
         private Boolean dryRun; 
+        private String gpuNodeSpec; 
         private String kvStoreAccount; 
         private String kvStoreEngineVersion; 
         private String kvStoreInstanceClass; 
@@ -676,6 +713,8 @@ public class CreateDifyInstanceRequest extends Request {
         private String kvStorePassword; 
         private Integer kvStoreResourceId; 
         private String kvStoreType; 
+        private String modelId; 
+        private String modelOption; 
         private String ossPath; 
         private Integer ossResourceId; 
         private Integer payPeriod; 
@@ -726,6 +765,7 @@ public class CreateDifyInstanceRequest extends Request {
             this.dbStorageSize = request.dbStorageSize;
             this.dbStorageType = request.dbStorageType;
             this.dryRun = request.dryRun;
+            this.gpuNodeSpec = request.gpuNodeSpec;
             this.kvStoreAccount = request.kvStoreAccount;
             this.kvStoreEngineVersion = request.kvStoreEngineVersion;
             this.kvStoreInstanceClass = request.kvStoreInstanceClass;
@@ -734,6 +774,8 @@ public class CreateDifyInstanceRequest extends Request {
             this.kvStorePassword = request.kvStorePassword;
             this.kvStoreResourceId = request.kvStoreResourceId;
             this.kvStoreType = request.kvStoreType;
+            this.modelId = request.modelId;
+            this.modelOption = request.modelOption;
             this.ossPath = request.ossPath;
             this.ossResourceId = request.ossResourceId;
             this.payPeriod = request.payPeriod;
@@ -900,6 +942,15 @@ public class CreateDifyInstanceRequest extends Request {
         }
 
         /**
+         * GpuNodeSpec.
+         */
+        public Builder gpuNodeSpec(String gpuNodeSpec) {
+            this.putQueryParameter("GpuNodeSpec", gpuNodeSpec);
+            this.gpuNodeSpec = gpuNodeSpec;
+            return this;
+        }
+
+        /**
          * KvStoreAccount.
          */
         public Builder kvStoreAccount(String kvStoreAccount) {
@@ -968,6 +1019,24 @@ public class CreateDifyInstanceRequest extends Request {
         public Builder kvStoreType(String kvStoreType) {
             this.putQueryParameter("KvStoreType", kvStoreType);
             this.kvStoreType = kvStoreType;
+            return this;
+        }
+
+        /**
+         * ModelId.
+         */
+        public Builder modelId(String modelId) {
+            this.putQueryParameter("ModelId", modelId);
+            this.modelId = modelId;
+            return this;
+        }
+
+        /**
+         * ModelOption.
+         */
+        public Builder modelOption(String modelOption) {
+            this.putQueryParameter("ModelOption", modelOption);
+            this.modelOption = modelOption;
             return this;
         }
 

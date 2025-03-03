@@ -1060,6 +1060,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("pointId")
+        private String pointId;
+
         @com.aliyun.core.annotation.NameInMap("questionDescription")
         private String questionDescription;
 
@@ -1073,6 +1076,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.answerList = builder.answerList;
             this.knowledgeList = builder.knowledgeList;
             this.name = builder.name;
+            this.pointId = builder.pointId;
             this.questionDescription = builder.questionDescription;
             this.sortNo = builder.sortNo;
             this.weight = builder.weight;
@@ -1108,6 +1112,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
 
         /**
+         * @return pointId
+         */
+        public String getPointId() {
+            return this.pointId;
+        }
+
+        /**
          * @return questionDescription
          */
         public String getQuestionDescription() {
@@ -1132,6 +1143,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private java.util.List<AnswerList> answerList; 
             private java.util.List<String> knowledgeList; 
             private String name; 
+            private String pointId; 
             private String questionDescription; 
             private Integer sortNo; 
             private Integer weight; 
@@ -1157,6 +1169,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * pointId.
+             */
+            public Builder pointId(String pointId) {
+                this.pointId = pointId;
                 return this;
             }
 

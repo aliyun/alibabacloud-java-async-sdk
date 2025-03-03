@@ -133,6 +133,9 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackIpInfo")
         private String attackIpInfo;
 
+        @com.aliyun.core.annotation.NameInMap("AttackIps")
+        private java.util.List<String> attackIps;
+
         @com.aliyun.core.annotation.NameInMap("EndTs")
         private Long endTs;
 
@@ -187,6 +190,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             this.attackCntInfo = builder.attackCntInfo;
             this.attackIp = builder.attackIp;
             this.attackIpInfo = builder.attackIpInfo;
+            this.attackIps = builder.attackIps;
             this.endTs = builder.endTs;
             this.eventId = builder.eventId;
             this.eventInfo = builder.eventInfo;
@@ -266,6 +270,13 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          */
         public String getAttackIpInfo() {
             return this.attackIpInfo;
+        }
+
+        /**
+         * @return attackIps
+         */
+        public java.util.List<String> getAttackIps() {
+            return this.attackIps;
         }
 
         /**
@@ -382,6 +393,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             private String attackCntInfo; 
             private String attackIp; 
             private String attackIpInfo; 
+            private java.util.List<String> attackIps; 
             private Long endTs; 
             private String eventId; 
             private String eventInfo; 
@@ -400,6 +412,9 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
 
             /**
              * <p>The number of attacks.</p>
+             * <blockquote>
+             * <p>Notice: The parameter has been deprecated, please use the Attackips parameter.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -492,6 +507,14 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
              */
             public Builder attackIpInfo(String attackIpInfo) {
                 this.attackIpInfo = attackIpInfo;
+                return this;
+            }
+
+            /**
+             * <p>The source IP addresses of the attacks.</p>
+             */
+            public Builder attackIps(java.util.List<String> attackIps) {
+                this.attackIps = attackIps;
                 return this;
             }
 

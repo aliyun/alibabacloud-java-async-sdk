@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ExecuteSQLQueryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Columns")
-    private java.util.List < Columns> columns;
+    private java.util.List<Columns> columns;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -25,7 +30,7 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rows")
-    private java.util.List < ? > rows;
+    private java.util.List<?> rows;
 
     private ExecuteSQLQueryResponseBody(Builder builder) {
         this.columns = builder.columns;
@@ -46,7 +51,7 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
     /**
      * @return columns
      */
-    public java.util.List < Columns> getColumns() {
+    public java.util.List<Columns> getColumns() {
         return this.columns;
     }
 
@@ -74,21 +79,21 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
     /**
      * @return rows
      */
-    public java.util.List < ? > getRows() {
+    public java.util.List<?> getRows() {
         return this.rows;
     }
 
     public static final class Builder {
-        private java.util.List < Columns> columns; 
+        private java.util.List<Columns> columns; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ? > rows; 
+        private java.util.List<?> rows; 
 
         /**
          * <p>The columns.</p>
          */
-        public Builder columns(java.util.List < Columns> columns) {
+        public Builder columns(java.util.List<Columns> columns) {
             this.columns = columns;
             return this;
         }
@@ -123,7 +128,7 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
         /**
          * <p>An array of search results.</p>
          */
-        public Builder rows(java.util.List < ? > rows) {
+        public Builder rows(java.util.List<?> rows) {
             this.rows = rows;
             return this;
         }

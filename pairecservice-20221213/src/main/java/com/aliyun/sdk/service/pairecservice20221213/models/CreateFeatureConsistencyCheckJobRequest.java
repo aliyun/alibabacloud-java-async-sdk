@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFeatureConsistencyCheckJobRequest} extends {@link RequestModel}
  *
  * <p>CreateFeatureConsistencyCheckJobRequest</p>
@@ -122,7 +128,10 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -131,7 +140,10 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * FeatureConsistencyCheckJobConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder featureConsistencyCheckJobConfigId(String featureConsistencyCheckJobConfigId) {
             this.putBodyParameter("FeatureConsistencyCheckJobConfigId", featureConsistencyCheckJobConfigId);
@@ -140,7 +152,10 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -149,7 +164,10 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * SamplingDuration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder samplingDuration(Integer samplingDuration) {
             this.putBodyParameter("SamplingDuration", samplingDuration);

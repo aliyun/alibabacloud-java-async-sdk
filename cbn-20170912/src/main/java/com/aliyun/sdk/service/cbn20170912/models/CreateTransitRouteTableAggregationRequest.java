@@ -56,8 +56,11 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouteTableAggregationScope")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouteTableAggregationScope;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouteTableAggregationScopeList")
+    private java.util.List<String> transitRouteTableAggregationScopeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouteTableId")
@@ -76,6 +79,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         this.transitRouteTableAggregationDescription = builder.transitRouteTableAggregationDescription;
         this.transitRouteTableAggregationName = builder.transitRouteTableAggregationName;
         this.transitRouteTableAggregationScope = builder.transitRouteTableAggregationScope;
+        this.transitRouteTableAggregationScopeList = builder.transitRouteTableAggregationScopeList;
         this.transitRouteTableId = builder.transitRouteTableId;
     }
 
@@ -163,6 +167,13 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
     }
 
     /**
+     * @return transitRouteTableAggregationScopeList
+     */
+    public java.util.List<String> getTransitRouteTableAggregationScopeList() {
+        return this.transitRouteTableAggregationScopeList;
+    }
+
+    /**
      * @return transitRouteTableId
      */
     public String getTransitRouteTableId() {
@@ -180,6 +191,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         private String transitRouteTableAggregationDescription; 
         private String transitRouteTableAggregationName; 
         private String transitRouteTableAggregationScope; 
+        private java.util.List<String> transitRouteTableAggregationScopeList; 
         private String transitRouteTableId; 
 
         private Builder() {
@@ -198,6 +210,7 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
             this.transitRouteTableAggregationDescription = request.transitRouteTableAggregationDescription;
             this.transitRouteTableAggregationName = request.transitRouteTableAggregationName;
             this.transitRouteTableAggregationScope = request.transitRouteTableAggregationScope;
+            this.transitRouteTableAggregationScopeList = request.transitRouteTableAggregationScopeList;
             this.transitRouteTableId = request.transitRouteTableId;
         } 
 
@@ -318,7 +331,6 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         /**
          * <p>The scope of networks that you want to advertise the aggregate route.</p>
          * <p>Set the value to <strong>VPC</strong>, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -326,6 +338,16 @@ public class CreateTransitRouteTableAggregationRequest extends Request {
         public Builder transitRouteTableAggregationScope(String transitRouteTableAggregationScope) {
             this.putQueryParameter("TransitRouteTableAggregationScope", transitRouteTableAggregationScope);
             this.transitRouteTableAggregationScope = transitRouteTableAggregationScope;
+            return this;
+        }
+
+        /**
+         * TransitRouteTableAggregationScopeList.
+         */
+        public Builder transitRouteTableAggregationScopeList(java.util.List<String> transitRouteTableAggregationScopeList) {
+            String transitRouteTableAggregationScopeListShrink = shrink(transitRouteTableAggregationScopeList, "TransitRouteTableAggregationScopeList", "json");
+            this.putQueryParameter("TransitRouteTableAggregationScopeList", transitRouteTableAggregationScopeListShrink);
+            this.transitRouteTableAggregationScopeList = transitRouteTableAggregationScopeList;
             return this;
         }
 

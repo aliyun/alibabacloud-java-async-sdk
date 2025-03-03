@@ -103,7 +103,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * LivePackageChannels.
+         * <p>The live package channels.</p>
          */
         public Builder livePackageChannels(java.util.List<LivePackageChannels> livePackageChannels) {
             this.livePackageChannels = livePackageChannels;
@@ -111,7 +111,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -119,7 +122,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +141,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sort order. Valid values: asc and desc (default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc/desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -143,7 +152,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -225,7 +237,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * Id.
+             * <p>The ingest endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ingest1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +248,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2F9e9******18b569c8</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -241,7 +259,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The ingest endpoint URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -249,7 +270,10 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us12******das</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -392,9 +416,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             private Integer segmentDuration; 
 
             /**
-             * <p>频道名称，字符必须为大小写英文字母或-、<em>。
-             * 1 ~ 200个字符。
-             * 格式：[A-Za-z0-9</em>-]+</p>
+             * <p>The channel name.</p>
              * 
              * <strong>example:</strong>
              * <p>ch3</p>
@@ -405,7 +427,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表创建时间的资源属性字段</p>
+             * <p>The time when the channel was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -416,7 +438,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>频道描述，最大1000个字符</p>
+             * <p>The channel description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -424,7 +446,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>频道组名称</p>
+             * <p>The channel group name.</p>
              * 
              * <strong>example:</strong>
              * <p>channel-group-1</p>
@@ -435,7 +457,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * IngestEndpoints.
+             * <p>The ingest endpoints.</p>
              */
             public Builder ingestEndpoints(java.util.List<IngestEndpoints> ingestEndpoints) {
                 this.ingestEndpoints = ingestEndpoints;
@@ -443,7 +465,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最后修改时间</p>
+             * <p>The time when the channel was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-04-01T12:00:00Z</p>
@@ -454,7 +476,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输入协议，目前仅支持HLS</p>
+             * <p>The ingest protocol. Only HLS is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>HLS</p>
@@ -465,7 +487,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输入流m3u8切片个数，2～100</p>
+             * <p>The number of M3U8 segments.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -476,7 +498,7 @@ public class ListLivePackageChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输入流切片时长，1～30</p>
+             * <p>The segment duration.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

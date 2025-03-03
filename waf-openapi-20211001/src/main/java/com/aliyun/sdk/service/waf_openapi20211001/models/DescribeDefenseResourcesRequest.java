@@ -215,7 +215,7 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -227,7 +227,7 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of the resource. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -287,7 +287,10 @@ public class DescribeDefenseResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tagkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -295,7 +298,10 @@ public class DescribeDefenseResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

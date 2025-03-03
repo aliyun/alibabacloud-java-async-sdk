@@ -211,6 +211,9 @@ public class GetDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("certName")
         private String certName;
 
+        @com.aliyun.core.annotation.NameInMap("clientCACert")
+        private String clientCACert;
+
         @com.aliyun.core.annotation.NameInMap("createFrom")
         private String createFrom;
 
@@ -231,6 +234,9 @@ public class GetDomainResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("issuer")
         private String issuer;
+
+        @com.aliyun.core.annotation.NameInMap("mTLSEnabled")
+        private Boolean mTLSEnabled;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -270,6 +276,7 @@ public class GetDomainResponseBody extends TeaModel {
             this.caCertIdentifier = builder.caCertIdentifier;
             this.certIdentifier = builder.certIdentifier;
             this.certName = builder.certName;
+            this.clientCACert = builder.clientCACert;
             this.createFrom = builder.createFrom;
             this.createTimestamp = builder.createTimestamp;
             this._default = builder._default;
@@ -277,6 +284,7 @@ public class GetDomainResponseBody extends TeaModel {
             this.forceHttps = builder.forceHttps;
             this.http2Option = builder.http2Option;
             this.issuer = builder.issuer;
+            this.mTLSEnabled = builder.mTLSEnabled;
             this.name = builder.name;
             this.notAfterTimstamp = builder.notAfterTimstamp;
             this.notBeforeTimestamp = builder.notBeforeTimestamp;
@@ -327,6 +335,13 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientCACert
+         */
+        public String getClientCACert() {
+            return this.clientCACert;
+        }
+
+        /**
          * @return createFrom
          */
         public String getCreateFrom() {
@@ -373,6 +388,13 @@ public class GetDomainResponseBody extends TeaModel {
          */
         public String getIssuer() {
             return this.issuer;
+        }
+
+        /**
+         * @return mTLSEnabled
+         */
+        public Boolean getMTLSEnabled() {
+            return this.mTLSEnabled;
         }
 
         /**
@@ -457,6 +479,7 @@ public class GetDomainResponseBody extends TeaModel {
             private String caCertIdentifier; 
             private String certIdentifier; 
             private String certName; 
+            private String clientCACert; 
             private String createFrom; 
             private Long createTimestamp; 
             private Boolean _default; 
@@ -464,6 +487,7 @@ public class GetDomainResponseBody extends TeaModel {
             private Boolean forceHttps; 
             private String http2Option; 
             private String issuer; 
+            private Boolean mTLSEnabled; 
             private String name; 
             private Long notAfterTimstamp; 
             private Long notBeforeTimestamp; 
@@ -511,6 +535,14 @@ public class GetDomainResponseBody extends TeaModel {
              */
             public Builder certName(String certName) {
                 this.certName = certName;
+                return this;
+            }
+
+            /**
+             * clientCACert.
+             */
+            public Builder clientCACert(String clientCACert) {
+                this.clientCACert = clientCACert;
                 return this;
             }
 
@@ -588,6 +620,14 @@ public class GetDomainResponseBody extends TeaModel {
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
+                return this;
+            }
+
+            /**
+             * mTLSEnabled.
+             */
+            public Builder mTLSEnabled(Boolean mTLSEnabled) {
+                this.mTLSEnabled = mTLSEnabled;
                 return this;
             }
 

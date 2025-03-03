@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBProxyEndpointRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CausalConsistReadTimeout")
+    private String causalConsistReadTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigDBProxyFeatures")
     private String configDBProxyFeatures;
 
@@ -94,8 +98,13 @@ public class ModifyDBProxyEndpointRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
     private ModifyDBProxyEndpointRequest(Builder builder) {
         super(builder);
+        this.causalConsistReadTimeout = builder.causalConsistReadTimeout;
         this.configDBProxyFeatures = builder.configDBProxyFeatures;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyEndpointId = builder.DBProxyEndpointId;
@@ -115,6 +124,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -128,6 +138,13 @@ public class ModifyDBProxyEndpointRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return causalConsistReadTimeout
+     */
+    public String getCausalConsistReadTimeout() {
+        return this.causalConsistReadTimeout;
     }
 
     /**
@@ -263,7 +280,15 @@ public class ModifyDBProxyEndpointRequest extends Request {
         return this.vSwitchId;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBProxyEndpointRequest, Builder> {
+        private String causalConsistReadTimeout; 
         private String configDBProxyFeatures; 
         private String DBInstanceId; 
         private String DBProxyEndpointId; 
@@ -283,6 +308,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String vSwitchId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -290,6 +316,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
 
         private Builder(ModifyDBProxyEndpointRequest request) {
             super(request);
+            this.causalConsistReadTimeout = request.causalConsistReadTimeout;
             this.configDBProxyFeatures = request.configDBProxyFeatures;
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyEndpointId = request.DBProxyEndpointId;
@@ -309,7 +336,17 @@ public class ModifyDBProxyEndpointRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
+
+        /**
+         * CausalConsistReadTimeout.
+         */
+        public Builder causalConsistReadTimeout(String causalConsistReadTimeout) {
+            this.putQueryParameter("CausalConsistReadTimeout", causalConsistReadTimeout);
+            this.causalConsistReadTimeout = causalConsistReadTimeout;
+            return this;
+        }
 
         /**
          * <p>The capabilities that you want to enable for the proxy endpoint. If you specify more than one capability, separate the capabilities with semicolons (;). Format: <code>Capability 1:Status;Capability 2:Status;...</code>. Do not add a semicolon (;) at the end of the value.</p>
@@ -604,6 +641,15 @@ public class ModifyDBProxyEndpointRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

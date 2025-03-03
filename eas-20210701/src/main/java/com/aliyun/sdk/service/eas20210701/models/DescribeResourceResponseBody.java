@@ -293,7 +293,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * CpuUsed.
+         * <p>The number of vCPUs that is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder cpuUsed(Integer cpuUsed) {
             this.cpuUsed = cpuUsed;
@@ -334,7 +337,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * GpuUsed.
+         * <p>The number of GPUs that is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder gpuUsed(Float gpuUsed) {
             this.gpuUsed = gpuUsed;
@@ -353,7 +359,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>The total memory size. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -361,7 +370,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * MemoryUsed.
+         * <p>The size of memory that is used. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memoryUsed(Integer memoryUsed) {
             this.memoryUsed = memoryUsed;

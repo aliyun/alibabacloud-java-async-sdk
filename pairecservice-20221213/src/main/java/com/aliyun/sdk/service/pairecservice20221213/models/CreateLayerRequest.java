@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLayerRequest} extends {@link RequestModel}
  *
  * <p>CreateLayerRequest</p>
  */
 public class CreateLayerRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -33,6 +43,7 @@ public class CreateLayerRequest extends Request {
 
     private CreateLayerRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.laboratoryId = builder.laboratoryId;
@@ -50,6 +61,13 @@ public class CreateLayerRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,6 +99,7 @@ public class CreateLayerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLayerRequest, Builder> {
+        private String regionId; 
         private String description; 
         private String instanceId; 
         private String laboratoryId; 
@@ -92,6 +111,7 @@ public class CreateLayerRequest extends Request {
 
         private Builder(CreateLayerRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.description = request.description;
             this.instanceId = request.instanceId;
             this.laboratoryId = request.laboratoryId;
@@ -99,7 +119,19 @@ public class CreateLayerRequest extends Request {
         } 
 
         /**
-         * Description.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -108,7 +140,10 @@ public class CreateLayerRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -117,7 +152,10 @@ public class CreateLayerRequest extends Request {
         }
 
         /**
-         * LaboratoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder laboratoryId(String laboratoryId) {
             this.putBodyParameter("LaboratoryId", laboratoryId);
@@ -126,7 +164,10 @@ public class CreateLayerRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>layer1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -326,6 +326,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AppType")
+        private String appType;
+
         @com.aliyun.core.annotation.NameInMap("BaseAppId")
         private String baseAppId;
 
@@ -367,6 +370,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appType = builder.appType;
             this.baseAppId = builder.baseAppId;
             this.cpu = builder.cpu;
             this.instances = builder.instances;
@@ -415,6 +419,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
         }
 
         /**
@@ -506,6 +517,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appDescription; 
             private String appId; 
             private String appName; 
+            private String appType; 
             private String baseAppId; 
             private Integer cpu; 
             private Integer instances; 
@@ -548,6 +560,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AppType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
                 return this;
             }
 
@@ -746,6 +766,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AppType")
+        private String appType;
+
         @com.aliyun.core.annotation.NameInMap("BaseAppId")
         private String baseAppId;
 
@@ -793,6 +816,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appType = builder.appType;
             this.baseAppId = builder.baseAppId;
             this.children = builder.children;
             this.cpu = builder.cpu;
@@ -843,6 +867,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
         }
 
         /**
@@ -948,6 +979,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appDescription; 
             private String appId; 
             private String appName; 
+            private String appType; 
             private String baseAppId; 
             private java.util.List<Children> children; 
             private Integer cpu; 
@@ -1008,6 +1040,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AppType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
                 return this;
             }
 

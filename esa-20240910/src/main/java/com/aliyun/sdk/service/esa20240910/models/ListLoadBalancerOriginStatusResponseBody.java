@@ -55,7 +55,7 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OriginStatus.
+         * <p>List of origin statuses under the load balancer.</p>
          */
         public Builder originStatus(java.util.List<OriginStatus> originStatus) {
             this.originStatus = originStatus;
@@ -63,7 +63,10 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID, used for tracking the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +172,10 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * LoadBalancerId.
+             * <p>ID of the load balancer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99874066052****</p>
              */
             public Builder loadBalancerId(Long loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -177,7 +183,10 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OriginId.
+             * <p>ID of the origin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99750209487****</p>
              */
             public Builder originId(Long originId) {
                 this.originId = originId;
@@ -185,7 +194,10 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PoolId.
+             * <p>ID of the source address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99750209487****</p>
              */
             public Builder poolId(Long poolId) {
                 this.poolId = poolId;
@@ -193,7 +205,10 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PoolType.
+             * <p>The origin pool to which the source belongs, under this load balancer. Only &quot;default_pool&quot; (default address pool) will be displayed; other types will return an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_pool</p>
              */
             public Builder poolType(String poolType) {
                 this.poolType = poolType;
@@ -201,7 +216,10 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>Reason for the probe failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP connection error</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -209,7 +227,16 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status of the origin:</p>
+             * <ul>
+             * <li>Healthy(healthy): The probe result is available.</li>
+             * <li>Unhealthy(unhealthy): The probe result is unavailable.</li>
+             * <li>Unknown(unknown): Unknown, the monitor has not yet probed.</li>
+             * <li>Undetected(undetected): The load balancer to which the origin belongs is not bound to a monitor.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -55,7 +55,7 @@ public class CreateVodPackagingAssetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Asset.
+         * <p>The information about the asset.</p>
          */
         public Builder asset(VodPackagingAsset asset) {
             this.asset = asset;
@@ -63,7 +63,10 @@ public class CreateVodPackagingAssetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

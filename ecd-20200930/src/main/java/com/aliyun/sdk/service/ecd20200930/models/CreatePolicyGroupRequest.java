@@ -844,9 +844,9 @@ public class CreatePolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether users have the administrator permissions after they connect to cloud desktops.</p>
+         * <p>Specifies whether end users have the administrator permissions.</p>
          * <blockquote>
-         * <p> This parameter is in invitational preview and not available to the public.</p>
+         * <p> This parameter is in invitational preview for specific users and not available to the public.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -887,7 +887,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The client IP address whitelists. Only the client IP addresses in whitelists can access the cloud desktop.</p>
+         * <p>The client IP address whitelist. After you configure the whitelist, end users can access cloud computers only from the IP addresses in the whitelist.</p>
          */
         public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
@@ -933,7 +933,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The logon methods. You can use this parameter to determine which clients can be used to connect to the cloud desktop.</p>
+         * <p>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</p>
          */
         public Builder clientType(java.util.List<ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -945,29 +945,10 @@ public class CreatePolicyGroupRequest extends Request {
          * <p>The permissions on the clipboard.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>read: specifies one-way transfer</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>You can copy data from your local computer to the cloud desktop, but cannot copy data from the cloud desktop to your local computer.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>readwrite: specifies two-way transfer</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>You can copy data between your local computer and the cloud desktop.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>off: disables both one-way and two-way transfer</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>You cannot copy data between your local computer and the cloud desktop. This value is the default value.</p>
-         * <!-- --></li>
+         * <li>read: specifies one-way transfer. You can copy files only from local devices to cloud computers.</li>
+         * <li>readwrite: specifies two-way transfer. You can copy files between local devices and cloud computers.</li>
+         * <li>write: specifies one-way transfer. You can only copy files from cloud computers to local devices.</li>
+         * <li>off (default): disables both one-way and two-way transfer. Files cannot be copied between local devices and cloud computers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -980,7 +961,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * DeviceRedirects.
+         * <p>The device redirection rules.</p>
          */
         public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
             this.putQueryParameter("DeviceRedirects", deviceRedirects);
@@ -989,7 +970,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * DeviceRules.
+         * <p>The custom peripheral rules.</p>
          */
         public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
             this.putQueryParameter("DeviceRules", deviceRules);
@@ -998,7 +979,8 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Access control for domain names. The wildcard character (*) is supported for domain names. Separate multiple domain names with commas (,). Valid values:</p>
+         * <p>Specifies whether the access control for domain names is enabled. Domain names support wildcards (*). Separate multiple domain names with commas (,).</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>off</li>
          * <li>on</li>
@@ -1014,7 +996,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The details of the domain name resolution policy.</p>
+         * <p>The details of the domain name resolution rule.</p>
          */
         public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
             this.putQueryParameter("DomainResolveRule", domainResolveRule);
@@ -1051,7 +1033,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow end users to seek assistance from the administrator. Valid values: ON OFF</p>
+         * <p>Specifies whether to turn on the Contact Administrator for Help switch.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OFF</li>
+         * <li>ON</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1063,7 +1050,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The switch for collaboration between end users. Valid values: ON OFF</p>
+         * <p>Specifies whether to turn on the User Stream Collaboration switch.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OFF</li>
+         * <li>ON</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1075,22 +1067,11 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the image display quality feature for the Graphics cloud desktop. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional design scenarios.</p>
+         * <p>Specifies whether to enable the Image Quality Control feature. If you have high requirements on the performance and user experience in scenarios such as professional design, we recommend that you enable this feature.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>off</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>on</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>off</li>
+         * <li>on</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1103,25 +1084,14 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The policy for HTML5 client access.</p>
+         * <p>Specifies whether to allow web client access.</p>
          * <blockquote>
-         * <p>We recommend that you use the ClientType parameter to manage the type of Alibaba Cloud Workspace clients for desktop connection.</p>
+         * <p> We recommend that you use the ClientType-related parameters to control the Alibaba Cloud Workspace client type for cloud computer logon.``</p>
          * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>off: HTML5 client access is disabled. This value is the default value.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>on: HTML5 client access is enabled.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>off (default)</li>
+         * <li>on</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1134,36 +1104,13 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The file transfer policy for HTML5 clients.</p>
+         * <p>The file transfer feature on the web client.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>all: Files can be uploaded and downloaded between your computer and HTML5 clients.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>download: Files on HTML5 clients can be downloaded to your computer.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>upload: Files on your computer can be uploaded to HTML5 clients.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>off: File transfer between HTML5 clients and your computer is disabled. This value is the default value.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>all: Files can be uploaded and downloaded between local computers and the web client.</li>
+         * <li>download: Files on the web client can be downloaded to local computers.</li>
+         * <li>upload: Files on local computers can be uploaded to the web client.</li>
+         * <li>off (default): Files cannot be transferred between the web client and local computers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1176,7 +1123,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The protocol that you want to use for network communication. Valid values: -TCP: Only TCP is allowed. -BOTH: Automatic switch between TCP and UDP is allowed. Default value: TCP.</p>
+         * <p>The protocol for network communication.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TCP (default): TCP</li>
+         * <li>BOTH: TCP and UDP</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>both</p>
@@ -1191,29 +1143,9 @@ public class CreatePolicyGroupRequest extends Request {
          * <p>The permissions on local disk mapping.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>read: read-only</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>The disks on your local computer are mapped to the cloud desktop. You can only read (copy) files on the local computer.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>readwrite: read and write</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>The disks on your local computer are mapped to the cloud desktop. You can read (copy) and modify files on your local computer.</p>
-         * <!-- -->
-         * </li>
-         * <li><p>off:</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <p>The disks on your local computer are not mapped to the cloud desktop. This value is the default value.</p>
-         * <!-- --></li>
+         * <li>read: read-only. Local disk mapping is available on cloud computers. However, you can only read (copy) local files but cannot modify the files.</li>
+         * <li>readwrite: read and write. Local disk mapping is available on cloud computers. You can read (copy) and write (modify) local files.</li>
+         * <li>off (default): disabled. Local disk mapping is unavailable on cloud computers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1226,7 +1158,10 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * MaxReconnectTime.
+         * <p>The maximum retry period for reconnecting to cloud computers when the cloud computers are disconnected due to none-human reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder maxReconnectTime(Integer maxReconnectTime) {
             this.putQueryParameter("MaxReconnectTime", maxReconnectTime);
@@ -1278,10 +1213,14 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow user preemption.</p>
+         * <p>The cloud computer preemption feature.</p>
          * <blockquote>
-         * <p>To improve user experience and ensure data security, multiple end users cannot connect to the same cloud desktop at the same time. The default value of this parameter is <code>off</code>, and the value cannot be changed.</p>
+         * <p> To ensure user experience and data security, when a cloud computer is used by an end user, other end users cannot connect to the cloud computer. By default, this parameter is set to <code>off</code>, which cannot be modified.</p>
          * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off (default): Multiple end users cannot connect to the same cloud computer at the same time.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1293,9 +1232,9 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The names of the users that are allowed to connect to the same cloud desktop at the same time. You can specify up to five usernames.</p>
+         * <p>The usernames that are allowed to connect to the cloud computer in use. You can specify up to five usernames.</p>
          * <blockquote>
-         * <p>To improve user experience and ensure data security, we recommend that you disable the user preemption feature.</p>
+         * <p> To ensure user experience and data security, other end users cannot connect to the cloud computer that is used by an end user.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1376,29 +1315,16 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable screen recording.</p>
+         * <p>Specifies whether to enable the screen recording feature.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>ALLTIME: All operations that are performed by end users on cloud desktops are recorded. The recording starts immediately when end users connect to cloud desktops and ends when the end users disconnect from the cloud desktops.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>PERIOD: The operations that are performed by end users on cloud desktops during a specified period of time are recorded. You must set the start time and end time for the recording period.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>OFF: Screen recording is disabled.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>byaction_cmd_ft: enables the operation-triggered screen recording upon command execution and file transfer.</li>
+         * <li>ALLTIME: enables the whole-process screen recording. That is, the recording starts when cloud computers are connected and ends when the cloud computers are disconnected.</li>
+         * <li>session: enables the screen recording for session lifecycle listening.</li>
+         * <li>PERIOD: enables the interval-based screen recording. You must specify an interval between the start time and end time of this type of recording.</li>
+         * <li>byaction_commands: enables the operation-triggered screen recording upon command execution.</li>
+         * <li>OFF: disables the screen recording feature.</li>
+         * <li>byaction_file_transfer: enables the operation-triggered screen recording upon file transfer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1411,10 +1337,11 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to record audio data during the screen recording. Valid values:</p>
+         * <p>Specifies whether to record audio files generated from cloud computers.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>on: records audio and video data</li>
-         * <li>off: records only video data</li>
+         * <li>off: records only video files.</li>
+         * <li>on: records video and audio files.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1427,7 +1354,14 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The duration from the time when the screen recording starts to the time when the screen recording stops. If you specify the Recording parameter, you must also specify the RecordingDuration parameter. When the specified duration ends, a recording file is generated.</p>
+         * <p>The file length of the screen recording. Unit: minutes. Screen recording files are split based on the specified file length and uploaded to Object Storage Service (OSS) buckets. When a screen recording file reaches 300 MB in size, the system preferentially performs rolling update for the file.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>10</li>
+         * <li>20</li>
+         * <li>30</li>
+         * <li>60</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -1439,7 +1373,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The time when the screen recording stops. Specify the value in the HH:MM:SS format. The value of this parameter is valid only if you set the Recording parameter to PERIOD.</p>
+         * <p>The time when the screen recording ends. The value is in the HH:MM:SS format. The value is meaningful only when you set the <code>Recording</code> parameter to <code>PERIOD</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>08:59:00</p>
@@ -1451,7 +1385,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The duration in which the screen recording is valid. Unit: days.</p>
+         * <p>The retention period of the screen recording file. Valid values: 1 to 180. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -1463,17 +1397,13 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The frame rate of screen recording.</p>
+         * <p>The frame rate of screen recording. Unit: fps.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>2</p>
-         * </li>
-         * <li><p>5</p>
-         * </li>
-         * <li><p>10</p>
-         * </li>
-         * <li><p>15</p>
-         * </li>
+         * <li>2</li>
+         * <li>5</li>
+         * <li>10</li>
+         * <li>15</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1486,7 +1416,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The time when screen recording starts. Specify the value in the HH:MM:SS format. The value of this parameter is valid only if you set the Recording parameter to PERIOD.</p>
+         * <p>The time when the screen recording starts. The value is in the HH:MM:SS format. The value is meaningful only when you set the <code>Recording</code> parameter to <code>PERIOD</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00:00</p>
@@ -1498,7 +1428,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the feature to send screen recording notifications to clients is enabled. Valid values: on and off.</p>
+         * <p>Specifies whether to enable the screen recording notification feature after end users log on to the Alibaba Cloud Workspace client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1510,7 +1445,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The notification content sent to clients when screen recording is enabled. By default, you do not need to specify this parameter.</p>
+         * <p>The notification content of screen recording. By default, this parameter is left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>Your desktop is being recorded.</p>
@@ -1522,7 +1457,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1565,10 +1500,11 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The effective scope of the policy. Valid values:</p>
+         * <p>The effective scope of the policy.</p>
+         * <p>Valid values:</p>
          * <ul>
+         * <li>IP: The policy takes effect based on the IP address.</li>
          * <li>GLOBAL: The policy takes effect globally.</li>
-         * <li>IP: The policy takes effect for specified IP addresses.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1581,7 +1517,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The effective CIDR block ranges. If you set the Scope parameter to IP, you must specify this parameter.</p>
+         * <p>This parameter is required when the <code>Scope</code> parameter is set to <code>IP</code>.````</p>
          */
         public Builder scopeValue(java.util.List<String> scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -1627,10 +1563,11 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the multimedia redirection feature. Valid values:</p>
+         * <p>Specifies whether to enable the multimedia redirection switch.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>on: Multimedia redirection is enabled.</li>
-         * <li>off: Multimedia redirection is disabled.</li>
+         * <li>off</li>
+         * <li>on</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1685,22 +1622,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable watermarking.</p>
+         * <p>The watermarking feature.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>off: Watermarking is disabled. This value is the default value.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>on: Watermarking is enabled.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>blind: Invisible watermarks are applied.</li>
+         * <li>off (default): The watermarking feature is disabled.</li>
+         * <li>on: Visible watermarks are applied.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1713,7 +1640,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The anti-screen photo feature. Valid values: on and off.</p>
+         * <p>Specifies whether to enable the anti-screen photo feature for invisible watermarks.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1725,7 +1657,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+         * <p>The font color in red, green, and blue (RGB) of the watermark. Valid values: 0 to 16777215.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1737,7 +1669,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The inclination angle of the watermark. Valid values: -10 to -30.</p>
+         * <p>The watermark rotation. Valid values: -10 to -30.</p>
          * 
          * <strong>example:</strong>
          * <p>-10</p>
@@ -1749,7 +1681,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+         * <p>The watermark font size. Valid values: 10 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1761,7 +1693,8 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The font style of the watermark. Valid values:</p>
+         * <p>The watermark font style.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>plain</li>
          * <li>bold</li>
@@ -1777,7 +1710,13 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The invisible watermark enhancement feature. Valid values: low, medium, and high.</p>
+         * <p>The watermark enhancement feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>high</li>
+         * <li>low</li>
+         * <li>medium</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>medium</p>
@@ -1789,7 +1728,10 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of watermark rows. This parameter is now invalid.</p>
+         * <p>The number of watermark rows.</p>
+         * <blockquote>
+         * <p> This parameter is not available for public use.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1801,7 +1743,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The security priority for invisible watermarks. Valid values: on and off.</p>
+         * <p>Specifies whether to enable the security priority feature for invisible watermarks.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1848,7 +1795,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The transparency of the watermark. A larger value specifies that the watermark is less transparent. Valid values: 10 to 100.</p>
+         * <p>The watermark opacity. A larger value indicates more opaque watermarks. Valid values: 10 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1860,22 +1807,18 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The type of the watermark. You can specify multiple types of watermarks at the same time. Separate multiple watermark types with commas (,).</p>
+         * <p>The watermark content. You can select up to three items as the watermark content. Separate multiple items with commas (,).</p>
+         * <blockquote>
+         * <p> If you set this parameter to <code>Custom</code>, specify <code>WatermarkCustomText</code></p>
+         * </blockquote>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>EndUserId: The ID of the end user is displayed.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>HostName: The rightmost 15 characters of the cloud desktop ID are displayed.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>EndUserId: the username.</li>
+         * <li>Custom: the custom text.</li>
+         * <li>DesktopIp: the IP address of the cloud computer.</li>
+         * <li>ClientIp: the IP address of the Alibaba Cloud Workspace client.</li>
+         * <li>HostName: the rightmost 15 digits of the cloud computer ID.</li>
+         * <li>ClientTime: the current time displayed on the cloud computer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1948,7 +1891,7 @@ public class CreatePolicyGroupRequest extends Request {
             private String description; 
 
             /**
-             * <p>The IPv4 CIDR block that you want to access from the client. The value is an IPv4 CIDR block.</p>
+             * <p>The client CIDR block from which end users can connect to cloud computers. The value is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -2081,7 +2024,7 @@ public class CreatePolicyGroupRequest extends Request {
             private String type; 
 
             /**
-             * <p>The IPv4 CIDR block of the security group rule.</p>
+             * <p>The object to which the security group rule applies. The value is an IPv4 CIDR block.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX/16</p>
@@ -2106,40 +2049,11 @@ public class CreatePolicyGroupRequest extends Request {
              * <p>The protocol type of the security group rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>TCP</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>UDP</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>ALL: all protocols</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>GRE</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>ICMP: ICMP (IPv4)</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>TCP: the Transmission Control Protocol (TCP) protocol.</li>
+             * <li>UDP: the User Datagram Protocol (UDP) protocol.</li>
+             * <li>ALL: all protocols.</li>
+             * <li>GRE: the Generic Routing Encapsulation (GRE) protocol.</li>
+             * <li>ICMP: the Internet Control Message Protocol (ICMP) for IPv4.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2151,24 +2065,11 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The authorization policy of the security group rule.</p>
+             * <p>The authorization of the security group rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>drop: denies all access requests</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <p>If no denied messages are returned, the requests timed out or failed.</p>
-             * <!-- -->
-             * </li>
-             * <li><p>accept: accepts all access requests</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <p>This value is the default value.</p>
-             * <!-- --></li>
+             * <li>drop: denies all access requests. If no messages of access denied are returned, the requests timed out or failed.</li>
+             * <li>accept (default): accepts all requests.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2182,12 +2083,12 @@ public class CreatePolicyGroupRequest extends Request {
             /**
              * <p>The port range of the security group rule. The value range of this parameter varies based on the value of the IpProtocol parameter.</p>
              * <ul>
-             * <li>If you set the IpProtocol parameter to TCP or UDP, the value range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
-             * <li>If you set the IpProtocol parameter to ICMP, the start port number and the end port number are -1/-1.</li>
-             * <li>If you set the IpProtocol parameter to GRE, the start port number and the end port number are -1/-1.</li>
-             * <li>If you set the IpProtocol parameter to ALL, the start port number and the end port number are -1/-1.</li>
+             * <li>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+             * <li>If the IpProtocol parameter is set to ICMP, set the value to -1/-1.</li>
+             * <li>If the IpProtocol parameter is set to GRE, set the value to -1/-1.</li>
+             * <li>If the IpProtocol parameter is set to ALL, set the value to -1/-1.</li>
              * </ul>
-             * <p>For more information about the common ports of applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+             * <p>For more information about the common ports applied in EDS, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>22/22</p>
@@ -2198,7 +2099,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group rule. A smaller value specifies a higher priority.<br>Valid values: 1 to 60.<br>Default value: 1.</p>
+             * <p>The priority of the security group rule. A smaller value indicates a higher priority.<br>Valid values: 1 to 60.<br>Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2212,19 +2113,8 @@ public class CreatePolicyGroupRequest extends Request {
              * <p>The direction of the security group rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>outflow: outbound</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>inflow: inbound</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>outflow: outbound.</li>
+             * <li>inflow: inbound.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2287,53 +2177,17 @@ public class CreatePolicyGroupRequest extends Request {
             private String status; 
 
             /**
-             * <p>The type of the client.</p>
+             * <p>The type of the Alibaba Cloud Workspace client.</p>
              * <blockquote>
-             * <p>By default, if you do not specify the ClientType parameter, all types of clients can be used to connect to cloud desktops.</p>
+             * <p> If you do not specify the <code>ClientType</code> parameter, all types of the client are allowed by default.</p>
              * </blockquote>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>html5: web clients</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>android: Android clients</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>linux: Alibaba Cloud Workspace clients</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>ios: iOS clients</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>windows: Windows clients</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>macos: macOS clients</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>html5: web client</li>
+             * <li>android: Android client</li>
+             * <li>ios: iOS client</li>
+             * <li>windows: Windows client</li>
+             * <li>macos: macOS client</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2345,25 +2199,14 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether a specific client type can be used to connect to the cloud desktop.</p>
+             * <p>Specifies whether to allow end users to use a specific type of the client to connect to cloud computers.</p>
              * <blockquote>
-             * <p>By default, if you do not specify the ClientType parameter, all types of clients can be used to connect to cloud desktops.</p>
+             * <p> If you do not specify the <code>ClientType</code> parameter, all types of the client are allowed by default.</p>
              * </blockquote>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>OFF: Clients of the specified type cannot be used to connect to cloud desktops.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>ON: Clients of the specified type can be used to connect to cloud desktops.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>OFF</li>
+             * <li>ON</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2426,7 +2269,17 @@ public class CreatePolicyGroupRequest extends Request {
             private String redirectType; 
 
             /**
-             * DeviceType.
+             * <p>The peripheral type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>printer</li>
+             * <li>scanner</li>
+             * <li>camera</li>
+             * <li>adb: the Android Debug Bridge (ADB) device.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>camera</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -2434,7 +2287,16 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * RedirectType.
+             * <p>The redirection type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>deviceRedirect: device redirection</li>
+             * <li>usbRedirect: USB redirection</li>
+             * <li>off: redirection disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>deviceRedirect</p>
              */
             public Builder redirectType(String redirectType) {
                 this.redirectType = redirectType;
@@ -2541,7 +2403,10 @@ public class CreatePolicyGroupRequest extends Request {
             private String redirectType; 
 
             /**
-             * DeviceName.
+             * <p>The device name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sandisk</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -2549,7 +2414,10 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * DevicePid.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x55b1</p>
              */
             public Builder devicePid(String devicePid) {
                 this.devicePid = devicePid;
@@ -2557,7 +2425,23 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * DeviceType.
+             * <p>The peripheral type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>usbKey</li>
+             * <li>other</li>
+             * <li>graphicsTablet</li>
+             * <li>printer</li>
+             * <li>cardReader</li>
+             * <li>scanner</li>
+             * <li>storage</li>
+             * <li>camera</li>
+             * <li>adb</li>
+             * <li>networkInterfaceCard: the NIC device.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>storage</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -2565,7 +2449,10 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * DeviceVid.
+             * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x0781</p>
              */
             public Builder deviceVid(String deviceVid) {
                 this.deviceVid = deviceVid;
@@ -2573,7 +2460,10 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * OptCommand.
+             * <p>The link optimization command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2:0</p>
              */
             public Builder optCommand(String optCommand) {
                 this.optCommand = optCommand;
@@ -2581,7 +2471,16 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * RedirectType.
+             * <p>The redirection type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>deviceRedirect: device redirection</li>
+             * <li>usbRedirect: USB redirection</li>
+             * <li>off: redirection disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>usbRedirect</p>
              */
             public Builder redirectType(String redirectType) {
                 this.redirectType = redirectType;
@@ -2652,7 +2551,7 @@ public class CreatePolicyGroupRequest extends Request {
             private String policy; 
 
             /**
-             * <p>The description of the policy.</p>
+             * <p>The description of domain name resolution rule.</p>
              * 
              * <strong>example:</strong>
              * <p>system policy</p>
@@ -2674,22 +2573,11 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the policy.</p>
+             * <p>Specifies whether to allow the domain name resolution rule.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>allow</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>block</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>allow: allows the rule.</li>
+             * <li>block: denies the rule.</li>
              * </ul>
              * 
              * <strong>example:</strong>

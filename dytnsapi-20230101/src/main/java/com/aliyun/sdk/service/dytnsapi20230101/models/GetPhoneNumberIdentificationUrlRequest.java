@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20230101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberIdentificationUrlRequest} extends {@link RequestModel}
  *
  * <p>GetPhoneNumberIdentificationUrlRequest</p>
  */
 public class GetPhoneNumberIdentificationUrlRequest extends Request {
-    @Query
-    @NameInMap("AuthCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authCode;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("OutId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("RememberPhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RememberPhoneNumber")
     private Boolean rememberPhoneNumber;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private GetPhoneNumberIdentificationUrlRequest(Builder builder) {
@@ -155,7 +160,11 @@ public class GetPhoneNumberIdentificationUrlRequest extends Request {
         } 
 
         /**
-         * The authorization code.
+         * <p>The authorization code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K***9i7CIe</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -164,7 +173,10 @@ public class GetPhoneNumberIdentificationUrlRequest extends Request {
         }
 
         /**
-         * The IP address of the subscriber\"s phone.
+         * <p>The IP address of the subscriber&quot;s phone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114.124.***.13</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -173,7 +185,11 @@ public class GetPhoneNumberIdentificationUrlRequest extends Request {
         }
 
         /**
-         * The external ID.
+         * <p>The external ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149b03d2-a749-4e6e-8f5b-34******5815</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -191,7 +207,11 @@ public class GetPhoneNumberIdentificationUrlRequest extends Request {
         }
 
         /**
-         * The phone number of the subscriber. The phone number is in the Mobile Station International Subscriber Directory Number (MSISDN) format.
+         * <p>The phone number of the subscriber. The phone number is in the Mobile Station International Subscriber Directory Number (MSISDN) format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>628211****113</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -200,7 +220,10 @@ public class GetPhoneNumberIdentificationUrlRequest extends Request {
         }
 
         /**
-         * Specifies whether to remember the phone number.
+         * <p>Specifies whether to remember the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder rememberPhoneNumber(Boolean rememberPhoneNumber) {
             this.putQueryParameter("RememberPhoneNumber", rememberPhoneNumber);

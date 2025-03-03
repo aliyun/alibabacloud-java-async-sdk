@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SavedQueries")
-    private java.util.List < SavedQueries> savedQueries;
+    private java.util.List<SavedQueries> savedQueries;
 
     private ListSavedQueriesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
     /**
      * @return savedQueries
      */
-    public java.util.List < SavedQueries> getSavedQueries() {
+    public java.util.List<SavedQueries> getSavedQueries() {
         return this.savedQueries;
     }
 
@@ -71,7 +76,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SavedQueries> savedQueries; 
+        private java.util.List<SavedQueries> savedQueries; 
 
         /**
          * <p>The maximum number of entries per page.</p>
@@ -109,7 +114,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         /**
          * <p>The information about the custom query templates.</p>
          */
-        public Builder savedQueries(java.util.List < SavedQueries> savedQueries) {
+        public Builder savedQueries(java.util.List<SavedQueries> savedQueries) {
             this.savedQueries = savedQueries;
             return this;
         }

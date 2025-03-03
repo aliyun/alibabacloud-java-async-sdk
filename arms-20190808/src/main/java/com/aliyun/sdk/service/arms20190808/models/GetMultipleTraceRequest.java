@@ -23,6 +23,14 @@ public class GetMultipleTraceRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Long pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Long pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -40,6 +48,8 @@ public class GetMultipleTraceRequest extends Request {
     private GetMultipleTraceRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.traceIDs = builder.traceIDs;
@@ -66,6 +76,20 @@ public class GetMultipleTraceRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -88,6 +112,8 @@ public class GetMultipleTraceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetMultipleTraceRequest, Builder> {
         private Long endTime; 
+        private Long pageNumber; 
+        private Long pageSize; 
         private String regionId; 
         private Long startTime; 
         private java.util.List<String> traceIDs; 
@@ -99,6 +125,8 @@ public class GetMultipleTraceRequest extends Request {
         private Builder(GetMultipleTraceRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.startTime = request.startTime;
             this.traceIDs = request.traceIDs;
@@ -114,6 +142,30 @@ public class GetMultipleTraceRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>The number of the page to return. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries to return per page, the maximum value is 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

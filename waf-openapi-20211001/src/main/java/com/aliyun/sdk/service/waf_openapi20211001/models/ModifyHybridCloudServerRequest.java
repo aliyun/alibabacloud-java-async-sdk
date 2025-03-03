@@ -178,6 +178,9 @@ public class ModifyHybridCloudServerRequest extends Request {
         /**
          * <p>The name of the node.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder customName(String customName) {
             this.putQueryParameter("CustomName", customName);

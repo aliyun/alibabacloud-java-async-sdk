@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListResourceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
-    private java.util.List < String > query;
+    private java.util.List<String> query;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -54,7 +59,7 @@ public class ListResourceTypesRequest extends Request {
     /**
      * @return query
      */
-    public java.util.List < String > getQuery() {
+    public java.util.List<String> getQuery() {
         return this.query;
     }
 
@@ -67,7 +72,7 @@ public class ListResourceTypesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListResourceTypesRequest, Builder> {
         private String acceptLanguage; 
-        private java.util.List < String > query; 
+        private java.util.List<String> query; 
         private String resourceType; 
 
         private Builder() {
@@ -100,7 +105,7 @@ public class ListResourceTypesRequest extends Request {
         /**
          * <p>The query conditions.</p>
          */
-        public Builder query(java.util.List < String > query) {
+        public Builder query(java.util.List<String> query) {
             this.putQueryParameter("Query", query);
             this.query = query;
             return this;

@@ -75,6 +75,7 @@ public class DescribeInvocationsRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -84,6 +85,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the execution. You can retrieve the output of a command once by using either the execution ID or the cloud phone instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

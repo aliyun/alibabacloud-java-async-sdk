@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link UpdateEventSourceResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEventSourceResponseBody</p>
@@ -85,11 +91,14 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. Valid values:
-         * <p>
+         * <p>The returned response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request is successful.</li>
+         * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
+         * </ul>
          * 
-         * *   Success: The request is successful.
-         * *   Other codes: The request failed. For more information about error codes, see Error codes.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +106,10 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation.
+         * <p>The result of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +117,10 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remote error. requestId: [xxxx-9D10-65DFDFA3A75D], error code: [EventSourceNotExist], message: [The event source in request is not exist! ]</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +128,10 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c057d379-ea65-41ec-a8a8-90627a968204</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +139,10 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
+         * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

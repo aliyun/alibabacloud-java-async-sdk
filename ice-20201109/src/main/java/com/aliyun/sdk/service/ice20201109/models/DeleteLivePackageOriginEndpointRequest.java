@@ -90,7 +90,7 @@ public class DeleteLivePackageOriginEndpointRequest extends Request {
         } 
 
         /**
-         * <p>频道名称</p>
+         * <p>The channel name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DeleteLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>端点名称</p>
+         * <p>The endpoint name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class DeleteLivePackageOriginEndpointRequest extends Request {
         }
 
         /**
-         * <p>频道组名称</p>
+         * <p>The channel group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

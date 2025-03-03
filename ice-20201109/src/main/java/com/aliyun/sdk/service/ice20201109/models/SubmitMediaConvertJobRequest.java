@@ -102,7 +102,10 @@ public class SubmitMediaConvertJobRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The idempotency key that is used to ensure repeated requests have the same effect as a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86f8e525-9d73-4dac-88aa-7aa4e950c00a</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -111,6 +114,7 @@ public class SubmitMediaConvertJobRequest extends Request {
         }
 
         /**
+         * <p>The configurations of the transcoding task.</p>
          * <p>This parameter is required.</p>
          */
         public Builder config(String config) {
@@ -120,7 +124,10 @@ public class SubmitMediaConvertJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The ID of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e197ecfb103e4849922b054d3032f954</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -129,7 +136,10 @@ public class SubmitMediaConvertJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;videoId&quot;:&quot;abcd&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

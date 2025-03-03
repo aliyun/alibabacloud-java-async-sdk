@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link DeleteApiDestinationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteApiDestinationResponseBody</p>
@@ -61,7 +67,10 @@ public class DeleteApiDestinationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * <p>The returned response code. The value Success indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +78,10 @@ public class DeleteApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.
+         * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +89,10 @@ public class DeleteApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>382E6272-8E9C-5681-AC96-A8AF0BFAC1A5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

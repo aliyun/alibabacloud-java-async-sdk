@@ -79,7 +79,7 @@ public class CreateRCNodePoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIdSets.
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIdSets(java.util.List<String> instanceIdSets) {
             this.instanceIdSets = instanceIdSets;
@@ -87,7 +87,10 @@ public class CreateRCNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * NodePoolId.
+         * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodePoolId(String nodePoolId) {
             this.nodePoolId = nodePoolId;
@@ -95,7 +98,10 @@ public class CreateRCNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50357661918****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -103,7 +109,10 @@ public class CreateRCNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

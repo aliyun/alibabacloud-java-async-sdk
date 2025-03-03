@@ -55,7 +55,10 @@ public class InstallAppResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,10 @@ public class InstallAppResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-14xwibw7yp73q****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

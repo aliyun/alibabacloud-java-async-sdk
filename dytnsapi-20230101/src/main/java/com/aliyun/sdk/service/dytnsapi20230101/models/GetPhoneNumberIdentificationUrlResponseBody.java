@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20230101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberIdentificationUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetPhoneNumberIdentificationUrlResponseBody</p>
  */
 public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPhoneNumberIdentificationUrlResponseBody(Builder builder) {
@@ -74,12 +79,15 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return code. Valid values:
-         * <p>
+         * <p>The return code. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The request is successful.</li>
+         * <li><strong>IdentificationNotAvailable</strong>: The verification system does not support the phone number that corresponds to the IP address.</li>
+         * <li><strong>MobileNumberIllegal</strong>: The format of the phone number is invalid.</li>
+         * </ul>
          * 
-         * *   **OK**: The request is successful.
-         * *   **IdentificationNotAvailable**: The verification system does not support the phone number that corresponds to the IP address.
-         * *   **MobileNumberIllegal**: The format of the phone number is invalid.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +95,7 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +103,10 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the return code.
+         * <p>The description of the return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +114,10 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68A40250-50CD-034C-B728-0BD******177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,11 +130,17 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPhoneNumberIdentificationUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPhoneNumberIdentificationUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("IdentificationUrl")
+        @com.aliyun.core.annotation.NameInMap("IdentificationUrl")
         private String identificationUrl;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
         private Data(Builder builder) {
@@ -155,7 +175,10 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
             private String sessionId; 
 
             /**
-             * The verification URL.
+             * <p>The verification URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&ipa_s_i=8636b75e2fcb40c53ffecc2b59">https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&amp;ipa_s_i=8636b75e2fcb40c53ffecc2b59</a>******</p>
              */
             public Builder identificationUrl(String identificationUrl) {
                 this.identificationUrl = identificationUrl;
@@ -163,7 +186,10 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The session ID.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8636b75e2fcb40c53ffecc2b5947115c.149b03d2a7494e6e8f5b34c915245815.707c7f0d93f4409db0761aa5da94ce01.1686******041</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

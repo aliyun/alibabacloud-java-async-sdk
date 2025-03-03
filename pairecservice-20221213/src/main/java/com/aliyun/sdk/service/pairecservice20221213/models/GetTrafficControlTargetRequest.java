@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrafficControlTargetRequest} extends {@link RequestModel}
  *
  * <p>GetTrafficControlTargetRequest</p>
@@ -83,7 +89,7 @@ public class GetTrafficControlTargetRequest extends Request {
         } 
 
         /**
-         * TrafficControlTargetId.
+         * <p>This parameter is required.</p>
          */
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.putPathParameter("TrafficControlTargetId", trafficControlTargetId);
@@ -101,7 +107,7 @@ public class GetTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

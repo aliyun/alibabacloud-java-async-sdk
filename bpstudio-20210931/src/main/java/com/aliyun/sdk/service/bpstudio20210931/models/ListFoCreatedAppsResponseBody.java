@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -49,7 +54,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,12 +74,12 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -85,15 +90,15 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about disaster recovery plans.</p>
+         * <p>The templates.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * <p>The returned error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Cannot find region according to your domain.</p>
@@ -189,7 +194,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * <p>应用ID</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>JIX9NEZUALGS46UI</p>
@@ -200,7 +205,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of an error report.</p>
+             * <p>The URL of the error report.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&product=BPStudio&requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6">https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&amp;product=BPStudio&amp;requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6</a></p>
@@ -211,7 +216,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the disaster recovery plan.</p>
+             * <p>The state of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>Deployed_Success
@@ -224,6 +229,9 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
 
             /**
              * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>容灾计划1</p>
              */
             public Builder title(String title) {
                 this.title = title;

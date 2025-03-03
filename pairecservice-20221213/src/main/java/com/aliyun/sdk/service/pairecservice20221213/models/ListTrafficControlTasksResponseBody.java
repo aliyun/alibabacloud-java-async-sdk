@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrafficControlTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrafficControlTasksResponseBody</p>
@@ -18,7 +24,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
     private String totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TrafficControlTasks")
-    private java.util.List < TrafficControlTasks> trafficControlTasks;
+    private java.util.List<TrafficControlTasks> trafficControlTasks;
 
     private ListTrafficControlTasksResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -51,14 +57,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
     /**
      * @return trafficControlTasks
      */
-    public java.util.List < TrafficControlTasks> getTrafficControlTasks() {
+    public java.util.List<TrafficControlTasks> getTrafficControlTasks() {
         return this.trafficControlTasks;
     }
 
     public static final class Builder {
         private String requestId; 
         private String totalCount; 
-        private java.util.List < TrafficControlTasks> trafficControlTasks; 
+        private java.util.List<TrafficControlTasks> trafficControlTasks; 
 
         /**
          * RequestId.
@@ -79,7 +85,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         /**
          * TrafficControlTasks.
          */
-        public Builder trafficControlTasks(java.util.List < TrafficControlTasks> trafficControlTasks) {
+        public Builder trafficControlTasks(java.util.List<TrafficControlTasks> trafficControlTasks) {
             this.trafficControlTasks = trafficControlTasks;
             return this;
         }
@@ -90,12 +96,18 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrafficControlTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficControlTasksResponseBody</p>
+     */
     public static class SplitParts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SetValues")
-        private java.util.List < Long > setValues;
+        private java.util.List<Long> setValues;
 
         @com.aliyun.core.annotation.NameInMap("TimePoints")
-        private java.util.List < Long > timePoints;
+        private java.util.List<Long> timePoints;
 
         private SplitParts(Builder builder) {
             this.setValues = builder.setValues;
@@ -113,25 +125,25 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         /**
          * @return setValues
          */
-        public java.util.List < Long > getSetValues() {
+        public java.util.List<Long> getSetValues() {
             return this.setValues;
         }
 
         /**
          * @return timePoints
          */
-        public java.util.List < Long > getTimePoints() {
+        public java.util.List<Long> getTimePoints() {
             return this.timePoints;
         }
 
         public static final class Builder {
-            private java.util.List < Long > setValues; 
-            private java.util.List < Long > timePoints; 
+            private java.util.List<Long> setValues; 
+            private java.util.List<Long> timePoints; 
 
             /**
              * SetValues.
              */
-            public Builder setValues(java.util.List < Long > setValues) {
+            public Builder setValues(java.util.List<Long> setValues) {
                 this.setValues = setValues;
                 return this;
             }
@@ -139,7 +151,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             /**
              * TimePoints.
              */
-            public Builder timePoints(java.util.List < Long > timePoints) {
+            public Builder timePoints(java.util.List<Long> timePoints) {
                 this.timePoints = timePoints;
                 return this;
             }
@@ -151,6 +163,12 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrafficControlTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficControlTasksResponseBody</p>
+     */
     public static class TrafficControlTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -512,6 +530,12 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrafficControlTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficControlTasksResponseBody</p>
+     */
     public static class TrafficControlTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BehaviorTableMetaId")
         private String behaviorTableMetaId;
@@ -558,8 +582,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("PreExperimentIds")
+        private String preExperimentIds;
+
         @com.aliyun.core.annotation.NameInMap("PrepubStatus")
         private String prepubStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ProdExperimentIds")
+        private String prodExperimentIds;
 
         @com.aliyun.core.annotation.NameInMap("ProductStatus")
         private String productStatus;
@@ -569,6 +599,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
+        private String serviceId;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -583,7 +616,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         private String statisBehaviorConditionType;
 
         @com.aliyun.core.annotation.NameInMap("TrafficControlTargets")
-        private java.util.List < TrafficControlTargets> trafficControlTargets;
+        private java.util.List<TrafficControlTargets> trafficControlTargets;
 
         @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
         private String trafficControlTaskId;
@@ -616,10 +649,13 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             this.itemConditionType = builder.itemConditionType;
             this.itemTableMetaId = builder.itemTableMetaId;
             this.name = builder.name;
+            this.preExperimentIds = builder.preExperimentIds;
             this.prepubStatus = builder.prepubStatus;
+            this.prodExperimentIds = builder.prodExperimentIds;
             this.productStatus = builder.productStatus;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
+            this.serviceId = builder.serviceId;
             this.startTime = builder.startTime;
             this.statisBahaviorConditionExpress = builder.statisBahaviorConditionExpress;
             this.statisBehaviorConditionArray = builder.statisBehaviorConditionArray;
@@ -746,10 +782,24 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return preExperimentIds
+         */
+        public String getPreExperimentIds() {
+            return this.preExperimentIds;
+        }
+
+        /**
          * @return prepubStatus
          */
         public String getPrepubStatus() {
             return this.prepubStatus;
+        }
+
+        /**
+         * @return prodExperimentIds
+         */
+        public String getProdExperimentIds() {
+            return this.prodExperimentIds;
         }
 
         /**
@@ -771,6 +821,13 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
          */
         public String getSceneName() {
             return this.sceneName;
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         /**
@@ -804,7 +861,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         /**
          * @return trafficControlTargets
          */
-        public java.util.List < TrafficControlTargets> getTrafficControlTargets() {
+        public java.util.List<TrafficControlTargets> getTrafficControlTargets() {
             return this.trafficControlTargets;
         }
 
@@ -859,15 +916,18 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             private String itemConditionType; 
             private String itemTableMetaId; 
             private String name; 
+            private String preExperimentIds; 
             private String prepubStatus; 
+            private String prodExperimentIds; 
             private String productStatus; 
             private String sceneId; 
             private String sceneName; 
+            private String serviceId; 
             private String startTime; 
             private String statisBahaviorConditionExpress; 
             private String statisBehaviorConditionArray; 
             private String statisBehaviorConditionType; 
-            private java.util.List < TrafficControlTargets> trafficControlTargets; 
+            private java.util.List<TrafficControlTargets> trafficControlTargets; 
             private String trafficControlTaskId; 
             private String userConditionArray; 
             private String userConditionExpress; 
@@ -995,10 +1055,26 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
+             * PreExperimentIds.
+             */
+            public Builder preExperimentIds(String preExperimentIds) {
+                this.preExperimentIds = preExperimentIds;
+                return this;
+            }
+
+            /**
              * PrepubStatus.
              */
             public Builder prepubStatus(String prepubStatus) {
                 this.prepubStatus = prepubStatus;
+                return this;
+            }
+
+            /**
+             * ProdExperimentIds.
+             */
+            public Builder prodExperimentIds(String prodExperimentIds) {
+                this.prodExperimentIds = prodExperimentIds;
                 return this;
             }
 
@@ -1023,6 +1099,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
+                return this;
+            }
+
+            /**
+             * ServiceId.
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
                 return this;
             }
 
@@ -1061,7 +1145,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             /**
              * TrafficControlTargets.
              */
-            public Builder trafficControlTargets(java.util.List < TrafficControlTargets> trafficControlTargets) {
+            public Builder trafficControlTargets(java.util.List<TrafficControlTargets> trafficControlTargets) {
                 this.trafficControlTargets = trafficControlTargets;
                 return this;
             }

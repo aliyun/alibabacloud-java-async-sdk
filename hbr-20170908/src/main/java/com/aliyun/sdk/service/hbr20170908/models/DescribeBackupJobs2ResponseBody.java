@@ -495,6 +495,23 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
             /**
              * <p>The ecs instance infos.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;i-xxxxxxxx&quot;: {
+             *     &quot;hostName&quot;: &quot;test&quot;,
+             *     &quot;instanceName&quot;: &quot;test&quot;,
+             *     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
+             *     &quot;osType&quot;: &quot;linux&quot;,
+             *     &quot;diskIds&quot;: [
+             *       &quot;d-xxxxxxxx01&quot;,
+             *       &quot;d-xxxxxxxx02&quot;
+             *     ],
+             *     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
+             *     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
+             *     &quot;platform&quot;: &quot;Rocky Linux&quot;
+             *   }
+             * }</p>
              */
             public Builder instanceInfos(java.util.Map<String, ?> instanceInfos) {
                 this.instanceInfos = instanceInfos;
@@ -741,7 +758,10 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private String totalFiles; 
 
             /**
-             * FailedFiles.
+             * <p>List of failed files</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_failed.zip</p>
              */
             public Builder failedFiles(String failedFiles) {
                 this.failedFiles = failedFiles;
@@ -749,7 +769,10 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ReportTaskStatus.
+             * <p>Report generation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder reportTaskStatus(String reportTaskStatus) {
                 this.reportTaskStatus = reportTaskStatus;
@@ -757,7 +780,10 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * SkippedFiles.
+             * <p>List of skipped files</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_skipped.zip</p>
              */
             public Builder skippedFiles(String skippedFiles) {
                 this.skippedFiles = skippedFiles;
@@ -765,7 +791,10 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessFiles.
+             * <p>List of successful files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_success.zip</p>
              */
             public Builder successFiles(String successFiles) {
                 this.successFiles = successFiles;
@@ -773,7 +802,10 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFiles.
+             * <p>List of all files. (This field is not returned for data synchronization)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/temp/report/158975xxxxxx4625/job-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_total.csv</p>
              */
             public Builder totalFiles(String totalFiles) {
                 this.totalFiles = totalFiles;
@@ -1790,7 +1822,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Report.
+             * <p>Task Report</p>
              */
             public Builder report(Report report) {
                 this.report = report;

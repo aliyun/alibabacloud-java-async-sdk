@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartSyncExecutionResponseBody} extends {@link TeaModel}
  *
  * <p>StartSyncExecutionResponseBody</p>
  */
 public class StartSyncExecutionResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("FlowName")
+    @com.aliyun.core.annotation.NameInMap("FlowName")
     private String flowName;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartedTime")
+    @com.aliyun.core.annotation.NameInMap("StartedTime")
     private String startedTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StoppedTime")
+    @com.aliyun.core.annotation.NameInMap("StoppedTime")
     private String stoppedTime;
 
     private StartSyncExecutionResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         private String stoppedTime; 
 
         /**
-         * The error code that is returned if the execution failed.
+         * <p>The error code that is returned if the execution failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ActionNotSupported</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +150,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that indicates the execution timed out.
+         * <p>The error message that indicates the execution timed out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard execution is not supported</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -150,7 +161,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the flow.
+         * <p>The name of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_flow_name</p>
          */
         public Builder flowName(String flowName) {
             this.flowName = flowName;
@@ -158,7 +172,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the execution.
+         * <p>The name of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_exec_name:{UUID}</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -166,7 +183,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The output of the execution, which is in the JSON format.
+         * <p>The output of the execution, which is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder output(String output) {
             this.output = output;
@@ -174,7 +194,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +205,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the execution started.
+         * <p>The time when the execution started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         public Builder startedTime(String startedTime) {
             this.startedTime = startedTime;
@@ -190,15 +216,18 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the execution. Valid values:
-         * <p>
+         * <p>The status of the execution. Valid values:</p>
+         * <ul>
+         * <li><strong>Starting</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * <li><strong>Succeeded</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>TimedOut</strong></li>
+         * </ul>
          * 
-         * *   **Starting**
-         * *   **Running**
-         * *   **Stopped**
-         * *   **Succeeded**
-         * *   **Failed**
-         * *   **TimedOut**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -206,7 +235,10 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the execution stopped.
+         * <p>The time when the execution stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         public Builder stoppedTime(String stoppedTime) {
             this.stoppedTime = stoppedTime;

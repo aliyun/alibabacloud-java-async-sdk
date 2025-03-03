@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetResourceCountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.NameInMap("GroupByKey")
     private String groupByKey;
@@ -22,7 +27,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceCounts")
-    private java.util.List < ResourceCounts> resourceCounts;
+    private java.util.List<ResourceCounts> resourceCounts;
 
     private GetResourceCountsResponseBody(Builder builder) {
         this.filters = builder.filters;
@@ -42,7 +47,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -63,20 +68,20 @@ public class GetResourceCountsResponseBody extends TeaModel {
     /**
      * @return resourceCounts
      */
-    public java.util.List < ResourceCounts> getResourceCounts() {
+    public java.util.List<ResourceCounts> getResourceCounts() {
         return this.resourceCounts;
     }
 
     public static final class Builder {
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private String groupByKey; 
         private String requestId; 
-        private java.util.List < ResourceCounts> resourceCounts; 
+        private java.util.List<ResourceCounts> resourceCounts; 
 
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.filters = filters;
             return this;
         }
@@ -106,7 +111,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
         /**
          * <p>The numbers of resources.</p>
          */
-        public Builder resourceCounts(java.util.List < ResourceCounts> resourceCounts) {
+        public Builder resourceCounts(java.util.List<ResourceCounts> resourceCounts) {
             this.resourceCounts = resourceCounts;
             return this;
         }
@@ -128,7 +133,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filters(Builder builder) {
             this.key = builder.key;
@@ -153,13 +158,13 @@ public class GetResourceCountsResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>The key of the filter condition.</p>
@@ -175,7 +180,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
             /**
              * <p>The values of the filter condition.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

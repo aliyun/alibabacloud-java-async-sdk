@@ -91,7 +91,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -99,7 +102,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +113,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * ProgramAlerts.
+         * <p>The alerts.</p>
          */
         public Builder programAlerts(java.util.List<ProgramAlerts> programAlerts) {
             this.programAlerts = programAlerts;
@@ -115,7 +121,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of alerts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             private String programName; 
 
             /**
-             * Arn.
+             * <p>The ARN of the program.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ims:mediaweaver:<regionId>:<userId>:program/myChannel/MyProgram</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -225,7 +240,7 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The alert type.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -233,7 +248,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -241,7 +259,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the alert was last modified in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-16T10:03Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -249,7 +270,10 @@ public class ListChannelAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramName.
+             * <p>The name of the program.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>program_name</p>
              */
             public Builder programName(String programName) {
                 this.programName = programName;

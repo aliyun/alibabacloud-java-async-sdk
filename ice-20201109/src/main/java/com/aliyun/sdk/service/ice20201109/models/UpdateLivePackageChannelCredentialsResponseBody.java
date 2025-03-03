@@ -55,7 +55,7 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IngestEndpoints.
+         * <p>The information about the ingest endpoint.</p>
          */
         public Builder ingestEndpoints(java.util.List<IngestEndpoints> ingestEndpoints) {
             this.ingestEndpoints = ingestEndpoints;
@@ -63,7 +63,10 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>771A1414-27BF-53E6-AB73-EFCB*****ACF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +148,10 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * Id.
+             * <p>The ingest endpoint ID. <code>input1</code> indicates primary and <code>input2</code> indicates secondary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -153,7 +159,10 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>examplePassword123</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -161,7 +170,10 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The ingest endpoint URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://example.com/live/input1</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -169,7 +181,10 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder username(String username) {
                 this.username = username;

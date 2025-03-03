@@ -1883,7 +1883,10 @@ public class GetVccResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * <p>bandwidth</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;

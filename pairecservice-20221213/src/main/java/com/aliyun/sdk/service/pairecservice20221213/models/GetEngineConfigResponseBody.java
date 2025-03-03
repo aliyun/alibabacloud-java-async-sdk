@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEngineConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetEngineConfigResponseBody</p>
@@ -13,6 +19,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetEngineConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigValue")
     private String configValue;
+
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.NameInMap("Environment")
     private String environment;
@@ -37,6 +46,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
 
     private GetEngineConfigResponseBody(Builder builder) {
         this.configValue = builder.configValue;
+        this.description = builder.description;
         this.environment = builder.environment;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
@@ -59,6 +69,13 @@ public class GetEngineConfigResponseBody extends TeaModel {
      */
     public String getConfigValue() {
         return this.configValue;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -112,6 +129,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String configValue; 
+        private String description; 
         private String environment; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
@@ -125,6 +143,14 @@ public class GetEngineConfigResponseBody extends TeaModel {
          */
         public Builder configValue(String configValue) {
             this.configValue = configValue;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 

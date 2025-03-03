@@ -91,7 +91,11 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * <p>The interval between each piece of data, in seconds.</p>
+         * <p>Generated based on the interval between StartTime and EndTime: less than 1 hour, 60s; 1 hour or more but less than 1 day, 300s; 1 day or more but less than a week, 1800s; 1 week or more, 3600s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(Integer dataInterval) {
             this.dataInterval = dataInterval;
@@ -99,7 +103,7 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         }
 
         /**
-         * DataModule.
+         * <p>A list of network bandwidth data for each time interval.</p>
          */
         public Builder dataModule(java.util.List<DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -107,7 +111,11 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for fetching data. In ISO8601 format, using UTC+0, formatted as: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The end time must be later than the start time, and the span between start and end times should not exceed 31 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-18T06:19:42Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -115,7 +123,7 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -126,7 +134,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for fetching data. In ISO8601 format, using UTC, formatted as: YYYY-MM-DDThh:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-14T17:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -244,7 +255,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             private Long totalPps; 
 
             /**
-             * AttackBps.
+             * <p>Attack bandwidth, in bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000000000</p>
              */
             public Builder attackBps(Long attackBps) {
                 this.attackBps = attackBps;
@@ -252,7 +266,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             }
 
             /**
-             * AttackPps.
+             * <p>Attack PPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000000</p>
              */
             public Builder attackPps(Long attackPps) {
                 this.attackPps = attackPps;
@@ -260,7 +277,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             }
 
             /**
-             * NormalBps.
+             * <p>Normal business bandwidth, in bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000000</p>
              */
             public Builder normalBps(Long normalBps) {
                 this.normalBps = normalBps;
@@ -268,7 +288,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             }
 
             /**
-             * NormalPps.
+             * <p>Normal business PPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder normalPps(Long normalPps) {
                 this.normalPps = normalPps;
@@ -276,7 +299,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of this data, in ISO8601 format, using UTC+0, formatted as: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-14T17:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -284,7 +310,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBps.
+             * <p>Total bandwidth, in bps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000000000</p>
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;
@@ -292,7 +321,10 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPps.
+             * <p>Total PPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000000</p>
              */
             public Builder totalPps(Long totalPps) {
                 this.totalPps = totalPps;

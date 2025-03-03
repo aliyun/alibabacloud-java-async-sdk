@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -286,7 +291,7 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionalValues")
-        private java.util.List < OptionalValues> optionalValues;
+        private java.util.List<OptionalValues> optionalValues;
 
         private Data(Builder builder) {
             this.optionalValues = builder.optionalValues;
@@ -303,17 +308,17 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
         /**
          * @return optionalValues
          */
-        public java.util.List < OptionalValues> getOptionalValues() {
+        public java.util.List<OptionalValues> getOptionalValues() {
             return this.optionalValues;
         }
 
         public static final class Builder {
-            private java.util.List < OptionalValues> optionalValues; 
+            private java.util.List<OptionalValues> optionalValues; 
 
             /**
              * OptionalValues.
              */
-            public Builder optionalValues(java.util.List < OptionalValues> optionalValues) {
+            public Builder optionalValues(java.util.List<OptionalValues> optionalValues) {
                 this.optionalValues = optionalValues;
                 return this;
             }

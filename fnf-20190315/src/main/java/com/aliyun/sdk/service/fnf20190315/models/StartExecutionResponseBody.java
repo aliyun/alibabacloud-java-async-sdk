@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartExecutionResponseBody} extends {@link TeaModel}
  *
  * <p>StartExecutionResponseBody</p>
  */
 public class StartExecutionResponseBody extends TeaModel {
-    @NameInMap("FlowDefinition")
+    @com.aliyun.core.annotation.NameInMap("FlowDefinition")
     private String flowDefinition;
 
-    @NameInMap("FlowName")
+    @com.aliyun.core.annotation.NameInMap("FlowName")
     private String flowName;
 
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartedTime")
+    @com.aliyun.core.annotation.NameInMap("StartedTime")
     private String startedTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StoppedTime")
+    @com.aliyun.core.annotation.NameInMap("StoppedTime")
     private String stoppedTime;
 
     private StartExecutionResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class StartExecutionResponseBody extends TeaModel {
         private String stoppedTime; 
 
         /**
-         * The definition of the flow.
+         * <p>The definition of the flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n - type: pass\n name: mypass</p>
          */
         public Builder flowDefinition(String flowDefinition) {
             this.flowDefinition = flowDefinition;
@@ -142,7 +150,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the workflow.
+         * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder flowName(String flowName) {
             this.flowName = flowName;
@@ -150,7 +161,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The input of the execution, which is in the JSON format.
+         * <p>The input of the execution, which is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder input(String input) {
             this.input = input;
@@ -158,7 +172,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the execution.
+         * <p>The name of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -166,7 +183,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The execution result, which is in the JSON format.
+         * <p>The execution result, which is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder output(String output) {
             this.output = output;
@@ -174,7 +194,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +205,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the execution started.
+         * <p>The time when the execution started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         public Builder startedTime(String startedTime) {
             this.startedTime = startedTime;
@@ -190,15 +216,18 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The execution status. Valid values:
-         * <p>
+         * <p>The execution status. Valid values:</p>
+         * <ul>
+         * <li><strong>Starting</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Stopped</strong></li>
+         * <li><strong>Succeeded</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>TimedOut</strong></li>
+         * </ul>
          * 
-         * *   **Starting**
-         * *   **Running**
-         * *   **Stopped**
-         * *   **Succeeded**
-         * *   **Failed**
-         * *   **TimedOut**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -206,7 +235,10 @@ public class StartExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the execution stopped.
+         * <p>The time when the execution stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01.001Z</p>
          */
         public Builder stoppedTime(String stoppedTime) {
             this.stoppedTime = stoppedTime;

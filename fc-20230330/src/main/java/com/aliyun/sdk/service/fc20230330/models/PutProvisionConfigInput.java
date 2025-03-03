@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class PutProvisionConfigInput extends TeaModel {
     private Long defaultTarget;
 
     @com.aliyun.core.annotation.NameInMap("scheduledActions")
-    private java.util.List < ScheduledAction > scheduledActions;
+    private java.util.List<ScheduledAction> scheduledActions;
 
     @com.aliyun.core.annotation.NameInMap("target")
     @Deprecated
@@ -30,7 +35,7 @@ public class PutProvisionConfigInput extends TeaModel {
     private Long target;
 
     @com.aliyun.core.annotation.NameInMap("targetTrackingPolicies")
-    private java.util.List < TargetTrackingPolicy > targetTrackingPolicies;
+    private java.util.List<TargetTrackingPolicy> targetTrackingPolicies;
 
     private PutProvisionConfigInput(Builder builder) {
         this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
@@ -73,7 +78,7 @@ public class PutProvisionConfigInput extends TeaModel {
     /**
      * @return scheduledActions
      */
-    public java.util.List < ScheduledAction > getScheduledActions() {
+    public java.util.List<ScheduledAction> getScheduledActions() {
         return this.scheduledActions;
     }
 
@@ -87,7 +92,7 @@ public class PutProvisionConfigInput extends TeaModel {
     /**
      * @return targetTrackingPolicies
      */
-    public java.util.List < TargetTrackingPolicy > getTargetTrackingPolicies() {
+    public java.util.List<TargetTrackingPolicy> getTargetTrackingPolicies() {
         return this.targetTrackingPolicies;
     }
 
@@ -95,9 +100,9 @@ public class PutProvisionConfigInput extends TeaModel {
         private Boolean alwaysAllocateCPU; 
         private Boolean alwaysAllocateGPU; 
         private Long defaultTarget; 
-        private java.util.List < ScheduledAction > scheduledActions; 
+        private java.util.List<ScheduledAction> scheduledActions; 
         private Long target; 
-        private java.util.List < TargetTrackingPolicy > targetTrackingPolicies; 
+        private java.util.List<TargetTrackingPolicy> targetTrackingPolicies; 
 
         /**
          * alwaysAllocateCPU.
@@ -126,7 +131,7 @@ public class PutProvisionConfigInput extends TeaModel {
         /**
          * scheduledActions.
          */
-        public Builder scheduledActions(java.util.List < ScheduledAction > scheduledActions) {
+        public Builder scheduledActions(java.util.List<ScheduledAction> scheduledActions) {
             this.scheduledActions = scheduledActions;
             return this;
         }
@@ -145,7 +150,7 @@ public class PutProvisionConfigInput extends TeaModel {
         /**
          * targetTrackingPolicies.
          */
-        public Builder targetTrackingPolicies(java.util.List < TargetTrackingPolicy > targetTrackingPolicies) {
+        public Builder targetTrackingPolicies(java.util.List<TargetTrackingPolicy> targetTrackingPolicies) {
             this.targetTrackingPolicies = targetTrackingPolicies;
             return this;
         }

@@ -316,6 +316,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AuthorizeRCSecurityGroupPermission  AuthorizeRCSecurityGroupPermissionRequest
+     * @return AuthorizeRCSecurityGroupPermissionResponse
+     */
+    @Override
+    public CompletableFuture<AuthorizeRCSecurityGroupPermissionResponse> authorizeRCSecurityGroupPermission(AuthorizeRCSecurityGroupPermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AuthorizeRCSecurityGroupPermission").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AuthorizeRCSecurityGroupPermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AuthorizeRCSecurityGroupPermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -845,23 +863,23 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
      * </ul>
-     * <h3>References</h3>
+     * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>: Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics. If an error message appears when you call this operation, you can search for the error message to view the cause of the error.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/412231.html">Create a serverless ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/412231.html">Create a serverless ApsaraDB RDS for MySQL instance</a>.</li>
      * <li><a href="https://help.aliyun.com/document_detail/148038.html">Create an ApsaraDB RDS for PostgreSQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/607753.html">Create a serverless ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/428615.html">Enable Babelfish for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/428615.html">Create an ApsaraDB RDS for PostgreSQL instance for which Babelfish is enabled</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/148037.html">Create an ApsaraDB RDS for SQL Server instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/603465.html">Create a serverless ApsaraDB RDS for SQL Server instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/148040.html">Create an ApsaraDB RDS for MariaDB instance</a></li>
@@ -3493,6 +3511,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDBInstanceReplication  DescribeDBInstanceReplicationRequest
+     * @return DescribeDBInstanceReplicationResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDBInstanceReplicationResponse> describeDBInstanceReplication(DescribeDBInstanceReplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDBInstanceReplication").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDBInstanceReplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDBInstanceReplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -5014,6 +5050,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRCNodePoolResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRCSecurityGroupPermission  DescribeRCSecurityGroupPermissionRequest
+     * @return DescribeRCSecurityGroupPermissionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRCSecurityGroupPermissionResponse> describeRCSecurityGroupPermission(DescribeRCSecurityGroupPermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRCSecurityGroupPermission").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRCSecurityGroupPermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRCSecurityGroupPermissionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -7793,6 +7847,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyRCInstanceNetworkSpec  ModifyRCInstanceNetworkSpecRequest
+     * @return ModifyRCInstanceNetworkSpecResponse
+     */
+    @Override
+    public CompletableFuture<ModifyRCInstanceNetworkSpecResponse> modifyRCInstanceNetworkSpec(ModifyRCInstanceNetworkSpecRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyRCInstanceNetworkSpec").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyRCInstanceNetworkSpecResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyRCInstanceNetworkSpecResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyRCSecurityGroupPermission  ModifyRCSecurityGroupPermissionRequest
+     * @return ModifyRCSecurityGroupPermissionResponse
+     */
+    @Override
+    public CompletableFuture<ModifyRCSecurityGroupPermissionResponse> modifyRCSecurityGroupPermission(ModifyRCSecurityGroupPermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyRCSecurityGroupPermission").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyRCSecurityGroupPermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyRCSecurityGroupPermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -8454,6 +8544,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RenewRCInstance  RenewRCInstanceRequest
+     * @return RenewRCInstanceResponse
+     */
+    @Override
+    public CompletableFuture<RenewRCInstanceResponse> renewRCInstance(RenewRCInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RenewRCInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenewRCInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenewRCInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  The instance must be in the Stopped state.</p>
      * <ul>
@@ -8636,12 +8744,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>MySQL</p>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables</a></p>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/613672.html">Restore individual databases and tables of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
      * 
      * @param request the request parameters of RestoreTable  RestoreTableRequest
      * @return RestoreTableResponse
@@ -8726,6 +8840,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RevokeOperatorPermissionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeRCSecurityGroupPermission  RevokeRCSecurityGroupPermissionRequest
+     * @return RevokeRCSecurityGroupPermissionResponse
+     */
+    @Override
+    public CompletableFuture<RevokeRCSecurityGroupPermissionResponse> revokeRCSecurityGroupPermission(RevokeRCSecurityGroupPermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokeRCSecurityGroupPermission").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeRCSecurityGroupPermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeRCSecurityGroupPermissionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

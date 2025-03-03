@@ -73,7 +73,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
         } 
 
         /**
-         * Assets.
+         * <p>The assets that you want to ingest.</p>
          */
         public Builder assets(java.util.List<Assets> assets) {
             String assetsShrink = shrink(assets, "Assets", "json");
@@ -83,7 +83,10 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_hls</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -143,7 +146,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The URL of the media file. You can only specify a M3U8 file stored in Object Storage Service (OSS).</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -151,7 +154,10 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The input type. Only OSS is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -222,7 +228,10 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             private Input input; 
 
             /**
-             * AssetName.
+             * <p>The name of the asset. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30min_movie</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -230,7 +239,10 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             }
 
             /**
-             * ContentId.
+             * <p>The content ID in the digital rights management (DRM) system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>movie</p>
              */
             public Builder contentId(String contentId) {
                 this.contentId = contentId;
@@ -238,7 +250,7 @@ public class BatchCreateVodPackagingAssetRequest extends Request {
             }
 
             /**
-             * Input.
+             * <p>The asset input configurations.</p>
              */
             public Builder input(Input input) {
                 this.input = input;

@@ -91,7 +91,7 @@ public class ListAlertsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Alerts.
+         * <p>The alerts.</p>
          */
         public Builder alerts(java.util.List<Alerts> alerts) {
             this.alerts = alerts;
@@ -99,7 +99,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -107,7 +110,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +121,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -241,7 +253,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private String resourceArn; 
 
             /**
-             * Category.
+             * <p>The alert type.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -249,7 +261,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ScheduleError</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -257,7 +272,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the alert was received in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-16T10:03Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -265,7 +283,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the alert was modified in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-16T10:03Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -273,7 +294,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -281,7 +305,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedResourceArns.
+             * <p>The ARN of the related resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>
              */
             public Builder relatedResourceArns(String relatedResourceArns) {
                 this.relatedResourceArns = relatedResourceArns;
@@ -289,7 +316,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceArn.
+             * <p>The ARN of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>
              */
             public Builder resourceArn(String resourceArn) {
                 this.resourceArn = resourceArn;

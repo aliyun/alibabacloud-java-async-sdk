@@ -55,7 +55,7 @@ public class GetChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Channel.
+         * <p>The channel information.</p>
          */
         public Builder channel(ChannelAssemblyChannel channel) {
             this.channel = channel;
@@ -63,7 +63,10 @@ public class GetChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

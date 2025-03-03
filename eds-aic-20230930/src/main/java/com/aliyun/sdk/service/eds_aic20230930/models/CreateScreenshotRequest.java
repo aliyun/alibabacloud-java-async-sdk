@@ -88,6 +88,7 @@ public class CreateScreenshotRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the cloud phone instances. You can create multiple snapshots simultaneously.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -97,7 +98,10 @@ public class CreateScreenshotRequest extends Request {
         }
 
         /**
-         * OssBucketName.
+         * <p>The name of the OSS bucket. The name must start with &quot;cloudphone-saved-bucket-&quot;. The OSS bucket and the cloud phone instance must be in the same region. If you leave this parameter empty, the system will create a default OSS bucket named “cloudphone-saved-bucket-{Region of the cloud phone instance}-{AliUid}.”</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudphone-saved-bucket-cn-shanghai-default</p>
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putQueryParameter("OssBucketName", ossBucketName);
@@ -106,7 +110,10 @@ public class CreateScreenshotRequest extends Request {
         }
 
         /**
-         * SkipCheckPolicyConfig.
+         * <p>Specifies whether to bypass the snapshot policy control. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipCheckPolicyConfig(String skipCheckPolicyConfig) {
             this.putQueryParameter("SkipCheckPolicyConfig", skipCheckPolicyConfig);

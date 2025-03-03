@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link UpdateEventStreamingResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEventStreamingResponseBody</p>
@@ -73,7 +79,10 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+         * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +90,10 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name [xxxx] of event streaming in request is already exist!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +101,10 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FDD73AA-7A2D-5BD4-B4C0-88AFEBF5F0F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +112,10 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

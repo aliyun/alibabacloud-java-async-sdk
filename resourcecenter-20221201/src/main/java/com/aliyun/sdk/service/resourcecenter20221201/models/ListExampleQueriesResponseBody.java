@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListExampleQueriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExampleQueries")
-    private java.util.List < ExampleQueries> exampleQueries;
+    private java.util.List<ExampleQueries> exampleQueries;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
@@ -42,7 +47,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
     /**
      * @return exampleQueries
      */
-    public java.util.List < ExampleQueries> getExampleQueries() {
+    public java.util.List<ExampleQueries> getExampleQueries() {
         return this.exampleQueries;
     }
 
@@ -68,7 +73,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ExampleQueries> exampleQueries; 
+        private java.util.List<ExampleQueries> exampleQueries; 
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         /**
          * <p>The information about the sample query templates.</p>
          */
-        public Builder exampleQueries(java.util.List < ExampleQueries> exampleQueries) {
+        public Builder exampleQueries(java.util.List<ExampleQueries> exampleQueries) {
             this.exampleQueries = exampleQueries;
             return this;
         }

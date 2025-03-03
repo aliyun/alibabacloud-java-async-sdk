@@ -106,6 +106,9 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
      * <p>ListRenderingDataPackagesResponseBody</p>
      */
     public static class DataPackages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -128,6 +131,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         private String updateTime;
 
         private DataPackages(Builder builder) {
+            this.category = builder.category;
             this.creationTime = builder.creationTime;
             this.dataPackageId = builder.dataPackageId;
             this.description = builder.description;
@@ -143,6 +147,13 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
 
         public static DataPackages create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -195,6 +206,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private String creationTime; 
             private String dataPackageId; 
             private String description; 
@@ -202,6 +214,14 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             private Integer size; 
             private String status; 
             private String updateTime; 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * CreationTime.

@@ -213,10 +213,10 @@ public class ListSitesRequest extends Request {
         } 
 
         /**
-         * <p>The DNS setup. Valid values:</p>
+         * <p>Access type. Values:</p>
          * <ul>
-         * <li><strong>NS</strong></li>
-         * <li><strong>CNAME</strong></li>
+         * <li><strong>NS</strong>: Access through NS hosting.</li>
+         * <li><strong>CNAME</strong>: Access through CNAME.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,11 +229,11 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The service location. Valid values:</p>
+         * <p>Acceleration region. Values:</p>
          * <ul>
-         * <li><strong>domestic</strong>: the Chinese Mainland</li>
-         * <li><strong>global</strong>: global (including the Chinese Mainland)</li>
-         * <li><strong>overseas</strong>: outside the Chinese Mainland</li>
+         * <li><strong>domestic</strong>: China mainland only.</li>
+         * <li><strong>global</strong>: Global.</li>
+         * <li><strong>overseas</strong>: Global (excluding China mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query only websites on Enterprise plans. Valid values: <strong>true and false</strong>.</p>
+         * <p>Enterprise edition only. When set to <strong>true</strong>, it indicates that only enterprise edition sites are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -258,10 +258,10 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>null</p>
+         * <p>Sorting field, default sorted by creation time, supports:</p>
          * <ul>
-         * <li>null</li>
-         * <li>null</li>
+         * <li>gmtCreate: Site creation time</li>
+         * <li>visitTime: Site access time</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>Page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -286,7 +286,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 500.</p>
+         * <p>Page size. Default value: <strong>500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -298,12 +298,12 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The plan type. Valid values:</p>
+         * <p>Plan subscription type. Values:</p>
          * <ul>
-         * <li><strong>basicplan</strong>: Entrance</li>
-         * <li><strong>standardplan</strong>: Pro</li>
-         * <li><strong>advancedplan</strong>: Premium</li>
-         * <li><strong>enterpriseplan</strong>: Enterprise</li>
+         * <li><strong>basicplan</strong>: Basic plan.</li>
+         * <li><strong>standardplan</strong>: Standard plan.</li>
+         * <li><strong>advancedplan</strong>: Advanced plan.</li>
+         * <li><strong>enterpriseplan</strong>: Enterprise plan.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -316,7 +316,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. This parameter specifies a filter condition for the query.</p>
+         * <p>Resource group ID. Used as a filter condition for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzd3styujvyei</p>
@@ -328,7 +328,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The website name. This parameter specifies a filter condition for the query.</p>
+         * <p>Site name. Used as a filter condition for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -340,12 +340,12 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The match mode to search for the website name. Default value: exact. Valid values:</p>
+         * <p>Search match pattern for the site name. The default is exact match, with values:</p>
          * <ul>
-         * <li><strong>prefix</strong>: match by prefix.</li>
-         * <li><strong>suffix</strong>: match by suffix.</li>
-         * <li><strong>null</strong></li>
-         * <li><strong>fuzzy</strong>: fuzzy match.</li>
+         * <li><strong>prefix</strong>: Prefix match.</li>
+         * <li><strong>suffix</strong>: Suffix match.</li>
+         * <li><strong>exact</strong>: Exact match.</li>
+         * <li><strong>fuzzy</strong>: Fuzzy match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The website status. This parameter specifies a filter condition for the query.</p>
+         * <p>Site status. Used as a filter condition for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -370,7 +370,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The tag filtering rule.</p>
+         * <p>Tag filtering rules.</p>
          */
         public Builder tagFilter(java.util.List<TagFilter> tagFilter) {
             String tagFilterShrink = shrink(tagFilter, "TagFilter", "json");
@@ -431,7 +431,7 @@ public class ListSitesRequest extends Request {
             private String value; 
 
             /**
-             * <p>The tag key. This parameter specifies a filter condition for the query.</p>
+             * <p>Tag key, used as a filter condition for the query.</p>
              * 
              * <strong>example:</strong>
              * <p>tag1</p>
@@ -442,7 +442,7 @@ public class ListSitesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. This parameter specifies a filter condition for the query.</p>
+             * <p>Tag value, used as a filter condition for the query.</p>
              * 
              * <strong>example:</strong>
              * <p>aaa</p>

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BackflowFeatureConsistencyCheckJobDataRequest} extends {@link RequestModel}
  *
  * <p>BackflowFeatureConsistencyCheckJobDataRequest</p>
@@ -61,6 +67,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
     private String scores;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    private String serviceName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserFeatures")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userFeatures;
@@ -77,6 +87,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         this.logUserId = builder.logUserId;
         this.sceneName = builder.sceneName;
         this.scores = builder.scores;
+        this.serviceName = builder.serviceName;
         this.userFeatures = builder.userFeatures;
     }
 
@@ -164,6 +175,13 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
     }
 
     /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
      * @return userFeatures
      */
     public String getUserFeatures() {
@@ -181,6 +199,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         private String logUserId; 
         private String sceneName; 
         private String scores; 
+        private String serviceName; 
         private String userFeatures; 
 
         private Builder() {
@@ -199,6 +218,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
             this.logUserId = request.logUserId;
             this.sceneName = request.sceneName;
             this.scores = request.scores;
+            this.serviceName = request.serviceName;
             this.userFeatures = request.userFeatures;
         } 
 
@@ -212,7 +232,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * FeatureConsistencyCheckJobConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder featureConsistencyCheckJobConfigId(String featureConsistencyCheckJobConfigId) {
             this.putBodyParameter("FeatureConsistencyCheckJobConfigId", featureConsistencyCheckJobConfigId);
@@ -221,7 +244,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -230,7 +256,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * ItemFeatures.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;{\&quot;itemid\&quot;:{\&quot;value\&quot;:1010,\&quot;type\&quot;:\&quot;string\&quot;}}&quot;]</p>
          */
         public Builder itemFeatures(String itemFeatures) {
             this.putBodyParameter("ItemFeatures", itemFeatures);
@@ -239,7 +268,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * LogItemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9010</p>
          */
         public Builder logItemId(String logItemId) {
             this.putBodyParameter("LogItemId", logItemId);
@@ -248,7 +280,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * LogRequestId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder logRequestId(String logRequestId) {
             this.putBodyParameter("LogRequestId", logRequestId);
@@ -257,7 +292,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * LogRequestTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1693900981465</p>
          */
         public Builder logRequestTime(Long logRequestTime) {
             this.putBodyParameter("LogRequestTime", logRequestTime);
@@ -266,7 +304,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010</p>
          */
         public Builder logUserId(String logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -275,7 +316,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * SceneName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video-feed</p>
          */
         public Builder sceneName(String sceneName) {
             this.putBodyParameter("SceneName", sceneName);
@@ -284,7 +328,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * Scores.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;{\&quot;dbmtl_probs_is_valid_play\&quot;:0.00032182207107543945,\&quot;dbmtl_y_play_time\&quot;:0.0043269748210906982}&quot;]</p>
          */
         public Builder scores(String scores) {
             this.putBodyParameter("Scores", scores);
@@ -293,7 +340,19 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         }
 
         /**
-         * UserFeatures.
+         * ServiceName.
+         */
+        public Builder serviceName(String serviceName) {
+            this.putBodyParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userid&quot;:{&quot;value&quot;:1010,&quot;type&quot;:&quot;string&quot;},&quot;click_5_seq&quot;:{&quot;value&quot;:&quot;9001;9002;9003;9004;9005&quot;,&quot;type&quot;:&quot;string&quot;}}</p>
          */
         public Builder userFeatures(String userFeatures) {
             this.putBodyParameter("UserFeatures", userFeatures);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReportTaskSucceededResponseBody} extends {@link TeaModel}
  *
  * <p>ReportTaskSucceededResponseBody</p>
  */
 public class ReportTaskSucceededResponseBody extends TeaModel {
-    @NameInMap("EventId")
+    @com.aliyun.core.annotation.NameInMap("EventId")
     private Long eventId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ReportTaskSucceededResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ReportTaskSucceededResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the event.
+         * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder eventId(Long eventId) {
             this.eventId = eventId;
@@ -58,7 +66,10 @@ public class ReportTaskSucceededResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

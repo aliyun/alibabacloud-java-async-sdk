@@ -46,6 +46,10 @@ public class ApproveFotaUpdateRequest extends Request {
     private String sessionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetStatus")
+    private String targetStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
@@ -57,6 +61,7 @@ public class ApproveFotaUpdateRequest extends Request {
         this.loginToken = builder.loginToken;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
+        this.targetStatus = builder.targetStatus;
         this.uuid = builder.uuid;
     }
 
@@ -116,6 +121,13 @@ public class ApproveFotaUpdateRequest extends Request {
     }
 
     /**
+     * @return targetStatus
+     */
+    public String getTargetStatus() {
+        return this.targetStatus;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -129,6 +141,7 @@ public class ApproveFotaUpdateRequest extends Request {
         private String loginToken; 
         private String regionId; 
         private String sessionId; 
+        private String targetStatus; 
         private String uuid; 
 
         private Builder() {
@@ -143,6 +156,7 @@ public class ApproveFotaUpdateRequest extends Request {
             this.loginToken = request.loginToken;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
+            this.targetStatus = request.targetStatus;
             this.uuid = request.uuid;
         } 
 
@@ -209,6 +223,15 @@ public class ApproveFotaUpdateRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * TargetStatus.
+         */
+        public Builder targetStatus(String targetStatus) {
+            this.putQueryParameter("TargetStatus", targetStatus);
+            this.targetStatus = targetStatus;
             return this;
         }
 

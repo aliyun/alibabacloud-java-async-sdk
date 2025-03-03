@@ -1,3 +1,9 @@
+2025-02-27 Version: 3.0.2
+- Generated java-async 2024-03-27 for APIG.
+
+2025-02-26 Version: 3.0.1
+- Generated java-async 2024-03-27 for APIG.
+
 2025-02-14 Version: 3.0.0
 - Generated java-async 2024-03-27 for APIG.
 

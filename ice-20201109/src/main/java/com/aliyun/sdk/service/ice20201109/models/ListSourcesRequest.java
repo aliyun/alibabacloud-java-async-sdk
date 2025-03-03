@@ -157,7 +157,10 @@ public class ListSourcesRequest extends Request {
         } 
 
         /**
-         * FilterState.
+         * <p>Specifies whether to ignore sources marked as deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder filterState(Boolean filterState) {
             this.putQueryParameter("FilterState", filterState);
@@ -166,7 +169,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -175,7 +181,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +193,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values: asc and desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -193,7 +205,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * SortByModifiedTime.
+         * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortByModifiedTime(String sortByModifiedTime) {
             this.putQueryParameter("SortByModifiedTime", sortByModifiedTime);
@@ -202,7 +217,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * SourceLocationName.
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder sourceLocationName(String sourceLocationName) {
             this.putQueryParameter("SourceLocationName", sourceLocationName);
@@ -211,7 +229,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * SourceName.
+         * <p>The name of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyVodSource</p>
          */
         public Builder sourceName(String sourceName) {
             this.putQueryParameter("SourceName", sourceName);
@@ -220,7 +241,10 @@ public class ListSourcesRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source type. Valid values: vodSource and liveSource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vodSource</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

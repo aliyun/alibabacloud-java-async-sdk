@@ -127,7 +127,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Configs.
+         * <p>Array</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -135,7 +135,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>获取后续数据的最大记录数，使用此方式获取数据时分页参数将无效</p>
+         * <p>The maximum number of entries to retrieve in a subsequent request. If this parameter is used, the pagination parameters become invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -146,7 +146,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>获取后续数据的Token，使用此方式获取数据时分页参数将无效</p>
+         * <p>The token that is used in the next request to retrieve a new page of results. If this parameter is used, the pagination parameters become invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>*<em><strong><strong>8EqYpQbZ6Eh7+Zz8DxVYoQ</strong></strong></em></p>
@@ -157,7 +157,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页参数，页码</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页参数，页宽</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -190,7 +190,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页参数，排序方式，asc:按创建时间升序，desc:按创建时间降序</p>
+         * <p>The sorting order of the configurations by creation time. asc: ascending. desc: descending.</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -201,7 +201,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总记录数</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -262,7 +262,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             private String contentSegmentUrlPrefix; 
 
             /**
-             * <p>广告分片的CDN前缀</p>
+             * <p>The CDN prefix for ad segments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -273,7 +273,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>视频内容分片的CDN前缀</p>
+             * <p>The CDN prefix for content segments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -323,7 +323,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             private String hlsPrefix; 
 
             /**
-             * <p>HLS清单播放端点前缀</p>
+             * <p>The prefix of the playback endpoint for HLS manifests.</p>
              */
             public Builder hlsPrefix(String hlsPrefix) {
                 this.hlsPrefix = hlsPrefix;
@@ -490,7 +490,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             private String slateAdUrl; 
 
             /**
-             * <p>广告标记透传</p>
+             * <p>Indicates whether ad marker passthrough is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -501,7 +501,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>广告策略服务器URL</p>
+             * <p>The request URL of the ad decision server (ADS).</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://ads.com/ad1?param1=%5Bpalyer_params.p1%5D">http://ads.com/ad1?param1=[palyer_params.p1]</a></p>
@@ -512,7 +512,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CDN配置</p>
+             * <p>The CDN configurations.</p>
              */
             public Builder cdnConfig(CdnConfig cdnConfig) {
                 this.cdnConfig = cdnConfig;
@@ -520,7 +520,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>动态配置别名</p>
+             * <p>The player parameter variables and aliases.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -535,7 +535,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内容URL前缀</p>
+             * <p>The URL prefix for the source content.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://source.com/">https://source.com/</a></p>
@@ -546,7 +546,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The time when the configuration was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-13T08:26:09Z</p>
@@ -557,7 +557,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间</p>
+             * <p>The time when the configuration was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-13T08:26:09Z</p>
@@ -568,7 +568,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>清单播放端点配置</p>
+             * <p>The playback endpoint configuration.</p>
              */
             public Builder manifestEndpointConfig(ManifestEndpointConfig manifestEndpointConfig) {
                 this.manifestEndpointConfig = manifestEndpointConfig;
@@ -576,7 +576,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>广告插入配置名称</p>
+             * <p>The name of the ad insertion configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>my_ad</p>
@@ -587,7 +587,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>个性化配置阈值</p>
+             * <p>The personalization threshold that defines the maximum duration of underfilled time allowed in an ad break.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -598,7 +598,7 @@ public class ListAdInsertionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>slate广告URL</p>
+             * <p>The URL of the slate ad.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></p>

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureConsistencyCheckJobFeatureReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFeatureConsistencyCheckJobFeatureReportsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
     private String ossPath;
 
     @com.aliyun.core.annotation.NameInMap("ReportsOfFeatureDiff")
-    private java.util.List < ReportsOfFeatureDiff> reportsOfFeatureDiff;
+    private java.util.List<ReportsOfFeatureDiff> reportsOfFeatureDiff;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -55,7 +61,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
     /**
      * @return reportsOfFeatureDiff
      */
-    public java.util.List < ReportsOfFeatureDiff> getReportsOfFeatureDiff() {
+    public java.util.List<ReportsOfFeatureDiff> getReportsOfFeatureDiff() {
         return this.reportsOfFeatureDiff;
     }
 
@@ -69,7 +75,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
     public static final class Builder {
         private String dataPath; 
         private String ossPath; 
-        private java.util.List < ReportsOfFeatureDiff> reportsOfFeatureDiff; 
+        private java.util.List<ReportsOfFeatureDiff> reportsOfFeatureDiff; 
         private String requestId; 
 
         /**
@@ -91,7 +97,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         /**
          * ReportsOfFeatureDiff.
          */
-        public Builder reportsOfFeatureDiff(java.util.List < ReportsOfFeatureDiff> reportsOfFeatureDiff) {
+        public Builder reportsOfFeatureDiff(java.util.List<ReportsOfFeatureDiff> reportsOfFeatureDiff) {
             this.reportsOfFeatureDiff = reportsOfFeatureDiff;
             return this;
         }
@@ -110,6 +116,12 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link ListFeatureConsistencyCheckJobFeatureReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFeatureConsistencyCheckJobFeatureReportsResponseBody</p>
+     */
     public static class ReportsOfFeatureDiff extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;

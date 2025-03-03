@@ -103,6 +103,7 @@ public class CreateSourceLocationRequest extends Request {
         } 
 
         /**
+         * <p>The protocol and hostname of the source location.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class CreateSourceLocationRequest extends Request {
         }
 
         /**
-         * EnableSegmentDelivery.
+         * <p>Specifies whether to use an independent domain name to access the segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSegmentDelivery(Boolean enableSegmentDelivery) {
             this.putQueryParameter("EnableSegmentDelivery", enableSegmentDelivery);
@@ -124,7 +128,10 @@ public class CreateSourceLocationRequest extends Request {
         }
 
         /**
-         * SegmentDeliveryUrl.
+         * <p>The domain name used to access the segments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxxx.com">http://xxxxx.com</a></p>
          */
         public Builder segmentDeliveryUrl(String segmentDeliveryUrl) {
             this.putQueryParameter("SegmentDeliveryUrl", segmentDeliveryUrl);
@@ -133,6 +140,7 @@ public class CreateSourceLocationRequest extends Request {
         }
 
         /**
+         * <p>The name of the source location.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

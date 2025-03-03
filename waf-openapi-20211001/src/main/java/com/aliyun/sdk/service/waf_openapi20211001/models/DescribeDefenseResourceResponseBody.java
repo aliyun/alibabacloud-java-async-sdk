@@ -85,6 +85,73 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
      *
      * <p>DescribeDefenseResourceResponseBody</p>
      */
+    public static class ResponseHeaders extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ResponseHeaders(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseHeaders create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ResponseHeaders build() {
+                return new ResponseHeaders(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDefenseResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseResourceResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcwCookieStatus")
         private Integer acwCookieStatus;
@@ -131,6 +198,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceOrigin")
         private String resourceOrigin;
 
+        @com.aliyun.core.annotation.NameInMap("ResponseHeaders")
+        private java.util.List<ResponseHeaders> responseHeaders;
+
         @com.aliyun.core.annotation.NameInMap("XffStatus")
         private Integer xffStatus;
 
@@ -150,6 +220,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             this.resourceGroup = builder.resourceGroup;
             this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.resourceOrigin = builder.resourceOrigin;
+            this.responseHeaders = builder.responseHeaders;
             this.xffStatus = builder.xffStatus;
         }
 
@@ -267,6 +338,13 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseHeaders
+         */
+        public java.util.List<ResponseHeaders> getResponseHeaders() {
+            return this.responseHeaders;
+        }
+
+        /**
          * @return xffStatus
          */
         public Integer getXffStatus() {
@@ -289,6 +367,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             private String resourceGroup; 
             private String resourceManagerResourceGroupId; 
             private String resourceOrigin; 
+            private java.util.List<ResponseHeaders> responseHeaders; 
             private Integer xffStatus; 
 
             /**
@@ -472,6 +551,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
              */
             public Builder resourceOrigin(String resourceOrigin) {
                 this.resourceOrigin = resourceOrigin;
+                return this;
+            }
+
+            /**
+             * ResponseHeaders.
+             */
+            public Builder responseHeaders(java.util.List<ResponseHeaders> responseHeaders) {
+                this.responseHeaders = responseHeaders;
                 return this;
             }
 

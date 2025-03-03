@@ -129,7 +129,10 @@ public class ListSourceLocationsRequest extends Request {
         } 
 
         /**
-         * FilterState.
+         * <p>Specifies whether to ignore source locations marked as deleted. A value of true means ignoring source locations marked as deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder filterState(Boolean filterState) {
             this.putQueryParameter("FilterState", filterState);
@@ -138,7 +141,13 @@ public class ListSourceLocationsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <ul>
+         * <li>The page number.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -147,7 +156,10 @@ public class ListSourceLocationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,7 +168,10 @@ public class ListSourceLocationsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -165,7 +180,10 @@ public class ListSourceLocationsRequest extends Request {
         }
 
         /**
-         * SortByModifiedTime.
+         * <p>The sorting order of the source locations based on the time when they were last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortByModifiedTime(String sortByModifiedTime) {
             this.putQueryParameter("SortByModifiedTime", sortByModifiedTime);
@@ -174,7 +192,10 @@ public class ListSourceLocationsRequest extends Request {
         }
 
         /**
-         * SourceLocationName.
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLocation</p>
          */
         public Builder sourceLocationName(String sourceLocationName) {
             this.putQueryParameter("SourceLocationName", sourceLocationName);

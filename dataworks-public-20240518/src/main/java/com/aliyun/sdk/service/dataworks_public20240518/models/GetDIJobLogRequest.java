@@ -201,7 +201,14 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>Node type. Currently, it is only applicable in the view resource group 2.0 task:</p>
+         * <ul>
+         * <li>MASTER: obtains logs of JobManager.</li>
+         * <li>WORKER: obtains logs of TaskManager.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MASTER</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -210,7 +217,10 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the pagination query. The value is a positive integer greater than or equal to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

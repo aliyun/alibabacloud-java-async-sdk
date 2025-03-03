@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneFeatureConsistencyCheckJobConfigRequest} extends {@link RequestModel}
  *
  * <p>CloneFeatureConsistencyCheckJobConfigRequest</p>
@@ -83,7 +89,10 @@ public class CloneFeatureConsistencyCheckJobConfigRequest extends Request {
         } 
 
         /**
-         * SourceFeatureConsistencyCheckJobConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sourceFeatureConsistencyCheckJobConfigId(String sourceFeatureConsistencyCheckJobConfigId) {
             this.putPathParameter("SourceFeatureConsistencyCheckJobConfigId", sourceFeatureConsistencyCheckJobConfigId);
@@ -101,7 +110,10 @@ public class CloneFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

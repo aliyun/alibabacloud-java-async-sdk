@@ -79,7 +79,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         private Integer retCode; 
 
         /**
-         * <p>Response body</p>
+         * <p>The response body.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -87,7 +87,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the API call</p>
+         * <p>The call description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -98,7 +98,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>11AA9E73-FBA0-58DC-97BA-D606D847BCB6</p>
@@ -109,7 +109,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned error code, 0 indicates success</p>
+         * <p>The returned error code. A value of 0 indicates that the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -158,7 +158,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
             private String outputUrl; 
 
             /**
-             * <p>Output address</p>
+             * <p>The output URL.</p>
              * 
              * <strong>example:</strong>
              * <p>srt://1.2.3.4:1025</p>

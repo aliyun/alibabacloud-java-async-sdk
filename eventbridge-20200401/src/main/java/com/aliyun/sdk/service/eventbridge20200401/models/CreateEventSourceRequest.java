@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateEventSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateEventSourceRequest</p>
@@ -27,7 +33,7 @@ public class CreateEventSourceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExternalSourceConfig")
-    private java.util.Map < String, ? > externalSourceConfig;
+    private java.util.Map<String, ?> externalSourceConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExternalSourceType")
@@ -119,7 +125,7 @@ public class CreateEventSourceRequest extends Request {
     /**
      * @return externalSourceConfig
      */
-    public java.util.Map < String, ? > getExternalSourceConfig() {
+    public java.util.Map<String, ?> getExternalSourceConfig() {
         return this.externalSourceConfig;
     }
 
@@ -190,7 +196,7 @@ public class CreateEventSourceRequest extends Request {
         private String description; 
         private String eventBusName; 
         private String eventSourceName; 
-        private java.util.Map < String, ? > externalSourceConfig; 
+        private java.util.Map<String, ?> externalSourceConfig; 
         private byte[] externalSourceType; 
         private Boolean linkedExternalSource; 
         private SourceHttpEventParameters sourceHttpEventParameters; 
@@ -223,7 +229,7 @@ public class CreateEventSourceRequest extends Request {
         } 
 
         /**
-         * The description of the event source.
+         * <p>The description of the event source.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -232,7 +238,11 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The name of the event bus with which the event source is associated.
+         * <p>The name of the event bus with which the event source is associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-event-bus</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putBodyParameter("EventBusName", eventBusName);
@@ -241,7 +251,11 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The name of the event source.
+         * <p>The name of the event source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myrabbitmq.sourc</p>
          */
         public Builder eventSourceName(String eventSourceName) {
             this.putBodyParameter("EventSourceName", eventSourceName);
@@ -250,9 +264,9 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * ExternalSourceConfig.
+         * <p>The configurations of the external data source.</p>
          */
-        public Builder externalSourceConfig(java.util.Map < String, ? > externalSourceConfig) {
+        public Builder externalSourceConfig(java.util.Map<String, ?> externalSourceConfig) {
             String externalSourceConfigShrink = shrink(externalSourceConfig, "ExternalSourceConfig", "json");
             this.putBodyParameter("ExternalSourceConfig", externalSourceConfigShrink);
             this.externalSourceConfig = externalSourceConfig;
@@ -260,7 +274,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * ExternalSourceType.
+         * <p>The type of the external data source.</p>
          */
         public Builder externalSourceType(byte[] externalSourceType) {
             this.putBodyParameter("ExternalSourceType", externalSourceType);
@@ -269,7 +283,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * LinkedExternalSource.
+         * <p>Specifies whether to connect to an external data source.</p>
          */
         public Builder linkedExternalSource(Boolean linkedExternalSource) {
             this.putBodyParameter("LinkedExternalSource", linkedExternalSource);
@@ -278,7 +292,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is HTTP events.
+         * <p>The parameters that are configured if the event source is HTTP events.</p>
          */
         public Builder sourceHttpEventParameters(SourceHttpEventParameters sourceHttpEventParameters) {
             String sourceHttpEventParametersShrink = shrink(sourceHttpEventParameters, "SourceHttpEventParameters", "json");
@@ -288,7 +302,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is Message Queue for Apache Kafka.
+         * <p>The parameters that are configured if the event source is Message Queue for Apache Kafka.</p>
          */
         public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
             String sourceKafkaParametersShrink = shrink(sourceKafkaParameters, "SourceKafkaParameters", "json");
@@ -298,7 +312,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.
+         * <p>The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</p>
          */
         public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
             String sourceMNSParametersShrink = shrink(sourceMNSParameters, "SourceMNSParameters", "json");
@@ -308,7 +322,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is Message Queue for RabbitMQ.
+         * <p>The parameters that are configured if the event source is Message Queue for RabbitMQ.</p>
          */
         public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
             String sourceRabbitMQParametersShrink = shrink(sourceRabbitMQParameters, "SourceRabbitMQParameters", "json");
@@ -318,7 +332,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is Message Queue for Apache RocketMQ.
+         * <p>The parameters that are configured if the event source is Message Queue for Apache RocketMQ.</p>
          */
         public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
             String sourceRocketMQParametersShrink = shrink(sourceRocketMQParameters, "SourceRocketMQParameters", "json");
@@ -328,7 +342,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is Log Service.
+         * <p>The parameters that are configured if the event source is Log Service.</p>
          */
         public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
             String sourceSLSParametersShrink = shrink(sourceSLSParameters, "SourceSLSParameters", "json");
@@ -338,7 +352,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if you specify scheduled events as the event source.
+         * <p>The parameters that are configured if you specify scheduled events as the event source.</p>
          */
         public Builder sourceScheduledEventParameters(SourceScheduledEventParameters sourceScheduledEventParameters) {
             String sourceScheduledEventParametersShrink = shrink(sourceScheduledEventParameters, "SourceScheduledEventParameters", "json");
@@ -354,15 +368,21 @@ public class CreateEventSourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceRequest</p>
+     */
     public static class SourceHttpEventParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
-        private java.util.List < String > ip;
+        private java.util.List<String> ip;
 
         @com.aliyun.core.annotation.NameInMap("Method")
-        private java.util.List < String > method;
+        private java.util.List<String> method;
 
         @com.aliyun.core.annotation.NameInMap("Referer")
-        private java.util.List < String > referer;
+        private java.util.List<String> referer;
 
         @com.aliyun.core.annotation.NameInMap("SecurityConfig")
         private String securityConfig;
@@ -389,21 +409,21 @@ public class CreateEventSourceRequest extends Request {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         /**
          * @return method
          */
-        public java.util.List < String > getMethod() {
+        public java.util.List<String> getMethod() {
             return this.method;
         }
 
         /**
          * @return referer
          */
-        public java.util.List < String > getReferer() {
+        public java.util.List<String> getReferer() {
             return this.referer;
         }
 
@@ -422,54 +442,57 @@ public class CreateEventSourceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
-            private java.util.List < String > method; 
-            private java.util.List < String > referer; 
+            private java.util.List<String> ip; 
+            private java.util.List<String> method; 
+            private java.util.List<String> referer; 
             private String securityConfig; 
             private String type; 
 
             /**
-             * The CIDR block that is used for security settings. This parameter is required only if you set SecurityConfig to ip. You can enter a CIDR block or an IP address.
+             * <p>The CIDR block that is used for security settings. This parameter is required only if you set SecurityConfig to ip. You can enter a CIDR block or an IP address.</p>
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
 
             /**
-             * The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values:
-             * <p>
-             * 
-             * *   GET
-             * *   POST
-             * *   PUT
-             * *   PATCH
-             * *   DELETE
-             * *   HEAD
-             * *   OPTIONS
-             * *   TRACE
-             * *   CONNECT
+             * <p>The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values:</p>
+             * <ul>
+             * <li>GET</li>
+             * <li>POST</li>
+             * <li>PUT</li>
+             * <li>PATCH</li>
+             * <li>DELETE</li>
+             * <li>HEAD</li>
+             * <li>OPTIONS</li>
+             * <li>TRACE</li>
+             * <li>CONNECT</li>
+             * </ul>
              */
-            public Builder method(java.util.List < String > method) {
+            public Builder method(java.util.List<String> method) {
                 this.method = method;
                 return this;
             }
 
             /**
-             * The security domain name. This parameter is required only if you set SecurityConfig to referer. You can enter a domain name.
+             * <p>The security domain name. This parameter is required only if you set SecurityConfig to referer. You can enter a domain name.</p>
              */
-            public Builder referer(java.util.List < String > referer) {
+            public Builder referer(java.util.List<String> referer) {
                 this.referer = referer;
                 return this;
             }
 
             /**
-             * The type of security settings. Valid values:
-             * <p>
+             * <p>The type of security settings. Valid values:</p>
+             * <ul>
+             * <li>none: No configuration is required.</li>
+             * <li>ip: CIDR block.</li>
+             * <li>referer: security domain name.</li>
+             * </ul>
              * 
-             * *   none: No configuration is required.
-             * *   ip: CIDR block.
-             * *   referer: security domain name.
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder securityConfig(String securityConfig) {
                 this.securityConfig = securityConfig;
@@ -477,12 +500,15 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The protocol type that is supported by the generated webhook URL. Valid values:
-             * <p>
+             * <p>The protocol type that is supported by the generated webhook URL. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * <li>HTTP&amp;HTTPS</li>
+             * </ul>
              * 
-             * *   HTTP
-             * *   HTTPS
-             * *   HTTP\&HTTPS
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -496,6 +522,12 @@ public class CreateEventSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceRequest</p>
+     */
     public static class SourceKafkaParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
@@ -631,7 +663,10 @@ public class CreateEventSourceRequest extends Request {
             private String vpcId; 
 
             /**
-             * The ID of the consumer group that subscribes to the topic.
+             * <p>The ID of the consumer group that subscribes to the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wechat_peer_prod</p>
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -639,7 +674,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for Apache Kafka instance.
+             * <p>The ID of the Message Queue for Apache Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-2zehmg67txzuyuuwlxv4f</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -647,7 +685,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The maximum number of consumers.
+             * <p>The maximum number of consumers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maximumTasks(Integer maximumTasks) {
                 this.maximumTasks = maximumTasks;
@@ -655,7 +696,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
+             * <p>The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -663,7 +707,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The consumer offset.
+             * <p>The consumer offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
              */
             public Builder offsetReset(String offsetReset) {
                 this.offsetReset = offsetReset;
@@ -671,7 +718,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for Apache Kafka instance resides.
+             * <p>The ID of the region where the Message Queue for Apache Kafka instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -679,7 +729,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required only if you set Network to PublicNetwork.
+             * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required only if you set Network to PublicNetwork.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-8vbf66aoyp0wfzrzxlmy</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -687,7 +740,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the topic on the Message Queue for Apache Kafka instance.
+             * <p>The name of the topic on the Message Queue for Apache Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_ma_dispatch_center_call_record</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -695,7 +751,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required only if you set Network to PublicNetwork.
+             * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required only if you set Network to PublicNetwork.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp127azpeirmwu4q9ttqi</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -703,7 +762,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required only if you set Network to PublicNetwork.
+             * <p>The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required only if you set Network to PublicNetwork.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze5ejm986a73qq3vshlk</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -717,6 +779,12 @@ public class CreateEventSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceRequest</p>
+     */
     public static class SourceMNSParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
         private Boolean isBase64Decode;
@@ -768,7 +836,10 @@ public class CreateEventSourceRequest extends Request {
             private String regionId; 
 
             /**
-             * Specifies whether to enable Base64 decoding. Valid values: true and false.
+             * <p>Specifies whether to enable Base64 decoding. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isBase64Decode(Boolean isBase64Decode) {
                 this.isBase64Decode = isBase64Decode;
@@ -776,7 +847,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the MNS queue.
+             * <p>The name of the MNS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyQueue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -784,7 +858,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The region where the MNS queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.
+             * <p>The region where the MNS queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -798,6 +875,12 @@ public class CreateEventSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceRequest</p>
+     */
     public static class SourceRabbitMQParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -861,7 +944,10 @@ public class CreateEventSourceRequest extends Request {
             private String virtualHostName; 
 
             /**
-             * The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.
+             * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amqp-cn-nif22u74****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -869,7 +955,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -877,7 +966,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for RabbitMQ instance resides.
+             * <p>The ID of the region where the Message Queue for RabbitMQ instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -885,7 +977,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb-connect</p>
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -899,6 +994,12 @@ public class CreateEventSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceRequest</p>
+     */
     public static class SourceRocketMQParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
@@ -1106,7 +1207,10 @@ public class CreateEventSourceRequest extends Request {
             private String topic; 
 
             /**
-             * The authentication type. You can set this parameter to ACL or leave this parameter empty.
+             * <p>The authentication type. You can set this parameter to ACL or leave this parameter empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -1114,7 +1218,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the consumer group on the Message Queue for Apache RocketMQ instance.
+             * <p>The ID of the consumer group on the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID-test</p>
              */
             public Builder groupID(String groupID) {
                 this.groupID = groupID;
@@ -1122,7 +1229,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The endpoint that is used to access the Message Queue for Apache RocketMQ instance.
+             * <p>The endpoint that is used to access the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc****.aliyuncs.com</p>
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -1130,7 +1240,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_164901546557****_BAAN****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1138,7 +1251,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * None.
+             * <p>None.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder instanceNetwork(String instanceNetwork) {
                 this.instanceNetwork = instanceNetwork;
@@ -1146,7 +1262,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The password that is used to access the Message Queue for Apache RocketMQ instance.
+             * <p>The password that is used to access the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -1154,7 +1273,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.
+             * <p>The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-catalog-eventlistener</p>
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -1162,11 +1284,14 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The type of the Message Queue for Apache RocketMQ instance. Valid values:
-             * <p>
+             * <p>The type of the Message Queue for Apache RocketMQ instance. Valid values:</p>
+             * <ul>
+             * <li>Cloud_4: Message Queue for Apache RocketMQ 4.0 instance.</li>
+             * <li>Cloud_5: Message Queue for Apache RocketMQ 5.0 instance.</li>
+             * </ul>
              * 
-             * *   Cloud\_4: Message Queue for Apache RocketMQ 4.0 instance.
-             * *   Cloud\_5: Message Queue for Apache RocketMQ 5.0 instance.
+             * <strong>example:</strong>
+             * <p>Cloud_4</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1174,7 +1299,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The username that is used to access the Message Queue for Apache RocketMQ instance.
+             * <p>The username that is used to access the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -1182,7 +1310,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.
+             * <p>The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp10rbrt6rb6vrd89****</p>
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -1190,7 +1321,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance resides.
+             * <p>The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1a4gmlk31hyg6ptl3ss</p>
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -1198,7 +1332,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The offset from which message consumption starts. Valid values: CONSUME_FROM_LAST_OFFSET: Start message consumption from the latest offset. CONSUME_FROM_FIRST_OFFSET: Start message consumption from the earliest offset. CONSUME_FROM_TIMESTAMP: Start message consumption from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.
+             * <p>The offset from which message consumption starts. Valid values: CONSUME_FROM_LAST_OFFSET: Start message consumption from the latest offset. CONSUME_FROM_FIRST_OFFSET: Start message consumption from the earliest offset. CONSUME_FROM_TIMESTAMP: Start message consumption from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSUME_FROM_LAST_OFFSET</p>
              */
             public Builder offset(String offset) {
                 this.offset = offset;
@@ -1206,7 +1343,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The region where the Message Queue for Apache RocketMQ instance resides.
+             * <p>The region where the Message Queue for Apache RocketMQ instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1214,7 +1354,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The tag that is used to filter messages.
+             * <p>The tag that is used to filter messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1222,7 +1365,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The timestamp that specifies the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUME_FROM_TIMESTAMP.
+             * <p>The timestamp that specifies the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUME_FROM_TIMESTAMP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636597951964</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1230,7 +1376,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytopic</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -1244,6 +1393,12 @@ public class CreateEventSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceRequest</p>
+     */
     public static class SourceSLSParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumePosition")
         private String consumePosition;
@@ -1307,7 +1462,10 @@ public class CreateEventSourceRequest extends Request {
             private String roleName; 
 
             /**
-             * The starting consumer offset. The value begin specifies the earliest offset, and the value end specifies the latest offset. You can also specify a time in seconds to start consumption.
+             * <p>The starting consumer offset. The value begin specifies the earliest offset, and the value end specifies the latest offset. You can also specify a time in seconds to start consumption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>end</p>
              */
             public Builder consumePosition(String consumePosition) {
                 this.consumePosition = consumePosition;
@@ -1315,7 +1473,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The Log Service Logstore.
+             * <p>The Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-logstore</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -1323,7 +1484,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The Log Service project.
+             * <p>The Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1331,7 +1495,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.
+             * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -1345,6 +1512,12 @@ public class CreateEventSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEventSourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceRequest</p>
+     */
     public static class SourceScheduledEventParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
@@ -1396,7 +1569,10 @@ public class CreateEventSourceRequest extends Request {
             private String userData; 
 
             /**
-             * The cron expression.
+             * <p>The cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10 * * * * *</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -1404,7 +1580,10 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The time zone in which the cron expression is executed.
+             * <p>The time zone in which the cron expression is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GMT+0:00</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

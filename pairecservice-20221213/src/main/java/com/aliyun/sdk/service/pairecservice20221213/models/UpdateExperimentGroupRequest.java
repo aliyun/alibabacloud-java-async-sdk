@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateExperimentGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateExperimentGroupRequest</p>
@@ -282,7 +288,10 @@ public class UpdateExperimentGroupRequest extends Request {
         } 
 
         /**
-         * ExperimentGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentGroupId(String experimentGroupId) {
             this.putPathParameter("ExperimentGroupId", experimentGroupId);
@@ -345,7 +354,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -381,7 +393,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -390,7 +405,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * LayerId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder layerId(String layerId) {
             this.putBodyParameter("LayerId", layerId);
@@ -399,7 +417,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experiment_group1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

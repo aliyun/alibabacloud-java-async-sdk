@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link GetApiDestinationResponseBody} extends {@link TeaModel}
  *
  * <p>GetApiDestinationResponseBody</p>
@@ -73,7 +79,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * <p>The returned response code. The value Success indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +90,7 @@ public class GetApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +98,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.
+         * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +109,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B896B484-F16D-59DE-9E23-DD0E5C361108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +125,12 @@ public class GetApiDestinationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApiDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApiDestinationResponseBody</p>
+     */
     public static class HttpApiParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
@@ -149,7 +170,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
             private String method; 
 
             /**
-             * The endpoint of the API destination.
+             * <p>The endpoint of the API destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://127.0.0.1:8001/api">http://127.0.0.1:8001/api</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -157,16 +181,19 @@ public class GetApiDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
+             * <p>The HTTP request method. Valid values:</p>
+             * <ul>
+             * <li>POST</li>
+             * <li>GET</li>
+             * <li>DELETE</li>
+             * <li>PUT</li>
+             * <li>HEAD</li>
+             * <li>TRACE</li>
+             * <li>PATCH</li>
+             * </ul>
              * 
-             * *   POST
-             * *   GET
-             * *   DELETE
-             * *   PUT
-             * *   HEAD
-             * *   TRACE
-             * *   PATCH
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -180,6 +207,12 @@ public class GetApiDestinationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApiDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApiDestinationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiDestinationName")
         private String apiDestinationName;
@@ -255,7 +288,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
             private HttpApiParameters httpApiParameters; 
 
             /**
-             * The name of the API destination.
+             * <p>The name of the API destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder apiDestinationName(String apiDestinationName) {
                 this.apiDestinationName = apiDestinationName;
@@ -263,7 +299,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * The connection name.
+             * <p>The connection name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-basic</p>
              */
             public Builder connectionName(String connectionName) {
                 this.connectionName = connectionName;
@@ -271,7 +310,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API destination.
+             * <p>The description of the API destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -279,7 +321,10 @@ public class GetApiDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API destination was created.
+             * <p>The time when the API destination was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649055710565</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -287,7 +332,7 @@ public class GetApiDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * The request parameters that are configured for the API destination.
+             * <p>The request parameters that are configured for the API destination.</p>
              */
             public Builder httpApiParameters(HttpApiParameters httpApiParameters) {
                 this.httpApiParameters = httpApiParameters;

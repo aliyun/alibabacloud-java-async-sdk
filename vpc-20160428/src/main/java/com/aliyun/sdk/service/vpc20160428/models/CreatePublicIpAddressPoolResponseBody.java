@@ -80,7 +80,10 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * PublicIpAddressPoolId.
+         * <p>The ID of the IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-6wetvn6fumkgycssx****</p>
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.publicIpAddressPoolId = publicIpAddressPoolId;

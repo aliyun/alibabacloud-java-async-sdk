@@ -55,7 +55,10 @@ public class CreateSourceLocationResponseBody extends TeaModel {
         private ChannelAssemblySourceLocation sourceLocation; 
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class CreateSourceLocationResponseBody extends TeaModel {
         }
 
         /**
-         * SourceLocation.
+         * <p>The source location information.</p>
          */
         public Builder sourceLocation(ChannelAssemblySourceLocation sourceLocation) {
             this.sourceLocation = sourceLocation;

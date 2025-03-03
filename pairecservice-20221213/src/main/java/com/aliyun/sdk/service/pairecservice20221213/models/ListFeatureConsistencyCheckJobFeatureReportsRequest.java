@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureConsistencyCheckJobFeatureReportsRequest} extends {@link RequestModel}
  *
  * <p>ListFeatureConsistencyCheckJobFeatureReportsRequest</p>
@@ -128,7 +134,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         } 
 
         /**
-         * FeatureConsistencyCheckJobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder featureConsistencyCheckJobId(String featureConsistencyCheckJobId) {
             this.putPathParameter("FeatureConsistencyCheckJobId", featureConsistencyCheckJobId);
@@ -146,7 +155,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +167,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
-         * LogItemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9010</p>
          */
         public Builder logItemId(String logItemId) {
             this.putQueryParameter("LogItemId", logItemId);
@@ -164,7 +179,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
-         * LogRequestId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
          */
         public Builder logRequestId(String logRequestId) {
             this.putQueryParameter("LogRequestId", logRequestId);
@@ -173,7 +191,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
-         * LogUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010</p>
          */
         public Builder logUserId(String logUserId) {
             this.putQueryParameter("LogUserId", logUserId);

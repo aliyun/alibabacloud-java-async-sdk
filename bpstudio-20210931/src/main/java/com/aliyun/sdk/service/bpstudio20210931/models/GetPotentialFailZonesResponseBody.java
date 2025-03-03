@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -49,7 +54,7 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -69,7 +74,7 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < String > data; 
+        private java.util.List<String> data; 
         private String message; 
         private String requestId; 
 
@@ -87,7 +92,7 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
         /**
          * <p>The zones where the current disaster recovery service can be switched.</p>
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }

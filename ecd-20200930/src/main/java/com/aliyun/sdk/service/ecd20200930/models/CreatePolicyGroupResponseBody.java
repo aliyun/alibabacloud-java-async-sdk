@@ -55,7 +55,7 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The cloud computer policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-gx2x1dhsmthe9****</p>

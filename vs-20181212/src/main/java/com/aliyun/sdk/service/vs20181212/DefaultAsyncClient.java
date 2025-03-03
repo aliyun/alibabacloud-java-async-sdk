@@ -868,6 +868,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteRenderingInstanceSettings  DeleteRenderingInstanceSettingsRequest
+     * @return DeleteRenderingInstanceSettingsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRenderingInstanceSettingsResponse> deleteRenderingInstanceSettings(DeleteRenderingInstanceSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRenderingInstanceSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRenderingInstanceSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRenderingInstanceSettingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
      * @return DeleteTemplateResponse
      */
@@ -1276,6 +1294,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRenderingInstanceConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeRenderingInstanceSettings  DescribeRenderingInstanceSettingsRequest
+     * @return DescribeRenderingInstanceSettingsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRenderingInstanceSettingsResponse> describeRenderingInstanceSettings(DescribeRenderingInstanceSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRenderingInstanceSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRenderingInstanceSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRenderingInstanceSettingsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2326,6 +2362,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RefreshRenderingInstanceStreaming  RefreshRenderingInstanceStreamingRequest
+     * @return RefreshRenderingInstanceStreamingResponse
+     */
+    @Override
+    public CompletableFuture<RefreshRenderingInstanceStreamingResponse> refreshRenderingInstanceStreaming(RefreshRenderingInstanceStreamingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshRenderingInstanceStreaming").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshRenderingInstanceStreamingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshRenderingInstanceStreamingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ReleaseRenderingDataPackage  ReleaseRenderingDataPackageRequest
      * @return ReleaseRenderingDataPackageResponse
      */
@@ -2374,6 +2428,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RenewRenderingInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResetRenderingInstance  ResetRenderingInstanceRequest
+     * @return ResetRenderingInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ResetRenderingInstanceResponse> resetRenderingInstance(ResetRenderingInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResetRenderingInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetRenderingInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResetRenderingInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2878,6 +2950,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateRenderingInstanceConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRenderingInstanceSettings  UpdateRenderingInstanceSettingsRequest
+     * @return UpdateRenderingInstanceSettingsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRenderingInstanceSettingsResponse> updateRenderingInstanceSettings(UpdateRenderingInstanceSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRenderingInstanceSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRenderingInstanceSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRenderingInstanceSettingsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

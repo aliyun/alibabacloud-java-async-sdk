@@ -55,7 +55,10 @@ public class DowngradeAndroidInstanceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22326560487****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -63,7 +66,10 @@ public class DowngradeAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3AF82CE1-2801-52CE-BF64-B491DD7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

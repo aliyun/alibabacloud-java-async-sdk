@@ -99,6 +99,9 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Execution successful.</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -257,7 +257,7 @@ public class UpdateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * AdaptiveRouting.
+         * <p>Configuration for cross-pool origin fallback.</p>
          */
         public Builder adaptiveRouting(AdaptiveRouting adaptiveRouting) {
             String adaptiveRoutingShrink = shrink(adaptiveRouting, "AdaptiveRouting", "json");
@@ -267,7 +267,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * DefaultPools.
+         * <p>List of default pool IDs.</p>
          */
         public Builder defaultPools(java.util.List<Long> defaultPools) {
             String defaultPoolsShrink = shrink(defaultPools, "DefaultPools", "json");
@@ -277,7 +277,10 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Detailed description of the load balancer, which is useful for management and identification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>负载均衡器描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -286,7 +289,14 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Whether the load balancer is enabled.</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -295,7 +305,10 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * FallbackPool.
+         * <p>Fallback pool ID, where traffic will be directed when all other pools are unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96228666776****</p>
          */
         public Builder fallbackPool(Long fallbackPool) {
             this.putQueryParameter("FallbackPool", fallbackPool);
@@ -304,6 +317,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
+         * <p>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +330,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Monitor.
+         * <p>Monitor configuration for health checks.</p>
          */
         public Builder monitor(Monitor monitor) {
             String monitorShrink = shrink(monitor, "Monitor", "json");
@@ -326,7 +340,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * RandomSteering.
+         * <p>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</p>
          */
         public Builder randomSteering(RandomSteering randomSteering) {
             String randomSteeringShrink = shrink(randomSteering, "RandomSteering", "json");
@@ -336,7 +350,18 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * RegionPools.
+         * <p>Address pools corresponding to the primary region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;ENAM&quot;: [
+         *     12345678****
+         *   ],
+         *   &quot;WNAM&quot;: [
+         *     23456789****,
+         *     23456789****
+         *   ]
+         * }</p>
          */
         public Builder regionPools(Object regionPools) {
             this.putQueryParameter("RegionPools", regionPools);
@@ -345,7 +370,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Rules.
+         * <p>Rule configuration list, used to define behavior overrides under specific conditions.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -355,11 +380,11 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Session persistence. Valid values:</p>
+         * <p>Session persistence, with values:</p>
          * <ul>
-         * <li>off:disables session persistence.</li>
-         * <li>ip: enables session persistence by IP address.</li>
-         * <li>cookie: disables session persistence.</li>
+         * <li>off: Not enabled.</li>
+         * <li>ip: Session persistence by IP.</li>
+         * <li>cookie: Not enabled for session persistence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,10 +397,11 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>UpdateLoadBalancer</p>
+         * <p>1159101787****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -384,7 +410,10 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * SteeringPolicy.
+         * <p>Load balancing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
          */
         public Builder steeringPolicy(String steeringPolicy) {
             this.putQueryParameter("SteeringPolicy", steeringPolicy);
@@ -393,7 +422,10 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * SubRegionPools.
+         * <p>Address pools corresponding to the secondary region. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
          */
         public Builder subRegionPools(Object subRegionPools) {
             this.putQueryParameter("SubRegionPools", subRegionPools);
@@ -402,7 +434,10 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>TTL value, the time-to-live for DNS records. The default is 30, and the range is 10-600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -450,7 +485,14 @@ public class UpdateLoadBalancerRequest extends Request {
             private Boolean failoverAcrossPools; 
 
             /**
-             * FailoverAcrossPools.
+             * <p>Whether to perform cross-pool origin fallback.</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder failoverAcrossPools(Boolean failoverAcrossPools) {
                 this.failoverAcrossPools = failoverAcrossPools;
@@ -617,7 +659,10 @@ public class UpdateLoadBalancerRequest extends Request {
             private String type; 
 
             /**
-             * ConsecutiveDown.
+             * <p>Number of consecutive failed probes required to consider the target unhealthy, such as 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder consecutiveDown(Integer consecutiveDown) {
                 this.consecutiveDown = consecutiveDown;
@@ -625,7 +670,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * ConsecutiveUp.
+             * <p>Number of consecutive successful probes required to consider the target healthy, such as 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder consecutiveUp(Integer consecutiveUp) {
                 this.consecutiveUp = consecutiveUp;
@@ -633,7 +681,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * ExpectedCodes.
+             * <p>Expected status codes, such as 200,202, which are successful HTTP responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200,202</p>
              */
             public Builder expectedCodes(String expectedCodes) {
                 this.expectedCodes = expectedCodes;
@@ -641,7 +692,14 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * FollowRedirects.
+             * <p>Whether to follow redirects.</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder followRedirects(Boolean followRedirects) {
                 this.followRedirects = followRedirects;
@@ -649,7 +707,15 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Header.
+             * <p>Monitor request header configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;host&quot;: [
+             *             &quot;example1.com&quot;,
+             *             &quot;example2.com&quot;
+             *         ]
+             *     }</p>
              */
             public Builder header(Object header) {
                 this.header = header;
@@ -657,7 +723,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>Monitor interval, such as 60 seconds, which is the check frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -665,7 +734,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Method.
+             * <p>Monitor request method, such as GET, which is a method in the HTTP protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -673,7 +745,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>Monitor check path, such as /healthcheck, which is the HTTP request path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/health</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -681,7 +756,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>Origin server port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -689,7 +767,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>Application health check timeout, in seconds. The range is 1-10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -697,7 +778,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>Monitor protocol type, such as HTTP, used for health checks. When the value is &quot;off&quot;, it indicates that no check will be performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -756,7 +840,10 @@ public class UpdateLoadBalancerRequest extends Request {
             private java.util.Map<String, Integer> poolWeights; 
 
             /**
-             * DefaultWeight.
+             * <p>The default round-robin weight, used for all pools that do not have a specific weight set. The value range is an integer between 0 and 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder defaultWeight(Integer defaultWeight) {
                 this.defaultWeight = defaultWeight;
@@ -764,7 +851,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * PoolWeights.
+             * <p>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight coefficient. The weight coefficient represents the proportion of relative traffic distribution.</p>
              */
             public Builder poolWeights(java.util.Map<String, Integer> poolWeights) {
                 this.poolWeights = poolWeights;
@@ -847,7 +934,10 @@ public class UpdateLoadBalancerRequest extends Request {
             private Integer statusCode; 
 
             /**
-             * ContentType.
+             * <p>Content-Type field in the HTTP Header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/json</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -855,7 +945,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Location.
+             * <p>Location field in the HTTP response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com/index.html">http://www.example.com/index.html</a></p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -863,7 +956,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * MessageBody.
+             * <p>Response body value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello World!</p>
              */
             public Builder messageBody(String messageBody) {
                 this.messageBody = messageBody;
@@ -871,7 +967,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * StatusCode.
+             * <p>Response status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder statusCode(Integer statusCode) {
                 this.statusCode = statusCode;
@@ -990,7 +1089,7 @@ public class UpdateLoadBalancerRequest extends Request {
             private Boolean terminates; 
 
             /**
-             * FixedResponse.
+             * <p>Execute a specified response after matching the rule.</p>
              */
             public Builder fixedResponse(FixedResponse fixedResponse) {
                 this.fixedResponse = fixedResponse;
@@ -998,7 +1097,51 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Overrides.
+             * <p>Modify the corresponding load balancing configuration after matching the rule. The fields in the configuration will override the corresponding fields in the load balancer configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *             &quot;adaptive_routing&quot;: {
+             *                 &quot;failover_across_pools&quot;: true
+             *             },
+             *             &quot;sub_region_pools&quot;: {
+             *                 &quot;AL,AT&quot;: [
+             *                     92298024898****,
+             *                     92304347804****
+             *                 ],
+             *                 &quot;BG,BY&quot;: [
+             *                     92298024898****
+             *                 ]
+             *             },
+             *             &quot;default_pools&quot;: [
+             *                 92298024898****,
+             *                 92304347804****
+             *             ],
+             *             &quot;fallback_pool&quot;: 92298024898****,
+             *             &quot;location_strategy&quot;: {
+             *                 &quot;mode&quot;: &quot;resolver_ip&quot;,
+             *                 &quot;prefer_ecs&quot;: &quot;always&quot;
+             *             },
+             *             &quot;random_steering&quot;: {
+             *                 &quot;default_weight&quot;: 0.3,
+             *                 &quot;pool_weights&quot;: {
+             *                     &quot;92298024898****&quot;: 0.7,
+             *                     &quot;92304347804****&quot;: 0.8
+             *                 }
+             *             },
+             *             &quot;region_pools&quot;: {
+             *                 &quot;CN,SEAS&quot;: [
+             *                     92298024898****,
+             *                     92304347804****
+             *                 ],
+             *                 &quot;SAF,SAS&quot;: [
+             *                     92304347804****
+             *                 ]
+             *             },
+             *             &quot;session_affinity&quot;: &quot;ip&quot;,
+             *             &quot;steering_policy&quot;: &quot;geo&quot;,
+             *             &quot;ttl&quot;: 30
+             *         }</p>
              */
             public Builder overrides(Object overrides) {
                 this.overrides = overrides;
@@ -1006,7 +1149,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Rule.
+             * <p>Matching condition, such as a rule based on the request URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.request.method eq &quot;GET&quot;</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1014,7 +1160,14 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * RuleEnable.
+             * <p>Rule switch.</p>
+             * <ul>
+             * <li>on: Enable the rule.</li>
+             * <li>off: Disable the rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1022,7 +1175,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1030,7 +1186,10 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Sequence.
+             * <p>The execution order of the rule. It can be left blank, in which case the rules will be executed in the list order. If specified, it must be a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -1038,7 +1197,14 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Terminates.
+             * <p>Whether to terminate the execution of subsequent rules.</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder terminates(Boolean terminates) {
                 this.terminates = terminates;

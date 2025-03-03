@@ -117,6 +117,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         } 
 
         /**
+         * <p>The region ID of the resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
+         * <p>The resource group ID. For more information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * AllInstances.
+         * <p>Specifies whether the delete operation takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</p>
          */
         public Builder allInstances(Boolean allInstances) {
             this.putQueryParameter("AllInstances", allInstances);
@@ -150,7 +152,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "simple");
@@ -160,7 +162,7 @@ public class DeleteResourceInstanceLabelRequest extends Request {
         }
 
         /**
-         * Keys.
+         * <p>The keys of the tags that you want to delete.</p>
          */
         public Builder keys(java.util.List<String> keys) {
             String keysShrink = shrink(keys, "Keys", "simple");

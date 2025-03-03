@@ -165,7 +165,10 @@ public class UpdateVaultRequest extends Request {
         }
 
         /**
-         * WormEnabled.
+         * <p>Whether to enable the vault worm feature. Once the worm feature is enabled, the vault and all its backup data cannot be deleted before they automatically expire. After enabling the worm feature, it is not supported to disable it. The worm feature is only effective for standard and archive backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder wormEnabled(Boolean wormEnabled) {
             this.putQueryParameter("WormEnabled", wormEnabled);

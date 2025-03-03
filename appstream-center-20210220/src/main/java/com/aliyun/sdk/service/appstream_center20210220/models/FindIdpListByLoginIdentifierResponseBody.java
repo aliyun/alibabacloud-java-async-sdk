@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210220.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IdpInfos")
-    private java.util.List < IdpInfos> idpInfos;
+    private java.util.List<IdpInfos> idpInfos;
 
     @com.aliyun.core.annotation.NameInMap("OfficeSiteInfo")
     private OfficeSiteInfo officeSiteInfo;
 
     @com.aliyun.core.annotation.NameInMap("PopRegionConfig")
-    private java.util.Map < String, String > popRegionConfig;
+    private java.util.Map<String, String> popRegionConfig;
 
     @com.aliyun.core.annotation.NameInMap("ProfileRegion")
     private String profileRegion;
@@ -50,7 +55,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
     /**
      * @return idpInfos
      */
-    public java.util.List < IdpInfos> getIdpInfos() {
+    public java.util.List<IdpInfos> getIdpInfos() {
         return this.idpInfos;
     }
 
@@ -64,7 +69,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
     /**
      * @return popRegionConfig
      */
-    public java.util.Map < String, String > getPopRegionConfig() {
+    public java.util.Map<String, String> getPopRegionConfig() {
         return this.popRegionConfig;
     }
 
@@ -90,9 +95,9 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IdpInfos> idpInfos; 
+        private java.util.List<IdpInfos> idpInfos; 
         private OfficeSiteInfo officeSiteInfo; 
-        private java.util.Map < String, String > popRegionConfig; 
+        private java.util.Map<String, String> popRegionConfig; 
         private String profileRegion; 
         private String requestId; 
         private TenantAliasInfo tenantAliasInfo; 
@@ -100,7 +105,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         /**
          * IdpInfos.
          */
-        public Builder idpInfos(java.util.List < IdpInfos> idpInfos) {
+        public Builder idpInfos(java.util.List<IdpInfos> idpInfos) {
             this.idpInfos = idpInfos;
             return this;
         }
@@ -116,7 +121,7 @@ public class FindIdpListByLoginIdentifierResponseBody extends TeaModel {
         /**
          * PopRegionConfig.
          */
-        public Builder popRegionConfig(java.util.Map < String, String > popRegionConfig) {
+        public Builder popRegionConfig(java.util.Map<String, String> popRegionConfig) {
             this.popRegionConfig = popRegionConfig;
             return this;
         }

@@ -1500,6 +1500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyTrafficMatchRuleToTrafficMarkingPolicyResponse> modifyTrafficMatchRuleToTrafficMarkingPolicy(ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyTransitRouteTableAggregation  ModifyTransitRouteTableAggregationRequest
+     * @return ModifyTransitRouteTableAggregationResponse
+     */
+    CompletableFuture<ModifyTransitRouteTableAggregationResponse> modifyTransitRouteTableAggregation(ModifyTransitRouteTableAggregationRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you modify the CIDR block of a transit router, we recommend that you read the <a href="https://help.aliyun.com/document_detail/462635.html">limits on transit router CIDR blocks</a>.</p>
      * <ul>

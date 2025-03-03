@@ -1852,6 +1852,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTaskContentResponse> updateTaskContent(UpdateTaskContentRequest request);
 
     /**
+     * @param request the request parameters of UpdateTaskContentV2  UpdateTaskContentV2Request
+     * @return UpdateTaskContentV2Response
+     */
+    CompletableFuture<UpdateTaskContentV2Response> updateTaskContentV2(UpdateTaskContentV2Request request);
+
+    /**
      * @param request the request parameters of UpdateTaskFlowConstants  UpdateTaskFlowConstantsRequest
      * @return UpdateTaskFlowConstantsResponse
      */

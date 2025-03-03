@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -374,7 +379,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
         private Double originalPrice;
 
         @com.aliyun.core.annotation.NameInMap("PriceList")
-        private java.util.List < PriceList> priceList;
+        private java.util.List<PriceList> priceList;
 
         @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
@@ -435,7 +440,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
         /**
          * @return priceList
          */
-        public java.util.List < PriceList> getPriceList() {
+        public java.util.List<PriceList> getPriceList() {
             return this.priceList;
         }
 
@@ -465,7 +470,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private String error; 
             private String nodeType; 
             private Double originalPrice; 
-            private java.util.List < PriceList> priceList; 
+            private java.util.List<PriceList> priceList; 
             private String priceUnit; 
             private String promotionName; 
             private Double tradePrice; 
@@ -517,7 +522,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             /**
              * <p>The information about the price.</p>
              */
-            public Builder priceList(java.util.List < PriceList> priceList) {
+            public Builder priceList(java.util.List<PriceList> priceList) {
                 this.priceList = priceList;
                 return this;
             }
@@ -570,7 +575,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceList")
-        private java.util.List < ResourceList> resourceList;
+        private java.util.List<ResourceList> resourceList;
 
         private Data(Builder builder) {
             this.resourceList = builder.resourceList;
@@ -587,17 +592,17 @@ public class ValuateTemplateResponseBody extends TeaModel {
         /**
          * @return resourceList
          */
-        public java.util.List < ResourceList> getResourceList() {
+        public java.util.List<ResourceList> getResourceList() {
             return this.resourceList;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceList> resourceList; 
+            private java.util.List<ResourceList> resourceList; 
 
             /**
              * <p>The result set of the inquiry.</p>
              */
-            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+            public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
                 return this;
             }

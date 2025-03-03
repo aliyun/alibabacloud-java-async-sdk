@@ -57,8 +57,8 @@ public class GetIPv6ResponseBody extends TeaModel {
         /**
          * <p>IPv6 switch. Values:</p>
          * <ul>
-         * <li><strong>on</strong>: Enabled.</li>
-         * <li><strong>off</strong>: Disabled.</li>
+         * <li><strong>on</strong>: Enable. </li>
+         * <li><strong>off</strong>: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>

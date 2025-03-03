@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTableMetasResponseBody} extends {@link TeaModel}
  *
  * <p>ListTableMetasResponseBody</p>
@@ -15,7 +21,7 @@ public class ListTableMetasResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TableMetas")
-    private java.util.List < TableMetas> tableMetas;
+    private java.util.List<TableMetas> tableMetas;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -44,7 +50,7 @@ public class ListTableMetasResponseBody extends TeaModel {
     /**
      * @return tableMetas
      */
-    public java.util.List < TableMetas> getTableMetas() {
+    public java.util.List<TableMetas> getTableMetas() {
         return this.tableMetas;
     }
 
@@ -57,7 +63,7 @@ public class ListTableMetasResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TableMetas> tableMetas; 
+        private java.util.List<TableMetas> tableMetas; 
         private Long totalCount; 
 
         /**
@@ -71,7 +77,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         /**
          * TableMetas.
          */
-        public Builder tableMetas(java.util.List < TableMetas> tableMetas) {
+        public Builder tableMetas(java.util.List<TableMetas> tableMetas) {
             this.tableMetas = tableMetas;
             return this;
         }
@@ -90,6 +96,12 @@ public class ListTableMetasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTableMetasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableMetasResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsDimensionField")
         private Boolean isDimensionField;
@@ -191,6 +203,12 @@ public class ListTableMetasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTableMetasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableMetasResponseBody</p>
+     */
     public static class TableMetas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanDelete")
         private Boolean canDelete;
@@ -202,7 +220,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Fields")
-        private java.util.List < Fields> fields;
+        private java.util.List<Fields> fields;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -283,7 +301,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < Fields> getFields() {
+        public java.util.List<Fields> getFields() {
             return this.fields;
         }
 
@@ -361,7 +379,7 @@ public class ListTableMetasResponseBody extends TeaModel {
             private Boolean canDelete; 
             private String config; 
             private String description; 
-            private java.util.List < Fields> fields; 
+            private java.util.List<Fields> fields; 
             private String gmtCreateTime; 
             private String gmtImportedTime; 
             private String gmtModifiedTime; 
@@ -400,7 +418,7 @@ public class ListTableMetasResponseBody extends TeaModel {
             /**
              * Fields.
              */
-            public Builder fields(java.util.List < Fields> fields) {
+            public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
                 return this;
             }

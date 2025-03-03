@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class CreateLayerVersionInput extends TeaModel {
     private InputCodeLocation code;
 
     @com.aliyun.core.annotation.NameInMap("compatibleRuntime")
-    private java.util.List < String > compatibleRuntime;
+    private java.util.List<String> compatibleRuntime;
 
     @com.aliyun.core.annotation.NameInMap("description")
     @com.aliyun.core.annotation.Validation(maxLength = 256)
@@ -50,7 +55,7 @@ public class CreateLayerVersionInput extends TeaModel {
     /**
      * @return compatibleRuntime
      */
-    public java.util.List < String > getCompatibleRuntime() {
+    public java.util.List<String> getCompatibleRuntime() {
         return this.compatibleRuntime;
     }
 
@@ -70,7 +75,7 @@ public class CreateLayerVersionInput extends TeaModel {
 
     public static final class Builder {
         private InputCodeLocation code; 
-        private java.util.List < String > compatibleRuntime; 
+        private java.util.List<String> compatibleRuntime; 
         private String description; 
         private String license; 
 
@@ -85,7 +90,7 @@ public class CreateLayerVersionInput extends TeaModel {
         /**
          * compatibleRuntime.
          */
-        public Builder compatibleRuntime(java.util.List < String > compatibleRuntime) {
+        public Builder compatibleRuntime(java.util.List<String> compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
             return this;
         }

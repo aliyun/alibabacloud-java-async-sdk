@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link UpdateRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateRuleResponseBody</p>
@@ -85,7 +91,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code 200 indicates that the request was successful.
+         * <p>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +102,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation.
+         * <p>The result of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -101,7 +113,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if the request failed.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventRuleFilterPatternSchemaError</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +124,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7439944D-D9FC-5614-B65E-07A468988924</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +135,10 @@ public class UpdateRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values: true and false.
+         * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

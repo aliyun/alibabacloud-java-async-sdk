@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrafficControlTaskTrafficRequest} extends {@link RequestModel}
  *
  * <p>UpdateTrafficControlTaskTrafficRequest</p>
@@ -29,7 +35,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Traffics")
-    private java.util.List < Traffics> traffics;
+    private java.util.List<Traffics> traffics;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("new-param-3")
@@ -89,7 +95,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
     /**
      * @return traffics
      */
-    public java.util.List < Traffics> getTraffics() {
+    public java.util.List<Traffics> getTraffics() {
         return this.traffics;
     }
 
@@ -105,7 +111,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         private String regionId; 
         private String environment; 
         private String instanceId; 
-        private java.util.List < Traffics> traffics; 
+        private java.util.List<Traffics> traffics; 
         private String newParam3; 
 
         private Builder() {
@@ -161,7 +167,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         /**
          * Traffics.
          */
-        public Builder traffics(java.util.List < Traffics> traffics) {
+        public Builder traffics(java.util.List<Traffics> traffics) {
             this.putBodyParameter("Traffics", traffics);
             this.traffics = traffics;
             return this;
@@ -183,6 +189,12 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTrafficControlTaskTrafficRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTrafficControlTaskTrafficRequest</p>
+     */
     public static class Traffics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ItemOrExperimentId")
         private String itemOrExperimentId;

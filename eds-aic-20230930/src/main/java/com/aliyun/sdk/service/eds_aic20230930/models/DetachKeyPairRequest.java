@@ -74,7 +74,7 @@ public class DetachKeyPairRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -83,6 +83,7 @@ public class DetachKeyPairRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ADB key pair.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

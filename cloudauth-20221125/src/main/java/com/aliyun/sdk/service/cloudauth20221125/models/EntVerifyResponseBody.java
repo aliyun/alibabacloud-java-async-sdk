@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20221125.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>EntVerifyResponseBody</p>
  */
 public class EntVerifyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private EntVerifyResponseBody(Builder builder) {
@@ -90,7 +95,10 @@ public class EntVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-A***B-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +119,17 @@ public class EntVerifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EntVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>EntVerifyResponseBody</p>
+     */
     public static class ModelResults extends TeaModel {
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
         private ModelResults(Builder builder) {
@@ -172,12 +186,18 @@ public class EntVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EntVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>EntVerifyResponseBody</p>
+     */
     public static class RiskVerifyResult extends TeaModel {
-        @NameInMap("Found")
+        @com.aliyun.core.annotation.NameInMap("Found")
         private Boolean found;
 
-        @NameInMap("ModelResults")
-        private java.util.List < ModelResults> modelResults;
+        @com.aliyun.core.annotation.NameInMap("ModelResults")
+        private java.util.List<ModelResults> modelResults;
 
         private RiskVerifyResult(Builder builder) {
             this.found = builder.found;
@@ -202,13 +222,13 @@ public class EntVerifyResponseBody extends TeaModel {
         /**
          * @return modelResults
          */
-        public java.util.List < ModelResults> getModelResults() {
+        public java.util.List<ModelResults> getModelResults() {
             return this.modelResults;
         }
 
         public static final class Builder {
             private Boolean found; 
-            private java.util.List < ModelResults> modelResults; 
+            private java.util.List<ModelResults> modelResults; 
 
             /**
              * Found.
@@ -221,7 +241,7 @@ public class EntVerifyResponseBody extends TeaModel {
             /**
              * ModelResults.
              */
-            public Builder modelResults(java.util.List < ModelResults> modelResults) {
+            public Builder modelResults(java.util.List<ModelResults> modelResults) {
                 this.modelResults = modelResults;
                 return this;
             }
@@ -233,8 +253,14 @@ public class EntVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EntVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>EntVerifyResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("RiskVerifyResult")
+        @com.aliyun.core.annotation.NameInMap("RiskVerifyResult")
         private RiskVerifyResult riskVerifyResult;
 
         private Result(Builder builder) {

@@ -55,7 +55,7 @@ public class GetVodPackagingGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PackagingGroup.
+         * <p>The information about the packaging group.</p>
          */
         public Builder packagingGroup(VodPackagingGroup packagingGroup) {
             this.packagingGroup = packagingGroup;
@@ -63,7 +63,10 @@ public class GetVodPackagingGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

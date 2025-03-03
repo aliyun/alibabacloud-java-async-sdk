@@ -43,7 +43,10 @@ public class DeleteRCNodePoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

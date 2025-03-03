@@ -159,7 +159,10 @@ public class UpdateProgramRequest extends Request {
         } 
 
         /**
-         * AdBreaks.
+         * <p>The information about ad breaks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;MessageType&quot;:&quot;SPLICE_INSERT&quot;,&quot;OffsetMillis&quot;:1000,&quot;SourceLocationName&quot;:&quot;MySourceLocation&quot;,&quot;SourceName&quot;:&quot;MyAdSource&quot;,&quot;SpliceInsertSettings&quot;:{&quot;AvailNumber&quot;:0,&quot;AvailExpected&quot;:0,&quot;SpliceEventID&quot;:1,&quot;UniqueProgramID&quot;:0}}]</p>
          */
         public Builder adBreaks(String adBreaks) {
             this.putQueryParameter("AdBreaks", adBreaks);
@@ -168,6 +171,7 @@ public class UpdateProgramRequest extends Request {
         }
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +184,10 @@ public class UpdateProgramRequest extends Request {
         }
 
         /**
-         * ClipRange.
+         * <p>Extracts a clip from the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{StartOffsetMillis: 213123, EndOffsetMillis: 213134}</p>
          */
         public Builder clipRange(String clipRange) {
             this.putQueryParameter("ClipRange", clipRange);
@@ -189,6 +196,7 @@ public class UpdateProgramRequest extends Request {
         }
 
         /**
+         * <p>The name of the program.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +209,10 @@ public class UpdateProgramRequest extends Request {
         }
 
         /**
-         * SourceLocationName.
+         * <p>The name of the source location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourceLcation</p>
          */
         public Builder sourceLocationName(String sourceLocationName) {
             this.putQueryParameter("SourceLocationName", sourceLocationName);
@@ -210,7 +221,10 @@ public class UpdateProgramRequest extends Request {
         }
 
         /**
-         * SourceName.
+         * <p>The name of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySource</p>
          */
         public Builder sourceName(String sourceName) {
             this.putQueryParameter("SourceName", sourceName);
@@ -219,7 +233,10 @@ public class UpdateProgramRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source type of the program. Valid values: vodSource and liveSource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vodSource</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -228,7 +245,10 @@ public class UpdateProgramRequest extends Request {
         }
 
         /**
-         * Transition.
+         * <p>The program transition method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;: &quot;RELATIVE&quot;, &quot;RelativePosition&quot;: &quot;AFTER_PROGRAM&quot;, &quot;RelativeProgram&quot;: &quot;program2&quot;}</p>
          */
         public Builder transition(String transition) {
             this.putQueryParameter("Transition", transition);

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCalculationJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCalculationJobsResponseBody</p>
  */
 public class ListCalculationJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CalculationJobs")
-    private java.util.List < CalculationJobs> calculationJobs;
+    private java.util.List<CalculationJobs> calculationJobs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
     /**
      * @return calculationJobs
      */
-    public java.util.List < CalculationJobs> getCalculationJobs() {
+    public java.util.List<CalculationJobs> getCalculationJobs() {
         return this.calculationJobs;
     }
 
@@ -56,14 +62,14 @@ public class ListCalculationJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CalculationJobs> calculationJobs; 
+        private java.util.List<CalculationJobs> calculationJobs; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * CalculationJobs.
          */
-        public Builder calculationJobs(java.util.List < CalculationJobs> calculationJobs) {
+        public Builder calculationJobs(java.util.List<CalculationJobs> calculationJobs) {
             this.calculationJobs = calculationJobs;
             return this;
         }
@@ -90,6 +96,12 @@ public class ListCalculationJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCalculationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCalculationJobsResponseBody</p>
+     */
     public static class CalculationJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ABMetricName")
         private String ABMetricName;
@@ -107,7 +119,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         private String gmtRanTime;
 
         @com.aliyun.core.annotation.NameInMap("JobMessage")
-        private java.util.List < String > jobMessage;
+        private java.util.List<String> jobMessage;
 
         @com.aliyun.core.annotation.NameInMap("JobSource")
         private String jobSource;
@@ -172,7 +184,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         /**
          * @return jobMessage
          */
-        public java.util.List < String > getJobMessage() {
+        public java.util.List<String> getJobMessage() {
             return this.jobMessage;
         }
 
@@ -196,7 +208,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             private String calculationJobId; 
             private String config; 
             private String gmtRanTime; 
-            private java.util.List < String > jobMessage; 
+            private java.util.List<String> jobMessage; 
             private String jobSource; 
             private String status; 
 
@@ -243,7 +255,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             /**
              * JobMessage.
              */
-            public Builder jobMessage(java.util.List < String > jobMessage) {
+            public Builder jobMessage(java.util.List<String> jobMessage) {
                 this.jobMessage = jobMessage;
                 return this;
             }

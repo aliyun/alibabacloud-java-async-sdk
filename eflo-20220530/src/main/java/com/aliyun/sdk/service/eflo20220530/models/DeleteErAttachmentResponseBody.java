@@ -91,7 +91,10 @@ public class DeleteErAttachmentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>访问被拒绝的详细原因。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;

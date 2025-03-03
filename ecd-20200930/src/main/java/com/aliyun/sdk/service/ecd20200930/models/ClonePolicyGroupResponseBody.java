@@ -55,7 +55,7 @@ public class ClonePolicyGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the new policy.</p>
+         * <p>The ID of the new cloud computer policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-7jcaznnx6go6n****</p>

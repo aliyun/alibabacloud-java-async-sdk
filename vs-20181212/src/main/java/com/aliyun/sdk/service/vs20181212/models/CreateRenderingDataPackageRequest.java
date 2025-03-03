@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateRenderingDataPackageRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    private String category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String description;
@@ -29,6 +33,7 @@ public class CreateRenderingDataPackageRequest extends Request {
 
     private CreateRenderingDataPackageRequest(Builder builder) {
         super(builder);
+        this.category = builder.category;
         this.description = builder.description;
         this.renderingInstanceId = builder.renderingInstanceId;
     }
@@ -47,6 +52,13 @@ public class CreateRenderingDataPackageRequest extends Request {
     }
 
     /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -61,6 +73,7 @@ public class CreateRenderingDataPackageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRenderingDataPackageRequest, Builder> {
+        private String category; 
         private String description; 
         private String renderingInstanceId; 
 
@@ -70,9 +83,19 @@ public class CreateRenderingDataPackageRequest extends Request {
 
         private Builder(CreateRenderingDataPackageRequest request) {
             super(request);
+            this.category = request.category;
             this.description = request.description;
             this.renderingInstanceId = request.renderingInstanceId;
         } 
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
 
         /**
          * Description.

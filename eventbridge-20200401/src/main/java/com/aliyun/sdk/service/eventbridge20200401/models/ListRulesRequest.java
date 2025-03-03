@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListRulesRequest} extends {@link RequestModel}
  *
  * <p>ListRulesRequest</p>
@@ -96,7 +102,11 @@ public class ListRulesRequest extends Request {
         } 
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -105,7 +115,10 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging. A maximum of 100 entries can be returned in a single call.
+         * <p>The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging. A maximum of 100 entries can be returned in a single call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -114,7 +127,10 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * If you set the Limit parameter and excess return values exist, this parameter is returned.
+         * <p>If you set the Limit parameter and excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -123,7 +139,10 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * The prefix of the rule name.
+         * <p>The prefix of the rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleNamePrefix(String ruleNamePrefix) {
             this.putQueryParameter("RuleNamePrefix", ruleNamePrefix);

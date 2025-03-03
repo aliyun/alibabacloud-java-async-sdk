@@ -30,6 +30,10 @@ public class CreateTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customPrompt")
+    private String customPrompt;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dialogue")
     private Dialogue dialogue;
 
@@ -72,6 +76,7 @@ public class CreateTaskRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.appId = builder.appId;
         this.regionId = builder.regionId;
+        this.customPrompt = builder.customPrompt;
         this.dialogue = builder.dialogue;
         this.examples = builder.examples;
         this.fields = builder.fields;
@@ -115,6 +120,13 @@ public class CreateTaskRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return customPrompt
+     */
+    public String getCustomPrompt() {
+        return this.customPrompt;
     }
 
     /**
@@ -184,6 +196,7 @@ public class CreateTaskRequest extends Request {
         private String workspaceId; 
         private String appId; 
         private String regionId; 
+        private String customPrompt; 
         private Dialogue dialogue; 
         private Examples examples; 
         private java.util.List<Fields> fields; 
@@ -203,6 +216,7 @@ public class CreateTaskRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.appId = request.appId;
             this.regionId = request.regionId;
+            this.customPrompt = request.customPrompt;
             this.dialogue = request.dialogue;
             this.examples = request.examples;
             this.fields = request.fields;
@@ -238,6 +252,15 @@ public class CreateTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * customPrompt.
+         */
+        public Builder customPrompt(String customPrompt) {
+            this.putBodyParameter("customPrompt", customPrompt);
+            this.customPrompt = customPrompt;
             return this;
         }
 
@@ -699,7 +722,6 @@ public class CreateTaskRequest extends Request {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("enumValues")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<EnumValues> enumValues;
 
         @com.aliyun.core.annotation.NameInMap("name")
@@ -772,7 +794,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * enumValues.
              */
             public Builder enumValues(java.util.List<EnumValues> enumValues) {
                 this.enumValues = enumValues;

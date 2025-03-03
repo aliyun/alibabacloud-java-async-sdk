@@ -135,7 +135,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of virtual resource groups.</p>
+         * <p>The virtual resource groups.</p>
          */
         public Builder virtualResources(java.util.List<VirtualResources> virtualResources) {
             this.virtualResources = virtualResources;
@@ -240,7 +240,10 @@ public class ListVirtualResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCount.
+             * <p>The number of deployed services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceCount(Integer serviceCount) {
                 this.serviceCount = serviceCount;

@@ -75,6 +75,7 @@ public class ImportKeyPairRequest extends Request {
         } 
 
         /**
+         * <p>The name of the ADB key pair.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
+         * <p>The public key of the ADB key pair.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

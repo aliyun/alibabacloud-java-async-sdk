@@ -55,7 +55,7 @@ public class PurgeCachesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ET5BF670-09D5-4D0B-BEBY-D96A2A528000</p>
@@ -66,7 +66,7 @@ public class PurgeCachesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID, which is generated after you create a task.</p>
+         * <p>Task ID, which is returned when you create a refresh or preheat task.</p>
          * 
          * <strong>example:</strong>
          * <p>15940956620</p>

@@ -40,8 +40,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create an API destination.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an API destination.</p>
+     * 
+     * @param request the request parameters of CreateApiDestination  CreateApiDestinationRequest
+     * @return CreateApiDestinationResponse
      */
     @Override
     public CompletableFuture<CreateApiDestinationResponse> createApiDestination(CreateApiDestinationRequest request) {
@@ -58,8 +61,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create a connection.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to create a connection.</p>
+     * 
+     * @param request the request parameters of CreateConnection  CreateConnectionRequest
+     * @return CreateConnectionResponse
      */
     @Override
     public CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request) {
@@ -76,8 +82,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create an event bus.
-      *
+     * <b>description</b> :
+     * <p>Creates an event bus.</p>
+     * 
+     * @param request the request parameters of CreateEventBus  CreateEventBusRequest
+     * @return CreateEventBusResponse
      */
     @Override
     public CompletableFuture<CreateEventBusResponse> createEventBus(CreateEventBusRequest request) {
@@ -94,8 +103,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to create an event source.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to create an event source.</p>
+     * 
+     * @param request the request parameters of CreateEventSource  CreateEventSourceRequest
+     * @return CreateEventSourceResponse
      */
     @Override
     public CompletableFuture<CreateEventSourceResponse> createEventSource(CreateEventSourceRequest request) {
@@ -112,8 +124,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create an event stream.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event stream.</p>
+     * 
+     * @param request the request parameters of CreateEventStreaming  CreateEventStreamingRequest
+     * @return CreateEventStreamingResponse
      */
     @Override
     public CompletableFuture<CreateEventStreamingResponse> createEventStreaming(CreateEventStreamingRequest request) {
@@ -130,8 +145,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create an event rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event rule.</p>
+     * 
+     * @param request the request parameters of CreateRule  CreateRuleRequest
+     * @return CreateRuleResponse
      */
     @Override
     public CompletableFuture<CreateRuleResponse> createRule(CreateRuleRequest request) {
@@ -148,8 +166,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create a service-linked role for your cloud service.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to create a service-linked role for your cloud service.</p>
+     * 
+     * @param request the request parameters of CreateServiceLinkedRoleForProduct  CreateServiceLinkedRoleForProductRequest
+     * @return CreateServiceLinkedRoleForProductResponse
      */
     @Override
     public CompletableFuture<CreateServiceLinkedRoleForProductResponse> createServiceLinkedRoleForProduct(CreateServiceLinkedRoleForProductRequest request) {
@@ -166,8 +187,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to delete an API destination.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an API destination.</p>
+     * 
+     * @param request the request parameters of DeleteApiDestination  DeleteApiDestinationRequest
+     * @return DeleteApiDestinationResponse
      */
     @Override
     public CompletableFuture<DeleteApiDestinationResponse> deleteApiDestination(DeleteApiDestinationRequest request) {
@@ -184,8 +208,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to delete a connection.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete a connection.</p>
+     * 
+     * @param request the request parameters of DeleteConnection  DeleteConnectionRequest
+     * @return DeleteConnectionResponse
      */
     @Override
     public CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request) {
@@ -202,8 +229,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to delete an event bus.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event bus.</p>
+     * 
+     * @param request the request parameters of DeleteEventBus  DeleteEventBusRequest
+     * @return DeleteEventBusResponse
      */
     @Override
     public CompletableFuture<DeleteEventBusResponse> deleteEventBus(DeleteEventBusRequest request) {
@@ -220,8 +250,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to delete an event source.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event source.</p>
+     * 
+     * @param request the request parameters of DeleteEventSource  DeleteEventSourceRequest
+     * @return DeleteEventSourceResponse
      */
     @Override
     public CompletableFuture<DeleteEventSourceResponse> deleteEventSource(DeleteEventSourceRequest request) {
@@ -238,8 +271,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to delete an event stream.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event stream.</p>
+     * 
+     * @param request the request parameters of DeleteEventStreaming  DeleteEventStreamingRequest
+     * @return DeleteEventStreamingResponse
      */
     @Override
     public CompletableFuture<DeleteEventStreamingResponse> deleteEventStreaming(DeleteEventStreamingRequest request) {
@@ -256,8 +292,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to delete an event rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event rule.</p>
+     * 
+     * @param request the request parameters of DeleteRule  DeleteRuleRequest
+     * @return DeleteRuleResponse
      */
     @Override
     public CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request) {
@@ -274,8 +313,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to delete one or more event targets of an event rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete one or more event targets of an event rule.</p>
+     * 
+     * @param request the request parameters of DeleteTargets  DeleteTargetsRequest
+     * @return DeleteTargetsResponse
      */
     @Override
     public CompletableFuture<DeleteTargetsResponse> deleteTargets(DeleteTargetsRequest request) {
@@ -292,8 +334,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to disable an event rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to disable an event rule.</p>
+     * 
+     * @param request the request parameters of DisableRule  DisableRuleRequest
+     * @return DisableRuleResponse
      */
     @Override
     public CompletableFuture<DisableRuleResponse> disableRule(DisableRuleRequest request) {
@@ -310,8 +355,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to enable an event rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to enable an event rule.</p>
+     * 
+     * @param request the request parameters of EnableRule  EnableRuleRequest
+     * @return EnableRuleResponse
      */
     @Override
     public CompletableFuture<EnableRuleResponse> enableRule(EnableRuleRequest request) {
@@ -327,48 +375,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<EventCenterCheckEnabledOnDefaultBusResponse> eventCenterCheckEnabledOnDefaultBus(EventCenterCheckEnabledOnDefaultBusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EventCenterCheckEnabledOnDefaultBus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EventCenterCheckEnabledOnDefaultBusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<EventCenterCheckEnabledOnDefaultBusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<EventCenterDisableOnDefaultBusResponse> eventCenterDisableOnDefaultBus(EventCenterDisableOnDefaultBusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EventCenterDisableOnDefaultBus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EventCenterDisableOnDefaultBusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<EventCenterDisableOnDefaultBusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<EventCenterEnableOnDefaultBusResponse> eventCenterEnableOnDefaultBus(EventCenterEnableOnDefaultBusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EventCenterEnableOnDefaultBus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EventCenterEnableOnDefaultBusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<EventCenterEnableOnDefaultBusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of EventCenterQueryEvents  EventCenterQueryEventsRequest
+     * @return EventCenterQueryEventsResponse
+     */
     @Override
     public CompletableFuture<EventCenterQueryEventsResponse> eventCenterQueryEvents(EventCenterQueryEventsRequest request) {
         try {
@@ -384,8 +394,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query the information about an API destination.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the information about an API destination.</p>
+     * 
+     * @param request the request parameters of GetApiDestination  GetApiDestinationRequest
+     * @return GetApiDestinationResponse
      */
     @Override
     public CompletableFuture<GetApiDestinationResponse> getApiDestination(GetApiDestinationRequest request) {
@@ -402,8 +415,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query the configurations of a connection.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the configurations of a connection.</p>
+     * 
+     * @param request the request parameters of GetConnection  GetConnectionRequest
+     * @return GetConnectionResponse
      */
     @Override
     public CompletableFuture<GetConnectionResponse> getConnection(GetConnectionRequest request) {
@@ -420,8 +436,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query the detailed information about an event bus.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the detailed information about an event bus.</p>
+     * 
+     * @param request the request parameters of GetEventBus  GetEventBusRequest
+     * @return GetEventBusResponse
      */
     @Override
     public CompletableFuture<GetEventBusResponse> getEventBus(GetEventBusRequest request) {
@@ -438,8 +457,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query the details of an event stream.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the details of an event stream.</p>
+     * 
+     * @param request the request parameters of GetEventStreaming  GetEventStreamingRequest
+     * @return GetEventStreamingResponse
      */
     @Override
     public CompletableFuture<GetEventStreamingResponse> getEventStreaming(GetEventStreamingRequest request) {
@@ -456,8 +478,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query the details of an event rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the details of an event rule.</p>
+     * 
+     * @param request the request parameters of GetRule  GetRuleRequest
+     * @return GetRuleResponse
      */
     @Override
     public CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request) {
@@ -474,8 +499,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query all Alibaba Cloud service event sources.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all Alibaba Cloud service event sources.</p>
+     * 
+     * @param request the request parameters of ListAliyunOfficialEventSources  ListAliyunOfficialEventSourcesRequest
+     * @return ListAliyunOfficialEventSourcesResponse
      */
     @Override
     public CompletableFuture<ListAliyunOfficialEventSourcesResponse> listAliyunOfficialEventSources(ListAliyunOfficialEventSourcesRequest request) {
@@ -492,8 +520,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use this API operation to query a list of API destinations.
-      *
+     * <b>description</b> :
+     * <p>You can use this API operation to query a list of API destinations.</p>
+     * 
+     * @param request the request parameters of ListApiDestinations  ListApiDestinationsRequest
+     * @return ListApiDestinationsResponse
      */
     @Override
     public CompletableFuture<ListApiDestinationsResponse> listApiDestinations(ListApiDestinationsRequest request) {
@@ -510,8 +541,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query connections.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query connections.</p>
+     * 
+     * @param request the request parameters of ListConnections  ListConnectionsRequest
+     * @return ListConnectionsResponse
      */
     @Override
     public CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request) {
@@ -528,8 +562,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query all event buses.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all event buses.</p>
+     * 
+     * @param request the request parameters of ListEventBuses  ListEventBusesRequest
+     * @return ListEventBusesResponse
      */
     @Override
     public CompletableFuture<ListEventBusesResponse> listEventBuses(ListEventBusesRequest request) {
@@ -546,8 +583,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query event streams.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event streams.</p>
+     * 
+     * @param request the request parameters of ListEventStreamings  ListEventStreamingsRequest
+     * @return ListEventStreamingsResponse
      */
     @Override
     public CompletableFuture<ListEventStreamingsResponse> listEventStreamings(ListEventStreamingsRequest request) {
@@ -564,8 +604,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query all rules of an event bus.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all rules of an event bus.</p>
+     * 
+     * @param request the request parameters of ListRules  ListRulesRequest
+     * @return ListRulesResponse
      */
     @Override
     public CompletableFuture<ListRulesResponse> listRules(ListRulesRequest request) {
@@ -581,6 +624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTargets  ListTargetsRequest
+     * @return ListTargetsResponse
+     */
     @Override
     public CompletableFuture<ListTargetsResponse> listTargets(ListTargetsRequest request) {
         try {
@@ -596,8 +643,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query custom event sources.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query custom event sources.</p>
+     * 
+     * @param request the request parameters of ListUserDefinedEventSources  ListUserDefinedEventSourcesRequest
+     * @return ListUserDefinedEventSourcesResponse
      */
     @Override
     public CompletableFuture<ListUserDefinedEventSourcesResponse> listUserDefinedEventSources(ListUserDefinedEventSourcesRequest request) {
@@ -614,8 +664,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to stop an event stream that is running.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to stop an event stream that is running.</p>
+     * 
+     * @param request the request parameters of PauseEventStreaming  PauseEventStreamingRequest
+     * @return PauseEventStreamingResponse
      */
     @Override
     public CompletableFuture<PauseEventStreamingResponse> pauseEventStreaming(PauseEventStreamingRequest request) {
@@ -632,8 +685,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create or update event targets under a rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to create or update event targets under a rule.</p>
+     * 
+     * @param request the request parameters of PutTargets  PutTargetsRequest
+     * @return PutTargetsResponse
      */
     @Override
     public CompletableFuture<PutTargetsResponse> putTargets(PutTargetsRequest request) {
@@ -650,8 +706,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query the content of an event.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the content of an event.</p>
+     * 
+     * @param request the request parameters of QueryEvent  QueryEventRequest
+     * @return QueryEventResponse
      */
     @Override
     public CompletableFuture<QueryEventResponse> queryEvent(QueryEventRequest request) {
@@ -668,8 +727,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query event traces.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces.</p>
+     * 
+     * @param request the request parameters of QueryEventTraces  QueryEventTracesRequest
+     * @return QueryEventTracesResponse
      */
     @Override
     public CompletableFuture<QueryEventTracesResponse> queryEventTraces(QueryEventTracesRequest request) {
@@ -686,8 +748,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query event traces by event ID.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces by event ID.</p>
+     * 
+     * @param request the request parameters of QueryTracedEventByEventId  QueryTracedEventByEventIdRequest
+     * @return QueryTracedEventByEventIdResponse
      */
     @Override
     public CompletableFuture<QueryTracedEventByEventIdResponse> queryTracedEventByEventId(QueryTracedEventByEventIdRequest request) {
@@ -704,8 +769,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to query event traces by time range.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces by time range.</p>
+     * 
+     * @param request the request parameters of QueryTracedEvents  QueryTracedEventsRequest
+     * @return QueryTracedEventsResponse
      */
     @Override
     public CompletableFuture<QueryTracedEventsResponse> queryTracedEvents(QueryTracedEventsRequest request) {
@@ -722,8 +790,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to enable a created or deactivated event stream.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to enable a created or deactivated event stream.</p>
+     * 
+     * @param request the request parameters of StartEventStreaming  StartEventStreamingRequest
+     * @return StartEventStreamingResponse
      */
     @Override
     public CompletableFuture<StartEventStreamingResponse> startEventStreaming(StartEventStreamingRequest request) {
@@ -740,8 +811,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to check whether the event pattern matches the provided JSON format.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to check whether the event pattern matches the provided JSON format.</p>
+     * 
+     * @param request the request parameters of TestEventPattern  TestEventPatternRequest
+     * @return TestEventPatternResponse
      */
     @Override
     public CompletableFuture<TestEventPatternResponse> testEventPattern(TestEventPatternRequest request) {
@@ -758,8 +832,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to update an API destination.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to update an API destination.</p>
+     * 
+     * @param request the request parameters of UpdateApiDestination  UpdateApiDestinationRequest
+     * @return UpdateApiDestinationResponse
      */
     @Override
     public CompletableFuture<UpdateApiDestinationResponse> updateApiDestination(UpdateApiDestinationRequest request) {
@@ -776,8 +853,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to update a connection.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to update a connection.</p>
+     * 
+     * @param request the request parameters of UpdateConnection  UpdateConnectionRequest
+     * @return UpdateConnectionResponse
      */
     @Override
     public CompletableFuture<UpdateConnectionResponse> updateConnection(UpdateConnectionRequest request) {
@@ -794,8 +874,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to modify an event bus.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to update an event bus.</p>
+     * 
+     * @param request the request parameters of UpdateEventBus  UpdateEventBusRequest
+     * @return UpdateEventBusResponse
      */
     @Override
     public CompletableFuture<UpdateEventBusResponse> updateEventBus(UpdateEventBusRequest request) {
@@ -812,8 +895,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to update an event source.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to update an event source.</p>
+     * 
+     * @param request the request parameters of UpdateEventSource  UpdateEventSourceRequest
+     * @return UpdateEventSourceResponse
      */
     @Override
     public CompletableFuture<UpdateEventSourceResponse> updateEventSource(UpdateEventSourceRequest request) {
@@ -830,8 +916,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * 
+     * @param request the request parameters of UpdateEventStreaming  UpdateEventStreamingRequest
+     * @return UpdateEventStreamingResponse
      */
     @Override
     public CompletableFuture<UpdateEventStreamingResponse> updateEventStreaming(UpdateEventStreamingRequest request) {
@@ -848,8 +937,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to update the configurations of an event rule.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to update the configurations of an event rule.</p>
+     * 
+     * @param request the request parameters of UpdateRule  UpdateRuleRequest
+     * @return UpdateRuleResponse
      */
     @Override
     public CompletableFuture<UpdateRuleResponse> updateRule(UpdateRuleRequest request) {

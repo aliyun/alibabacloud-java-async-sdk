@@ -118,7 +118,12 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the query.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ. The maximum span between the start and end times is 31 days.</p>
+         * <p>If this parameter is not set, the current time will be used as the end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-19T19:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -127,6 +132,8 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
+         * <p>The time granularity of the queried data, in seconds.</p>
+         * <p>Depending on the maximum time span of a single query, this parameter supports values of 60 (1 minute), 300 (5 minutes), 1800 (half an hour), and 3600 (1 hour).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +146,10 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * <p>Record ID, which can be obtained by calling the <a href="~~ListRecords~~">ListRecords</a> interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86510927836942****</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -148,6 +158,7 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +171,8 @@ public class DescribeDDoSL7QpsListRequest extends Request {
         }
 
         /**
-         * <p>A short description of struct</p>
+         * <p>The start time of the query.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

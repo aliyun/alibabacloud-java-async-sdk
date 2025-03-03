@@ -91,7 +91,10 @@ public class DeleteSubnetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why the access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;

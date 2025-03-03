@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateEventSourceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEventSourceResponseBody</p>
@@ -85,11 +91,14 @@ public class CreateEventSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. Valid values:
-         * <p>
+         * <p>The returned response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request is successful.</li>
+         * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
+         * </ul>
          * 
-         * *   Success: The request is successful.
-         * *   Other codes: The request failed. For more information about error codes, see Error codes.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +106,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +114,10 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remote error. requestId: [A8EFABD2-95B9-1C46-9E01-xxxx], error code: [CreateRelatedResourceFailed], message: [Create related resource failed, EntityNotExist.Role : The role not exists: xxxx. \r\nRequestId : xxxx-168C-54ED-8FEB-BF11CB70AEB7]</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +125,10 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2922208e-e1c6-43ee-bfd1-aca50263bc8a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +136,10 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
+         * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +152,12 @@ public class CreateEventSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEventSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateEventSourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSourceARN")
         private String eventSourceARN;
@@ -161,7 +185,10 @@ public class CreateEventSourceResponseBody extends TeaModel {
             private String eventSourceARN; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/mymns.source</p>
              */
             public Builder eventSourceARN(String eventSourceARN) {
                 this.eventSourceARN = eventSourceARN;

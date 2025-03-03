@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InstanceEventItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("children")
-    private java.util.List < InstanceEventItem > children;
+    private java.util.List<InstanceEventItem> children;
 
     @com.aliyun.core.annotation.NameInMap("level")
     private String level;
@@ -46,7 +51,7 @@ public class InstanceEventItem extends TeaModel {
     /**
      * @return children
      */
-    public java.util.List < InstanceEventItem > getChildren() {
+    public java.util.List<InstanceEventItem> getChildren() {
         return this.children;
     }
 
@@ -79,7 +84,7 @@ public class InstanceEventItem extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceEventItem > children; 
+        private java.util.List<InstanceEventItem> children; 
         private String level; 
         private String message; 
         private String time; 
@@ -88,7 +93,7 @@ public class InstanceEventItem extends TeaModel {
         /**
          * children.
          */
-        public Builder children(java.util.List < InstanceEventItem > children) {
+        public Builder children(java.util.List<InstanceEventItem> children) {
             this.children = children;
             return this;
         }

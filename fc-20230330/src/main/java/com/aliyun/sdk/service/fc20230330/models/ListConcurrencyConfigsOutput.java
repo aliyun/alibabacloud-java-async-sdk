@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListConcurrencyConfigsOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("configs")
-    private java.util.List < ConcurrencyConfig > configs;
+    private java.util.List<ConcurrencyConfig> configs;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -34,7 +39,7 @@ public class ListConcurrencyConfigsOutput extends TeaModel {
     /**
      * @return configs
      */
-    public java.util.List < ConcurrencyConfig > getConfigs() {
+    public java.util.List<ConcurrencyConfig> getConfigs() {
         return this.configs;
     }
 
@@ -46,13 +51,13 @@ public class ListConcurrencyConfigsOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConcurrencyConfig > configs; 
+        private java.util.List<ConcurrencyConfig> configs; 
         private String nextToken; 
 
         /**
          * configs.
          */
-        public Builder configs(java.util.List < ConcurrencyConfig > configs) {
+        public Builder configs(java.util.List<ConcurrencyConfig> configs) {
             this.configs = configs;
             return this;
         }

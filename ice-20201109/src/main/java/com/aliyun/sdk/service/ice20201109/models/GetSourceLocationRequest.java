@@ -60,6 +60,7 @@ public class GetSourceLocationRequest extends Request {
         } 
 
         /**
+         * <p>The name of the source location.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -202,7 +202,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         } 
 
         /**
-         * <p>IP whitelist, in CIDR format, separated by commas if multiple IP ranges are specified</p>
+         * <p>The IP address whitelist in CIDR format. Separate multiple CIDR blocks with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>19.168.1.1/32,18.168.1.1/16</p>
@@ -214,7 +214,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>Flow instance ID</p>
+         * <p>The flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>Input URL, required when the input type is RTMP-PULL/SRT-Listener</p>
+         * <p>The source URL. This parameter is required when the source type is RTMP-PULL or SRT-Listener.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://pull.test.alivecdn.com/live/alitest</p>
@@ -239,7 +239,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>Input name</p>
+         * <p>The source name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +252,15 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>Input type</p>
+         * <p>The source type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RTMP-PUSH</li>
+         * <li>SRT-Caller</li>
+         * <li>RTMP-PULL</li>
+         * <li>SRT-Listener</li>
+         * <li>Flow</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +273,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>Input bitrate, in bps</p>
+         * <p>The maximum bitrate. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>2000000</p>
@@ -277,7 +285,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>Paired Flow ID, required when the input type is Flow</p>
+         * <p>The ID of the source flow. This parameter is required when the source type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>805fbdd0-575e-4146-b35d-ec7f63937b20</p>
@@ -289,7 +297,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>Output name of the paired Flow, required when the input type is Flow</p>
+         * <p>The output of the source flow. This parameter is required when the source type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestOutput</p>
@@ -301,7 +309,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>SRT latency, required when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The latency for the SRT stream. This parameter is required the source type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -313,7 +321,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>SRT encryption key, required when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The SRT key. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>BETTERG08S01</p>
@@ -325,7 +333,14 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * <p>SRT encryption length, required when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The encryption key length. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0</li>
+         * <li>16</li>
+         * <li>24</li>
+         * <li>32</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>32</p>

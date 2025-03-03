@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-eas20210701</artifactId>
-  <version>6.0.8</version>
+  <version>6.0.9</version>
   <packaging>jar</packaging>
   <name>alibabacloud-eas20210701</name>
   <description>Alibaba Cloud eas (20210701) Async SDK for Java

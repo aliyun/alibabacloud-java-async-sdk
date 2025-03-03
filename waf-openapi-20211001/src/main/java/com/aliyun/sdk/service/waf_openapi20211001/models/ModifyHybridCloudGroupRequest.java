@@ -147,6 +147,7 @@ public class ModifyHybridCloudGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +160,7 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the node group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +173,11 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the node group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -180,6 +186,10 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +202,14 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid value:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -201,7 +218,10 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -210,7 +230,10 @@ public class ModifyHybridCloudGroupRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

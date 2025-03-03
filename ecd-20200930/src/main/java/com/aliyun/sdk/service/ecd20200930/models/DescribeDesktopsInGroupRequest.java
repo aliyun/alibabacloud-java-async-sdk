@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopsInGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomEndTimePeriod")
+    private Long customEndTimePeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomStartTimePeriod")
+    private Long customStartTimePeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
@@ -46,6 +54,8 @@ public class DescribeDesktopsInGroupRequest extends Request {
 
     private DescribeDesktopsInGroupRequest(Builder builder) {
         super(builder);
+        this.customEndTimePeriod = builder.customEndTimePeriod;
+        this.customStartTimePeriod = builder.customStartTimePeriod;
         this.desktopGroupId = builder.desktopGroupId;
         this.ignoreDeleted = builder.ignoreDeleted;
         this.maxResults = builder.maxResults;
@@ -65,6 +75,20 @@ public class DescribeDesktopsInGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return customEndTimePeriod
+     */
+    public Long getCustomEndTimePeriod() {
+        return this.customEndTimePeriod;
+    }
+
+    /**
+     * @return customStartTimePeriod
+     */
+    public Long getCustomStartTimePeriod() {
+        return this.customStartTimePeriod;
     }
 
     /**
@@ -110,6 +134,8 @@ public class DescribeDesktopsInGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDesktopsInGroupRequest, Builder> {
+        private Long customEndTimePeriod; 
+        private Long customStartTimePeriod; 
         private String desktopGroupId; 
         private Boolean ignoreDeleted; 
         private Integer maxResults; 
@@ -123,6 +149,8 @@ public class DescribeDesktopsInGroupRequest extends Request {
 
         private Builder(DescribeDesktopsInGroupRequest request) {
             super(request);
+            this.customEndTimePeriod = request.customEndTimePeriod;
+            this.customStartTimePeriod = request.customStartTimePeriod;
             this.desktopGroupId = request.desktopGroupId;
             this.ignoreDeleted = request.ignoreDeleted;
             this.maxResults = request.maxResults;
@@ -130,6 +158,24 @@ public class DescribeDesktopsInGroupRequest extends Request {
             this.payType = request.payType;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * CustomEndTimePeriod.
+         */
+        public Builder customEndTimePeriod(Long customEndTimePeriod) {
+            this.putQueryParameter("CustomEndTimePeriod", customEndTimePeriod);
+            this.customEndTimePeriod = customEndTimePeriod;
+            return this;
+        }
+
+        /**
+         * CustomStartTimePeriod.
+         */
+        public Builder customStartTimePeriod(Long customStartTimePeriod) {
+            this.putQueryParameter("CustomStartTimePeriod", customStartTimePeriod);
+            this.customStartTimePeriod = customStartTimePeriod;
+            return this;
+        }
 
         /**
          * <p>The ID of the cloud computer pool.</p>

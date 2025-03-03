@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListConnectionsRequest} extends {@link RequestModel}
  *
  * <p>ListConnectionsRequest</p>
@@ -81,7 +87,10 @@ public class ListConnectionsRequest extends Request {
         } 
 
         /**
-         * The key word that you specify to query connections. Connections can be queried by prefixes.
+         * <p>The key word that you specify to query connections. Connections can be queried by prefixes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection-name</p>
          */
         public Builder connectionNamePrefix(String connectionNamePrefix) {
             this.putBodyParameter("ConnectionNamePrefix", connectionNamePrefix);
@@ -90,10 +99,13 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging.
-         * <p>
+         * <p>The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -102,10 +114,13 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * If you set the Limit parameter and excess return values exist, this parameter is returned.
-         * <p>
+         * <p>If you set the Limit parameter and excess return values exist, this parameter is returned.</p>
+         * <ul>
+         * <li>Default value: 0.</li>
+         * </ul>
          * 
-         * *   Default value: 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);

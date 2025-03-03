@@ -52,6 +52,10 @@ public class ModifyDefenseResourceXffRequest extends Request {
     private String resourceManagerResourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseHeaders")
+    private java.util.List<ResponseHeaders> responseHeaders;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("XffStatus")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer xffStatus;
@@ -66,6 +70,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
         this.regionId = builder.regionId;
         this.resource = builder.resource;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.responseHeaders = builder.responseHeaders;
         this.xffStatus = builder.xffStatus;
     }
 
@@ -139,6 +144,13 @@ public class ModifyDefenseResourceXffRequest extends Request {
     }
 
     /**
+     * @return responseHeaders
+     */
+    public java.util.List<ResponseHeaders> getResponseHeaders() {
+        return this.responseHeaders;
+    }
+
+    /**
      * @return xffStatus
      */
     public Integer getXffStatus() {
@@ -154,6 +166,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
         private String regionId; 
         private String resource; 
         private String resourceManagerResourceGroupId; 
+        private java.util.List<ResponseHeaders> responseHeaders; 
         private Integer xffStatus; 
 
         private Builder() {
@@ -170,6 +183,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
             this.regionId = request.regionId;
             this.resource = request.resource;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.responseHeaders = request.responseHeaders;
             this.xffStatus = request.xffStatus;
         } 
 
@@ -291,6 +305,15 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
+         * ResponseHeaders.
+         */
+        public Builder responseHeaders(java.util.List<ResponseHeaders> responseHeaders) {
+            this.putQueryParameter("ResponseHeaders", responseHeaders);
+            this.responseHeaders = responseHeaders;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether a Layer 7 proxy is deployed in front of WAF. Layer 7 proxies include Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: No Layer 7 proxies are deployed. This is the default value.</li>
@@ -314,4 +337,73 @@ public class ModifyDefenseResourceXffRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDefenseResourceXffRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDefenseResourceXffRequest</p>
+     */
+    public static class ResponseHeaders extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(maxLength = 50)
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(maxLength = 50)
+        private String value;
+
+        private ResponseHeaders(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseHeaders create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ResponseHeaders build() {
+                return new ResponseHeaders(this);
+            } 
+
+        } 
+
+    }
 }

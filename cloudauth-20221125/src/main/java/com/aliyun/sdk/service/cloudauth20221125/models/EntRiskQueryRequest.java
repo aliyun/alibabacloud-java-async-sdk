@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20221125.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntRiskQueryRequest} extends {@link RequestModel}
  *
  * <p>EntRiskQueryRequest</p>
  */
 public class EntRiskQueryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
-    @NameInMap("MerchantUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantUserId")
     private String merchantUserId;
 
-    @Query
-    @NameInMap("ParamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamType")
     private String paramType;
 
-    @Query
-    @NameInMap("ParamValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamValue")
     private String paramValue;
 
-    @Query
-    @NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
-    @Query
-    @NameInMap("UserAuthorization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAuthorization")
     private String userAuthorization;
 
     private EntRiskQueryRequest(Builder builder) {

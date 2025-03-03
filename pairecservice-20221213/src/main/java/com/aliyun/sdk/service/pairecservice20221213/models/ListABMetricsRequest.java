@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListABMetricsRequest} extends {@link RequestModel}
  *
  * <p>ListABMetricsRequest</p>
  */
 public class ListABMetricsRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -46,6 +56,7 @@ public class ListABMetricsRequest extends Request {
 
     private ListABMetricsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
@@ -67,6 +78,13 @@ public class ListABMetricsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -126,6 +144,7 @@ public class ListABMetricsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListABMetricsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String name; 
         private Integer pageNumber; 
@@ -141,6 +160,7 @@ public class ListABMetricsRequest extends Request {
 
         private Builder(ListABMetricsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
@@ -152,7 +172,19 @@ public class ListABMetricsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

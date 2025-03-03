@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceRuleRequest</p>
@@ -50,7 +56,7 @@ public class CreateResourceRuleRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RuleItems")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RuleItems> ruleItems;
+    private java.util.List<RuleItems> ruleItems;
 
     private CreateResourceRuleRequest(Builder builder) {
         super(builder);
@@ -137,7 +143,7 @@ public class CreateResourceRuleRequest extends Request {
     /**
      * @return ruleItems
      */
-    public java.util.List < RuleItems> getRuleItems() {
+    public java.util.List<RuleItems> getRuleItems() {
         return this.ruleItems;
     }
 
@@ -150,7 +156,7 @@ public class CreateResourceRuleRequest extends Request {
         private String metricPullPeriod; 
         private String name; 
         private String ruleComputingDefinition; 
-        private java.util.List < RuleItems> ruleItems; 
+        private java.util.List<RuleItems> ruleItems; 
 
         private Builder() {
             super();
@@ -188,7 +194,7 @@ public class CreateResourceRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -197,7 +203,7 @@ public class CreateResourceRuleRequest extends Request {
         }
 
         /**
-         * MetricOperationType.
+         * <p>This parameter is required.</p>
          */
         public Builder metricOperationType(String metricOperationType) {
             this.putBodyParameter("MetricOperationType", metricOperationType);
@@ -224,7 +230,7 @@ public class CreateResourceRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -233,7 +239,7 @@ public class CreateResourceRuleRequest extends Request {
         }
 
         /**
-         * RuleComputingDefinition.
+         * <p>This parameter is required.</p>
          */
         public Builder ruleComputingDefinition(String ruleComputingDefinition) {
             this.putBodyParameter("RuleComputingDefinition", ruleComputingDefinition);
@@ -242,9 +248,9 @@ public class CreateResourceRuleRequest extends Request {
         }
 
         /**
-         * RuleItems.
+         * <p>This parameter is required.</p>
          */
-        public Builder ruleItems(java.util.List < RuleItems> ruleItems) {
+        public Builder ruleItems(java.util.List<RuleItems> ruleItems) {
             this.putBodyParameter("RuleItems", ruleItems);
             this.ruleItems = ruleItems;
             return this;
@@ -257,6 +263,12 @@ public class CreateResourceRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceRuleRequest</p>
+     */
     public static class RuleItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -344,7 +356,7 @@ public class CreateResourceRuleRequest extends Request {
             }
 
             /**
-             * MaxValue.
+             * <p>This parameter is required.</p>
              */
             public Builder maxValue(Double maxValue) {
                 this.maxValue = maxValue;
@@ -352,7 +364,7 @@ public class CreateResourceRuleRequest extends Request {
             }
 
             /**
-             * MinValue.
+             * <p>This parameter is required.</p>
              */
             public Builder minValue(Double minValue) {
                 this.minValue = minValue;
@@ -360,7 +372,7 @@ public class CreateResourceRuleRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -368,7 +380,7 @@ public class CreateResourceRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(Double value) {
                 this.value = value;

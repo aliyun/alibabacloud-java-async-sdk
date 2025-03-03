@@ -157,7 +157,10 @@ public class ListChannelsRequest extends Request {
         } 
 
         /**
-         * ChannelName.
+         * <p>The name of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyChannel</p>
          */
         public Builder channelName(String channelName) {
             this.putQueryParameter("ChannelName", channelName);
@@ -166,7 +169,10 @@ public class ListChannelsRequest extends Request {
         }
 
         /**
-         * ChannelTier.
+         * <p>The tier of the channel. Valid values: basic and standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder channelTier(String channelTier) {
             this.putQueryParameter("ChannelTier", channelTier);
@@ -175,7 +181,10 @@ public class ListChannelsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -184,7 +193,10 @@ public class ListChannelsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +205,10 @@ public class ListChannelsRequest extends Request {
         }
 
         /**
-         * PlaybackMode.
+         * <p>The playback mode. Valid values: loop and linear.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>loop</p>
          */
         public Builder playbackMode(String playbackMode) {
             this.putQueryParameter("PlaybackMode", playbackMode);
@@ -202,7 +217,10 @@ public class ListChannelsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order by creation time. Valid values: asc and desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -211,7 +229,10 @@ public class ListChannelsRequest extends Request {
         }
 
         /**
-         * SortByModifiedTime.
+         * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortByModifiedTime(String sortByModifiedTime) {
             this.putQueryParameter("SortByModifiedTime", sortByModifiedTime);
@@ -220,7 +241,10 @@ public class ListChannelsRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The channel status. A value of 0 specifies stopped. A value of 1 specifies started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder state(Integer state) {
             this.putQueryParameter("State", state);

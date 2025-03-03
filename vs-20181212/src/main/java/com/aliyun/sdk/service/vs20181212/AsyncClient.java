@@ -296,6 +296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRenderingInstanceGatewayResponse> deleteRenderingInstanceGateway(DeleteRenderingInstanceGatewayRequest request);
 
     /**
+     * @param request the request parameters of DeleteRenderingInstanceSettings  DeleteRenderingInstanceSettingsRequest
+     * @return DeleteRenderingInstanceSettingsResponse
+     */
+    CompletableFuture<DeleteRenderingInstanceSettingsResponse> deleteRenderingInstanceSettings(DeleteRenderingInstanceSettingsRequest request);
+
+    /**
      * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
      * @return DeleteTemplateResponse
      */
@@ -432,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRenderingInstanceConfigurationResponse
      */
     CompletableFuture<DescribeRenderingInstanceConfigurationResponse> describeRenderingInstanceConfiguration(DescribeRenderingInstanceConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRenderingInstanceSettings  DescribeRenderingInstanceSettingsRequest
+     * @return DescribeRenderingInstanceSettingsResponse
+     */
+    CompletableFuture<DescribeRenderingInstanceSettingsResponse> describeRenderingInstanceSettings(DescribeRenderingInstanceSettingsRequest request);
 
     /**
      * @param request the request parameters of DescribeStream  DescribeStreamRequest
@@ -782,6 +794,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecoverRenderingDataPackageResponse> recoverRenderingDataPackage(RecoverRenderingDataPackageRequest request);
 
     /**
+     * @param request the request parameters of RefreshRenderingInstanceStreaming  RefreshRenderingInstanceStreamingRequest
+     * @return RefreshRenderingInstanceStreamingResponse
+     */
+    CompletableFuture<RefreshRenderingInstanceStreamingResponse> refreshRenderingInstanceStreaming(RefreshRenderingInstanceStreamingRequest request);
+
+    /**
      * @param request the request parameters of ReleaseRenderingDataPackage  ReleaseRenderingDataPackageRequest
      * @return ReleaseRenderingDataPackageResponse
      */
@@ -798,6 +816,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewRenderingInstanceResponse
      */
     CompletableFuture<RenewRenderingInstanceResponse> renewRenderingInstance(RenewRenderingInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ResetRenderingInstance  ResetRenderingInstanceRequest
+     * @return ResetRenderingInstanceResponse
+     */
+    CompletableFuture<ResetRenderingInstanceResponse> resetRenderingInstance(ResetRenderingInstanceRequest request);
 
     /**
      * @param request the request parameters of ResumeVsStream  ResumeVsStreamRequest
@@ -966,6 +990,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRenderingInstanceConfigurationResponse
      */
     CompletableFuture<UpdateRenderingInstanceConfigurationResponse> updateRenderingInstanceConfiguration(UpdateRenderingInstanceConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRenderingInstanceSettings  UpdateRenderingInstanceSettingsRequest
+     * @return UpdateRenderingInstanceSettingsResponse
+     */
+    CompletableFuture<UpdateRenderingInstanceSettingsResponse> updateRenderingInstanceSettings(UpdateRenderingInstanceSettingsRequest request);
 
     /**
      * @param request the request parameters of UpdateVsPullStreamInfoConfig  UpdateVsPullStreamInfoConfigRequest

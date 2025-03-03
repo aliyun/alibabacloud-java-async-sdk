@@ -664,7 +664,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * <p>The resource creator. Valid values:</p>
+             * <p>The type of the resource creator. Valid values:</p>
              * <ul>
              * <li>user: The resource is created by the user.</li>
              * <li>system: The resource is created by the ACK management system.</li>

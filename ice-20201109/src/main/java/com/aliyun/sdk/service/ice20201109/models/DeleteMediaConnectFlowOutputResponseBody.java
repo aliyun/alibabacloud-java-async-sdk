@@ -79,7 +79,7 @@ public class DeleteMediaConnectFlowOutputResponseBody extends TeaModel {
         private Integer retCode; 
 
         /**
-         * <p>Response body</p>
+         * <p>The response body.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -90,7 +90,7 @@ public class DeleteMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description of the API call</p>
+         * <p>The call description.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -101,7 +101,7 @@ public class DeleteMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>DF73E08E-F807-50F5-A2BD-B76391EAE8FF</p>
@@ -112,7 +112,7 @@ public class DeleteMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned error code, 0 indicates success</p>
+         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

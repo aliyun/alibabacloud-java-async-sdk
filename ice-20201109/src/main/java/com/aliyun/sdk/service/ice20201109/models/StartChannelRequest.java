@@ -60,6 +60,7 @@ public class StartChannelRequest extends Request {
         } 
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

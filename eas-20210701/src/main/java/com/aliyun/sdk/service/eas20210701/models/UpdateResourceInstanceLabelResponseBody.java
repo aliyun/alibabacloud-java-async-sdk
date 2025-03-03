@@ -55,7 +55,10 @@ public class UpdateResourceInstanceLabelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -63,7 +66,7 @@ public class UpdateResourceInstanceLabelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40325405-579C-4D82****</p>

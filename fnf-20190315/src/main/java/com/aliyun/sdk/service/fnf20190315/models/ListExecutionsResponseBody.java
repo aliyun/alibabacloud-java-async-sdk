@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExecutionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListExecutionsResponseBody</p>
  */
 public class ListExecutionsResponseBody extends TeaModel {
-    @NameInMap("Executions")
-    private java.util.List < Executions> executions;
+    @com.aliyun.core.annotation.NameInMap("Executions")
+    private java.util.List<Executions> executions;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListExecutionsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListExecutionsResponseBody extends TeaModel {
     /**
      * @return executions
      */
-    public java.util.List < Executions> getExecutions() {
+    public java.util.List<Executions> getExecutions() {
         return this.executions;
     }
 
@@ -57,20 +62,26 @@ public class ListExecutionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Executions> executions; 
+        private java.util.List<Executions> executions; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The information about executions.
+         * <p>The information about executions.</p>
          */
-        public Builder executions(java.util.List < Executions> executions) {
+        public Builder executions(java.util.List<Executions> executions) {
             this.executions = executions;
             return this;
         }
 
         /**
-         * The start key for the next query. This parameter is not returned if all results have been returned.
+         * <p>The start key for the next query. This parameter is not returned if this is the last query.</p>
+         * <blockquote>
+         * <p> This parameter may not be displayed in the response because no next page exists.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>exec2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +89,10 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,29 +105,35 @@ public class ListExecutionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExecutionsResponseBody</p>
+     */
     public static class Executions extends TeaModel {
-        @NameInMap("FlowDefinition")
+        @com.aliyun.core.annotation.NameInMap("FlowDefinition")
         private String flowDefinition;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("StartedTime")
+        @com.aliyun.core.annotation.NameInMap("StartedTime")
         private String startedTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StoppedTime")
+        @com.aliyun.core.annotation.NameInMap("StoppedTime")
         private String stoppedTime;
 
         private Executions(Builder builder) {
@@ -202,7 +222,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             private String stoppedTime; 
 
             /**
-             * The definition of the flow.
+             * <p>The definition of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version: v1.0\ntype: flow\nname: test\nsteps:\n  - type: pass\n    name: mypass</p>
              */
             public Builder flowDefinition(String flowDefinition) {
                 this.flowDefinition = flowDefinition;
@@ -210,7 +233,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the flow.
+             * <p>The name of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -218,7 +244,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The input of the execution, which is in the JSON format.
+             * <p>The input of the execution, which is in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;:&quot;value&quot;}</p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -226,7 +255,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the execution.
+             * <p>The name of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +266,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The output of the execution, which is in the JSON format
+             * <p>The output of the execution, which is in the JSON format</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;:&quot;value&quot;}</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -242,7 +277,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution started.
+             * <p>The time when the execution started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:01:01.001Z</p>
              */
             public Builder startedTime(String startedTime) {
                 this.startedTime = startedTime;
@@ -250,7 +288,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the execution.
+             * <p>The status of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +299,10 @@ public class ListExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution stopped.
+             * <p>The time when the execution stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T01:01:01.001Z</p>
              */
             public Builder stoppedTime(String stoppedTime) {
                 this.stoppedTime = stoppedTime;

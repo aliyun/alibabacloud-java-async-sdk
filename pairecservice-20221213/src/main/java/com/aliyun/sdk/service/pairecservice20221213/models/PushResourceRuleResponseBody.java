@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushResourceRuleResponseBody} extends {@link TeaModel}
  *
  * <p>PushResourceRuleResponseBody</p>
@@ -36,7 +42,7 @@ public class PushResourceRuleResponseBody extends TeaModel {
     private String ruleComputingDefinition;
 
     @com.aliyun.core.annotation.NameInMap("RuleItems")
-    private java.util.List < RuleItems> ruleItems;
+    private java.util.List<RuleItems> ruleItems;
 
     private PushResourceRuleResponseBody(Builder builder) {
         this.description = builder.description;
@@ -117,7 +123,7 @@ public class PushResourceRuleResponseBody extends TeaModel {
     /**
      * @return ruleItems
      */
-    public java.util.List < RuleItems> getRuleItems() {
+    public java.util.List<RuleItems> getRuleItems() {
         return this.ruleItems;
     }
 
@@ -130,7 +136,7 @@ public class PushResourceRuleResponseBody extends TeaModel {
         private String requestId; 
         private String resourceRuleId; 
         private String ruleComputingDefinition; 
-        private java.util.List < RuleItems> ruleItems; 
+        private java.util.List<RuleItems> ruleItems; 
 
         /**
          * Description.
@@ -199,7 +205,7 @@ public class PushResourceRuleResponseBody extends TeaModel {
         /**
          * RuleItems.
          */
-        public Builder ruleItems(java.util.List < RuleItems> ruleItems) {
+        public Builder ruleItems(java.util.List<RuleItems> ruleItems) {
             this.ruleItems = ruleItems;
             return this;
         }
@@ -210,6 +216,12 @@ public class PushResourceRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PushResourceRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>PushResourceRuleResponseBody</p>
+     */
     public static class RuleItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;

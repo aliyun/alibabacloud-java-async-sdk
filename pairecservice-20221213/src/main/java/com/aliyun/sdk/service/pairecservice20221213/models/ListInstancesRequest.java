@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -37,6 +47,7 @@ public class ListInstancesRequest extends Request {
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
@@ -56,6 +67,13 @@ public class ListInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -101,6 +119,7 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String order; 
         private Integer pageNumber; 
@@ -114,6 +133,7 @@ public class ListInstancesRequest extends Request {
 
         private Builder(ListInstancesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
@@ -121,6 +141,15 @@ public class ListInstancesRequest extends Request {
             this.sortBy = request.sortBy;
             this.type = request.type;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.

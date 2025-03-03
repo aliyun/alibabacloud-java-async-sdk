@@ -103,7 +103,7 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PackagingGroups.
+         * <p>The packaging groups.</p>
          */
         public Builder packagingGroups(java.util.List<VodPackagingGroup> packagingGroups) {
             this.packagingGroups = packagingGroups;
@@ -111,7 +111,10 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -119,7 +122,10 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,14 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order of the packaging groups based on the time when they were created. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -143,7 +159,10 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

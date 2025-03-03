@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScheduleResponseBody</p>
  */
 public class DescribeScheduleResponseBody extends TeaModel {
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("CronExpression")
+    @com.aliyun.core.annotation.NameInMap("CronExpression")
     private String cronExpression;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @NameInMap("LastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private String payload;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScheduleId")
+    @com.aliyun.core.annotation.NameInMap("ScheduleId")
     private String scheduleId;
 
-    @NameInMap("ScheduleName")
+    @com.aliyun.core.annotation.NameInMap("ScheduleName")
     private String scheduleName;
 
     private DescribeScheduleResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         private String scheduleName; 
 
         /**
-         * The time when the time-based schedule was created.
+         * <p>The time when the time-based schedule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01T01:01:01.001Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -142,7 +150,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The CRON expression.
+         * <p>The CRON expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 * * * * *</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
@@ -150,7 +161,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the time-based schedule.
+         * <p>The description of the time-based schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -158,11 +172,14 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the time-based schedule is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the time-based schedule is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -170,7 +187,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the time-based schedule was last modified.
+         * <p>The time when the time-based schedule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01T01:01:01.001Z</p>
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -178,7 +198,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The trigger message of the time-based schedule.
+         * <p>The trigger message of the time-based schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
          */
         public Builder payload(String payload) {
             this.payload = payload;
@@ -186,7 +209,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRequestId</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +220,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the time-based schedule.
+         * <p>The ID of the time-based schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testScheduleId</p>
          */
         public Builder scheduleId(String scheduleId) {
             this.scheduleId = scheduleId;
@@ -202,7 +231,10 @@ public class DescribeScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the time-based schedule.
+         * <p>The name of the time-based schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testScheduleName</p>
          */
         public Builder scheduleName(String scheduleName) {
             this.scheduleName = scheduleName;

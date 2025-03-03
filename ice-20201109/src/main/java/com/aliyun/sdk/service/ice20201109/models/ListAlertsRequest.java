@@ -158,7 +158,7 @@ public class ListAlertsRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>The alert type.</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -167,7 +167,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * GmtEnd.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-22T16:10:45Z</p>
          */
         public Builder gmtEnd(String gmtEnd) {
             this.putQueryParameter("GmtEnd", gmtEnd);
@@ -176,7 +179,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * GmtStart.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-21T16:10:45Z</p>
          */
         public Builder gmtStart(String gmtStart) {
             this.putQueryParameter("GmtStart", gmtStart);
@@ -185,7 +191,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -194,7 +203,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,6 +215,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
+         * <p>The ARN of the source or program.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +228,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values: asc and desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -224,7 +240,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * SortByModifiedTime.
+         * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortByModifiedTime(String sortByModifiedTime) {
             this.putQueryParameter("SortByModifiedTime", sortByModifiedTime);

@@ -525,9 +525,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("destVSwitchId")
         private String destVSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("destVpcId")
+        private String destVpcId;
+
         private MigrateAZ(Builder builder) {
             this.dbProxyEndpointId = builder.dbProxyEndpointId;
             this.destVSwitchId = builder.destVSwitchId;
+            this.destVpcId = builder.destVpcId;
         }
 
         public static Builder builder() {
@@ -552,9 +556,17 @@ public class ModifyDBProxyInstanceRequest extends Request {
             return this.destVSwitchId;
         }
 
+        /**
+         * @return destVpcId
+         */
+        public String getDestVpcId() {
+            return this.destVpcId;
+        }
+
         public static final class Builder {
             private String dbProxyEndpointId; 
             private String destVSwitchId; 
+            private String destVpcId; 
 
             /**
              * <p>The proxy connection address ID. You can obtain it through the DescribeDBProxyEndpoint interface.</p>
@@ -581,6 +593,14 @@ public class ModifyDBProxyInstanceRequest extends Request {
              */
             public Builder destVSwitchId(String destVSwitchId) {
                 this.destVSwitchId = destVSwitchId;
+                return this;
+            }
+
+            /**
+             * destVpcId.
+             */
+            public Builder destVpcId(String destVpcId) {
+                this.destVpcId = destVpcId;
                 return this;
             }
 

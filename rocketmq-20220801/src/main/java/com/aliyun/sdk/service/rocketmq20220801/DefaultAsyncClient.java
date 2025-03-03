@@ -99,6 +99,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDisasterRecoveryPlan  CreateDisasterRecoveryPlanRequest
+     * @return CreateDisasterRecoveryPlanResponse
+     */
+    @Override
+    public CompletableFuture<CreateDisasterRecoveryPlanResponse> createDisasterRecoveryPlan(CreateDisasterRecoveryPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDisasterRecoveryPlan").setMethod(HttpMethod.POST).setPathRegex("/disaster_recovery").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDisasterRecoveryPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDisasterRecoveryPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -230,6 +248,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteConsumerGroupSubscriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDisasterRecoveryItem  DeleteDisasterRecoveryItemRequest
+     * @return DeleteDisasterRecoveryItemResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDisasterRecoveryItemResponse> deleteDisasterRecoveryItem(DeleteDisasterRecoveryItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDisasterRecoveryItem").setMethod(HttpMethod.DELETE).setPathRegex("/disaster_recovery/{planId}/items/{itemId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDisasterRecoveryItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDisasterRecoveryItemResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -427,6 +463,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetConsumerStackResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDisasterRecoveryItem  GetDisasterRecoveryItemRequest
+     * @return GetDisasterRecoveryItemResponse
+     */
+    @Override
+    public CompletableFuture<GetDisasterRecoveryItemResponse> getDisasterRecoveryItem(GetDisasterRecoveryItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDisasterRecoveryItem").setMethod(HttpMethod.GET).setPathRegex("/disaster_recovery/{planId}/items/{itemId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDisasterRecoveryItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDisasterRecoveryItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDisasterRecoveryPlan  GetDisasterRecoveryPlanRequest
+     * @return GetDisasterRecoveryPlanResponse
+     */
+    @Override
+    public CompletableFuture<GetDisasterRecoveryPlanResponse> getDisasterRecoveryPlan(GetDisasterRecoveryPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDisasterRecoveryPlan").setMethod(HttpMethod.GET).setPathRegex("/disaster_recovery/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDisasterRecoveryPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDisasterRecoveryPlanResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -635,6 +707,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListConsumerGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDisasterRecoveryCheckpoints  ListDisasterRecoveryCheckpointsRequest
+     * @return ListDisasterRecoveryCheckpointsResponse
+     */
+    @Override
+    public CompletableFuture<ListDisasterRecoveryCheckpointsResponse> listDisasterRecoveryCheckpoints(ListDisasterRecoveryCheckpointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDisasterRecoveryCheckpoints").setMethod(HttpMethod.GET).setPathRegex("/disaster_recovery/{planId}/items/{itemId}/checkpoints").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDisasterRecoveryCheckpointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDisasterRecoveryCheckpointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDisasterRecoveryItems  ListDisasterRecoveryItemsRequest
+     * @return ListDisasterRecoveryItemsResponse
+     */
+    @Override
+    public CompletableFuture<ListDisasterRecoveryItemsResponse> listDisasterRecoveryItems(ListDisasterRecoveryItemsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDisasterRecoveryItems").setMethod(HttpMethod.GET).setPathRegex("/disaster_recovery/{planId}/items").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDisasterRecoveryItemsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDisasterRecoveryItemsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDisasterRecoveryPlans  ListDisasterRecoveryPlansRequest
+     * @return ListDisasterRecoveryPlansResponse
+     */
+    @Override
+    public CompletableFuture<ListDisasterRecoveryPlansResponse> listDisasterRecoveryPlans(ListDisasterRecoveryPlansRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDisasterRecoveryPlans").setMethod(HttpMethod.GET).setPathRegex("/disaster_recovery").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDisasterRecoveryPlansResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDisasterRecoveryPlansResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -898,6 +1024,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SyncDisasterRecoveryCheckpoint  SyncDisasterRecoveryCheckpointRequest
+     * @return SyncDisasterRecoveryCheckpointResponse
+     */
+    @Override
+    public CompletableFuture<SyncDisasterRecoveryCheckpointResponse> syncDisasterRecoveryCheckpoint(SyncDisasterRecoveryCheckpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SyncDisasterRecoveryCheckpoint").setMethod(HttpMethod.POST).setPathRegex("/disaster_recovery/{planId}/items/{itemId}/checkpoints/{checkpointId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SyncDisasterRecoveryCheckpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SyncDisasterRecoveryCheckpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -951,6 +1095,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateConsumerGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDisasterRecoveryItem  UpdateDisasterRecoveryItemRequest
+     * @return UpdateDisasterRecoveryItemResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDisasterRecoveryItemResponse> updateDisasterRecoveryItem(UpdateDisasterRecoveryItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDisasterRecoveryItem").setMethod(HttpMethod.PATCH).setPathRegex("/disaster_recovery/{planId}/items/{itemId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDisasterRecoveryItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDisasterRecoveryItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDisasterRecoveryPlan  UpdateDisasterRecoveryPlanRequest
+     * @return UpdateDisasterRecoveryPlanResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDisasterRecoveryPlanResponse> updateDisasterRecoveryPlan(UpdateDisasterRecoveryPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDisasterRecoveryPlan").setMethod(HttpMethod.PATCH).setPathRegex("/disaster_recovery/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDisasterRecoveryPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDisasterRecoveryPlanResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

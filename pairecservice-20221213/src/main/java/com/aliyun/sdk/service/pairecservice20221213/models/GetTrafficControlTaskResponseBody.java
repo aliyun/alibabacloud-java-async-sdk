@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTrafficControlTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTrafficControlTaskResponseBody</p>
@@ -56,8 +62,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("PreExperimentIds")
+    private String preExperimentIds;
+
     @com.aliyun.core.annotation.NameInMap("PrepubStatus")
     private String prepubStatus;
+
+    @com.aliyun.core.annotation.NameInMap("ProdExperimentIds")
+    private String prodExperimentIds;
 
     @com.aliyun.core.annotation.NameInMap("ProductStatus")
     private String productStatus;
@@ -70,6 +82,9 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("SceneName")
     private String sceneName;
+
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    private String serviceId;
 
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
@@ -84,7 +99,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     private String statisBehaviorConditionType;
 
     @com.aliyun.core.annotation.NameInMap("TrafficControlTargets")
-    private java.util.List < TrafficControlTargets> trafficControlTargets;
+    private java.util.List<TrafficControlTargets> trafficControlTargets;
 
     @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
     private String trafficControlTaskId;
@@ -117,11 +132,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         this.itemConditionType = builder.itemConditionType;
         this.itemTableMetaId = builder.itemTableMetaId;
         this.name = builder.name;
+        this.preExperimentIds = builder.preExperimentIds;
         this.prepubStatus = builder.prepubStatus;
+        this.prodExperimentIds = builder.prodExperimentIds;
         this.productStatus = builder.productStatus;
         this.requestId = builder.requestId;
         this.sceneId = builder.sceneId;
         this.sceneName = builder.sceneName;
+        this.serviceId = builder.serviceId;
         this.startTime = builder.startTime;
         this.statisBehaviorConditionArray = builder.statisBehaviorConditionArray;
         this.statisBehaviorConditionExpress = builder.statisBehaviorConditionExpress;
@@ -248,10 +266,24 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     }
 
     /**
+     * @return preExperimentIds
+     */
+    public String getPreExperimentIds() {
+        return this.preExperimentIds;
+    }
+
+    /**
      * @return prepubStatus
      */
     public String getPrepubStatus() {
         return this.prepubStatus;
+    }
+
+    /**
+     * @return prodExperimentIds
+     */
+    public String getProdExperimentIds() {
+        return this.prodExperimentIds;
     }
 
     /**
@@ -280,6 +312,13 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
      */
     public String getSceneName() {
         return this.sceneName;
+    }
+
+    /**
+     * @return serviceId
+     */
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     /**
@@ -313,7 +352,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     /**
      * @return trafficControlTargets
      */
-    public java.util.List < TrafficControlTargets> getTrafficControlTargets() {
+    public java.util.List<TrafficControlTargets> getTrafficControlTargets() {
         return this.trafficControlTargets;
     }
 
@@ -368,16 +407,19 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         private String itemConditionType; 
         private String itemTableMetaId; 
         private String name; 
+        private String preExperimentIds; 
         private String prepubStatus; 
+        private String prodExperimentIds; 
         private String productStatus; 
         private String requestId; 
         private String sceneId; 
         private String sceneName; 
+        private String serviceId; 
         private String startTime; 
         private String statisBehaviorConditionArray; 
         private String statisBehaviorConditionExpress; 
         private String statisBehaviorConditionType; 
-        private java.util.List < TrafficControlTargets> trafficControlTargets; 
+        private java.util.List<TrafficControlTargets> trafficControlTargets; 
         private String trafficControlTaskId; 
         private String userConditionArray; 
         private String userConditionExpress; 
@@ -505,10 +547,26 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         }
 
         /**
+         * PreExperimentIds.
+         */
+        public Builder preExperimentIds(String preExperimentIds) {
+            this.preExperimentIds = preExperimentIds;
+            return this;
+        }
+
+        /**
          * PrepubStatus.
          */
         public Builder prepubStatus(String prepubStatus) {
             this.prepubStatus = prepubStatus;
+            return this;
+        }
+
+        /**
+         * ProdExperimentIds.
+         */
+        public Builder prodExperimentIds(String prodExperimentIds) {
+            this.prodExperimentIds = prodExperimentIds;
             return this;
         }
 
@@ -541,6 +599,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
          */
         public Builder sceneName(String sceneName) {
             this.sceneName = sceneName;
+            return this;
+        }
+
+        /**
+         * ServiceId.
+         */
+        public Builder serviceId(String serviceId) {
+            this.serviceId = serviceId;
             return this;
         }
 
@@ -579,7 +645,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         /**
          * TrafficControlTargets.
          */
-        public Builder trafficControlTargets(java.util.List < TrafficControlTargets> trafficControlTargets) {
+        public Builder trafficControlTargets(java.util.List<TrafficControlTargets> trafficControlTargets) {
             this.trafficControlTargets = trafficControlTargets;
             return this;
         }
@@ -630,15 +696,21 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTrafficControlTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrafficControlTaskResponseBody</p>
+     */
     public static class SplitParts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SetPoints")
-        private java.util.List < Integer > setPoints;
+        private java.util.List<Integer> setPoints;
 
         @com.aliyun.core.annotation.NameInMap("SetValues")
-        private java.util.List < Long > setValues;
+        private java.util.List<Long> setValues;
 
         @com.aliyun.core.annotation.NameInMap("TimePoints")
-        private java.util.List < Integer > timePoints;
+        private java.util.List<Integer> timePoints;
 
         private SplitParts(Builder builder) {
             this.setPoints = builder.setPoints;
@@ -657,33 +729,33 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         /**
          * @return setPoints
          */
-        public java.util.List < Integer > getSetPoints() {
+        public java.util.List<Integer> getSetPoints() {
             return this.setPoints;
         }
 
         /**
          * @return setValues
          */
-        public java.util.List < Long > getSetValues() {
+        public java.util.List<Long> getSetValues() {
             return this.setValues;
         }
 
         /**
          * @return timePoints
          */
-        public java.util.List < Integer > getTimePoints() {
+        public java.util.List<Integer> getTimePoints() {
             return this.timePoints;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > setPoints; 
-            private java.util.List < Long > setValues; 
-            private java.util.List < Integer > timePoints; 
+            private java.util.List<Integer> setPoints; 
+            private java.util.List<Long> setValues; 
+            private java.util.List<Integer> timePoints; 
 
             /**
              * SetPoints.
              */
-            public Builder setPoints(java.util.List < Integer > setPoints) {
+            public Builder setPoints(java.util.List<Integer> setPoints) {
                 this.setPoints = setPoints;
                 return this;
             }
@@ -691,7 +763,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
             /**
              * SetValues.
              */
-            public Builder setValues(java.util.List < Long > setValues) {
+            public Builder setValues(java.util.List<Long> setValues) {
                 this.setValues = setValues;
                 return this;
             }
@@ -699,7 +771,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
             /**
              * TimePoints.
              */
-            public Builder timePoints(java.util.List < Integer > timePoints) {
+            public Builder timePoints(java.util.List<Integer> timePoints) {
                 this.timePoints = timePoints;
                 return this;
             }
@@ -711,6 +783,12 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTrafficControlTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTrafficControlTaskResponseBody</p>
+     */
     public static class TrafficControlTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;

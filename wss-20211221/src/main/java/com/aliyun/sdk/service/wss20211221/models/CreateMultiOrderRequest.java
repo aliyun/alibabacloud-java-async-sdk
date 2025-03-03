@@ -29,11 +29,16 @@ public class CreateMultiOrderRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Properties")
     private java.util.Map<String, String> properties;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
+    private Long resellerOwnerUid;
+
     private CreateMultiOrderRequest(Builder builder) {
         super(builder);
         this.orderItems = builder.orderItems;
         this.orderType = builder.orderType;
         this.properties = builder.properties;
+        this.resellerOwnerUid = builder.resellerOwnerUid;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class CreateMultiOrderRequest extends Request {
         return this.properties;
     }
 
+    /**
+     * @return resellerOwnerUid
+     */
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
+    }
+
     public static final class Builder extends Request.Builder<CreateMultiOrderRequest, Builder> {
         private java.util.List<OrderItems> orderItems; 
         private String orderType; 
         private java.util.Map<String, String> properties; 
+        private Long resellerOwnerUid; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class CreateMultiOrderRequest extends Request {
             this.orderItems = request.orderItems;
             this.orderType = request.orderType;
             this.properties = request.properties;
+            this.resellerOwnerUid = request.resellerOwnerUid;
         } 
 
         /**
@@ -111,6 +125,15 @@ public class CreateMultiOrderRequest extends Request {
             String propertiesShrink = shrink(properties, "Properties", "json");
             this.putQueryParameter("Properties", propertiesShrink);
             this.properties = properties;
+            return this;
+        }
+
+        /**
+         * ResellerOwnerUid.
+         */
+        public Builder resellerOwnerUid(Long resellerOwnerUid) {
+            this.putQueryParameter("ResellerOwnerUid", resellerOwnerUid);
+            this.resellerOwnerUid = resellerOwnerUid;
             return this;
         }
 

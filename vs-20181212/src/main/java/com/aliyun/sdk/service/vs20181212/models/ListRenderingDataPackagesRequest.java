@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRenderingDataPackagesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    private String category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataPackageId")
     private String dataPackageId;
 
@@ -40,6 +44,7 @@ public class ListRenderingDataPackagesRequest extends Request {
 
     private ListRenderingDataPackagesRequest(Builder builder) {
         super(builder);
+        this.category = builder.category;
         this.dataPackageId = builder.dataPackageId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -58,6 +63,13 @@ public class ListRenderingDataPackagesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -96,6 +108,7 @@ public class ListRenderingDataPackagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRenderingDataPackagesRequest, Builder> {
+        private String category; 
         private String dataPackageId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -108,12 +121,22 @@ public class ListRenderingDataPackagesRequest extends Request {
 
         private Builder(ListRenderingDataPackagesRequest request) {
             super(request);
+            this.category = request.category;
             this.dataPackageId = request.dataPackageId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.size = request.size;
             this.status = request.status;
         } 
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
 
         /**
          * DataPackageId.

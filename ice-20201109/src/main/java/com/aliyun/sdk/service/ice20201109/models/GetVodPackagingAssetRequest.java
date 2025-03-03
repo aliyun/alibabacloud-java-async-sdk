@@ -59,7 +59,10 @@ public class GetVodPackagingAssetRequest extends Request {
         } 
 
         /**
-         * AssetName.
+         * <p>The name of the VOD packaging asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30min_movie</p>
          */
         public Builder assetName(String assetName) {
             this.putQueryParameter("AssetName", assetName);

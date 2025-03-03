@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link PauseEventStreamingResponseBody} extends {@link TeaModel}
  *
  * <p>PauseEventStreamingResponseBody</p>
@@ -73,7 +79,10 @@ public class PauseEventStreamingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+         * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +90,10 @@ public class PauseEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if the request failed.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The event streaming [xxxx] not existed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +101,10 @@ public class PauseEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72ce027c-546a-4231-9cf6-ec58766027f9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +112,10 @@ public class PauseEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

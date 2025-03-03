@@ -292,7 +292,10 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * CallCount.
+             * <p>Number of repeated method calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callCount(String callCount) {
                 this.callCount = callCount;

@@ -75,7 +75,7 @@ public class CreateMediaConnectFlowRequest extends Request {
         } 
 
         /**
-         * <p>Flow instance name</p>
+         * <p>The flow name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateMediaConnectFlowRequest extends Request {
         }
 
         /**
-         * <p>Region to which the Flow instance belongs</p>
+         * <p>The region in which the flow resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteScheduleRequest} extends {@link RequestModel}
  *
  * <p>DeleteScheduleRequest</p>
  */
 public class DeleteScheduleRequest extends Request {
-    @Body
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Body
-    @NameInMap("ScheduleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleName;
 
     private DeleteScheduleRequest(Builder builder) {
@@ -70,7 +75,7 @@ public class DeleteScheduleRequest extends Request {
         } 
 
         /**
-         * FlowName.
+         * <p>This parameter is required.</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -79,7 +84,7 @@ public class DeleteScheduleRequest extends Request {
         }
 
         /**
-         * ScheduleName.
+         * <p>This parameter is required.</p>
          */
         public Builder scheduleName(String scheduleName) {
             this.putBodyParameter("ScheduleName", scheduleName);

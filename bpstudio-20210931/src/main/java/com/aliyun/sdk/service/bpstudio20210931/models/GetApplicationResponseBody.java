@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -303,6 +308,166 @@ public class GetApplicationResponseBody extends TeaModel {
 
             public Checklist build() {
                 return new Checklist(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ruleDetail")
+        private String ruleDetail;
+
+        @com.aliyun.core.annotation.NameInMap("ruleId")
+        private String ruleId;
+
+        private Rules(Builder builder) {
+            this.ruleDetail = builder.ruleDetail;
+            this.ruleId = builder.ruleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ruleDetail
+         */
+        public String getRuleDetail() {
+            return this.ruleDetail;
+        }
+
+        /**
+         * @return ruleId
+         */
+        public String getRuleId() {
+            return this.ruleId;
+        }
+
+        public static final class Builder {
+            private String ruleDetail; 
+            private String ruleId; 
+
+            /**
+             * ruleDetail.
+             */
+            public Builder ruleDetail(String ruleDetail) {
+                this.ruleDetail = ruleDetail;
+                return this;
+            }
+
+            /**
+             * ruleId.
+             */
+            public Builder ruleId(String ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class ComplianceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
+        private String resourceCode;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
+        private String resourceName;
+
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
+
+        private ComplianceList(Builder builder) {
+            this.resourceCode = builder.resourceCode;
+            this.resourceName = builder.resourceName;
+            this.rules = builder.rules;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComplianceList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceCode
+         */
+        public String getResourceCode() {
+            return this.resourceCode;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return rules
+         */
+        public java.util.List<Rules> getRules() {
+            return this.rules;
+        }
+
+        public static final class Builder {
+            private String resourceCode; 
+            private String resourceName; 
+            private java.util.List<Rules> rules; 
+
+            /**
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
+             */
+            public Builder resourceCode(String resourceCode) {
+                this.resourceCode = resourceCode;
+                return this;
+            }
+
+            /**
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * Rules.
+             */
+            public Builder rules(java.util.List<Rules> rules) {
+                this.rules = rules;
+                return this;
+            }
+
+            public ComplianceList build() {
+                return new ComplianceList(this);
             } 
 
         } 
@@ -899,7 +1064,10 @@ public class GetApplicationResponseBody extends TeaModel {
         private String applicationId;
 
         @com.aliyun.core.annotation.NameInMap("Checklist")
-        private java.util.List < Checklist> checklist;
+        private java.util.List<Checklist> checklist;
+
+        @com.aliyun.core.annotation.NameInMap("ComplianceList")
+        private java.util.List<ComplianceList> complianceList;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -920,13 +1088,13 @@ public class GetApplicationResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PriceList")
-        private java.util.List < PriceList> priceList;
+        private java.util.List<PriceList> priceList;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceList")
-        private java.util.List < ResourceList> resourceList;
+        private java.util.List<ResourceList> resourceList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -937,6 +1105,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.applicationId = builder.applicationId;
             this.checklist = builder.checklist;
+            this.complianceList = builder.complianceList;
             this.createTime = builder.createTime;
             this.deployPercent = builder.deployPercent;
             this.description = builder.description;
@@ -968,8 +1137,15 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return checklist
          */
-        public java.util.List < Checklist> getChecklist() {
+        public java.util.List<Checklist> getChecklist() {
             return this.checklist;
+        }
+
+        /**
+         * @return complianceList
+         */
+        public java.util.List<ComplianceList> getComplianceList() {
+            return this.complianceList;
         }
 
         /**
@@ -1017,7 +1193,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return priceList
          */
-        public java.util.List < PriceList> getPriceList() {
+        public java.util.List<PriceList> getPriceList() {
             return this.priceList;
         }
 
@@ -1031,7 +1207,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return resourceList
          */
-        public java.util.List < ResourceList> getResourceList() {
+        public java.util.List<ResourceList> getResourceList() {
             return this.resourceList;
         }
 
@@ -1051,16 +1227,17 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applicationId; 
-            private java.util.List < Checklist> checklist; 
+            private java.util.List<Checklist> checklist; 
+            private java.util.List<ComplianceList> complianceList; 
             private String createTime; 
             private Double deployPercent; 
             private String description; 
             private String error; 
             private String imageURL; 
             private String name; 
-            private java.util.List < PriceList> priceList; 
+            private java.util.List<PriceList> priceList; 
             private String resourceGroupId; 
-            private java.util.List < ResourceList> resourceList; 
+            private java.util.List<ResourceList> resourceList; 
             private String status; 
             private String templateId; 
 
@@ -1078,8 +1255,16 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>The resource tag.</p>
              */
-            public Builder checklist(java.util.List < Checklist> checklist) {
+            public Builder checklist(java.util.List<Checklist> checklist) {
                 this.checklist = checklist;
+                return this;
+            }
+
+            /**
+             * ComplianceList.
+             */
+            public Builder complianceList(java.util.List<ComplianceList> complianceList) {
+                this.complianceList = complianceList;
                 return this;
             }
 
@@ -1149,7 +1334,7 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>The billing results.</p>
              */
-            public Builder priceList(java.util.List < PriceList> priceList) {
+            public Builder priceList(java.util.List<PriceList> priceList) {
                 this.priceList = priceList;
                 return this;
             }
@@ -1168,7 +1353,7 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>The resource specification.</p>
              */
-            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+            public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
                 return this;
             }

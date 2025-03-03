@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrafficControlTargetTrafficHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrafficControlTargetTrafficHistoryResponseBody</p>
@@ -18,7 +24,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
     private String totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TrafficControlTaskTrafficHistories")
-    private java.util.List < TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories;
+    private java.util.List<TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories;
 
     private ListTrafficControlTargetTrafficHistoryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -51,14 +57,14 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
     /**
      * @return trafficControlTaskTrafficHistories
      */
-    public java.util.List < TrafficControlTaskTrafficHistories> getTrafficControlTaskTrafficHistories() {
+    public java.util.List<TrafficControlTaskTrafficHistories> getTrafficControlTaskTrafficHistories() {
         return this.trafficControlTaskTrafficHistories;
     }
 
     public static final class Builder {
         private String requestId; 
         private String totalCount; 
-        private java.util.List < TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories; 
+        private java.util.List<TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories; 
 
         /**
          * RequestId.
@@ -79,7 +85,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         /**
          * TrafficControlTaskTrafficHistories.
          */
-        public Builder trafficControlTaskTrafficHistories(java.util.List < TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories) {
+        public Builder trafficControlTaskTrafficHistories(java.util.List<TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories) {
             this.trafficControlTaskTrafficHistories = trafficControlTaskTrafficHistories;
             return this;
         }
@@ -90,6 +96,12 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListTrafficControlTargetTrafficHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrafficControlTargetTrafficHistoryResponseBody</p>
+     */
     public static class TrafficControlTaskTrafficHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExperimentId")
         private String experimentId;
@@ -101,13 +113,13 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         private String recordTime;
 
         @com.aliyun.core.annotation.NameInMap("TrafficControlTargetAimTraffic")
-        private String trafficControlTargetAimTraffic;
+        private Double trafficControlTargetAimTraffic;
 
         @com.aliyun.core.annotation.NameInMap("TrafficControlTargetTraffic")
-        private String trafficControlTargetTraffic;
+        private Double trafficControlTargetTraffic;
 
         @com.aliyun.core.annotation.NameInMap("TrafficControlTaskTraffic")
-        private String trafficControlTaskTraffic;
+        private Double trafficControlTaskTraffic;
 
         private TrafficControlTaskTrafficHistories(Builder builder) {
             this.experimentId = builder.experimentId;
@@ -150,21 +162,21 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         /**
          * @return trafficControlTargetAimTraffic
          */
-        public String getTrafficControlTargetAimTraffic() {
+        public Double getTrafficControlTargetAimTraffic() {
             return this.trafficControlTargetAimTraffic;
         }
 
         /**
          * @return trafficControlTargetTraffic
          */
-        public String getTrafficControlTargetTraffic() {
+        public Double getTrafficControlTargetTraffic() {
             return this.trafficControlTargetTraffic;
         }
 
         /**
          * @return trafficControlTaskTraffic
          */
-        public String getTrafficControlTaskTraffic() {
+        public Double getTrafficControlTaskTraffic() {
             return this.trafficControlTaskTraffic;
         }
 
@@ -172,9 +184,9 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             private String experimentId; 
             private String itemId; 
             private String recordTime; 
-            private String trafficControlTargetAimTraffic; 
-            private String trafficControlTargetTraffic; 
-            private String trafficControlTaskTraffic; 
+            private Double trafficControlTargetAimTraffic; 
+            private Double trafficControlTargetTraffic; 
+            private Double trafficControlTaskTraffic; 
 
             /**
              * ExperimentId.
@@ -203,7 +215,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             /**
              * TrafficControlTargetAimTraffic.
              */
-            public Builder trafficControlTargetAimTraffic(String trafficControlTargetAimTraffic) {
+            public Builder trafficControlTargetAimTraffic(Double trafficControlTargetAimTraffic) {
                 this.trafficControlTargetAimTraffic = trafficControlTargetAimTraffic;
                 return this;
             }
@@ -211,7 +223,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             /**
              * TrafficControlTargetTraffic.
              */
-            public Builder trafficControlTargetTraffic(String trafficControlTargetTraffic) {
+            public Builder trafficControlTargetTraffic(Double trafficControlTargetTraffic) {
                 this.trafficControlTargetTraffic = trafficControlTargetTraffic;
                 return this;
             }
@@ -219,7 +231,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             /**
              * TrafficControlTaskTraffic.
              */
-            public Builder trafficControlTaskTraffic(String trafficControlTaskTraffic) {
+            public Builder trafficControlTaskTraffic(Double trafficControlTaskTraffic) {
                 this.trafficControlTaskTraffic = trafficControlTaskTraffic;
                 return this;
             }

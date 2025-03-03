@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckInstanceResourcesRequest} extends {@link RequestModel}
  *
  * <p>CheckInstanceResourcesRequest</p>
@@ -15,6 +21,10 @@ public class CheckInstanceResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -28,6 +38,7 @@ public class CheckInstanceResourcesRequest extends Request {
     private CheckInstanceResourcesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.type = builder.type;
         this.uri = builder.uri;
     }
@@ -53,6 +64,13 @@ public class CheckInstanceResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -68,6 +86,7 @@ public class CheckInstanceResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<CheckInstanceResourcesRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
         private String type; 
         private String uri; 
 
@@ -78,12 +97,16 @@ public class CheckInstanceResourcesRequest extends Request {
         private Builder(CheckInstanceResourcesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.type = request.type;
             this.uri = request.uri;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +115,19 @@ public class CheckInstanceResourcesRequest extends Request {
         }
 
         /**
-         * Type.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

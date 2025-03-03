@@ -86,6 +86,9 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
      * <p>DescribeApisecStatisticsResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Actioned")
+        private Long actioned;
+
         @com.aliyun.core.annotation.NameInMap("Api")
         private Long api;
 
@@ -132,6 +135,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         private Long total;
 
         private Data(Builder builder) {
+            this.actioned = builder.actioned;
             this.api = builder.api;
             this.confirmed = builder.confirmed;
             this.domain = builder.domain;
@@ -155,6 +159,13 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return actioned
+         */
+        public Long getActioned() {
+            return this.actioned;
         }
 
         /**
@@ -263,6 +274,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long actioned; 
             private Long api; 
             private Long confirmed; 
             private Long domain; 
@@ -278,6 +290,17 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             private String todayMedium; 
             private String todayTotal; 
             private Long total; 
+
+            /**
+             * <p>The number of handled events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder actioned(Long actioned) {
+                this.actioned = actioned;
+                return this;
+            }
 
             /**
              * <p>The number of APIs.</p>

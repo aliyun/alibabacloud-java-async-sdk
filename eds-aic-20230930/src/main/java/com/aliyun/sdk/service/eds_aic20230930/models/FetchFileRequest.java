@@ -120,6 +120,7 @@ public class FetchFileRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the cloud phone instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -129,6 +130,7 @@ public class FetchFileRequest extends Request {
         }
 
         /**
+         * <p>The path to the file that you want to pull from the cloud phone instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +143,10 @@ public class FetchFileRequest extends Request {
         }
 
         /**
+         * <p>The endpoint of the OSS bucket in which you want to store the pulled file.</p>
+         * <blockquote>
+         * <p> Set the value to an internal endpoint when the cloud phone instance and the OSS bucket are in the same region to improve upload speed without incurring public traffic fees. Sample endpoint: <code>oss-cn-hangzhou-internal.aliyuncs.com</code>. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +159,10 @@ public class FetchFileRequest extends Request {
         }
 
         /**
+         * <p>The type of the storage service.</p>
+         * <blockquote>
+         * <p> Currently, only OSS is supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +175,10 @@ public class FetchFileRequest extends Request {
         }
 
         /**
+         * <p>The OSS URL of the pulled file.</p>
+         * <blockquote>
+         * <p> The OSS bucket name must start with &quot;cloudphone-saved-bucket-&quot;, for example, &quot;cloudphone-saved-bucket-example&quot;. You must also create an OSS directory to store the backup data. Set the value for UploadUrl in this format: oss://&lt;BucketName&gt;/&lt;OSSDirectoryName&gt;.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder uploadUrl(String uploadUrl) {

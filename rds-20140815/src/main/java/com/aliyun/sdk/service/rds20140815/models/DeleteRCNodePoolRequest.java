@@ -90,7 +90,11 @@ public class DeleteRCNodePoolRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ACK cluster to which the RDS Custom instance belongs.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c463aaa89e2b84cacacfbf23c4867****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -99,7 +103,11 @@ public class DeleteRCNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The node pool ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodePoolId(String nodePoolId) {
             this.putQueryParameter("NodePoolId", nodePoolId);
@@ -108,7 +116,11 @@ public class DeleteRCNodePoolRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

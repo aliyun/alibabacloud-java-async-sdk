@@ -43,7 +43,7 @@ public class UpdateLoadBalancerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>

@@ -103,7 +103,18 @@ public class DescribeDDoSBpsListRequest extends Request {
         } 
 
         /**
-         * Coverage.
+         * <p>Protection area, defaulting to global if not filled. When specified, the values are as follows:</p>
+         * <ul>
+         * <li><p>domestic: Mainland China.</p>
+         * </li>
+         * <li><p>overseas: Global (excluding Mainland China).</p>
+         * </li>
+         * <li><p>global: Global.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -112,7 +123,11 @@ public class DescribeDDoSBpsListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for fetching data. In ISO8601 format, using UTC+0, formatted as: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The end time must be later than the start time, and the span between start and end times should not exceed 31 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-18T06:19:42Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,6 +136,7 @@ public class DescribeDDoSBpsListRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +149,7 @@ public class DescribeDDoSBpsListRequest extends Request {
         }
 
         /**
+         * <p>The start time for fetching data, in ISO8601 format, using UTC+0, formatted as: yyyy-MM-ddTHH:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

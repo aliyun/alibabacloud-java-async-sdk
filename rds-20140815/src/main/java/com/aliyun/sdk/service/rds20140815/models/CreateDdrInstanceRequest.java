@@ -22,6 +22,10 @@ public class CreateDdrInstanceRequest extends Request {
     private String backupSetId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetRegion")
+    private String backupSetRegion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -31,7 +35,6 @@ public class CreateDdrInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
 
     @com.aliyun.core.annotation.Query
@@ -45,7 +48,6 @@ public class CreateDdrInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer DBInstanceStorage;
 
     @com.aliyun.core.annotation.Query
@@ -157,6 +159,7 @@ public class CreateDdrInstanceRequest extends Request {
     private CreateDdrInstanceRequest(Builder builder) {
         super(builder);
         this.backupSetId = builder.backupSetId;
+        this.backupSetRegion = builder.backupSetRegion;
         this.clientToken = builder.clientToken;
         this.connectionMode = builder.connectionMode;
         this.DBInstanceClass = builder.DBInstanceClass;
@@ -208,6 +211,13 @@ public class CreateDdrInstanceRequest extends Request {
      */
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    /**
+     * @return backupSetRegion
+     */
+    public String getBackupSetRegion() {
+        return this.backupSetRegion;
     }
 
     /**
@@ -429,6 +439,7 @@ public class CreateDdrInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDdrInstanceRequest, Builder> {
         private String backupSetId; 
+        private String backupSetRegion; 
         private String clientToken; 
         private String connectionMode; 
         private String DBInstanceClass; 
@@ -468,6 +479,7 @@ public class CreateDdrInstanceRequest extends Request {
         private Builder(CreateDdrInstanceRequest request) {
             super(request);
             this.backupSetId = request.backupSetId;
+            this.backupSetRegion = request.backupSetRegion;
             this.clientToken = request.clientToken;
             this.connectionMode = request.connectionMode;
             this.DBInstanceClass = request.DBInstanceClass;
@@ -517,6 +529,15 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
+         * BackupSetRegion.
+         */
+        public Builder backupSetRegion(String backupSetRegion) {
+            this.putQueryParameter("BackupSetRegion", backupSetRegion);
+            this.backupSetRegion = backupSetRegion;
+            return this;
+        }
+
+        /**
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
@@ -547,7 +568,6 @@ public class CreateDdrInstanceRequest extends Request {
 
         /**
          * <p>The instance type of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rds.mysql.s1.small</p>
@@ -592,7 +612,6 @@ public class CreateDdrInstanceRequest extends Request {
 
         /**
          * <p>The storage capacity of the destination instance. Valid values: <strong>5 to 2000</strong>. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

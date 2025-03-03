@@ -50,6 +50,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private String gpuDriverType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuMemory")
+    private Integer gpuMemory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
@@ -96,6 +100,7 @@ public class DescribeDesktopTypesRequest extends Request {
         this.desktopTypeIdList = builder.desktopTypeIdList;
         this.gpuCount = builder.gpuCount;
         this.gpuDriverType = builder.gpuDriverType;
+        this.gpuMemory = builder.gpuMemory;
         this.instanceTypeFamily = builder.instanceTypeFamily;
         this.memorySize = builder.memorySize;
         this.orderBy = builder.orderBy;
@@ -177,6 +182,13 @@ public class DescribeDesktopTypesRequest extends Request {
     }
 
     /**
+     * @return gpuMemory
+     */
+    public Integer getGpuMemory() {
+        return this.gpuMemory;
+    }
+
+    /**
      * @return instanceTypeFamily
      */
     public String getInstanceTypeFamily() {
@@ -248,6 +260,7 @@ public class DescribeDesktopTypesRequest extends Request {
         private java.util.List<String> desktopTypeIdList; 
         private Float gpuCount; 
         private String gpuDriverType; 
+        private Integer gpuMemory; 
         private String instanceTypeFamily; 
         private Integer memorySize; 
         private String orderBy; 
@@ -272,6 +285,7 @@ public class DescribeDesktopTypesRequest extends Request {
             this.desktopTypeIdList = request.desktopTypeIdList;
             this.gpuCount = request.gpuCount;
             this.gpuDriverType = request.gpuDriverType;
+            this.gpuMemory = request.gpuMemory;
             this.instanceTypeFamily = request.instanceTypeFamily;
             this.memorySize = request.memorySize;
             this.orderBy = request.orderBy;
@@ -515,6 +529,15 @@ public class DescribeDesktopTypesRequest extends Request {
         public Builder gpuDriverType(String gpuDriverType) {
             this.putQueryParameter("GpuDriverType", gpuDriverType);
             this.gpuDriverType = gpuDriverType;
+            return this;
+        }
+
+        /**
+         * GpuMemory.
+         */
+        public Builder gpuMemory(Integer gpuMemory) {
+            this.putQueryParameter("GpuMemory", gpuMemory);
+            this.gpuMemory = gpuMemory;
             return this;
         }
 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link PutTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>PutTargetsResponseBody</p>
@@ -85,11 +91,14 @@ public class PutTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The call succeeded.</li>
+         * <li>Other codes: The call failed. For more information about error codes, see Error codes.</li>
+         * </ul>
          * 
-         * *   Success: The call succeeded.
-         * *   Other codes: The call failed. For more information about error codes, see Error codes.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +106,7 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +114,10 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if the request failed.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The event rule not existed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +125,10 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FB52207-7621-5292-BDF2-A17E2E984160</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +136,14 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,6 +156,12 @@ public class PutTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PutTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutTargetsResponseBody</p>
+     */
     public static class ErrorEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntryId")
         private String entryId;
@@ -189,7 +213,10 @@ public class PutTargetsResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * The ID of the failed event target.
+             * <p>The ID of the failed event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mlm123456JHd2RsRoKw</p>
              */
             public Builder entryId(String entryId) {
                 this.entryId = entryId;
@@ -197,7 +224,10 @@ public class PutTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EventRuleTargetIdDuplicate</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -205,7 +235,10 @@ public class PutTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The id of event target is duplicate!</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -219,9 +252,15 @@ public class PutTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PutTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutTargetsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorEntries")
-        private java.util.List < ErrorEntries> errorEntries;
+        private java.util.List<ErrorEntries> errorEntries;
 
         @com.aliyun.core.annotation.NameInMap("ErrorEntriesCount")
         private Integer errorEntriesCount;
@@ -242,7 +281,7 @@ public class PutTargetsResponseBody extends TeaModel {
         /**
          * @return errorEntries
          */
-        public java.util.List < ErrorEntries> getErrorEntries() {
+        public java.util.List<ErrorEntries> getErrorEntries() {
             return this.errorEntries;
         }
 
@@ -254,23 +293,26 @@ public class PutTargetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ErrorEntries> errorEntries; 
+            private java.util.List<ErrorEntries> errorEntries; 
             private Integer errorEntriesCount; 
 
             /**
-             * The ID of the failed event target.
+             * <p>The ID of the failed event target.</p>
              */
-            public Builder errorEntries(java.util.List < ErrorEntries> errorEntries) {
+            public Builder errorEntries(java.util.List<ErrorEntries> errorEntries) {
                 this.errorEntries = errorEntries;
                 return this;
             }
 
             /**
-             * The number of failed event targets. Valid values:
-             * <p>
+             * <p>The number of failed event targets. Valid values:</p>
+             * <ul>
+             * <li>0: All event targets succeeded.</li>
+             * <li>An integer other than 0: indicates the number of failed event targets.</li>
+             * </ul>
              * 
-             * *   0: All event targets succeeded.
-             * *   An integer other than 0: indicates the number of failed event targets.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorEntriesCount(Integer errorEntriesCount) {
                 this.errorEntriesCount = errorEntriesCount;

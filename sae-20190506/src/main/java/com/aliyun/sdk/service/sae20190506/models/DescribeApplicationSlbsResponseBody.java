@@ -215,6 +215,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CookieTimeout")
         private Integer cookieTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
         @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
         private String httpsCaCertId;
 
@@ -239,6 +242,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private Internet(Builder builder) {
             this.cookie = builder.cookie;
             this.cookieTimeout = builder.cookieTimeout;
+            this.createTime = builder.createTime;
             this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
@@ -268,6 +272,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         public Integer getCookieTimeout() {
             return this.cookieTimeout;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -322,6 +333,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static final class Builder {
             private String cookie; 
             private Integer cookieTimeout; 
+            private Long createTime; 
             private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
@@ -343,6 +355,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -434,6 +454,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CookieTimeout")
         private Integer cookieTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
         @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
         private String httpsCaCertId;
 
@@ -458,6 +481,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private Intranet(Builder builder) {
             this.cookie = builder.cookie;
             this.cookieTimeout = builder.cookieTimeout;
+            this.createTime = builder.createTime;
             this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
@@ -487,6 +511,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         public Integer getCookieTimeout() {
             return this.cookieTimeout;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -541,6 +572,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static final class Builder {
             private String cookie; 
             private Integer cookieTimeout; 
+            private Long createTime; 
             private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
@@ -562,6 +594,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 

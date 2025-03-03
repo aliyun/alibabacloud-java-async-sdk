@@ -55,7 +55,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Config.
+         * <p>The ad insertion configuration.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -63,7 +63,10 @@ public class GetAdInsertionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +124,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             private String contentSegmentUrlPrefix; 
 
             /**
-             * <p>广告分片的CDN前缀</p>
+             * <p>The CDN prefix for accessing ad segments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -132,7 +135,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>视频内容分片的CDN前缀</p>
+             * <p>The CDN prefix for accessing content segments.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -182,7 +185,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             private String hlsPrefix; 
 
             /**
-             * <p>HLS清单播放端点前缀</p>
+             * <p>The playback endpoint prefix for accessing HLS manifests.</p>
              */
             public Builder hlsPrefix(String hlsPrefix) {
                 this.hlsPrefix = hlsPrefix;
@@ -349,7 +352,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             private String slateAdUrl; 
 
             /**
-             * <p>广告标记透传</p>
+             * <p>Indicates whether ad marker passthrough is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>ON</p>
@@ -360,7 +363,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>广告策略服务器URL</p>
+             * <p>The URL of the ad decision server (ADS).</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://ads.com/ad1?param1=%5Bpalyer_params.p1%5D">http://ads.com/ad1?param1=[palyer_params.p1]</a></p>
@@ -371,7 +374,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CDN配置</p>
+             * <p>The CDN configurations.</p>
              */
             public Builder cdnConfig(CdnConfig cdnConfig) {
                 this.cdnConfig = cdnConfig;
@@ -379,7 +382,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>动态配置别名</p>
+             * <p>The aliases for dynamic variable replacement.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -394,7 +397,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内容URL前缀</p>
+             * <p>The prefix of the source URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://source.com/">https://source.com/</a></p>
@@ -405,7 +408,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The time when the configuration was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-13T08:26:09Z</p>
@@ -416,7 +419,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间</p>
+             * <p>The time when the configuration was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-13T08:26:09Z</p>
@@ -427,7 +430,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>清单播放端点配置</p>
+             * <p>The playback endpoint prefix for accessing manifests.</p>
              */
             public Builder manifestEndpointConfig(ManifestEndpointConfig manifestEndpointConfig) {
                 this.manifestEndpointConfig = manifestEndpointConfig;
@@ -435,7 +438,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>广告插入配置名称</p>
+             * <p>The name of the configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>my_ad</p>
@@ -446,7 +449,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>个性化配置阈值</p>
+             * <p>The personalization threshold.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -457,7 +460,7 @@ public class GetAdInsertionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>slate广告URL</p>
+             * <p>The URL of the slate ad.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></p>

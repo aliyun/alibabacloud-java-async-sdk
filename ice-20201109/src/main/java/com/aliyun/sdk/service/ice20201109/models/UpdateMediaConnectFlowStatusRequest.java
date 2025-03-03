@@ -75,7 +75,7 @@ public class UpdateMediaConnectFlowStatusRequest extends Request {
         } 
 
         /**
-         * <p>Flow instance ID</p>
+         * <p>The flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,10 +88,10 @@ public class UpdateMediaConnectFlowStatusRequest extends Request {
         }
 
         /**
-         * <p>Flow status:</p>
+         * <p>The flow state. Valid values:</p>
          * <ul>
-         * <li>online: Start Flow</li>
-         * <li>offline: Stop Flow</li>
+         * <li>online: starts the flow.</li>
+         * <li>offline: stops the flow.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

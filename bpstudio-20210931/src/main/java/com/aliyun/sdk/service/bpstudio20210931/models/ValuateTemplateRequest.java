@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ValuateTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -36,7 +41,7 @@ public class ValuateTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Variables")
-    private java.util.Map < String, String > variables;
+    private java.util.Map<String, ?> variables;
 
     private ValuateTemplateRequest(Builder builder) {
         super(builder);
@@ -78,7 +83,7 @@ public class ValuateTemplateRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -99,17 +104,17 @@ public class ValuateTemplateRequest extends Request {
     /**
      * @return variables
      */
-    public java.util.Map < String, String > getVariables() {
+    public java.util.Map<String, ?> getVariables() {
         return this.variables;
     }
 
     public static final class Builder extends Request.Builder<ValuateTemplateRequest, Builder> {
         private String areaId; 
         private String clientToken; 
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String resourceGroupId; 
         private String templateId; 
-        private java.util.Map < String, String > variables; 
+        private java.util.Map<String, ?> variables; 
 
         private Builder() {
             super();
@@ -153,7 +158,7 @@ public class ValuateTemplateRequest extends Request {
         /**
          * <p>The instances to be replaced.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
             this.putBodyParameter("Instances", instancesShrink);
             this.instances = instances;
@@ -188,7 +193,7 @@ public class ValuateTemplateRequest extends Request {
         /**
          * <p>The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.</p>
          */
-        public Builder variables(java.util.Map < String, String > variables) {
+        public Builder variables(java.util.Map<String, ?> variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
             this.putBodyParameter("Variables", variablesShrink);
             this.variables = variables;

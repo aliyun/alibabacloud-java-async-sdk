@@ -145,6 +145,10 @@ public class RunRCInstancesRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -186,6 +190,7 @@ public class RunRCInstancesRequest extends Request {
         this.supportCase = builder.supportCase;
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
+        this.userData = builder.userData;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
     }
@@ -421,6 +426,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -466,6 +478,7 @@ public class RunRCInstancesRequest extends Request {
         private String supportCase; 
         private SystemDisk systemDisk; 
         private java.util.List<Tag> tag; 
+        private String userData; 
         private String vSwitchId; 
         private String zoneId; 
 
@@ -506,6 +519,7 @@ public class RunRCInstancesRequest extends Request {
             this.supportCase = request.supportCase;
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
+            this.userData = request.userData;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
@@ -878,6 +892,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
             return this;
         }
 

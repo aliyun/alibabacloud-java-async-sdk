@@ -1447,8 +1447,8 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
-         * <li><strong>Classic</strong>: the classic network</li>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>Classic</strong></li>
          * </ul>
          * <blockquote>
          * </blockquote>

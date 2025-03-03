@@ -260,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGroupEndpointsResponse> describeGroupEndpoints(DescribeGroupEndpointsRequest request);
 
     /**
+     * @param request the request parameters of DescribeMachineSpec  DescribeMachineSpecRequest
+     * @return DescribeMachineSpecResponse
+     */
+    CompletableFuture<DescribeMachineSpecResponse> describeMachineSpec(DescribeMachineSpecRequest request);
+
+    /**
      * @param request the request parameters of DescribeResource  DescribeResourceRequest
      * @return DescribeResourceResponse
      */

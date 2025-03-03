@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class QueryInstancePrice4ModifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Configuration")
-    private java.util.Map < String, ? > configuration;
+    private java.util.Map<String, ?> configuration;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -56,7 +61,7 @@ public class QueryInstancePrice4ModifyRequest extends Request {
     /**
      * @return configuration
      */
-    public java.util.Map < String, ? > getConfiguration() {
+    public java.util.Map<String, ?> getConfiguration() {
         return this.configuration;
     }
 
@@ -69,7 +74,7 @@ public class QueryInstancePrice4ModifyRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryInstancePrice4ModifyRequest, Builder> {
         private String applicationId; 
-        private java.util.Map < String, ? > configuration; 
+        private java.util.Map<String, ?> configuration; 
         private String instanceId; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class QueryInstancePrice4ModifyRequest extends Request {
         /**
          * Configuration.
          */
-        public Builder configuration(java.util.Map < String, ? > configuration) {
+        public Builder configuration(java.util.Map<String, ?> configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
             this.putBodyParameter("Configuration", configurationShrink);
             this.configuration = configuration;

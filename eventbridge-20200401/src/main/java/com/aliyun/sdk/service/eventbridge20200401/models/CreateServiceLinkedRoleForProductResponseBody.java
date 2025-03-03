@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateServiceLinkedRoleForProductResponseBody} extends {@link TeaModel}
  *
  * <p>CreateServiceLinkedRoleForProductResponseBody</p>
@@ -85,7 +91,10 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+         * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +110,10 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request is successful, success is returned.
+         * <p>The returned message. If the request is successful, success is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C36345A1-75F3-5A1A-BFCF-33B8271971FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

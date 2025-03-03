@@ -91,7 +91,10 @@ public class DescribeSlrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;

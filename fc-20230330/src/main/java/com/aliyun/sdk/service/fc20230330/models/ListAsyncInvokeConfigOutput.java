@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAsyncInvokeConfigOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("configs")
-    private java.util.List < AsyncConfig > configs;
+    private java.util.List<AsyncConfig> configs;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -34,7 +39,7 @@ public class ListAsyncInvokeConfigOutput extends TeaModel {
     /**
      * @return configs
      */
-    public java.util.List < AsyncConfig > getConfigs() {
+    public java.util.List<AsyncConfig> getConfigs() {
         return this.configs;
     }
 
@@ -46,13 +51,13 @@ public class ListAsyncInvokeConfigOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AsyncConfig > configs; 
+        private java.util.List<AsyncConfig> configs; 
         private String nextToken; 
 
         /**
          * configs.
          */
-        public Builder configs(java.util.List < AsyncConfig > configs) {
+        public Builder configs(java.util.List<AsyncConfig> configs) {
             this.configs = configs;
             return this;
         }

@@ -79,7 +79,7 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         private Integer retCode; 
 
         /**
-         * <p>Response body</p>
+         * <p>The response body.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -87,7 +87,7 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Description information returned by the interface</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -98,7 +98,7 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>86D92F9D-65E8-58A2-85D1-9DEEECC172E8</p>
@@ -109,7 +109,7 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned error code, 0 indicates success</p>
+         * <p>The returned error code. A value of 0 indicates the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -158,7 +158,7 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
             private String flowId; 
 
             /**
-             * <p>Flow instance ID</p>
+             * <p>The flow ID.</p>
              * 
              * <strong>example:</strong>
              * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushResourceRuleRequest} extends {@link RequestModel}
  *
  * <p>PushResourceRuleRequest</p>
@@ -28,7 +34,7 @@ public class PushResourceRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricInfo")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > metricInfo;
+    private java.util.Map<String, ?> metricInfo;
 
     private PushResourceRuleRequest(Builder builder) {
         super(builder);
@@ -75,7 +81,7 @@ public class PushResourceRuleRequest extends Request {
     /**
      * @return metricInfo
      */
-    public java.util.Map < String, ? > getMetricInfo() {
+    public java.util.Map<String, ?> getMetricInfo() {
         return this.metricInfo;
     }
 
@@ -83,7 +89,7 @@ public class PushResourceRuleRequest extends Request {
         private String resourceRuleId; 
         private String regionId; 
         private String instanceId; 
-        private java.util.Map < String, ? > metricInfo; 
+        private java.util.Map<String, ?> metricInfo; 
 
         private Builder() {
             super();
@@ -98,7 +104,7 @@ public class PushResourceRuleRequest extends Request {
         } 
 
         /**
-         * ResourceRuleId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceRuleId(String resourceRuleId) {
             this.putPathParameter("ResourceRuleId", resourceRuleId);
@@ -116,7 +122,7 @@ public class PushResourceRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,9 +131,9 @@ public class PushResourceRuleRequest extends Request {
         }
 
         /**
-         * MetricInfo.
+         * <p>This parameter is required.</p>
          */
-        public Builder metricInfo(java.util.Map < String, ? > metricInfo) {
+        public Builder metricInfo(java.util.Map<String, ?> metricInfo) {
             String metricInfoShrink = shrink(metricInfo, "MetricInfo", "json");
             this.putQueryParameter("MetricInfo", metricInfoShrink);
             this.metricInfo = metricInfo;

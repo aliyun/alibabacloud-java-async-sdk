@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -31,7 +36,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
@@ -72,7 +77,7 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -86,16 +91,16 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private Integer limit; 
         private String nextToken; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -137,7 +142,7 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The resource IDs.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             String resourceIdShrink = shrink(resourceId, "ResourceId", "json");
             this.putQueryParameter("ResourceId", resourceIdShrink);
             this.resourceId = resourceId;
@@ -161,7 +166,7 @@ public class ListTagResourcesRequest extends Request {
          * <p>The tags.</p>
          * <p>You can query up to 20 tags at a time.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
             this.putQueryParameter("Tag", tagShrink);
             this.tag = tag;

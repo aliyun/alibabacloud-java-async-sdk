@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link UpdateApiDestinationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateApiDestinationResponseBody</p>
@@ -73,7 +79,10 @@ public class UpdateApiDestinationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * api-destination-name
+         * <p>api-destination-name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-destination-name</p>
          */
         public Builder apiDestinationName(String apiDestinationName) {
             this.apiDestinationName = apiDestinationName;
@@ -81,7 +90,10 @@ public class UpdateApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The response code. If the request is successful, Success is returned.
+         * <p>The response code. If the request is successful, Success is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -89,7 +101,10 @@ public class UpdateApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request is successful, success is returned.
+         * <p>The returned message. If the request is successful, success is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +112,10 @@ public class UpdateApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>382E6272-8E9C-5681-AC96-A8AF0BFAC1A5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

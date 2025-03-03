@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListProvisionConfigsOutput extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("provisionConfigs")
-    private java.util.List < ProvisionConfig > provisionConfigs;
+    private java.util.List<ProvisionConfig> provisionConfigs;
 
     private ListProvisionConfigsOutput(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -41,13 +46,13 @@ public class ListProvisionConfigsOutput extends TeaModel {
     /**
      * @return provisionConfigs
      */
-    public java.util.List < ProvisionConfig > getProvisionConfigs() {
+    public java.util.List<ProvisionConfig> getProvisionConfigs() {
         return this.provisionConfigs;
     }
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < ProvisionConfig > provisionConfigs; 
+        private java.util.List<ProvisionConfig> provisionConfigs; 
 
         /**
          * nextToken.
@@ -60,7 +65,7 @@ public class ListProvisionConfigsOutput extends TeaModel {
         /**
          * provisionConfigs.
          */
-        public Builder provisionConfigs(java.util.List < ProvisionConfig > provisionConfigs) {
+        public Builder provisionConfigs(java.util.List<ProvisionConfig> provisionConfigs) {
             this.provisionConfigs = provisionConfigs;
             return this;
         }

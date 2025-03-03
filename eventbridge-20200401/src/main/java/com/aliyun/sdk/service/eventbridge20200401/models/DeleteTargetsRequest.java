@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link DeleteTargetsRequest} extends {@link RequestModel}
  *
  * <p>DeleteTargetsRequest</p>
@@ -23,7 +29,7 @@ public class DeleteTargetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetIds")
-    private java.util.List < String > targetIds;
+    private java.util.List<String> targetIds;
 
     private DeleteTargetsRequest(Builder builder) {
         super(builder);
@@ -62,14 +68,14 @@ public class DeleteTargetsRequest extends Request {
     /**
      * @return targetIds
      */
-    public java.util.List < String > getTargetIds() {
+    public java.util.List<String> getTargetIds() {
         return this.targetIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteTargetsRequest, Builder> {
         private String eventBusName; 
         private String ruleName; 
-        private java.util.List < String > targetIds; 
+        private java.util.List<String> targetIds; 
 
         private Builder() {
             super();
@@ -83,7 +89,11 @@ public class DeleteTargetsRequest extends Request {
         } 
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyEventBus</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -92,7 +102,11 @@ public class DeleteTargetsRequest extends Request {
         }
 
         /**
-         * The name of the event rule.
+         * <p>The name of the event rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ramrolechange-mns</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -101,9 +115,9 @@ public class DeleteTargetsRequest extends Request {
         }
 
         /**
-         * The IDs of the event targets that you want to delete.
+         * <p>The IDs of the event targets that you want to delete.</p>
          */
-        public Builder targetIds(java.util.List < String > targetIds) {
+        public Builder targetIds(java.util.List<String> targetIds) {
             String targetIdsShrink = shrink(targetIds, "TargetIds", "json");
             this.putQueryParameter("TargetIds", targetIdsShrink);
             this.targetIds = targetIds;

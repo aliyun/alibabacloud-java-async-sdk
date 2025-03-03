@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCalculationJobsRequest} extends {@link RequestModel}
  *
  * <p>ListCalculationJobsRequest</p>
  */
 public class ListCalculationJobsRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +45,7 @@ public class ListCalculationJobsRequest extends Request {
 
     private ListCalculationJobsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -53,6 +64,13 @@ public class ListCalculationJobsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,6 +109,7 @@ public class ListCalculationJobsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCalculationJobsRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -103,6 +122,7 @@ public class ListCalculationJobsRequest extends Request {
 
         private Builder(ListCalculationJobsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -111,7 +131,19 @@ public class ListCalculationJobsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,7 +170,10 @@ public class ListCalculationJobsRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

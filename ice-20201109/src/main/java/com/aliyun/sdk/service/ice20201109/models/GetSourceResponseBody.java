@@ -55,7 +55,10 @@ public class GetSourceResponseBody extends TeaModel {
         private ChannelAssemblySource source; 
 
         /**
-         * RequestId.
+         * <p><strong>Request ID</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxxx-xxxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The source information.</p>
          */
         public Builder source(ChannelAssemblySource source) {
             this.source = source;

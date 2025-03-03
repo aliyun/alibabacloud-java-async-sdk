@@ -26,12 +26,20 @@ public class CreateDomainRequest extends Request {
     private String certIdentifier;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientCACert")
+    private String clientCACert;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("forceHttps")
     private Boolean forceHttps;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("http2Option")
     private String http2Option;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mTLSEnabled")
+    private Boolean mTLSEnabled;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
@@ -63,8 +71,10 @@ public class CreateDomainRequest extends Request {
         super(builder);
         this.caCertIdentifier = builder.caCertIdentifier;
         this.certIdentifier = builder.certIdentifier;
+        this.clientCACert = builder.clientCACert;
         this.forceHttps = builder.forceHttps;
         this.http2Option = builder.http2Option;
+        this.mTLSEnabled = builder.mTLSEnabled;
         this.name = builder.name;
         this.protocol = builder.protocol;
         this.resourceGroupId = builder.resourceGroupId;
@@ -101,6 +111,13 @@ public class CreateDomainRequest extends Request {
     }
 
     /**
+     * @return clientCACert
+     */
+    public String getClientCACert() {
+        return this.clientCACert;
+    }
+
+    /**
      * @return forceHttps
      */
     public Boolean getForceHttps() {
@@ -112,6 +129,13 @@ public class CreateDomainRequest extends Request {
      */
     public String getHttp2Option() {
         return this.http2Option;
+    }
+
+    /**
+     * @return mTLSEnabled
+     */
+    public Boolean getMTLSEnabled() {
+        return this.mTLSEnabled;
     }
 
     /**
@@ -159,8 +183,10 @@ public class CreateDomainRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDomainRequest, Builder> {
         private String caCertIdentifier; 
         private String certIdentifier; 
+        private String clientCACert; 
         private Boolean forceHttps; 
         private String http2Option; 
+        private Boolean mTLSEnabled; 
         private String name; 
         private String protocol; 
         private String resourceGroupId; 
@@ -176,8 +202,10 @@ public class CreateDomainRequest extends Request {
             super(request);
             this.caCertIdentifier = request.caCertIdentifier;
             this.certIdentifier = request.certIdentifier;
+            this.clientCACert = request.clientCACert;
             this.forceHttps = request.forceHttps;
             this.http2Option = request.http2Option;
+            this.mTLSEnabled = request.mTLSEnabled;
             this.name = request.name;
             this.protocol = request.protocol;
             this.resourceGroupId = request.resourceGroupId;
@@ -211,6 +239,15 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
+         * clientCACert.
+         */
+        public Builder clientCACert(String clientCACert) {
+            this.putBodyParameter("clientCACert", clientCACert);
+            this.clientCACert = clientCACert;
+            return this;
+        }
+
+        /**
          * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +268,15 @@ public class CreateDomainRequest extends Request {
         public Builder http2Option(String http2Option) {
             this.putBodyParameter("http2Option", http2Option);
             this.http2Option = http2Option;
+            return this;
+        }
+
+        /**
+         * mTLSEnabled.
+         */
+        public Builder mTLSEnabled(Boolean mTLSEnabled) {
+            this.putBodyParameter("mTLSEnabled", mTLSEnabled);
+            this.mTLSEnabled = mTLSEnabled;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class UpdateFunctionInput extends TeaModel {
     private Integer diskSize;
 
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    private java.util.Map<String, String> environmentVariables;
 
     @com.aliyun.core.annotation.NameInMap("gpuConfig")
     private GPUConfig gpuConfig;
@@ -54,7 +59,7 @@ public class UpdateFunctionInput extends TeaModel {
     private Boolean internetAccess;
 
     @com.aliyun.core.annotation.NameInMap("layers")
-    private java.util.List < String > layers;
+    private java.util.List<String> layers;
 
     @com.aliyun.core.annotation.NameInMap("logConfig")
     private LogConfig logConfig;
@@ -170,7 +175,7 @@ public class UpdateFunctionInput extends TeaModel {
     /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -212,7 +217,7 @@ public class UpdateFunctionInput extends TeaModel {
     /**
      * @return layers
      */
-    public java.util.List < String > getLayers() {
+    public java.util.List<String> getLayers() {
         return this.layers;
     }
 
@@ -287,13 +292,13 @@ public class UpdateFunctionInput extends TeaModel {
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private Integer diskSize; 
-        private java.util.Map < String, String > environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
         private GPUConfig gpuConfig; 
         private String handler; 
         private Integer instanceConcurrency; 
         private InstanceLifecycleConfig instanceLifecycleConfig; 
         private Boolean internetAccess; 
-        private java.util.List < String > layers; 
+        private java.util.List<String> layers; 
         private LogConfig logConfig; 
         private Integer memorySize; 
         private NASConfig nasConfig; 
@@ -363,7 +368,7 @@ public class UpdateFunctionInput extends TeaModel {
         /**
          * environmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
@@ -411,7 +416,7 @@ public class UpdateFunctionInput extends TeaModel {
         /**
          * layers.
          */
-        public Builder layers(java.util.List < String > layers) {
+        public Builder layers(java.util.List<String> layers) {
             this.layers = layers;
             return this;
         }

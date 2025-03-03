@@ -115,7 +115,10 @@ public class CreateVodPackagingAssetRequest extends Request {
         } 
 
         /**
-         * AssetName.
+         * <p>The name of the asset. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hls_3s</p>
          */
         public Builder assetName(String assetName) {
             this.putQueryParameter("AssetName", assetName);
@@ -124,7 +127,10 @@ public class CreateVodPackagingAssetRequest extends Request {
         }
 
         /**
-         * ContentId.
+         * <p>The content ID in the digital rights management (DRM) system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>movie</p>
          */
         public Builder contentId(String contentId) {
             this.putQueryParameter("ContentId", contentId);
@@ -133,7 +139,10 @@ public class CreateVodPackagingAssetRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The asset description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HLS 3 second packaging</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -142,7 +151,10 @@ public class CreateVodPackagingAssetRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_hls</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -151,7 +163,7 @@ public class CreateVodPackagingAssetRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The asset input configurations.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -212,7 +224,7 @@ public class CreateVodPackagingAssetRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The URL of the media file. Only M3U8 files stored in OSS are supported.</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -220,7 +232,10 @@ public class CreateVodPackagingAssetRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The input type. Only Object Storage Service (OSS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;

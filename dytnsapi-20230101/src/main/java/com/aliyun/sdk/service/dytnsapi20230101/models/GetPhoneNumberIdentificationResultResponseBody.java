@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20230101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPhoneNumberIdentificationResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetPhoneNumberIdentificationResultResponseBody</p>
  */
 public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPhoneNumberIdentificationResultResponseBody(Builder builder) {
@@ -74,13 +79,16 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return code. Valid values:
-         * <p>
+         * <p>The return code. Valid values:</p>
+         * <ul>
+         * <li>OK: The request is successful.</li>
+         * <li>NoIdentificationResult: No verification result is available or the verification failed.</li>
+         * <li>SessionNotValid: The session is invalid or expired.</li>
+         * <li>MobileNumberIllegal: The format of the phone number is invalid.</li>
+         * </ul>
          * 
-         * *   OK: The request is successful.
-         * *   NoIdentificationResult: No verification result is available or the verification failed.
-         * *   SessionNotValid: The session is invalid or expired.
-         * *   MobileNumberIllegal: The format of the phone number is invalid.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +96,7 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +104,10 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the return code.
+         * <p>The description of the return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +115,10 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68A40250-50CD-034C-B728-0BD******177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,8 +131,14 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPhoneNumberIdentificationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPhoneNumberIdentificationResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("IsIdentified")
+        @com.aliyun.core.annotation.NameInMap("IsIdentified")
         private String isIdentified;
 
         private Data(Builder builder) {
@@ -144,7 +164,10 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
             private String isIdentified; 
 
             /**
-             * Indicates whether the phone number passed the verification.
+             * <p>Indicates whether the phone number passed the verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isIdentified(String isIdentified) {
                 this.isIdentified = isIdentified;

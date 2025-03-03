@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SearchMultiAccountResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -59,7 +64,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -92,7 +97,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchMultiAccountResourcesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String scope; 
@@ -114,7 +119,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -196,7 +201,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
         private String matchType;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -229,14 +234,14 @@ public class SearchMultiAccountResourcesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
             private String matchType; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
@@ -264,7 +269,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
             /**
              * <p>The values of the filter condition.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

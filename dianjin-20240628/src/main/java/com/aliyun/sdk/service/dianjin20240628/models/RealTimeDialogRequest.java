@@ -48,6 +48,10 @@ public class RealTimeDialogRequest extends Request {
     private Boolean recommend;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scriptContentPlayed")
+    private String scriptContentPlayed;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
@@ -55,6 +59,10 @@ public class RealTimeDialogRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
     private Boolean stream;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userVad")
+    private Boolean userVad;
 
     private RealTimeDialogRequest(Builder builder) {
         super(builder);
@@ -65,8 +73,10 @@ public class RealTimeDialogRequest extends Request {
         this.dialogMemoryTurns = builder.dialogMemoryTurns;
         this.metaData = builder.metaData;
         this.recommend = builder.recommend;
+        this.scriptContentPlayed = builder.scriptContentPlayed;
         this.sessionId = builder.sessionId;
         this.stream = builder.stream;
+        this.userVad = builder.userVad;
     }
 
     public static Builder builder() {
@@ -132,6 +142,13 @@ public class RealTimeDialogRequest extends Request {
     }
 
     /**
+     * @return scriptContentPlayed
+     */
+    public String getScriptContentPlayed() {
+        return this.scriptContentPlayed;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -145,6 +162,13 @@ public class RealTimeDialogRequest extends Request {
         return this.stream;
     }
 
+    /**
+     * @return userVad
+     */
+    public Boolean getUserVad() {
+        return this.userVad;
+    }
+
     public static final class Builder extends Request.Builder<RealTimeDialogRequest, Builder> {
         private String workspaceId; 
         private Boolean analysis; 
@@ -153,8 +177,10 @@ public class RealTimeDialogRequest extends Request {
         private Integer dialogMemoryTurns; 
         private java.util.Map<String, ?> metaData; 
         private Boolean recommend; 
+        private String scriptContentPlayed; 
         private String sessionId; 
         private Boolean stream; 
+        private Boolean userVad; 
 
         private Builder() {
             super();
@@ -169,8 +195,10 @@ public class RealTimeDialogRequest extends Request {
             this.dialogMemoryTurns = request.dialogMemoryTurns;
             this.metaData = request.metaData;
             this.recommend = request.recommend;
+            this.scriptContentPlayed = request.scriptContentPlayed;
             this.sessionId = request.sessionId;
             this.stream = request.stream;
+            this.userVad = request.userVad;
         } 
 
         /**
@@ -240,6 +268,15 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
+         * scriptContentPlayed.
+         */
+        public Builder scriptContentPlayed(String scriptContentPlayed) {
+            this.putBodyParameter("scriptContentPlayed", scriptContentPlayed);
+            this.scriptContentPlayed = scriptContentPlayed;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,6 +294,15 @@ public class RealTimeDialogRequest extends Request {
         public Builder stream(Boolean stream) {
             this.putBodyParameter("stream", stream);
             this.stream = stream;
+            return this;
+        }
+
+        /**
+         * userVad.
+         */
+        public Builder userVad(Boolean userVad) {
+            this.putBodyParameter("userVad", userVad);
+            this.userVad = userVad;
             return this;
         }
 

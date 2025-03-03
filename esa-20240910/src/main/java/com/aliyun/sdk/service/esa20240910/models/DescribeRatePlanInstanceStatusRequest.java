@@ -59,7 +59,10 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Instance ID, obtained from the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xcdn-91fknmb80f0g***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

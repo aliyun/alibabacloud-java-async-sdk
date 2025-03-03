@@ -1,0 +1,358 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.computenestsupplier20210521.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListServiceInstanceLogsRequest} extends {@link RequestModel}
+ *
+ * <p>ListServiceInstanceLogsRequest</p>
+ */
+public class ListServiceInstanceLogsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogSource")
+    private String logSource;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logstore")
+    private String logstore;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String serviceInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
+    private String sortOrder;
+
+    private ListServiceInstanceLogsRequest(Builder builder) {
+        super(builder);
+        this.filter = builder.filter;
+        this.logSource = builder.logSource;
+        this.logstore = builder.logstore;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.regionId = builder.regionId;
+        this.serviceInstanceId = builder.serviceInstanceId;
+        this.sortOrder = builder.sortOrder;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListServiceInstanceLogsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return filter
+     */
+    public java.util.List<Filter> getFilter() {
+        return this.filter;
+    }
+
+    /**
+     * @return logSource
+     */
+    public String getLogSource() {
+        return this.logSource;
+    }
+
+    /**
+     * @return logstore
+     */
+    public String getLogstore() {
+        return this.logstore;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return serviceInstanceId
+     */
+    public String getServiceInstanceId() {
+        return this.serviceInstanceId;
+    }
+
+    /**
+     * @return sortOrder
+     */
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    public static final class Builder extends Request.Builder<ListServiceInstanceLogsRequest, Builder> {
+        private java.util.List<Filter> filter; 
+        private String logSource; 
+        private String logstore; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private String regionId; 
+        private String serviceInstanceId; 
+        private String sortOrder; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListServiceInstanceLogsRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.logSource = request.logSource;
+            this.logstore = request.logstore;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.serviceInstanceId = request.serviceInstanceId;
+            this.sortOrder = request.sortOrder;
+        } 
+
+        /**
+         * <p>The filters.</p>
+         */
+        public Builder filter(java.util.List<Filter> filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
+            return this;
+        }
+
+        /**
+         * <p>The log source. When this field is empty, query logs with the source set to computeNest and ros.
+         * Valid values:</p>
+         * <ul>
+         * <li>computeNest : logs of the deployment and upgrade of the service instance.</li>
+         * <li>application: logs generated by the application.</li>
+         * <li>actionTrail: logs generated by ActionTrail.</li>
+         * <li>compliancePack:  Logs originating from the compliance package.</li>
+         * <li>ros: Logs originating from ROS.</li>
+         * <li>meteringData：Logs originating from the pay-as-you-go model.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>computeNest</p>
+         */
+        public Builder logSource(String logSource) {
+            this.putQueryParameter("LogSource", logSource);
+            this.logSource = logSource;
+            return this;
+        }
+
+        /**
+         * <p>The name of the Logstore to which log entries are delivered.
+         * It needs to be provided only when LogSource is set to Application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>livelog</p>
+         */
+        public Builder logstore(String logstore) {
+            this.putQueryParameter("Logstore", logstore);
+            this.logstore = logstore;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>A pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-70a3b15bb626435b****</p>
+         */
+        public Builder serviceInstanceId(String serviceInstanceId) {
+            this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
+            this.serviceInstanceId = serviceInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>Sort Order. Possible values:</p>
+         * <ul>
+         * <li><p>Ascending: Ascending order</p>
+         * </li>
+         * <li><p>Descending (default value): Descending order</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ascending</p>
+         */
+        public Builder sortOrder(String sortOrder) {
+            this.putQueryParameter("SortOrder", sortOrder);
+            this.sortOrder = sortOrder;
+            return this;
+        }
+
+        @Override
+        public ListServiceInstanceLogsRequest build() {
+            return new ListServiceInstanceLogsRequest(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListServiceInstanceLogsRequest} extends {@link TeaModel}
+     *
+     * <p>ListServiceInstanceLogsRequest</p>
+     */
+    public static class Filter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
+
+        private Filter(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private java.util.List<String> value; 
+
+            /**
+             * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+             * <ul>
+             * <li>StartTime: the start time of the log event.</li>
+             * <li>EndTime: the end time of the ActionTrail event.</li>
+             * <li>EventName: the name of the ActionTrail event.</li>
+             * <li>ResourceName: the name of the ActionTrail resource.</li>
+             * <li>ApplicationGroupName: the name of the application group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>StartTime</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>A value of the filter condition.</p>
+             */
+            public Builder value(java.util.List<String> value) {
+                this.value = value;
+                return this;
+            }
+
+            public Filter build() {
+                return new Filter(this);
+            } 
+
+        } 
+
+    }
+}

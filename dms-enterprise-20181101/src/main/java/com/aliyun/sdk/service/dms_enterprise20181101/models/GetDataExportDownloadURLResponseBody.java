@@ -91,7 +91,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The details about the download URL of the file that records the export results for the ticket.</p>
+         * <p>The details of the download URL of the file that records the export results for the ticket.</p>
          */
         public Builder downloadURLResult(DownloadURLResult downloadURLResult) {
             this.downloadURLResult = downloadURLResult;
@@ -99,7 +99,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -110,7 +110,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>UnknownError</p>
@@ -121,7 +121,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4BF24EA5-9013-4C85-AE68-6C23AF5E0097</p>
@@ -134,8 +134,8 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,8 +211,8 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             /**
              * <p>Indicates whether export results are available for download. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: Export results are available for download.</li>
-             * <li><strong>false</strong>: No export results are available for download.</li>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>

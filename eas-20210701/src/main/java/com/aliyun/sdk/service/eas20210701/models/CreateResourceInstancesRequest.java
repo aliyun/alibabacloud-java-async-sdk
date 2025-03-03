@@ -276,7 +276,7 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The custom service tag.</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);

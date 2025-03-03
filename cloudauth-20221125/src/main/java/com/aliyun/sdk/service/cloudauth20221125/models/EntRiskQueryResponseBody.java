@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20221125.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntRiskQueryResponseBody} extends {@link TeaModel}
  *
  * <p>EntRiskQueryResponseBody</p>
  */
 public class EntRiskQueryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private EntRiskQueryResponseBody(Builder builder) {
@@ -111,32 +116,38 @@ public class EntRiskQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EntRiskQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EntRiskQueryResponseBody</p>
+     */
     public static class RiskList extends TeaModel {
-        @NameInMap("CreditCode")
+        @com.aliyun.core.annotation.NameInMap("CreditCode")
         private String creditCode;
 
-        @NameInMap("EntName")
+        @com.aliyun.core.annotation.NameInMap("EntName")
         private String entName;
 
-        @NameInMap("ListedDate")
+        @com.aliyun.core.annotation.NameInMap("ListedDate")
         private String listedDate;
 
-        @NameInMap("ListedReason")
+        @com.aliyun.core.annotation.NameInMap("ListedReason")
         private String listedReason;
 
-        @NameInMap("OperationOrg")
+        @com.aliyun.core.annotation.NameInMap("OperationOrg")
         private String operationOrg;
 
-        @NameInMap("RegNo")
+        @com.aliyun.core.annotation.NameInMap("RegNo")
         private String regNo;
 
-        @NameInMap("RemovedDate")
+        @com.aliyun.core.annotation.NameInMap("RemovedDate")
         private String removedDate;
 
-        @NameInMap("RemovedOrg")
+        @com.aliyun.core.annotation.NameInMap("RemovedOrg")
         private String removedOrg;
 
-        @NameInMap("RemovedReason")
+        @com.aliyun.core.annotation.NameInMap("RemovedReason")
         private String removedReason;
 
         private RiskList(Builder builder) {
@@ -312,14 +323,20 @@ public class EntRiskQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EntRiskQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EntRiskQueryResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("RiskList")
-        private java.util.List < RiskList> riskList;
+        @com.aliyun.core.annotation.NameInMap("RiskList")
+        private java.util.List<RiskList> riskList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Result(Builder builder) {
@@ -346,7 +363,7 @@ public class EntRiskQueryResponseBody extends TeaModel {
         /**
          * @return riskList
          */
-        public java.util.List < RiskList> getRiskList() {
+        public java.util.List<RiskList> getRiskList() {
             return this.riskList;
         }
 
@@ -359,7 +376,7 @@ public class EntRiskQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bizCode; 
-            private java.util.List < RiskList> riskList; 
+            private java.util.List<RiskList> riskList; 
             private String status; 
 
             /**
@@ -373,7 +390,7 @@ public class EntRiskQueryResponseBody extends TeaModel {
             /**
              * RiskList.
              */
-            public Builder riskList(java.util.List < RiskList> riskList) {
+            public Builder riskList(java.util.List<RiskList> riskList) {
                 this.riskList = riskList;
                 return this;
             }

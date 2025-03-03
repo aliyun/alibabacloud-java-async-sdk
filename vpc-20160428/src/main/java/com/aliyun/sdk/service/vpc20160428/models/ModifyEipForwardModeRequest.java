@@ -146,7 +146,14 @@ public class ModifyEipForwardModeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -155,6 +162,7 @@ public class ModifyEipForwardModeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the EIP whose attributes you want to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +175,15 @@ public class ModifyEipForwardModeRequest extends Request {
         }
 
         /**
+         * <p>The association mode. Valid values:</p>
+         * <ul>
+         * <li><strong>NAT</strong> (default): the standard NAT mode.</li>
+         * <li><strong>MULTI_BINDED</strong>: the multi-EIP-to-ENI mode.</li>
+         * <li><strong>BINDED</strong>: the cut-through mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required only if <strong>InstanceType</strong> is set to <strong>NetworkInterface</strong>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +205,7 @@ public class ModifyEipForwardModeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region to which the EIP belongs. You can call the DescribeRegions operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

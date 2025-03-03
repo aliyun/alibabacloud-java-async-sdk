@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link UpdateEventBusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEventBusResponseBody</p>
@@ -73,7 +79,14 @@ public class UpdateEventBusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request was successful.</li>
+         * <li>Other codes: The request failed. For information about error codes, see Error codes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +94,10 @@ public class UpdateEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The event bus [xxxx] not existed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +105,10 @@ public class UpdateEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2099962-1628-45f1-9782-2bf6daad823f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +116,10 @@ public class UpdateEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

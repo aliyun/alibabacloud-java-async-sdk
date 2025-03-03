@@ -60,7 +60,7 @@ public class DeleteAdInsertionRequest extends Request {
         } 
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The name of the configuration that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

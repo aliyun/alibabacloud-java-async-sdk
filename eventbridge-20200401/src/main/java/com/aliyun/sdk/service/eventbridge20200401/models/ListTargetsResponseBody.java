@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTargetsResponseBody</p>
@@ -85,11 +91,14 @@ public class ListTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. Valid values:
-         * <p>
+         * <p>The returned response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request is successful.</li>
+         * <li>Other codes: The request failed. For a list of error codes, see Error codes.</li>
+         * </ul>
          * 
-         * *   Success: The request is successful.
-         * *   Other codes: The request failed. For a list of error codes, see Error codes.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +106,7 @@ public class ListTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +114,10 @@ public class ListTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventRuleNotExisted</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +125,10 @@ public class ListTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DAF96FB-A4B6-548C-B999-0BFDCB2261B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +136,14 @@ public class ListTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,6 +156,59 @@ public class ListTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTargetsResponseBody</p>
+     */
+    public static class ConcurrentConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
+        private Long concurrency;
+
+        private ConcurrentConfig(Builder builder) {
+            this.concurrency = builder.concurrency;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConcurrentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return concurrency
+         */
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+        public static final class Builder {
+            private Long concurrency; 
+
+            /**
+             * Concurrency.
+             */
+            public Builder concurrency(Long concurrency) {
+                this.concurrency = concurrency;
+                return this;
+            }
+
+            public ConcurrentConfig build() {
+                return new ConcurrentConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTargetsResponseBody</p>
+     */
     public static class ParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -201,7 +272,10 @@ public class ListTargetsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The format that is used by the event target parameter.
+             * <p>The format that is used by the event target parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMPLATE</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -209,7 +283,10 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource parameter of the event target.
+             * <p>The resource parameter of the event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>body</p>
              */
             public Builder resourceKey(String resourceKey) {
                 this.resourceKey = resourceKey;
@@ -217,7 +294,10 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The template that is used by the event target parameter.
+             * <p>The template that is used by the event target parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -225,7 +305,10 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the event target parameter.
+             * <p>The value of the event target parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;=&quot;value&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -239,7 +322,16 @@ public class ListTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTargetsResponseBody</p>
+     */
     public static class Targets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConcurrentConfig")
+        private ConcurrentConfig concurrentConfig;
+
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
@@ -253,7 +345,7 @@ public class ListTargetsResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        private java.util.List<ParamList> paramList;
 
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
@@ -262,6 +354,7 @@ public class ListTargetsResponseBody extends TeaModel {
         private String type;
 
         private Targets(Builder builder) {
+            this.concurrentConfig = builder.concurrentConfig;
             this.endpoint = builder.endpoint;
             this.errorsTolerance = builder.errorsTolerance;
             this.eventBusName = builder.eventBusName;
@@ -277,6 +370,13 @@ public class ListTargetsResponseBody extends TeaModel {
 
         public static Targets create() {
             return builder().build();
+        }
+
+        /**
+         * @return concurrentConfig
+         */
+        public ConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         /**
@@ -310,7 +410,7 @@ public class ListTargetsResponseBody extends TeaModel {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -329,16 +429,28 @@ public class ListTargetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ConcurrentConfig concurrentConfig; 
             private String endpoint; 
             private String errorsTolerance; 
             private String eventBusName; 
             private String id; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private String ruleName; 
             private String type; 
 
             /**
-             * The endpoint of the event target.
+             * ConcurrentConfig.
+             */
+            public Builder concurrentConfig(ConcurrentConfig concurrentConfig) {
+                this.concurrentConfig = concurrentConfig;
+                return this;
+            }
+
+            /**
+             * <p>The endpoint of the event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:fc:cn-hangzhou:123456789098****:services/guide.LATEST/functions/HelloFC</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -346,7 +458,14 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorsTolerance.
+             * <p>The fault tolerance policy. Valid values: ALL and NONE. </p>
+             * <ul>
+             * <li><strong>ALL</strong>: Fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations. </li>
+             * <li><strong>NONE</strong>: Fault tolerance is not allowed. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder errorsTolerance(String errorsTolerance) {
                 this.errorsTolerance = errorsTolerance;
@@ -354,7 +473,10 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event bus.
+             * <p>The name of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-beijing-one1-tf</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -362,7 +484,10 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event target.
+             * <p>The ID of the event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1453</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -370,15 +495,18 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured for the event target.
+             * <p>The parameters that are configured for the event target.</p>
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
 
             /**
-             * The name of the event rule.
+             * <p>The name of the event rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-uKAK2</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -386,7 +514,10 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event target. For more information, see [Event target parameters](~~183698~~).
+             * <p>The type of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/183698.html">Event target parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs.fc.function</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -400,12 +531,18 @@ public class ListTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTargetsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
-        private java.util.List < Targets> targets;
+        private java.util.List<Targets> targets;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
@@ -434,7 +571,7 @@ public class ListTargetsResponseBody extends TeaModel {
         /**
          * @return targets
          */
-        public java.util.List < Targets> getTargets() {
+        public java.util.List<Targets> getTargets() {
             return this.targets;
         }
 
@@ -447,11 +584,14 @@ public class ListTargetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String nextToken; 
-            private java.util.List < Targets> targets; 
+            private java.util.List<Targets> targets; 
             private Integer total; 
 
             /**
-             * If excess return values exist, this parameter is returned.
+             * <p>If excess return values exist, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -459,15 +599,18 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The event targets.
+             * <p>The event targets.</p>
              */
-            public Builder targets(java.util.List < Targets> targets) {
+            public Builder targets(java.util.List<Targets> targets) {
                 this.targets = targets;
                 return this;
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

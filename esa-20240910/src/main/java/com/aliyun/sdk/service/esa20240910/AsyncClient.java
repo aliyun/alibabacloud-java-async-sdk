@@ -186,6 +186,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateListResponse> createList(CreateListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and other settings, to achieve effective traffic management and optimization.</p>
+     * 
      * @param request the request parameters of CreateLoadBalancer  CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
      */
@@ -460,6 +463,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteListResponse> deleteList(DeleteListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Delete a load balancer by its ID, only one can be deleted at a time.</p>
+     * 
      * @param request the request parameters of DeleteLoadBalancer  DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
      */
@@ -654,6 +660,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePurgeTasksResponse> describePurgeTasks(DescribePurgeTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can only query the status of a package instance after purchasing and creating it.</p>
+     * 
      * @param request the request parameters of DescribeRatePlanInstanceStatus  DescribeRatePlanInstanceStatusRequest
      * @return DescribeRatePlanInstanceStatusResponse
      */
@@ -858,6 +867,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetListResponse> getList(GetListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence policy, routing policy, etc.</p>
+     * 
      * @param request the request parameters of GetLoadBalancer  GetLoadBalancerRequest
      * @return GetLoadBalancerResponse
      */
@@ -1227,6 +1239,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListListsResponse> listLists(ListListsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Query the status of origins under load balancers. You can pass multiple load balancer IDs at once, separated by commas. This is for load balancers that have monitors configured. It will probe the origins in the source address pools used by the load balancers and record the current status of each origin.</p>
+     * <ul>
+     * <li>Healthy(healthy): The probe result is available.</li>
+     * <li>Unhealthy(unhealthy): The probe result is unavailable.</li>
+     * <li>Unknown(unknown): Unknown, the monitor has not yet probed.</li>
+     * <li>Undetected(undetected): The load balancer to which the origin belongs is not bound to a monitor.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListLoadBalancerOriginStatus  ListLoadBalancerOriginStatusRequest
      * @return ListLoadBalancerOriginStatusResponse
      */
@@ -1234,7 +1255,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call an operation to create a traffic steering policy based on the originating country or region for a load balancer, you can use the code of a region or subregion to specify traffic that is sent from the region or subregion.</p>
+     * <p>When creating a load balancer \&quot;based on country/region scheduling\&quot; strategy through OpenAPI, use the code of primary or secondary regions to represent traffic from this geographical area.</p>
      * 
      * @param request the request parameters of ListLoadBalancerRegions  ListLoadBalancerRegionsRequest
      * @return ListLoadBalancerRegionsResponse
@@ -1605,6 +1626,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateListResponse> updateList(UpdateListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence policies, and various advanced settings related to traffic routing. &gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
+     * 
      * @param request the request parameters of UpdateLoadBalancer  UpdateLoadBalancerRequest
      * @return UpdateLoadBalancerResponse
      */

@@ -23,6 +23,10 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
@@ -55,6 +59,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
     private ModifyAccountMaskingPrivilegeRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.DBName = builder.DBName;
         this.expireTime = builder.expireTime;
         this.ownerId = builder.ownerId;
         this.privilege = builder.privilege;
@@ -82,6 +87,13 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
     }
 
     /**
@@ -135,6 +147,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyAccountMaskingPrivilegeRequest, Builder> {
         private String DBInstanceName; 
+        private String DBName; 
         private String expireTime; 
         private String ownerId; 
         private String privilege; 
@@ -150,6 +163,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         private Builder(ModifyAccountMaskingPrivilegeRequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
+            this.DBName = request.DBName;
             this.expireTime = request.expireTime;
             this.ownerId = request.ownerId;
             this.privilege = request.privilege;
@@ -165,6 +179,15 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * DBName.
+         */
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 

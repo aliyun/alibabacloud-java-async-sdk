@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListTaggedResourcesOutput extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("resources")
-    private java.util.List < Resource > resources;
+    private java.util.List<Resource> resources;
 
     private ListTaggedResourcesOutput(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -41,13 +46,13 @@ public class ListTaggedResourcesOutput extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resource > getResources() {
+    public java.util.List<Resource> getResources() {
         return this.resources;
     }
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Resource > resources; 
+        private java.util.List<Resource> resources; 
 
         /**
          * nextToken.
@@ -60,7 +65,7 @@ public class ListTaggedResourcesOutput extends TeaModel {
         /**
          * resources.
          */
-        public Builder resources(java.util.List < Resource > resources) {
+        public Builder resources(java.util.List<Resource> resources) {
             this.resources = resources;
             return this;
         }

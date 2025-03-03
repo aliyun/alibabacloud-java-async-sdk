@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class OSSTriggerConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("events")
-    private java.util.List < String > events;
+    private java.util.List<String> events;
 
     @com.aliyun.core.annotation.NameInMap("filter")
     private Filter filter;
@@ -34,7 +39,7 @@ public class OSSTriggerConfig extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < String > getEvents() {
+    public java.util.List<String> getEvents() {
         return this.events;
     }
 
@@ -46,13 +51,13 @@ public class OSSTriggerConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > events; 
+        private java.util.List<String> events; 
         private Filter filter; 
 
         /**
          * events.
          */
-        public Builder events(java.util.List < String > events) {
+        public Builder events(java.util.List<String> events) {
             this.events = events;
             return this;
         }

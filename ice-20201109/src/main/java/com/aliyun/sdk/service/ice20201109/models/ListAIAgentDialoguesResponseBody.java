@@ -89,8 +89,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Producer")
         private String producer;
 
+        @com.aliyun.core.annotation.NameInMap("ReasoningText")
+        private String reasoningText;
+
         @com.aliyun.core.annotation.NameInMap("RoundId")
         private String roundId;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
 
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -98,12 +104,18 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         private Dialogues(Builder builder) {
             this.dialogueId = builder.dialogueId;
             this.producer = builder.producer;
+            this.reasoningText = builder.reasoningText;
             this.roundId = builder.roundId;
+            this.source = builder.source;
             this.text = builder.text;
             this.time = builder.time;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -129,10 +141,24 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasoningText
+         */
+        public String getReasoningText() {
+            return this.reasoningText;
+        }
+
+        /**
          * @return roundId
          */
         public String getRoundId() {
             return this.roundId;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
         }
 
         /**
@@ -149,12 +175,22 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             return this.time;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String dialogueId; 
             private String producer; 
+            private String reasoningText; 
             private String roundId; 
+            private String source; 
             private String text; 
             private Long time; 
+            private String type; 
 
             /**
              * DialogueId.
@@ -173,10 +209,26 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             }
 
             /**
+             * ReasoningText.
+             */
+            public Builder reasoningText(String reasoningText) {
+                this.reasoningText = reasoningText;
+                return this;
+            }
+
+            /**
              * RoundId.
              */
             public Builder roundId(String roundId) {
                 this.roundId = roundId;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 
@@ -193,6 +245,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
              */
             public Builder time(Long time) {
                 this.time = time;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

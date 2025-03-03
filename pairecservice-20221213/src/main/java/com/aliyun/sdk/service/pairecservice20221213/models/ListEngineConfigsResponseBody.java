@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEngineConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEngineConfigsResponseBody</p>
  */
 public class ListEngineConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EngineConfigs")
-    private java.util.List < EngineConfigs> engineConfigs;
+    private java.util.List<EngineConfigs> engineConfigs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
     /**
      * @return engineConfigs
      */
-    public java.util.List < EngineConfigs> getEngineConfigs() {
+    public java.util.List<EngineConfigs> getEngineConfigs() {
         return this.engineConfigs;
     }
 
@@ -56,14 +62,14 @@ public class ListEngineConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EngineConfigs> engineConfigs; 
+        private java.util.List<EngineConfigs> engineConfigs; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * EngineConfigs.
          */
-        public Builder engineConfigs(java.util.List < EngineConfigs> engineConfigs) {
+        public Builder engineConfigs(java.util.List<EngineConfigs> engineConfigs) {
             this.engineConfigs = engineConfigs;
             return this;
         }
@@ -90,9 +96,18 @@ public class ListEngineConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEngineConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEngineConfigsResponseBody</p>
+     */
     public static class EngineConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
 
         @com.aliyun.core.annotation.NameInMap("EngineConfigId")
         private String engineConfigId;
@@ -120,6 +135,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
 
         private EngineConfigs(Builder builder) {
             this.configValue = builder.configValue;
+            this.description = builder.description;
             this.engineConfigId = builder.engineConfigId;
             this.environment = builder.environment;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -143,6 +159,13 @@ public class ListEngineConfigsResponseBody extends TeaModel {
          */
         public String getConfigValue() {
             return this.configValue;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -203,6 +226,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String configValue; 
+            private String description; 
             private String engineConfigId; 
             private String environment; 
             private String gmtCreateTime; 
@@ -217,6 +241,14 @@ public class ListEngineConfigsResponseBody extends TeaModel {
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

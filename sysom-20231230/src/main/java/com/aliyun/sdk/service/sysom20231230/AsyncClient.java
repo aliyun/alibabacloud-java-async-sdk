@@ -244,6 +244,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListInstancesEcsInfoList  ListInstancesEcsInfoListRequest
+     * @return ListInstancesEcsInfoListResponse
+     */
+    CompletableFuture<ListInstancesEcsInfoListResponse> listInstancesEcsInfoList(ListInstancesEcsInfoListRequest request);
+
+    /**
+     * @param request the request parameters of ListInstancesWithEcsInfo  ListInstancesWithEcsInfoRequest
+     * @return ListInstancesWithEcsInfoResponse
+     */
+    CompletableFuture<ListInstancesWithEcsInfoResponse> listInstancesWithEcsInfo(ListInstancesWithEcsInfoRequest request);
+
+    /**
+     * @param request the request parameters of ListPluginsInstances  ListPluginsInstancesRequest
+     * @return ListPluginsInstancesResponse
+     */
+    CompletableFuture<ListPluginsInstancesResponse> listPluginsInstances(ListPluginsInstancesRequest request);
+
+    /**
      * @param request the request parameters of ListPodsOfInstance  ListPodsOfInstanceRequest
      * @return ListPodsOfInstanceResponse
      */

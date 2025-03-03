@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
-    private java.util.List < ResourceTypes> resourceTypes;
+    private java.util.List<ResourceTypes> resourceTypes;
 
     private ListResourceTypesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListResourceTypesResponseBody extends TeaModel {
     /**
      * @return resourceTypes
      */
-    public java.util.List < ResourceTypes> getResourceTypes() {
+    public java.util.List<ResourceTypes> getResourceTypes() {
         return this.resourceTypes;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceTypes> resourceTypes; 
+        private java.util.List<ResourceTypes> resourceTypes; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * <p>The information about the resource types.</p>
          */
-        public Builder resourceTypes(java.util.List < ResourceTypes> resourceTypes) {
+        public Builder resourceTypes(java.util.List<ResourceTypes> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
@@ -148,17 +153,17 @@ public class ListResourceTypesResponseBody extends TeaModel {
      * <p>ListResourceTypesResponseBody</p>
      */
     public static class ResourceTypes extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Authorized")
-        private Boolean authorized;
-
         @com.aliyun.core.annotation.NameInMap("CodeMapping")
         private CodeMapping codeMapping;
 
         @com.aliyun.core.annotation.NameInMap("FilterKeys")
-        private java.util.List < String > filterKeys;
+        private java.util.List<String> filterKeys;
 
         @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
+
+        @com.aliyun.core.annotation.NameInMap("RelatedResourceTypes")
+        private java.util.List<String> relatedResourceTypes;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -167,10 +172,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private String resourceTypeName;
 
         private ResourceTypes(Builder builder) {
-            this.authorized = builder.authorized;
             this.codeMapping = builder.codeMapping;
             this.filterKeys = builder.filterKeys;
             this.productName = builder.productName;
+            this.relatedResourceTypes = builder.relatedResourceTypes;
             this.resourceType = builder.resourceType;
             this.resourceTypeName = builder.resourceTypeName;
         }
@@ -184,13 +189,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * @return authorized
-         */
-        public Boolean getAuthorized() {
-            return this.authorized;
-        }
-
-        /**
          * @return codeMapping
          */
         public CodeMapping getCodeMapping() {
@@ -200,7 +198,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return filterKeys
          */
-        public java.util.List < String > getFilterKeys() {
+        public java.util.List<String> getFilterKeys() {
             return this.filterKeys;
         }
 
@@ -209,6 +207,13 @@ public class ListResourceTypesResponseBody extends TeaModel {
          */
         public String getProductName() {
             return this.productName;
+        }
+
+        /**
+         * @return relatedResourceTypes
+         */
+        public java.util.List<String> getRelatedResourceTypes() {
+            return this.relatedResourceTypes;
         }
 
         /**
@@ -226,20 +231,12 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Boolean authorized; 
             private CodeMapping codeMapping; 
-            private java.util.List < String > filterKeys; 
+            private java.util.List<String> filterKeys; 
             private String productName; 
+            private java.util.List<String> relatedResourceTypes; 
             private String resourceType; 
             private String resourceTypeName; 
-
-            /**
-             * Authorized.
-             */
-            public Builder authorized(Boolean authorized) {
-                this.authorized = authorized;
-                return this;
-            }
 
             /**
              * CodeMapping.
@@ -252,7 +249,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             /**
              * <p>The supported filter conditions.</p>
              */
-            public Builder filterKeys(java.util.List < String > filterKeys) {
+            public Builder filterKeys(java.util.List<String> filterKeys) {
                 this.filterKeys = filterKeys;
                 return this;
             }
@@ -265,6 +262,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
              */
             public Builder productName(String productName) {
                 this.productName = productName;
+                return this;
+            }
+
+            /**
+             * RelatedResourceTypes.
+             */
+            public Builder relatedResourceTypes(java.util.List<String> relatedResourceTypes) {
+                this.relatedResourceTypes = relatedResourceTypes;
                 return this;
             }
 

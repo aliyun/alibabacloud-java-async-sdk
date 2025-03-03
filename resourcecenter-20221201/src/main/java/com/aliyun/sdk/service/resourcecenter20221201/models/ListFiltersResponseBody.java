@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListFiltersResponseBody extends TeaModel {
     private String defaultFilterName;
 
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListFiltersResponseBody extends TeaModel {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -58,11 +63,14 @@ public class ListFiltersResponseBody extends TeaModel {
 
     public static final class Builder {
         private String defaultFilterName; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private String requestId; 
 
         /**
          * <p>The name of the default filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My Filters</p>
          */
         public Builder defaultFilterName(String defaultFilterName) {
             this.defaultFilterName = defaultFilterName;
@@ -72,7 +80,7 @@ public class ListFiltersResponseBody extends TeaModel {
         /**
          * <p>The configurations of the filter.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.filters = filters;
             return this;
         }
@@ -162,6 +170,9 @@ public class ListFiltersResponseBody extends TeaModel {
 
             /**
              * <p>The name of the filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My devices</p>
              */
             public Builder filterName(String filterName) {
                 this.filterName = filterName;

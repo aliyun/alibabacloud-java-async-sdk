@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncFeatureConsistencyCheckJobReplayLogRequest} extends {@link RequestModel}
  *
  * <p>SyncFeatureConsistencyCheckJobReplayLogRequest</p>
@@ -212,7 +218,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * ContextFeatures.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Value&quot;:{&quot;FloatFeature&quot;:0.1}}]</p>
          */
         public Builder contextFeatures(String contextFeatures) {
             this.putBodyParameter("ContextFeatures", contextFeatures);
@@ -221,7 +230,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * FeatureConsistencyCheckJobConfigId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder featureConsistencyCheckJobConfigId(String featureConsistencyCheckJobConfigId) {
             this.putBodyParameter("FeatureConsistencyCheckJobConfigId", featureConsistencyCheckJobConfigId);
@@ -230,7 +242,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * GeneratedFeatures.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>week_day:1 | userid:3 | itemid:9001 | cate:cat1 | click_5_seq__cate:cat1</p>
          */
         public Builder generatedFeatures(String generatedFeatures) {
             this.putBodyParameter("GeneratedFeatures", generatedFeatures);
@@ -239,7 +254,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -248,7 +266,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * LogItemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9010</p>
          */
         public Builder logItemId(String logItemId) {
             this.putBodyParameter("LogItemId", logItemId);
@@ -257,7 +278,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * LogRequestId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder logRequestId(String logRequestId) {
             this.putBodyParameter("LogRequestId", logRequestId);
@@ -266,7 +290,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * LogRequestTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1693900981465</p>
          */
         public Builder logRequestTime(Long logRequestTime) {
             this.putBodyParameter("LogRequestTime", logRequestTime);
@@ -275,7 +302,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * LogUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010</p>
          */
         public Builder logUserId(String logUserId) {
             this.putBodyParameter("LogUserId", logUserId);
@@ -284,7 +314,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * RawFeatures.
+         * <p>This parameter is required.</p>
          */
         public Builder rawFeatures(String rawFeatures) {
             this.putBodyParameter("RawFeatures", rawFeatures);
@@ -293,7 +323,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends Request {
         }
 
         /**
-         * SceneName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video-feed</p>
          */
         public Builder sceneName(String sceneName) {
             this.putBodyParameter("SceneName", sceneName);

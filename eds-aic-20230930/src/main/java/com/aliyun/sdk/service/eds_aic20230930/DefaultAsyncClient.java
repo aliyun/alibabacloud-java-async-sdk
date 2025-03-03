@@ -40,6 +40,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</p>
+     * <ul>
+     * <li>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the ~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AttachKeyPair  AttachKeyPairRequest
      * @return AttachKeyPairResponse
      */
@@ -242,6 +248,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</p>
+     * 
      * @param request the request parameters of CreateScreenshot  CreateScreenshotRequest
      * @return CreateScreenshotResponse
      */
@@ -528,6 +537,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</p>
+     * <ul>
+     * <li>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</li>
+     * <li>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
+     * <strong>Example</strong>
+     * Assume you restart two cloud phone instances with the instance IDs acp-25nt4kk9whhok\<em>\</em>\<em>\</em> and acp-j2taq887orj8l\<em>\</em>\<em>\</em>, and the returned request ID is B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you want to check the operation outcomes of the two cloud phone instances, you can call the DescribeTasks operation. You need to set the InvokeId request parameter to B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you only want to check the cloud phone instance with the ID acp-25nt4kk9whhok\<em>\</em>\<em>\</em>, you must set the ParentTaskId request parameter to the ID of the batch task and the AndroidInstanceId request parameter to acp-25nt4kk9whhok\<em>\</em>\<em>\</em> when calling the DescribeTasks operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeTasks  DescribeTasksRequest
      * @return DescribeTasksResponse
      */
@@ -546,6 +564,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  After you detach an ADB key pair from a cloud phone instance, the ADB connection will fail. This occurs because the system can no longer authenticate using a valid ADB public key, leading to authentication errors.</p>
+     * 
      * @param request the request parameters of DetachKeyPair  DetachKeyPairRequest
      * @return DetachKeyPairResponse
      */
@@ -564,6 +585,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisconnectAndroidInstance  DisconnectAndroidInstanceRequest
+     * @return DisconnectAndroidInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DisconnectAndroidInstanceResponse> disconnectAndroidInstance(DisconnectAndroidInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisconnectAndroidInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisconnectAndroidInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisconnectAndroidInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After you distribute an image in supported regions, the distribution cannot be canceled.</p>
+     * 
      * @param request the request parameters of DistributeImage  DistributeImageRequest
      * @return DistributeImageResponse
      */
@@ -582,6 +624,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation only allows you to scale down an instance group.</p>
+     * 
      * @param request the request parameters of DowngradeAndroidInstanceGroup  DowngradeAndroidInstanceGroupRequest
      * @return DowngradeAndroidInstanceGroupResponse
      */
@@ -600,6 +645,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EndCoordination  EndCoordinationRequest
+     * @return EndCoordinationResponse
+     */
+    @Override
+    public CompletableFuture<EndCoordinationResponse> endCoordination(EndCoordinationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EndCoordination").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EndCoordinationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EndCoordinationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</p>
+     * 
      * @param request the request parameters of FetchFile  FetchFileRequest
      * @return FetchFileResponse
      */
@@ -618,6 +684,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateCoordinationCode  GenerateCoordinationCodeRequest
+     * @return GenerateCoordinationCodeResponse
+     */
+    @Override
+    public CompletableFuture<GenerateCoordinationCodeResponse> generateCoordinationCode(GenerateCoordinationCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateCoordinationCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateCoordinationCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateCoordinationCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>To avoid authorization errors that could cause ADB connection failures, you must import the public key of an ADB key pair.</p>
+     * 
      * @param request the request parameters of ImportKeyPair  ImportKeyPairRequest
      * @return ImportKeyPairResponse
      */
@@ -636,6 +723,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</p>
+     * 
      * @param request the request parameters of InstallApp  InstallAppRequest
      * @return InstallAppResponse
      */
@@ -780,6 +870,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you restart a cloud phone instance, make sure it is in one of the following states: <strong>Available, Abnormal, Backup failure, and Restoration failure</strong>.</p>
+     * 
      * @param request the request parameters of RebootAndroidInstancesInGroup  RebootAndroidInstancesInGroupRequest
      * @return RebootAndroidInstancesInGroupResponse
      */
@@ -837,6 +930,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you reset a cloud phone instance, make sure it is in one of the following states: <strong>Available, Stopped, Abnormal, Backup failure, and Restoration failure</strong>.</p>
+     * 
      * @param request the request parameters of ResetAndroidInstancesInGroup  ResetAndroidInstancesInGroupRequest
      * @return ResetAndroidInstancesInGroupResponse
      */
@@ -873,6 +969,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</p>
+     * 
      * @param request the request parameters of SendFile  SendFileRequest
      * @return SendFileResponse
      */
@@ -891,6 +990,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</p>
+     * 
      * @param request the request parameters of SetAdbSecure  SetAdbSecureRequest
      * @return SetAdbSecureResponse
      */
@@ -930,6 +1032,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you stop a cloud phone instance, make sure it is in one of the following states: <strong>Available, Backup failure, and Restoration failure</strong>.</p>
+     * 
      * @param request the request parameters of StopAndroidInstance  StopAndroidInstanceRequest
      * @return StopAndroidInstanceResponse
      */
@@ -984,6 +1089,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure the image is in the Available state and the region of the image is included in the region list of the desired instance group. In addition, the instance group itself is available.</p>
+     * 
      * @param request the request parameters of UpdateInstanceGroupImage  UpdateInstanceGroupImageRequest
      * @return UpdateInstanceGroupImageResponse
      */

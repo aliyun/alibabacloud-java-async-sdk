@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceRuleItemRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceRuleItemRequest</p>
@@ -157,7 +163,7 @@ public class CreateResourceRuleItemRequest extends Request {
         } 
 
         /**
-         * ResourceRuleId.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceRuleId(String resourceRuleId) {
             this.putPathParameter("ResourceRuleId", resourceRuleId);
@@ -184,7 +190,7 @@ public class CreateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -193,7 +199,7 @@ public class CreateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * MaxValue.
+         * <p>This parameter is required.</p>
          */
         public Builder maxValue(Double maxValue) {
             this.putBodyParameter("MaxValue", maxValue);
@@ -202,7 +208,7 @@ public class CreateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * MinValue.
+         * <p>This parameter is required.</p>
          */
         public Builder minValue(Double minValue) {
             this.putBodyParameter("MinValue", minValue);
@@ -211,7 +217,7 @@ public class CreateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -220,7 +226,7 @@ public class CreateResourceRuleItemRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>This parameter is required.</p>
          */
         public Builder value(Double value) {
             this.putBodyParameter("Value", value);

@@ -233,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAutoSnapshotPolicyResponse> createAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateBandwidthResourcePackages  CreateBandwidthResourcePackagesRequest
+     * @return CreateBandwidthResourcePackagesResponse
+     */
+    CompletableFuture<CreateBandwidthResourcePackagesResponse> createBandwidthResourcePackages(CreateBandwidthResourcePackagesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</p>
      * 
@@ -352,7 +358,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * @param request the request parameters of CreatePolicyGroup  CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -513,6 +519,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteOfficeSitesResponse> deleteOfficeSites(DeleteOfficeSitesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</p>
+     * <ul>
+     * <li>You cannot delete the cloud computer policies that are associated with cloud computers.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeletePolicyGroups  DeletePolicyGroupsRequest
      * @return DeletePolicyGroupsResponse
      */
@@ -1279,7 +1291,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The cloud desktops that you want to restart by calling this operation must be in the Running state.</p>
+     * <p>The cloud computers for which you want to change their policies must be in the Running state.</p>
      * 
      * @param request the request parameters of ModifyDesktopsPolicyGroup  ModifyDesktopsPolicyGroupRequest
      * @return ModifyDesktopsPolicyGroupResponse
@@ -1390,6 +1402,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyOfficeSiteCrossDesktopAccessResponse
      */
     CompletableFuture<ModifyOfficeSiteCrossDesktopAccessResponse> modifyOfficeSiteCrossDesktopAccess(ModifyOfficeSiteCrossDesktopAccessRequest request);
+
+    /**
+     * @param request the request parameters of ModifyOfficeSiteDnsInfo  ModifyOfficeSiteDnsInfoRequest
+     * @return ModifyOfficeSiteDnsInfoResponse
+     */
+    CompletableFuture<ModifyOfficeSiteDnsInfoResponse> modifyOfficeSiteDnsInfo(ModifyOfficeSiteDnsInfoRequest request);
 
     /**
      * @param request the request parameters of ModifyOfficeSiteMfaEnabled  ModifyOfficeSiteMfaEnabledRequest

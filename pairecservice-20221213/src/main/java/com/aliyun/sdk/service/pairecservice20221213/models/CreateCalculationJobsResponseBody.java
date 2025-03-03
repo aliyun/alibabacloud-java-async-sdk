@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCalculationJobsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCalculationJobsResponseBody</p>
  */
 public class CreateCalculationJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CalculationJobIds")
-    private java.util.List < String > calculationJobIds;
+    private java.util.List<String> calculationJobIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
     /**
      * @return calculationJobIds
      */
-    public java.util.List < String > getCalculationJobIds() {
+    public java.util.List<String> getCalculationJobIds() {
         return this.calculationJobIds;
     }
 
@@ -45,13 +51,13 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > calculationJobIds; 
+        private java.util.List<String> calculationJobIds; 
         private String requestId; 
 
         /**
          * CalculationJobIds.
          */
-        public Builder calculationJobIds(java.util.List < String > calculationJobIds) {
+        public Builder calculationJobIds(java.util.List<String> calculationJobIds) {
             this.calculationJobIds = calculationJobIds;
             return this;
         }

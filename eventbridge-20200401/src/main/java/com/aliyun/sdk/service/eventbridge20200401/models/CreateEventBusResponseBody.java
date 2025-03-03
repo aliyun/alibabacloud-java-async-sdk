@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateEventBusResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEventBusResponseBody</p>
@@ -85,7 +91,10 @@ public class CreateEventBusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+         * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +102,7 @@ public class CreateEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +110,10 @@ public class CreateEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The event bus [xxxx] not existed!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class CreateEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A995F07C-E503-5881-9962-9CECA8566876</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class CreateEventBusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. The value true indicates that the request is successful.
+         * <p>Indicates whether the request is successful. The value true indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +148,12 @@ public class CreateEventBusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEventBusResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateEventBusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventBusARN")
         private String eventBusARN;
@@ -157,7 +181,10 @@ public class CreateEventBusResponseBody extends TeaModel {
             private String eventBusARN; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the event bus.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:123456789098****:eventbus/MyEventBus</p>
              */
             public Builder eventBusARN(String eventBusARN) {
                 this.eventBusARN = eventBusARN;

@@ -258,7 +258,10 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoRuleName</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -283,7 +286,10 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the protection rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test221</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

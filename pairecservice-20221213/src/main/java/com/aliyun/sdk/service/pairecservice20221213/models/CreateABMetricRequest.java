@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateABMetricRequest} extends {@link RequestModel}
  *
  * <p>CreateABMetricRequest</p>
@@ -252,7 +258,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * Definition.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sum(click_cnt)</p>
          */
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
@@ -261,7 +270,7 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -270,7 +279,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -288,7 +300,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -306,7 +321,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * Realtime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder realtime(Boolean realtime) {
             this.putBodyParameter("Realtime", realtime);
@@ -333,7 +351,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -351,7 +372,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * TableMetaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.putBodyParameter("TableMetaId", tableMetaId);
@@ -360,7 +384,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

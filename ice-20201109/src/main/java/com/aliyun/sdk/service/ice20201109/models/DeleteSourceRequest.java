@@ -104,7 +104,10 @@ public class DeleteSourceRequest extends Request {
         } 
 
         /**
-         * SoftDelete.
+         * <p>Specifies whether to use delete markers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder softDelete(Boolean softDelete) {
             this.putQueryParameter("SoftDelete", softDelete);
@@ -113,6 +116,7 @@ public class DeleteSourceRequest extends Request {
         }
 
         /**
+         * <p>The name of the source location.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class DeleteSourceRequest extends Request {
         }
 
         /**
+         * <p>The name of the source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class DeleteSourceRequest extends Request {
         }
 
         /**
+         * <p>The source type. Valid values: vodSource and liveSource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExecutionHistoryRequest} extends {@link RequestModel}
  *
  * <p>GetExecutionHistoryRequest</p>
  */
 public class GetExecutionHistoryRequest extends Request {
-    @Query
-    @NameInMap("ExecutionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionName;
 
-    @Query
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private GetExecutionHistoryRequest(Builder builder) {
@@ -98,13 +103,11 @@ public class GetExecutionHistoryRequest extends Request {
         } 
 
         /**
-         * The name of the execution, which is unique within a flow. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the execution.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>exec</p>
          */
         public Builder executionName(String executionName) {
             this.putQueryParameter("ExecutionName", executionName);
@@ -113,13 +116,11 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
-         * <p>
+         * <p>The name of the workflow.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -128,7 +129,10 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * The maximum number of steps to be queried. Valid values: 1 to 1000.
+         * <p>The number of workflows that you want to query. Valid values: 1-999. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -137,7 +141,10 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * The name of the event to start the query. You can obtain the value from the response data.
+         * <p>The name of the event to start the query. You can obtain the value from the response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

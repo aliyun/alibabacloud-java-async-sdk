@@ -53,6 +53,9 @@ public class WafRuleConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RateLimit")
     private RateLimit rateLimit;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityLevel")
+    private SecurityLevel securityLevel;
+
     @com.aliyun.core.annotation.NameInMap("Sigchl")
     private java.util.List<String> sigchl;
 
@@ -81,6 +84,7 @@ public class WafRuleConfig extends TeaModel {
         this.name = builder.name;
         this.notes = builder.notes;
         this.rateLimit = builder.rateLimit;
+        this.securityLevel = builder.securityLevel;
         this.sigchl = builder.sigchl;
         this.status = builder.status;
         this.timer = builder.timer;
@@ -181,6 +185,13 @@ public class WafRuleConfig extends TeaModel {
     }
 
     /**
+     * @return securityLevel
+     */
+    public SecurityLevel getSecurityLevel() {
+        return this.securityLevel;
+    }
+
+    /**
      * @return sigchl
      */
     public java.util.List<String> getSigchl() {
@@ -228,6 +239,7 @@ public class WafRuleConfig extends TeaModel {
         private String name; 
         private String notes; 
         private RateLimit rateLimit; 
+        private SecurityLevel securityLevel; 
         private java.util.List<String> sigchl; 
         private String status; 
         private WafTimer timer; 
@@ -327,6 +339,14 @@ public class WafRuleConfig extends TeaModel {
          */
         public Builder rateLimit(RateLimit rateLimit) {
             this.rateLimit = rateLimit;
+            return this;
+        }
+
+        /**
+         * SecurityLevel.
+         */
+        public Builder securityLevel(SecurityLevel securityLevel) {
+            this.securityLevel = securityLevel;
             return this;
         }
 
@@ -1475,6 +1495,53 @@ public class WafRuleConfig extends TeaModel {
 
             public RateLimit build() {
                 return new RateLimit(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link WafRuleConfig} extends {@link TeaModel}
+     *
+     * <p>WafRuleConfig</p>
+     */
+    public static class SecurityLevel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SecurityLevel(Builder builder) {
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityLevel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String value; 
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityLevel build() {
+                return new SecurityLevel(this);
             } 
 
         } 

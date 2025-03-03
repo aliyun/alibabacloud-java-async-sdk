@@ -55,7 +55,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Asset.
+         * <p>The information about the asset.</p>
          */
         public Builder asset(Asset asset) {
             this.asset = asset;
@@ -63,7 +63,10 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +136,10 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * ConfigurationName.
+             * <p>The name of the packaging configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hls_3s</p>
              */
             public Builder configurationName(String configurationName) {
                 this.configurationName = configurationName;
@@ -141,7 +147,15 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The asset status. Valid values:</p>
+             * <ul>
+             * <li>Queuing: The asset is waiting for packaging.</li>
+             * <li>Playable: The asset is packaged and playable.</li>
+             * <li>Failed: The asset fails to be packaged.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Playable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -149,7 +163,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The playback URL. If the asset fails to be packaged, no playback URL is returned.</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -208,7 +222,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The URL of the media file. Only M3U8 files stored in OSS are supported.</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -216,7 +230,10 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The input type. Only Object Storage Service (OSS) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -323,7 +340,10 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             private Input input; 
 
             /**
-             * AssetName.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30min_movie</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -331,7 +351,10 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * ContentId.
+             * <p>The content ID in the DRM system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>movie</p>
              */
             public Builder contentId(String contentId) {
                 this.contentId = contentId;
@@ -339,7 +362,10 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the asset was created. It follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-21T06:45:32Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -347,7 +373,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * EgressEndpoints.
+             * <p>The egress endpoints, each corresponding to a packaging configuration.</p>
              */
             public Builder egressEndpoints(java.util.List<EgressEndpoints> egressEndpoints) {
                 this.egressEndpoints = egressEndpoints;
@@ -355,7 +381,10 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the packaging group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vod_hls</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -363,7 +392,7 @@ public class GetVodPackagingAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The asset input configurations.</p>
              */
             public Builder input(Input input) {
                 this.input = input;

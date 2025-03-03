@@ -131,6 +131,7 @@ public class ListLivePackageOriginEndpointsRequest extends Request {
         } 
 
         /**
+         * <p>The channel name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class ListLivePackageOriginEndpointsRequest extends Request {
         }
 
         /**
+         * <p>The channel group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class ListLivePackageOriginEndpointsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The endpoint name or description. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>endpoint-</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -164,7 +169,10 @@ public class ListLivePackageOriginEndpointsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -173,7 +181,10 @@ public class ListLivePackageOriginEndpointsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -182,7 +193,10 @@ public class ListLivePackageOriginEndpointsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort order by creation time. Valid values: asc and desc (default).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLayersResponseBody} extends {@link TeaModel}
  *
  * <p>ListLayersResponseBody</p>
  */
 public class ListLayersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Layers")
-    private java.util.List < Layers> layers;
+    private java.util.List<Layers> layers;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListLayersResponseBody extends TeaModel {
     /**
      * @return layers
      */
-    public java.util.List < Layers> getLayers() {
+    public java.util.List<Layers> getLayers() {
         return this.layers;
     }
 
@@ -56,20 +62,23 @@ public class ListLayersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Layers> layers; 
+        private java.util.List<Layers> layers; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Layers.
          */
-        public Builder layers(java.util.List < Layers> layers) {
+        public Builder layers(java.util.List<Layers> layers) {
             this.layers = layers;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>518C64F6-DFF7-11ED-85B0-00163E14B3D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +99,12 @@ public class ListLayersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLayersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLayersResponseBody</p>
+     */
     public static class Layers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;

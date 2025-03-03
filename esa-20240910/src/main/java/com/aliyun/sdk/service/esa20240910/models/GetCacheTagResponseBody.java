@@ -79,10 +79,10 @@ public class GetCacheTagResponseBody extends TeaModel {
         private String tagName; 
 
         /**
-         * <p>Indicates whether the matching is not case-sensitive. Valid values:</p>
+         * <p>Whether to ignore case. Possible values:</p>
          * <ul>
-         * <li>on: The matching is not case-sensitive.</li>
-         * <li>off: The matching is case-sensitive.</li>
+         * <li>on: Enabled, ignores case.</li>
+         * <li>off: Disabled, does not ignore case.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class GetCacheTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -105,7 +105,7 @@ public class GetCacheTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the website.</p>
+         * <p>Version number of the site.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -116,7 +116,7 @@ public class GetCacheTagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the custom cache tag.</p>
+         * <p>Custom CacheTag name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

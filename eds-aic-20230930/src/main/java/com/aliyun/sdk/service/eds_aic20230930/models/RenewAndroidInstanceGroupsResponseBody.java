@@ -55,7 +55,10 @@ public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22326560487****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -63,7 +66,10 @@ public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B886792-2051-5DB4-8AE6-C8E45D3B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

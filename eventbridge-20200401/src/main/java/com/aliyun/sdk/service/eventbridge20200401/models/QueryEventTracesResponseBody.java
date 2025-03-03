@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link QueryEventTracesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEventTracesResponseBody</p>
@@ -15,7 +21,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -52,7 +58,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +85,18 @@ public class QueryEventTracesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code returned. The status code 200 indicates that the request was successful.
+         * <p>The response code. Valid values:</p>
+         * <p>200: The request was successful.</p>
+         * <p>Other codes: The request failed. For information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,15 +104,18 @@ public class QueryEventTracesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the event source.
+         * <p>The name of the event source.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error message that is returned if the request failed.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventBusNotExist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +123,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB934571-1F5A-5E17-91DD-E2BC3E1BFBFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +134,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +150,12 @@ public class QueryEventTracesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEventTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEventTracesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -289,7 +315,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             private String ruleName; 
 
             /**
-             * The type of the event trace. Valid values: PutEvent: a delivery event. FilterEvent: a filtering event. PushEvent: a pushing event.
+             * <p>The type of the event trace. Valid values: PutEvent, FilterEvent, and PushEvent. The value PutEvent indicates that the event was delivered. The value FilterEvent indicates that the event was filtered. The value PushEvent indicates that the event was pushed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PutEvent</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -297,7 +326,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution time of the event trace.
+             * <p>The execution time of the event trace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659495343896</p>
              */
             public Builder actionTime(Long actionTime) {
                 this.actionTime = actionTime;
@@ -305,7 +337,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the event target. This parameter is returned if the value of the Action parameter is PushEvent.
+             * <p>The endpoint of the event target. This parameter is returned only if Action is set to PushEvent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-zhangjiakou:123456789098****:queues/testQueue</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -313,7 +348,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event bus.
+             * <p>The name of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -321,7 +359,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a5747e4f-2af2-40b6-b262-d0140e995bf7</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -329,7 +370,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event source.
+             * <p>The name of the event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cert-api</p>
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -337,7 +381,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery delay of the event target. This parameter is returned if the value of the Action parameter is PushEvent.
+             * <p>The delay period for which the event was delivered to the event target. This parameter is returned only if Action is set to PushEvent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder notifyLatency(String notifyLatency) {
                 this.notifyLatency = notifyLatency;
@@ -345,7 +392,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The event target delivery status.
+             * <p>The delivery status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[200]Ok</p>
              */
             public Builder notifyStatus(String notifyStatus) {
                 this.notifyStatus = notifyStatus;
@@ -353,7 +403,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery time of the event target. This parameter is returned if the value of the Action parameter is PushEvent.
+             * <p>The time when the event was delivered to the event target. This parameter is returned only if Action is set to PushEvent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659495343896</p>
              */
             public Builder notifyTime(Long notifyTime) {
                 this.notifyTime = notifyTime;
@@ -361,7 +414,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was delivered to the event bus. This parameter is returned if the value of the Action parameter is PutEvent.
+             * <p>The time when the event was delivered to the event bus. This parameter is returned only if Action is set to PutEvent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659495343896</p>
              */
             public Builder receivedTime(Long receivedTime) {
                 this.receivedTime = receivedTime;
@@ -369,7 +425,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event rule was matched. This parameter is returned if the value of the Action parameter is FilterEvent.
+             * <p>The time when the event rule was matched. This parameter is returned only if Action is set to FilterEvent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1659495343896</p>
              */
             public Builder ruleMatchingTime(String ruleMatchingTime) {
                 this.ruleMatchingTime = ruleMatchingTime;
@@ -377,7 +436,10 @@ public class QueryEventTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event rule.
+             * <p>The name of the event rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ramrolechange-mns</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

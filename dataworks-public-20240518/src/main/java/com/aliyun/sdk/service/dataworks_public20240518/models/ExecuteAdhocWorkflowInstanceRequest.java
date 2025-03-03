@@ -157,7 +157,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * <p>业务日期。</p>
+         * <p>The data timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -398,7 +398,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The value of the variable. You must configure this parameter in the <code>The ancestor output: The output variable name of the ancestor task</code> format.</p>
              * 
              * <strong>example:</strong>
              * <p>Value1</p>
@@ -580,7 +580,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * <p>The type of the variable. Valid values:</p>
+             * <p>The type. Valid values:</p>
              * <ul>
              * <li>System</li>
              * <li>Constant</li>

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFeatureConsistencyCheckJobConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateFeatureConsistencyCheckJobConfigRequest</p>
@@ -19,6 +25,30 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("CompareFeature")
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean compareFeature;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetId")
+    private String datasetId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetMountPath")
+    private String datasetMountPath;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetName")
+    private String datasetName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetType")
+    private String datasetType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetUri")
+    private String datasetUri;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DefaultRoute")
+    private String defaultRoute;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EasServiceName")
@@ -115,6 +145,18 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     private String ossResourceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PredictWorkerCount")
+    private Integer predictWorkerCount;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PredictWorkerCpu")
+    private Integer predictWorkerCpu;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PredictWorkerMemory")
+    private Integer predictWorkerMemory;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SampleRate")
     @com.aliyun.core.annotation.Validation(required = true)
     private Double sampleRate;
@@ -125,9 +167,17 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     private String sceneId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ServiceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SwitchId")
+    private String switchId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UseFeatureStore")
@@ -151,13 +201,27 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     private String userTablePartitionFieldFormat;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkflowName")
     private String workflowName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
 
     private CreateFeatureConsistencyCheckJobConfigRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.compareFeature = builder.compareFeature;
+        this.datasetId = builder.datasetId;
+        this.datasetMountPath = builder.datasetMountPath;
+        this.datasetName = builder.datasetName;
+        this.datasetType = builder.datasetType;
+        this.datasetUri = builder.datasetUri;
+        this.defaultRoute = builder.defaultRoute;
         this.easServiceName = builder.easServiceName;
         this.easyRecPackagePath = builder.easyRecPackagePath;
         this.easyRecVersion = builder.easyRecVersion;
@@ -180,15 +244,22 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         this.itemTablePartitionFieldFormat = builder.itemTablePartitionFieldFormat;
         this.name = builder.name;
         this.ossResourceId = builder.ossResourceId;
+        this.predictWorkerCount = builder.predictWorkerCount;
+        this.predictWorkerCpu = builder.predictWorkerCpu;
+        this.predictWorkerMemory = builder.predictWorkerMemory;
         this.sampleRate = builder.sampleRate;
         this.sceneId = builder.sceneId;
+        this.securityGroupId = builder.securityGroupId;
         this.serviceId = builder.serviceId;
+        this.switchId = builder.switchId;
         this.useFeatureStore = builder.useFeatureStore;
         this.userIdField = builder.userIdField;
         this.userTable = builder.userTable;
         this.userTablePartitionField = builder.userTablePartitionField;
         this.userTablePartitionFieldFormat = builder.userTablePartitionFieldFormat;
+        this.vpcId = builder.vpcId;
         this.workflowName = builder.workflowName;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -216,6 +287,48 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
      */
     public Boolean getCompareFeature() {
         return this.compareFeature;
+    }
+
+    /**
+     * @return datasetId
+     */
+    public String getDatasetId() {
+        return this.datasetId;
+    }
+
+    /**
+     * @return datasetMountPath
+     */
+    public String getDatasetMountPath() {
+        return this.datasetMountPath;
+    }
+
+    /**
+     * @return datasetName
+     */
+    public String getDatasetName() {
+        return this.datasetName;
+    }
+
+    /**
+     * @return datasetType
+     */
+    public String getDatasetType() {
+        return this.datasetType;
+    }
+
+    /**
+     * @return datasetUri
+     */
+    public String getDatasetUri() {
+        return this.datasetUri;
+    }
+
+    /**
+     * @return defaultRoute
+     */
+    public String getDefaultRoute() {
+        return this.defaultRoute;
     }
 
     /**
@@ -373,6 +486,27 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return predictWorkerCount
+     */
+    public Integer getPredictWorkerCount() {
+        return this.predictWorkerCount;
+    }
+
+    /**
+     * @return predictWorkerCpu
+     */
+    public Integer getPredictWorkerCpu() {
+        return this.predictWorkerCpu;
+    }
+
+    /**
+     * @return predictWorkerMemory
+     */
+    public Integer getPredictWorkerMemory() {
+        return this.predictWorkerMemory;
+    }
+
+    /**
      * @return sampleRate
      */
     public Double getSampleRate() {
@@ -387,10 +521,24 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    /**
+     * @return switchId
+     */
+    public String getSwitchId() {
+        return this.switchId;
     }
 
     /**
@@ -429,15 +577,35 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
      * @return workflowName
      */
     public String getWorkflowName() {
         return this.workflowName;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<CreateFeatureConsistencyCheckJobConfigRequest, Builder> {
         private String regionId; 
         private Boolean compareFeature; 
+        private String datasetId; 
+        private String datasetMountPath; 
+        private String datasetName; 
+        private String datasetType; 
+        private String datasetUri; 
+        private String defaultRoute; 
         private String easServiceName; 
         private String easyRecPackagePath; 
         private String easyRecVersion; 
@@ -460,15 +628,22 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         private String itemTablePartitionFieldFormat; 
         private String name; 
         private String ossResourceId; 
+        private Integer predictWorkerCount; 
+        private Integer predictWorkerCpu; 
+        private Integer predictWorkerMemory; 
         private Double sampleRate; 
         private String sceneId; 
+        private String securityGroupId; 
         private String serviceId; 
+        private String switchId; 
         private Boolean useFeatureStore; 
         private String userIdField; 
         private String userTable; 
         private String userTablePartitionField; 
         private String userTablePartitionFieldFormat; 
+        private String vpcId; 
         private String workflowName; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -478,6 +653,12 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.compareFeature = request.compareFeature;
+            this.datasetId = request.datasetId;
+            this.datasetMountPath = request.datasetMountPath;
+            this.datasetName = request.datasetName;
+            this.datasetType = request.datasetType;
+            this.datasetUri = request.datasetUri;
+            this.defaultRoute = request.defaultRoute;
             this.easServiceName = request.easServiceName;
             this.easyRecPackagePath = request.easyRecPackagePath;
             this.easyRecVersion = request.easyRecVersion;
@@ -500,15 +681,22 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
             this.itemTablePartitionFieldFormat = request.itemTablePartitionFieldFormat;
             this.name = request.name;
             this.ossResourceId = request.ossResourceId;
+            this.predictWorkerCount = request.predictWorkerCount;
+            this.predictWorkerCpu = request.predictWorkerCpu;
+            this.predictWorkerMemory = request.predictWorkerMemory;
             this.sampleRate = request.sampleRate;
             this.sceneId = request.sceneId;
+            this.securityGroupId = request.securityGroupId;
             this.serviceId = request.serviceId;
+            this.switchId = request.switchId;
             this.useFeatureStore = request.useFeatureStore;
             this.userIdField = request.userIdField;
             this.userTable = request.userTable;
             this.userTablePartitionField = request.userTablePartitionField;
             this.userTablePartitionFieldFormat = request.userTablePartitionFieldFormat;
+            this.vpcId = request.vpcId;
             this.workflowName = request.workflowName;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -521,7 +709,10 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * CompareFeature.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder compareFeature(Boolean compareFeature) {
             this.putBodyParameter("CompareFeature", compareFeature);
@@ -530,7 +721,64 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * EasServiceName.
+         * DatasetId.
+         */
+        public Builder datasetId(String datasetId) {
+            this.putBodyParameter("DatasetId", datasetId);
+            this.datasetId = datasetId;
+            return this;
+        }
+
+        /**
+         * DatasetMountPath.
+         */
+        public Builder datasetMountPath(String datasetMountPath) {
+            this.putBodyParameter("DatasetMountPath", datasetMountPath);
+            this.datasetMountPath = datasetMountPath;
+            return this;
+        }
+
+        /**
+         * DatasetName.
+         */
+        public Builder datasetName(String datasetName) {
+            this.putBodyParameter("DatasetName", datasetName);
+            this.datasetName = datasetName;
+            return this;
+        }
+
+        /**
+         * DatasetType.
+         */
+        public Builder datasetType(String datasetType) {
+            this.putBodyParameter("DatasetType", datasetType);
+            this.datasetType = datasetType;
+            return this;
+        }
+
+        /**
+         * DatasetUri.
+         */
+        public Builder datasetUri(String datasetUri) {
+            this.putBodyParameter("DatasetUri", datasetUri);
+            this.datasetUri = datasetUri;
+            return this;
+        }
+
+        /**
+         * DefaultRoute.
+         */
+        public Builder defaultRoute(String defaultRoute) {
+            this.putBodyParameter("DefaultRoute", defaultRoute);
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service_123</p>
          */
         public Builder easServiceName(String easServiceName) {
             this.putBodyParameter("EasServiceName", easServiceName);
@@ -566,7 +814,10 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureLandingResourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-********</p>
          */
         public Builder featureLandingResourceId(String featureLandingResourceId) {
             this.putBodyParameter("FeatureLandingResourceId", featureLandingResourceId);
@@ -647,7 +898,10 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FgJsonFileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file.json</p>
          */
         public Builder fgJsonFileName(String fgJsonFileName) {
             this.putBodyParameter("FgJsonFileName", fgJsonFileName);
@@ -656,7 +910,10 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * GenerateZip.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder generateZip(Boolean generateZip) {
             this.putBodyParameter("GenerateZip", generateZip);
@@ -665,7 +922,10 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -710,7 +970,10 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature_consistency_check1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -728,7 +991,37 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * SampleRate.
+         * PredictWorkerCount.
+         */
+        public Builder predictWorkerCount(Integer predictWorkerCount) {
+            this.putBodyParameter("PredictWorkerCount", predictWorkerCount);
+            this.predictWorkerCount = predictWorkerCount;
+            return this;
+        }
+
+        /**
+         * PredictWorkerCpu.
+         */
+        public Builder predictWorkerCpu(Integer predictWorkerCpu) {
+            this.putBodyParameter("PredictWorkerCpu", predictWorkerCpu);
+            this.predictWorkerCpu = predictWorkerCpu;
+            return this;
+        }
+
+        /**
+         * PredictWorkerMemory.
+         */
+        public Builder predictWorkerMemory(Integer predictWorkerMemory) {
+            this.putBodyParameter("PredictWorkerMemory", predictWorkerMemory);
+            this.predictWorkerMemory = predictWorkerMemory;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.89</p>
          */
         public Builder sampleRate(Double sampleRate) {
             this.putBodyParameter("SampleRate", sampleRate);
@@ -737,7 +1030,10 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -746,7 +1042,19 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putBodyParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
@@ -755,7 +1063,16 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * UseFeatureStore.
+         * SwitchId.
+         */
+        public Builder switchId(String switchId) {
+            this.putBodyParameter("SwitchId", switchId);
+            this.switchId = switchId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder useFeatureStore(Boolean useFeatureStore) {
             this.putBodyParameter("UseFeatureStore", useFeatureStore);
@@ -800,11 +1117,29 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putBodyParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
          * WorkflowName.
          */
         public Builder workflowName(String workflowName) {
             this.putBodyParameter("WorkflowName", workflowName);
             this.workflowName = workflowName;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putBodyParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -108,7 +108,7 @@ public class TagResourcesRequest extends Request {
          * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
          * <ul>
          * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

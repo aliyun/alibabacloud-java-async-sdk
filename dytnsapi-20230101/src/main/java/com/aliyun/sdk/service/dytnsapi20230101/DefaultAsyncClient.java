@@ -39,6 +39,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of DescribeNumberHLR  DescribeNumberHLRRequest
+     * @return DescribeNumberHLRResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNumberHLRResponse> describeNumberHLR(DescribeNumberHLRRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNumberHLR").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNumberHLRResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNumberHLRResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeNumberMccMnc  DescribeNumberMccMncRequest
+     * @return DescribeNumberMccMncResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNumberMccMncResponse> describeNumberMccMnc(DescribeNumberMccMncRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNumberMccMnc").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNumberMccMncResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNumberMccMncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPhoneNumberIdentificationResult  GetPhoneNumberIdentificationResultRequest
+     * @return GetPhoneNumberIdentificationResultResponse
+     */
     @Override
     public CompletableFuture<GetPhoneNumberIdentificationResultResponse> getPhoneNumberIdentificationResult(GetPhoneNumberIdentificationResultRequest request) {
         try {
@@ -53,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPhoneNumberIdentificationUrl  GetPhoneNumberIdentificationUrlRequest
+     * @return GetPhoneNumberIdentificationUrlResponse
+     */
     @Override
     public CompletableFuture<GetPhoneNumberIdentificationUrlResponse> getPhoneNumberIdentificationUrl(GetPhoneNumberIdentificationUrlRequest request) {
         try {

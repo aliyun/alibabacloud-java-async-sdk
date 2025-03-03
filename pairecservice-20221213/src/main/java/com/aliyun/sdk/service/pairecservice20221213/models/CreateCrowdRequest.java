@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCrowdRequest} extends {@link RequestModel}
  *
  * <p>CreateCrowdRequest</p>
  */
 public class CreateCrowdRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -40,6 +50,7 @@ public class CreateCrowdRequest extends Request {
 
     private CreateCrowdRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.label = builder.label;
@@ -59,6 +70,13 @@ public class CreateCrowdRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -104,6 +122,7 @@ public class CreateCrowdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCrowdRequest, Builder> {
+        private String regionId; 
         private String description; 
         private String instanceId; 
         private String label; 
@@ -117,6 +136,7 @@ public class CreateCrowdRequest extends Request {
 
         private Builder(CreateCrowdRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.description = request.description;
             this.instanceId = request.instanceId;
             this.label = request.label;
@@ -126,7 +146,19 @@ public class CreateCrowdRequest extends Request {
         } 
 
         /**
-         * Description.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -135,7 +167,10 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -153,7 +188,10 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx人群</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

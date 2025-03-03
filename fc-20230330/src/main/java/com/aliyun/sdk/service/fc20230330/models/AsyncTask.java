@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class AsyncTask extends TeaModel {
     private Long endTime;
 
     @com.aliyun.core.annotation.NameInMap("events")
-    private java.util.List < AsyncTaskEvent > events;
+    private java.util.List<AsyncTaskEvent> events;
 
     @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
@@ -114,7 +119,7 @@ public class AsyncTask extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < AsyncTaskEvent > getEvents() {
+    public java.util.List<AsyncTaskEvent> getEvents() {
         return this.events;
     }
 
@@ -193,7 +198,7 @@ public class AsyncTask extends TeaModel {
         private String destinationStatus; 
         private Long durationMs; 
         private Long endTime; 
-        private java.util.List < AsyncTaskEvent > events; 
+        private java.util.List<AsyncTaskEvent> events; 
         private String functionArn; 
         private String instanceId; 
         private String qualifier; 
@@ -240,7 +245,7 @@ public class AsyncTask extends TeaModel {
         /**
          * events.
          */
-        public Builder events(java.util.List < AsyncTaskEvent > events) {
+        public Builder events(java.util.List<AsyncTaskEvent> events) {
             this.events = events;
             return this;
         }

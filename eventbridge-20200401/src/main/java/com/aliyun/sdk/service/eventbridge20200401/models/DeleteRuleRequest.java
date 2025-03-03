@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link DeleteRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteRuleRequest</p>
@@ -69,7 +75,11 @@ public class DeleteRuleRequest extends Request {
         } 
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-testacc-event-bus</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -78,7 +88,11 @@ public class DeleteRuleRequest extends Request {
         }
 
         /**
-         * The name of the event rule that you want to delete.
+         * <p>The name of the event rule that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ramrolechange-mns</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

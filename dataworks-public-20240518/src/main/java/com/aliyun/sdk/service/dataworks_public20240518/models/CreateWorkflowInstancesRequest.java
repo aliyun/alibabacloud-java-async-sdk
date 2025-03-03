@@ -312,7 +312,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>Task parameters. Set parameters for a specific task. In JSON format, the key is the Task ID. For more information about the value format, see Task Script parameters (Task.Script. GetTask of the Parameter interface).</p>
+         * <p>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -344,7 +344,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow to which the workflow belongs. The default value of WorkflowId for retroactive data is 1.</p>
+         * <p>The ID of the workflow to which the instance belongs. This parameter is set to 1 for auto triggered tasks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,7 +357,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>Workflow parameters. The priority is higher than the task parameters. JSON format.</p>
+         * <p>The workflow parameters. The priority of workflow parameters is higher than that of task parameters. You can call the GetTask operation to obtain the format of the workflow parameters by querying the Parameters parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>{ 
@@ -469,11 +469,9 @@ public class CreateWorkflowInstancesRequest extends Request {
      */
     public static class Analysis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Blocked")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean blocked;
 
         @com.aliyun.core.annotation.NameInMap("Enabled")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean enabled;
 
         private Analysis(Builder builder) {
@@ -509,7 +507,6 @@ public class CreateWorkflowInstancesRequest extends Request {
 
             /**
              * <p>Whether to block the operation if the analysis fails.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -521,7 +518,6 @@ public class CreateWorkflowInstancesRequest extends Request {
 
             /**
              * <p>Whether to enable analysis.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -672,7 +668,6 @@ public class CreateWorkflowInstancesRequest extends Request {
         private Alert alert;
 
         @com.aliyun.core.annotation.NameInMap("Analysis")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Analysis analysis;
 
         @com.aliyun.core.annotation.NameInMap("ExcludeProjectIds")
@@ -694,7 +689,6 @@ public class CreateWorkflowInstancesRequest extends Request {
         private String order;
 
         @com.aliyun.core.annotation.NameInMap("Parallelism")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer parallelism;
 
         @com.aliyun.core.annotation.NameInMap("RootTaskIds")
@@ -837,7 +831,6 @@ public class CreateWorkflowInstancesRequest extends Request {
 
             /**
              * <p>Analyze the configuration.</p>
-             * <p>This parameter is required.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -910,7 +903,6 @@ public class CreateWorkflowInstancesRequest extends Request {
 
             /**
              * <p>The number of rows that the task has. Values from 2 to 10 are parallelism and 1 is serial.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

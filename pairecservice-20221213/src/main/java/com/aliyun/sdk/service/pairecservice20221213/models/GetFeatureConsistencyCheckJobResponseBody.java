@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFeatureConsistencyCheckJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetFeatureConsistencyCheckJobResponseBody</p>
@@ -27,7 +33,7 @@ public class GetFeatureConsistencyCheckJobResponseBody extends TeaModel {
     private String gmtStartTime;
 
     @com.aliyun.core.annotation.NameInMap("Logs")
-    private java.util.List < String > logs;
+    private java.util.List<String> logs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -92,7 +98,7 @@ public class GetFeatureConsistencyCheckJobResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < String > getLogs() {
+    public java.util.List<String> getLogs() {
         return this.logs;
     }
 
@@ -116,7 +122,7 @@ public class GetFeatureConsistencyCheckJobResponseBody extends TeaModel {
         private String featureConsistencyCheckJobConfigName; 
         private String gmtEndTime; 
         private String gmtStartTime; 
-        private java.util.List < String > logs; 
+        private java.util.List<String> logs; 
         private String requestId; 
         private String status; 
 
@@ -163,7 +169,7 @@ public class GetFeatureConsistencyCheckJobResponseBody extends TeaModel {
         /**
          * Logs.
          */
-        public Builder logs(java.util.List < String > logs) {
+        public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
             return this;
         }

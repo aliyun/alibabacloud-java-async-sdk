@@ -20,6 +20,9 @@ public class DomainInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("certIdentifier")
     private String certIdentifier;
 
+    @com.aliyun.core.annotation.NameInMap("clientCACert")
+    private String clientCACert;
+
     @com.aliyun.core.annotation.NameInMap("createFrom")
     private String createFrom;
 
@@ -31,6 +34,9 @@ public class DomainInfo extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("forceHttps")
     private Boolean forceHttps;
+
+    @com.aliyun.core.annotation.NameInMap("mTLSEnabled")
+    private Boolean mTLSEnabled;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -49,10 +55,12 @@ public class DomainInfo extends TeaModel {
 
     private DomainInfo(Builder builder) {
         this.certIdentifier = builder.certIdentifier;
+        this.clientCACert = builder.clientCACert;
         this.createFrom = builder.createFrom;
         this.createTimestamp = builder.createTimestamp;
         this.domainId = builder.domainId;
         this.forceHttps = builder.forceHttps;
+        this.mTLSEnabled = builder.mTLSEnabled;
         this.name = builder.name;
         this.protocol = builder.protocol;
         this.resourceGroupId = builder.resourceGroupId;
@@ -73,6 +81,13 @@ public class DomainInfo extends TeaModel {
      */
     public String getCertIdentifier() {
         return this.certIdentifier;
+    }
+
+    /**
+     * @return clientCACert
+     */
+    public String getClientCACert() {
+        return this.clientCACert;
     }
 
     /**
@@ -101,6 +116,13 @@ public class DomainInfo extends TeaModel {
      */
     public Boolean getForceHttps() {
         return this.forceHttps;
+    }
+
+    /**
+     * @return mTLSEnabled
+     */
+    public Boolean getMTLSEnabled() {
+        return this.mTLSEnabled;
     }
 
     /**
@@ -140,10 +162,12 @@ public class DomainInfo extends TeaModel {
 
     public static final class Builder {
         private String certIdentifier; 
+        private String clientCACert; 
         private String createFrom; 
         private Long createTimestamp; 
         private String domainId; 
         private Boolean forceHttps; 
+        private Boolean mTLSEnabled; 
         private String name; 
         private String protocol; 
         private String resourceGroupId; 
@@ -155,6 +179,14 @@ public class DomainInfo extends TeaModel {
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
+            return this;
+        }
+
+        /**
+         * clientCACert.
+         */
+        public Builder clientCACert(String clientCACert) {
+            this.clientCACert = clientCACert;
             return this;
         }
 
@@ -187,6 +219,14 @@ public class DomainInfo extends TeaModel {
          */
         public Builder forceHttps(Boolean forceHttps) {
             this.forceHttps = forceHttps;
+            return this;
+        }
+
+        /**
+         * mTLSEnabled.
+         */
+        public Builder mTLSEnabled(Boolean mTLSEnabled) {
+            this.mTLSEnabled = mTLSEnabled;
             return this;
         }
 

@@ -237,7 +237,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The custom tag.</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
@@ -514,7 +514,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The tag key-value pairs for nodes.</p>
+             * <p>The tag key-value pairs of the node.</p>
              */
             public Builder nodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -522,7 +522,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>Tolerations for nodes.</p>
+             * <p>The tolerations for the node taint.</p>
              */
             public Builder nodeTolerations(java.util.List<NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
@@ -530,7 +530,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * <p>The name of the RAM user to which the permissions on Elastic Algorithm Service of Platform for AI (PAI-EAS) are granted.</p>
+             * <p>The name of the RAM user to which the permissions on Elastic Algorithm Service (EAS) of Platform for AI (PAI) are granted.</p>
              * 
              * <strong>example:</strong>
              * <p>clusterrole</p>

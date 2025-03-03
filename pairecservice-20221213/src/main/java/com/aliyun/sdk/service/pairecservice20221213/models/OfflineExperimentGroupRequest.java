@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OfflineExperimentGroupRequest} extends {@link RequestModel}
  *
  * <p>OfflineExperimentGroupRequest</p>
@@ -16,6 +22,10 @@ public class OfflineExperimentGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String experimentGroupId;
 
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -24,6 +34,7 @@ public class OfflineExperimentGroupRequest extends Request {
     private OfflineExperimentGroupRequest(Builder builder) {
         super(builder);
         this.experimentGroupId = builder.experimentGroupId;
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
     }
 
@@ -48,6 +59,13 @@ public class OfflineExperimentGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -56,6 +74,7 @@ public class OfflineExperimentGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<OfflineExperimentGroupRequest, Builder> {
         private String experimentGroupId; 
+        private String regionId; 
         private String instanceId; 
 
         private Builder() {
@@ -65,11 +84,15 @@ public class OfflineExperimentGroupRequest extends Request {
         private Builder(OfflineExperimentGroupRequest request) {
             super(request);
             this.experimentGroupId = request.experimentGroupId;
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
         } 
 
         /**
-         * ExperimentGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentGroupId(String experimentGroupId) {
             this.putPathParameter("ExperimentGroupId", experimentGroupId);
@@ -78,7 +101,19 @@ public class OfflineExperimentGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

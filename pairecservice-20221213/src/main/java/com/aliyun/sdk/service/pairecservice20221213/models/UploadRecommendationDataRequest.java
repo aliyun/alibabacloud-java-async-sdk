@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadRecommendationDataRequest} extends {@link RequestModel}
  *
  * <p>UploadRecommendationDataRequest</p>
@@ -17,7 +23,7 @@ public class UploadRecommendationDataRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.List < Content> content;
+    private java.util.List<Content> content;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataType")
@@ -53,7 +59,7 @@ public class UploadRecommendationDataRequest extends Request {
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -66,7 +72,7 @@ public class UploadRecommendationDataRequest extends Request {
 
     public static final class Builder extends Request.Builder<UploadRecommendationDataRequest, Builder> {
         private String regionId; 
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String dataType; 
 
         private Builder() {
@@ -92,7 +98,7 @@ public class UploadRecommendationDataRequest extends Request {
         /**
          * Content.
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.putBodyParameter("Content", content);
             this.content = content;
             return this;
@@ -114,6 +120,12 @@ public class UploadRecommendationDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UploadRecommendationDataRequest} extends {@link TeaModel}
+     *
+     * <p>UploadRecommendationDataRequest</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fields")
         private String fields;

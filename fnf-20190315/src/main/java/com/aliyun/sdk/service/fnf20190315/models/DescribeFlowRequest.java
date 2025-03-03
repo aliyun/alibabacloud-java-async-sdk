@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fnf20190315.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowRequest} extends {@link RequestModel}
  *
  * <p>DescribeFlowRequest</p>
  */
 public class DescribeFlowRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private DescribeFlowRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DescribeFlowRequest extends Request {
         } 
 
         /**
-         * The name of the flow.
+         * <p>The name of the flow.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

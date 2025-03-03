@@ -1156,6 +1156,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchWaitTime")
         private Integer batchWaitTime;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
@@ -1379,6 +1382,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.associateEip = builder.associateEip;
             this.baseAppId = builder.baseAppId;
             this.batchWaitTime = builder.batchWaitTime;
+            this.clusterId = builder.clusterId;
             this.command = builder.command;
             this.commandArgs = builder.commandArgs;
             this.configMapMountDesc = builder.configMapMountDesc;
@@ -1521,6 +1525,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public Integer getBatchWaitTime() {
             return this.batchWaitTime;
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -2030,6 +2041,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Boolean associateEip; 
             private String baseAppId; 
             private Integer batchWaitTime; 
+            private String clusterId; 
             private String command; 
             private String commandArgs; 
             private java.util.List<ConfigMapMountDesc> configMapMountDesc; 
@@ -2196,6 +2208,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder batchWaitTime(Integer batchWaitTime) {
                 this.batchWaitTime = batchWaitTime;
+                return this;
+            }
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
                 return this;
             }
 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExperimentReportValue} extends {@link TeaModel}
  *
  * <p>ExperimentReportValue</p>
@@ -15,7 +21,7 @@ public class ExperimentReportValue extends TeaModel {
     private Boolean baseline;
 
     @com.aliyun.core.annotation.NameInMap("MetricResults")
-    private java.util.Map < String, java.util.Map<String, ?>> metricResults;
+    private java.util.Map<String, java.util.Map<String, ?>> metricResults;
 
     private ExperimentReportValue(Builder builder) {
         this.baseline = builder.baseline;
@@ -40,13 +46,13 @@ public class ExperimentReportValue extends TeaModel {
     /**
      * @return metricResults
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getMetricResults() {
+    public java.util.Map<String, java.util.Map<String, ?>> getMetricResults() {
         return this.metricResults;
     }
 
     public static final class Builder {
         private Boolean baseline; 
-        private java.util.Map < String, java.util.Map<String, ?>> metricResults; 
+        private java.util.Map<String, java.util.Map<String, ?>> metricResults; 
 
         /**
          * Baseline.
@@ -59,7 +65,7 @@ public class ExperimentReportValue extends TeaModel {
         /**
          * MetricResults.
          */
-        public Builder metricResults(java.util.Map < String, java.util.Map<String, ?>> metricResults) {
+        public Builder metricResults(java.util.Map<String, java.util.Map<String, ?>> metricResults) {
             this.metricResults = metricResults;
             return this;
         }

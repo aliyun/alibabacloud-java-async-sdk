@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link UpdateApiDestinationRequest} extends {@link RequestModel}
  *
  * <p>UpdateApiDestinationRequest</p>
@@ -98,7 +104,11 @@ public class UpdateApiDestinationRequest extends Request {
         } 
 
         /**
-         * The name of the API destination. The name must be 2 to 127 characters in length.
+         * <p>The name of the API destination. The name must be 2 to 127 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-destination-name</p>
          */
         public Builder apiDestinationName(String apiDestinationName) {
             this.putQueryParameter("ApiDestinationName", apiDestinationName);
@@ -107,10 +117,11 @@ public class UpdateApiDestinationRequest extends Request {
         }
 
         /**
-         * The name of the connection. The name must be 2 to 127 characters in length.
-         * <p>
+         * <p>The name of the connection. The name must be 2 to 127 characters in length.</p>
+         * <p>Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
          * 
-         * Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.
+         * <strong>example:</strong>
+         * <p>connection-name</p>
          */
         public Builder connectionName(String connectionName) {
             this.putQueryParameter("ConnectionName", connectionName);
@@ -119,7 +130,10 @@ public class UpdateApiDestinationRequest extends Request {
         }
 
         /**
-         * The description of the API destination. The description can be up to 255 characters in length.
+         * <p>The description of the API destination. The description can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -128,7 +142,7 @@ public class UpdateApiDestinationRequest extends Request {
         }
 
         /**
-         * The parameters that are configured for the API destination.
+         * <p>The parameters that are configured for the API destination.</p>
          */
         public Builder httpApiParameters(HttpApiParameters httpApiParameters) {
             String httpApiParametersShrink = shrink(httpApiParameters, "HttpApiParameters", "json");
@@ -144,6 +158,12 @@ public class UpdateApiDestinationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateApiDestinationRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateApiDestinationRequest</p>
+     */
     public static class HttpApiParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         @com.aliyun.core.annotation.Validation(maxLength = 127)
@@ -184,7 +204,10 @@ public class UpdateApiDestinationRequest extends Request {
             private String method; 
 
             /**
-             * The endpoint of the API destination. The endpoint can be up to 127 characters in length.
+             * <p>The endpoint of the API destination. The endpoint can be up to 127 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://127.0.0.1:8001/api">http://127.0.0.1:8001/api</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -192,15 +215,18 @@ public class UpdateApiDestinationRequest extends Request {
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
+             * <p>The HTTP request method. Valid values:</p>
+             * <ul>
+             * <li>GET</li>
+             * <li>POST</li>
+             * <li>HEAD</li>
+             * <li>DELETE</li>
+             * <li>PUT</li>
+             * <li>PATCH</li>
+             * </ul>
              * 
-             * - GET
-             * - POST
-             * - HEAD
-             * - DELETE
-             * - PUT
-             * - PATCH
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder method(String method) {
                 this.method = method;

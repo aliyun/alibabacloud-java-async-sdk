@@ -43,7 +43,10 @@ public class DeleteVodPackagingGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13cbb83e-043c-4728-ac35-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

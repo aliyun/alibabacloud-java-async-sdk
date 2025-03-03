@@ -247,7 +247,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         private Integer ttl; 
 
         /**
-         * AdaptiveRouting.
+         * <p>Cross-pool origin configuration.</p>
          */
         public Builder adaptiveRouting(AdaptiveRouting adaptiveRouting) {
             this.adaptiveRouting = adaptiveRouting;
@@ -255,7 +255,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultPools.
+         * <p>List of default pool IDs.</p>
          */
         public Builder defaultPools(java.util.List<Long> defaultPools) {
             this.defaultPools = defaultPools;
@@ -263,7 +263,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description of the load balancer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -271,7 +274,14 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * <p>Whether the load balancer is enabled.</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -279,7 +289,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * FallbackPool.
+         * <p>The fallback pool ID, to which traffic will be redirected if all other pools are unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96228666776****</p>
          */
         public Builder fallbackPool(Long fallbackPool) {
             this.fallbackPool = fallbackPool;
@@ -287,7 +300,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The unique identifier ID of the load balancer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99867648760****</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -295,7 +311,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Monitor.
+         * <p>Monitor configuration.</p>
          */
         public Builder monitor(Monitor monitor) {
             this.monitor = monitor;
@@ -303,7 +319,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the load balancer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb.example.com</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -311,7 +330,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * RandomSteering.
+         * <p>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</p>
          */
         public Builder randomSteering(RandomSteering randomSteering) {
             this.randomSteering = randomSteering;
@@ -319,7 +338,18 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * RegionPools.
+         * <p>Address pools corresponding to primary regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;ENAM&quot;: [
+         *     12345678****
+         *   ],
+         *   &quot;WNAM&quot;: [
+         *     23456789****,
+         *     23456789****
+         *   ]
+         * }</p>
          */
         public Builder regionPools(Object regionPools) {
             this.regionPools = regionPools;
@@ -327,7 +357,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -338,7 +368,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>Rule configuration list, used to define behavior under specific conditions.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -346,11 +376,11 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Session persistence. Valid values:</p>
+         * <p>Session persistence, with values:</p>
          * <ul>
-         * <li>off: disables session persistence.</li>
-         * <li>ip: enables session persistence by IP address.</li>
-         * <li>cookie: disables session persistence.</li>
+         * <li>off: Not enabled.</li>
+         * <li>ip: Session persistence by IP.</li>
+         * <li>cookie: Not enabled for session persistence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -362,7 +392,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID to which the load balancer belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11591017874****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -370,7 +403,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the load balancer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -378,7 +414,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * SteeringPolicy.
+         * <p>Load balancing policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
          */
         public Builder steeringPolicy(String steeringPolicy) {
             this.steeringPolicy = steeringPolicy;
@@ -386,7 +425,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * SubRegionPools.
+         * <p>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
          */
         public Builder subRegionPools(Object subRegionPools) {
             this.subRegionPools = subRegionPools;
@@ -394,7 +436,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * Ttl.
+         * <p>TTL value, the time-to-live for DNS records, with a default of 30 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -440,7 +485,14 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             private Boolean failoverAcrossPools; 
 
             /**
-             * FailoverAcrossPools.
+             * <p>Whether to fail over across pools.</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder failoverAcrossPools(Boolean failoverAcrossPools) {
                 this.failoverAcrossPools = failoverAcrossPools;
@@ -607,7 +659,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ConsecutiveDown.
+             * <p>The number of consecutive failed health checks before the backend is considered down, for example, <code>5</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder consecutiveDown(Integer consecutiveDown) {
                 this.consecutiveDown = consecutiveDown;
@@ -615,7 +670,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * ConsecutiveUp.
+             * <p>The number of consecutive successful probes required to consider the target as up, e.g., <code>3</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder consecutiveUp(Integer consecutiveUp) {
                 this.consecutiveUp = consecutiveUp;
@@ -623,7 +681,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedCodes.
+             * <p>Expected status codes, such as 200, 202, indicating successful HTTP responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200,202</p>
              */
             public Builder expectedCodes(String expectedCodes) {
                 this.expectedCodes = expectedCodes;
@@ -631,7 +692,14 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * FollowRedirects.
+             * <p>Whether to follow redirects.</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder followRedirects(Boolean followRedirects) {
                 this.followRedirects = followRedirects;
@@ -639,7 +707,15 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Header.
+             * <p>The HTTP headers to be included in the health check request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;host&quot;: [
+             *             &quot;example1.com&quot;,
+             *             &quot;example2.com&quot;
+             *         ]
+             *     }</p>
              */
             public Builder header(Object header) {
                 this.header = header;
@@ -647,7 +723,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The interval for health checks, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -655,7 +734,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The method for the health check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -663,7 +745,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -671,7 +756,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The target port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -679,7 +767,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout for the health check, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -687,7 +778,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of monitor protocol, such as HTTP, used for health checks. When the value is <code>off</code>, it indicates that no check is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -746,7 +840,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             private java.util.Map<String, Integer> poolWeights; 
 
             /**
-             * DefaultWeight.
+             * <p>The default round-robin weight, used for all pools that do not have individually specified weights. The value range is 0-100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder defaultWeight(Integer defaultWeight) {
                 this.defaultWeight = defaultWeight;
@@ -754,7 +851,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * PoolWeights.
+             * <p>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight coefficient. The weight coefficient represents the proportion of relative traffic distribution.</p>
              */
             public Builder poolWeights(java.util.Map<String, Integer> poolWeights) {
                 this.poolWeights = poolWeights;
@@ -837,7 +934,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             private Integer statusCode; 
 
             /**
-             * ContentType.
+             * <p>The Content-Type field in the HTTP Header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/json</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -845,7 +945,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The location field in the HTTP response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com/index.html">http://www.example.com/index.html</a></p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -853,7 +956,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * MessageBody.
+             * <p>The body value of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello World.</p>
              */
             public Builder messageBody(String messageBody) {
                 this.messageBody = messageBody;
@@ -861,7 +967,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>Status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder statusCode(Integer statusCode) {
                 this.statusCode = statusCode;
@@ -980,7 +1089,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             private Boolean terminates; 
 
             /**
-             * FixedResponse.
+             * <p>Executes a specified response after matching the rule.</p>
              */
             public Builder fixedResponse(FixedResponse fixedResponse) {
                 this.fixedResponse = fixedResponse;
@@ -988,7 +1097,59 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Overrides.
+             * <p>Modifies the load balancer configuration for the corresponding request after matching the rule. The fields in this configuration will override the corresponding fields in the load balancer configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *             &quot;adaptive_routing&quot;: {
+             *                 &quot;failover_across_pools&quot;: true
+             *             },
+             *             &quot;sub_region_pools&quot;: {
+             *                 &quot;GB&quot;: [
+             *                     96228666776****
+             *                 ],
+             *                 &quot;US&quot;: [
+             *                     96228666776****
+             *                 ]
+             *             },
+             *             &quot;default_pools&quot;: [
+             *                 96228666776****,
+             *                 96228666776****
+             *             ],
+             *             &quot;fallback_pool&quot;: 96228666776****,
+             *             &quot;location_strategy&quot;: {
+             *                 &quot;mode&quot;: &quot;resolver_ip&quot;,
+             *                 &quot;prefer_ecs&quot;: &quot;always&quot;
+             *             },
+             *             &quot;random_steering&quot;: {
+             *                 &quot;default_weight&quot;: 30,
+             *                 &quot;pool_weights&quot;: {
+             *                     &quot;96228666776****&quot;: 70,
+             *                     &quot;96228666776****&quot;: 80
+             *                 }
+             *             },
+             *             &quot;region_pools&quot;: {
+             *                 &quot;ENAM&quot;: [
+             *                     96228666776****,
+             *                     92843536908****
+             *                 ],
+             *                 &quot;WNAM&quot;: [
+             *                     92843536908****
+             *                 ]
+             *             },
+             *             &quot;session_affinity&quot;: &quot;cookie&quot;,
+             *             &quot;session_affinity_attributes&quot;: {
+             *                 &quot;drain_duration&quot;: 100,
+             *                 &quot;headers&quot;: [&quot;none&quot;],
+             *                 &quot;require_all_headers&quot;: false,
+             *                 &quot;samesite&quot;: &quot;Auto&quot;,
+             *                 &quot;secure&quot;: &quot;Auto&quot;,
+             *                 &quot;zero_downtime_failover&quot;: &quot;sticky&quot;
+             *             },
+             *             &quot;session_affinity_ttl&quot;: 1800,
+             *             &quot;steering_policy&quot;: &quot;dynamic_latency&quot;,
+             *             &quot;ttl&quot;: 30
+             *         }</p>
              */
             public Builder overrides(Object overrides) {
                 this.overrides = overrides;
@@ -996,7 +1157,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>Information about the matching rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.request.uri.path contains &quot;/testing&quot;</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -1004,7 +1168,14 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Rule switch.</p>
+             * <ul>
+             * <li>on: Enable the rule.</li>
+             * <li>off: Disable the rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -1012,7 +1183,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r2</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1020,7 +1194,10 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The execution order of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -1028,7 +1205,14 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             }
 
             /**
-             * Terminates.
+             * <p>Whether to terminate the execution of subsequent rules.</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder terminates(Boolean terminates) {
                 this.terminates = terminates;

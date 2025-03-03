@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConnectionsResponseBody</p>
@@ -73,7 +79,10 @@ public class ListConnectionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The value Success indicates that the request is successful.
+         * <p>The HTTP status code. The value Success indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +90,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the connections returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +98,10 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +109,10 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3619976-8714-5D88-BBA2-6983D798A8BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +125,12 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class ApiKeyAuthParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiKeyName")
         private String apiKeyName;
@@ -149,7 +170,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private String apiKeyValue; 
 
             /**
-             * The API key.
+             * <p>The key of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Token</p>
              */
             public Builder apiKeyName(String apiKeyName) {
                 this.apiKeyName = apiKeyName;
@@ -157,7 +181,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the API key.
+             * <p>The value of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdkjnqkwejooa</p>
              */
             public Builder apiKeyValue(String apiKeyValue) {
                 this.apiKeyValue = apiKeyValue;
@@ -171,6 +198,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class BasicAuthParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -210,7 +243,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The password for basic authentication.
+             * <p>The password for basic authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -218,7 +254,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The username for basic authentication.
+             * <p>The username for basic authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -232,6 +271,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class ClientParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientID")
         private String clientID;
@@ -271,7 +316,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private String clientSecret; 
 
             /**
-             * The client ID.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClientID</p>
              */
             public Builder clientID(String clientID) {
                 this.clientID = clientID;
@@ -279,7 +327,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The client key secret of the application.
+             * <p>The AccessKey secret of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClientSecret</p>
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
@@ -293,6 +344,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class BodyParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
@@ -344,7 +401,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Indicates whether authentication is enabled.
+             * <p>Indicates whether authentication is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isValueSecret(String isValueSecret) {
                 this.isValueSecret = isValueSecret;
@@ -352,7 +412,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The key in the request body.
+             * <p>The key of the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -360,7 +423,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the key in the request body.
+             * <p>The value of the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -374,6 +440,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class HeaderParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
@@ -425,7 +497,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Indicates whether authentication is enabled.
+             * <p>Indicates whether authentication is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isValueSecret(String isValueSecret) {
                 this.isValueSecret = isValueSecret;
@@ -433,7 +508,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The key in the request header.
+             * <p>The key of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -441,7 +519,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the key in the request header.
+             * <p>The value of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -455,6 +536,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class QueryStringParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
@@ -506,7 +593,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Indicates whether authentication is enabled.
+             * <p>Indicates whether authentication is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isValueSecret(String isValueSecret) {
                 this.isValueSecret = isValueSecret;
@@ -514,7 +604,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The key in the request path.
+             * <p>The key of the request path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -522,7 +615,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the key in the request path.
+             * <p>The value of the request path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -536,15 +632,21 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class OAuthHttpParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BodyParameters")
-        private java.util.List < BodyParameters> bodyParameters;
+        private java.util.List<BodyParameters> bodyParameters;
 
         @com.aliyun.core.annotation.NameInMap("HeaderParameters")
-        private java.util.List < HeaderParameters> headerParameters;
+        private java.util.List<HeaderParameters> headerParameters;
 
         @com.aliyun.core.annotation.NameInMap("QueryStringParameters")
-        private java.util.List < QueryStringParameters> queryStringParameters;
+        private java.util.List<QueryStringParameters> queryStringParameters;
 
         private OAuthHttpParameters(Builder builder) {
             this.bodyParameters = builder.bodyParameters;
@@ -563,49 +665,49 @@ public class ListConnectionsResponseBody extends TeaModel {
         /**
          * @return bodyParameters
          */
-        public java.util.List < BodyParameters> getBodyParameters() {
+        public java.util.List<BodyParameters> getBodyParameters() {
             return this.bodyParameters;
         }
 
         /**
          * @return headerParameters
          */
-        public java.util.List < HeaderParameters> getHeaderParameters() {
+        public java.util.List<HeaderParameters> getHeaderParameters() {
             return this.headerParameters;
         }
 
         /**
          * @return queryStringParameters
          */
-        public java.util.List < QueryStringParameters> getQueryStringParameters() {
+        public java.util.List<QueryStringParameters> getQueryStringParameters() {
             return this.queryStringParameters;
         }
 
         public static final class Builder {
-            private java.util.List < BodyParameters> bodyParameters; 
-            private java.util.List < HeaderParameters> headerParameters; 
-            private java.util.List < QueryStringParameters> queryStringParameters; 
+            private java.util.List<BodyParameters> bodyParameters; 
+            private java.util.List<HeaderParameters> headerParameters; 
+            private java.util.List<QueryStringParameters> queryStringParameters; 
 
             /**
-             * The parameters that are configured for the request.
+             * <p>The parameters that are configured for the request.</p>
              */
-            public Builder bodyParameters(java.util.List < BodyParameters> bodyParameters) {
+            public Builder bodyParameters(java.util.List<BodyParameters> bodyParameters) {
                 this.bodyParameters = bodyParameters;
                 return this;
             }
 
             /**
-             * The parameters that are configured for the request header.
+             * <p>The parameters that are returned for the request header.</p>
              */
-            public Builder headerParameters(java.util.List < HeaderParameters> headerParameters) {
+            public Builder headerParameters(java.util.List<HeaderParameters> headerParameters) {
                 this.headerParameters = headerParameters;
                 return this;
             }
 
             /**
-             * The parameters that are configured for the request path.
+             * <p>The parameters that are returned for the request path.</p>
              */
-            public Builder queryStringParameters(java.util.List < QueryStringParameters> queryStringParameters) {
+            public Builder queryStringParameters(java.util.List<QueryStringParameters> queryStringParameters) {
                 this.queryStringParameters = queryStringParameters;
                 return this;
             }
@@ -617,6 +719,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class OAuthParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationEndpoint")
         private String authorizationEndpoint;
@@ -680,7 +788,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             private OAuthHttpParameters oAuthHttpParameters; 
 
             /**
-             * The endpoint that is used to obtain the OAuth token.
+             * <p>The endpoint that is used to obtain the OAuth token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></p>
              */
             public Builder authorizationEndpoint(String authorizationEndpoint) {
                 this.authorizationEndpoint = authorizationEndpoint;
@@ -688,7 +799,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured for the client.
+             * <p>The parameters that are returned for the client.</p>
              */
             public Builder clientParameters(ClientParameters clientParameters) {
                 this.clientParameters = clientParameters;
@@ -696,14 +807,15 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
+             * <p>The HTTP request method. Valid values:</p>
+             * <ul>
+             * <li>GET</li>
+             * <li>POST</li>
+             * <li>HEAD</li>
+             * </ul>
              * 
-             * - GET
-             * 
-             * - POST
-             * 
-             * - HEAD
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -711,7 +823,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The request parameters for OAuth authentication.
+             * <p>The request parameters of OAuth authentication.</p>
              */
             public Builder oAuthHttpParameters(OAuthHttpParameters oAuthHttpParameters) {
                 this.oAuthHttpParameters = oAuthHttpParameters;
@@ -725,6 +837,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class AuthParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiKeyAuthParameters")
         private ApiKeyAuthParameters apiKeyAuthParameters;
@@ -788,7 +906,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             private OAuthParameters oAuthParameters; 
 
             /**
-             * The parameters that are configured for API key authentication.
+             * <p>The parameters that are returned for API key authentication.</p>
              */
             public Builder apiKeyAuthParameters(ApiKeyAuthParameters apiKeyAuthParameters) {
                 this.apiKeyAuthParameters = apiKeyAuthParameters;
@@ -796,14 +914,15 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication type. Valid values:
-             * <p>
+             * <p>The authentication method. Valid values:</p>
+             * <ul>
+             * <li>BASIC_AUTH: basic authentication.</li>
+             * <li>API_KEY_AUTH: API key authentication.</li>
+             * <li>OAUTH_AUTH: OAuth authentication.</li>
+             * </ul>
              * 
-             * - BASIC_AUTH: basic authentication.
-             * 
-             * - API_KEY_AUTH: API key authentication.
-             * 
-             * - OAUTH_AUTH: OAuth authentication.
+             * <strong>example:</strong>
+             * <p>BASIC_AUTH</p>
              */
             public Builder authorizationType(String authorizationType) {
                 this.authorizationType = authorizationType;
@@ -811,7 +930,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured for basic authentication.
+             * <p>The parameters that are returned for basic authentication.</p>
              */
             public Builder basicAuthParameters(BasicAuthParameters basicAuthParameters) {
                 this.basicAuthParameters = basicAuthParameters;
@@ -819,7 +938,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured for OAuth authentication.
+             * <p>The parameters that are returned for OAuth authentication.</p>
              */
             public Builder oAuthParameters(OAuthParameters oAuthParameters) {
                 this.oAuthParameters = oAuthParameters;
@@ -833,6 +952,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class NetworkParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
@@ -896,7 +1021,13 @@ public class ListConnectionsResponseBody extends TeaModel {
             private String vswitcheId; 
 
             /**
-             * The network type. Valid values:PublicNetwork and PrivateNetwork.
+             * <ul>
+             * <li>PublicNetwork: the Internet.</li>
+             * <li>PrivateNetwork: virtual private cloud (VPC).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PublicNetwork</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -904,7 +1035,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb-167adad548759-security_grop/sg-bp1addad26peuh9qh9rtyb</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -912,7 +1046,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb-test/vpc-bp1symadadwnwgmqud</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -920,7 +1057,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1iu4x7aeradadown1og8,vsw-bp193sqmadadlaszpeqbt2c</p>
              */
             public Builder vswitcheId(String vswitcheId) {
                 this.vswitcheId = vswitcheId;
@@ -934,6 +1074,12 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class Connections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthParameters")
         private AuthParameters authParameters;
@@ -1021,7 +1167,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             private NetworkParameters networkParameters; 
 
             /**
-             * The parameters that are configured for authentication.
+             * <p>The parameters that are returned for authentication.</p>
              */
             public Builder authParameters(AuthParameters authParameters) {
                 this.authParameters = authParameters;
@@ -1029,7 +1175,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection name.
+             * <p>The connection name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection-name</p>
              */
             public Builder connectionName(String connectionName) {
                 this.connectionName = connectionName;
@@ -1037,7 +1186,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection description.
+             * <p>The connection description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the connection.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1045,7 +1197,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the connection was created.
+             * <p>The time when the connection was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1592838994234</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1053,7 +1208,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection ID.
+             * <p>The ID of the connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1141093</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1061,7 +1219,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkParameters.
+             * <p>The parameters that are returned for the network.</p>
              */
             public Builder networkParameters(NetworkParameters networkParameters) {
                 this.networkParameters = networkParameters;
@@ -1075,9 +1233,15 @@ public class ListConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnectionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connections")
-        private java.util.List < Connections> connections;
+        private java.util.List<Connections> connections;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Float maxResults;
@@ -1106,7 +1270,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         /**
          * @return connections
          */
-        public java.util.List < Connections> getConnections() {
+        public java.util.List<Connections> getConnections() {
             return this.connections;
         }
 
@@ -1132,21 +1296,24 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Connections> connections; 
+            private java.util.List<Connections> connections; 
             private Float maxResults; 
             private String nextToken; 
             private Float total; 
 
             /**
-             * The value of the key in the request path.
+             * <p>The connections.</p>
              */
-            public Builder connections(java.util.List < Connections> connections) {
+            public Builder connections(java.util.List<Connections> connections) {
                 this.connections = connections;
                 return this;
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Float maxResults) {
                 this.maxResults = maxResults;
@@ -1154,7 +1321,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * If excess return values exist, this parameter is returned.
+             * <p>If excess return values exist, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1162,7 +1332,10 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Float total) {
                 this.total = total;

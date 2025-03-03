@@ -23,6 +23,10 @@ public class ModifyMaskingRulesRequest extends Request {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultAlgo")
     private String defaultAlgo;
 
@@ -62,6 +66,7 @@ public class ModifyMaskingRulesRequest extends Request {
     private ModifyMaskingRulesRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.DBName = builder.DBName;
         this.defaultAlgo = builder.defaultAlgo;
         this.enabled = builder.enabled;
         this.maskingAlgo = builder.maskingAlgo;
@@ -91,6 +96,13 @@ public class ModifyMaskingRulesRequest extends Request {
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    /**
+     * @return DBName
+     */
+    public String getDBName() {
+        return this.DBName;
     }
 
     /**
@@ -158,6 +170,7 @@ public class ModifyMaskingRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyMaskingRulesRequest, Builder> {
         private String DBInstanceName; 
+        private String DBName; 
         private String defaultAlgo; 
         private String enabled; 
         private String maskingAlgo; 
@@ -175,6 +188,7 @@ public class ModifyMaskingRulesRequest extends Request {
         private Builder(ModifyMaskingRulesRequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
+            this.DBName = request.DBName;
             this.defaultAlgo = request.defaultAlgo;
             this.enabled = request.enabled;
             this.maskingAlgo = request.maskingAlgo;
@@ -192,6 +206,15 @@ public class ModifyMaskingRulesRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * DBName.
+         */
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 

@@ -202,10 +202,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      * <p>DescribeImagePipelinesResponseBody</p>
      */
     public static class AdvancedOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageNameSuffix")
+        private String imageNameSuffix;
+
         @com.aliyun.core.annotation.NameInMap("RetainCloudAssistant")
         private Boolean retainCloudAssistant;
 
         private AdvancedOptions(Builder builder) {
+            this.imageNameSuffix = builder.imageNameSuffix;
             this.retainCloudAssistant = builder.retainCloudAssistant;
         }
 
@@ -218,6 +222,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageNameSuffix
+         */
+        public String getImageNameSuffix() {
+            return this.imageNameSuffix;
+        }
+
+        /**
          * @return retainCloudAssistant
          */
         public Boolean getRetainCloudAssistant() {
@@ -225,7 +236,16 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String imageNameSuffix; 
             private Boolean retainCloudAssistant; 
+
+            /**
+             * ImageNameSuffix.
+             */
+            public Builder imageNameSuffix(String imageNameSuffix) {
+                this.imageNameSuffix = imageNameSuffix;
+                return this;
+            }
 
             /**
              * <p>Indicates whether to retain Cloud Assistant. During the image building process, the system automatically installs Cloud Assistant in the intermediate instance to run commands. You can choose whether to retain Cloud Assistant in the new image created based on the image template. Valid values:</p>
@@ -247,6 +267,294 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
             public AdvancedOptions build() {
                 return new AdvancedOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class ImageFeatures extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
+        private String nvmeSupport;
+
+        private ImageFeatures(Builder builder) {
+            this.nvmeSupport = builder.nvmeSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageFeatures create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+        public static final class Builder {
+            private String nvmeSupport; 
+
+            /**
+             * NvmeSupport.
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            public ImageFeatures build() {
+                return new ImageFeatures(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class ImageTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private ImageTag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ImageTag build() {
+                return new ImageTag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class ImageTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageTag")
+        private java.util.List<ImageTag> imageTag;
+
+        private ImageTags(Builder builder) {
+            this.imageTag = builder.imageTag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return imageTag
+         */
+        public java.util.List<ImageTag> getImageTag() {
+            return this.imageTag;
+        }
+
+        public static final class Builder {
+            private java.util.List<ImageTag> imageTag; 
+
+            /**
+             * ImageTag.
+             */
+            public Builder imageTag(java.util.List<ImageTag> imageTag) {
+                this.imageTag = imageTag;
+                return this;
+            }
+
+            public ImageTags build() {
+                return new ImageTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class ImageOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
+        private String imageFamily;
+
+        @com.aliyun.core.annotation.NameInMap("ImageFeatures")
+        private ImageFeatures imageFeatures;
+
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private String imageName;
+
+        @com.aliyun.core.annotation.NameInMap("ImageTags")
+        private ImageTags imageTags;
+
+        private ImageOptions(Builder builder) {
+            this.description = builder.description;
+            this.imageFamily = builder.imageFamily;
+            this.imageFeatures = builder.imageFeatures;
+            this.imageName = builder.imageName;
+            this.imageTags = builder.imageTags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return imageFamily
+         */
+        public String getImageFamily() {
+            return this.imageFamily;
+        }
+
+        /**
+         * @return imageFeatures
+         */
+        public ImageFeatures getImageFeatures() {
+            return this.imageFeatures;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return imageTags
+         */
+        public ImageTags getImageTags() {
+            return this.imageTags;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String imageFamily; 
+            private ImageFeatures imageFeatures; 
+            private String imageName; 
+            private ImageTags imageTags; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ImageFamily.
+             */
+            public Builder imageFamily(String imageFamily) {
+                this.imageFamily = imageFamily;
+                return this;
+            }
+
+            /**
+             * ImageFeatures.
+             */
+            public Builder imageFeatures(ImageFeatures imageFeatures) {
+                this.imageFeatures = imageFeatures;
+                return this;
+            }
+
+            /**
+             * ImageName.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * ImageTags.
+             */
+            public Builder imageTags(ImageTags imageTags) {
+                this.imageTags = imageTags;
+                return this;
+            }
+
+            public ImageOptions build() {
+                return new ImageOptions(this);
             } 
 
         } 
@@ -941,10 +1249,15 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("ImageFamily")
+        @Deprecated
         private String imageFamily;
 
         @com.aliyun.core.annotation.NameInMap("ImageName")
+        @Deprecated
         private String imageName;
+
+        @com.aliyun.core.annotation.NameInMap("ImageOptions")
+        private ImageOptions imageOptions;
 
         @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
         private String imagePipelineId;
@@ -962,6 +1275,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
+        @Deprecated
         private String nvmeSupport;
 
         @com.aliyun.core.annotation.NameInMap("RepairMode")
@@ -996,6 +1310,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             this.description = builder.description;
             this.imageFamily = builder.imageFamily;
             this.imageName = builder.imageName;
+            this.imageOptions = builder.imageOptions;
             this.imagePipelineId = builder.imagePipelineId;
             this.importImageOptions = builder.importImageOptions;
             this.instanceType = builder.instanceType;
@@ -1087,6 +1402,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         public String getImageName() {
             return this.imageName;
+        }
+
+        /**
+         * @return imageOptions
+         */
+        public ImageOptions getImageOptions() {
+            return this.imageOptions;
         }
 
         /**
@@ -1191,6 +1513,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String description; 
             private String imageFamily; 
             private String imageName; 
+            private ImageOptions imageOptions; 
             private String imagePipelineId; 
             private ImportImageOptions importImageOptions; 
             private String instanceType; 
@@ -1314,6 +1637,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * ImageOptions.
+             */
+            public Builder imageOptions(ImageOptions imageOptions) {
+                this.imageOptions = imageOptions;
                 return this;
             }
 

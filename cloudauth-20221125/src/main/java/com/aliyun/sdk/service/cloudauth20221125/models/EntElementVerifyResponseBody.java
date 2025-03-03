@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20221125.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntElementVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>EntElementVerifyResponseBody</p>
  */
 public class EntElementVerifyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private EntElementVerifyResponseBody(Builder builder) {
@@ -90,7 +95,10 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7***B-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +119,26 @@ public class EntElementVerifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EntElementVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>EntElementVerifyResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("OpenTime")
+        @com.aliyun.core.annotation.NameInMap("OpenTime")
         private String openTime;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
-        @NameInMap("ReasonDetail")
+        @com.aliyun.core.annotation.NameInMap("ReasonDetail")
         private String reasonDetail;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Result(Builder builder) {

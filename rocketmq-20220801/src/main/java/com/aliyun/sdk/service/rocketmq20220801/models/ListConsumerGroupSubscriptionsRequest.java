@@ -27,10 +27,15 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("topicName")
+    private String topicName;
+
     private ListConsumerGroupSubscriptionsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.consumerGroupId = builder.consumerGroupId;
+        this.topicName = builder.topicName;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         return this.consumerGroupId;
     }
 
+    /**
+     * @return topicName
+     */
+    public String getTopicName() {
+        return this.topicName;
+    }
+
     public static final class Builder extends Request.Builder<ListConsumerGroupSubscriptionsRequest, Builder> {
         private String instanceId; 
         private String consumerGroupId; 
+        private String topicName; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.consumerGroupId = request.consumerGroupId;
+            this.topicName = request.topicName;
         } 
 
         /**
@@ -98,6 +112,15 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
             this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+
+        /**
+         * topicName.
+         */
+        public Builder topicName(String topicName) {
+            this.putQueryParameter("topicName", topicName);
+            this.topicName = topicName;
             return this;
         }
 

@@ -171,6 +171,9 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
+        @com.aliyun.core.annotation.NameInMap("ScopeList")
+        private java.util.List<String> scopeList;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -185,6 +188,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             this.name = builder.name;
             this.routeType = builder.routeType;
             this.scope = builder.scope;
+            this.scopeList = builder.scopeList;
             this.status = builder.status;
             this.trRouteTableId = builder.trRouteTableId;
             this.transitRouteTableAggregationCidr = builder.transitRouteTableAggregationCidr;
@@ -227,6 +231,13 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
+         * @return scopeList
+         */
+        public java.util.List<String> getScopeList() {
+            return this.scopeList;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -252,6 +263,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             private String name; 
             private String routeType; 
             private String scope; 
+            private java.util.List<String> scopeList; 
             private String status; 
             private String trRouteTableId; 
             private String transitRouteTableAggregationCidr; 
@@ -299,6 +311,14 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
              */
             public Builder scope(String scope) {
                 this.scope = scope;
+                return this;
+            }
+
+            /**
+             * ScopeList.
+             */
+            public Builder scopeList(java.util.List<String> scopeList) {
+                this.scopeList = scopeList;
                 return this;
             }
 

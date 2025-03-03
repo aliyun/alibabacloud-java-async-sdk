@@ -55,7 +55,10 @@ public class CreateScreenshotResponseBody extends TeaModel {
         private java.util.List<Tasks> tasks; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3AF82CE1-2801-52CE-BF64-B491DD7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class CreateScreenshotResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -121,7 +124,10 @@ public class CreateScreenshotResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * AndroidInstanceId.
+             * <p>The ID of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-bwhtebzah2fse****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -129,7 +135,10 @@ public class CreateScreenshotResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task. You can use the task ID with the DescribeTasks operation to get the download link for the screenshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-imr0fufqd7cle****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

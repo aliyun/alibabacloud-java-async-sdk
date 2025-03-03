@@ -73,7 +73,10 @@ public class CreateVodPackagingGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The packaging group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod hls packaging</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -82,7 +85,10 @@ public class CreateVodPackagingGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group. The name must be unique in an account and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_hls</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

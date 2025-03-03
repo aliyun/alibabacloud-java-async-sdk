@@ -115,7 +115,10 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the packaging group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod_hls</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -124,7 +127,10 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword. The names of the returned packaging configurations contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hls</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -133,7 +139,10 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -142,7 +151,10 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +163,14 @@ public class ListVodPackagingConfigurationsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order of the packaging configurations based on the time when they were created. Valid values:</p>
+         * <ul>
+         * <li>desc (default): descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
