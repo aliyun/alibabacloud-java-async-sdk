@@ -12,30 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListMachineTypesRequest} extends {@link RequestModel}
+ * {@link DescribeNetTestResultRequest} extends {@link RequestModel}
  *
- * <p>ListMachineTypesRequest</p>
+ * <p>DescribeNetTestResultRequest</p>
  */
-public class ListMachineTypesRequest extends Request {
+public class DescribeNetTestResultRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Name")
-    private String name;
+    @com.aliyun.core.annotation.NameInMap("TestId")
+    private String testId;
 
-    private ListMachineTypesRequest(Builder builder) {
+    private DescribeNetTestResultRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.name = builder.name;
+        this.testId = builder.testId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListMachineTypesRequest create() {
+    public static DescribeNetTestResultRequest create() {
         return builder().build();
     }
 
@@ -52,24 +52,24 @@ public class ListMachineTypesRequest extends Request {
     }
 
     /**
-     * @return name
+     * @return testId
      */
-    public String getName() {
-        return this.name;
+    public String getTestId() {
+        return this.testId;
     }
 
-    public static final class Builder extends Request.Builder<ListMachineTypesRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeNetTestResultRequest, Builder> {
         private String regionId; 
-        private String name; 
+        private String testId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListMachineTypesRequest request) {
+        private Builder(DescribeNetTestResultRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.name = request.name;
+            this.testId = request.testId;
         } 
 
         /**
@@ -82,20 +82,17 @@ public class ListMachineTypesRequest extends Request {
         }
 
         /**
-         * <p>Machine name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>efg1.nvga1</p>
+         * TestId.
          */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
+        public Builder testId(String testId) {
+            this.putBodyParameter("TestId", testId);
+            this.testId = testId;
             return this;
         }
 
         @Override
-        public ListMachineTypesRequest build() {
-            return new ListMachineTypesRequest(this);
+        public DescribeNetTestResultRequest build() {
+            return new DescribeNetTestResultRequest(this);
         } 
 
     } 

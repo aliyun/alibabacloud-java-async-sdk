@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CloseSession  CloseSessionRequest
+     * @return CloseSessionResponse
+     */
+    CompletableFuture<CloseSessionResponse> closeSession(CloseSessionRequest request);
+
+    /**
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -42,6 +48,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDiagnosticTaskResponse
      */
     CompletableFuture<CreateDiagnosticTaskResponse> createDiagnosticTask(CreateDiagnosticTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateNetTestTask  CreateNetTestTaskRequest
+     * @return CreateNetTestTaskResponse
+     */
+    CompletableFuture<CreateNetTestTaskResponse> createNetTestTask(CreateNetTestTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateSession  CreateSessionRequest
+     * @return CreateSessionResponse
+     */
+    CompletableFuture<CreateSessionResponse> createSession(CreateSessionRequest request);
 
     /**
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
@@ -60,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInvocationsResponse
      */
     CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNetTestResult  DescribeNetTestResultRequest
+     * @return DescribeNetTestResultResponse
+     */
+    CompletableFuture<DescribeNetTestResultResponse> describeNetTestResult(DescribeNetTestResultRequest request);
 
     /**
      * @param request the request parameters of DescribeNode  DescribeNodeRequest
@@ -110,16 +134,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
     /**
+     * @param request the request parameters of ListDiagnosticResults  ListDiagnosticResultsRequest
+     * @return ListDiagnosticResultsResponse
+     */
+    CompletableFuture<ListDiagnosticResultsResponse> listDiagnosticResults(ListDiagnosticResultsRequest request);
+
+    /**
      * @param request the request parameters of ListFreeNodes  ListFreeNodesRequest
      * @return ListFreeNodesResponse
      */
     CompletableFuture<ListFreeNodesResponse> listFreeNodes(ListFreeNodesRequest request);
 
     /**
+     * @param request the request parameters of ListImages  ListImagesRequest
+     * @return ListImagesResponse
+     */
+    CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
+
+    /**
+     * @param request the request parameters of ListMachineNetworkInfo  ListMachineNetworkInfoRequest
+     * @return ListMachineNetworkInfoResponse
+     */
+    CompletableFuture<ListMachineNetworkInfoResponse> listMachineNetworkInfo(ListMachineNetworkInfoRequest request);
+
+    /**
      * @param request the request parameters of ListMachineTypes  ListMachineTypesRequest
      * @return ListMachineTypesResponse
      */
     CompletableFuture<ListMachineTypesResponse> listMachineTypes(ListMachineTypesRequest request);
+
+    /**
+     * @param request the request parameters of ListNetTestResults  ListNetTestResultsRequest
+     * @return ListNetTestResultsResponse
+     */
+    CompletableFuture<ListNetTestResultsResponse> listNetTestResults(ListNetTestResultsRequest request);
 
     /**
      * @param request the request parameters of ListNodeGroups  ListNodeGroupsRequest
@@ -132,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListUserClusterTypes  ListUserClusterTypesRequest
+     * @return ListUserClusterTypesResponse
+     */
+    CompletableFuture<ListUserClusterTypesResponse> listUserClusterTypes(ListUserClusterTypesRequest request);
 
     /**
      * @param request the request parameters of RebootNodes  RebootNodesRequest
@@ -168,6 +222,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopInvocationResponse
      */
     CompletableFuture<StopInvocationResponse> stopInvocation(StopInvocationRequest request);
+
+    /**
+     * @param request the request parameters of StopNodes  StopNodesRequest
+     * @return StopNodesResponse
+     */
+    CompletableFuture<StopNodesResponse> stopNodes(StopNodesRequest request);
 
     /**
      * @param request the request parameters of TagResources  TagResourcesRequest

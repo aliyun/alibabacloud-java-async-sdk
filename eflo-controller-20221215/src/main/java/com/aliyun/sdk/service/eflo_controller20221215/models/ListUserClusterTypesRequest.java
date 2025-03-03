@@ -12,30 +12,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListMachineTypesRequest} extends {@link RequestModel}
+ * {@link ListUserClusterTypesRequest} extends {@link RequestModel}
  *
- * <p>ListMachineTypesRequest</p>
+ * <p>ListUserClusterTypesRequest</p>
  */
-public class ListMachineTypesRequest extends Request {
+public class ListUserClusterTypesRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Name")
-    private String name;
-
-    private ListMachineTypesRequest(Builder builder) {
+    private ListUserClusterTypesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.name = builder.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListMachineTypesRequest create() {
+    public static ListUserClusterTypesRequest create() {
         return builder().build();
     }
 
@@ -51,25 +46,16 @@ public class ListMachineTypesRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    public static final class Builder extends Request.Builder<ListMachineTypesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListUserClusterTypesRequest, Builder> {
         private String regionId; 
-        private String name; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListMachineTypesRequest request) {
+        private Builder(ListUserClusterTypesRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.name = request.name;
         } 
 
         /**
@@ -81,21 +67,9 @@ public class ListMachineTypesRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>Machine name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>efg1.nvga1</p>
-         */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
         @Override
-        public ListMachineTypesRequest build() {
-            return new ListMachineTypesRequest(this);
+        public ListUserClusterTypesRequest build() {
+            return new ListUserClusterTypesRequest(this);
         } 
 
     } 

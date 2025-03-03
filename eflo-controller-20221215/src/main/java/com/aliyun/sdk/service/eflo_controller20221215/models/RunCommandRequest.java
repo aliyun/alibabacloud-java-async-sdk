@@ -324,7 +324,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * <p>Command ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-e996287206324975b5fbe1d***</p>
          */
         public Builder commandId(String commandId) {
             this.putBodyParameter("CommandId", commandId);
@@ -402,7 +405,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Launcher.
+         * <p>Bootstrap for script execution. The length must not exceed 1 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
          */
         public Builder launcher(String launcher) {
             this.putBodyParameter("Launcher", launcher);
@@ -477,7 +483,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * TerminationMode.
+         * <p>The mode when stopping a task (manually or due to execution timeout). Possible values:
+         * Process: Stops the current script process. ProcessTree: Stops the current process tree (a collection of the script process and all its child processes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProcessTree</p>
          */
         public Builder terminationMode(String terminationMode) {
             this.putBodyParameter("TerminationMode", terminationMode);

@@ -67,7 +67,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MachineTypes.
+         * <p>Details of the machine types</p>
          */
         public Builder machineTypes(java.util.List<MachineTypes> machineTypes) {
             this.machineTypes = machineTypes;
@@ -75,7 +75,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>NextToken for the next page, include this value when requesting the next page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -240,7 +243,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * BondNum.
+             * <p>Number of bonds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bondNum(Integer bondNum) {
                 this.bondNum = bondNum;
@@ -248,7 +254,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuInfo.
+             * <p>CPU information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2x Intel Icelake 8369B 32C CPU</p>
              */
             public Builder cpuInfo(String cpuInfo) {
                 this.cpuInfo = cpuInfo;
@@ -256,7 +265,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskInfo.
+             * <p>Disk information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2x 480GB SATA SSD</p>
              */
             public Builder diskInfo(String diskInfo) {
                 this.diskInfo = diskInfo;
@@ -264,7 +276,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuInfo.
+             * <p>GPU information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
              */
             public Builder gpuInfo(String gpuInfo) {
                 this.gpuInfo = gpuInfo;
@@ -272,7 +287,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryInfo.
+             * <p>Memory information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32x 64GB DDR4 3200 Memory</p>
              */
             public Builder memoryInfo(String memoryInfo) {
                 this.memoryInfo = memoryInfo;
@@ -280,7 +298,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Machine name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efg1.nvga1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +309,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInfo.
+             * <p>Network information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2x 100Gbps DP NIC</p>
              */
             public Builder networkInfo(String networkInfo) {
                 this.networkInfo = networkInfo;
@@ -296,7 +320,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * <p>Number of nodes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder nodeCount(String nodeCount) {
                 this.nodeCount = nodeCount;
@@ -304,7 +331,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCpuCore.
+             * <p>Number of CPU cores</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder totalCpuCore(Integer totalCpuCore) {
                 this.totalCpuCore = totalCpuCore;
@@ -312,7 +342,10 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Type of machine</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder type(String type) {
                 this.type = type;
