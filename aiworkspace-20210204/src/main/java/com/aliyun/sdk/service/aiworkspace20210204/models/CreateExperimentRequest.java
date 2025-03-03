@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateExperimentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < LabelInfo > labels;
+    private java.util.List<LabelInfo> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -73,7 +78,7 @@ public class CreateExperimentRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < LabelInfo > getLabels() {
+    public java.util.List<LabelInfo> getLabels() {
         return this.labels;
     }
 
@@ -94,7 +99,7 @@ public class CreateExperimentRequest extends Request {
     public static final class Builder extends Request.Builder<CreateExperimentRequest, Builder> {
         private String accessibility; 
         private String artifactUri; 
-        private java.util.List < LabelInfo > labels; 
+        private java.util.List<LabelInfo> labels; 
         private String name; 
         private String workspaceId; 
 
@@ -135,7 +140,7 @@ public class CreateExperimentRequest extends Request {
         /**
          * <p>标签</p>
          */
-        public Builder labels(java.util.List < LabelInfo > labels) {
+        public Builder labels(java.util.List<LabelInfo> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

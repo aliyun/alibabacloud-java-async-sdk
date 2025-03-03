@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateRunRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -27,7 +32,7 @@ public class CreateRunRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < RunParam > params;
+    private java.util.List<RunParam> params;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceId")
@@ -70,7 +75,7 @@ public class CreateRunRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -84,7 +89,7 @@ public class CreateRunRequest extends Request {
     /**
      * @return params
      */
-    public java.util.List < RunParam > getParams() {
+    public java.util.List<RunParam> getParams() {
         return this.params;
     }
 
@@ -104,9 +109,9 @@ public class CreateRunRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateRunRequest, Builder> {
         private String experimentId; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private String name; 
-        private java.util.List < RunParam > params; 
+        private java.util.List<RunParam> params; 
         private String sourceId; 
         private String sourceType; 
 
@@ -139,7 +144,7 @@ public class CreateRunRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -157,7 +162,7 @@ public class CreateRunRequest extends Request {
         /**
          * Params.
          */
-        public Builder params(java.util.List < RunParam > params) {
+        public Builder params(java.util.List<RunParam> params) {
             this.putBodyParameter("Params", params);
             this.params = params;
             return this;

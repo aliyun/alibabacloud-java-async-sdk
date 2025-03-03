@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class GetMemberResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Roles")
-    private java.util.List < String > roles;
+    private java.util.List<String> roles;
 
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
@@ -89,7 +94,7 @@ public class GetMemberResponseBody extends TeaModel {
     /**
      * @return roles
      */
-    public java.util.List < String > getRoles() {
+    public java.util.List<String> getRoles() {
         return this.roles;
     }
 
@@ -106,7 +111,7 @@ public class GetMemberResponseBody extends TeaModel {
         private String memberId; 
         private String memberName; 
         private String requestId; 
-        private java.util.List < String > roles; 
+        private java.util.List<String> roles; 
         private String userId; 
 
         /**
@@ -152,7 +157,7 @@ public class GetMemberResponseBody extends TeaModel {
         /**
          * Roles.
          */
-        public Builder roles(java.util.List < String > roles) {
+        public Builder roles(java.util.List<String> roles) {
             this.roles = roles;
             return this;
         }

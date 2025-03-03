@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListImagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < Images> images;
+    private java.util.List<Images> images;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -57,14 +62,14 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Images.
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
@@ -184,7 +189,7 @@ public class ListImagesResponseBody extends TeaModel {
         private String imageUri;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -269,7 +274,7 @@ public class ListImagesResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -315,7 +320,7 @@ public class ListImagesResponseBody extends TeaModel {
             private String gmtModifiedTime; 
             private String imageId; 
             private String imageUri; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String name; 
             private String parentUserId; 
             private Integer size; 
@@ -373,7 +378,7 @@ public class ListImagesResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }

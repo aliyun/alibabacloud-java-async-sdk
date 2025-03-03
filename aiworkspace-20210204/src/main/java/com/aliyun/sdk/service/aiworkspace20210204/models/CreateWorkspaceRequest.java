@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,11 @@ public class CreateWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnvTypes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > envTypes;
+    private java.util.List<String> envTypes;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceName")
@@ -36,6 +45,7 @@ public class CreateWorkspaceRequest extends Request {
         this.description = builder.description;
         this.displayName = builder.displayName;
         this.envTypes = builder.envTypes;
+        this.resourceGroupId = builder.resourceGroupId;
         this.workspaceName = builder.workspaceName;
     }
 
@@ -69,8 +79,15 @@ public class CreateWorkspaceRequest extends Request {
     /**
      * @return envTypes
      */
-    public java.util.List < String > getEnvTypes() {
+    public java.util.List<String> getEnvTypes() {
         return this.envTypes;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -83,7 +100,8 @@ public class CreateWorkspaceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateWorkspaceRequest, Builder> {
         private String description; 
         private String displayName; 
-        private java.util.List < String > envTypes; 
+        private java.util.List<String> envTypes; 
+        private String resourceGroupId; 
         private String workspaceName; 
 
         private Builder() {
@@ -95,6 +113,7 @@ public class CreateWorkspaceRequest extends Request {
             this.description = request.description;
             this.displayName = request.displayName;
             this.envTypes = request.envTypes;
+            this.resourceGroupId = request.resourceGroupId;
             this.workspaceName = request.workspaceName;
         } 
 
@@ -122,9 +141,18 @@ public class CreateWorkspaceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder envTypes(java.util.List < String > envTypes) {
+        public Builder envTypes(java.util.List<String> envTypes) {
             this.putBodyParameter("EnvTypes", envTypes);
             this.envTypes = envTypes;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

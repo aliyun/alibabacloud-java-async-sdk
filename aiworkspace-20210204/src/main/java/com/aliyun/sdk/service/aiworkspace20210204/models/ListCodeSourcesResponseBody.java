@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCodeSourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CodeSources")
-    private java.util.List < CodeSourceItem > codeSources;
+    private java.util.List<CodeSourceItem> codeSources;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListCodeSourcesResponseBody extends TeaModel {
     /**
      * @return codeSources
      */
-    public java.util.List < CodeSourceItem > getCodeSources() {
+    public java.util.List<CodeSourceItem> getCodeSources() {
         return this.codeSources;
     }
 
@@ -57,14 +62,14 @@ public class ListCodeSourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CodeSourceItem > codeSources; 
+        private java.util.List<CodeSourceItem> codeSources; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * CodeSources.
          */
-        public Builder codeSources(java.util.List < CodeSourceItem > codeSources) {
+        public Builder codeSources(java.util.List<CodeSourceItem> codeSources) {
             this.codeSources = codeSources;
             return this;
         }

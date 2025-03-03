@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AcceptDataworksEvent  AcceptDataworksEventRequest
+     * @return AcceptDataworksEventResponse
+     */
+    CompletableFuture<AcceptDataworksEventResponse> acceptDataworksEvent(AcceptDataworksEventRequest request);
+
+    /**
      * @param request the request parameters of AddImage  AddImageRequest
      * @return AddImageResponse
      */
@@ -38,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMemberRoleResponse> addMemberRole(AddMemberRoleRequest request);
 
     /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateCodeSource  CreateCodeSourceRequest
      * @return CreateCodeSourceResponse
      */
@@ -48,6 +60,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDatasetResponse
      */
     CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
+
+    /**
+     * @param request the request parameters of CreateDatasetFileMetas  CreateDatasetFileMetasRequest
+     * @return CreateDatasetFileMetasResponse
+     */
+    CompletableFuture<CreateDatasetFileMetasResponse> createDatasetFileMetas(CreateDatasetFileMetasRequest request);
+
+    /**
+     * @param request the request parameters of CreateDatasetJob  CreateDatasetJobRequest
+     * @return CreateDatasetJobResponse
+     */
+    CompletableFuture<CreateDatasetJobResponse> createDatasetJob(CreateDatasetJobRequest request);
+
+    /**
+     * @param request the request parameters of CreateDatasetJobConfig  CreateDatasetJobConfigRequest
+     * @return CreateDatasetJobConfigResponse
+     */
+    CompletableFuture<CreateDatasetJobConfigResponse> createDatasetJobConfig(CreateDatasetJobConfigRequest request);
 
     /**
      * @param request the request parameters of CreateDatasetLabels  CreateDatasetLabelsRequest
@@ -138,6 +168,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDatasetResponse
      */
     CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetFileMetas  DeleteDatasetFileMetasRequest
+     * @return DeleteDatasetFileMetasResponse
+     */
+    CompletableFuture<DeleteDatasetFileMetasResponse> deleteDatasetFileMetas(DeleteDatasetFileMetasRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetJob  DeleteDatasetJobRequest
+     * @return DeleteDatasetJobResponse
+     */
+    CompletableFuture<DeleteDatasetJobResponse> deleteDatasetJob(DeleteDatasetJobRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasetJobConfig  DeleteDatasetJobConfigRequest
+     * @return DeleteDatasetJobConfigResponse
+     */
+    CompletableFuture<DeleteDatasetJobConfigResponse> deleteDatasetJobConfig(DeleteDatasetJobConfigRequest request);
 
     /**
      * @param request the request parameters of DeleteDatasetLabels  DeleteDatasetLabelsRequest
@@ -236,6 +284,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
 
     /**
+     * @param request the request parameters of GetDatasetFileMeta  GetDatasetFileMetaRequest
+     * @return GetDatasetFileMetaResponse
+     */
+    CompletableFuture<GetDatasetFileMetaResponse> getDatasetFileMeta(GetDatasetFileMetaRequest request);
+
+    /**
+     * @param request the request parameters of GetDatasetJob  GetDatasetJobRequest
+     * @return GetDatasetJobResponse
+     */
+    CompletableFuture<GetDatasetJobResponse> getDatasetJob(GetDatasetJobRequest request);
+
+    /**
+     * @param request the request parameters of GetDatasetJobConfig  GetDatasetJobConfigRequest
+     * @return GetDatasetJobConfigResponse
+     */
+    CompletableFuture<GetDatasetJobConfigResponse> getDatasetJobConfig(GetDatasetJobConfigRequest request);
+
+    /**
      * @param request the request parameters of GetDatasetVersion  GetDatasetVersionRequest
      * @return GetDatasetVersionResponse
      */
@@ -300,6 +366,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCodeSourcesResponse
      */
     CompletableFuture<ListCodeSourcesResponse> listCodeSources(ListCodeSourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasetFileMetas  ListDatasetFileMetasRequest
+     * @return ListDatasetFileMetasResponse
+     */
+    CompletableFuture<ListDatasetFileMetasResponse> listDatasetFileMetas(ListDatasetFileMetasRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasetJobConfigs  ListDatasetJobConfigsRequest
+     * @return ListDatasetJobConfigsResponse
+     */
+    CompletableFuture<ListDatasetJobConfigsResponse> listDatasetJobConfigs(ListDatasetJobConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListDatasetJobs  ListDatasetJobsRequest
+     * @return ListDatasetJobsResponse
+     */
+    CompletableFuture<ListDatasetJobsResponse> listDatasetJobs(ListDatasetJobsRequest request);
 
     /**
      * @param request the request parameters of ListDatasetVersions  ListDatasetVersionsRequest
@@ -446,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetExperimentLabelsResponse> setExperimentLabels(SetExperimentLabelsRequest request);
 
     /**
+     * @param request the request parameters of StopDatasetJob  StopDatasetJobRequest
+     * @return StopDatasetJobResponse
+     */
+    CompletableFuture<StopDatasetJobResponse> stopDatasetJob(StopDatasetJobRequest request);
+
+    /**
      * @param request the request parameters of UpdateCodeSource  UpdateCodeSourceRequest
      * @return UpdateCodeSourceResponse
      */
@@ -456,6 +546,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDatasetResponse
      */
     CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDatasetFileMetas  UpdateDatasetFileMetasRequest
+     * @return UpdateDatasetFileMetasResponse
+     */
+    CompletableFuture<UpdateDatasetFileMetasResponse> updateDatasetFileMetas(UpdateDatasetFileMetasRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDatasetJob  UpdateDatasetJobRequest
+     * @return UpdateDatasetJobResponse
+     */
+    CompletableFuture<UpdateDatasetJobResponse> updateDatasetJob(UpdateDatasetJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDatasetJobConfig  UpdateDatasetJobConfigRequest
+     * @return UpdateDatasetJobConfigResponse
+     */
+    CompletableFuture<UpdateDatasetJobConfigResponse> updateDatasetJobConfig(UpdateDatasetJobConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateDatasetVersion  UpdateDatasetVersionRequest

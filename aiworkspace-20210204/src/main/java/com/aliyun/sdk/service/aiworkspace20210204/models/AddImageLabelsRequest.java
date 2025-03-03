@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class AddImageLabelsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     private AddImageLabelsRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class AddImageLabelsRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
     public static final class Builder extends Request.Builder<AddImageLabelsRequest, Builder> {
         private String imageId; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class AddImageLabelsRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

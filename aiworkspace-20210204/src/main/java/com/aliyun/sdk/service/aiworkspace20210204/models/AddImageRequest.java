@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class AddImageRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -102,7 +107,7 @@ public class AddImageRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -132,7 +137,7 @@ public class AddImageRequest extends Request {
         private String description; 
         private String imageId; 
         private String imageUri; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private String name; 
         private Integer size; 
         private String workspaceId; 
@@ -195,7 +200,7 @@ public class AddImageRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

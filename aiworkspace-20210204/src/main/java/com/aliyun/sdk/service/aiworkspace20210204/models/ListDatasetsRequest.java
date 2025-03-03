@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,6 +54,10 @@ public class ListDatasetsRequest extends Request {
     private String provider;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
     private String sourceDatasetId;
 
@@ -75,6 +84,7 @@ public class ListDatasetsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.properties = builder.properties;
         this.provider = builder.provider;
+        this.sortBy = builder.sortBy;
         this.sourceDatasetId = builder.sourceDatasetId;
         this.sourceId = builder.sourceId;
         this.sourceTypes = builder.sourceTypes;
@@ -158,6 +168,13 @@ public class ListDatasetsRequest extends Request {
     }
 
     /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    /**
      * @return sourceDatasetId
      */
     public String getSourceDatasetId() {
@@ -195,6 +212,7 @@ public class ListDatasetsRequest extends Request {
         private Integer pageSize; 
         private String properties; 
         private String provider; 
+        private String sortBy; 
         private String sourceDatasetId; 
         private String sourceId; 
         private String sourceTypes; 
@@ -215,6 +233,7 @@ public class ListDatasetsRequest extends Request {
             this.pageSize = request.pageSize;
             this.properties = request.properties;
             this.provider = request.provider;
+            this.sortBy = request.sortBy;
             this.sourceDatasetId = request.sourceDatasetId;
             this.sourceId = request.sourceId;
             this.sourceTypes = request.sourceTypes;
@@ -299,6 +318,15 @@ public class ListDatasetsRequest extends Request {
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
             this.provider = provider;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
             return this;
         }
 

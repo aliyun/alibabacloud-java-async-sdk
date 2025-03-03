@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateProductOrdersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Products")
-    private java.util.List < Products> products;
+    private java.util.List<Products> products;
 
     private CreateProductOrdersRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class CreateProductOrdersRequest extends Request {
     /**
      * @return products
      */
-    public java.util.List < Products> getProducts() {
+    public java.util.List<Products> getProducts() {
         return this.products;
     }
 
     public static final class Builder extends Request.Builder<CreateProductOrdersRequest, Builder> {
         private Boolean autoPay; 
-        private java.util.List < Products> products; 
+        private java.util.List<Products> products; 
 
         private Builder() {
             super();
@@ -79,7 +84,7 @@ public class CreateProductOrdersRequest extends Request {
         /**
          * Products.
          */
-        public Builder products(java.util.List < Products> products) {
+        public Builder products(java.util.List<Products> products) {
             this.putBodyParameter("Products", products);
             this.products = products;
             return this;
@@ -196,7 +201,7 @@ public class CreateProductOrdersRequest extends Request {
         private Long duration;
 
         @com.aliyun.core.annotation.NameInMap("InstanceProperties")
-        private java.util.List < InstanceProperties> instanceProperties;
+        private java.util.List<InstanceProperties> instanceProperties;
 
         @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
@@ -249,7 +254,7 @@ public class CreateProductOrdersRequest extends Request {
         /**
          * @return instanceProperties
          */
-        public java.util.List < InstanceProperties> getInstanceProperties() {
+        public java.util.List<InstanceProperties> getInstanceProperties() {
             return this.instanceProperties;
         }
 
@@ -278,7 +283,7 @@ public class CreateProductOrdersRequest extends Request {
             private Boolean autoRenew; 
             private String chargeType; 
             private Long duration; 
-            private java.util.List < InstanceProperties> instanceProperties; 
+            private java.util.List<InstanceProperties> instanceProperties; 
             private String orderType; 
             private String pricingCycle; 
             private String productCode; 
@@ -310,7 +315,7 @@ public class CreateProductOrdersRequest extends Request {
             /**
              * InstanceProperties.
              */
-            public Builder instanceProperties(java.util.List < InstanceProperties> instanceProperties) {
+            public Builder instanceProperties(java.util.List<InstanceProperties> instanceProperties) {
                 this.instanceProperties = instanceProperties;
                 return this;
             }

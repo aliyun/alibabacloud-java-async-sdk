@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateWorkspaceResourceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Resources")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     private CreateWorkspaceResourceRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class CreateWorkspaceResourceRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder extends Request.Builder<CreateWorkspaceResourceRequest, Builder> {
         private String workspaceId; 
         private String option; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         private Builder() {
             super();
@@ -107,7 +112,7 @@ public class CreateWorkspaceResourceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.putBodyParameter("Resources", resources);
             this.resources = resources;
             return this;
@@ -256,7 +261,7 @@ public class CreateWorkspaceResourceRequest extends Request {
         private Boolean isDefault;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -266,13 +271,13 @@ public class CreateWorkspaceResourceRequest extends Request {
         private String productType;
 
         @com.aliyun.core.annotation.NameInMap("Quotas")
-        private java.util.List < Quotas> quotas;
+        private java.util.List<Quotas> quotas;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("Spec")
-        private java.util.Map < String, ? > spec;
+        private java.util.Map<String, ?> spec;
 
         @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -323,7 +328,7 @@ public class CreateWorkspaceResourceRequest extends Request {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -344,7 +349,7 @@ public class CreateWorkspaceResourceRequest extends Request {
         /**
          * @return quotas
          */
-        public java.util.List < Quotas> getQuotas() {
+        public java.util.List<Quotas> getQuotas() {
             return this.quotas;
         }
 
@@ -358,7 +363,7 @@ public class CreateWorkspaceResourceRequest extends Request {
         /**
          * @return spec
          */
-        public java.util.Map < String, ? > getSpec() {
+        public java.util.Map<String, ?> getSpec() {
             return this.spec;
         }
 
@@ -373,12 +378,12 @@ public class CreateWorkspaceResourceRequest extends Request {
             private String envType; 
             private String groupName; 
             private Boolean isDefault; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String name; 
             private String productType; 
-            private java.util.List < Quotas> quotas; 
+            private java.util.List<Quotas> quotas; 
             private String resourceType; 
-            private java.util.Map < String, ? > spec; 
+            private java.util.Map<String, ?> spec; 
             private String workspaceId; 
 
             /**
@@ -411,7 +416,7 @@ public class CreateWorkspaceResourceRequest extends Request {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -438,7 +443,7 @@ public class CreateWorkspaceResourceRequest extends Request {
             /**
              * Quotas.
              */
-            public Builder quotas(java.util.List < Quotas> quotas) {
+            public Builder quotas(java.util.List<Quotas> quotas) {
                 this.quotas = quotas;
                 return this;
             }
@@ -454,7 +459,7 @@ public class CreateWorkspaceResourceRequest extends Request {
             /**
              * Spec.
              */
-            public Builder spec(java.util.Map < String, ? > spec) {
+            public Builder spec(java.util.Map<String, ?> spec) {
                 this.spec = spec;
                 return this;
             }

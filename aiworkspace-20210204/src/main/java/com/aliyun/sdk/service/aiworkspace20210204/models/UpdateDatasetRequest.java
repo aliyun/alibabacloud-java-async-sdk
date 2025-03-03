@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,6 +27,10 @@ public class UpdateDatasetRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MountAccessReadWriteRoleIdList")
+    private java.util.List<String> mountAccessReadWriteRoleIdList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -33,6 +42,7 @@ public class UpdateDatasetRequest extends Request {
         super(builder);
         this.datasetId = builder.datasetId;
         this.description = builder.description;
+        this.mountAccessReadWriteRoleIdList = builder.mountAccessReadWriteRoleIdList;
         this.name = builder.name;
         this.options = builder.options;
     }
@@ -65,6 +75,13 @@ public class UpdateDatasetRequest extends Request {
     }
 
     /**
+     * @return mountAccessReadWriteRoleIdList
+     */
+    public java.util.List<String> getMountAccessReadWriteRoleIdList() {
+        return this.mountAccessReadWriteRoleIdList;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -81,6 +98,7 @@ public class UpdateDatasetRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDatasetRequest, Builder> {
         private String datasetId; 
         private String description; 
+        private java.util.List<String> mountAccessReadWriteRoleIdList; 
         private String name; 
         private String options; 
 
@@ -92,6 +110,7 @@ public class UpdateDatasetRequest extends Request {
             super(request);
             this.datasetId = request.datasetId;
             this.description = request.description;
+            this.mountAccessReadWriteRoleIdList = request.mountAccessReadWriteRoleIdList;
             this.name = request.name;
             this.options = request.options;
         } 
@@ -114,6 +133,15 @@ public class UpdateDatasetRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * MountAccessReadWriteRoleIdList.
+         */
+        public Builder mountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
+            this.putBodyParameter("MountAccessReadWriteRoleIdList", mountAccessReadWriteRoleIdList);
+            this.mountAccessReadWriteRoleIdList = mountAccessReadWriteRoleIdList;
             return this;
         }
 

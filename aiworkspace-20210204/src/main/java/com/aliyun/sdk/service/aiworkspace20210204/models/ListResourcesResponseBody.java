@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -45,7 +50,7 @@ public class ListResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -58,7 +63,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
         private Long totalCount; 
 
         /**
@@ -72,7 +77,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * Resources.
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -388,7 +393,7 @@ public class ListResourcesResponseBody extends TeaModel {
         private String quotaType;
 
         @com.aliyun.core.annotation.NameInMap("Specs")
-        private java.util.List < Specs> specs;
+        private java.util.List<Specs> specs;
 
         private Quotas(Builder builder) {
             this.cardType = builder.cardType;
@@ -461,7 +466,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return specs
          */
-        public java.util.List < Specs> getSpecs() {
+        public java.util.List<Specs> getSpecs() {
             return this.specs;
         }
 
@@ -473,7 +478,7 @@ public class ListResourcesResponseBody extends TeaModel {
             private String name; 
             private String productCode; 
             private String quotaType; 
-            private java.util.List < Specs> specs; 
+            private java.util.List<Specs> specs; 
 
             /**
              * CardType.
@@ -534,7 +539,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * Specs.
              */
-            public Builder specs(java.util.List < Specs> specs) {
+            public Builder specs(java.util.List<Specs> specs) {
                 this.specs = specs;
                 return this;
             }
@@ -575,7 +580,7 @@ public class ListResourcesResponseBody extends TeaModel {
         private Boolean isDefault;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -584,13 +589,13 @@ public class ListResourcesResponseBody extends TeaModel {
         private String productType;
 
         @com.aliyun.core.annotation.NameInMap("Quotas")
-        private java.util.List < Quotas> quotas;
+        private java.util.List<Quotas> quotas;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("Spec")
-        private java.util.Map < String, ? > spec;
+        private java.util.Map<String, ?> spec;
 
         @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
@@ -672,7 +677,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -693,7 +698,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return quotas
          */
-        public java.util.List < Quotas> getQuotas() {
+        public java.util.List<Quotas> getQuotas() {
             return this.quotas;
         }
 
@@ -707,7 +712,7 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return spec
          */
-        public java.util.Map < String, ? > getSpec() {
+        public java.util.Map<String, ?> getSpec() {
             return this.spec;
         }
 
@@ -726,12 +731,12 @@ public class ListResourcesResponseBody extends TeaModel {
             private String groupName; 
             private String id; 
             private Boolean isDefault; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String name; 
             private String productType; 
-            private java.util.List < Quotas> quotas; 
+            private java.util.List<Quotas> quotas; 
             private String resourceType; 
-            private java.util.Map < String, ? > spec; 
+            private java.util.Map<String, ?> spec; 
             private String workspaceId; 
 
             /**
@@ -793,7 +798,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -817,7 +822,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * Quotas.
              */
-            public Builder quotas(java.util.List < Quotas> quotas) {
+            public Builder quotas(java.util.List<Quotas> quotas) {
                 this.quotas = quotas;
                 return this;
             }
@@ -833,7 +838,7 @@ public class ListResourcesResponseBody extends TeaModel {
             /**
              * Spec.
              */
-            public Builder spec(java.util.Map < String, ? > spec) {
+            public Builder spec(java.util.Map<String, ?> spec) {
                 this.spec = spec;
                 return this;
             }

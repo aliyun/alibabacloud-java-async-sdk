@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,10 +30,10 @@ public class Run extends TeaModel {
     private String gmtModifiedTime;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < RunLabel > labels;
+    private java.util.List<RunLabel> labels;
 
     @com.aliyun.core.annotation.NameInMap("Metrics")
-    private java.util.List < RunMetric > metrics;
+    private java.util.List<RunMetric> metrics;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -37,7 +42,7 @@ public class Run extends TeaModel {
     private String ownerId;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < RunParam > params;
+    private java.util.List<RunParam> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -114,14 +119,14 @@ public class Run extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < RunLabel > getLabels() {
+    public java.util.List<RunLabel> getLabels() {
         return this.labels;
     }
 
     /**
      * @return metrics
      */
-    public java.util.List < RunMetric > getMetrics() {
+    public java.util.List<RunMetric> getMetrics() {
         return this.metrics;
     }
 
@@ -142,7 +147,7 @@ public class Run extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < RunParam > getParams() {
+    public java.util.List<RunParam> getParams() {
         return this.params;
     }
 
@@ -193,11 +198,11 @@ public class Run extends TeaModel {
         private String experimentId; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private java.util.List < RunLabel > labels; 
-        private java.util.List < RunMetric > metrics; 
+        private java.util.List<RunLabel> labels; 
+        private java.util.List<RunMetric> metrics; 
         private String name; 
         private String ownerId; 
-        private java.util.List < RunParam > params; 
+        private java.util.List<RunParam> params; 
         private String requestId; 
         private String runId; 
         private String sourceId; 
@@ -240,7 +245,7 @@ public class Run extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < RunLabel > labels) {
+        public Builder labels(java.util.List<RunLabel> labels) {
             this.labels = labels;
             return this;
         }
@@ -248,7 +253,7 @@ public class Run extends TeaModel {
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < RunMetric > metrics) {
+        public Builder metrics(java.util.List<RunMetric> metrics) {
             this.metrics = metrics;
             return this;
         }
@@ -272,7 +277,7 @@ public class Run extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < RunParam > params) {
+        public Builder params(java.util.List<RunParam> params) {
             this.params = params;
             return this;
         }

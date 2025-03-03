@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateModelLabelsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     private CreateModelLabelsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class CreateModelLabelsRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
     public static final class Builder extends Request.Builder<CreateModelLabelsRequest, Builder> {
         private String modelId; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
 
         private Builder() {
             super();
@@ -83,7 +88,7 @@ public class CreateModelLabelsRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

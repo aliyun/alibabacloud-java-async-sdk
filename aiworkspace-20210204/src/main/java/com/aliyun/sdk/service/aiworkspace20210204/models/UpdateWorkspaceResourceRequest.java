@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductType")
@@ -35,7 +40,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -43,7 +48,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Spec")
-    private java.util.Map < String, ? > spec;
+    private java.util.Map<String, ?> spec;
 
     private UpdateWorkspaceResourceRequest(Builder builder) {
         super(builder);
@@ -94,7 +99,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -108,7 +113,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -122,7 +127,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
     /**
      * @return spec
      */
-    public java.util.Map < String, ? > getSpec() {
+    public java.util.Map<String, ?> getSpec() {
         return this.spec;
     }
 
@@ -130,11 +135,11 @@ public class UpdateWorkspaceResourceRequest extends Request {
         private String workspaceId; 
         private String groupName; 
         private Boolean isDefault; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private String productType; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
-        private java.util.Map < String, ? > spec; 
+        private java.util.Map<String, ?> spec; 
 
         private Builder() {
             super();
@@ -185,7 +190,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -203,7 +208,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         /**
          * ResourceIds.
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
@@ -221,7 +226,7 @@ public class UpdateWorkspaceResourceRequest extends Request {
         /**
          * Spec.
          */
-        public Builder spec(java.util.Map < String, ? > spec) {
+        public Builder spec(java.util.Map<String, ?> spec) {
             this.putBodyParameter("Spec", spec);
             this.spec = spec;
             return this;

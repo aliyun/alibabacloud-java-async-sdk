@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,20 +46,12 @@ public class ListImagesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ParentUserId")
-    private String parentUserId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UserId")
-    private String userId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Verbose")
@@ -73,10 +70,8 @@ public class ListImagesRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.parentUserId = builder.parentUserId;
         this.query = builder.query;
         this.sortBy = builder.sortBy;
-        this.userId = builder.userId;
         this.verbose = builder.verbose;
         this.workspaceId = builder.workspaceId;
     }
@@ -144,13 +139,6 @@ public class ListImagesRequest extends Request {
     }
 
     /**
-     * @return parentUserId
-     */
-    public String getParentUserId() {
-        return this.parentUserId;
-    }
-
-    /**
      * @return query
      */
     public String getQuery() {
@@ -162,13 +150,6 @@ public class ListImagesRequest extends Request {
      */
     public String getSortBy() {
         return this.sortBy;
-    }
-
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
     }
 
     /**
@@ -193,10 +174,8 @@ public class ListImagesRequest extends Request {
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String parentUserId; 
         private String query; 
         private String sortBy; 
-        private String userId; 
         private Boolean verbose; 
         private String workspaceId; 
 
@@ -213,10 +192,8 @@ public class ListImagesRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.parentUserId = request.parentUserId;
             this.query = request.query;
             this.sortBy = request.sortBy;
-            this.userId = request.userId;
             this.verbose = request.verbose;
             this.workspaceId = request.workspaceId;
         } 
@@ -285,15 +262,6 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * ParentUserId.
-         */
-        public Builder parentUserId(String parentUserId) {
-            this.putQueryParameter("ParentUserId", parentUserId);
-            this.parentUserId = parentUserId;
-            return this;
-        }
-
-        /**
          * Query.
          */
         public Builder query(String query) {
@@ -308,15 +276,6 @@ public class ListImagesRequest extends Request {
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
             this.sortBy = sortBy;
-            return this;
-        }
-
-        /**
-         * UserId.
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("UserId", userId);
-            this.userId = userId;
             return this;
         }
 

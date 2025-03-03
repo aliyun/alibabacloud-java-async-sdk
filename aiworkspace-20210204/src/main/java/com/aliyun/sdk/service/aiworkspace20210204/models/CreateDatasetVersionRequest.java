@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,8 +40,12 @@ public class CreateDatasetVersionRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImportInfo")
+    private String importInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Options")
@@ -67,6 +76,7 @@ public class CreateDatasetVersionRequest extends Request {
         this.dataSize = builder.dataSize;
         this.dataSourceType = builder.dataSourceType;
         this.description = builder.description;
+        this.importInfo = builder.importInfo;
         this.labels = builder.labels;
         this.options = builder.options;
         this.property = builder.property;
@@ -124,9 +134,16 @@ public class CreateDatasetVersionRequest extends Request {
     }
 
     /**
+     * @return importInfo
+     */
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
+    /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -171,7 +188,8 @@ public class CreateDatasetVersionRequest extends Request {
         private Long dataSize; 
         private String dataSourceType; 
         private String description; 
-        private java.util.List < Label > labels; 
+        private String importInfo; 
+        private java.util.List<Label> labels; 
         private String options; 
         private String property; 
         private String sourceId; 
@@ -189,6 +207,7 @@ public class CreateDatasetVersionRequest extends Request {
             this.dataSize = request.dataSize;
             this.dataSourceType = request.dataSourceType;
             this.description = request.description;
+            this.importInfo = request.importInfo;
             this.labels = request.labels;
             this.options = request.options;
             this.property = request.property;
@@ -249,9 +268,18 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
+         * ImportInfo.
+         */
+        public Builder importInfo(String importInfo) {
+            this.putBodyParameter("ImportInfo", importInfo);
+            this.importInfo = importInfo;
+            return this;
+        }
+
+        /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

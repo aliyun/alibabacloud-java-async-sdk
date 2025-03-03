@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListProductsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Products")
-    private java.util.List < Products> products;
+    private java.util.List<Products> products;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Services")
-    private java.util.List < Services> services;
+    private java.util.List<Services> services;
 
     private ListProductsResponseBody(Builder builder) {
         this.products = builder.products;
@@ -38,7 +43,7 @@ public class ListProductsResponseBody extends TeaModel {
     /**
      * @return products
      */
-    public java.util.List < Products> getProducts() {
+    public java.util.List<Products> getProducts() {
         return this.products;
     }
 
@@ -52,19 +57,19 @@ public class ListProductsResponseBody extends TeaModel {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
     public static final class Builder {
-        private java.util.List < Products> products; 
+        private java.util.List<Products> products; 
         private String requestId; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
 
         /**
          * Products.
          */
-        public Builder products(java.util.List < Products> products) {
+        public Builder products(java.util.List<Products> products) {
             this.products = products;
             return this;
         }
@@ -80,7 +85,7 @@ public class ListProductsResponseBody extends TeaModel {
         /**
          * Services.
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             this.services = services;
             return this;
         }

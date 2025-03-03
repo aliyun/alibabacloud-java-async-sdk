@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class UpdateModelRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExtraInfo")
-    private java.util.Map < String, ? > extraInfo;
+    private java.util.Map<String, ?> extraInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModelDescription")
@@ -109,7 +114,7 @@ public class UpdateModelRequest extends Request {
     /**
      * @return extraInfo
      */
-    public java.util.Map < String, ? > getExtraInfo() {
+    public java.util.Map<String, ?> getExtraInfo() {
         return this.extraInfo;
     }
 
@@ -166,7 +171,7 @@ public class UpdateModelRequest extends Request {
         private String modelId; 
         private String accessibility; 
         private String domain; 
-        private java.util.Map < String, ? > extraInfo; 
+        private java.util.Map<String, ?> extraInfo; 
         private String modelDescription; 
         private String modelDoc; 
         private String modelName; 
@@ -227,7 +232,7 @@ public class UpdateModelRequest extends Request {
         /**
          * ExtraInfo.
          */
-        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+        public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.putBodyParameter("ExtraInfo", extraInfo);
             this.extraInfo = extraInfo;
             return this;

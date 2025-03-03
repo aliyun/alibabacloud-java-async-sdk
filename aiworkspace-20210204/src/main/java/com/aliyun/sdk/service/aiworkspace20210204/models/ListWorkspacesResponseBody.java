@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceLimits")
-    private java.util.Map < String, ? > resourceLimits;
+    private java.util.Map<String, ?> resourceLimits;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("Workspaces")
-    private java.util.List < Workspaces> workspaces;
+    private java.util.List<Workspaces> workspaces;
 
     private ListWorkspacesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -49,7 +54,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     /**
      * @return resourceLimits
      */
-    public java.util.Map < String, ? > getResourceLimits() {
+    public java.util.Map<String, ?> getResourceLimits() {
         return this.resourceLimits;
     }
 
@@ -63,15 +68,15 @@ public class ListWorkspacesResponseBody extends TeaModel {
     /**
      * @return workspaces
      */
-    public java.util.List < Workspaces> getWorkspaces() {
+    public java.util.List<Workspaces> getWorkspaces() {
         return this.workspaces;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > resourceLimits; 
+        private java.util.Map<String, ?> resourceLimits; 
         private Long totalCount; 
-        private java.util.List < Workspaces> workspaces; 
+        private java.util.List<Workspaces> workspaces; 
 
         /**
          * RequestId.
@@ -84,7 +89,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         /**
          * ResourceLimits.
          */
-        public Builder resourceLimits(java.util.Map < String, ? > resourceLimits) {
+        public Builder resourceLimits(java.util.Map<String, ?> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }
@@ -100,7 +105,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         /**
          * Workspaces.
          */
-        public Builder workspaces(java.util.List < Workspaces> workspaces) {
+        public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
@@ -119,7 +124,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
      */
     public static class Workspaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminNames")
-        private java.util.List < String > adminNames;
+        private java.util.List<String> adminNames;
 
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
@@ -128,10 +133,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("EnvTypes")
-        private java.util.List < String > envTypes;
+        private java.util.List<String> envTypes;
 
         @com.aliyun.core.annotation.NameInMap("ExtraInfos")
-        private java.util.Map < String, ? > extraInfos;
+        private java.util.Map<String, ?> extraInfos;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -151,6 +156,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         private Workspaces(Builder builder) {
             this.adminNames = builder.adminNames;
             this.creator = builder.creator;
@@ -163,6 +171,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.status = builder.status;
             this.workspaceId = builder.workspaceId;
             this.workspaceName = builder.workspaceName;
+            this.resourceGroupId = builder.resourceGroupId;
         }
 
         public static Builder builder() {
@@ -176,7 +185,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         /**
          * @return adminNames
          */
-        public java.util.List < String > getAdminNames() {
+        public java.util.List<String> getAdminNames() {
             return this.adminNames;
         }
 
@@ -197,14 +206,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         /**
          * @return envTypes
          */
-        public java.util.List < String > getEnvTypes() {
+        public java.util.List<String> getEnvTypes() {
             return this.envTypes;
         }
 
         /**
          * @return extraInfos
          */
-        public java.util.Map < String, ? > getExtraInfos() {
+        public java.util.Map<String, ?> getExtraInfos() {
             return this.extraInfos;
         }
 
@@ -250,23 +259,31 @@ public class ListWorkspacesResponseBody extends TeaModel {
             return this.workspaceName;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public static final class Builder {
-            private java.util.List < String > adminNames; 
+            private java.util.List<String> adminNames; 
             private String creator; 
             private String description; 
-            private java.util.List < String > envTypes; 
-            private java.util.Map < String, ? > extraInfos; 
+            private java.util.List<String> envTypes; 
+            private java.util.Map<String, ?> extraInfos; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private Boolean isDefault; 
             private String status; 
             private String workspaceId; 
             private String workspaceName; 
+            private String resourceGroupId; 
 
             /**
              * AdminNames.
              */
-            public Builder adminNames(java.util.List < String > adminNames) {
+            public Builder adminNames(java.util.List<String> adminNames) {
                 this.adminNames = adminNames;
                 return this;
             }
@@ -290,7 +307,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             /**
              * EnvTypes.
              */
-            public Builder envTypes(java.util.List < String > envTypes) {
+            public Builder envTypes(java.util.List<String> envTypes) {
                 this.envTypes = envTypes;
                 return this;
             }
@@ -298,7 +315,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             /**
              * ExtraInfos.
              */
-            public Builder extraInfos(java.util.Map < String, ? > extraInfos) {
+            public Builder extraInfos(java.util.Map<String, ?> extraInfos) {
                 this.extraInfos = extraInfos;
                 return this;
             }
@@ -348,6 +365,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
+                return this;
+            }
+
+            /**
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class Experiment extends TeaModel {
     private String gmtModifiedTime;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < ExperimentLabel > labels;
+    private java.util.List<ExperimentLabel> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatestRun")
     private Run latestRun;
@@ -113,7 +118,7 @@ public class Experiment extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < ExperimentLabel > getLabels() {
+    public java.util.List<ExperimentLabel> getLabels() {
         return this.labels;
     }
 
@@ -172,7 +177,7 @@ public class Experiment extends TeaModel {
         private String experimentId; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private java.util.List < ExperimentLabel > labels; 
+        private java.util.List<ExperimentLabel> labels; 
         private Run latestRun; 
         private String name; 
         private String ownerId; 
@@ -224,7 +229,7 @@ public class Experiment extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < ExperimentLabel > labels) {
+        public Builder labels(java.util.List<ExperimentLabel> labels) {
             this.labels = labels;
             return this;
         }

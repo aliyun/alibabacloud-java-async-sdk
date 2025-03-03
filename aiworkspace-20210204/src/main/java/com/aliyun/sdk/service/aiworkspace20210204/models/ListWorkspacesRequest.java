@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,6 +42,10 @@ public class ListWorkspacesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -64,6 +73,7 @@ public class ListWorkspacesRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sortBy = builder.sortBy;
         this.status = builder.status;
         this.verbose = builder.verbose;
@@ -127,6 +137,13 @@ public class ListWorkspacesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -168,6 +185,7 @@ public class ListWorkspacesRequest extends Request {
         private String order; 
         private Long pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private String sortBy; 
         private String status; 
         private Boolean verbose; 
@@ -186,6 +204,7 @@ public class ListWorkspacesRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.sortBy = request.sortBy;
             this.status = request.status;
             this.verbose = request.verbose;
@@ -244,6 +263,15 @@ public class ListWorkspacesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

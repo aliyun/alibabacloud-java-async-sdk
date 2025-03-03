@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListExperimentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Experiments")
-    private java.util.List < Experiment > experiments;
+    private java.util.List<Experiment> experiments;
 
     @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private Long nextPageToken;
@@ -42,7 +47,7 @@ public class ListExperimentResponseBody extends TeaModel {
     /**
      * @return experiments
      */
-    public java.util.List < Experiment > getExperiments() {
+    public java.util.List<Experiment> getExperiments() {
         return this.experiments;
     }
 
@@ -68,7 +73,7 @@ public class ListExperimentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Experiment > experiments; 
+        private java.util.List<Experiment> experiments; 
         private Long nextPageToken; 
         private Long totalCount; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListExperimentResponseBody extends TeaModel {
         /**
          * Experiments.
          */
-        public Builder experiments(java.util.List < Experiment > experiments) {
+        public Builder experiments(java.util.List<Experiment> experiments) {
             this.experiments = experiments;
             return this;
         }

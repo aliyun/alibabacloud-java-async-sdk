@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,11 +38,20 @@ public class GetDatasetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
+    @com.aliyun.core.annotation.NameInMap("ImportInfo")
+    private String importInfo;
+
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatestVersion")
     private DatasetVersion latestVersion;
+
+    @com.aliyun.core.annotation.NameInMap("MountAccess")
+    private String mountAccess;
+
+    @com.aliyun.core.annotation.NameInMap("MountAccessReadWriteRoleIdList")
+    private java.util.List<String> mountAccessReadWriteRoleIdList;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -92,8 +106,11 @@ public class GetDatasetResponseBody extends TeaModel {
         this.description = builder.description;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.importInfo = builder.importInfo;
         this.labels = builder.labels;
         this.latestVersion = builder.latestVersion;
+        this.mountAccess = builder.mountAccess;
+        this.mountAccessReadWriteRoleIdList = builder.mountAccessReadWriteRoleIdList;
         this.name = builder.name;
         this.options = builder.options;
         this.ownerId = builder.ownerId;
@@ -169,9 +186,16 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     /**
+     * @return importInfo
+     */
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
+    /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -180,6 +204,20 @@ public class GetDatasetResponseBody extends TeaModel {
      */
     public DatasetVersion getLatestVersion() {
         return this.latestVersion;
+    }
+
+    /**
+     * @return mountAccess
+     */
+    public String getMountAccess() {
+        return this.mountAccess;
+    }
+
+    /**
+     * @return mountAccessReadWriteRoleIdList
+     */
+    public java.util.List<String> getMountAccessReadWriteRoleIdList() {
+        return this.mountAccessReadWriteRoleIdList;
     }
 
     /**
@@ -295,8 +333,11 @@ public class GetDatasetResponseBody extends TeaModel {
         private String description; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private java.util.List < Label > labels; 
+        private String importInfo; 
+        private java.util.List<Label> labels; 
         private DatasetVersion latestVersion; 
+        private String mountAccess; 
+        private java.util.List<String> mountAccessReadWriteRoleIdList; 
         private String name; 
         private String options; 
         private String ownerId; 
@@ -370,9 +411,17 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
+         * ImportInfo.
+         */
+        public Builder importInfo(String importInfo) {
+            this.importInfo = importInfo;
+            return this;
+        }
+
+        /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
             return this;
         }
@@ -382,6 +431,22 @@ public class GetDatasetResponseBody extends TeaModel {
          */
         public Builder latestVersion(DatasetVersion latestVersion) {
             this.latestVersion = latestVersion;
+            return this;
+        }
+
+        /**
+         * MountAccess.
+         */
+        public Builder mountAccess(String mountAccess) {
+            this.mountAccess = mountAccess;
+            return this;
+        }
+
+        /**
+         * MountAccessReadWriteRoleIdList.
+         */
+        public Builder mountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
+            this.mountAccessReadWriteRoleIdList = mountAccessReadWriteRoleIdList;
             return this;
         }
 

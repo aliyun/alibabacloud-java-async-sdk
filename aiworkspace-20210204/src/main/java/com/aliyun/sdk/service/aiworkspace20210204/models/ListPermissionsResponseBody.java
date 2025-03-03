@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPermissionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Permissions")
-    private java.util.List < Permissions> permissions;
+    private java.util.List<Permissions> permissions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     /**
      * @return permissions
      */
-    public java.util.List < Permissions> getPermissions() {
+    public java.util.List<Permissions> getPermissions() {
         return this.permissions;
     }
 
@@ -57,14 +62,14 @@ public class ListPermissionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Permissions> permissions; 
+        private java.util.List<Permissions> permissions; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Permissions.
          */
-        public Builder permissions(java.util.List < Permissions> permissions) {
+        public Builder permissions(java.util.List<Permissions> permissions) {
             this.permissions = permissions;
             return this;
         }
@@ -169,7 +174,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         private String permissionCode;
 
         @com.aliyun.core.annotation.NameInMap("PermissionRules")
-        private java.util.List < PermissionRules> permissionRules;
+        private java.util.List<PermissionRules> permissionRules;
 
         private Permissions(Builder builder) {
             this.permissionCode = builder.permissionCode;
@@ -194,13 +199,13 @@ public class ListPermissionsResponseBody extends TeaModel {
         /**
          * @return permissionRules
          */
-        public java.util.List < PermissionRules> getPermissionRules() {
+        public java.util.List<PermissionRules> getPermissionRules() {
             return this.permissionRules;
         }
 
         public static final class Builder {
             private String permissionCode; 
-            private java.util.List < PermissionRules> permissionRules; 
+            private java.util.List<PermissionRules> permissionRules; 
 
             /**
              * PermissionCode.
@@ -213,7 +218,7 @@ public class ListPermissionsResponseBody extends TeaModel {
             /**
              * PermissionRules.
              */
-            public Builder permissionRules(java.util.List < PermissionRules> permissionRules) {
+            public Builder permissionRules(java.util.List<PermissionRules> permissionRules) {
                 this.permissionRules = permissionRules;
                 return this;
             }

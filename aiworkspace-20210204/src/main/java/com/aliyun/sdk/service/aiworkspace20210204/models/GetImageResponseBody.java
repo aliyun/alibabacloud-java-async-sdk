@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class GetImageResponseBody extends TeaModel {
     private String imageUri;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -109,7 +114,7 @@ public class GetImageResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -161,7 +166,7 @@ public class GetImageResponseBody extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String imageUri; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private String name; 
         private String parentUserId; 
         private String requestId; 
@@ -212,7 +217,7 @@ public class GetImageResponseBody extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }

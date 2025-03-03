@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListQuotasResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Quotas")
-    private java.util.List < Quotas> quotas;
+    private java.util.List<Quotas> quotas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListQuotasResponseBody extends TeaModel {
     /**
      * @return quotas
      */
-    public java.util.List < Quotas> getQuotas() {
+    public java.util.List<Quotas> getQuotas() {
         return this.quotas;
     }
 
@@ -57,14 +62,14 @@ public class ListQuotasResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Quotas> quotas; 
+        private java.util.List<Quotas> quotas; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Quotas.
          */
-        public Builder quotas(java.util.List < Quotas> quotas) {
+        public Builder quotas(java.util.List<Quotas> quotas) {
             this.quotas = quotas;
             return this;
         }
@@ -204,7 +209,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String quotaType;
 
         @com.aliyun.core.annotation.NameInMap("Specs")
-        private java.util.List < Specs> specs;
+        private java.util.List<Specs> specs;
 
         private Quotas(Builder builder) {
             this.displayName = builder.displayName;
@@ -269,7 +274,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return specs
          */
-        public java.util.List < Specs> getSpecs() {
+        public java.util.List<Specs> getSpecs() {
             return this.specs;
         }
 
@@ -280,7 +285,7 @@ public class ListQuotasResponseBody extends TeaModel {
             private String name; 
             private String productCode; 
             private String quotaType; 
-            private java.util.List < Specs> specs; 
+            private java.util.List<Specs> specs; 
 
             /**
              * DisplayName.
@@ -333,7 +338,7 @@ public class ListQuotasResponseBody extends TeaModel {
             /**
              * Specs.
              */
-            public Builder specs(java.util.List < Specs> specs) {
+            public Builder specs(java.util.List<Specs> specs) {
                 this.specs = specs;
                 return this;
             }

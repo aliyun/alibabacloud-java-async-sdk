@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetDefaultWorkspaceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Conditions")
-    private java.util.List < Conditions> conditions;
+    private java.util.List<Conditions> conditions;
 
     @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
@@ -25,7 +30,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     private String displayName;
 
     @com.aliyun.core.annotation.NameInMap("EnvTypes")
-    private java.util.List < String > envTypes;
+    private java.util.List<String> envTypes;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -74,7 +79,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     /**
      * @return conditions
      */
-    public java.util.List < Conditions> getConditions() {
+    public java.util.List<Conditions> getConditions() {
         return this.conditions;
     }
 
@@ -102,7 +107,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     /**
      * @return envTypes
      */
-    public java.util.List < String > getEnvTypes() {
+    public java.util.List<String> getEnvTypes() {
         return this.envTypes;
     }
 
@@ -156,11 +161,11 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Conditions> conditions; 
+        private java.util.List<Conditions> conditions; 
         private String creator; 
         private String description; 
         private String displayName; 
-        private java.util.List < String > envTypes; 
+        private java.util.List<String> envTypes; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private Owner owner; 
@@ -172,7 +177,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         /**
          * Conditions.
          */
-        public Builder conditions(java.util.List < Conditions> conditions) {
+        public Builder conditions(java.util.List<Conditions> conditions) {
             this.conditions = conditions;
             return this;
         }
@@ -204,7 +209,7 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
         /**
          * EnvTypes.
          */
-        public Builder envTypes(java.util.List < String > envTypes) {
+        public Builder envTypes(java.util.List<String> envTypes) {
             this.envTypes = envTypes;
             return this;
         }

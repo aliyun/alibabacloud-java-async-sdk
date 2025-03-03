@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetPermissionResponseBody extends TeaModel {
     private String permissionCode;
 
     @com.aliyun.core.annotation.NameInMap("PermissionRules")
-    private java.util.List < PermissionRules> permissionRules;
+    private java.util.List<PermissionRules> permissionRules;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class GetPermissionResponseBody extends TeaModel {
     /**
      * @return permissionRules
      */
-    public java.util.List < PermissionRules> getPermissionRules() {
+    public java.util.List<PermissionRules> getPermissionRules() {
         return this.permissionRules;
     }
 
@@ -58,7 +63,7 @@ public class GetPermissionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String permissionCode; 
-        private java.util.List < PermissionRules> permissionRules; 
+        private java.util.List<PermissionRules> permissionRules; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class GetPermissionResponseBody extends TeaModel {
         /**
          * PermissionRules.
          */
-        public Builder permissionRules(java.util.List < PermissionRules> permissionRules) {
+        public Builder permissionRules(java.util.List<PermissionRules> permissionRules) {
             this.permissionRules = permissionRules;
             return this;
         }

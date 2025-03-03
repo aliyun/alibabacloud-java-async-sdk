@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetModelResponseBody extends TeaModel {
     private String domain;
 
     @com.aliyun.core.annotation.NameInMap("ExtraInfo")
-    private java.util.Map < String, ? > extraInfo;
+    private java.util.Map<String, ?> extraInfo;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -28,7 +33,7 @@ public class GetModelResponseBody extends TeaModel {
     private String gmtModifiedTime;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatestVersion")
     private ModelVersion latestVersion;
@@ -120,7 +125,7 @@ public class GetModelResponseBody extends TeaModel {
     /**
      * @return extraInfo
      */
-    public java.util.Map < String, ? > getExtraInfo() {
+    public java.util.Map<String, ?> getExtraInfo() {
         return this.extraInfo;
     }
 
@@ -141,7 +146,7 @@ public class GetModelResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -246,10 +251,10 @@ public class GetModelResponseBody extends TeaModel {
     public static final class Builder {
         private String accessibility; 
         private String domain; 
-        private java.util.Map < String, ? > extraInfo; 
+        private java.util.Map<String, ?> extraInfo; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private ModelVersion latestVersion; 
         private String modelDescription; 
         private String modelDoc; 
@@ -284,7 +289,7 @@ public class GetModelResponseBody extends TeaModel {
         /**
          * ExtraInfo.
          */
-        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+        public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.extraInfo = extraInfo;
             return this;
         }
@@ -308,7 +313,7 @@ public class GetModelResponseBody extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
             return this;
         }

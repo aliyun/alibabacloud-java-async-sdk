@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class CreateModelRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExtraInfo")
-    private java.util.Map < String, ? > extraInfo;
+    private java.util.Map<String, ?> extraInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModelDescription")
@@ -107,14 +112,14 @@ public class CreateModelRequest extends Request {
     /**
      * @return extraInfo
      */
-    public java.util.Map < String, ? > getExtraInfo() {
+    public java.util.Map<String, ?> getExtraInfo() {
         return this.extraInfo;
     }
 
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -177,8 +182,8 @@ public class CreateModelRequest extends Request {
     public static final class Builder extends Request.Builder<CreateModelRequest, Builder> {
         private String accessibility; 
         private String domain; 
-        private java.util.Map < String, ? > extraInfo; 
-        private java.util.List < Label > labels; 
+        private java.util.Map<String, ?> extraInfo; 
+        private java.util.List<Label> labels; 
         private String modelDescription; 
         private String modelDoc; 
         private String modelName; 
@@ -229,7 +234,7 @@ public class CreateModelRequest extends Request {
         /**
          * ExtraInfo.
          */
-        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+        public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
             this.putBodyParameter("ExtraInfo", extraInfo);
             this.extraInfo = extraInfo;
             return this;
@@ -238,7 +243,7 @@ public class CreateModelRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

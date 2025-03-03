@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AcceptDataworksEvent  AcceptDataworksEventRequest
+     * @return AcceptDataworksEventResponse
+     */
+    @Override
+    public CompletableFuture<AcceptDataworksEventResponse> acceptDataworksEvent(AcceptDataworksEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AcceptDataworksEvent").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/action/acceptdataworksevent").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AcceptDataworksEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AcceptDataworksEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddImage  AddImageRequest
      * @return AddImageResponse
      */
@@ -94,6 +112,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    @Override
+    public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChangeResourceGroup").setMethod(HttpMethod.PUT).setPathRegex("/resourcegroups/action/changeresourcegroup").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeResourceGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeResourceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateCodeSource  CreateCodeSourceRequest
      * @return CreateCodeSourceResponse
      */
@@ -124,6 +160,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDatasetFileMetas  CreateDatasetFileMetasRequest
+     * @return CreateDatasetFileMetasResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatasetFileMetasResponse> createDatasetFileMetas(CreateDatasetFileMetasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDatasetFileMetas").setMethod(HttpMethod.POST).setPathRegex("/api/v1/datasets/{DatasetId}/datasetfilemetas").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatasetFileMetasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatasetFileMetasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDatasetJob  CreateDatasetJobRequest
+     * @return CreateDatasetJobResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatasetJobResponse> createDatasetJob(CreateDatasetJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDatasetJob").setMethod(HttpMethod.POST).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatasetJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatasetJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDatasetJobConfig  CreateDatasetJobConfigRequest
+     * @return CreateDatasetJobConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateDatasetJobConfigResponse> createDatasetJobConfig(CreateDatasetJobConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDatasetJobConfig").setMethod(HttpMethod.POST).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDatasetJobConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDatasetJobConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -394,6 +484,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDatasetFileMetas  DeleteDatasetFileMetasRequest
+     * @return DeleteDatasetFileMetasResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetFileMetasResponse> deleteDatasetFileMetas(DeleteDatasetFileMetasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDatasetFileMetas").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/datasets/{DatasetId}/datasetfilemetas").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetFileMetasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetFileMetasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDatasetJob  DeleteDatasetJobRequest
+     * @return DeleteDatasetJobResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetJobResponse> deleteDatasetJob(DeleteDatasetJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDatasetJob").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobs/{DatasetJobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDatasetJobConfig  DeleteDatasetJobConfigRequest
+     * @return DeleteDatasetJobConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDatasetJobConfigResponse> deleteDatasetJobConfig(DeleteDatasetJobConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDatasetJobConfig").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobconfigs/{DatasetJobConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDatasetJobConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDatasetJobConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -688,6 +832,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDatasetFileMeta  GetDatasetFileMetaRequest
+     * @return GetDatasetFileMetaResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetFileMetaResponse> getDatasetFileMeta(GetDatasetFileMetaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatasetFileMeta").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/datasetfilemetas/{DatasetFileMetaId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetFileMetaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetFileMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDatasetJob  GetDatasetJobRequest
+     * @return GetDatasetJobResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetJobResponse> getDatasetJob(GetDatasetJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatasetJob").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobs/{DatasetJobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDatasetJobConfig  GetDatasetJobConfigRequest
+     * @return GetDatasetJobConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetDatasetJobConfigResponse> getDatasetJobConfig(GetDatasetJobConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatasetJobConfig").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobconfigs/{DatasetJobConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatasetJobConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatasetJobConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDatasetVersion  GetDatasetVersionRequest
      * @return GetDatasetVersionResponse
      */
@@ -880,6 +1078,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCodeSourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatasetFileMetas  ListDatasetFileMetasRequest
+     * @return ListDatasetFileMetasResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasetFileMetasResponse> listDatasetFileMetas(ListDatasetFileMetasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatasetFileMetas").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/datasetfilemetas").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasetFileMetasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasetFileMetasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatasetJobConfigs  ListDatasetJobConfigsRequest
+     * @return ListDatasetJobConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasetJobConfigsResponse> listDatasetJobConfigs(ListDatasetJobConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatasetJobConfigs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobconfigs/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasetJobConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasetJobConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDatasetJobs  ListDatasetJobsRequest
+     * @return ListDatasetJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatasetJobsResponse> listDatasetJobs(ListDatasetJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatasetJobs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatasetJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatasetJobsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1318,6 +1570,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StopDatasetJob  StopDatasetJobRequest
+     * @return StopDatasetJobResponse
+     */
+    @Override
+    public CompletableFuture<StopDatasetJobResponse> stopDatasetJob(StopDatasetJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopDatasetJob").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobs/{DatasetJobId}/action/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopDatasetJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopDatasetJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateCodeSource  UpdateCodeSourceRequest
      * @return UpdateCodeSourceResponse
      */
@@ -1348,6 +1618,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDatasetFileMetas  UpdateDatasetFileMetasRequest
+     * @return UpdateDatasetFileMetasResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDatasetFileMetasResponse> updateDatasetFileMetas(UpdateDatasetFileMetasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDatasetFileMetas").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/datasets/{DatasetId}/datasetfilemetas").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDatasetFileMetasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDatasetFileMetasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDatasetJob  UpdateDatasetJobRequest
+     * @return UpdateDatasetJobResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDatasetJobResponse> updateDatasetJob(UpdateDatasetJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDatasetJob").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobs/{DatasetJobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDatasetJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDatasetJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDatasetJobConfig  UpdateDatasetJobConfigRequest
+     * @return UpdateDatasetJobConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDatasetJobConfigResponse> updateDatasetJobConfig(UpdateDatasetJobConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDatasetJobConfig").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/datasets/{DatasetId}/datasetjobconfigs/{DatasetJobConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDatasetJobConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDatasetJobConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

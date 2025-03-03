@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListRunsResponseBody extends TeaModel {
     private Long nextPageToken;
 
     @com.aliyun.core.annotation.NameInMap("Runs")
-    private java.util.List < Run > runs;
+    private java.util.List<Run> runs;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -49,7 +54,7 @@ public class ListRunsResponseBody extends TeaModel {
     /**
      * @return runs
      */
-    public java.util.List < Run > getRuns() {
+    public java.util.List<Run> getRuns() {
         return this.runs;
     }
 
@@ -69,7 +74,7 @@ public class ListRunsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long nextPageToken; 
-        private java.util.List < Run > runs; 
+        private java.util.List<Run> runs; 
         private Long totalCount; 
         private String requestId; 
 
@@ -84,7 +89,7 @@ public class ListRunsResponseBody extends TeaModel {
         /**
          * Runs.
          */
-        public Builder runs(java.util.List < Run > runs) {
+        public Builder runs(java.util.List<Run> runs) {
             this.runs = runs;
             return this;
         }

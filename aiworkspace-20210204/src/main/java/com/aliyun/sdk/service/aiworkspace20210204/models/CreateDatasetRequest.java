@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,8 +45,16 @@ public class CreateDatasetRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImportInfo")
+    private String importInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MountAccessReadWriteRoleIdList")
+    private java.util.List<String> mountAccessReadWriteRoleIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -96,7 +109,7 @@ public class CreateDatasetRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VersionLabels")
-    private java.util.List < Label > versionLabels;
+    private java.util.List<Label> versionLabels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -110,7 +123,9 @@ public class CreateDatasetRequest extends Request {
         this.dataSourceType = builder.dataSourceType;
         this.dataType = builder.dataType;
         this.description = builder.description;
+        this.importInfo = builder.importInfo;
         this.labels = builder.labels;
+        this.mountAccessReadWriteRoleIdList = builder.mountAccessReadWriteRoleIdList;
         this.name = builder.name;
         this.options = builder.options;
         this.property = builder.property;
@@ -183,10 +198,24 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return importInfo
+     */
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
+    /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return mountAccessReadWriteRoleIdList
+     */
+    public java.util.List<String> getMountAccessReadWriteRoleIdList() {
+        return this.mountAccessReadWriteRoleIdList;
     }
 
     /**
@@ -276,7 +305,7 @@ public class CreateDatasetRequest extends Request {
     /**
      * @return versionLabels
      */
-    public java.util.List < Label > getVersionLabels() {
+    public java.util.List<Label> getVersionLabels() {
         return this.versionLabels;
     }
 
@@ -294,7 +323,9 @@ public class CreateDatasetRequest extends Request {
         private String dataSourceType; 
         private String dataType; 
         private String description; 
-        private java.util.List < Label > labels; 
+        private String importInfo; 
+        private java.util.List<Label> labels; 
+        private java.util.List<String> mountAccessReadWriteRoleIdList; 
         private String name; 
         private String options; 
         private String property; 
@@ -307,7 +338,7 @@ public class CreateDatasetRequest extends Request {
         private String uri; 
         private String userId; 
         private String versionDescription; 
-        private java.util.List < Label > versionLabels; 
+        private java.util.List<Label> versionLabels; 
         private String workspaceId; 
 
         private Builder() {
@@ -322,7 +353,9 @@ public class CreateDatasetRequest extends Request {
             this.dataSourceType = request.dataSourceType;
             this.dataType = request.dataType;
             this.description = request.description;
+            this.importInfo = request.importInfo;
             this.labels = request.labels;
+            this.mountAccessReadWriteRoleIdList = request.mountAccessReadWriteRoleIdList;
             this.name = request.name;
             this.options = request.options;
             this.property = request.property;
@@ -397,11 +430,29 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * ImportInfo.
+         */
+        public Builder importInfo(String importInfo) {
+            this.putBodyParameter("ImportInfo", importInfo);
+            this.importInfo = importInfo;
+            return this;
+        }
+
+        /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * MountAccessReadWriteRoleIdList.
+         */
+        public Builder mountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
+            this.putBodyParameter("MountAccessReadWriteRoleIdList", mountAccessReadWriteRoleIdList);
+            this.mountAccessReadWriteRoleIdList = mountAccessReadWriteRoleIdList;
             return this;
         }
 
@@ -525,7 +576,7 @@ public class CreateDatasetRequest extends Request {
         /**
          * VersionLabels.
          */
-        public Builder versionLabels(java.util.List < Label > versionLabels) {
+        public Builder versionLabels(java.util.List<Label> versionLabels) {
             this.putBodyParameter("VersionLabels", versionLabels);
             this.versionLabels = versionLabels;
             return this;

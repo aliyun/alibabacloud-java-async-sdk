@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,8 +39,14 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
+    @com.aliyun.core.annotation.NameInMap("ImportInfo")
+    private String importInfo;
+
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
+
+    @com.aliyun.core.annotation.NameInMap("MountAccess")
+    private String mountAccess;
 
     @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
@@ -68,7 +79,9 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         this.description = builder.description;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.importInfo = builder.importInfo;
         this.labels = builder.labels;
+        this.mountAccess = builder.mountAccess;
         this.options = builder.options;
         this.property = builder.property;
         this.requestId = builder.requestId;
@@ -136,10 +149,24 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return importInfo
+     */
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
+    /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return mountAccess
+     */
+    public String getMountAccess() {
+        return this.mountAccess;
     }
 
     /**
@@ -199,7 +226,9 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         private String description; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private java.util.List < Label > labels; 
+        private String importInfo; 
+        private java.util.List<Label> labels; 
+        private String mountAccess; 
         private String options; 
         private String property; 
         private String requestId; 
@@ -270,10 +299,26 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
+         * ImportInfo.
+         */
+        public Builder importInfo(String importInfo) {
+            this.importInfo = importInfo;
+            return this;
+        }
+
+        /**
          * <p>代表资源标签的资源属性字段</p>
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * MountAccess.
+         */
+        public Builder mountAccess(String mountAccess) {
+            this.mountAccess = mountAccess;
             return this;
         }
 

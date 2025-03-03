@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class GetPermissionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.Map < String, ? > labels;
+    private java.util.Map<String, ?> labels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Option")
@@ -97,7 +102,7 @@ public class GetPermissionRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.Map < String, ? > getLabels() {
+    public java.util.Map<String, ?> getLabels() {
         return this.labels;
     }
 
@@ -120,7 +125,7 @@ public class GetPermissionRequest extends Request {
         private String permissionCode; 
         private String accessibility; 
         private String creator; 
-        private java.util.Map < String, ? > labels; 
+        private java.util.Map<String, ?> labels; 
         private String option; 
         private String resource; 
 
@@ -184,7 +189,7 @@ public class GetPermissionRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.Map < String, ? > labels) {
+        public Builder labels(java.util.Map<String, ?> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
             this.putQueryParameter("Labels", labelsShrink);
             this.labels = labels;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRunMetricsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Metrics")
-    private java.util.List < RunMetric > metrics;
+    private java.util.List<RunMetric> metrics;
 
     @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private Long nextPageToken;
@@ -38,7 +43,7 @@ public class ListRunMetricsResponseBody extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.List < RunMetric > getMetrics() {
+    public java.util.List<RunMetric> getMetrics() {
         return this.metrics;
     }
 
@@ -57,14 +62,14 @@ public class ListRunMetricsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RunMetric > metrics; 
+        private java.util.List<RunMetric> metrics; 
         private Long nextPageToken; 
         private String requestId; 
 
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < RunMetric > metrics) {
+        public Builder metrics(java.util.List<RunMetric> metrics) {
             this.metrics = metrics;
             return this;
         }

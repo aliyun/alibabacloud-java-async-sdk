@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,16 +23,12 @@ public class ListDatasetVersionsRequest extends Request {
     private String datasetId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DataSourcesTypes")
-    private String dataSourcesTypes;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LabelKeys")
     private String labelKeys;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("LableValues")
-    private String lableValues;
+    @com.aliyun.core.annotation.NameInMap("LabelValues")
+    private String labelValues;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -62,9 +63,8 @@ public class ListDatasetVersionsRequest extends Request {
     private ListDatasetVersionsRequest(Builder builder) {
         super(builder);
         this.datasetId = builder.datasetId;
-        this.dataSourcesTypes = builder.dataSourcesTypes;
         this.labelKeys = builder.labelKeys;
-        this.lableValues = builder.lableValues;
+        this.labelValues = builder.labelValues;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -95,13 +95,6 @@ public class ListDatasetVersionsRequest extends Request {
     }
 
     /**
-     * @return dataSourcesTypes
-     */
-    public String getDataSourcesTypes() {
-        return this.dataSourcesTypes;
-    }
-
-    /**
      * @return labelKeys
      */
     public String getLabelKeys() {
@@ -109,10 +102,10 @@ public class ListDatasetVersionsRequest extends Request {
     }
 
     /**
-     * @return lableValues
+     * @return labelValues
      */
-    public String getLableValues() {
-        return this.lableValues;
+    public String getLabelValues() {
+        return this.labelValues;
     }
 
     /**
@@ -166,9 +159,8 @@ public class ListDatasetVersionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDatasetVersionsRequest, Builder> {
         private String datasetId; 
-        private String dataSourcesTypes; 
         private String labelKeys; 
-        private String lableValues; 
+        private String labelValues; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -184,9 +176,8 @@ public class ListDatasetVersionsRequest extends Request {
         private Builder(ListDatasetVersionsRequest request) {
             super(request);
             this.datasetId = request.datasetId;
-            this.dataSourcesTypes = request.dataSourcesTypes;
             this.labelKeys = request.labelKeys;
-            this.lableValues = request.lableValues;
+            this.labelValues = request.labelValues;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -209,15 +200,6 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * DataSourcesTypes.
-         */
-        public Builder dataSourcesTypes(String dataSourcesTypes) {
-            this.putQueryParameter("DataSourcesTypes", dataSourcesTypes);
-            this.dataSourcesTypes = dataSourcesTypes;
-            return this;
-        }
-
-        /**
          * LabelKeys.
          */
         public Builder labelKeys(String labelKeys) {
@@ -227,11 +209,11 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * LableValues.
+         * LabelValues.
          */
-        public Builder lableValues(String lableValues) {
-            this.putQueryParameter("LableValues", lableValues);
-            this.lableValues = lableValues;
+        public Builder labelValues(String labelValues) {
+            this.putQueryParameter("LabelValues", labelValues);
+            this.labelValues = labelValues;
             return this;
         }
 
