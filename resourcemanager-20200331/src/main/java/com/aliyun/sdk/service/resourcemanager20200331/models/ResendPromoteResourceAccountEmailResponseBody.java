@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResendPromoteResourceAccountEmailResponseBody} extends {@link TeaModel}
  *
  * <p>ResendPromoteResourceAccountEmailResponseBody</p>
  */
 public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.NameInMap("Account")
     private Account account;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ResendPromoteResourceAccountEmailResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the member account.
+         * <p>The information of the member account.</p>
          */
         public Builder account(Account account) {
             this.account = account;
@@ -58,7 +63,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ResendPromoteResourceAccountEmailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResendPromoteResourceAccountEmailResponseBody</p>
+     */
     public static class Account extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("JoinMethod")
+        @com.aliyun.core.annotation.NameInMap("JoinMethod")
         private String joinMethod;
 
-        @NameInMap("JoinTime")
+        @com.aliyun.core.annotation.NameInMap("JoinTime")
         private String joinTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Account(Builder builder) {
@@ -218,7 +232,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the account.
+             * <p>The ID of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12323344****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -226,7 +243,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -234,7 +254,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member account.
+             * <p>The display name of the member account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -242,7 +265,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-bVaRIG****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -250,11 +276,14 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member account joined the resource directory. Valid values:
-             * <p>
+             * <p>The way in which the member account joined the resource directory. Valid values:</p>
+             * <ul>
+             * <li>invited: The member account is invited to join the resource directory.</li>
+             * <li>created: The member account is directly created in the resource directory.</li>
+             * </ul>
              * 
-             * *   invited: The member account is invited to join the resource directory.
-             * *   created: The member account is directly created in the resource directory.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -262,7 +291,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member account joined the resource directory.
+             * <p>The time when the member account joined the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -270,7 +302,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member account was modified.
+             * <p>The time when the member account was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -278,7 +313,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The account record ID.
+             * <p>The account record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16950264-3f0d-4ca9-82dd-6ee7a3d33d6b</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -286,7 +324,10 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-k3****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -294,21 +335,24 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member account. Valid values:
-             * <p>
+             * <p>The status of the member account. Valid values:</p>
+             * <ul>
+             * <li>CreateSuccess: The member account is created.</li>
+             * <li>CreateVerifying: The creation of the member account is under confirmation.</li>
+             * <li>CreateFailed: The member account failed to be created.</li>
+             * <li>CreateExpired: The creation of the member account expired.</li>
+             * <li>CreateCancelled: The creation of the member account is canceled.</li>
+             * <li>PromoteVerifying: The upgrade of the member account is under confirmation.</li>
+             * <li>PromoteFailed: The member account failed to be upgraded.</li>
+             * <li>PromoteExpired: The upgrade of the member account expired.</li>
+             * <li>PromoteCancelled: The upgrade of the member account is canceled.</li>
+             * <li>PromoteSuccess: The member account is upgraded.</li>
+             * <li>InviteSuccess: The owner of the member account accepted the invitation.</li>
+             * <li>Removed: The member account is removed from the resource directory.</li>
+             * </ul>
              * 
-             * *   CreateSuccess: The member account is created.
-             * *   CreateVerifying: The creation of the member account is under confirmation.
-             * *   CreateFailed: The member account failed to be created.
-             * *   CreateExpired: The creation of the member account expired.
-             * *   CreateCancelled: The creation of the member account is canceled.
-             * *   PromoteVerifying: The upgrade of the member account is under confirmation.
-             * *   PromoteFailed: The member account failed to be upgraded.
-             * *   PromoteExpired: The upgrade of the member account expired.
-             * *   PromoteCancelled: The upgrade of the member account is canceled.
-             * *   PromoteSuccess: The member account is upgraded.
-             * *   InviteSuccess: The owner of the member account accepted the invitation.
-             * *   Removed: The member account is removed from the resource directory.
+             * <strong>example:</strong>
+             * <p>PromoteVerifying</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -316,11 +360,14 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member account. Valid values:
-             * <p>
+             * <p>The type of the member account. Valid values:</p>
+             * <ul>
+             * <li>CloudAccount: cloud account</li>
+             * <li>ResourceAccount: resource account</li>
+             * </ul>
              * 
-             * *   CloudAccount: cloud account
-             * *   ResourceAccount: resource account
+             * <strong>example:</strong>
+             * <p>ResourceAccount</p>
              */
             public Builder type(String type) {
                 this.type = type;

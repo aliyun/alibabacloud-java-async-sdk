@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceDirectoryResponseBody</p>
  */
 public class GetResourceDirectoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDirectory")
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectory")
     private ResourceDirectory resourceDirectory;
 
     private GetResourceDirectoryResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         private ResourceDirectory resourceDirectory; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource directory.
+         * <p>The information of the resource directory.</p>
          */
         public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
             this.resourceDirectory = resourceDirectory;
@@ -71,29 +79,35 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceDirectoryResponseBody</p>
+     */
     public static class ResourceDirectory extends TeaModel {
-        @NameInMap("ControlPolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("ControlPolicyStatus")
         private String controlPolicyStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IdentityInformation")
+        @com.aliyun.core.annotation.NameInMap("IdentityInformation")
         private String identityInformation;
 
-        @NameInMap("MasterAccountId")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountId")
         private String masterAccountId;
 
-        @NameInMap("MasterAccountName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
-        @NameInMap("MemberDeletionStatus")
+        @com.aliyun.core.annotation.NameInMap("MemberDeletionStatus")
         private String memberDeletionStatus;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("RootFolderId")
+        @com.aliyun.core.annotation.NameInMap("RootFolderId")
         private String rootFolderId;
 
         private ResourceDirectory(Builder builder) {
@@ -182,13 +196,16 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             private String rootFolderId; 
 
             /**
-             * The status of the Control Policy feature. Valid values:
-             * <p>
+             * <p>The status of the Control Policy feature. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The feature is enabled.</li>
+             * <li>PendingEnable: The feature is being enabled.</li>
+             * <li>Disabled: The feature is disabled.</li>
+             * <li>PendingDisable: The feature is being disabled.</li>
+             * </ul>
              * 
-             * *   Enabled: The feature is enabled.
-             * *   PendingEnable: The feature is being enabled.
-             * *   Disabled: The feature is disabled.
-             * *   PendingDisable: The feature is being disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder controlPolicyStatus(String controlPolicyStatus) {
                 this.controlPolicyStatus = controlPolicyStatus;
@@ -196,7 +213,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource directory was enabled.
+             * <p>The time when the resource directory was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-18T15:32:10.473Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -204,7 +224,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The real-name verification information.
+             * <p>The real-name verification information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*** Co., Ltd.</p>
              */
             public Builder identityInformation(String identityInformation) {
                 this.identityInformation = identityInformation;
@@ -212,7 +235,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account.
+             * <p>The ID of the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172845045600****</p>
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -220,7 +246,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account.
+             * <p>The name of the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-admin</p>
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -228,11 +257,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member deletion feature. Valid values:
-             * <p>
+             * <p>The status of the member deletion feature. Valid values:</p>
+             * <ul>
+             * <li>Enabled: The feature is enabled. You can call the <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> operation to delete members of the resource account type.</li>
+             * <li>Disabled: The feature is disabled. You cannot delete members of the resource account type.</li>
+             * </ul>
              * 
-             * *   Enabled: The feature is enabled. You can call the [DeleteAccount](~~311546~~) operation to delete members of the resource account type.
-             * *   Disabled: The feature is disabled. You cannot delete members of the resource account type.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder memberDeletionStatus(String memberDeletionStatus) {
                 this.memberDeletionStatus = memberDeletionStatus;
@@ -240,7 +272,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-St****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -248,7 +283,10 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Root folder.
+             * <p>The ID of the Root folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-Zo****</p>
              */
             public Builder rootFolderId(String rootFolderId) {
                 this.rootFolderId = rootFolderId;

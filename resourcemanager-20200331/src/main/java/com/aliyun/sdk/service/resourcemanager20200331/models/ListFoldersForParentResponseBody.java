@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
  *
  * <p>ListFoldersForParentResponseBody</p>
  */
 public class ListFoldersForParentResponseBody extends TeaModel {
-    @NameInMap("Folders")
+    @com.aliyun.core.annotation.NameInMap("Folders")
     private Folders folders;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListFoldersForParentResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information of the folders.
+         * <p>The information of the folders.</p>
          */
         public Builder folders(Folders folders) {
             this.folders = folders;
@@ -94,7 +99,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class ListFoldersForParentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersForParentResponseBody</p>
+     */
     public static class Folder extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("FolderName")
+        @com.aliyun.core.annotation.NameInMap("FolderName")
         private String folderName;
 
         private Folder(Builder builder) {
@@ -182,7 +205,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             private String folderName; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -190,7 +216,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-evic31****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -198,7 +227,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project-1</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -212,9 +244,15 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersForParentResponseBody</p>
+     */
     public static class Folders extends TeaModel {
-        @NameInMap("Folder")
-        private java.util.List < Folder> folder;
+        @com.aliyun.core.annotation.NameInMap("Folder")
+        private java.util.List<Folder> folder;
 
         private Folders(Builder builder) {
             this.folder = builder.folder;
@@ -231,17 +269,17 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         /**
          * @return folder
          */
-        public java.util.List < Folder> getFolder() {
+        public java.util.List<Folder> getFolder() {
             return this.folder;
         }
 
         public static final class Builder {
-            private java.util.List < Folder> folder; 
+            private java.util.List<Folder> folder; 
 
             /**
              * Folder.
              */
-            public Builder folder(java.util.List < Folder> folder) {
+            public Builder folder(java.util.List<Folder> folder) {
                 this.folder = folder;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicyAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPolicyAttachmentsResponseBody</p>
  */
 public class ListPolicyAttachmentsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PolicyAttachments")
+    @com.aliyun.core.annotation.NameInMap("PolicyAttachments")
     private PolicyAttachments policyAttachments;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListPolicyAttachmentsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,7 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The policy attachment records.
+         * <p>The policy attachment records.</p>
          */
         public Builder policyAttachments(PolicyAttachments policyAttachments) {
             this.policyAttachments = policyAttachments;
@@ -110,7 +121,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicyAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyAttachmentsResponseBody</p>
+     */
     public static class PolicyAttachment extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("PrincipalName")
+        @com.aliyun.core.annotation.NameInMap("PrincipalName")
         private String principalName;
 
-        @NameInMap("PrincipalType")
+        @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         private PolicyAttachment(Builder builder) {
@@ -230,7 +253,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * The time when the policy was attached.
+             * <p>The time when the policy was attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -238,7 +264,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the policy.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +275,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AdministratorAccess</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -254,11 +286,14 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy. Valid values:
-             * <p>
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li>Custom: custom policy</li>
+             * <li>System: system policy</li>
+             * </ul>
              * 
-             * *   Custom: custom policy
-             * *   System: system policy
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -266,7 +301,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object to which the policy is attached.
+             * <p>The name of the object to which the policy is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -274,12 +312,15 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object to which the policy is attached. Valid values:
-             * <p>
+             * <p>The type of the object to which the policy is attached. Valid values:</p>
+             * <ul>
+             * <li>IMSUser: RAM user</li>
+             * <li>IMSGroup: RAM user group</li>
+             * <li>ServiceRole: RAM role</li>
+             * </ul>
              * 
-             * *   IMSUser: RAM user
-             * *   IMSGroup: RAM user group
-             * *   ServiceRole: RAM role
+             * <strong>example:</strong>
+             * <p>IMSUser</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -287,7 +328,10 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
+             * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-9gLOoK****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -301,9 +345,15 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicyAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyAttachmentsResponseBody</p>
+     */
     public static class PolicyAttachments extends TeaModel {
-        @NameInMap("PolicyAttachment")
-        private java.util.List < PolicyAttachment> policyAttachment;
+        @com.aliyun.core.annotation.NameInMap("PolicyAttachment")
+        private java.util.List<PolicyAttachment> policyAttachment;
 
         private PolicyAttachments(Builder builder) {
             this.policyAttachment = builder.policyAttachment;
@@ -320,17 +370,17 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
         /**
          * @return policyAttachment
          */
-        public java.util.List < PolicyAttachment> getPolicyAttachment() {
+        public java.util.List<PolicyAttachment> getPolicyAttachment() {
             return this.policyAttachment;
         }
 
         public static final class Builder {
-            private java.util.List < PolicyAttachment> policyAttachment; 
+            private java.util.List<PolicyAttachment> policyAttachment; 
 
             /**
              * PolicyAttachment.
              */
-            public Builder policyAttachment(java.util.List < PolicyAttachment> policyAttachment) {
+            public Builder policyAttachment(java.util.List<PolicyAttachment> policyAttachment) {
                 this.policyAttachment = policyAttachment;
                 return this;
             }

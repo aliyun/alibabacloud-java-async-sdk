@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountsRequest} extends {@link RequestModel}
  *
  * <p>ListAccountsRequest</p>
  */
 public class ListAccountsRequest extends Request {
-    @Query
-    @NameInMap("IncludeTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeTags")
     private Boolean includeTags;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ListAccountsRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class ListAccountsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -81,7 +86,7 @@ public class ListAccountsRequest extends Request {
         private Boolean includeTags; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -96,11 +101,14 @@ public class ListAccountsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the information of tags. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information of tags. Valid values:</p>
+         * <ul>
+         * <li>false (default value)</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * *   false (default value)
-         * *   true
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -109,10 +117,11 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -121,10 +130,11 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,9 +143,9 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * The tag key and value.
+         * <p>The tag key and value.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -148,11 +158,17 @@ public class ListAccountsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountsRequest} extends {@link TeaModel}
+     *
+     * <p>ListAccountsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -187,7 +203,10 @@ public class ListAccountsRequest extends Request {
             private String value; 
 
             /**
-             * A tag key.
+             * <p>A tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -195,7 +214,10 @@ public class ListAccountsRequest extends Request {
             }
 
             /**
-             * A tag value.
+             * <p>A tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

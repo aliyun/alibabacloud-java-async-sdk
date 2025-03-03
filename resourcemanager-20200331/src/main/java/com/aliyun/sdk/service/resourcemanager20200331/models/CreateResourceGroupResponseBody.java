@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateResourceGroupResponseBody</p>
  */
 public class CreateResourceGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroup")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroup")
     private ResourceGroup resourceGroup;
 
     private CreateResourceGroupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         private ResourceGroup resourceGroup; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource group.
+         * <p>The information of the resource group.</p>
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -71,11 +79,17 @@ public class CreateResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateResourceGroupResponseBody</p>
+     */
     public static class RegionStatus extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RegionStatus(Builder builder) {
@@ -110,7 +124,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -118,11 +135,14 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group. Valid values:
-             * <p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>OK: The resource group is created.</li>
+             * </ul>
              * 
-             * *   Creating: The resource group is being created.
-             * *   OK: The resource group is created.
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -136,9 +156,15 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateResourceGroupResponseBody</p>
+     */
     public static class RegionStatuses extends TeaModel {
-        @NameInMap("RegionStatus")
-        private java.util.List < RegionStatus> regionStatus;
+        @com.aliyun.core.annotation.NameInMap("RegionStatus")
+        private java.util.List<RegionStatus> regionStatus;
 
         private RegionStatuses(Builder builder) {
             this.regionStatus = builder.regionStatus;
@@ -155,17 +181,17 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         /**
          * @return regionStatus
          */
-        public java.util.List < RegionStatus> getRegionStatus() {
+        public java.util.List<RegionStatus> getRegionStatus() {
             return this.regionStatus;
         }
 
         public static final class Builder {
-            private java.util.List < RegionStatus> regionStatus; 
+            private java.util.List<RegionStatus> regionStatus; 
 
             /**
              * RegionStatus.
              */
-            public Builder regionStatus(java.util.List < RegionStatus> regionStatus) {
+            public Builder regionStatus(java.util.List<RegionStatus> regionStatus) {
                 this.regionStatus = regionStatus;
                 return this;
             }
@@ -177,26 +203,32 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateResourceGroupResponseBody</p>
+     */
     public static class ResourceGroup extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionStatuses")
+        @com.aliyun.core.annotation.NameInMap("RegionStatuses")
         private RegionStatuses regionStatuses;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceGroup(Builder builder) {
@@ -276,7 +308,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource group belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -284,7 +319,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was created. The time is displayed in UTC.
+             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-05T14:39:13+08:00</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -292,7 +330,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the resource group.
+             * <p>The display name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -300,7 +341,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-9gLOoK****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -308,7 +352,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the resource group.
+             * <p>The unique identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -316,7 +363,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group in all regions.
+             * <p>The status of the resource group in all regions.</p>
              */
             public Builder regionStatuses(RegionStatuses regionStatuses) {
                 this.regionStatuses = regionStatuses;
@@ -324,11 +371,14 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group. Valid values:
-             * <p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>OK: The resource group is created.</li>
+             * </ul>
              * 
-             * *   Creating: The resource group is being created.
-             * *   OK: The resource group is created.
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteServiceLinkedRoleResponse} extends {@link TeaModel}
  *
  * <p>DeleteServiceLinkedRoleResponse</p>
  */
 public class DeleteServiceLinkedRoleResponse extends Response {
-    @NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private DeleteServiceLinkedRoleResponseBody body;
 
     private DeleteServiceLinkedRoleResponse(BuilderImpl builder) {
@@ -40,7 +45,7 @@ public class DeleteServiceLinkedRoleResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -60,7 +65,7 @@ public class DeleteServiceLinkedRoleResponse extends Response {
 
     public interface Builder extends Response.Builder<DeleteServiceLinkedRoleResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -74,7 +79,7 @@ public class DeleteServiceLinkedRoleResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DeleteServiceLinkedRoleResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private DeleteServiceLinkedRoleResponseBody body; 
 
@@ -93,7 +98,7 @@ public class DeleteServiceLinkedRoleResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

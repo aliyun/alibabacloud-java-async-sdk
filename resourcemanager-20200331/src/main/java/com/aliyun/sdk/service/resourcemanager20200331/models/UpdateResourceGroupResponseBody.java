@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateResourceGroupResponseBody</p>
  */
 public class UpdateResourceGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroup")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroup")
     private ResourceGroup resourceGroup;
 
     private UpdateResourceGroupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         private ResourceGroup resourceGroup; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource group.
+         * <p>The information of the resource group.</p>
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -71,20 +79,26 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateResourceGroupResponseBody</p>
+     */
     public static class ResourceGroup extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ResourceGroup(Builder builder) {
@@ -146,7 +160,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource group belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -154,7 +171,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was created. The time is displayed in UTC.
+             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18+08:00</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +182,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the resource group.
+             * <p>The display name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -170,7 +193,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-9gLOoK****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -178,7 +204,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the resource group.
+             * <p>The unique identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachPolicyRequest} extends {@link RequestModel}
  *
  * <p>DetachPolicyRequest</p>
  */
 public class DetachPolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Query
-    @NameInMap("PolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyType;
 
-    @Query
-    @NameInMap("PrincipalName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String principalName;
 
-    @Query
-    @NameInMap("PrincipalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String principalType;
 
-    @Query
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
 
     private DetachPolicyRequest(Builder builder) {
@@ -115,10 +120,12 @@ public class DetachPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the policy.
-         * <p>
+         * <p>The name of the policy.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -127,11 +134,15 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Custom: custom policy
-         * *   System: system policy
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -140,7 +151,11 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * The name of the object to which the policy is attached.
+         * <p>The name of the object to which the policy is attached.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
          */
         public Builder principalName(String principalName) {
             this.putQueryParameter("PrincipalName", principalName);
@@ -149,12 +164,16 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * The type of the object to which the policy is attached. Valid values:
-         * <p>
+         * <p>The type of the object to which the policy is attached. Valid values:</p>
+         * <ul>
+         * <li>IMSUser: RAM user</li>
+         * <li>IMSGroup: RAM user group</li>
+         * <li>ServiceRole: RAM role</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   IMSUser: RAM user
-         * *   IMSGroup: RAM user group
-         * *   ServiceRole: RAM role
+         * <strong>example:</strong>
+         * <p>IMSUser</p>
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -163,10 +182,12 @@ public class DetachPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.
-         * <p>
+         * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * <p>This parameter specifies the resource group or Alibaba Cloud account for which you want to revoke permissions.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter specifies the resource group or Alibaba Cloud account for which you want to revoke permissions.
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

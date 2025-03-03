@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFolderResponseBody} extends {@link TeaModel}
  *
  * <p>GetFolderResponseBody</p>
  */
 public class GetFolderResponseBody extends TeaModel {
-    @NameInMap("Folder")
+    @com.aliyun.core.annotation.NameInMap("Folder")
     private Folder folder;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFolderResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the folder.
+         * <p>The information of the folder.</p>
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -58,7 +63,10 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetFolderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFolderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFolderResponseBody</p>
+     */
     public static class Folder extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("FolderName")
+        @com.aliyun.core.annotation.NameInMap("FolderName")
         private String folderName;
 
-        @NameInMap("ParentFolderId")
+        @com.aliyun.core.annotation.NameInMap("ParentFolderId")
         private String parentFolderId;
 
-        @NameInMap("ResourceDirectoryPath")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryPath")
         private String resourceDirectoryPath;
 
         private Folder(Builder builder) {
@@ -146,7 +160,10 @@ public class GetFolderResponseBody extends TeaModel {
             private String resourceDirectoryPath; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-15T06:39:08.521Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +171,10 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-Jyl5U7****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -162,7 +182,10 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Applications</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -170,7 +193,10 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent folder.
+             * <p>The ID of the parent folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-Wm****</p>
              */
             public Builder parentFolderId(String parentFolderId) {
                 this.parentFolderId = parentFolderId;
@@ -178,7 +204,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the folder in the resource directory.
+             * <p>The path of the folder in the resource directory.</p>
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceLinkedRoleDeletionStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceLinkedRoleDeletionStatusResponseBody</p>
  */
 public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private Reason reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetServiceLinkedRoleDeletionStatusResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The reason why the deletion task failed.
+         * <p>The reason why the deletion task failed.</p>
          */
         public Builder reason(Reason reason) {
             this.reason = reason;
@@ -70,7 +75,10 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07194EB1-DB50-4513-A51D-99B30D635AEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,14 +86,17 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task.
-         * <p>
+         * <p>The status of the task.</p>
+         * <ul>
+         * <li>SUCCEEDED</li>
+         * <li>IN_PROGRESS</li>
+         * <li>FAILED</li>
+         * <li>NOT_STARTED</li>
+         * <li>INTERNAL_ERROR</li>
+         * </ul>
          * 
-         * - SUCCEEDED
-         * - IN_PROGRESS
-         * - FAILED
-         * - NOT_STARTED
-         * - INTERNAL_ERROR
+         * <strong>example:</strong>
+         * <p>FAILED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -98,9 +109,15 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceLinkedRoleDeletionStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceLinkedRoleDeletionStatusResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
-        private java.util.List < String > resource;
+        @com.aliyun.core.annotation.NameInMap("Resource")
+        private java.util.List<String> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -117,17 +134,17 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < String > getResource() {
+        public java.util.List<String> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < String > resource; 
+            private java.util.List<String> resource; 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < String > resource) {
+            public Builder resource(java.util.List<String> resource) {
                 this.resource = resource;
                 return this;
             }
@@ -139,11 +156,17 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceLinkedRoleDeletionStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceLinkedRoleDeletionStatusResponseBody</p>
+     */
     public static class RoleUsage extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private Resources resources;
 
         private RoleUsage(Builder builder) {
@@ -178,7 +201,10 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             private Resources resources; 
 
             /**
-             * The IDs of the regions in which the resources are to be queried.
+             * <p>The IDs of the regions in which the resources are to be queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -186,7 +212,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The returned resources.
+             * <p>The returned resources.</p>
              */
             public Builder resources(Resources resources) {
                 this.resources = resources;
@@ -200,9 +226,15 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceLinkedRoleDeletionStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceLinkedRoleDeletionStatusResponseBody</p>
+     */
     public static class RoleUsages extends TeaModel {
-        @NameInMap("RoleUsage")
-        private java.util.List < RoleUsage> roleUsage;
+        @com.aliyun.core.annotation.NameInMap("RoleUsage")
+        private java.util.List<RoleUsage> roleUsage;
 
         private RoleUsages(Builder builder) {
             this.roleUsage = builder.roleUsage;
@@ -219,17 +251,17 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         /**
          * @return roleUsage
          */
-        public java.util.List < RoleUsage> getRoleUsage() {
+        public java.util.List<RoleUsage> getRoleUsage() {
             return this.roleUsage;
         }
 
         public static final class Builder {
-            private java.util.List < RoleUsage> roleUsage; 
+            private java.util.List<RoleUsage> roleUsage; 
 
             /**
              * RoleUsage.
              */
-            public Builder roleUsage(java.util.List < RoleUsage> roleUsage) {
+            public Builder roleUsage(java.util.List<RoleUsage> roleUsage) {
                 this.roleUsage = roleUsage;
                 return this;
             }
@@ -241,11 +273,17 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceLinkedRoleDeletionStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceLinkedRoleDeletionStatusResponseBody</p>
+     */
     public static class Reason extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RoleUsages")
+        @com.aliyun.core.annotation.NameInMap("RoleUsages")
         private RoleUsages roleUsages;
 
         private Reason(Builder builder) {
@@ -280,7 +318,10 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             private RoleUsages roleUsages; 
 
             /**
-             * Failure information.
+             * <p>Failure information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service-Linked Role acs:ram::196813227629****:role/aliyunserviceroleforhdr cannot be deleted as it is in use by hdr.aliyuncs.com.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -288,7 +329,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Use resource information of the service linked role.
+             * <p>Use resource information of the service linked role.</p>
              */
             public Builder roleUsages(RoleUsages roleUsages) {
                 this.roleUsages = roleUsages;

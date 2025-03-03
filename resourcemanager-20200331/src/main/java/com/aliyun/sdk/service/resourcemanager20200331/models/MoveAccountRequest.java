@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveAccountRequest} extends {@link RequestModel}
  *
  * <p>MoveAccountRequest</p>
  */
 public class MoveAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Query
-    @NameInMap("DestinationFolderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationFolderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationFolderId;
 
     private MoveAccountRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class MoveAccountRequest extends Request {
         } 
 
         /**
-         * The ID of the account you want to move.
+         * <p>The ID of the account you want to move.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +88,11 @@ public class MoveAccountRequest extends Request {
         }
 
         /**
-         * The ID of the destination folder.
+         * <p>The ID of the destination folder.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-bVaRIG****</p>
          */
         public Builder destinationFolderId(String destinationFolderId) {
             this.putQueryParameter("DestinationFolderId", destinationFolderId);

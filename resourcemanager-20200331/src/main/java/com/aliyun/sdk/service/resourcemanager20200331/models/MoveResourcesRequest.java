@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourcesRequest} extends {@link RequestModel}
  *
  * <p>MoveResourcesRequest</p>
  */
 public class MoveResourcesRequest extends Request {
-    @Query
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Resources")
-    @Validation(required = true)
-    private java.util.List < Resources> resources;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Resources> resources;
 
     private MoveResourcesRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class MoveResourcesRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder extends Request.Builder<MoveResourcesRequest, Builder> {
         private String resourceGroupId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         private Builder() {
             super();
@@ -70,7 +75,11 @@ public class MoveResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which you want to move the resources.
+         * <p>The ID of the resource group to which you want to move the resources.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzmeobk5w****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -79,12 +88,13 @@ public class MoveResourcesRequest extends Request {
         }
 
         /**
-         * The resources that you want to move.
-         * <p>
-         * 
-         * >  You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.
+         * <p>The resources that you want to move.</p>
+         * <blockquote>
+         * <p> You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.putQueryParameter("Resources", resources);
             this.resources = resources;
             return this;
@@ -97,17 +107,23 @@ public class MoveResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link MoveResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>MoveResourcesRequest</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
         private Resources(Builder builder) {
@@ -160,7 +176,10 @@ public class MoveResourcesRequest extends Request {
             private String service; 
 
             /**
-             * The region ID of the resource.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -168,7 +187,10 @@ public class MoveResourcesRequest extends Request {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1sig0mjktx5ewx1****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -176,7 +198,10 @@ public class MoveResourcesRequest extends Request {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -184,7 +209,10 @@ public class MoveResourcesRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud service to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud service to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder service(String service) {
                 this.service = service;

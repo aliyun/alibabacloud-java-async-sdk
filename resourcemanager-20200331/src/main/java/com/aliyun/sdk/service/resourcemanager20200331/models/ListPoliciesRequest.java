@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListPoliciesRequest</p>
  */
 public class ListPoliciesRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
     private ListPoliciesRequest(Builder builder) {
@@ -96,12 +101,15 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * The language that is used to return the description of the system policy. Valid values:
-         * <p>
+         * <p>The language that is used to return the description of the system policy. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh-CN: Chinese</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   en: English
-         * *   zh-CN: Chinese
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -110,10 +118,11 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -122,10 +131,11 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -134,11 +144,14 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:
-         * <p>
+         * <p>The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
          * 
-         * *   Custom: custom policy
-         * *   System: system policy
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

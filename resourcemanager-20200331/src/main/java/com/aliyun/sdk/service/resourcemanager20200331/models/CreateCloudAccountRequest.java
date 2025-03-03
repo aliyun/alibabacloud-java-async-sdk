@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateCloudAccountRequest</p>
  */
 public class CreateCloudAccountRequest extends Request {
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String email;
 
-    @Query
-    @NameInMap("ParentFolderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentFolderId")
     private String parentFolderId;
 
-    @Query
-    @NameInMap("PayerAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayerAccountId")
     private String payerAccountId;
 
     private CreateCloudAccountRequest(Builder builder) {
@@ -98,12 +103,13 @@ public class CreateCloudAccountRequest extends Request {
         } 
 
         /**
-         * The display name of the member account.
-         * <p>
+         * <p>The display name of the member account.</p>
+         * <p>The name must be 2 to 50 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name must be unique in the current resource directory.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 2 to 50 characters in length and can contain letters, digits, underscores (\_), periods (.), and hyphens (-).
-         * 
-         * The name must be unique in the current resource directory.
+         * <strong>example:</strong>
+         * <p>admin-****</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -112,7 +118,11 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * The email address used to log on to the cloud account.
+         * <p>The email address used to log on to the cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -121,7 +131,10 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder.
+         * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-bVaRIG****</p>
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -130,7 +143,10 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * The ID of the settlement account. If you do not specify this parameter, the current account is used for settlement.
+         * <p>The ID of the settlement account. If you do not specify this parameter, the current account is used for settlement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder payerAccountId(String payerAccountId) {
             this.putQueryParameter("PayerAccountId", payerAccountId);

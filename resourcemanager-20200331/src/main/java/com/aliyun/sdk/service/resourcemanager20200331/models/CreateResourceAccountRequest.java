@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceAccountRequest</p>
  */
 public class CreateResourceAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountNamePrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountNamePrefix")
     private String accountNamePrefix;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("ParentFolderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentFolderId")
     private String parentFolderId;
 
-    @Query
-    @NameInMap("PayerAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayerAccountId")
     private String payerAccountId;
 
-    @Query
-    @NameInMap("ResellAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResellAccountType")
     private String resellAccountType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateResourceAccountRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class CreateResourceAccountRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -108,7 +113,7 @@ public class CreateResourceAccountRequest extends Request {
         private String parentFolderId; 
         private String payerAccountId; 
         private String resellAccountType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -125,16 +130,14 @@ public class CreateResourceAccountRequest extends Request {
         } 
 
         /**
-         * The prefix for the Alibaba Cloud account name of the member. If you leave this parameter empty, the system randomly generates a prefix.
-         * <p>
+         * <p>The prefix for the Alibaba Cloud account name of the member. If you leave this parameter empty, the system randomly generates a prefix.</p>
+         * <p>The prefix must be 2 to 37 characters in length.</p>
+         * <p>The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (<code>_</code>), periods (<code>.</code>), and hyphens (-).</p>
+         * <p>The complete Alibaba Cloud account name of a member is in the @.aliyunid.com format, such as <code>alice@rd-3G****.aliyunid.com</code>.</p>
+         * <p>Each name must be unique in the resource directory.</p>
          * 
-         * The prefix must be 2 to 37 characters in length.
-         * 
-         * The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (`_`), periods (.), and hyphens (`-`).
-         * 
-         * The complete Alibaba Cloud account name of a member in a resource directory is in the \<AccountNamePrefix>@\<ResourceDirectoryId>.aliyunid.com format, such as `alice@rd-3G****.aliyunid.com`.
-         * 
-         * Each name must be unique in the resource directory.
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder accountNamePrefix(String accountNamePrefix) {
             this.putQueryParameter("AccountNamePrefix", accountNamePrefix);
@@ -143,14 +146,14 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The display name of the member.
-         * <p>
+         * <p>The display name of the member.</p>
+         * <p>The name must be 2 to 50 characters in length.</p>
+         * <p>The name can contain letters, digits, underscores (_), periods (.), hyphens (-), and spaces.</p>
+         * <p>The name must be unique in the resource directory.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 2 to 50 characters in length.
-         * 
-         * The name can contain letters, digits, underscores (\_), periods (.), hyphens (-), and spaces.
-         * 
-         * The name must be unique in the resource directory.
+         * <strong>example:</strong>
+         * <p>Dev</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -159,7 +162,10 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder.
+         * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-r23M55****</p>
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -168,7 +174,10 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The ID of the billing account. If you leave this parameter empty, the member is used as its own billing account.
+         * <p>The ID of the billing account. If you leave this parameter empty, the newly created member is used as its billing account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder payerAccountId(String payerAccountId) {
             this.putQueryParameter("PayerAccountId", payerAccountId);
@@ -177,13 +186,17 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The identity type of the member. Valid values:
-         * <p>
+         * <p>The identity type of the member. Valid values:</p>
+         * <ul>
+         * <li>resell (default): The member is an account for a reseller. A relationship is automatically established between the member and the reseller. The management account of the resource directory must be used as the billing account of the member.</li>
+         * <li>non_resell: The member is not an account for a reseller. The member is an account that is not associated with a reseller. You can directly use the account to purchase Alibaba Cloud resources. The member is used as its own billing account.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for resellers at the international site (alibabacloud.com).</p>
+         * </blockquote>
          * 
-         * *   resell: The member is an account for a reseller. This is the default value. A relationship is automatically established between the member and the reseller. The management account of the resource directory must be used as the billing account of the member.
-         * *   non_resell: The member is not an account for a reseller. The member is an account that is not associated with a reseller. You can directly use the account to purchase Alibaba Cloud resources. The member is used as its own billing account.
-         * 
-         * >  This parameter is available only for resellers at the international site (alibabacloud.com).
+         * <strong>example:</strong>
+         * <p>resell</p>
          */
         public Builder resellAccountType(String resellAccountType) {
             this.putQueryParameter("ResellAccountType", resellAccountType);
@@ -192,9 +205,9 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * The tag key and value.
+         * <p>The tag of the member.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -207,11 +220,17 @@ public class CreateResourceAccountRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceAccountRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceAccountRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -246,7 +265,10 @@ public class CreateResourceAccountRequest extends Request {
             private String value; 
 
             /**
-             * A tag key
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +276,10 @@ public class CreateResourceAccountRequest extends Request {
             }
 
             /**
-             * A tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

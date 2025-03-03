@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendVerificationCodeForEnableRDResponseBody} extends {@link TeaModel}
  *
  * <p>SendVerificationCodeForEnableRDResponseBody</p>
  */
 public class SendVerificationCodeForEnableRDResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SendVerificationCodeForEnableRDResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class SendVerificationCodeForEnableRDResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC2FE94D-A4A2-51A1-A493-5C273A36C46A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelHandshakeRequest} extends {@link RequestModel}
  *
  * <p>CancelHandshakeRequest</p>
  */
 public class CancelHandshakeRequest extends Request {
-    @Query
-    @NameInMap("HandshakeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandshakeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String handshakeId;
 
     private CancelHandshakeRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class CancelHandshakeRequest extends Request {
         } 
 
         /**
-         * The ID of the invitation.
+         * <p>The ID of the invitation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h-ycm4rp****</p>
          */
         public Builder handshakeId(String handshakeId) {
             this.putQueryParameter("HandshakeId", handshakeId);

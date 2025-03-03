@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>GetResourceGroupRequest</p>
  */
 public class GetResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("IncludeTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeTags")
     private Boolean includeTags;
 
-    @Query
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
 
     private GetResourceGroupRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class GetResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);
@@ -78,11 +86,15 @@ public class GetResourceGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information of tags. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information of tags. Valid values:</p>
+         * <ul>
+         * <li>false (default value)</li>
+         * <li>true</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   false (default value)
-         * *   true
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

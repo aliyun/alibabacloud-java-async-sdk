@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceGroupRequest</p>
  */
 public class CreateResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateResourceGroupRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class CreateResourceGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateResourceGroupRequest, Builder> {
         private String displayName; 
         private String name; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -84,10 +89,12 @@ public class CreateResourceGroupRequest extends Request {
         } 
 
         /**
-         * The display name of the resource group.
-         * <p>
+         * <p>The display name of the resource group.</p>
+         * <p>The name must be 1 to 50 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 50 characters in length.
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -96,10 +103,12 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * The unique identifier of the resource group.
-         * <p>
+         * <p>The unique identifier of the resource group.</p>
+         * <p>The identifier must be 3 to 50 characters in length and can contain letters, digits, and hyphens (-). The identifier must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The identifier must be 3 to 50 characters in length and can contain letters, digits, and hyphens (-). The identifier must start with a letter.
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -108,9 +117,9 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -123,11 +132,17 @@ public class CreateResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -162,10 +177,11 @@ public class CreateResourceGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. 
-             * <p>
+             * <p>The key of the tag. </p>
+             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -173,10 +189,11 @@ public class CreateResourceGroupRequest extends Request {
             }
 
             /**
-             * The value of the tag. 
-             * <p>
+             * <p>The value of the tag. </p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

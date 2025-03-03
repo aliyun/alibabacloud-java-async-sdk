@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTargetAttachmentsForControlPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListTargetAttachmentsForControlPolicyResponseBody</p>
  */
 public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetAttachments")
+    @com.aliyun.core.annotation.NameInMap("TargetAttachments")
     private TargetAttachments targetAttachments;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTargetAttachmentsForControlPolicyResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B32BD3D6-1089-41F3-8E70-E0079BC7D760</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * The list of objects to which the control policy is attached.
+         * <p>The list of objects to which the control policy is attached.</p>
          */
         public Builder targetAttachments(TargetAttachments targetAttachments) {
             this.targetAttachments = targetAttachments;
@@ -118,7 +132,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of objects to which the control policy is attached.
+         * <p>The total number of objects to which the control policy is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link ListTargetAttachmentsForControlPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTargetAttachmentsForControlPolicyResponseBody</p>
+     */
     public static class TargetAttachment extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TargetAttachment(Builder builder) {
@@ -194,7 +217,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             private String targetType; 
 
             /**
-             * The time when the control policy was attached to the object.
+             * <p>The time when the control policy was attached to the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-19T02:56:24Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -202,7 +228,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the object.
+             * <p>The ID of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-ZDNPiT****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -210,7 +239,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the object.
+             * <p>The name of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev_Department</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -218,12 +250,15 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li>Root: Root folder</li>
+             * <li>Folder: child folder of the Root folder</li>
+             * <li>Account: member account</li>
+             * </ul>
              * 
-             * *   Root: Root folder
-             * *   Folder: child folder of the Root folder
-             * *   Account: member account
+             * <strong>example:</strong>
+             * <p>Folder</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -237,9 +272,15 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link ListTargetAttachmentsForControlPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTargetAttachmentsForControlPolicyResponseBody</p>
+     */
     public static class TargetAttachments extends TeaModel {
-        @NameInMap("TargetAttachment")
-        private java.util.List < TargetAttachment> targetAttachment;
+        @com.aliyun.core.annotation.NameInMap("TargetAttachment")
+        private java.util.List<TargetAttachment> targetAttachment;
 
         private TargetAttachments(Builder builder) {
             this.targetAttachment = builder.targetAttachment;
@@ -256,17 +297,17 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         /**
          * @return targetAttachment
          */
-        public java.util.List < TargetAttachment> getTargetAttachment() {
+        public java.util.List<TargetAttachment> getTargetAttachment() {
             return this.targetAttachment;
         }
 
         public static final class Builder {
-            private java.util.List < TargetAttachment> targetAttachment; 
+            private java.util.List<TargetAttachment> targetAttachment; 
 
             /**
              * TargetAttachment.
              */
-            public Builder targetAttachment(java.util.List < TargetAttachment> targetAttachment) {
+            public Builder targetAttachment(java.util.List<TargetAttachment> targetAttachment) {
                 this.targetAttachment = targetAttachment;
                 return this;
             }

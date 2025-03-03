@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>MoveResourcesResponseBody</p>
  */
 public class MoveResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Responses")
-    private java.util.List < Responses> responses;
+    @com.aliyun.core.annotation.NameInMap("Responses")
+    private java.util.List<Responses> responses;
 
     private MoveResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class MoveResourcesResponseBody extends TeaModel {
     /**
      * @return responses
      */
-    public java.util.List < Responses> getResponses() {
+    public java.util.List<Responses> getResponses() {
         return this.responses;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Responses> responses; 
+        private java.util.List<Responses> responses; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class MoveResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
-        public Builder responses(java.util.List < Responses> responses) {
+        public Builder responses(java.util.List<Responses> responses) {
             this.responses = responses;
             return this;
         }
@@ -71,29 +79,35 @@ public class MoveResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MoveResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>MoveResourcesResponseBody</p>
+     */
     public static class Responses extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Responses(Builder builder) {
@@ -182,10 +196,13 @@ public class MoveResourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error code returned.
-             * <p>
+             * <p>The error code returned.</p>
+             * <blockquote>
+             * <p> This parameter is returned if the resource failed to be moved.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned if the resource failed to be moved.
+             * <strong>example:</strong>
+             * <p>NoPermission</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -193,10 +210,13 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
-             * <p>
+             * <p>The error message returned.</p>
+             * <blockquote>
+             * <p> This parameter is returned if the resource failed to be moved.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned if the resource failed to be moved.
+             * <strong>example:</strong>
+             * <p>No permissions</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -204,7 +224,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the resource.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -212,7 +235,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -220,7 +246,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1sig0mjktx5ewx1****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -228,7 +257,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -236,7 +268,10 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud service.
+             * <p>The ID of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -244,11 +279,14 @@ public class MoveResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the move task. Valid values:
-             * <p>
+             * <p>The status of the move task. Valid values:</p>
+             * <ul>
+             * <li>SUCCESS</li>
+             * <li>FAIL</li>
+             * </ul>
              * 
-             * *   SUCCESS
-             * *   FAIL
+             * <strong>example:</strong>
+             * <p>FAIL</p>
              */
             public Builder status(String status) {
                 this.status = status;

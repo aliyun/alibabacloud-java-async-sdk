@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveCloudAccountRequest} extends {@link RequestModel}
  *
  * <p>RemoveCloudAccountRequest</p>
  */
 public class RemoveCloudAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
     private RemoveCloudAccountRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class RemoveCloudAccountRequest extends Request {
         } 
 
         /**
-         * The ID of the member.
+         * <p>The ID of the member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177242285274****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFoldersForParentRequest} extends {@link RequestModel}
  *
  * <p>ListFoldersForParentRequest</p>
  */
 public class ListFoldersForParentRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ParentFolderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentFolderId")
     private String parentFolderId;
 
-    @Query
-    @NameInMap("QueryKeyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKeyword")
     private String queryKeyword;
 
     private ListFoldersForParentRequest(Builder builder) {
@@ -96,10 +101,11 @@ public class ListFoldersForParentRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -108,10 +114,11 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -120,10 +127,11 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder.
-         * <p>
+         * <p>The ID of the parent folder.</p>
+         * <p>If you leave this parameter empty, the information of the first-level subfolders of the Root folder is queried.</p>
          * 
-         * If you leave this parameter empty, the information of the first-level subfolders of the Root folder is queried.
+         * <strong>example:</strong>
+         * <p>r-b1****</p>
          */
         public Builder parentFolderId(String parentFolderId) {
             this.putQueryParameter("ParentFolderId", parentFolderId);
@@ -132,10 +140,11 @@ public class ListFoldersForParentRequest extends Request {
         }
 
         /**
-         * The keyword used for the query, such as a folder name.
-         * <p>
+         * <p>The keyword used for the query, such as a folder name.</p>
+         * <p>Fuzzy match is supported.</p>
          * 
-         * Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>rdFolder</p>
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);

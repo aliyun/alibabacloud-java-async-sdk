@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccountsResponseBody</p>
  */
 public class ListAccountsResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAccountsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListAccountsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The members returned.
+         * <p>The members returned.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -94,7 +99,10 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class ListAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -170,7 +193,10 @@ public class ListAccountsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * A tag key.
+             * <p>A tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * A tag value.
+             * <p>A tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,9 +221,15 @@ public class ListAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -211,17 +246,17 @@ public class ListAccountsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -233,38 +268,44 @@ public class ListAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsResponseBody</p>
+     */
     public static class Account extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("JoinMethod")
+        @com.aliyun.core.annotation.NameInMap("JoinMethod")
         private String joinMethod;
 
-        @NameInMap("JoinTime")
+        @com.aliyun.core.annotation.NameInMap("JoinTime")
         private String joinTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("ResourceDirectoryPath")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryPath")
         private String resourceDirectoryPath;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Account(Builder builder) {
@@ -380,7 +421,10 @@ public class ListAccountsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>181761095690****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -388,7 +432,10 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * <p>The display name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -396,7 +443,10 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-QRzuim****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -404,11 +454,14 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member joins the resource directory. Valid values:
-             * <p>
+             * <p>The way in which the member joins the resource directory. Valid values:</p>
+             * <ul>
+             * <li>invited: The member is invited to join the resource directory.</li>
+             * <li>created: The member is directly created in the resource directory.</li>
+             * </ul>
              * 
-             * *   invited: The member is invited to join the resource directory.
-             * *   created: The member is directly created in the resource directory.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -416,7 +469,10 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member joined the resource directory. The time is displayed in UTC.
+             * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-18T08:01:50.522Z</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -424,7 +480,10 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was modified. The time is displayed in UTC.
+             * <p>The time when the member was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-18T08:04:37.668Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -432,7 +491,10 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-3G****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -440,7 +502,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the member in the resource directory.
+             * <p>The path of the member in the resource directory.</p>
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;
@@ -448,16 +510,19 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. Valid values:
-             * <p>
+             * <p>The status of the member. Valid values:</p>
+             * <ul>
+             * <li>CreateSuccess: The member is created.</li>
+             * <li>PromoteVerifying: The upgrade of the member is being confirmed.</li>
+             * <li>PromoteFailed: The upgrade of the member fails.</li>
+             * <li>PromoteExpired: The upgrade of the member expires.</li>
+             * <li>PromoteCancelled: The upgrade of the member is canceled.</li>
+             * <li>PromoteSuccess: The member is upgraded.</li>
+             * <li>InviteSuccess: The member accepts the invitation.</li>
+             * </ul>
              * 
-             * *   CreateSuccess: The member is created.
-             * *   PromoteVerifying: The upgrade of the member is being confirmed.
-             * *   PromoteFailed: The upgrade of the member fails.
-             * *   PromoteExpired: The upgrade of the member expires.
-             * *   PromoteCancelled: The upgrade of the member is canceled.
-             * *   PromoteSuccess: The member is upgraded.
-             * *   InviteSuccess: The member accepts the invitation.
+             * <strong>example:</strong>
+             * <p>CreateSuccess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -465,7 +530,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the member.
+             * <p>The tags that are added to the member.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -473,11 +538,14 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member. Valid values:
-             * <p>
+             * <p>The type of the member. Valid values:</p>
+             * <ul>
+             * <li>CloudAccount: cloud account</li>
+             * <li>ResourceAccount: resource account</li>
+             * </ul>
              * 
-             * *   CloudAccount: cloud account
-             * *   ResourceAccount: resource account
+             * <strong>example:</strong>
+             * <p>ResourceAccount</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -491,9 +559,15 @@ public class ListAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
-        private java.util.List < Account> account;
+        @com.aliyun.core.annotation.NameInMap("Account")
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -510,17 +584,17 @@ public class ListAccountsResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < Account> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < Account> account; 
+            private java.util.List<Account> account; 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List < Account> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }

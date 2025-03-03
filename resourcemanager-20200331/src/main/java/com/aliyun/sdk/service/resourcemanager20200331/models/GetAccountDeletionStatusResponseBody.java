@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountDeletionStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountDeletionStatusResponseBody</p>
  */
 public class GetAccountDeletionStatusResponseBody extends TeaModel {
-    @NameInMap("RdAccountDeletionStatus")
+    @com.aliyun.core.annotation.NameInMap("RdAccountDeletionStatus")
     private RdAccountDeletionStatus rdAccountDeletionStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountDeletionStatusResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The deletion status of the member.
+         * <p>The deletion status of the member.</p>
          */
         public Builder rdAccountDeletionStatus(RdAccountDeletionStatus rdAccountDeletionStatus) {
             this.rdAccountDeletionStatus = rdAccountDeletionStatus;
@@ -58,7 +63,10 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AA43293-7C8F-5730-8F2D-7F864EC092C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountDeletionStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountDeletionStatusResponseBody</p>
+     */
     public static class FailReasonList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private FailReasonList(Builder builder) {
@@ -110,7 +124,10 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This account has a payer account. Please release the financial relationship of this account first.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +135,10 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service to which the check item belongs.
+             * <p>The name of the cloud service to which the check item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Others</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -132,24 +152,30 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAccountDeletionStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountDeletionStatusResponseBody</p>
+     */
     public static class RdAccountDeletionStatus extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletionTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeletionTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deletionTime;
 
-        @NameInMap("DeletionType")
+        @com.aliyun.core.annotation.NameInMap("DeletionType")
         private String deletionType;
 
-        @NameInMap("FailReasonList")
-        private java.util.List < FailReasonList> failReasonList;
+        @com.aliyun.core.annotation.NameInMap("FailReasonList")
+        private java.util.List<FailReasonList> failReasonList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RdAccountDeletionStatus(Builder builder) {
@@ -200,7 +226,7 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         /**
          * @return failReasonList
          */
-        public java.util.List < FailReasonList> getFailReasonList() {
+        public java.util.List<FailReasonList> getFailReasonList() {
             return this.failReasonList;
         }
 
@@ -216,11 +242,14 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             private String createTime; 
             private String deletionTime; 
             private String deletionType; 
-            private java.util.List < FailReasonList> failReasonList; 
+            private java.util.List<FailReasonList> failReasonList; 
             private String status; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169946124551****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -228,7 +257,10 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the deletion.
+             * <p>The start time of the deletion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-23T17:05:30+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -236,7 +268,11 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the deletion.
+             * <p>The end time of the deletion.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-23T17:06:01+08:00</p>
              */
             public Builder deletionTime(String deletionTime) {
                 this.deletionTime = deletionTime;
@@ -244,11 +280,14 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the deletion. Valid values:
-             * <p>
+             * <p>The type of the deletion. Valid values:</p>
+             * <ul>
+             * <li>0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</li>
+             * <li>1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></li>
+             * </ul>
              * 
-             * *   0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.
-             * *   1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see [What is the silence period for member deletion?](~~446079~~)
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deletionType(String deletionType) {
                 this.deletionType = deletionType;
@@ -256,22 +295,25 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons why the member fails to be deleted.
+             * <p>The reasons why the member fails to be deleted.</p>
              */
-            public Builder failReasonList(java.util.List < FailReasonList> failReasonList) {
+            public Builder failReasonList(java.util.List<FailReasonList> failReasonList) {
                 this.failReasonList = failReasonList;
                 return this;
             }
 
             /**
-             * The status. Valid values:
-             * <p>
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>Success: The member is deleted.</li>
+             * <li>Checking: A deletion check is being performed for the member.</li>
+             * <li>Deleting: The member is being deleted.</li>
+             * <li>CheckFailed: The deletion check for the member fails.</li>
+             * <li>DeleteFailed: The member fails to be deleted.</li>
+             * </ul>
              * 
-             * *   Success: The member is deleted.
-             * *   Checking: A deletion check is being performed for the member.
-             * *   Deleting: The member is being deleted.
-             * *   CheckFailed: The deletion check for the member fails.
-             * *   DeleteFailed: The member fails to be deleted.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

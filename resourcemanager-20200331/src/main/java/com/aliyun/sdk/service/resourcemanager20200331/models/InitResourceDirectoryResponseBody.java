@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitResourceDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>InitResourceDirectoryResponseBody</p>
  */
 public class InitResourceDirectoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDirectory")
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectory")
     private ResourceDirectory resourceDirectory;
 
     private InitResourceDirectoryResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         private ResourceDirectory resourceDirectory; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource directory.
+         * <p>The information of the resource directory.</p>
          */
         public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
             this.resourceDirectory = resourceDirectory;
@@ -71,20 +79,26 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InitResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InitResourceDirectoryResponseBody</p>
+     */
     public static class ResourceDirectory extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("MasterAccountId")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountId")
         private String masterAccountId;
 
-        @NameInMap("MasterAccountName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("RootFolderId")
+        @com.aliyun.core.annotation.NameInMap("RootFolderId")
         private String rootFolderId;
 
         private ResourceDirectory(Builder builder) {
@@ -146,7 +160,10 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
             private String rootFolderId; 
 
             /**
-             * The time when the resource directory was enabled.
+             * <p>The time when the resource directory was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-18T15:32:10.473Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +171,10 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the enterprise management account.
+             * <p>The ID of the enterprise management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172841235500****</p>
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -162,7 +182,10 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the enterprise management account.
+             * <p>The name of the enterprise management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-****</p>
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -170,7 +193,10 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-Ss****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -178,7 +204,10 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the root folder.
+             * <p>The ID of the root folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-Zo****</p>
              */
             public Builder rootFolderId(String rootFolderId) {
                 this.rootFolderId = rootFolderId;

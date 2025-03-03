@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetControlPolicyRequest</p>
  */
 public class GetControlPolicyRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
     private GetControlPolicyRequest(Builder builder) {
@@ -69,14 +74,18 @@ public class GetControlPolicyRequest extends Request {
         } 
 
         /**
-         * The language in which you want to return the description of the access control policy. Valid values:
-         * <p>
+         * <p>The language in which you want to return the description of the access control policy. Valid values:</p>
+         * <ul>
+         * <li>zh-CN (default value): Chinese</li>
+         * <li>en: English</li>
+         * <li>ja: Japanese</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only for system access control policies.</p>
+         * </blockquote>
          * 
-         * *   zh-CN (default value): Chinese
-         * *   en: English
-         * *   ja: Japanese
-         * 
-         * >  This parameter is valid only for system access control policies.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -85,7 +94,11 @@ public class GetControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the access control policy.
+         * <p>The ID of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-SImPt8GCEwiq****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);

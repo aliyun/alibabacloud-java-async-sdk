@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssociatedTransferSettingResponseBody} extends {@link TeaModel}
  *
  * <p>ListAssociatedTransferSettingResponseBody</p>
  */
 public class ListAssociatedTransferSettingResponseBody extends TeaModel {
-    @NameInMap("AssociatedTransferSetting")
+    @com.aliyun.core.annotation.NameInMap("AssociatedTransferSetting")
     private AssociatedTransferSetting associatedTransferSetting;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAssociatedTransferSettingResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The settings of the Transfer Associated Resources feature.
+         * <p>The settings of the Transfer Associated Resources feature.</p>
          */
         public Builder associatedTransferSetting(AssociatedTransferSetting associatedTransferSetting) {
             this.associatedTransferSetting = associatedTransferSetting;
@@ -58,7 +63,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7556FD65-45D2-5C45-9FC9-A7DE831C775C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAssociatedTransferSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssociatedTransferSettingResponseBody</p>
+     */
     public static class RuleSettings extends TeaModel {
-        @NameInMap("AssociatedResourceType")
+        @com.aliyun.core.annotation.NameInMap("AssociatedResourceType")
         private String associatedResourceType;
 
-        @NameInMap("AssociatedService")
+        @com.aliyun.core.annotation.NameInMap("AssociatedService")
         private String associatedService;
 
-        @NameInMap("MasterResourceType")
+        @com.aliyun.core.annotation.NameInMap("MasterResourceType")
         private String masterResourceType;
 
-        @NameInMap("MasterService")
+        @com.aliyun.core.annotation.NameInMap("MasterService")
         private String masterService;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RuleSettings(Builder builder) {
@@ -146,7 +160,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The type of the associated resource.
+             * <p>The type of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder associatedResourceType(String associatedResourceType) {
                 this.associatedResourceType = associatedResourceType;
@@ -154,7 +171,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The service code of the associated resource.
+             * <p>The service code of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder associatedService(String associatedService) {
                 this.associatedService = associatedService;
@@ -162,7 +182,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the primary resource.
+             * <p>The type of the primary resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder masterResourceType(String masterResourceType) {
                 this.masterResourceType = masterResourceType;
@@ -170,7 +193,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The service code of the primary resource.
+             * <p>The service code of the primary resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder masterService(String masterService) {
                 this.masterService = masterService;
@@ -178,11 +204,14 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Transfer Associated Resources feature. Valid values:
-             * <p>
+             * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
+             * <ul>
+             * <li>Enable: enabled</li>
+             * <li>Disable: disabled</li>
+             * </ul>
              * 
-             * - Enable: enabled
-             * - Disable: disabled
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -196,17 +225,23 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAssociatedTransferSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssociatedTransferSettingResponseBody</p>
+     */
     public static class AssociatedTransferSetting extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("EnableExistingResourcesTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableExistingResourcesTransfer")
         private String enableExistingResourcesTransfer;
 
-        @NameInMap("RuleSettings")
-        private java.util.List < RuleSettings> ruleSettings;
+        @com.aliyun.core.annotation.NameInMap("RuleSettings")
+        private java.util.List<RuleSettings> ruleSettings;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AssociatedTransferSetting(Builder builder) {
@@ -241,7 +276,7 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         /**
          * @return ruleSettings
          */
-        public java.util.List < RuleSettings> getRuleSettings() {
+        public java.util.List<RuleSettings> getRuleSettings() {
             return this.ruleSettings;
         }
 
@@ -255,11 +290,14 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String enableExistingResourcesTransfer; 
-            private java.util.List < RuleSettings> ruleSettings; 
+            private java.util.List<RuleSettings> ruleSettings; 
             private String status; 
 
             /**
-             * The settings of the Transfer Associated Resources feature.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121998723923****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -267,7 +305,14 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * EnableExistingResourcesTransfer.
+             * <p>Indicates whether the Transfer Existing Associated Resources feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableExistingResourcesTransfer(String enableExistingResourcesTransfer) {
                 this.enableExistingResourcesTransfer = enableExistingResourcesTransfer;
@@ -275,19 +320,22 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the transfer rules.
+             * <p>The settings of transfer rules.</p>
              */
-            public Builder ruleSettings(java.util.List < RuleSettings> ruleSettings) {
+            public Builder ruleSettings(java.util.List<RuleSettings> ruleSettings) {
                 this.ruleSettings = ruleSettings;
                 return this;
             }
 
             /**
-             * The status of the Transfer Associated Resources feature. Valid values:
-             * <p>
+             * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
+             * <ul>
+             * <li>Enable: enabled</li>
+             * <li>Disable: disabled</li>
+             * </ul>
              * 
-             * - Enable: enabled
-             * - Disable: disabled
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;

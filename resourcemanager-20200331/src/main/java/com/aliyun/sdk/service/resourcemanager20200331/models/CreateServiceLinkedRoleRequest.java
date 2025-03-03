@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceLinkedRoleRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceLinkedRoleRequest</p>
  */
 public class CreateServiceLinkedRoleRequest extends Request {
-    @Query
-    @NameInMap("CustomSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomSuffix")
     private String customSuffix;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
     private CreateServiceLinkedRoleRequest(Builder builder) {
@@ -83,12 +88,12 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * The suffix of the role name.
-         * <p>
+         * <p>The suffix of the role name.</p>
+         * <p>The role name (including its suffix) must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>For example, if the suffix is <code>Example</code>, the role name is <code>ServiceLinkedRoleName_Example</code>.</p>
          * 
-         * The role name (including its suffix) must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).
-         * 
-         * For example, if the suffix is `Example`, the role name is `ServiceLinkedRoleName_Example`.
+         * <strong>example:</strong>
+         * <p>Example</p>
          */
         public Builder customSuffix(String customSuffix) {
             this.putQueryParameter("CustomSuffix", customSuffix);
@@ -97,12 +102,12 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The description of the service-linked role.
-         * <p>
+         * <p>The description of the service-linked role.</p>
+         * <p>You must configure this parameter for service-linked roles that support custom suffixes. Otherwise, the preset value is used and cannot be modified.</p>
+         * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
-         * You must configure this parameter for service-linked roles that support custom suffixes. Otherwise, the preset value is used and cannot be modified.
-         * 
-         * The description must be 1 to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>Service Linked Role for PolarDB. PolarDB will use this role to access your resources in other services.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -111,10 +116,12 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The name of the service.
-         * <p>
+         * <p>The name of the service.</p>
+         * <p>For more information about the service name, see <a href="https://help.aliyun.com/document_detail/461722.html">Alibaba Cloud services that support service-linked roles</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about the service name, see [Alibaba Cloud services that support service-linked roles](~~461722~~).
+         * <strong>example:</strong>
+         * <p>polardb.aliyuncs.com</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

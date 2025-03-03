@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResendCreateCloudAccountEmailRequest} extends {@link RequestModel}
  *
  * <p>ResendCreateCloudAccountEmailRequest</p>
  */
 public class ResendCreateCloudAccountEmailRequest extends Request {
-    @Query
-    @NameInMap("RecordId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
     private ResendCreateCloudAccountEmailRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class ResendCreateCloudAccountEmailRequest extends Request {
         } 
 
         /**
-         * The account record ID.
+         * <p>The account record ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06950264-3f0d-4ca9-82dd-6ee7a3d33d6b</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);

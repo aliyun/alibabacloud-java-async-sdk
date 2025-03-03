@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceLinkedRoleDeletionStatusRequest} extends {@link RequestModel}
  *
  * <p>GetServiceLinkedRoleDeletionStatusRequest</p>
  */
 public class GetServiceLinkedRoleDeletionStatusRequest extends Request {
-    @Query
-    @NameInMap("DeletionTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionTaskId")
     private String deletionTaskId;
 
     private GetServiceLinkedRoleDeletionStatusRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetServiceLinkedRoleDeletionStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the deletion task.
+         * <p>The ID of the deletion task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task/acs-service-role/hdr.aliyuncs.com/AliyunServiceRoleForHdr/c4d22c52-247f-4ee1-83a2-6c0460bd****</p>
          */
         public Builder deletionTaskId(String deletionTaskId) {
             this.putQueryParameter("DeletionTaskId", deletionTaskId);

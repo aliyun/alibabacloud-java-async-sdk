@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PromoteResourceAccountRequest} extends {@link RequestModel}
  *
  * <p>PromoteResourceAccountRequest</p>
  */
 public class PromoteResourceAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String email;
 
     private PromoteResourceAccountRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class PromoteResourceAccountRequest extends Request {
         } 
 
         /**
-         * The ID of the resource account you want to upgrade.
+         * <p>The ID of the resource account you want to upgrade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +88,11 @@ public class PromoteResourceAccountRequest extends Request {
         }
 
         /**
-         * The email address used to log on to the cloud account after the upgrade.
+         * <p>The email address used to log on to the cloud account after the upgrade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);

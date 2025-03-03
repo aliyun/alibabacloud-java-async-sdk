@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeAccountEmailRequest} extends {@link RequestModel}
  *
  * <p>ChangeAccountEmailRequest</p>
  */
 public class ChangeAccountEmailRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String email;
 
     private ChangeAccountEmailRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class ChangeAccountEmailRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member.
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181761095690****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,10 +88,14 @@ public class ChangeAccountEmailRequest extends Request {
         }
 
         /**
-         * The email address to be bound to the member.
-         * <p>
+         * <p>The email address to be bound to the member.</p>
+         * <blockquote>
+         * <p> The system automatically sends a verification email to the email address. After the verification is passed, the email address takes effect, and the system changes both the logon email address and secure email address of the member.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The system automatically sends a verification email to the email address. After the verification is passed, the email address takes effect, and the system changes both the logon email address and secure email address of the member.
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);

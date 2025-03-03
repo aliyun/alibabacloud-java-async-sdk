@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoleRequest} extends {@link RequestModel}
  *
  * <p>GetRoleRequest</p>
  */
 public class GetRoleRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("RoleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
     private GetRoleRequest(Builder builder) {
@@ -69,12 +74,15 @@ public class GetRoleRequest extends Request {
         } 
 
         /**
-         * The language that is used to return the description of the RAM role. Valid values:
-         * <p>
+         * <p>The language that is used to return the description of the RAM role. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh-CN: Chinese</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   en: English
-         * *   zh-CN: Chinese
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -83,10 +91,12 @@ public class GetRoleRequest extends Request {
         }
 
         /**
-         * The name of the RAM role.
-         * <p>
+         * <p>The name of the RAM role.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>ECSAdmin</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

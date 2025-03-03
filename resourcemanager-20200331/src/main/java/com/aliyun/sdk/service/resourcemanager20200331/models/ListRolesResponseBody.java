@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRolesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRolesResponseBody</p>
  */
 public class ListRolesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Roles")
+    @com.aliyun.core.annotation.NameInMap("Roles")
     private Roles roles;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListRolesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListRolesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the RAM roles.
+         * <p>The information of the RAM roles.</p>
          */
         public Builder roles(Roles roles) {
             this.roles = roles;
@@ -118,7 +132,10 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of RAM roles.
+         * <p>The total number of RAM roles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class ListRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRolesResponseBody</p>
+     */
     public static class LatestDeletionTask extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DeletionTaskId")
+        @com.aliyun.core.annotation.NameInMap("DeletionTaskId")
         private String deletionTaskId;
 
         private LatestDeletionTask(Builder builder) {
@@ -170,7 +193,10 @@ public class ListRolesResponseBody extends TeaModel {
             private String deletionTaskId; 
 
             /**
-             * The time when the deletion task was created.
+             * <p>The time when the deletion task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -178,7 +204,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deletion task.
+             * <p>The ID of the deletion task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECSAdmin/cc61514b-26eb-4453-ab53-b142eb70****</p>
              */
             public Builder deletionTaskId(String deletionTaskId) {
                 this.deletionTaskId = deletionTaskId;
@@ -192,35 +221,41 @@ public class ListRolesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRolesResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsServiceLinkedRole")
+        @com.aliyun.core.annotation.NameInMap("IsServiceLinkedRole")
         private Boolean isServiceLinkedRole;
 
-        @NameInMap("LatestDeletionTask")
+        @com.aliyun.core.annotation.NameInMap("LatestDeletionTask")
         private LatestDeletionTask latestDeletionTask;
 
-        @NameInMap("MaxSessionDuration")
+        @com.aliyun.core.annotation.NameInMap("MaxSessionDuration")
         private Long maxSessionDuration;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("RolePrincipalName")
+        @com.aliyun.core.annotation.NameInMap("RolePrincipalName")
         private String rolePrincipalName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Role(Builder builder) {
@@ -327,7 +362,10 @@ public class ListRolesResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:role/ECSAdmin</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -335,7 +373,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM role was created.
+             * <p>The time when the RAM role was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -343,7 +384,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the RAM role.
+             * <p>The description of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS administrator</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -351,7 +395,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM role is a service linked role.
+             * <p>Indicates whether the RAM role is a service linked role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -359,7 +406,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the most recent deletion task.
+             * <p>The information of the most recent deletion task.</p>
              */
             public Builder latestDeletionTask(LatestDeletionTask latestDeletionTask) {
                 this.latestDeletionTask = latestDeletionTask;
@@ -367,7 +414,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum session duration of the RAM role.
+             * <p>The maximum session duration of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder maxSessionDuration(Long maxSessionDuration) {
                 this.maxSessionDuration = maxSessionDuration;
@@ -375,7 +425,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM role.
+             * <p>The ID of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90123456789****</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -383,7 +436,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role.
+             * <p>The name of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECSAdmin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -391,7 +447,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role after authorization.
+             * <p>The name of the RAM role after authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;
@@ -399,7 +458,10 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM role was updated.
+             * <p>The time when the RAM role was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-01-23T12:33:18Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -413,9 +475,15 @@ public class ListRolesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRolesResponseBody</p>
+     */
     public static class Roles extends TeaModel {
-        @NameInMap("Role")
-        private java.util.List < Role> role;
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private java.util.List<Role> role;
 
         private Roles(Builder builder) {
             this.role = builder.role;
@@ -432,17 +500,17 @@ public class ListRolesResponseBody extends TeaModel {
         /**
          * @return role
          */
-        public java.util.List < Role> getRole() {
+        public java.util.List<Role> getRole() {
             return this.role;
         }
 
         public static final class Builder {
-            private java.util.List < Role> role; 
+            private java.util.List<Role> role; 
 
             /**
              * Role.
              */
-            public Builder role(java.util.List < Role> role) {
+            public Builder role(java.util.List<Role> role) {
                 this.role = role;
                 return this;
             }

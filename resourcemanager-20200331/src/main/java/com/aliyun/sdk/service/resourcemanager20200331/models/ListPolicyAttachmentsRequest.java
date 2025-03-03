@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicyAttachmentsRequest} extends {@link RequestModel}
  *
  * <p>ListPolicyAttachmentsRequest</p>
  */
 public class ListPolicyAttachmentsRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
-    @Query
-    @NameInMap("PrincipalName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalName")
     private String principalName;
 
-    @Query
-    @NameInMap("PrincipalType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
     private String principalType;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ListPolicyAttachmentsRequest(Builder builder) {
@@ -152,12 +157,15 @@ public class ListPolicyAttachmentsRequest extends Request {
         } 
 
         /**
-         * The language that is used to return the description of the system policy. Valid values:
-         * <p>
+         * <p>The language that is used to return the description of the system policy. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh-CN: Chinese</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   en: English
-         * *   zh-CN: Chinese
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -166,10 +174,11 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -178,10 +187,11 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,10 +200,11 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * The name of the policy.
-         * <p>
+         * <p>The name of the policy.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>AdministratorAccess</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -202,11 +213,14 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:
-         * <p>
+         * <p>The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
          * 
-         * *   Custom: custom policy
-         * *   System: system policy
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -215,7 +229,10 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * The name of the object to which the policy is attached.
+         * <p>The name of the object to which the policy is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
          */
         public Builder principalName(String principalName) {
             this.putQueryParameter("PrincipalName", principalName);
@@ -224,12 +241,15 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * The type of the object to which the policy is attached. If you do not specify this parameter, the system lists all types of objects. Valid values:
-         * <p>
+         * <p>The type of the object to which the policy is attached. If you do not specify this parameter, the system lists all types of objects. Valid values:</p>
+         * <ul>
+         * <li>IMSUser: RAM user</li>
+         * <li>IMSGroup: RAM user group</li>
+         * <li>ServiceRole: RAM role</li>
+         * </ul>
          * 
-         * *   IMSUser: RAM user
-         * *   IMSGroup: RAM user group
-         * *   ServiceRole: RAM role
+         * <strong>example:</strong>
+         * <p>IMSUser</p>
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -238,7 +258,10 @@ public class ListPolicyAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs. If you do not specify this parameter, the system lists all policy attachment records under the current account.
+         * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs. If you do not specify this parameter, the system lists all policy attachment records under the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-001</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

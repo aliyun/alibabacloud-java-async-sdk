@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceLinkedRoleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateServiceLinkedRoleResponseBody</p>
  */
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private Role role;
 
     private CreateServiceLinkedRoleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         private Role role; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE58D7CF-03BC-432A-B42D-BC3390C8C2E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the role.
+         * <p>The information about the role.</p>
          */
         public Builder role(Role role) {
             this.role = role;
@@ -71,29 +79,35 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceLinkedRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateServiceLinkedRoleResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AssumeRolePolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("AssumeRolePolicyDocument")
         private String assumeRolePolicyDocument;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsServiceLinkedRole")
+        @com.aliyun.core.annotation.NameInMap("IsServiceLinkedRole")
         private Boolean isServiceLinkedRole;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("RolePrincipalName")
+        @com.aliyun.core.annotation.NameInMap("RolePrincipalName")
         private String rolePrincipalName;
 
         private Role(Builder builder) {
@@ -182,7 +196,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             private String rolePrincipalName; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the role.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:role/aliyunserviceroleforpolardb</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -190,7 +207,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The document of the trust policy for the role.
+             * <p>The document of the trust policy for the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Statement&quot;:[{&quot;Action&quot;:&quot;sts:AssumeRole&quot;,&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;Service&quot;:[&quot;polardb.aliyuncs.com&quot;]}}],&quot;Version&quot;:&quot;1&quot;}</p>
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -198,7 +218,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the role was created. The time is displayed in UTC.
+             * <p>The time when the role was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-30T08:14:16Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -206,7 +229,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the role.
+             * <p>The description of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service Linked Role for PolarDB. PolarDB will use this role to access your resources in other services.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,11 +240,14 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the role is a service-linked role. Valid values:
-             * <p>
+             * <p>Indicates whether the role is a service-linked role. Valid values:</p>
+             * <ul>
+             * <li>true: The role is a service-linked role.</li>
+             * <li>false: The role is not a service-linked role.</li>
+             * </ul>
              * 
-             * *   true: The role is a service-linked role.
-             * *   false: The role is not a service-linked role.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -226,7 +255,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role.
+             * <p>The ID of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32833240981067****</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -234,7 +266,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role.
+             * <p>The name of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRoleForPolarDB</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -242,7 +277,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The role name that uses a domain name as the suffix.
+             * <p>The role name that uses a domain name as the suffix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com">AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com</a></p>
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;

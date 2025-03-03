@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceGroupsResponseBody</p>
  */
 public class ListResourceGroupsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroups")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroups")
     private ResourceGroups resourceGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListResourceGroupsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource groups.
+         * <p>The information of the resource groups.</p>
          */
         public Builder resourceGroups(ResourceGroups resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -118,7 +132,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -170,7 +193,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +204,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,9 +221,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -211,17 +246,17 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -233,26 +268,32 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsResponseBody</p>
+     */
     public static class ResourceGroup extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private ResourceGroup(Builder builder) {
@@ -332,7 +373,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource group belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -340,7 +384,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was created. The time is displayed in UTC.
+             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -348,7 +395,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the resource group.
+             * <p>The display name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -356,7 +406,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-9gLOoK****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -364,7 +417,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the resource group.
+             * <p>The identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -372,12 +428,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group. Valid values:
-             * <p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>OK: The resource group is created.</li>
+             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+             * </ul>
              * 
-             * *   Creating: The resource group is being created.
-             * *   OK: The resource group is created.
-             * *   PendingDelete: The resource group is waiting to be deleted.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,7 +444,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the resource group.
+             * <p>The tags that are added to the resource group.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -399,9 +458,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsResponseBody</p>
+     */
     public static class ResourceGroups extends TeaModel {
-        @NameInMap("ResourceGroup")
-        private java.util.List < ResourceGroup> resourceGroup;
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
+        private java.util.List<ResourceGroup> resourceGroup;
 
         private ResourceGroups(Builder builder) {
             this.resourceGroup = builder.resourceGroup;
@@ -418,17 +483,17 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * @return resourceGroup
          */
-        public java.util.List < ResourceGroup> getResourceGroup() {
+        public java.util.List<ResourceGroup> getResourceGroup() {
             return this.resourceGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceGroup> resourceGroup; 
+            private java.util.List<ResourceGroup> resourceGroup; 
 
             /**
              * ResourceGroup.
              */
-            public Builder resourceGroup(java.util.List < ResourceGroup> resourceGroup) {
+            public Builder resourceGroup(java.util.List<ResourceGroup> resourceGroup) {
                 this.resourceGroup = resourceGroup;
                 return this;
             }

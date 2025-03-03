@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourcesResponseBody</p>
  */
 public class ListResourcesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListResourcesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListResourcesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resources.
+         * <p>The information about the resources.</p>
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -118,7 +132,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,23 +148,29 @@ public class ListResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
         private Resource(Builder builder) {
@@ -218,7 +241,10 @@ public class ListResourcesResponseBody extends TeaModel {
             private String service; 
 
             /**
-             * The time when the resource was created. The time is displayed in UTC.
+             * <p>The time when the resource was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -226,7 +252,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -234,7 +263,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-uPJpP****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -242,7 +274,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-23v38****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -250,7 +285,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -258,7 +296,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud service.
+             * <p>The ID of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -272,9 +313,15 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        @com.aliyun.core.annotation.NameInMap("Resource")
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -291,17 +338,17 @@ public class ListResourcesResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetPolicyRequest</p>
  */
 public class GetPolicyRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Query
-    @NameInMap("PolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyType;
 
     private GetPolicyRequest(Builder builder) {
@@ -84,12 +89,15 @@ public class GetPolicyRequest extends Request {
         } 
 
         /**
-         * The language that is used to return the description of the system policy. Valid values:
-         * <p>
+         * <p>The language that is used to return the description of the system policy. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh-CN: Chinese</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   en: English
-         * *   zh-CN: Chinese
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -98,10 +106,12 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
-         * <p>
+         * <p>The name of the policy.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -110,11 +120,15 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Custom: custom policy
-         * *   System: system policy
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoleResponseBody} extends {@link TeaModel}
  *
  * <p>GetRoleResponseBody</p>
  */
 public class GetRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private Role role;
 
     private GetRoleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetRoleResponseBody extends TeaModel {
         private Role role; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the RAM role.
+         * <p>The information of the RAM role.</p>
          */
         public Builder role(Role role) {
             this.role = role;
@@ -71,11 +79,17 @@ public class GetRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleResponseBody</p>
+     */
     public static class LatestDeletionTask extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DeletionTaskId")
+        @com.aliyun.core.annotation.NameInMap("DeletionTaskId")
         private String deletionTaskId;
 
         private LatestDeletionTask(Builder builder) {
@@ -110,7 +124,10 @@ public class GetRoleResponseBody extends TeaModel {
             private String deletionTaskId; 
 
             /**
-             * The time when the deletion task was created.
+             * <p>The time when the deletion task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -118,7 +135,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deletion task.
+             * <p>The ID of the deletion task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECSAdmin/cc61514b-26eb-4453-ab53-b142eb702a3d</p>
              */
             public Builder deletionTaskId(String deletionTaskId) {
                 this.deletionTaskId = deletionTaskId;
@@ -132,38 +152,44 @@ public class GetRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AssumeRolePolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("AssumeRolePolicyDocument")
         private String assumeRolePolicyDocument;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsServiceLinkedRole")
+        @com.aliyun.core.annotation.NameInMap("IsServiceLinkedRole")
         private Boolean isServiceLinkedRole;
 
-        @NameInMap("LatestDeletionTask")
+        @com.aliyun.core.annotation.NameInMap("LatestDeletionTask")
         private LatestDeletionTask latestDeletionTask;
 
-        @NameInMap("MaxSessionDuration")
+        @com.aliyun.core.annotation.NameInMap("MaxSessionDuration")
         private Long maxSessionDuration;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("RolePrincipalName")
+        @com.aliyun.core.annotation.NameInMap("RolePrincipalName")
         private String rolePrincipalName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Role(Builder builder) {
@@ -279,7 +305,10 @@ public class GetRoleResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:role/ECSAdmin</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -287,7 +316,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The document of the policy that specifies the trusted entity to assume the RAM role.
+             * <p>The document of the policy that specifies the trusted entity to assume the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::12345678901234****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -295,7 +327,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM role was created.
+             * <p>The time when the RAM role was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -303,7 +338,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the RAM role.
+             * <p>The description of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS administrator</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +349,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM role is a service linked role.
+             * <p>Indicates whether the RAM role is a service linked role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
                 this.isServiceLinkedRole = isServiceLinkedRole;
@@ -319,7 +360,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the most recent deletion task.
+             * <p>The information of the most recent deletion task.</p>
              */
             public Builder latestDeletionTask(LatestDeletionTask latestDeletionTask) {
                 this.latestDeletionTask = latestDeletionTask;
@@ -327,7 +368,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum session duration of the RAM role.
+             * <p>The maximum session duration of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder maxSessionDuration(Long maxSessionDuration) {
                 this.maxSessionDuration = maxSessionDuration;
@@ -335,7 +379,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM role.
+             * <p>The ID of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90123456789****</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -343,7 +390,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role.
+             * <p>The name of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECSAdmin</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -351,7 +401,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role after authorization.
+             * <p>The name of the RAM role after authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
              */
             public Builder rolePrincipalName(String rolePrincipalName) {
                 this.rolePrincipalName = rolePrincipalName;
@@ -359,7 +412,10 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM role was updated.
+             * <p>The time when the RAM role was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-01-23T12:33:18Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListResourcesRequest</p>
  */
 public class ListResourcesRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("ResourceTypes")
-    private java.util.List < ResourceTypes> resourceTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
+    private java.util.List<ResourceTypes> resourceTypes;
 
-    @Query
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
     private ListResourcesRequest(Builder builder) {
@@ -115,7 +120,7 @@ public class ListResourcesRequest extends Request {
     /**
      * @return resourceTypes
      */
-    public java.util.List < ResourceTypes> getResourceTypes() {
+    public java.util.List<ResourceTypes> getResourceTypes() {
         return this.resourceTypes;
     }
 
@@ -133,7 +138,7 @@ public class ListResourcesRequest extends Request {
         private String resourceGroupId; 
         private String resourceId; 
         private String resourceType; 
-        private java.util.List < ResourceTypes> resourceTypes; 
+        private java.util.List<ResourceTypes> resourceTypes; 
         private String service; 
 
         private Builder() {
@@ -153,10 +158,11 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,10 +171,11 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,7 +184,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -186,7 +196,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uPJpP****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -195,7 +208,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-23v38****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -204,10 +220,11 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
+         * <p>The resource type.</p>
+         * <p>For more information about the supported resource types, see the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
          * 
-         * For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -216,22 +233,23 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The resource types. A maximum of 50 resource types are supported.
-         * <p>
-         * 
-         * >  If you configure `ResourceTypes`, you must configure both `Service` and `ResourceType`. Otherwise, the configured Service or ResourceType does not take effect.
+         * <p>The resource types. A maximum of 50 resource types are supported.</p>
+         * <blockquote>
+         * <p> If you configure <code>ResourceTypes</code>, you must configure both <code>Service</code> and <code>ResourceType</code>. Otherwise, the configured Service or ResourceType does not take effect.</p>
+         * </blockquote>
          */
-        public Builder resourceTypes(java.util.List < ResourceTypes> resourceTypes) {
+        public Builder resourceTypes(java.util.List<ResourceTypes> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
             this.resourceTypes = resourceTypes;
             return this;
         }
 
         /**
-         * The ID of the Alibaba Cloud service.
-         * <p>
+         * <p>The ID of the Alibaba Cloud service.</p>
+         * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
          * 
-         * You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);
@@ -246,11 +264,17 @@ public class ListResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListResourcesRequest</p>
+     */
     public static class ResourceTypes extends TeaModel {
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
         private ResourceTypes(Builder builder) {
@@ -285,14 +309,15 @@ public class ListResourcesRequest extends Request {
             private String service; 
 
             /**
-             * The resource type.
-             * <p>
+             * <p>The resource type.</p>
+             * <p>Valid values of N: 1 to 50.</p>
+             * <p>For more information about the supported resource types, see the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * <blockquote>
+             * <p> You must configure both <code>Service</code> and <code>ResourceType</code> in <code>ResourceTypes</code>. Otherwise, the two parameters do not take effect.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 50.
-             * 
-             * For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).
-             * 
-             * >  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -300,14 +325,15 @@ public class ListResourcesRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud service.
-             * <p>
+             * <p>The ID of the Alibaba Cloud service.</p>
+             * <p>Valid values of N: 1 to 50.</p>
+             * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+             * <blockquote>
+             * <p> You must configure both <code>Service</code> and <code>ResourceType</code> in <code>ResourceTypes</code>. Otherwise, the two parameters do not take effect.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 50.
-             * 
-             * You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).
-             * 
-             * >  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder service(String service) {
                 this.service = service;

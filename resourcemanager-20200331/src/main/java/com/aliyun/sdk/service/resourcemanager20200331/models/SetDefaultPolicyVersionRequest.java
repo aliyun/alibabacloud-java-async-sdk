@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDefaultPolicyVersionRequest} extends {@link RequestModel}
  *
  * <p>SetDefaultPolicyVersionRequest</p>
  */
 public class SetDefaultPolicyVersionRequest extends Request {
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Query
-    @NameInMap("VersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionId;
 
     private SetDefaultPolicyVersionRequest(Builder builder) {
@@ -70,10 +75,12 @@ public class SetDefaultPolicyVersionRequest extends Request {
         } 
 
         /**
-         * The name of the policy.
-         * <p>
+         * <p>The name of the policy.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -82,7 +89,11 @@ public class SetDefaultPolicyVersionRequest extends Request {
         }
 
         /**
-         * The ID of the policy version.
+         * <p>The ID of the policy version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

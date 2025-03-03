@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePolicyResponseBody</p>
  */
 public class CreatePolicyResponseBody extends TeaModel {
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private Policy policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the policy.
+         * <p>The information of the policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +63,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class CreatePolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyResponseBody</p>
+     */
     public static class Policy extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private Policy(Builder builder) {
@@ -146,7 +160,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * The time when the policy was created.
+             * <p>The time when the policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -154,7 +171,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the policy. Default value: v1.
+             * <p>The version number of the policy. Default value: v1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -162,7 +182,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS administrator</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +193,10 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS-Administrator</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -178,11 +204,14 @@ public class CreatePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy. Valid values:
-             * <p>
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li>Custom: custom policy</li>
+             * <li>System: system policy</li>
+             * </ul>
              * 
-             * *   Custom: custom policy
-             * *   System: system policy
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetMemberDeletionPermissionResponseBody} extends {@link TeaModel}
  *
  * <p>SetMemberDeletionPermissionResponseBody</p>
  */
 public class SetMemberDeletionPermissionResponseBody extends TeaModel {
-    @NameInMap("ManagementAccountId")
+    @com.aliyun.core.annotation.NameInMap("ManagementAccountId")
     private String managementAccountId;
 
-    @NameInMap("MemberDeletionStatus")
+    @com.aliyun.core.annotation.NameInMap("MemberDeletionStatus")
     private String memberDeletionStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDirectoryId")
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
     private String resourceDirectoryId;
 
     private SetMemberDeletionPermissionResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         private String resourceDirectoryId; 
 
         /**
-         * The ID of the management account of the resource directory.
+         * <p>The ID of the management account of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         public Builder managementAccountId(String managementAccountId) {
             this.managementAccountId = managementAccountId;
@@ -82,11 +90,14 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the member deletion feature. Valid values:
-         * <p>
+         * <p>The status of the member deletion feature. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The feature is enabled.</li>
+         * <li>Disabled: The feature is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The feature is enabled.
-         * *   Disabled: The feature is disabled.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder memberDeletionStatus(String memberDeletionStatus) {
             this.memberDeletionStatus = memberDeletionStatus;
@@ -94,7 +105,10 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C55A4CAA-9039-1DDF-91CE-FCC134513D29</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +116,10 @@ public class SetMemberDeletionPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource directory.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-3G****</p>
          */
         public Builder resourceDirectoryId(String resourceDirectoryId) {
             this.resourceDirectoryId = resourceDirectoryId;

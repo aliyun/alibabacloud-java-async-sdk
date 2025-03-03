@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicyVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPolicyVersionsResponseBody</p>
  */
 public class ListPolicyVersionsResponseBody extends TeaModel {
-    @NameInMap("PolicyVersions")
+    @com.aliyun.core.annotation.NameInMap("PolicyVersions")
     private PolicyVersions policyVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPolicyVersionsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the policy versions.
+         * <p>The information of the policy versions.</p>
          */
         public Builder policyVersions(PolicyVersions policyVersions) {
             this.policyVersions = policyVersions;
@@ -58,7 +63,10 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicyVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyVersionsResponseBody</p>
+     */
     public static class PolicyVersion extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("IsDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("IsDefaultVersion")
         private Boolean isDefaultVersion;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private PolicyVersion(Builder builder) {
@@ -122,7 +136,10 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The time when the policy version was created.
+             * <p>The time when the policy version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -130,7 +147,10 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the policy version is the default version.
+             * <p>Indicates whether the policy version is the default version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -138,7 +158,10 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy version.
+             * <p>The ID of the policy version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -152,9 +175,15 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicyVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyVersionsResponseBody</p>
+     */
     public static class PolicyVersions extends TeaModel {
-        @NameInMap("PolicyVersion")
-        private java.util.List < PolicyVersion> policyVersion;
+        @com.aliyun.core.annotation.NameInMap("PolicyVersion")
+        private java.util.List<PolicyVersion> policyVersion;
 
         private PolicyVersions(Builder builder) {
             this.policyVersion = builder.policyVersion;
@@ -171,17 +200,17 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         /**
          * @return policyVersion
          */
-        public java.util.List < PolicyVersion> getPolicyVersion() {
+        public java.util.List<PolicyVersion> getPolicyVersion() {
             return this.policyVersion;
         }
 
         public static final class Builder {
-            private java.util.List < PolicyVersion> policyVersion; 
+            private java.util.List<PolicyVersion> policyVersion; 
 
             /**
              * PolicyVersion.
              */
-            public Builder policyVersion(java.util.List < PolicyVersion> policyVersion) {
+            public Builder policyVersion(java.util.List<PolicyVersion> policyVersion) {
                 this.policyVersion = policyVersion;
                 return this;
             }

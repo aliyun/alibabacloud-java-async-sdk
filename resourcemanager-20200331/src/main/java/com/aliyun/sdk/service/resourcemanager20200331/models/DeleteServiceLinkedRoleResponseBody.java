@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteServiceLinkedRoleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteServiceLinkedRoleResponseBody</p>
  */
 public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("DeletionTaskId")
+    @com.aliyun.core.annotation.NameInMap("DeletionTaskId")
     private String deletionTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteServiceLinkedRoleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the deletion task.
+         * <p>The ID of the deletion task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task/acs-service-role/polardb.aliyuncs.com/AliyunServiceRoleForPolarDB/64c4f9cc-fac2-4692-ae1b-804ae4b9****</p>
          */
         public Builder deletionTaskId(String deletionTaskId) {
             this.deletionTaskId = deletionTaskId;
@@ -58,7 +66,10 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B595E5BF-FF5F-4E7F-B95A-B90FE242FEB6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

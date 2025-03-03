@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateResourceGroupRequest</p>
  */
 public class UpdateResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("NewDisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newDisplayName;
 
-    @Query
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
 
     private UpdateResourceGroupRequest(Builder builder) {
@@ -70,10 +75,12 @@ public class UpdateResourceGroupRequest extends Request {
         } 
 
         /**
-         * The display name of the resource group.
-         * <p>
+         * <p>The display name of the resource group.</p>
+         * <p>The name must be 1 to 50 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 50 characters in length.
+         * <strong>example:</strong>
+         * <p>project</p>
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -82,10 +89,12 @@ public class UpdateResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
-         * <p>
+         * <p>The ID of the resource group.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

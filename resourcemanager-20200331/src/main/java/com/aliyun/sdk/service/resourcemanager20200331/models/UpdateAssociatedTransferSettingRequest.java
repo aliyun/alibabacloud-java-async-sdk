@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcemanager20200331.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAssociatedTransferSettingRequest} extends {@link RequestModel}
  *
  * <p>UpdateAssociatedTransferSettingRequest</p>
  */
 public class UpdateAssociatedTransferSettingRequest extends Request {
-    @Query
-    @NameInMap("EnableExistingResourcesTransfer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableExistingResourcesTransfer")
     private String enableExistingResourcesTransfer;
 
-    @Query
-    @NameInMap("RuleSettings")
-    private java.util.List < RuleSettings> ruleSettings;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleSettings")
+    private java.util.List<RuleSettings> ruleSettings;
 
     private UpdateAssociatedTransferSettingRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
     /**
      * @return ruleSettings
      */
-    public java.util.List < RuleSettings> getRuleSettings() {
+    public java.util.List<RuleSettings> getRuleSettings() {
         return this.ruleSettings;
     }
 
     public static final class Builder extends Request.Builder<UpdateAssociatedTransferSettingRequest, Builder> {
         private String enableExistingResourcesTransfer; 
-        private java.util.List < RuleSettings> ruleSettings; 
+        private java.util.List<RuleSettings> ruleSettings; 
 
         private Builder() {
             super();
@@ -68,7 +73,14 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
         } 
 
         /**
-         * EnableExistingResourcesTransfer.
+         * <p>Specifies whether to enable the Transfer Existing Associated Resources feature. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableExistingResourcesTransfer(String enableExistingResourcesTransfer) {
             this.putQueryParameter("EnableExistingResourcesTransfer", enableExistingResourcesTransfer);
@@ -77,9 +89,9 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
         }
 
         /**
-         * The settings of the transfer rules.
+         * <p>The settings of transfer rules.</p>
          */
-        public Builder ruleSettings(java.util.List < RuleSettings> ruleSettings) {
+        public Builder ruleSettings(java.util.List<RuleSettings> ruleSettings) {
             this.putQueryParameter("RuleSettings", ruleSettings);
             this.ruleSettings = ruleSettings;
             return this;
@@ -92,21 +104,27 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAssociatedTransferSettingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAssociatedTransferSettingRequest</p>
+     */
     public static class RuleSettings extends TeaModel {
-        @NameInMap("AssociatedResourceType")
+        @com.aliyun.core.annotation.NameInMap("AssociatedResourceType")
         private String associatedResourceType;
 
-        @NameInMap("AssociatedService")
+        @com.aliyun.core.annotation.NameInMap("AssociatedService")
         private String associatedService;
 
-        @NameInMap("MasterResourceType")
+        @com.aliyun.core.annotation.NameInMap("MasterResourceType")
         private String masterResourceType;
 
-        @NameInMap("MasterService")
+        @com.aliyun.core.annotation.NameInMap("MasterService")
         private String masterService;
 
-        @NameInMap("Status")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Status")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String status;
 
         private RuleSettings(Builder builder) {
@@ -168,10 +186,11 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             private String status; 
 
             /**
-             * The type of the associated resource.
-             * <p>
+             * <p>The type of the associated resource.</p>
+             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
              * 
-             * You can obtain the resource type from the **Resource type** column in [Services that work with Resource Group](~~94479~~).
+             * <strong>example:</strong>
+             * <p>disk</p>
              */
             public Builder associatedResourceType(String associatedResourceType) {
                 this.associatedResourceType = associatedResourceType;
@@ -179,10 +198,11 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * The service code of the associated resource.
-             * <p>
+             * <p>The service code of the associated resource.</p>
+             * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
              * 
-             * You can obtain the service code from the **Service code** column in [Services that work with Resource Group](~~94479~~).
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder associatedService(String associatedService) {
                 this.associatedService = associatedService;
@@ -190,10 +210,11 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * The type of the primary resource.
-             * <p>
+             * <p>The type of the primary resource.</p>
+             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
              * 
-             * You can obtain the resource type from the **Resource type** column in [Services that work with Resource Group](~~94479~~).
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder masterResourceType(String masterResourceType) {
                 this.masterResourceType = masterResourceType;
@@ -201,10 +222,11 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * The service code of the primary resource.
-             * <p>
+             * <p>The service code of the primary resource.</p>
+             * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
              * 
-             * You can obtain the service code from the **Service code** column in [Services that work with Resource Group](~~94479~~).
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder masterService(String masterService) {
                 this.masterService = masterService;
@@ -212,11 +234,15 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * The status of the Transfer Associated Resources feature. Valid values:
-             * <p>
+             * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
+             * <ul>
+             * <li>Enable: enabled</li>
+             * <li>Disable: disabled</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * - Enable: enabled
-             * - Disable: disabled
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
