@@ -67,6 +67,10 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
     private String scores;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    private String serviceName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserFeatures")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userFeatures;
@@ -83,6 +87,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         this.logUserId = builder.logUserId;
         this.sceneName = builder.sceneName;
         this.scores = builder.scores;
+        this.serviceName = builder.serviceName;
         this.userFeatures = builder.userFeatures;
     }
 
@@ -170,6 +175,13 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
     }
 
     /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
      * @return userFeatures
      */
     public String getUserFeatures() {
@@ -187,6 +199,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         private String logUserId; 
         private String sceneName; 
         private String scores; 
+        private String serviceName; 
         private String userFeatures; 
 
         private Builder() {
@@ -205,6 +218,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
             this.logUserId = request.logUserId;
             this.sceneName = request.sceneName;
             this.scores = request.scores;
+            this.serviceName = request.serviceName;
             this.userFeatures = request.userFeatures;
         } 
 
@@ -322,6 +336,15 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends Request {
         public Builder scores(String scores) {
             this.putBodyParameter("Scores", scores);
             this.scores = scores;
+            return this;
+        }
+
+        /**
+         * ServiceName.
+         */
+        public Builder serviceName(String serviceName) {
+            this.putBodyParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
             return this;
         }
 
