@@ -23,13 +23,9 @@ public class DrivingDirectionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("success")
-    private Boolean success;
-
     private DrivingDirectionResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -54,17 +50,9 @@ public class DrivingDirectionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
-        private Boolean success; 
 
         /**
          * data.
@@ -82,14 +70,6 @@ public class DrivingDirectionResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
