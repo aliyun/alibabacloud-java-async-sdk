@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateEventStreamingResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEventStreamingResponseBody</p>
@@ -85,11 +91,14 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request is successful.</li>
+         * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
+         * </ul>
          * 
-         * *   Success: The request is successful.
-         * *   Other codes: The request failed. For more information about error codes, see Error codes.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +106,7 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +114,10 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name [xxxx] of event streaming in request is already exist!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +125,10 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B896B484-F16D-59DE-9E23-DD0E5C361108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +136,10 @@ public class CreateEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
+         * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +152,12 @@ public class CreateEventStreamingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEventStreamingResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventStreamingARN")
         private String eventStreamingARN;
@@ -161,7 +185,10 @@ public class CreateEventStreamingResponseBody extends TeaModel {
             private String eventStreamingARN; 
 
             /**
-             * The ARN of the event stream.
+             * <p>The ARN of the event stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventstreaming/myeventstreaming</p>
              */
             public Builder eventStreamingARN(String eventStreamingARN) {
                 this.eventStreamingARN = eventStreamingARN;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link TestEventPatternResponseBody} extends {@link TeaModel}
  *
  * <p>TestEventPatternResponseBody</p>
@@ -85,7 +91,10 @@ public class TestEventPatternResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+         * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +102,7 @@ public class TestEventPatternResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +110,7 @@ public class TestEventPatternResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +118,10 @@ public class TestEventPatternResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96D7C0AB-DCE5-5E82-96B8-4725E1706BB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +129,10 @@ public class TestEventPatternResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the operation is successful. If the operation is successful, the value true is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +145,12 @@ public class TestEventPatternResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TestEventPatternResponseBody} extends {@link TeaModel}
+     *
+     * <p>TestEventPatternResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private Boolean result;
@@ -157,7 +178,10 @@ public class TestEventPatternResponseBody extends TeaModel {
             private Boolean result; 
 
             /**
-             * The value true indicates that the event pattern matches the provided JSON format. The value false indicates that the event pattern does not match the provided JSON format.
+             * <p>The value true indicates that the event pattern matches the provided JSON format. The value false indicates that the event pattern does not match the provided JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder result(Boolean result) {
                 this.result = result;

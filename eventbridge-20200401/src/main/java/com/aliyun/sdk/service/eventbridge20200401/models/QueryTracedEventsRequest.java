@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link QueryTracedEventsRequest} extends {@link RequestModel}
  *
  * <p>QueryTracedEventsRequest</p>
@@ -154,7 +160,11 @@ public class QueryTracedEventsRequest extends Request {
         } 
 
         /**
-         * The end of the time range when event traces are queried. Unit: milliseconds.
+         * <p>The end of the time range when event traces are queried. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661773509000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,7 +173,11 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyEventBus</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -172,7 +186,10 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * The name of the event source.
+         * <p>The name of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse</p>
          */
         public Builder eventSource(String eventSource) {
             this.putQueryParameter("EventSource", eventSource);
@@ -181,7 +198,10 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * The event type.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eventbridge:Events:HTTPEvent</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -190,7 +210,13 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Up to 100 entries can be returned in a call.
+         * <p>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</p>
+         * <blockquote>
+         * <p> A maximum of 100 entries can be returned in a request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -199,7 +225,10 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * The name of the event rule that is matched.
+         * <p>The name of the event rule that is matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-mnsrule</p>
          */
         public Builder matchedRule(String matchedRule) {
             this.putQueryParameter("MatchedRule", matchedRule);
@@ -208,7 +237,10 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * If you configure Limit and excess return values exist, this parameter is returned.
+         * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -217,7 +249,11 @@ public class QueryTracedEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query event traces. Unit: milliseconds.
+         * <p>The beginning of the time range to query event traces. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661773509000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateApiDestinationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApiDestinationResponseBody</p>
@@ -73,7 +79,10 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * <p>The returned response code. The value Success indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +90,7 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned if the API destination is created.
+         * <p>The data returned if the API destination is created.</p>
          */
         public Builder date(Date date) {
             this.date = date;
@@ -89,7 +98,10 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +109,10 @@ public class CreateApiDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DAF96FB-A4B6-548C-B999-0BFDCB2261B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +125,12 @@ public class CreateApiDestinationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApiDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApiDestinationResponseBody</p>
+     */
     public static class Date extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiDestinationName")
         private String apiDestinationName;
@@ -137,7 +158,10 @@ public class CreateApiDestinationResponseBody extends TeaModel {
             private String apiDestinationName; 
 
             /**
-             * The name of the API destination.
+             * <p>The name of the API destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApiDestinationName</p>
              */
             public Builder apiDestinationName(String apiDestinationName) {
                 this.apiDestinationName = apiDestinationName;

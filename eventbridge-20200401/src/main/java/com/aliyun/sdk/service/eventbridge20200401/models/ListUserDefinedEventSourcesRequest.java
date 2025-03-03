@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListUserDefinedEventSourcesRequest} extends {@link RequestModel}
  *
  * <p>ListUserDefinedEventSourcesRequest</p>
@@ -95,7 +101,10 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         } 
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testBus</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -104,7 +113,10 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Note: Up to 100 entries can be returned in a call.
+         * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Note: Up to 100 entries can be returned in a call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -113,7 +125,10 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * The name of the event source.
+         * <p>The name of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder namePrefix(String namePrefix) {
             this.putQueryParameter("NamePrefix", namePrefix);
@@ -122,7 +137,10 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * If you configure Limit and excess return values exist, this parameter is returned.
+         * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

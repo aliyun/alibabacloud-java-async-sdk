@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link EventCenterQueryEventsRequest} extends {@link RequestModel}
  *
  * <p>EventCenterQueryEventsRequest</p>
@@ -97,7 +103,8 @@ public class EventCenterQueryEventsRequest extends Request {
         } 
 
         /**
-         * Body.
+         * <p>The parameters in the request body.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(EventCenterQueryEventsRequestBody body) {
             String bodyShrink = shrink(body, "Body", "json");
@@ -107,7 +114,10 @@ public class EventCenterQueryEventsRequest extends Request {
         }
 
         /**
-         * BusName.
+         * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder busName(String busName) {
             this.putQueryParameter("BusName", busName);
@@ -116,7 +126,10 @@ public class EventCenterQueryEventsRequest extends Request {
         }
 
         /**
-         * 本次读取的最大数据量，默认值为100。
+         * <p>The number of entries per page. Valid values: 0 to 10000. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,7 +138,10 @@ public class EventCenterQueryEventsRequest extends Request {
         }
 
         /**
-         * 用来标记当前开始读取的位置。置空表示从头开始。
+         * <p>用来标记当前开始读取的位置。置空表示从头开始。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -140,6 +156,12 @@ public class EventCenterQueryEventsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EventCenterQueryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsRequest</p>
+     */
     public static class Calculations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
@@ -179,7 +201,10 @@ public class EventCenterQueryEventsRequest extends Request {
             private String op; 
 
             /**
-             * Column.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -187,7 +212,10 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Op.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COUNT_DISTINCT</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -201,7 +229,13 @@ public class EventCenterQueryEventsRequest extends Request {
         } 
 
     }
-    public static class Filters extends TeaModel {
+    /**
+     * 
+     * {@link EventCenterQueryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsRequest</p>
+     */
+    public static class NestedFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
 
@@ -209,9 +243,9 @@ public class EventCenterQueryEventsRequest extends Request {
         private String op;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
-        private Filters(Builder builder) {
+        private NestedFilters(Builder builder) {
             this.column = builder.column;
             this.op = builder.op;
             this.values = builder.values;
@@ -221,7 +255,7 @@ public class EventCenterQueryEventsRequest extends Request {
             return new Builder();
         }
 
-        public static Filters create() {
+        public static NestedFilters create() {
             return builder().build();
         }
 
@@ -242,17 +276,20 @@ public class EventCenterQueryEventsRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String column; 
             private String op; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * Column.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -260,7 +297,10 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Op.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COUNT_DISTINCT</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -270,7 +310,140 @@ public class EventCenterQueryEventsRequest extends Request {
             /**
              * Values.
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public NestedFilters build() {
+                return new NestedFilters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link EventCenterQueryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsRequest</p>
+     */
+    public static class Filters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Column")
+        private String column;
+
+        @com.aliyun.core.annotation.NameInMap("NestedFilterCombination")
+        private String nestedFilterCombination;
+
+        @com.aliyun.core.annotation.NameInMap("NestedFilters")
+        private java.util.List<NestedFilters> nestedFilters;
+
+        @com.aliyun.core.annotation.NameInMap("Op")
+        private String op;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
+
+        private Filters(Builder builder) {
+            this.column = builder.column;
+            this.nestedFilterCombination = builder.nestedFilterCombination;
+            this.nestedFilters = builder.nestedFilters;
+            this.op = builder.op;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return column
+         */
+        public String getColumn() {
+            return this.column;
+        }
+
+        /**
+         * @return nestedFilterCombination
+         */
+        public String getNestedFilterCombination() {
+            return this.nestedFilterCombination;
+        }
+
+        /**
+         * @return nestedFilters
+         */
+        public java.util.List<NestedFilters> getNestedFilters() {
+            return this.nestedFilters;
+        }
+
+        /**
+         * @return op
+         */
+        public String getOp() {
+            return this.op;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String column; 
+            private String nestedFilterCombination; 
+            private java.util.List<NestedFilters> nestedFilters; 
+            private String op; 
+            private java.util.List<String> values; 
+
+            /**
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source</p>
+             */
+            public Builder column(String column) {
+                this.column = column;
+                return this;
+            }
+
+            /**
+             * NestedFilterCombination.
+             */
+            public Builder nestedFilterCombination(String nestedFilterCombination) {
+                this.nestedFilterCombination = nestedFilterCombination;
+                return this;
+            }
+
+            /**
+             * NestedFilters.
+             */
+            public Builder nestedFilters(java.util.List<NestedFilters> nestedFilters) {
+                this.nestedFilters = nestedFilters;
+                return this;
+            }
+
+            /**
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
+             */
+            public Builder op(String op) {
+                this.op = op;
+                return this;
+            }
+
+            /**
+             * <p>The values that are used together with the operator.</p>
+             */
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -282,6 +455,12 @@ public class EventCenterQueryEventsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link EventCenterQueryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsRequest</p>
+     */
     public static class Orders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
@@ -333,7 +512,10 @@ public class EventCenterQueryEventsRequest extends Request {
             private String op; 
 
             /**
-             * Column.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -341,7 +523,10 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Desc.
+             * <p>Specifies whether to sort the query results in descending order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder desc(Boolean desc) {
                 this.desc = desc;
@@ -349,7 +534,10 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Op.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVG</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -363,21 +551,27 @@ public class EventCenterQueryEventsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link EventCenterQueryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Breakdowns")
-        private java.util.List < String > breakdowns;
+        private java.util.List<String> breakdowns;
 
         @com.aliyun.core.annotation.NameInMap("Calculations")
-        private java.util.List < Calculations> calculations;
+        private java.util.List<Calculations> calculations;
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
-        private Integer endTime;
+        private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("FilterCombination")
         private String filterCombination;
 
         @com.aliyun.core.annotation.NameInMap("Filters")
-        private java.util.List < Filters> filters;
+        private java.util.List<Filters> filters;
 
         @com.aliyun.core.annotation.NameInMap("Granularity")
         private Integer granularity;
@@ -389,13 +583,13 @@ public class EventCenterQueryEventsRequest extends Request {
         private Integer offset;
 
         @com.aliyun.core.annotation.NameInMap("Orders")
-        private java.util.List < Orders> orders;
+        private java.util.List<Orders> orders;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
-        private Integer startTime;
+        private Long startTime;
 
         @com.aliyun.core.annotation.NameInMap("TimeRange")
-        private Integer timeRange;
+        private Long timeRange;
 
         private Parameters(Builder builder) {
             this.breakdowns = builder.breakdowns;
@@ -422,21 +616,21 @@ public class EventCenterQueryEventsRequest extends Request {
         /**
          * @return breakdowns
          */
-        public java.util.List < String > getBreakdowns() {
+        public java.util.List<String> getBreakdowns() {
             return this.breakdowns;
         }
 
         /**
          * @return calculations
          */
-        public java.util.List < Calculations> getCalculations() {
+        public java.util.List<Calculations> getCalculations() {
             return this.calculations;
         }
 
         /**
          * @return endTime
          */
-        public Integer getEndTime() {
+        public Long getEndTime() {
             return this.endTime;
         }
 
@@ -450,7 +644,7 @@ public class EventCenterQueryEventsRequest extends Request {
         /**
          * @return filters
          */
-        public java.util.List < Filters> getFilters() {
+        public java.util.List<Filters> getFilters() {
             return this.filters;
         }
 
@@ -478,63 +672,69 @@ public class EventCenterQueryEventsRequest extends Request {
         /**
          * @return orders
          */
-        public java.util.List < Orders> getOrders() {
+        public java.util.List<Orders> getOrders() {
             return this.orders;
         }
 
         /**
          * @return startTime
          */
-        public Integer getStartTime() {
+        public Long getStartTime() {
             return this.startTime;
         }
 
         /**
          * @return timeRange
          */
-        public Integer getTimeRange() {
+        public Long getTimeRange() {
             return this.timeRange;
         }
 
         public static final class Builder {
-            private java.util.List < String > breakdowns; 
-            private java.util.List < Calculations> calculations; 
-            private Integer endTime; 
+            private java.util.List<String> breakdowns; 
+            private java.util.List<Calculations> calculations; 
+            private Long endTime; 
             private String filterCombination; 
-            private java.util.List < Filters> filters; 
+            private java.util.List<Filters> filters; 
             private Integer granularity; 
             private Integer limit; 
             private Integer offset; 
-            private java.util.List < Orders> orders; 
-            private Integer startTime; 
-            private Integer timeRange; 
+            private java.util.List<Orders> orders; 
+            private Long startTime; 
+            private Long timeRange; 
 
             /**
-             * Breakdowns.
+             * <p>Specifies whether to further split the data set based on the column name.</p>
              */
-            public Builder breakdowns(java.util.List < String > breakdowns) {
+            public Builder breakdowns(java.util.List<String> breakdowns) {
                 this.breakdowns = breakdowns;
                 return this;
             }
 
             /**
-             * Calculations.
+             * <p>The operator that is used to calculate the specified column.</p>
              */
-            public Builder calculations(java.util.List < Calculations> calculations) {
+            public Builder calculations(java.util.List<Calculations> calculations) {
                 this.calculations = calculations;
                 return this;
             }
 
             /**
-             * EndTime.
+             * <p>The timestamp that specifies the end of the time range to query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687861201814</p>
              */
-            public Builder endTime(Integer endTime) {
+            public Builder endTime(Long endTime) {
                 this.endTime = endTime;
                 return this;
             }
 
             /**
-             * FilterCombination.
+             * <p>The logic used to filter the combination of conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder filterCombination(String filterCombination) {
                 this.filterCombination = filterCombination;
@@ -542,15 +742,18 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Filters.
+             * <p>The filter conditions.</p>
              */
-            public Builder filters(java.util.List < Filters> filters) {
+            public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
                 return this;
             }
 
             /**
-             * Granularity.
+             * <p>The minimum time unit for querying time series data. Minimum value: 1. Unit: seconds. The value of this parameter is a recommended value. The actual value returned shall prevail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder granularity(Integer granularity) {
                 this.granularity = granularity;
@@ -558,7 +761,10 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Limit.
+             * <p>The maximum number of events to query. Valid values: 1 to 10000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -566,7 +772,10 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Offset.
+             * <p>The offset of the start position for this query. The offset starts from 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder offset(Integer offset) {
                 this.offset = offset;
@@ -574,25 +783,31 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Orders.
+             * <p>The order of the query results. This parameter is valid only if you set QueryType to table.</p>
              */
-            public Builder orders(java.util.List < Orders> orders) {
+            public Builder orders(java.util.List<Orders> orders) {
                 this.orders = orders;
                 return this;
             }
 
             /**
-             * StartTime.
+             * <p>The timestamp that specifies the beginning of the time range to query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687860901814</p>
              */
-            public Builder startTime(Integer startTime) {
+            public Builder startTime(Long startTime) {
                 this.startTime = startTime;
                 return this;
             }
 
             /**
-             * TimeRange.
+             * <p>The time range during which events are queried. Unit: milliseconds. Minimum value: 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
-            public Builder timeRange(Integer timeRange) {
+            public Builder timeRange(Long timeRange) {
                 this.timeRange = timeRange;
                 return this;
             }
@@ -604,6 +819,12 @@ public class EventCenterQueryEventsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link EventCenterQueryEventsRequest} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsRequest</p>
+     */
     public static class EventCenterQueryEventsRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameters")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -658,7 +879,8 @@ public class EventCenterQueryEventsRequest extends Request {
             private String schemaId; 
 
             /**
-             * Parameters.
+             * <p>The query parameters.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
@@ -666,7 +888,16 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * QueryType.
+             * <p>The query type. Valid values:</p>
+             * <ul>
+             * <li><strong>timeseries</strong>: queries time series data.</li>
+             * <li><strong>table</strong>: queries table data.</li>
+             * <li><strong>timeseries_and_table</strong>: queries time series data and table data at the same time.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>timeseries_and_table</p>
              */
             public Builder queryType(String queryType) {
                 this.queryType = queryType;
@@ -674,7 +905,11 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * Schema ID。
+             * <p>The schema ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs:GeneralSchema</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;

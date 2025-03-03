@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link DeleteTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTargetsResponseBody</p>
@@ -85,7 +91,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.
+         * <p>The response code. The code 200 indicates that the request was successful. Other codes indicate that the request failed. For information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +102,7 @@ public class DeleteTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +110,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventBusNotExist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78FA9EAC-F0C0-58B0-871E-9F9756CE1D29</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values: true and false.
+         * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +148,12 @@ public class DeleteTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteTargetsResponseBody</p>
+     */
     public static class ErrorEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntryId")
         private String entryId;
@@ -181,7 +205,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * The ID of the event body that failed to be processed.
+             * <p>The ID of the event body that failed to be processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>target5</p>
              */
             public Builder entryId(String entryId) {
                 this.entryId = entryId;
@@ -189,7 +216,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EventRuleTargetIdDuplicate</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -197,7 +227,10 @@ public class DeleteTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The id of event target is duplicate!</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -211,9 +244,15 @@ public class DeleteTargetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteTargetsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorEntries")
-        private java.util.List < ErrorEntries> errorEntries;
+        private java.util.List<ErrorEntries> errorEntries;
 
         @com.aliyun.core.annotation.NameInMap("ErrorEntriesCount")
         private Integer errorEntriesCount;
@@ -234,7 +273,7 @@ public class DeleteTargetsResponseBody extends TeaModel {
         /**
          * @return errorEntries
          */
-        public java.util.List < ErrorEntries> getErrorEntries() {
+        public java.util.List<ErrorEntries> getErrorEntries() {
             return this.errorEntries;
         }
 
@@ -246,19 +285,22 @@ public class DeleteTargetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ErrorEntries> errorEntries; 
+            private java.util.List<ErrorEntries> errorEntries; 
             private Integer errorEntriesCount; 
 
             /**
-             * The information about the event body that failed to be processed.
+             * <p>The information about the event body that failed to be processed.</p>
              */
-            public Builder errorEntries(java.util.List < ErrorEntries> errorEntries) {
+            public Builder errorEntries(java.util.List<ErrorEntries> errorEntries) {
                 this.errorEntries = errorEntries;
                 return this;
             }
 
             /**
-             * The number of event bodies that failed to be processed. Valid values: 0: No event bodies failed to be processed. An integer other than 0: the number of event bodies that failed to be processed.
+             * <p>The number of event bodies that failed to be processed. Valid values: 0: No event bodies failed to be processed. An integer other than 0: the number of event bodies that failed to be processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorEntriesCount(Integer errorEntriesCount) {
                 this.errorEntriesCount = errorEntriesCount;

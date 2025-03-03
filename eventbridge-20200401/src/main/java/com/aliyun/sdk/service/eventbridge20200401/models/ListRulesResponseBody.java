@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRulesResponseBody</p>
@@ -85,7 +91,10 @@ public class ListRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code. The value Success indicates that the request is successful.
+         * <p>The error code. The value Success indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +102,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +110,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if the request failed.
+         * <p>The error message that is returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter Limit is not valid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7043799-F4DA-5290-9249-97C359876D97</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +148,12 @@ public class ListRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
@@ -205,7 +229,10 @@ public class ListRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The endpoint of the event target.
+             * <p>The endpoint of the event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:123456789098****:queues/myqueue</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -221,7 +248,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom event target.
+             * <p>The ID of the custom event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>177</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -229,7 +259,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The transformer that is used to push events.
+             * <p>The transformer that is used to push events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MATCHED_EVENT</p>
              */
             public Builder pushSelector(String pushSelector) {
                 this.pushSelector = pushSelector;
@@ -237,7 +270,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+             * <p>The type of the event target. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs.mns.queue</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -251,6 +287,12 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTimestamp")
         private Long createdTimestamp;
@@ -259,7 +301,7 @@ public class ListRulesResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DetailMap")
-        private java.util.Map < String, ? > detailMap;
+        private java.util.Map<String, ?> detailMap;
 
         @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
@@ -277,7 +319,7 @@ public class ListRulesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
-        private java.util.List < Targets> targets;
+        private java.util.List<Targets> targets;
 
         private Rules(Builder builder) {
             this.createdTimestamp = builder.createdTimestamp;
@@ -316,7 +358,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return detailMap
          */
-        public java.util.Map < String, ? > getDetailMap() {
+        public java.util.Map<String, ?> getDetailMap() {
             return this.detailMap;
         }
 
@@ -358,23 +400,26 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return targets
          */
-        public java.util.List < Targets> getTargets() {
+        public java.util.List<Targets> getTargets() {
             return this.targets;
         }
 
         public static final class Builder {
             private Long createdTimestamp; 
             private String description; 
-            private java.util.Map < String, ? > detailMap; 
+            private java.util.Map<String, ?> detailMap; 
             private String eventBusName; 
             private String filterPattern; 
             private String ruleARN; 
             private String ruleName; 
             private String status; 
-            private java.util.List < Targets> targets; 
+            private java.util.List<Targets> targets; 
 
             /**
-             * The creation timestamp.
+             * <p>The creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1607071602000</p>
              */
             public Builder createdTimestamp(Long createdTimestamp) {
                 this.createdTimestamp = createdTimestamp;
@@ -382,7 +427,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -390,15 +438,18 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the event rule.
+             * <p>The details of the event rule.</p>
              */
-            public Builder detailMap(java.util.Map < String, ? > detailMap) {
+            public Builder detailMap(java.util.Map<String, ?> detailMap) {
                 this.detailMap = detailMap;
                 return this;
             }
 
             /**
-             * The name of the event bus.
+             * <p>The name of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -406,10 +457,11 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The event pattern, in JSON format. Valid values: stringEqual pattern stringExpression pattern Each field can have a maximum of five expressions in the map data structure.
-             * <p>
+             * <p>The event pattern, in JSON format. Valid values: stringEqual pattern stringExpression pattern Each field can have a maximum of five expressions in the map data structure.</p>
+             * <p>Each field can have a maximum of five expressions in the map data structure.</p>
              * 
-             * Each field can have a maximum of five expressions in the map data structure.
+             * <strong>example:</strong>
+             * <p>{&quot;source&quot;:[&quot;acs.oss&quot;],&quot;type&quot;:[&quot;oss:BucketQueried:GetBucketStat&quot;]}</p>
              */
             public Builder filterPattern(String filterPattern) {
                 this.filterPattern = filterPattern;
@@ -417,7 +469,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the rule.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:123456789098****:eventbus/default/rule/myRule3</p>
              */
             public Builder ruleARN(String ruleARN) {
                 this.ruleARN = ruleARN;
@@ -425,7 +480,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event rule.
+             * <p>The name of the event rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf-testacc-rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -433,7 +491,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event rule. Valid values: ENABLE: The event rule is enabled. It is the default state of the event rule. DISABLE: The event rule is disabled.
+             * <p>The status of the event rule. Valid values: ENABLE: The event rule is enabled. It is the default state of the event rule. DISABLE: The event rule is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -441,9 +502,9 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The event targets.
+             * <p>The event targets.</p>
              */
-            public Builder targets(java.util.List < Targets> targets) {
+            public Builder targets(java.util.List<Targets> targets) {
                 this.targets = targets;
                 return this;
             }
@@ -455,12 +516,18 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
@@ -489,7 +556,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -502,11 +569,14 @@ public class ListRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String nextToken; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private Integer total; 
 
             /**
-             * If excess return values exist, this parameter is returned.
+             * <p>If excess return values exist, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -514,15 +584,18 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rules.
+             * <p>The rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

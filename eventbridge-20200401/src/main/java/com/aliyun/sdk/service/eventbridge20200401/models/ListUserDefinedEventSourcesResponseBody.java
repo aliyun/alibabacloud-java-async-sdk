@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserDefinedEventSourcesResponseBody</p>
@@ -85,11 +91,14 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. Valid values:
-         * <p>
+         * <p>The returned response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request is successful.</li>
+         * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
+         * </ul>
          * 
-         * *   Success: The request is successful.
-         * *   Other codes: The request failed. For more information about error codes, see Error codes.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +106,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +114,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidArgument</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +125,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5169654A-7059-57E3-BFD9-33C7E012EA1B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +136,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
+         * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,18 +152,24 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceHttpEventParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
-        private java.util.List < String > ip;
+        private java.util.List<String> ip;
 
         @com.aliyun.core.annotation.NameInMap("Method")
-        private java.util.List < String > method;
+        private java.util.List<String> method;
 
         @com.aliyun.core.annotation.NameInMap("PublicWebHookUrl")
-        private java.util.List < String > publicWebHookUrl;
+        private java.util.List<String> publicWebHookUrl;
 
         @com.aliyun.core.annotation.NameInMap("Referer")
-        private java.util.List < String > referer;
+        private java.util.List<String> referer;
 
         @com.aliyun.core.annotation.NameInMap("SecurityConfig")
         private String securityConfig;
@@ -154,7 +178,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("VpcWebHookUrl")
-        private java.util.List < String > vpcWebHookUrl;
+        private java.util.List<String> vpcWebHookUrl;
 
         private SourceHttpEventParameters(Builder builder) {
             this.ip = builder.ip;
@@ -177,28 +201,28 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         /**
          * @return method
          */
-        public java.util.List < String > getMethod() {
+        public java.util.List<String> getMethod() {
             return this.method;
         }
 
         /**
          * @return publicWebHookUrl
          */
-        public java.util.List < String > getPublicWebHookUrl() {
+        public java.util.List<String> getPublicWebHookUrl() {
             return this.publicWebHookUrl;
         }
 
         /**
          * @return referer
          */
-        public java.util.List < String > getReferer() {
+        public java.util.List<String> getReferer() {
             return this.referer;
         }
 
@@ -219,69 +243,72 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         /**
          * @return vpcWebHookUrl
          */
-        public java.util.List < String > getVpcWebHookUrl() {
+        public java.util.List<String> getVpcWebHookUrl() {
             return this.vpcWebHookUrl;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
-            private java.util.List < String > method; 
-            private java.util.List < String > publicWebHookUrl; 
-            private java.util.List < String > referer; 
+            private java.util.List<String> ip; 
+            private java.util.List<String> method; 
+            private java.util.List<String> publicWebHookUrl; 
+            private java.util.List<String> referer; 
             private String securityConfig; 
             private String type; 
-            private java.util.List < String > vpcWebHookUrl; 
+            private java.util.List<String> vpcWebHookUrl; 
 
             /**
-             * The CIDR block that is used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter a CIDR block or an IP address.
+             * <p>The CIDR block that is used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter a CIDR block or an IP address.</p>
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
 
             /**
-             * The HTTP request method that is supported by the generated webhook URL. You can select multiple values. Valid values:
-             * <p>
-             * 
-             * *   GET
-             * *   POST
-             * *   PUT
-             * *   PATCH
-             * *   DELETE
-             * *   HEAD
-             * *   OPTIONS
-             * *   TRACE
-             * *   CONNECT
+             * <p>The HTTP request method that is supported by the generated webhook URL. You can select multiple values. Valid values:</p>
+             * <ul>
+             * <li>GET</li>
+             * <li>POST</li>
+             * <li>PUT</li>
+             * <li>PATCH</li>
+             * <li>DELETE</li>
+             * <li>HEAD</li>
+             * <li>OPTIONS</li>
+             * <li>TRACE</li>
+             * <li>CONNECT</li>
+             * </ul>
              */
-            public Builder method(java.util.List < String > method) {
+            public Builder method(java.util.List<String> method) {
                 this.method = method;
                 return this;
             }
 
             /**
-             * The Internet request URL.
+             * <p>The Internet request URL.</p>
              */
-            public Builder publicWebHookUrl(java.util.List < String > publicWebHookUrl) {
+            public Builder publicWebHookUrl(java.util.List<String> publicWebHookUrl) {
                 this.publicWebHookUrl = publicWebHookUrl;
                 return this;
             }
 
             /**
-             * The security domain name. This parameter is required only if SecurityConfig is set to referer. You can enter a domain name.
+             * <p>The security domain name. This parameter is required only if SecurityConfig is set to referer. You can enter a domain name.</p>
              */
-            public Builder referer(java.util.List < String > referer) {
+            public Builder referer(java.util.List<String> referer) {
                 this.referer = referer;
                 return this;
             }
 
             /**
-             * The type of security settings. Valid values:
-             * <p>
+             * <p>The type of security settings. Valid values:</p>
+             * <ul>
+             * <li>none: No configuration is required.</li>
+             * <li>ip: CIDR block.</li>
+             * <li>referer: security domain name.</li>
+             * </ul>
              * 
-             * *   none: No configuration is required.
-             * *   ip: CIDR block.
-             * *   referer: security domain name.
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder securityConfig(String securityConfig) {
                 this.securityConfig = securityConfig;
@@ -289,12 +316,15 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type that is supported by the generated webhook URL. Valid values:
-             * <p>
+             * <p>The protocol type that is supported by the generated webhook URL. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * <li>HTTP&amp;HTTPS</li>
+             * </ul>
              * 
-             * *   HTTP
-             * *   HTTPS
-             * *   HTTP\&HTTPS
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -302,9 +332,9 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal request URL.
+             * <p>The internal request URL.</p>
              */
-            public Builder vpcWebHookUrl(java.util.List < String > vpcWebHookUrl) {
+            public Builder vpcWebHookUrl(java.util.List<String> vpcWebHookUrl) {
                 this.vpcWebHookUrl = vpcWebHookUrl;
                 return this;
             }
@@ -316,6 +346,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceKafkaParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
@@ -451,7 +487,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the consumer group that subscribes to the topic on the Message Queue for Apache Kafka instance.
+             * <p>The ID of the consumer group that subscribes to the topic on the Message Queue for Apache Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-gid</p>
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -459,7 +498,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Message Queue for Apache Kafka instance.
+             * <p>The ID of the Message Queue for Apache Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze6kiwzkebf04s5h8ds</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -467,7 +509,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of consumers.
+             * <p>The maximum number of consumers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maximumTasks(Integer maximumTasks) {
                 this.maximumTasks = maximumTasks;
@@ -475,7 +520,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
+             * <p>The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -483,7 +531,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer offset.
+             * <p>The consumer offset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>earliest</p>
              */
             public Builder offsetReset(String offsetReset) {
                 this.offsetReset = offsetReset;
@@ -491,7 +542,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Message Queue for Apache Kafka instance resides.
+             * <p>The ID of the region where the Message Queue for Apache Kafka instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -499,7 +553,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the Message Queue for Apache Kafka instance belongs.
+             * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-f8zatts5g97x0j***</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -507,7 +564,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The topic name.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_api_1674441611897</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -515,7 +575,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.
+             * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1hcrxq3mkcik***e</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -523,7 +586,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC in which the Message Queue for Apache Kafka instance is deployed.
+             * <p>The ID of the VPC in which the Message Queue for Apache Kafka instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1kz3ohhzgrau2***</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -537,6 +603,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceMNSParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
         private Boolean isBase64Decode;
@@ -588,7 +660,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Indicates whether Base64 decoding is enabled. By default, Base64 decoding is enabled.
+             * <p>Indicates whether Base64 decoding is enabled. By default, Base64 decoding is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isBase64Decode(Boolean isBase64Decode) {
                 this.isBase64Decode = isBase64Decode;
@@ -596,7 +671,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MNS queue.
+             * <p>The name of the MNS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>queue.openapi-sign-callback</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -604,7 +682,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the MNS queue resides.
+             * <p>The ID of the region where the MNS queue resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -618,6 +699,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceRabbitMQParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -681,7 +768,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String virtualHostName; 
 
             /**
-             * The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bastionhost-cn-0ju2x28fj07</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -689,7 +779,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file-upload-queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -697,7 +790,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Message Queue for RabbitMQ instance resides.
+             * <p>The ID of the region where the Message Queue for RabbitMQ instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -705,7 +801,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb-connect</p>
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -719,6 +818,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceRocketMQParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
@@ -926,7 +1031,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The authentication type. This parameter can be set to ACL or left empty.
+             * <p>The authentication type. This parameter can be set to ACL or left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -934,7 +1042,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer group on the Message Queue for Apache RocketMQ instance.
+             * <p>The ID of the consumer group on the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID-test</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -942,7 +1053,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to access the Message Queue for Apache RocketMQ instance.
+             * <p>The endpoint that is used to access the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -950,7 +1064,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bastionhost-cn-7mz293s9d1p</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -958,7 +1075,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of network over which the Message Queue for Apache RocketMQ instance is accessed.
+             * <p>The type of network over which the Message Queue for Apache RocketMQ instance is accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PublicNetwork</p>
              */
             public Builder instanceNetwork(String instanceNetwork) {
                 this.instanceNetwork = instanceNetwork;
@@ -966,7 +1086,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The password that is used to access the Message Queue for Apache RocketMQ instance.
+             * <p>The password that is used to access the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -974,7 +1097,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.
+             * <p>The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb-167adad548***</p>
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -982,7 +1108,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type. Valid values: CLOUD\_4, CLOUD\_5, and SELF_BUILT. The value CLOUD\_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD\_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.
+             * <p>The instance type. Valid values: CLOUD_4, CLOUD_5, and SELF_BUILT. The value CLOUD_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD_5</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -990,7 +1119,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to access the Message Queue for Apache RocketMQ instance.
+             * <p>The username that is used to access the Message Queue for Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -998,7 +1130,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.
+             * <p>The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1iu***</p>
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -1006,7 +1141,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance is deployed.
+             * <p>The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-***</p>
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -1014,14 +1152,16 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The offset from which messages are consumed. Valid values:
-             * <p>
+             * <p>The offset from which messages are consumed. Valid values:</p>
+             * <ul>
+             * <li>CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset.</li>
+             * <li>CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset.</li>
+             * <li>CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time.</li>
+             * </ul>
+             * <p>Default value: CONSUME_FROM_LAST_OFFSET.</p>
              * 
-             * *   CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset.
-             * *   CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset.
-             * *   CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time.
-             * 
-             * Default value: CONSUME_FROM_LAST_OFFSET.
+             * <strong>example:</strong>
+             * <p>CONSUMEFROMLASTOFFSET</p>
              */
             public Builder offset(String offset) {
                 this.offset = offset;
@@ -1029,7 +1169,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Message Queue for Apache RocketMQ instance resides.
+             * <p>The ID of the region where the Message Queue for Apache RocketMQ instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1037,7 +1180,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is used to filter messages.
+             * <p>The tag that is used to filter messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataact</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1045,7 +1191,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time from which messages are consumed. This parameter is valid only if Offset is set to CONSUME_FROM_TIMESTAMP.
+             * <p>The timestamp that indicates the time from which messages are consumed. This parameter is valid only if Offset is set to CONSUME_FROM_TIMESTAMP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1664591760</p>
              */
             public Builder timestamp(Float timestamp) {
                 this.timestamp = timestamp;
@@ -1053,7 +1202,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
+             * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>migration_instance</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -1067,6 +1219,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceSLSParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumePosition")
         private String consumePosition;
@@ -1130,7 +1288,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.
+             * <p>The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>end</p>
              */
             public Builder consumePosition(String consumePosition) {
                 this.consumePosition = consumePosition;
@@ -1138,7 +1299,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service Logstore.
+             * <p>The Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudfirewall-logstore</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -1146,7 +1310,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service project.
+             * <p>The Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VideoTestProject</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1154,7 +1321,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.
+             * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -1168,6 +1338,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class SourceScheduledEventParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
@@ -1219,7 +1395,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * The cron expression.
+             * <p>The cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 1 * * * *</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -1227,7 +1406,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone in which the cron expression is executed.
+             * <p>The time zone in which the cron expression is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GMT+0:00</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -1235,7 +1417,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The JSON string.
+             * <p>The JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;: &quot;b&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1249,6 +1434,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class EventSourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -1432,7 +1623,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the queried event source.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the queried event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/myRocketMQ.source</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -1440,7 +1634,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the event source was created.
+             * <p>The timestamp that indicates when the event source was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1607071602000</p>
              */
             public Builder ctime(Float ctime) {
                 this.ctime = ctime;
@@ -1448,7 +1645,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event bus.
+             * <p>The name of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-custom-bus</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -1456,7 +1656,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event source.
+             * <p>The type of the event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RabbitMQ</p>
              */
             public Builder externalSourceType(String externalSourceType) {
                 this.externalSourceType = externalSourceType;
@@ -1464,7 +1667,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queried event source.
+             * <p>The name of the queried event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rocketmq.source</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1472,7 +1678,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if HTTP events are specified as the event source.
+             * <p>The parameters that are returned if HTTP events are specified as the event source.</p>
              */
             public Builder sourceHttpEventParameters(SourceHttpEventParameters sourceHttpEventParameters) {
                 this.sourceHttpEventParameters = sourceHttpEventParameters;
@@ -1480,7 +1686,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if Message Queue for Apache Kafka is specified as the event source.
+             * <p>The parameters that are returned if Message Queue for Apache Kafka is specified as the event source.</p>
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -1488,7 +1694,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if Message Service (MNS) is specified as the event source.
+             * <p>The parameters that are returned if Message Service (MNS) is specified as the event source.</p>
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
@@ -1496,7 +1702,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.
+             * <p>The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.</p>
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -1504,7 +1710,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if Message Queue for Apache RocketMQ is specified as the event source.
+             * <p>The parameters that are returned if Message Queue for Apache RocketMQ is specified as the event source.</p>
              */
             public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
                 this.sourceRocketMQParameters = sourceRocketMQParameters;
@@ -1512,7 +1718,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if Simple Log Service is specified as the event source.
+             * <p>The parameters that are returned if Simple Log Service is specified as the event source.</p>
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;
@@ -1520,7 +1726,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if scheduled events are specified as the event source.
+             * <p>The parameters that are returned if scheduled events are specified as the event source.</p>
              */
             public Builder sourceScheduledEventParameters(SourceScheduledEventParameters sourceScheduledEventParameters) {
                 this.sourceScheduledEventParameters = sourceScheduledEventParameters;
@@ -1528,7 +1734,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the queried event source. The returned value Activated indicates that the event source is activated.
+             * <p>The status of the queried event source. The returned value Activated indicates that the event source is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Activated</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1536,7 +1745,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the queried event source. The returned value UserDefined indicates that the event source is a custom event source.
+             * <p>The type of the queried event source. The returned value UserDefined indicates that the event source is a custom event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserDefined</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1550,9 +1762,15 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserDefinedEventSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserDefinedEventSourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSourceList")
-        private java.util.List < EventSourceList> eventSourceList;
+        private java.util.List<EventSourceList> eventSourceList;
 
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -1577,7 +1795,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         /**
          * @return eventSourceList
          */
-        public java.util.List < EventSourceList> getEventSourceList() {
+        public java.util.List<EventSourceList> getEventSourceList() {
             return this.eventSourceList;
         }
 
@@ -1596,20 +1814,23 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventSourceList> eventSourceList; 
+            private java.util.List<EventSourceList> eventSourceList; 
             private String nextToken; 
             private Integer total; 
 
             /**
-             * The event sources.
+             * <p>The event sources.</p>
              */
-            public Builder eventSourceList(java.util.List < EventSourceList> eventSourceList) {
+            public Builder eventSourceList(java.util.List<EventSourceList> eventSourceList) {
                 this.eventSourceList = eventSourceList;
                 return this;
             }
 
             /**
-             * NextToken.
+             * <p>If excess return values exist when you configure Limit, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1617,7 +1838,10 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

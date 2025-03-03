@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link PutTargetsRequest} extends {@link RequestModel}
  *
  * <p>PutTargetsRequest</p>
@@ -24,7 +30,7 @@ public class PutTargetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Targets> targets;
+    private java.util.List<Targets> targets;
 
     private PutTargetsRequest(Builder builder) {
         super(builder);
@@ -63,14 +69,14 @@ public class PutTargetsRequest extends Request {
     /**
      * @return targets
      */
-    public java.util.List < Targets> getTargets() {
+    public java.util.List<Targets> getTargets() {
         return this.targets;
     }
 
     public static final class Builder extends Request.Builder<PutTargetsRequest, Builder> {
         private String eventBusName; 
         private String ruleName; 
-        private java.util.List < Targets> targets; 
+        private java.util.List<Targets> targets; 
 
         private Builder() {
             super();
@@ -84,7 +90,11 @@ public class PutTargetsRequest extends Request {
         } 
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eventTest</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -93,7 +103,11 @@ public class PutTargetsRequest extends Request {
         }
 
         /**
-         * The name of the event rule.
+         * <p>The name of the event rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssr-send-to-vendor-test01</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -102,9 +116,10 @@ public class PutTargetsRequest extends Request {
         }
 
         /**
-         * The event targets to be created or updated. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)
+         * <p>The event targets to be created or updated. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits.</a></p>
+         * <p>This parameter is required.</p>
          */
-        public Builder targets(java.util.List < Targets> targets) {
+        public Builder targets(java.util.List<Targets> targets) {
             String targetsShrink = shrink(targets, "Targets", "json");
             this.putQueryParameter("Targets", targetsShrink);
             this.targets = targets;
@@ -118,6 +133,59 @@ public class PutTargetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutTargetsRequest} extends {@link TeaModel}
+     *
+     * <p>PutTargetsRequest</p>
+     */
+    public static class ConcurrentConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
+        private Long concurrency;
+
+        private ConcurrentConfig(Builder builder) {
+            this.concurrency = builder.concurrency;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConcurrentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return concurrency
+         */
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+        public static final class Builder {
+            private Long concurrency; 
+
+            /**
+             * Concurrency.
+             */
+            public Builder concurrency(Long concurrency) {
+                this.concurrency = concurrency;
+                return this;
+            }
+
+            public ConcurrentConfig build() {
+                return new ConcurrentConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PutTargetsRequest} extends {@link TeaModel}
+     *
+     * <p>PutTargetsRequest</p>
+     */
     public static class DeadLetterQueue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -145,7 +213,10 @@ public class PutTargetsRequest extends Request {
             private String arn; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue or acs:mq:cn-hangzhou:123456789098****:/instances/MQ_INST_123456789098****_BX8QbBPL/topic/deadlettertopic or acs:alikafka:cn-hangzhou:123456789098****:instance/alikafka_post-cn-123456/topic/deadlettertopic or acs:eventbridge:cn-hangzhou:123456789098****:eventbus/deadletterbus</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -159,6 +230,12 @@ public class PutTargetsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutTargetsRequest} extends {@link TeaModel}
+     *
+     * <p>PutTargetsRequest</p>
+     */
     public static class ParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -222,7 +299,10 @@ public class PutTargetsRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to deliver events to the event target. For more information,see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+             * <p>The method that is used to deliver events to the event target. For more information,see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMPLATE</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -230,7 +310,10 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The resource parameter of the event target. For more information,see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+             * <p>The resource parameter of the event target. For more information,see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>body</p>
              */
             public Builder resourceKey(String resourceKey) {
                 this.resourceKey = resourceKey;
@@ -238,7 +321,10 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The template based on which events are delivered to the event target.
+             * <p>The template based on which events are delivered to the event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -246,7 +332,10 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The value of the event target parameter.
+             * <p>The value of the event target parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;=&quot;value&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -260,7 +349,16 @@ public class PutTargetsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link PutTargetsRequest} extends {@link TeaModel}
+     *
+     * <p>PutTargetsRequest</p>
+     */
     public static class Targets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConcurrentConfig")
+        private ConcurrentConfig concurrentConfig;
+
         @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
@@ -275,7 +373,7 @@ public class PutTargetsRequest extends Request {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        private java.util.List<ParamList> paramList;
 
         @com.aliyun.core.annotation.NameInMap("PushRetryStrategy")
         private String pushRetryStrategy;
@@ -285,6 +383,7 @@ public class PutTargetsRequest extends Request {
         private String type;
 
         private Targets(Builder builder) {
+            this.concurrentConfig = builder.concurrentConfig;
             this.deadLetterQueue = builder.deadLetterQueue;
             this.endpoint = builder.endpoint;
             this.errorsTolerance = builder.errorsTolerance;
@@ -300,6 +399,13 @@ public class PutTargetsRequest extends Request {
 
         public static Targets create() {
             return builder().build();
+        }
+
+        /**
+         * @return concurrentConfig
+         */
+        public ConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         /**
@@ -333,7 +439,7 @@ public class PutTargetsRequest extends Request {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -352,16 +458,25 @@ public class PutTargetsRequest extends Request {
         }
 
         public static final class Builder {
+            private ConcurrentConfig concurrentConfig; 
             private DeadLetterQueue deadLetterQueue; 
             private String endpoint; 
             private String errorsTolerance; 
             private String id; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private String pushRetryStrategy; 
             private String type; 
 
             /**
-             * The dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue. The dead-letter queue feature supports the following queue types: Message Queue for Apache RocketMQ, Message Service, Message Queue for Apache Kafka, and event bus.
+             * ConcurrentConfig.
+             */
+            public Builder concurrentConfig(ConcurrentConfig concurrentConfig) {
+                this.concurrentConfig = concurrentConfig;
+                return this;
+            }
+
+            /**
+             * <p>The dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue. The dead-letter queue feature supports the following queue types: Message Queue for Apache RocketMQ, Message Service, Message Queue for Apache Kafka, and event bus.</p>
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -369,7 +484,10 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The endpoint of the event target.
+             * <p>The endpoint of the event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:fc:cn-hangzhou:123456789098****:services/guide.LATEST/functions/HelloFC</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -377,12 +495,16 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The fault tolerance policy. Valid values:
-             * <p>
+             * <p>The fault tolerance policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ALL</strong>: ignores the error. Fault tolerance is allowed. If an error occurs, event processing is not blocked. If the message exceeds the number of retries specified by the retry policy, the message is delivered to a dead-letter queue or discarded based on your configurations.</p>
+             * </li>
+             * <li><p><strong>NONE</strong>: does not ignore the error. Fault tolerance is prohibited. If an error occurs and the message exceeds the number of retries specified by the retry policy, event processing is blocked.</p>
+             * </li>
+             * </ul>
              * 
-             * * **ALL**: ignores the error. Fault tolerance is allowed. If an error occurs, event processing is not blocked. If the message exceeds the number of retries specified by the retry policy, the message is delivered to a dead-letter queue or discarded based on your configurations.
-             * 
-             * * **NONE**: does not ignore the error. Fault tolerance is prohibited. If an error occurs and the message exceeds the number of retries specified by the retry policy, event processing is blocked.
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder errorsTolerance(String errorsTolerance) {
                 this.errorsTolerance = errorsTolerance;
@@ -390,7 +512,11 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The ID of the custom event target.
+             * <p>The ID of the custom event target.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mlm123456JHd2RsRoKw</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -398,20 +524,24 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The parameters that are configured for the event target.
+             * <p>The parameters that are configured for the event target.</p>
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
 
             /**
-             * The retry policy for pushing the event. Valid values:
-             * <p>
+             * <p>The retry policy for pushing the event. Valid values:</p>
+             * <ul>
+             * <li><p><strong>BACKOFF_RETRY</strong>: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value from 10 to 20. Unit: seconds.</p>
+             * </li>
+             * <li><p><strong>EXPONENTIAL_DECAY_RETRY</strong>: exponential decay retry. The request can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds can be used up to one hundred and sixty-seven times in total.</p>
+             * </li>
+             * </ul>
              * 
-             * * **BACKOFF_RETRY**: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value from 10 to 20. Unit: seconds.
-             * 
-             * * **EXPONENTIAL_DECAY_RETRY**: exponential decay retry. The request can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds can be used up to one hundred and sixty-seven times in total.
+             * <strong>example:</strong>
+             * <p>BACKOFFRETRY</p>
              */
             public Builder pushRetryStrategy(String pushRetryStrategy) {
                 this.pushRetryStrategy = pushRetryStrategy;
@@ -419,7 +549,11 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+             * <p>The type of the event target. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs.fc.function</p>
              */
             public Builder type(String type) {
                 this.type = type;

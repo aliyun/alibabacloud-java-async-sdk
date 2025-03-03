@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link EventCenterQueryEventsResponseBody} extends {@link TeaModel}
  *
  * <p>EventCenterQueryEventsResponseBody</p>
@@ -130,9 +136,15 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EventCenterQueryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsResponseBody</p>
+     */
     public static class Table extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RowData")
-        private java.util.Map < String, ? > rowData;
+        private java.util.Map<String, ?> rowData;
 
         private Table(Builder builder) {
             this.rowData = builder.rowData;
@@ -149,17 +161,17 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         /**
          * @return rowData
          */
-        public java.util.Map < String, ? > getRowData() {
+        public java.util.Map<String, ?> getRowData() {
             return this.rowData;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > rowData; 
+            private java.util.Map<String, ?> rowData; 
 
             /**
              * RowData.
              */
-            public Builder rowData(java.util.Map < String, ? > rowData) {
+            public Builder rowData(java.util.Map<String, ?> rowData) {
                 this.rowData = rowData;
                 return this;
             }
@@ -171,9 +183,15 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EventCenterQueryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsResponseBody</p>
+     */
     public static class TimeSeries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RowData")
-        private java.util.Map < String, ? > rowData;
+        private java.util.Map<String, ?> rowData;
 
         @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
@@ -194,7 +212,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         /**
          * @return rowData
          */
-        public java.util.Map < String, ? > getRowData() {
+        public java.util.Map<String, ?> getRowData() {
             return this.rowData;
         }
 
@@ -206,13 +224,13 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > rowData; 
+            private java.util.Map<String, ?> rowData; 
             private String time; 
 
             /**
              * RowData.
              */
-            public Builder rowData(java.util.Map < String, ? > rowData) {
+            public Builder rowData(java.util.Map<String, ?> rowData) {
                 this.rowData = rowData;
                 return this;
             }
@@ -232,6 +250,12 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EventCenterQueryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>EventCenterQueryEventsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -240,10 +264,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("Table")
-        private java.util.List < Table> table;
+        private java.util.List<Table> table;
 
         @com.aliyun.core.annotation.NameInMap("TimeSeries")
-        private java.util.List < TimeSeries> timeSeries;
+        private java.util.List<TimeSeries> timeSeries;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -281,14 +305,14 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         /**
          * @return timeSeries
          */
-        public java.util.List < TimeSeries> getTimeSeries() {
+        public java.util.List<TimeSeries> getTimeSeries() {
             return this.timeSeries;
         }
 
@@ -302,8 +326,8 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer maxResults; 
             private String nextToken; 
-            private java.util.List < Table> table; 
-            private java.util.List < TimeSeries> timeSeries; 
+            private java.util.List<Table> table; 
+            private java.util.List<TimeSeries> timeSeries; 
             private Integer totalCount; 
 
             /**
@@ -325,7 +349,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             /**
              * Table.
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }
@@ -333,7 +357,7 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
             /**
              * TimeSeries.
              */
-            public Builder timeSeries(java.util.List < TimeSeries> timeSeries) {
+            public Builder timeSeries(java.util.List<TimeSeries> timeSeries) {
                 this.timeSeries = timeSeries;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateConnectionResponseBody</p>
@@ -73,7 +79,10 @@ public class CreateConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * <p>The returned response code. The value Success indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +90,7 @@ public class CreateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +98,10 @@ public class CreateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.
+         * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +109,10 @@ public class CreateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7DA60DED-CD36-5837-B848-C01A23D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +125,12 @@ public class CreateConnectionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateConnectionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionName")
         private String connectionName;
@@ -137,7 +158,10 @@ public class CreateConnectionResponseBody extends TeaModel {
             private String connectionName; 
 
             /**
-             * The connection name.
+             * <p>The connection name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection-demo</p>
              */
             public Builder connectionName(String connectionName) {
                 this.connectionName = connectionName;

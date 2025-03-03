@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link DeleteConnectionRequest} extends {@link RequestModel}
  *
  * <p>DeleteConnectionRequest</p>
@@ -54,7 +60,11 @@ public class DeleteConnectionRequest extends Request {
         } 
 
         /**
-         * The name of the connection that you want to delete.
+         * <p>The name of the connection that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection-name</p>
          */
         public Builder connectionName(String connectionName) {
             this.putQueryParameter("ConnectionName", connectionName);

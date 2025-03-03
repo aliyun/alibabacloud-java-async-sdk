@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link QueryEventTracesRequest} extends {@link RequestModel}
  *
  * <p>QueryEventTracesRequest</p>
@@ -69,7 +75,11 @@ public class QueryEventTracesRequest extends Request {
         } 
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyEventBus</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -78,7 +88,11 @@ public class QueryEventTracesRequest extends Request {
         }
 
         /**
-         * The event ID.
+         * <p>The event ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1935debf-ddac-49dc-a090-d4f2857a046d</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);

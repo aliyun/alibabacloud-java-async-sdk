@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link UpdateRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateRuleRequest</p>
@@ -112,7 +118,10 @@ public class UpdateRuleRequest extends Request {
         } 
 
         /**
-         * The description of the event bus.
+         * <p>The description of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -121,7 +130,11 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hw-test</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -130,10 +143,12 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * The event pattern, in JSON format. Valid values: stringEqual stringExpression Each field can have a maximum of five expressions in the map data structure.
-         * <p>
+         * <p>The event pattern, in JSON format. Valid values: stringEqual stringExpression Each field can have a maximum of five expressions in the map data structure.</p>
+         * <p>Each field can have a maximum of five expressions in the map data structure.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Each field can have a maximum of five expressions in the map data structure.
+         * <strong>example:</strong>
+         * <p>{&quot;source&quot;:[&quot;acs.oss&quot;],&quot;type&quot;:[&quot;oss:BucketQueried:GetBucketStat&quot;]}</p>
          */
         public Builder filterPattern(String filterPattern) {
             this.putQueryParameter("FilterPattern", filterPattern);
@@ -142,7 +157,11 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * The name of the event rule.
+         * <p>The name of the event rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-testacc-rule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -151,7 +170,10 @@ public class UpdateRuleRequest extends Request {
         }
 
         /**
-         * The status of the event rule. Valid values: ENABLE: The event rule is enabled. It is the default state of the event rule. DISABLE: The event rule is disabled.
+         * <p>The status of the event rule. Valid values: ENABLE: The event rule is enabled. It is the default state of the event rule. DISABLE: The event rule is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

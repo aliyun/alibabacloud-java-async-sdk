@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link DeleteEventSourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteEventSourceRequest</p>
@@ -77,7 +83,11 @@ public class DeleteEventSourceRequest extends Request {
         }
 
         /**
-         * The name of the event source.
+         * <p>The name of the event source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myrabbitmq.source</p>
          */
         public Builder eventSourceName(String eventSourceName) {
             this.putBodyParameter("EventSourceName", eventSourceName);

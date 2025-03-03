@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link QueryTracedEventsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTracedEventsResponseBody</p>
@@ -85,7 +91,14 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request was successful.</li>
+         * <li>Other codes: The request failed. For information about error codes, see Error codes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +106,7 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +114,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventBusNotExist</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +125,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d9e4628b-8b34-4f33-82be-5aac50aac0ba</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +136,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +152,12 @@ public class QueryTracedEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTracedEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTracedEventsResponseBody</p>
+     */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
@@ -205,7 +233,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             private String eventType; 
 
             /**
-             * The name of the event bus.
+             * <p>The name of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-custom-bus</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -213,7 +244,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07E-1OCckaVzNB92BIFFh4xgydOF1wd</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -221,7 +255,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was delivered to the event bus.
+             * <p>The time when the event was delivered to the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1661773573100</p>
              */
             public Builder eventReceivedTime(Long eventReceivedTime) {
                 this.eventReceivedTime = eventReceivedTime;
@@ -229,7 +266,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event source.
+             * <p>The name of the event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs.resourcemanager</p>
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -237,7 +277,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event type.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eventbridge:Events:HTTPEvent</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -251,9 +294,15 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTracedEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTracedEventsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Events")
-        private java.util.List < Events> events;
+        private java.util.List<Events> events;
 
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -278,7 +327,7 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < Events> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
@@ -297,20 +346,23 @@ public class QueryTracedEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Events> events; 
+            private java.util.List<Events> events; 
             private String nextToken; 
             private Integer total; 
 
             /**
-             * The event type.
+             * <p>The events.</p>
              */
-            public Builder events(java.util.List < Events> events) {
+            public Builder events(java.util.List<Events> events) {
                 this.events = events;
                 return this;
             }
 
             /**
-             * If excess return values exist, this parameter is returned.
+             * <p>If excess return values exist, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -318,7 +370,10 @@ public class QueryTracedEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

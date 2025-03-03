@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link QueryEventRequest} extends {@link RequestModel}
  *
  * <p>QueryEventRequest</p>
@@ -83,7 +89,11 @@ public class QueryEventRequest extends Request {
         } 
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -92,7 +102,11 @@ public class QueryEventRequest extends Request {
         }
 
         /**
-         * The event ID.
+         * <p>The event ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1935debf-ddac-49dc-a090-d4f2857a046d</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -101,7 +115,13 @@ public class QueryEventRequest extends Request {
         }
 
         /**
-         * EventSource is required for querying default bus events.
+         * <p>The name of the event source.</p>
+         * <ul>
+         * <li>This parameter is required if you query the system event bus.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testEventSourceName</p>
          */
         public Builder eventSource(String eventSource) {
             this.putQueryParameter("EventSource", eventSource);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link CreateEventBusRequest} extends {@link RequestModel}
  *
  * <p>CreateEventBusRequest</p>
@@ -69,7 +75,10 @@ public class CreateEventBusRequest extends Request {
         } 
 
         /**
-         * The description of the event bus.
+         * <p>The description of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -78,7 +87,11 @@ public class CreateEventBusRequest extends Request {
         }
 
         /**
-         * The name of the event bus.
+         * <p>Indicates whether the request is successful. The value true indicates that the request is successful.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyEventBus</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);

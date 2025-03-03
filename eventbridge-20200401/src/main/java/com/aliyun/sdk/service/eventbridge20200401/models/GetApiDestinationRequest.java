@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link GetApiDestinationRequest} extends {@link RequestModel}
  *
  * <p>GetApiDestinationRequest</p>
@@ -54,7 +60,11 @@ public class GetApiDestinationRequest extends Request {
         } 
 
         /**
-         * The name of the API destination.
+         * <p>The name of the API destination.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-destination-name</p>
          */
         public Builder apiDestinationName(String apiDestinationName) {
             this.putQueryParameter("ApiDestinationName", apiDestinationName);

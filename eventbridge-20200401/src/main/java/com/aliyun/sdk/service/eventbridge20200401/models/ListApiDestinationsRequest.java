@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
+import com.aliyun.sdk.gateway.eventbridge.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
+ * 
  * {@link ListApiDestinationsRequest} extends {@link RequestModel}
  *
  * <p>ListApiDestinationsRequest</p>
@@ -95,7 +101,10 @@ public class ListApiDestinationsRequest extends Request {
         } 
 
         /**
-         * The prefix of the API destination name.
+         * <p>The prefix of the API destination name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-demo</p>
          */
         public Builder apiDestinationNamePrefix(String apiDestinationNamePrefix) {
             this.putQueryParameter("ApiDestinationNamePrefix", apiDestinationNamePrefix);
@@ -104,7 +113,10 @@ public class ListApiDestinationsRequest extends Request {
         }
 
         /**
-         * The connection name.
+         * <p>The connection name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection-name</p>
          */
         public Builder connectionName(String connectionName) {
             this.putQueryParameter("ConnectionName", connectionName);
@@ -113,10 +125,13 @@ public class ListApiDestinationsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging.
-         * <p>
+         * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,10 +140,13 @@ public class ListApiDestinationsRequest extends Request {
         }
 
         /**
-         * If you set Limit and excess return values exist, this parameter is returned.
-         * <p>
+         * <p>If you set Limit and excess return values exist, this parameter is returned.</p>
+         * <ul>
+         * <li>Default value: 0.</li>
+         * </ul>
          * 
-         * *   Default value: 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
