@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of NoticeInstanceUser  NoticeInstanceUserRequest
+     * @return NoticeInstanceUserResponse
+     */
+    CompletableFuture<NoticeInstanceUserResponse> noticeInstanceUser(NoticeInstanceUserRequest request);
+
+    /**
      * @param request the request parameters of PushMeteringData  PushMeteringDataRequest
      * @return PushMeteringDataResponse
      */
