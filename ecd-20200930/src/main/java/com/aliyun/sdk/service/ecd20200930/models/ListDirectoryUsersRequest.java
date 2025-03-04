@@ -173,7 +173,12 @@ public class ListDirectoryUsersRequest extends Request {
         } 
 
         /**
-         * AssignedInfo.
+         * <blockquote>
+         * <p>This parameter is not publicly available. The value can be 1 or left empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder assignedInfo(String assignedInfo) {
             this.putQueryParameter("AssignedInfo", assignedInfo);
@@ -207,7 +212,10 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * IncludeAssignedUser.
+         * <p>Specifies whether to return the users with assigned cloud computers only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeAssignedUser(Boolean includeAssignedUser) {
             this.putQueryParameter("IncludeAssignedUser", includeAssignedUser);
@@ -267,7 +275,15 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sort type.</p>
+         * <p>Valide values:</p>
+         * <ul>
+         * <li>asc: cloud computers assigned to users on bottom</li>
+         * <li>desc: cloud computers assigned to users on top</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);

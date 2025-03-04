@@ -171,7 +171,10 @@ public class DescribeConfigGroupRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>The ID of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-i1ruuudp92qpj****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -180,7 +183,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * GroupIds.
+         * <p>The IDs of the configuration groups.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -189,7 +192,10 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -198,7 +204,10 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,7 +216,10 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +228,14 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The service type of the configuration group.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_DESKTOP</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -225,7 +244,10 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +256,7 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The status of the configuration groups.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -243,7 +265,14 @@ public class DescribeConfigGroupRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the configuration group.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Timer: the scheduled task type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Timer</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -147,7 +147,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String appInstanceGroupName; 
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-0bz55ibznu9p7****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -155,7 +158,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceGroupName.
+             * <p>The name of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoDeliveryGroup</p>
              */
             public Builder appInstanceGroupName(String appInstanceGroupName) {
                 this.appInstanceGroupName = appInstanceGroupName;
@@ -287,7 +293,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String officeSiteName; 
 
             /**
-             * OfficeSiteId.
+             * <p>The ID of the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-363353****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -295,7 +304,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * <p>The name of the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DemoOfficeNetwork</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -606,7 +618,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AllowOperateUserDrive.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
              */
             public Builder allowOperateUserDrive(Boolean allowOperateUserDrive) {
                 this.allowOperateUserDrive = allowOperateUserDrive;
@@ -614,7 +628,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceGroups.
+             * <p>The array of the app steaming delivery groups bound with UPM-supported NAS.</p>
              */
             public Builder appInstanceGroups(java.util.List<AppInstanceGroups> appInstanceGroups) {
                 this.appInstanceGroups = appInstanceGroups;
@@ -792,7 +806,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSites.
+             * <p>The array of office networks.</p>
              */
             public Builder officeSites(java.util.List<OfficeSites> officeSites) {
                 this.officeSites = officeSites;
@@ -822,7 +836,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The storage type of the NAS file system. Valid values:</p>
+             * <ul>
+             * <li>Upm: UPM NAS</li>
+             * <li>ShareNas: Shared NAS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Upm</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;

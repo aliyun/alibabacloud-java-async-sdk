@@ -282,10 +282,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to create a desktop group, make sure that the following operations are complete:</p>
+     * <p>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</p>
      * <ul>
-     * <li>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</li>
-     * <li>Resources, such as workspaces, users, desktop templates, and policies, are created.</li>
+     * <li>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDesktopGroup  CreateDesktopGroupRequest
@@ -1300,18 +1299,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</p>
-     * <ul>
-     * <li>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</li>
-     * <li>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-     * 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-     * 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-     * 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-     * 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-     * 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-     * 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</li>
-     * <li>The changes do not affect your personal data on the cloud desktop.</li>
-     * </ul>
+     * <p>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</p>
+     * <blockquote>
+     * <p> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ModifyDiskSpec  ModifyDiskSpecRequest
      * @return ModifyDiskSpecResponse
@@ -1716,6 +1707,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<VerifyCenResponse> verifyCen(VerifyCenRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only cloud computers that are in the Hibernated state can be waked up.</p>
+     * 
      * @param request the request parameters of WakeupDesktops  WakeupDesktopsRequest
      * @return WakeupDesktopsResponse
      */

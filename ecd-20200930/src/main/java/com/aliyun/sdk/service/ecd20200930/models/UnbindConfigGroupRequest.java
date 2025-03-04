@@ -89,7 +89,10 @@ public class UnbindConfigGroupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -98,6 +101,7 @@ public class UnbindConfigGroupRequest extends Request {
         }
 
         /**
+         * <p>The resources from which you want to unbind the configuration group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceInfos(java.util.List<ResourceInfos> resourceInfos) {
@@ -107,6 +111,11 @@ public class UnbindConfigGroupRequest extends Request {
         }
 
         /**
+         * <p>The type of the configuration group.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Timer: the scheduled task type.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +203,14 @@ public class UnbindConfigGroupRequest extends Request {
             private String resourceType; 
 
             /**
-             * ProductType.
+             * <p>The service type of the resource.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD_DESKTOP</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -202,7 +218,10 @@ public class UnbindConfigGroupRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-ctwj0bk3l5nz****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -210,7 +229,10 @@ public class UnbindConfigGroupRequest extends Request {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -218,7 +240,15 @@ public class UnbindConfigGroupRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RESOURCE_GROUP: the resource group.</li>
+             * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD_DESKTOP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

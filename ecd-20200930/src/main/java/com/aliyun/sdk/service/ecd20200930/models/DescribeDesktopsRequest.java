@@ -551,7 +551,12 @@ public class DescribeDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The billing method of the cloud desktop.</p>
+         * <p>The billing method of the cloud computer.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Postpaid (default): pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -563,7 +568,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the desktop group. If you specify the <code>DesktopId</code> parameter, ignore the <code>DesktopGroupId</code> parameter. If you do not specify the <code>DesktopId</code> parameter, specify the <code>DesktopGroupId</code> parameter in the call to request all IDs of the cloud desktops in the specified desktop group.</p>
+         * <p>The ID of the cloud computer pool. If you specify <code>OnlyDesktopGroup</code>, ignore <code>DesktopGroupId</code>. If you leave <code>DesktopId</code> empty, all IDs of the cloud computers in the cloud computer pool are queried.````</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -575,7 +580,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.</p>
+         * <p>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -587,7 +592,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud computer name.</p>
          * 
          * <strong>example:</strong>
          * <p>testDesktopName</p>
@@ -599,7 +604,18 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The status of the cloud desktop.</p>
+         * <p>The cloud computer status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Stopped</li>
+         * <li>Starting</li>
+         * <li>Rebuilding</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Expired</li>
+         * <li>Deleted</li>
+         * <li>Pending</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -611,7 +627,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of desktop status.</p>
+         * <p>The list of cloud computer status.</p>
          */
         public Builder desktopStatusList(java.util.List<String> desktopStatusList) {
             this.putQueryParameter("DesktopStatusList", desktopStatusList);
@@ -620,7 +636,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The new desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the IDs of supported desktop types.</p>
+         * <p>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of all supported types.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.general.2c8g</p>
@@ -632,7 +648,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the directory, The ID is the same as the workspace ID.</p>
+         * <p>The directory ID, which is the same as the office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -644,9 +660,9 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.</p>
+         * <p>The authorized users of the cloud computer. You can specify the IDs of 1 to 100 users.</p>
          * <blockquote>
-         * <p>Only one end user can use the cloud desktop at a time.</p>
+         * <p> During a specific period of time, only one user can connect to and use the cloud computer.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -659,7 +675,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the end users that are excluded from the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.</p>
+         * <p>The list of authorized users that you want to exclude from the cloud computer. You can specify the IDs of 1 to 100 users.</p>
          * 
          * <strong>example:</strong>
          * <p>andy</p>
@@ -671,7 +687,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The time when the subscription cloud desktop expires.</p>
+         * <p>The time when a subscription cloud computer expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-31T15:59:59Z</p>
@@ -683,7 +699,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * FillResourceGroup.
+         * <p>Specifies whether to query the information about the enterprise resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fillResourceGroup(Boolean fillResourceGroup) {
             this.putQueryParameter("FillResourceGroup", fillResourceGroup);
@@ -692,7 +711,12 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to filter cloud desktops in the desktop group.</p>
+         * <p>Specifies whether to exclude pooled cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -704,7 +728,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * GpuInstanceGroupId.
+         * <p>The ID of the elastic GPU pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-0bm2iz1v6m6nx****</p>
          */
         public Builder gpuInstanceGroupId(String gpuInstanceGroupId) {
             this.putQueryParameter("GpuInstanceGroupId", gpuInstanceGroupId);
@@ -713,10 +740,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the desktop group.</p>
-         * <blockquote>
-         * <p>The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.</p>
-         * </blockquote>
+         * <p>The ID of the cloud computer pool.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-boyczi8enfyc5****</p>
@@ -765,7 +789,15 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * MultiResource.
+         * <p>Specifies whether the shared group is a multi-cloud computer type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: a multi-cloud computer type.</li>
+         * <li>false: a single-cloud computer type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder multiResource(Boolean multiResource) {
             this.putQueryParameter("MultiResource", multiResource);
@@ -786,7 +818,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -798,7 +830,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The office network name.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -810,7 +842,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The progress when the cloud desktop was created.</p>
+         * <p>Specifies whether to query pooled cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -822,7 +854,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The types of the OSs.</p>
+         * <p>The operating systems (OSs).</p>
          */
         public Builder osTypes(java.util.List<String> osTypes) {
             this.putQueryParameter("OsTypes", osTypes);
@@ -831,7 +863,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -840,7 +875,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -849,7 +887,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The ID of the cloud computer policy.</p>
          * 
          * <strong>example:</strong>
          * <p>system-all-enabled-policy</p>
@@ -861,7 +899,12 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The protocol.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HDX: High-definition Experience (HDX) protocol</li>
+         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -873,7 +916,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * QosRuleId.
+         * <p>The ID of the network throttling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-5605u0gelk200****</p>
          */
         public Builder qosRuleId(String qosRuleId) {
             this.putQueryParameter("QosRuleId", qosRuleId);
@@ -882,7 +928,12 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the information about image update of the cloud desktop.</p>
+         * <p>Specifies whether to query the image update information about the cloud computer.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -894,7 +945,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -907,7 +958,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the enterprise resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4hsvzbbmqdzu3s****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -928,7 +982,17 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * SubPayType.
+         * <p>The billing method of the cloud computer.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>duration: hourly plan (available for users in the whitelist)</li>
+         * <li>postPaid: pay-as-you-go</li>
+         * <li>monthPackage: monthly subscription (120-hour or 250-hour computing plan)</li>
+         * <li>prePaid: monthly subscription (unlimited-hour computing plan)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>monthPackage</p>
          */
         public Builder subPayType(String subPayType) {
             this.putQueryParameter("SubPayType", subPayType);
@@ -937,7 +1001,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</p>
+         * <p>The tags that you want to add to the cloud computer. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud computers by group. This facilitates search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1009,7 +1073,7 @@ public class DescribeDesktopsRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of the tag. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. You cannot specify an empty string as a tag key.</p>
+             * <p>The tag key. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code> and contain only spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1020,7 +1084,7 @@ public class DescribeDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

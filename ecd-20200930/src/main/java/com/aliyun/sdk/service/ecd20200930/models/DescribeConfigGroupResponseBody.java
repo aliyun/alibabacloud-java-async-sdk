@@ -91,7 +91,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * <p>The configuration groups.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -99,7 +99,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -107,7 +110,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +121,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -253,7 +265,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * BindCount.
+             * <p>The number of resources that are bound to the configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder bindCount(Integer bindCount) {
                 this.bindCount = bindCount;
@@ -261,7 +276,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * BindCountMap.
+             * <p>The number of bound cloud computers.</p>
              */
             public Builder bindCountMap(java.util.Map<String, Integer> bindCountMap) {
                 this.bindCountMap = bindCountMap;
@@ -269,7 +284,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ScheduledTask</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -277,7 +295,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccg-0cid8v30an12****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -285,7 +306,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ScheduledTask</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -293,7 +317,14 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * <p>The service type of the configuration group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUD_DESKTOP</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -301,7 +332,17 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the configuration group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AVAILABLE: The configuration group is available.</li>
+             * <li>UNAVAILABLE: The configuration group is deleted.</li>
+             * <li>DELETING: The configuration group is being deleted.</li>
+             * <li>UPDATING: The configuration group is being modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -309,7 +350,14 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the configuration group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Timer: the scheduled task type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Timer</p>
              */
             public Builder type(String type) {
                 this.type = type;

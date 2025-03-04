@@ -115,7 +115,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String ticket; 
 
         /**
-         * DesktopId.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.desktopId = desktopId;
@@ -134,7 +137,20 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskCode.
+         * <p>The credential that is returned to connect to the cloud computer. Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
+         * <pre><code>import base64
+         * response = {
+         *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
+         *     &quot;RequestId&quot;: &quot;1CBAFFAB-B697-4049-A9B1-67E1FC5F****&quot;,
+         * }
+         * f = open (\&quot;xxx.ica\&quot;, \&quot;w\&quot;)
+         * out = base64.b64decode(response[\&quot;Ticket\&quot;])
+         * f.write(out)
+         * f.close()
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
          */
         public Builder taskCode(String taskCode) {
             this.taskCode = taskCode;
@@ -153,7 +169,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskMessage.
+         * <p>The ID of the cloud computer connection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
          */
         public Builder taskMessage(String taskMessage) {
             this.taskMessage = taskMessage;
@@ -195,17 +214,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credential that is returned to connect to the cloud computer. Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
-         * <pre><code>import base64
-         * response = {
-         *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
-         *     &quot;RequestId&quot;: &quot;1CBAFFAB-B697-4049-A9B1-67E1FC5F****&quot;,
-         * }
-         * f = open (\&quot;xxx.ica\&quot;, \&quot;w\&quot;)
-         * out = base64.b64decode(response[\&quot;Ticket\&quot;])
-         * f.write(out)
-         * f.close()
-         * </code></pre>
+         * <p>The credential of the cloud computer connection.</p>
          * 
          * <strong>example:</strong>
          * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

@@ -55,7 +55,7 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the order. You can obtain the order ID on the <a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1&pageSize=20&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in Alibaba Cloud User Center.</p>
+         * <p>The ID of the order. You can obtain the ID of an order from the <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs &gt; Orders</a> page.</p>
          * 
          * <strong>example:</strong>
          * <p>219861020660568</p>

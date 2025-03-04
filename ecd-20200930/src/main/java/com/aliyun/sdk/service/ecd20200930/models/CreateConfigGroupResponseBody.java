@@ -67,7 +67,10 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupId.
+         * <p>The ID of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccg-0ctwi5zbswtql****</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -75,7 +78,10 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The creation result of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -83,7 +89,10 @@ public class CreateConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE9472BC-0B5D-5458-85CD-C52BDD******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

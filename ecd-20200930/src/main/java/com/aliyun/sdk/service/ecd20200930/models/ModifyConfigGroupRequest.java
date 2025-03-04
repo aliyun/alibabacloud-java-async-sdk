@@ -103,7 +103,10 @@ public class ModifyConfigGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -112,6 +115,7 @@ public class ModifyConfigGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the configuration group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,10 @@ public class ModifyConfigGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -133,7 +140,10 @@ public class ModifyConfigGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

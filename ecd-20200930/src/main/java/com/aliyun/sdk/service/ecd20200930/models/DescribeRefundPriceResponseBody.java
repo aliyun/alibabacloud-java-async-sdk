@@ -55,7 +55,7 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PriceInfo.
+         * <p>The price details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -63,7 +63,10 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +124,10 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
             private Float refundFee; 
 
             /**
-             * Currency.
+             * <p>The unit of currency (USD).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -129,7 +135,10 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RefundFee.
+             * <p>The amount of the refund.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3990.75</p>
              */
             public Builder refundFee(Float refundFee) {
                 this.refundFee = refundFee;

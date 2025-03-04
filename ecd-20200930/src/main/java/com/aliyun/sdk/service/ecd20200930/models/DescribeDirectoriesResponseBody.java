@@ -856,10 +856,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows. This parameter is returned only when the directory type is AD office network.</p>
+             * <p>The hostname of the domain controller.</p>
              * 
              * <strong>example:</strong>
-             * <p>cnshsv21hmc****</p>
+             * <p>dc001</p>
              */
             public Builder adHostname(String adHostname) {
                 this.adHostname = adHostname;
@@ -867,7 +867,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * BackupDCHostname.
+             * <p>The hostname of the backup domain controller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc002</p>
              */
             public Builder backupDCHostname(String backupDCHostname) {
                 this.backupDCHostname = backupDCHostname;
@@ -875,7 +878,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * BackupDns.
+             * <p>The DNS address of the backup domain controller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.2.100</p>
              */
             public Builder backupDns(String backupDns) {
                 this.backupDns = backupDns;

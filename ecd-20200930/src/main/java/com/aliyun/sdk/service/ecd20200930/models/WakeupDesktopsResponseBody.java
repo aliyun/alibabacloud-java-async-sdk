@@ -43,7 +43,10 @@ public class WakeupDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6557DBA9-CF3E-5C1B-B1F1-68FDA599****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -281,7 +281,15 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * IncludeInvokeDesktops.
+         * <p>Specifies whether to return the execution results of all cloud computers if the command is executed on multiple cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: returned.</li>
+         * <li>false: not returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeInvokeDesktops(Boolean includeInvokeDesktops) {
             this.putQueryParameter("IncludeInvokeDesktops", includeInvokeDesktops);

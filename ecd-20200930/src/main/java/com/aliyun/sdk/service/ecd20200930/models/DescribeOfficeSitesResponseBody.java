@@ -473,7 +473,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * amount.
+             * <p>The amount of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -481,7 +484,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>desktop: cloud computers</li>
+             * <li>desktopGroup: shared cloud computers</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>desktop</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1196,7 +1206,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * AcceleratorId.
+             * <p>The ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1astu3yrplkzoo2****</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -1308,7 +1321,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAccessPoint.
+             * <p>The custom gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-****.com</p>
              */
             public Builder customAccessPoint(String customAccessPoint) {
                 this.customAccessPoint = customAccessPoint;
@@ -1316,7 +1332,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomDnsAddress.
+             * <p>The array of custom DNS addresses.</p>
              */
             public Builder customDnsAddress(java.util.List<String> customDnsAddress) {
                 this.customDnsAddress = customDnsAddress;
@@ -1554,7 +1570,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * NmVersion.
+             * <p>The network version. App Streaming is supported by the new version. Valid values:</p>
+             * <ul>
+             * <li>DEFAULT: the legacy version</li>
+             * <li>NM: the new version</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NM</p>
              */
             public Builder nmVersion(String nmVersion) {
                 this.nmVersion = nmVersion;
@@ -1649,7 +1672,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceAmounts.
+             * <p>The amount of resources.</p>
              */
             public Builder resourceAmounts(java.util.List<ResourceAmounts> resourceAmounts) {
                 this.resourceAmounts = resourceAmounts;
@@ -1779,7 +1802,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResourceAmount.
+             * <p>The total number of network cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalResourceAmount(Long totalResourceAmount) {
                 this.totalResourceAmount = totalResourceAmount;

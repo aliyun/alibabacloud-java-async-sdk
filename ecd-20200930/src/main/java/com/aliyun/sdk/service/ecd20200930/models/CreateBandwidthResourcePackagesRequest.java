@@ -146,7 +146,10 @@ public class CreateBandwidthResourcePackagesRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>The number of the data transfer plans that you want to create at the same time. Valid values: 1 to 20. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -155,7 +158,10 @@ public class CreateBandwidthResourcePackagesRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -164,6 +170,7 @@ public class CreateBandwidthResourcePackagesRequest extends Request {
         }
 
         /**
+         * <p>The size of the data transfer plan. Valid values: 10 to 1000. Unit: GiB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +183,15 @@ public class CreateBandwidthResourcePackagesRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration. The valid values of this parameter vary based on the value of <code>PeriodUnit</code>.</p>
+         * <ul>
+         * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, the valid values of Period are 1, 3, and 6.</li>
+         * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, the valid value of Period is 1.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -185,7 +200,15 @@ public class CreateBandwidthResourcePackagesRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the subscription duration.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month (default)</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -194,7 +217,10 @@ public class CreateBandwidthResourcePackagesRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the promotional activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -203,6 +229,7 @@ public class CreateBandwidthResourcePackagesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

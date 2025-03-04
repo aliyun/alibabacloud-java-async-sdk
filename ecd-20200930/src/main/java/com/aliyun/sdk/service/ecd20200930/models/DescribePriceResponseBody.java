@@ -55,7 +55,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The price details.</p>
+         * <p>The price information.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -326,7 +326,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * <p>The unit of the currency.</p>
+             * <p>The unit of currency (USD).</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -337,7 +337,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discounted price.</p>
+             * <p>The discounted amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -348,7 +348,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderLines.
+             * <p>The orders.</p>
              */
             public Builder orderLines(java.util.Map<String, String> orderLines) {
                 this.orderLines = orderLines;
@@ -367,7 +367,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the promotion.</p>
+             * <p>The promotions.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -375,7 +375,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * SpPrice.
+             * <p>The price under an effective savings plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.00</p>
              */
             public Builder spPrice(Long spPrice) {
                 this.spPrice = spPrice;
@@ -383,7 +386,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual price that is paid. The original price minus the discounted part equals the actual price.</p>
+             * <p>The actual price. The original price minus the discounted amount equals the actual price.</p>
              * 
              * <strong>example:</strong>
              * <p>2.796</p>
@@ -542,7 +545,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private java.util.List<Rules> rules; 
 
             /**
-             * FreeCdsQuota.
+             * <p>Indicates whether a free enterprise drive is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freeCdsQuota(Boolean freeCdsQuota) {
                 this.freeCdsQuota = freeCdsQuota;
@@ -550,7 +556,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * FreeCdsSize.
+             * <p>The free capacity provided by the enterprise drive. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder freeCdsSize(Long freeCdsSize) {
                 this.freeCdsSize = freeCdsSize;
@@ -558,7 +567,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the price.</p>
+             * <p>The price.</p>
              */
             public Builder price(Price price) {
                 this.price = price;

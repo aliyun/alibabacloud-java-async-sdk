@@ -55,7 +55,10 @@ public class CreateBandwidthResourcePackagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24251717783****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -63,7 +66,10 @@ public class CreateBandwidthResourcePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE7B699F-625C-587E-BC5F-1395CA969681</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

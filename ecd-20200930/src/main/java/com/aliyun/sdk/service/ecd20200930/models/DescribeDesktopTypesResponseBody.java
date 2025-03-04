@@ -311,7 +311,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuMemory.
+             * <p>The GPU memory size. Unit: MB. This parameter applies to GPU-enabled cloud computers only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder gpuMemory(Integer gpuMemory) {
                 this.gpuMemory = gpuMemory;
@@ -341,7 +344,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSessionCount.
+             * <p>The number of sessions supported by the current specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxSessionCount(Integer maxSessionCount) {
                 this.maxSessionCount = maxSessionCount;
@@ -360,7 +366,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Scopes.
+             * <p>The array of sales modes.</p>
              */
             public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;
@@ -368,7 +374,10 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * StockState.
+             * <p>The stock status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sufficient</p>
              */
             public Builder stockState(String stockState) {
                 this.stockState = stockState;

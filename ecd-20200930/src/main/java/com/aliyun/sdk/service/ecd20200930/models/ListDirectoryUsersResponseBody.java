@@ -183,7 +183,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             private String phone; 
 
             /**
-             * AssignedDesktopNumber.
+             * <p>The number of assigned cloud computers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder assignedDesktopNumber(Integer assignedDesktopNumber) {
                 this.assignedDesktopNumber = assignedDesktopNumber;
@@ -202,7 +205,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user@example.com">user@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -221,7 +227,10 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * <p>The mobile number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130********</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;

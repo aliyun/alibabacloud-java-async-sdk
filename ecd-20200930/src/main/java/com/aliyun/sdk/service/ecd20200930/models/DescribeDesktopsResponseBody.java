@@ -103,7 +103,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The details about the cloud desktops.</p>
+         * <p>The information about the cloud computers.</p>
          */
         public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
@@ -122,7 +122,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -130,7 +133,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -149,7 +155,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of cloud desktops.</p>
+         * <p>The total number of cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +252,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String performanceLevel; 
 
             /**
-             * DiskCategory.
+             * <p>The type of the disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_auto: standard SSD.</li>
+             * <li>cloud_essd: enhanced SSD (ESSD).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -303,14 +317,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the disk when an enhanced SSD (ESSD) is used. Valid values:</p>
+             * <p>The performance level (PL) of the disk when an enterprise SSD (ESSD) is used.</p>
+             * <p>For more information about the differences among enterprise SSDs (ESSDs) at different PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>PL0</li>
              * <li>PL1</li>
-             * <li>PL2</li>
+             * <li>PL0</li>
              * <li>PL3</li>
+             * <li>PL2</li>
              * </ul>
-             * <p>For more information about the differences among ESSDs at different PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">Enhanced SSDs</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -420,7 +435,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * <p>The current image version of the cloud desktop.</p>
+             * <p>The current image version of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0-D-20220102.000000</p>
@@ -431,7 +446,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image version to which the cloud desktop can be updated.</p>
+             * <p>The version number to which the image of the cloud computer can be updated.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0-R-20220307.190736</p>
@@ -442,7 +457,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image version to which the cloud desktop can be updated.</p>
+             * <p>The description of the version to which the image of the cloud computer can be updated.</p>
              * 
              * <strong>example:</strong>
              * <p>Upgrade package for testing 03-07</p>
@@ -453,7 +468,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The English description of the image version to which the cloud desktop can be updated.</p>
+             * <p>The English description of the version to which the image of the cloud computer can be updated.</p>
              * 
              * <strong>example:</strong>
              * <p>Release note</p>
@@ -537,7 +552,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * <p>The ID of the enterprise resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-4hsvzbbmqdzu3s****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -545,7 +563,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the enterprise resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource group 01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -616,7 +637,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String externalUserName; 
 
             /**
-             * <p>The ID of the end user who logged on to the cloud desktop.</p>
+             * <p>The ID of the end user that connects to the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>29615820929547****</p>
@@ -627,7 +648,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the desktop session was established.</p>
+             * <p>The time when the cloud computer session was established.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-03-07T08:23Z</p>
@@ -1481,7 +1502,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * <p>The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.</p>
+             * <p>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1492,7 +1513,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the desktop template that is used to create the cloud desktop.</p>
+             * <p>The ID of the template used to create the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>b-2g65ljy4291vl****</p>
@@ -1503,7 +1524,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the desktop template that is used to create the cloud desktop.</p>
+             * <p>The name of the template used to create the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>Name</p>
@@ -1514,22 +1535,11 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the cloud desktop.</p>
-             * <p>Default value: PostPaid. Valid values:</p>
+             * <p>The billing method of the cloud computer.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li><p>Postpaid: pay-as-you-go</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>PrePaid: subscription</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>Postpaid (default): pay-as-you-go</li>
+             * <li>PrePaid: subscription</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1586,7 +1596,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud desktop was created.</p>
+             * <p>The time when the cloud computer was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-06T08:28Z</p>
@@ -1623,7 +1633,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the desktop group to which the cloud desktop belongs. Default value: null.</p>
+             * <p>The ID of the cloud computer pool to which cloud computers belong. Default value: null.``</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1634,7 +1644,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud desktop ID.</p>
+             * <p>The cloud computer ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-gx2x1dhsmucyy****</p>
@@ -1645,7 +1655,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud desktop name.</p>
+             * <p>The cloud computer name.</p>
              * 
              * <strong>example:</strong>
              * <p>testDesktopName</p>
@@ -1656,7 +1666,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cloud desktop.</p>
+             * <p>The cloud computer status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -1667,7 +1677,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud desktop.</p>
+             * <p>The cloud computer type.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd.basic.large</p>
@@ -1678,7 +1688,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory ID. The value of this parameter is the same as the workspace ID that is indicated by the OfficeSiteId parameter.</p>
+             * <p>The directory ID, which is the same as the office network ID (OfficeSiteId).</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-363353****</p>
@@ -1702,7 +1712,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of the disks.</p>
+             * <p>The information about the disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -1732,7 +1742,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the end users who are authorized to connect to the cloud desktop.</p>
+             * <p>The end user IDs.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1740,7 +1750,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription cloud desktop expires.</p>
+             * <p>The time when a subscription cloud computer expired.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-31T15:59Z</p>
@@ -1751,7 +1761,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the image version that the cloud desktop uses.</p>
+             * <p>The information about the image version of the cloud computer.</p>
              */
             public Builder fotaUpdate(FotaUpdate fotaUpdate) {
                 this.fotaUpdate = fotaUpdate;
@@ -1759,7 +1769,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud desktop is a GPU-accelerated desktop.</p>
+             * <p>Indicates whether the cloud computer uses GPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1781,7 +1791,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the GPU driver of the cloud desktop.</p>
+             * <p>The GPU driver version used by the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1851,22 +1861,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flag that is used to manage the cloud desktop.</p>
+             * <p>The flag that is used to manage the cloud computer.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>Updating: The configurations of the cloud desktop are being updated.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>NoFlag: No flags are available.</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>Migrating: The cloud computer is being migrated.</li>
+             * <li>Updating: The configurations of the cloud computer are being updated.</li>
+             * <li>NoFlag: No flags are available.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1878,7 +1878,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flags that are used to manage the cloud desktops.</p>
+             * <p>The flags that are used to manage the cloud computers.</p>
              */
             public Builder managementFlags(java.util.List<String> managementFlags) {
                 this.managementFlags = managementFlags;
@@ -1897,7 +1897,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the secondary network interface controller (NIC) created by the RAM or Active Directory (AD) user in Elastic Desktop Service (EDS). You do not have permissions to modify this parameter.</p>
+             * <p>The ID of the supplementary network interface controller (NIC) created by EDS within an RAM user or Active Directory (AD) user. You cannot modify the ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -1908,7 +1908,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the secondary NIC that is created by the RAM or AD user in EDS.</p>
+             * <p>The IP address of the supplementary NIC created by EDS within an RAM or AD user.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.74.165</p>
@@ -1919,7 +1919,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-363353****</p>
@@ -1930,7 +1930,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace name.</p>
+             * <p>The office network name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1941,22 +1941,11 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account type of the workspace.</p>
+             * <p>The account type of the office network.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>SIMPLE: convenience account</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>AD_CONNECTOR: enterprise AD account</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>SIMPLE: convenience account</li>
+             * <li>AD_CONNECTOR: enterprise AD account</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1968,29 +1957,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) type of the workspace.</p>
+             * <p>The VPC type of the office network.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>standard</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>customized</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>basic</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>standard</li>
+             * <li>customized</li>
+             * <li>basic</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2013,13 +1985,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the OS platform. Valid values:</p>
+             * <p>The information about the OS platform.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>CentOS</li>
              * <li>Ubuntu</li>
-             * <li>Windows Server 2016</li>
-             * <li>Windows Server 2019</li>
+             * <li>Windows Server 2022</li>
              * <li>UOS</li>
+             * <li>CentOS</li>
+             * <li>Windows Server 2019</li>
+             * <li>Windows Server 2016</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2042,7 +2016,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy IDs.</p>
+             * <p>The IDs of the cloud computer policies.</p>
              */
             public Builder policyGroupIdList(java.util.List<String> policyGroupIdList) {
                 this.policyGroupIdList = policyGroupIdList;
@@ -2061,7 +2035,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy names.</p>
+             * <p>The names of the cloud computer policies.</p>
              */
             public Builder policyGroupNameList(java.util.List<String> policyGroupNameList) {
                 this.policyGroupNameList = policyGroupNameList;
@@ -2069,7 +2043,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress when the cloud desktop was created.</p>
+             * <p>The progress of creating the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -2083,19 +2057,8 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              * <p>The protocol.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>HDX: High-definition Experience (HDX) protocol</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>ASP: Adaptive Streaming Protocol (ASP) developed by Alibaba Cloud</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>HDX</li>
+             * <li>ASP</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2107,7 +2070,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroups.
+             * <p>The information about the enterprise resource groups.</p>
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -2142,7 +2105,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the desktop sessions of end users.</p>
+             * <p>The session information about cloud computers connected by end users.</p>
              */
             public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
@@ -2150,7 +2113,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot policy.</p>
+             * <p>The snapshot policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-gi007jgyc3kcey2bb</p>
@@ -2172,7 +2135,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardStartTime.
+             * <p>The standard start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-24T06:38:02Z</p>
              */
             public Builder standardStartTime(String standardStartTime) {
                 this.standardStartTime = standardStartTime;
@@ -2180,7 +2146,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cloud desktop was first started.</p>
+             * <p>The time when the cloud computer was first started.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-06T08:31Z</p>
@@ -2258,7 +2224,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone type. Default value: <strong>AvailabilityZone</strong>. This value indicates Alibaba Cloud zones.</p>
+             * <p>The zone type. Default value: <code>AvailabilityZone</code>. This value indicates Alibaba Cloud zones.</p>
              * 
              * <strong>example:</strong>
              * <p>AvailabilityZone</p>

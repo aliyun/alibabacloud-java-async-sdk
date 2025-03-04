@@ -79,7 +79,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the desktop group.</p>
+         * <p>The ID of the shared group.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -90,7 +90,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DesktopGroupIds.
+         * <p>The IDs of the shared groups.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.desktopGroupIds = desktopGroupIds;

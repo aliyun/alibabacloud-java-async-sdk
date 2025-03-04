@@ -55,7 +55,10 @@ public class BindConfigGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupId.
+         * <p>The ID of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccg-0chlk9b65lj****</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -63,7 +66,10 @@ public class BindConfigGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E54EB497-D7B7-5F04-B744-D8DFA7B******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

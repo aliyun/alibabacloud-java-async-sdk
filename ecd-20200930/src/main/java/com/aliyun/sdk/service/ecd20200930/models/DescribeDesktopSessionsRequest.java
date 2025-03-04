@@ -285,7 +285,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * EndUserIdFilter.
+         * <p>The ID the end user. It is the same as EndUserId. Either one of these two parameters is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserIdFilter(String endUserIdFilter) {
             this.putQueryParameter("EndUserIdFilter", endUserIdFilter);

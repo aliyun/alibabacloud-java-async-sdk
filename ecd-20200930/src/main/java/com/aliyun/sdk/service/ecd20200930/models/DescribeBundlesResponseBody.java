@@ -67,7 +67,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The details of the queried cloud computer templates.</p>
+         * <p>The details of the cloud computer templates.</p>
          */
         public Builder bundles(java.util.List<Bundles> bundles) {
             this.bundles = bundles;
@@ -708,7 +708,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskCategory.
+             * <p>The category of the data disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_auto: SSD</li>
+             * <li>cloud_essd: ESSD (supported by specific specifications)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -805,6 +813,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
             /**
              * <p>The OS language of the image.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>en-US: English</li>
+             * <li>zh-HK: Chinese, Traditional (Hong Kong, China)</li>
+             * <li>zh-CN: Simplified Chinese</li>
+             * <li>ja-JP: Japanese</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>en-US</p>
@@ -940,7 +955,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>The category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_auto: SSD</li>
+             * <li>cloud_essd: ESSD (supported by specific specifications)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;

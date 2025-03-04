@@ -595,7 +595,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopAttachment.
+         * <p>The input parameters used when no templates are used.</p>
          */
         public Builder desktopAttachment(DesktopAttachment desktopAttachment) {
             String desktopAttachmentShrink = shrink(desktopAttachment, "DesktopAttachment", "json");
@@ -836,7 +836,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-3mtuc28rx95lx****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -845,7 +848,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * SavingPlanId.
+         * <p>The ID of the saving plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-4b945dc4Wktd****</p>
          */
         public Builder savingPlanId(String savingPlanId) {
             this.putQueryParameter("SavingPlanId", savingPlanId);
@@ -854,7 +860,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * SnapshotPolicyId.
+         * <p>The ID of the auto-snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-28mp6my0l6zow****</p>
          */
         public Builder snapshotPolicyId(String snapshotPolicyId) {
             this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
@@ -872,7 +881,10 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * TimerGroupId.
+         * <p>The ID of the timer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccg-0caoeogrk9m5****</p>
          */
         public Builder timerGroupId(String timerGroupId) {
             this.putQueryParameter("TimerGroupId", timerGroupId);
@@ -1311,7 +1323,14 @@ public class CreateDesktopsRequest extends Request {
             private Integer systemDiskSize; 
 
             /**
-             * DataDiskCategory.
+             * <p>The category of the data disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_auto: SSD</li>
+             * <li>cloud_essd: ESSD</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -1319,7 +1338,14 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * DataDiskPerLevel.
+             * <p>The performance level of the data disk. Valid values:</p>
+             * <ul>
+             * <li>PL0 (default)</li>
+             * <li>PL1</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder dataDiskPerLevel(String dataDiskPerLevel) {
                 this.dataDiskPerLevel = dataDiskPerLevel;
@@ -1327,7 +1353,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * DataDiskSize.
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -1335,7 +1364,16 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * DefaultLanguage.
+             * <p>The default display language:</p>
+             * <ul>
+             * <li>zh-CN: Simplified Chinese</li>
+             * <li>zh-HK: Traditional Chinese</li>
+             * <li>en-US: English</li>
+             * <li>ja-JP: Japanese</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder defaultLanguage(String defaultLanguage) {
                 this.defaultLanguage = defaultLanguage;
@@ -1343,7 +1381,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * DesktopType.
+             * <p>The desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the IDs of supported desktop types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.enterprise_office.8c16g</p>
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -1351,7 +1392,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * ImageId.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-39ddhdb0ggzjx*****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1359,7 +1403,14 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>The category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_auto: SSD</li>
+             * <li>cloud_essd: ESSD</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1367,7 +1418,14 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * SystemDiskPerLevel.
+             * <p>The performance level of the system disk. Valid values:</p>
+             * <ul>
+             * <li>PL0 (default)</li>
+             * <li>PL1</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder systemDiskPerLevel(String systemDiskPerLevel) {
                 this.systemDiskPerLevel = systemDiskPerLevel;
@@ -1375,7 +1433,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

@@ -133,7 +133,7 @@ public class CreateConfigGroupRequest extends Request {
         } 
 
         /**
-         * ConfigTimers.
+         * <p>The list of configuration groups.</p>
          */
         public Builder configTimers(java.util.List<ConfigTimers> configTimers) {
             this.putQueryParameter("ConfigTimers", configTimers);
@@ -142,7 +142,10 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -151,7 +154,11 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the configuration group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -160,6 +167,11 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
+         * <p>The service type of the configuration group.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +184,10 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,6 +196,11 @@ public class CreateConfigGroupRequest extends Request {
         }
 
         /**
+         * <p>The type of the configuration group.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Timer: the scheduled task type.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,7 +349,10 @@ public class CreateConfigGroupRequest extends Request {
             private String triggerType; 
 
             /**
-             * AllowClientSetting.
+             * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowClientSetting(Boolean allowClientSetting) {
                 this.allowClientSetting = allowClientSetting;
@@ -337,7 +360,13 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * CronExpression.
+             * <p>The CRON expression for the scheduled task.</p>
+             * <blockquote>
+             * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? * 1,2,3,4,5,6,7</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 16 ? * 1,2,3,4,5,6,7</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -345,7 +374,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * Enforce.
+             * <p>Specifies whether to forcibly execute the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -353,7 +385,10 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -361,7 +396,15 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * OperationType.
+             * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Hibernate: scheduled hibernation.</li>
+             * <li>Shutdown: scheduled shutdown.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Shutdown</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -369,7 +412,7 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * ProcessWhitelist.
+             * <p>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</p>
              */
             public Builder processWhitelist(java.util.List<String> processWhitelist) {
                 this.processWhitelist = processWhitelist;
@@ -377,7 +420,16 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * ResetType.
+             * <p>The reset operation for cloud computers.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RESET_TYPE_SYSTEM: resets only the system disks of cloud computers.</li>
+             * <li>RESET_TYPE_USER_DISK: resets only the data disks of cloud computers.</li>
+             * <li>RESET_TYPE_BOTH: resets the system disks and data disks of cloud computers.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RESET_TYPE_SYSTEM</p>
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
@@ -385,6 +437,19 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
+             * <p>The type of the scheduled task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
+             * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>
+             * <li>TimerBoot: scheduled start.</li>
+             * <li>TimerReset: scheduled reset.</li>
+             * <li>NoOperationShutdown: scheduled shutdown upon inactivity.</li>
+             * <li>NoOperationHibernate: scheduled hibernation upon inactivity.</li>
+             * <li>TimerShutdown: scheduled shutdown.</li>
+             * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
+             * <li>TimerReboot: scheduled restart.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -396,7 +461,15 @@ public class CreateConfigGroupRequest extends Request {
             }
 
             /**
-             * TriggerType.
+             * <p>The method to trigger the scheduled task upon inactivity.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Advanced: intelligent detection.</li>
+             * <li>Standard: standard detection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;

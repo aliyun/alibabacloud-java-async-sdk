@@ -698,7 +698,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeDesktopCount.
+             * <p>The total number of cloud computers on which the command is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder invokeDesktopCount(Integer invokeDesktopCount) {
                 this.invokeDesktopCount = invokeDesktopCount;
@@ -706,7 +709,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeDesktopSucceedCount.
+             * <p>The total number of cloud computers on which the command is executed successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder invokeDesktopSucceedCount(Integer invokeDesktopSucceedCount) {
                 this.invokeDesktopSucceedCount = invokeDesktopSucceedCount;

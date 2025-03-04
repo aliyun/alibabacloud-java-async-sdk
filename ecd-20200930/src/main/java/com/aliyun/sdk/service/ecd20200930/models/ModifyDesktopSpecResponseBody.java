@@ -78,7 +78,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         }
 
         /**
-         * OrderIds.
+         * <p>The array of order IDs.</p>
          */
         public Builder orderIds(java.util.List<Long> orderIds) {
             this.orderIds = orderIds;

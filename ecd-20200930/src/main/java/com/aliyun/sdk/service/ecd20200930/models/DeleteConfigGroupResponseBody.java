@@ -43,7 +43,10 @@ public class DeleteConfigGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7E4322D-D679-5ACB-A909-490D2F0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

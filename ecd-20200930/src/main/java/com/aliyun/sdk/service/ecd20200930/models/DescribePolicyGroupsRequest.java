@@ -31,6 +31,14 @@ public class DescribePolicyGroupsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private java.util.List<String> policyGroupId;
 
@@ -48,6 +56,8 @@ public class DescribePolicyGroupsRequest extends Request {
         this.externalPolicyGroupIds = builder.externalPolicyGroupIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.policyGroupId = builder.policyGroupId;
         this.regionId = builder.regionId;
         this.scope = builder.scope;
@@ -88,6 +98,20 @@ public class DescribePolicyGroupsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return policyGroupId
      */
     public java.util.List<String> getPolicyGroupId() {
@@ -112,6 +136,8 @@ public class DescribePolicyGroupsRequest extends Request {
         private java.util.List<String> externalPolicyGroupIds; 
         private Integer maxResults; 
         private String nextToken; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private java.util.List<String> policyGroupId; 
         private String regionId; 
         private String scope; 
@@ -125,13 +151,15 @@ public class DescribePolicyGroupsRequest extends Request {
             this.externalPolicyGroupIds = request.externalPolicyGroupIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.policyGroupId = request.policyGroupId;
             this.regionId = request.regionId;
             this.scope = request.scope;
         } 
 
         /**
-         * ExternalPolicyGroupIds.
+         * <p>The array of cloud computer policy IDs to be excluded.</p>
          */
         public Builder externalPolicyGroupIds(java.util.List<String> externalPolicyGroupIds) {
             this.putQueryParameter("ExternalPolicyGroupIds", externalPolicyGroupIds);
@@ -168,7 +196,25 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The policy IDs. You can specify one or more policy IDs.</p>
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of the cloud computer policies.</p>
          * 
          * <strong>example:</strong>
          * <p>system-all-enabled-policy</p>
@@ -180,7 +226,7 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,13 +239,13 @@ public class DescribePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The effective scope of the policy. Valid values:</p>
+         * <p>The effective scope of the cloud computer policy.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>GLOBAL: The policy takes effect globally.</li>
-         * <li>IP: The policy takes effect based on the IP address.</li>
-         * <li>ALL: The policy takes effect without limits.</li>
+         * <li>ALL</li>
+         * <li>IP</li>
+         * <li>GLOBAL</li>
          * </ul>
-         * <p>Default value: GLOBAL.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

@@ -387,7 +387,13 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * <p>The size of the system disk. Unit: GB.</p>
+         * <blockquote>
+         * <p>The size of the system disk cannot be smaller than the size of the image.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder systemDiskSize(String systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);

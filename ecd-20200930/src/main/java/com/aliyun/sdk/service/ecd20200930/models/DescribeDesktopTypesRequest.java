@@ -503,7 +503,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * DesktopTypeIdList.
+         * <p>The array of specifications.</p>
          */
         public Builder desktopTypeIdList(java.util.List<String> desktopTypeIdList) {
             this.putQueryParameter("DesktopTypeIdList", desktopTypeIdList);
@@ -524,7 +524,16 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * GpuDriverType.
+         * <p>The type of the pre-installed GPU driver. Valid values:</p>
+         * <ul>
+         * <li>T4</li>
+         * <li>A10</li>
+         * <li>G28</li>
+         * <li>G39</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>A10</p>
          */
         public Builder gpuDriverType(String gpuDriverType) {
             this.putQueryParameter("GpuDriverType", gpuDriverType);
@@ -533,7 +542,10 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * GpuMemory.
+         * <p>The GPU memory size. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder gpuMemory(Integer gpuMemory) {
             this.putQueryParameter("GpuMemory", gpuMemory);
@@ -620,7 +632,14 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sort criterion. If left empty, the entries will be in descending order based on the creation time. Valid values:</p>
+         * <ul>
+         * <li>Memory: sort by memory size</li>
+         * <li>Cpu: sort by number of CPU cores</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Memory</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -654,7 +673,14 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The sales mode. Valid values:</p>
+         * <ul>
+         * <li>MonthPackage: monthly subscription</li>
+         * <li>FastBuy: fast buy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FastBuy</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -663,7 +689,14 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>ASC: in ascending order [default]</li>
+         * <li>DESC: in descending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -672,7 +705,10 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * SupportMinSessionCount.
+         * <p>The number of sessions supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder supportMinSessionCount(Integer supportMinSessionCount) {
             this.putQueryParameter("SupportMinSessionCount", supportMinSessionCount);
@@ -681,7 +717,12 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

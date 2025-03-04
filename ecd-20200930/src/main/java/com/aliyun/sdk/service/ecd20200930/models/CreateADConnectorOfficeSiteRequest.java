@@ -382,7 +382,10 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * BackupDCHostname.
+         * <p>The hostname of the backup domain controller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc002</p>
          */
         public Builder backupDCHostname(String backupDCHostname) {
             this.putQueryParameter("BackupDCHostname", backupDCHostname);
@@ -391,7 +394,10 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * BackupDns.
+         * <p>The DNS address of the backup domain controller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.2.100</p>
          */
         public Builder backupDns(String backupDns) {
             this.putQueryParameter("BackupDns", backupDns);
@@ -682,7 +688,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The array of the vSwitch IDs.</p>
          */
         public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

@@ -22,6 +22,10 @@ public class RenewNetworkPackagesRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkPackageId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> networkPackageId;
@@ -46,6 +50,7 @@ public class RenewNetworkPackagesRequest extends Request {
     private RenewNetworkPackagesRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
         this.networkPackageId = builder.networkPackageId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -71,6 +76,13 @@ public class RenewNetworkPackagesRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -110,6 +122,7 @@ public class RenewNetworkPackagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenewNetworkPackagesRequest, Builder> {
         private Boolean autoPay; 
+        private Boolean autoRenew; 
         private java.util.List<String> networkPackageId; 
         private Integer period; 
         private String periodUnit; 
@@ -123,6 +136,7 @@ public class RenewNetworkPackagesRequest extends Request {
         private Builder(RenewNetworkPackagesRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
             this.networkPackageId = request.networkPackageId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -157,6 +171,15 @@ public class RenewNetworkPackagesRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
             return this;
         }
 

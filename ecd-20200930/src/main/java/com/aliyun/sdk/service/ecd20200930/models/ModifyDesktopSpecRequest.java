@@ -269,7 +269,7 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * ResourceSpecs.
+         * <p>The array of resource specification templates.</p>
          */
         public Builder resourceSpecs(java.util.List<ResourceSpecs> resourceSpecs) {
             this.putQueryParameter("ResourceSpecs", resourceSpecs);
@@ -278,7 +278,13 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * <blockquote>
+         * <p>This parameter is optional for non-subscribed cloud computers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DesktopMonthPackage</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -420,7 +426,7 @@ public class ModifyDesktopSpecRequest extends Request {
             private Integer userDiskSizeGib; 
 
             /**
-             * <p>The ID of a cloud computer.</p>
+             * <p>The ID of the cloud computer.</p>
              * 
              * <strong>example:</strong>
              * <p>ecd-4543qyik164a4****</p>
@@ -431,7 +437,7 @@ public class ModifyDesktopSpecRequest extends Request {
             }
 
             /**
-             * <p>The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
+             * <p>The target size of the system disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -442,14 +448,10 @@ public class ModifyDesktopSpecRequest extends Request {
             }
 
             /**
-             * <p>The destination data disk size. Unit: GiB.</p>
-             * <ul>
-             * <li>The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.</li>
-             * <li>The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.</li>
-             * </ul>
+             * <p>The target size of the data disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</p>
              * 
              * <strong>example:</strong>
-             * <p>100</p>
+             * <p>20</p>
              */
             public Builder userDiskSizeGib(Integer userDiskSizeGib) {
                 this.userDiskSizeGib = userDiskSizeGib;

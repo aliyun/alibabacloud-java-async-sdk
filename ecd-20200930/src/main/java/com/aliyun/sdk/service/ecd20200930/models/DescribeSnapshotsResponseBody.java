@@ -503,7 +503,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RestorePointId.
+             * <p>The ID of the restore point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rp-btgmaa20wkcju****</p>
              */
             public Builder restorePointId(String restorePointId) {
                 this.restorePointId = restorePointId;
@@ -511,7 +514,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RestorePointName.
+             * <p>The name of the restore point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataDiskBackup</p>
              */
             public Builder restorePointName(String restorePointName) {
                 this.restorePointName = restorePointName;
