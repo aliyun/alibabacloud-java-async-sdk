@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddIpamPoolCidrResponse> addIpamPoolCidr(AddIpamPoolCidrRequest request);
 
     /**
+     * @param request the request parameters of AssociateIpamResourceDiscovery  AssociateIpamResourceDiscoveryRequest
+     * @return AssociateIpamResourceDiscoveryResponse
+     */
+    CompletableFuture<AssociateIpamResourceDiscoveryResponse> associateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -48,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateIpamPoolAllocationResponse
      */
     CompletableFuture<CreateIpamPoolAllocationResponse> createIpamPoolAllocation(CreateIpamPoolAllocationRequest request);
+
+    /**
+     * @param request the request parameters of CreateIpamResourceDiscovery  CreateIpamResourceDiscoveryRequest
+     * @return CreateIpamResourceDiscoveryResponse
+     */
+    CompletableFuture<CreateIpamResourceDiscoveryResponse> createIpamResourceDiscovery(CreateIpamResourceDiscoveryRequest request);
 
     /**
      * @param request the request parameters of CreateIpamScope  CreateIpamScopeRequest
@@ -80,16 +92,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteIpamPoolCidrResponse> deleteIpamPoolCidr(DeleteIpamPoolCidrRequest request);
 
     /**
+     * @param request the request parameters of DeleteIpamResourceDiscovery  DeleteIpamResourceDiscoveryRequest
+     * @return DeleteIpamResourceDiscoveryResponse
+     */
+    CompletableFuture<DeleteIpamResourceDiscoveryResponse> deleteIpamResourceDiscovery(DeleteIpamResourceDiscoveryRequest request);
+
+    /**
      * @param request the request parameters of DeleteIpamScope  DeleteIpamScopeRequest
      * @return DeleteIpamScopeResponse
      */
     CompletableFuture<DeleteIpamScopeResponse> deleteIpamScope(DeleteIpamScopeRequest request);
 
     /**
+     * @param request the request parameters of DissociateIpamResourceDiscovery  DissociateIpamResourceDiscoveryRequest
+     * @return DissociateIpamResourceDiscoveryResponse
+     */
+    CompletableFuture<DissociateIpamResourceDiscoveryResponse> dissociateIpamResourceDiscovery(DissociateIpamResourceDiscoveryRequest request);
+
+    /**
      * @param request the request parameters of GetIpamPoolAllocation  GetIpamPoolAllocationRequest
      * @return GetIpamPoolAllocationResponse
      */
     CompletableFuture<GetIpamPoolAllocationResponse> getIpamPoolAllocation(GetIpamPoolAllocationRequest request);
+
+    /**
+     * @param request the request parameters of GetIpamPoolNextAvailableCidr  GetIpamPoolNextAvailableCidrRequest
+     * @return GetIpamPoolNextAvailableCidrResponse
+     */
+    CompletableFuture<GetIpamPoolNextAvailableCidrResponse> getIpamPoolNextAvailableCidr(GetIpamPoolNextAvailableCidrRequest request);
 
     /**
      * @param request the request parameters of GetVpcIpamServiceStatus  GetVpcIpamServiceStatusRequest
@@ -132,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListIpamResourceDiscoveriesResponse
      */
     CompletableFuture<ListIpamResourceDiscoveriesResponse> listIpamResourceDiscoveries(ListIpamResourceDiscoveriesRequest request);
+
+    /**
+     * @param request the request parameters of ListIpamResourceDiscoveryAssociations  ListIpamResourceDiscoveryAssociationsRequest
+     * @return ListIpamResourceDiscoveryAssociationsResponse
+     */
+    CompletableFuture<ListIpamResourceDiscoveryAssociationsResponse> listIpamResourceDiscoveryAssociations(ListIpamResourceDiscoveryAssociationsRequest request);
 
     /**
      * @param request the request parameters of ListIpamScopes  ListIpamScopesRequest
@@ -186,6 +222,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIpamPoolAllocationResponse
      */
     CompletableFuture<UpdateIpamPoolAllocationResponse> updateIpamPoolAllocation(UpdateIpamPoolAllocationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateIpamResourceDiscovery  UpdateIpamResourceDiscoveryRequest
+     * @return UpdateIpamResourceDiscoveryResponse
+     */
+    CompletableFuture<UpdateIpamResourceDiscoveryResponse> updateIpamResourceDiscovery(UpdateIpamResourceDiscoveryRequest request);
 
     /**
      * @param request the request parameters of UpdateIpamScope  UpdateIpamScopeRequest

@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AssociateIpamResourceDiscovery  AssociateIpamResourceDiscoveryRequest
+     * @return AssociateIpamResourceDiscoveryResponse
+     */
+    @Override
+    public CompletableFuture<AssociateIpamResourceDiscoveryResponse> associateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AssociateIpamResourceDiscovery").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AssociateIpamResourceDiscoveryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AssociateIpamResourceDiscoveryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -124,6 +142,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateIpamPoolAllocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateIpamResourceDiscovery  CreateIpamResourceDiscoveryRequest
+     * @return CreateIpamResourceDiscoveryResponse
+     */
+    @Override
+    public CompletableFuture<CreateIpamResourceDiscoveryResponse> createIpamResourceDiscovery(CreateIpamResourceDiscoveryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateIpamResourceDiscovery").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateIpamResourceDiscoveryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateIpamResourceDiscoveryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -220,6 +256,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteIpamResourceDiscovery  DeleteIpamResourceDiscoveryRequest
+     * @return DeleteIpamResourceDiscoveryResponse
+     */
+    @Override
+    public CompletableFuture<DeleteIpamResourceDiscoveryResponse> deleteIpamResourceDiscovery(DeleteIpamResourceDiscoveryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteIpamResourceDiscovery").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteIpamResourceDiscoveryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteIpamResourceDiscoveryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteIpamScope  DeleteIpamScopeRequest
      * @return DeleteIpamScopeResponse
      */
@@ -238,6 +292,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DissociateIpamResourceDiscovery  DissociateIpamResourceDiscoveryRequest
+     * @return DissociateIpamResourceDiscoveryResponse
+     */
+    @Override
+    public CompletableFuture<DissociateIpamResourceDiscoveryResponse> dissociateIpamResourceDiscovery(DissociateIpamResourceDiscoveryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DissociateIpamResourceDiscovery").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DissociateIpamResourceDiscoveryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DissociateIpamResourceDiscoveryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetIpamPoolAllocation  GetIpamPoolAllocationRequest
      * @return GetIpamPoolAllocationResponse
      */
@@ -250,6 +322,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetIpamPoolAllocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetIpamPoolNextAvailableCidr  GetIpamPoolNextAvailableCidrRequest
+     * @return GetIpamPoolNextAvailableCidrResponse
+     */
+    @Override
+    public CompletableFuture<GetIpamPoolNextAvailableCidrResponse> getIpamPoolNextAvailableCidr(GetIpamPoolNextAvailableCidrRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIpamPoolNextAvailableCidr").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIpamPoolNextAvailableCidrResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIpamPoolNextAvailableCidrResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -376,6 +466,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListIpamResourceDiscoveriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListIpamResourceDiscoveryAssociations  ListIpamResourceDiscoveryAssociationsRequest
+     * @return ListIpamResourceDiscoveryAssociationsResponse
+     */
+    @Override
+    public CompletableFuture<ListIpamResourceDiscoveryAssociationsResponse> listIpamResourceDiscoveryAssociations(ListIpamResourceDiscoveryAssociationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListIpamResourceDiscoveryAssociations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIpamResourceDiscoveryAssociationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIpamResourceDiscoveryAssociationsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -538,6 +646,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateIpamPoolAllocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateIpamResourceDiscovery  UpdateIpamResourceDiscoveryRequest
+     * @return UpdateIpamResourceDiscoveryResponse
+     */
+    @Override
+    public CompletableFuture<UpdateIpamResourceDiscoveryResponse> updateIpamResourceDiscovery(UpdateIpamResourceDiscoveryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateIpamResourceDiscovery").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateIpamResourceDiscoveryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateIpamResourceDiscoveryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
