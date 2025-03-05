@@ -78,10 +78,10 @@ public class CreateListenerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The listener ID.</p>
+         * <p>The ID of the listener.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsr-bp1bpn0kn908w4nbw****</p>
+         * <p>lsn-o4u54y73wq7b******</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -89,10 +89,10 @@ public class CreateListenerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -35,6 +35,10 @@ public class ListHealthCheckTemplatesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -44,6 +48,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         this.healthCheckTemplateNames = builder.healthCheckTemplateNames;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
     }
 
@@ -89,6 +94,13 @@ public class ListHealthCheckTemplatesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -100,6 +112,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         private java.util.List<String> healthCheckTemplateNames; 
         private Integer maxResults; 
         private String nextToken; 
+        private String resourceGroupId; 
         private java.util.List<Tag> tag; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
             this.healthCheckTemplateNames = request.healthCheckTemplateNames;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
         } 
 
@@ -158,6 +172,15 @@ public class ListHealthCheckTemplatesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

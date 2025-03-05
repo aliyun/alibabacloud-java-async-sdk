@@ -55,7 +55,10 @@ public class EnableLoadBalancerAccessLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * <p>The ID of the asynchronous job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ff7713ca-5818-4120-85e3-0bf9fr******</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -66,7 +69,7 @@ public class EnableLoadBalancerAccessLogResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FD******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

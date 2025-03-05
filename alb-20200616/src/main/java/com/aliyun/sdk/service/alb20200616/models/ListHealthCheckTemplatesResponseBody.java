@@ -268,6 +268,9 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -287,6 +290,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             this.healthCheckTemplateName = builder.healthCheckTemplateName;
             this.healthCheckTimeout = builder.healthCheckTimeout;
             this.healthyThreshold = builder.healthyThreshold;
+            this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
             this.unhealthyThreshold = builder.unhealthyThreshold;
         }
@@ -384,6 +388,13 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -410,6 +421,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             private String healthCheckTemplateName; 
             private Integer healthCheckTimeout; 
             private Integer healthyThreshold; 
+            private String resourceGroupId; 
             private java.util.List<Tags> tags; 
             private Integer unhealthyThreshold; 
 
@@ -573,6 +585,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

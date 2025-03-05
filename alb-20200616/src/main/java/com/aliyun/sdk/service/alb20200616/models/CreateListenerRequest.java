@@ -580,11 +580,11 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>The ID of the CA certificate.</p>
              * <blockquote>
-             * <p> This parameter is required if you set <strong>CaEnabled</strong> to <strong>true</strong>.</p>
+             * <p> This parameter is required if <strong>CaEnabled</strong> is set to <strong>true</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>12315790212_166f8204689_1714763408_70998****</p>
+             * <p>123157*******</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -631,13 +631,10 @@ public class CreateListenerRequest extends Request {
             private String certificateId; 
 
             /**
-             * <p>The ID of the certificate. Only server certificates are supported. You can specify at most 20 certificates IDs.</p>
-             * <blockquote>
-             * <p> This parameter is required when you set <strong>ListenerProtocol</strong> to <strong>HTTPS</strong> or <strong>QUIC</strong>.</p>
-             * </blockquote>
+             * <p>The ID of the certificate. Only server certificates are supported. You can specify up to 20 certificate IDs.</p>
              * 
              * <strong>example:</strong>
-             * <p>12315790212_166f8204689_1714763408_70998****</p>
+             * <p>103705*******</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -689,7 +686,7 @@ public class CreateListenerRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>rsp-cige6j****</p>
+             * <p>sgp-8ilqs4axp6******</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -808,8 +805,8 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * <p>The action. You can specify only one type. Valid value example:</p>
-             * <p><strong>ForwardGroup</strong>: forwards requests to multiple server groups.</p>
+             * <p>The action type. You can specify only one action type. Valid value:</p>
+             * <p><strong>ForwardGroup</strong>: forwards requests to multiple Server groups.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -872,13 +869,13 @@ public class CreateListenerRequest extends Request {
             private Boolean quicUpgradeEnabled; 
 
             /**
-             * <p>The ID of the QUIC listener that you want to associate with the ALB instance. This parameter is required if you set <strong>QuicUpgradeEnabled</strong> to <strong>true</strong>.</p>
+             * <p>The ID of the QUIC listener that you want to associate with the HTTPS listener. Only HTTPS listeners support this parameter. This parameter is required when <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>.</p>
              * <blockquote>
-             * <p> The original listener and the QUIC listener must belong to the same ALB instance.</p>
+             * <p> The HTTPS listener and the QUIC listener must be added to the same ALB instance. Make sure that the QUIC listener is not associated with any other listeners.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>lsr-bp1bpn0kn908w4nbw****</p>
+             * <p>lsn-o4u54y73wq7b******</p>
              */
             public Builder quicListenerId(String quicListenerId) {
                 this.quicListenerId = quicListenerId;
@@ -888,8 +885,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to enable QUIC upgrade. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>:</li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: enables QUIC upgrade.</li>
+             * <li><strong>false</strong> (default): disables QUIC upgrade.</li>
              * </ul>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
@@ -1208,10 +1205,10 @@ public class CreateListenerRequest extends Request {
             private Boolean xForwardedForSLBPortEnabled; 
 
             /**
-             * <p>The name of the custom header. This parameter takes effect only when you set <strong>XForwardedForClientCertClientVerifyEnabled</strong> to <strong>true</strong>.</p>
-             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertClientVerifyEnabled</strong> is set to <strong>true</strong>.</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
              * <blockquote>
-             * <p>Only HTTPS listeners support this parameter.</p>
+             * <p> Only HTTPS listeners support this parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1225,8 +1222,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-clientverify</code> header to retrieve the verification result of the client certificate. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the X-Forwarded-Clientcert-clientverify header.</li>
+             * <li><strong>false</strong> (default): does not use the X-Forwarded-Clientcert-clientverify header.</li>
              * </ul>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
@@ -1242,7 +1239,7 @@ public class CreateListenerRequest extends Request {
 
             /**
              * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertFingerprintEnabled</strong> is set to <strong>true</strong>.</p>
-             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
              * </blockquote>
@@ -1258,8 +1255,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-fingerprint</code> header to retrieve the fingerprint of the client certificate. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the X-Forwarded-Clientcert-fingerprint header.</li>
+             * <li><strong>false</strong> (default): does not use the X-Forwarded-Clientcert-fingerprint header.</li>
              * </ul>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
@@ -1275,7 +1272,7 @@ public class CreateListenerRequest extends Request {
 
             /**
              * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertIssuerDNEnabled</strong> is set to <strong>true</strong>.</p>
-             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
              * </blockquote>
@@ -1291,8 +1288,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-issuerdn</code> header to retrieve information about the authority that issues the client certificate. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the X-Forwarded-Clientcert-issuerdn header.</li>
+             * <li><strong>false</strong> (default): does not use the X-Forwarded-Clientcert-issuerdn header.</li>
              * </ul>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
@@ -1308,7 +1305,7 @@ public class CreateListenerRequest extends Request {
 
             /**
              * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertSubjectDNEnabled</strong> is set to <strong>true</strong>.</p>
-             * <p>The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
+             * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
              * </blockquote>
@@ -1324,8 +1321,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to use the <code>X-Forwarded-Clientcert-subjectdn</code> header to retrieve information about the owner of the client certificate. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the X-Forwarded-Clientcert-subjectdn header.</li>
+             * <li><strong>false</strong> (default): does not use the X-Forwarded-Clientcert-subjectdn header.</li>
              * </ul>
              * <blockquote>
              * <p> Only HTTPS listeners support this parameter.</p>
@@ -1340,7 +1337,7 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to allow the ALB instance to retrieve client IP addresses from the X-Forwarded-For header. Valid values:</p>
+             * <p>Specifies whether to allow the ALB instance to retrieve client IP addresses from the <code>X-Forwarded-For</code> header. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong> (default)</li>
@@ -1359,7 +1356,7 @@ public class CreateListenerRequest extends Request {
 
             /**
              * <p>The trusted proxy IP address.</p>
-             * <p>ALB instances traverse the IP addresses in the <code>X-Forwarded-For</code> header from the rightmost IP address to the leftmost IP address. The first IP address that is not on the trusted IP address list is considered the client IP address. Requests from the client IP address are throttled.</p>
+             * <p>ALB traverses <code>X-Forwarded-For</code> backwards and selects the first IP address that is not in the trusted IP list as the originating IP address of the client, which will be throttled if source IP address throttling is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>10.1.1.0/24</p>
@@ -1372,8 +1369,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to use the <code>X-Forwarded-Client-srcport</code> header to retrieve the client port. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the X-Forwarded-Client-srcport header.</li>
+             * <li><strong>false</strong> (default): does not use the X-Forwarded-Client-srcport header.</li>
              * </ul>
              * <blockquote>
              * <p> HTTP and HTTPS listeners support this parameter.</p>
@@ -1406,7 +1403,17 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * XForwardedForHostEnabled.
+             * <p>Specifies whether to use the <code>X-Forwarded-Host</code> header to retrieve the client domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available for HTTP, HTTPS, and QUIC listeners.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForHostEnabled(Boolean xForwardedForHostEnabled) {
                 this.xForwardedForHostEnabled = xForwardedForHostEnabled;
@@ -1414,7 +1421,21 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * XForwardedForProcessingMode.
+             * <p>Specifies how the <code>X-Forwarded-For</code> header is processed. This parameter takes effect only when <strong>XForwardedForEnabled</strong> is set to <strong>true</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>append</strong> (default)</li>
+             * <li><strong>remove</strong></li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>If this parameter is set to <strong>append</strong>, ALB appends the IP address of the last hop to the existing <code>X-Forwarded-For</code> header in the request before the request is sent to backend servers.</li>
+             * <li>If this parameter is set to <strong>remove</strong>, ALB removes the <code>X-Forwarded-For</code> header in the request before the request is sent to backend servers, no matter whether the request carries the <code>X-Forwarded-For</code> header.</li>
+             * <li>This parameter is only available for HTTP and HTTPS listeners.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>append</p>
              */
             public Builder xForwardedForProcessingMode(String xForwardedForProcessingMode) {
                 this.xForwardedForProcessingMode = xForwardedForProcessingMode;
@@ -1422,10 +1443,10 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol. Valid values:</p>
+             * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol of the ALB instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the X-Forwarded-Proto header.</li>
+             * <li><strong>false</strong> (default): does not use the X-Forwarded-Proto header.</li>
              * </ul>
              * <blockquote>
              * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
@@ -1442,8 +1463,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the ALB instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the SLB-ID header.</li>
+             * <li><strong>false</strong> (default): does not use the SLB-ID header.</li>
              * </ul>
              * <blockquote>
              * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
@@ -1460,8 +1481,8 @@ public class CreateListenerRequest extends Request {
             /**
              * <p>Specifies whether to use the <code>X-Forwarded-Port</code> header to retrieve the listener port of the ALB instance. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong>: uses the X-Forwarded-Port header.</li>
+             * <li><strong>false</strong> (default): does not use the X-Forwarded-Port header.</li>
              * </ul>
              * <blockquote>
              * <p> HTTP, HTTPS, and QUIC listeners support this parameter.</p>

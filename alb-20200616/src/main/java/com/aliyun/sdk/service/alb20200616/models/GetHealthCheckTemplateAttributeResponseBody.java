@@ -56,6 +56,9 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
@@ -76,6 +79,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         this.healthCheckTimeout = builder.healthCheckTimeout;
         this.healthyThreshold = builder.healthyThreshold;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
         this.unhealthyThreshold = builder.unhealthyThreshold;
     }
@@ -180,6 +184,13 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
@@ -207,6 +218,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         private Integer healthCheckTimeout; 
         private Integer healthyThreshold; 
         private String requestId; 
+        private String resourceGroupId; 
         private java.util.List<Tags> tags; 
         private Integer unhealthyThreshold; 
 
@@ -380,6 +392,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

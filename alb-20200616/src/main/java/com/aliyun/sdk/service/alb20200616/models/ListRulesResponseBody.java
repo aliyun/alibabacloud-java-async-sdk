@@ -453,6 +453,9 @@ public class ListRulesResponseBody extends TeaModel {
 
             /**
              * <p>If the value of N in ServerGroupTuple.N is larger than 1, you can enable or disable session persistence for server groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;

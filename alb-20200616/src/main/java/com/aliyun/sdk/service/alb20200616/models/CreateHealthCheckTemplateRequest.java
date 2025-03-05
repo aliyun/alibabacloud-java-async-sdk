@@ -71,6 +71,10 @@ public class CreateHealthCheckTemplateRequest extends Request {
     private Integer healthyThreshold;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -93,6 +97,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
         this.healthCheckTemplateName = builder.healthCheckTemplateName;
         this.healthCheckTimeout = builder.healthCheckTimeout;
         this.healthyThreshold = builder.healthyThreshold;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
         this.unhealthyThreshold = builder.unhealthyThreshold;
     }
@@ -202,6 +207,13 @@ public class CreateHealthCheckTemplateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -229,6 +241,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
         private String healthCheckTemplateName; 
         private Integer healthCheckTimeout; 
         private Integer healthyThreshold; 
+        private String resourceGroupId; 
         private java.util.List<Tag> tag; 
         private Integer unhealthyThreshold; 
 
@@ -251,6 +264,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
             this.healthCheckTemplateName = request.healthCheckTemplateName;
             this.healthCheckTimeout = request.healthCheckTimeout;
             this.healthyThreshold = request.healthyThreshold;
+            this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
             this.unhealthyThreshold = request.unhealthyThreshold;
         } 
@@ -456,6 +470,15 @@ public class CreateHealthCheckTemplateRequest extends Request {
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
             this.healthyThreshold = healthyThreshold;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
