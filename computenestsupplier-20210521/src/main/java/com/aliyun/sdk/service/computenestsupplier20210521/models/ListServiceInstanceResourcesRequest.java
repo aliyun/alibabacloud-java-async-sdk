@@ -34,10 +34,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceARN")
-    private java.util.List<String> resourceARN;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceInstanceId;
@@ -56,7 +52,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
-        this.resourceARN = builder.resourceARN;
         this.serviceInstanceId = builder.serviceInstanceId;
         this.serviceInstanceResourceType = builder.serviceInstanceResourceType;
         this.tag = builder.tag;
@@ -104,13 +99,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
     }
 
     /**
-     * @return resourceARN
-     */
-    public java.util.List<String> getResourceARN() {
-        return this.resourceARN;
-    }
-
-    /**
      * @return serviceInstanceId
      */
     public String getServiceInstanceId() {
@@ -136,7 +124,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.List<String> resourceARN; 
         private String serviceInstanceId; 
         private String serviceInstanceResourceType; 
         private java.util.List<Tag> tag; 
@@ -151,7 +138,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
-            this.resourceARN = request.resourceARN;
             this.serviceInstanceId = request.serviceInstanceId;
             this.serviceInstanceResourceType = request.serviceInstanceResourceType;
             this.tag = request.tag;
@@ -201,15 +187,6 @@ public class ListServiceInstanceResourcesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
-         */
-        public Builder resourceARN(java.util.List<String> resourceARN) {
-            this.putQueryParameter("ResourceARN", resourceARN);
-            this.resourceARN = resourceARN;
             return this;
         }
 
