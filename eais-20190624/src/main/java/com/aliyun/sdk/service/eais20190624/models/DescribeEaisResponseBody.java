@@ -287,6 +287,9 @@ public class DescribeEaisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JupyterUrl")
         private String jupyterUrl;
 
+        @com.aliyun.core.annotation.NameInMap("PaymentType")
+        private String paymentType;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -322,6 +325,7 @@ public class DescribeEaisResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.instanceType = builder.instanceType;
             this.jupyterUrl = builder.jupyterUrl;
+            this.paymentType = builder.paymentType;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.securityGroupId = builder.securityGroupId;
@@ -411,6 +415,13 @@ public class DescribeEaisResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentType
+         */
+        public String getPaymentType() {
+            return this.paymentType;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -477,6 +488,7 @@ public class DescribeEaisResponseBody extends TeaModel {
             private String instanceName; 
             private String instanceType; 
             private String jupyterUrl; 
+            private String paymentType; 
             private String regionId; 
             private String resourceGroupId; 
             private String securityGroupId; 
@@ -563,6 +575,14 @@ public class DescribeEaisResponseBody extends TeaModel {
              */
             public Builder jupyterUrl(String jupyterUrl) {
                 this.jupyterUrl = jupyterUrl;
+                return this;
+            }
+
+            /**
+             * PaymentType.
+             */
+            public Builder paymentType(String paymentType) {
+                this.paymentType = paymentType;
                 return this;
             }
 
