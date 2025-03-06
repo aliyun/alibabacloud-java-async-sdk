@@ -81,6 +81,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachApiProductResponse> attachApiProduct(AttachApiProductRequest request);
 
     /**
+     * @param request the request parameters of AttachGroupPlugin  AttachGroupPluginRequest
+     * @return AttachGroupPluginResponse
+     */
+    CompletableFuture<AttachGroupPluginResponse> attachGroupPlugin(AttachGroupPluginRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is intended for API providers.</p>
      * <ul>
@@ -1076,6 +1082,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePluginApisResponse> describePluginApis(DescribePluginApisRequest request);
 
     /**
+     * @param request the request parameters of DescribePluginGroups  DescribePluginGroupsRequest
+     * @return DescribePluginGroupsResponse
+     */
+    CompletableFuture<DescribePluginGroupsResponse> describePluginGroups(DescribePluginGroupsRequest request);
+
+    /**
      * @param request the request parameters of DescribePluginSchemas  DescribePluginSchemasRequest
      * @return DescribePluginSchemasResponse
      */
@@ -1112,6 +1124,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePluginsByApiResponse
      */
     CompletableFuture<DescribePluginsByApiResponse> describePluginsByApi(DescribePluginsByApiRequest request);
+
+    /**
+     * @param request the request parameters of DescribePluginsByGroup  DescribePluginsByGroupRequest
+     * @return DescribePluginsByGroupResponse
+     */
+    CompletableFuture<DescribePluginsByGroupResponse> describePluginsByGroup(DescribePluginsByGroupRequest request);
 
     /**
      * @param request the request parameters of DescribePurchasedApiGroup  DescribePurchasedApiGroupRequest
@@ -1233,6 +1251,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetachApiProductResponse
      */
     CompletableFuture<DetachApiProductResponse> detachApiProduct(DetachApiProductRequest request);
+
+    /**
+     * @param request the request parameters of DetachGroupPlugin  DetachGroupPluginRequest
+     * @return DetachGroupPluginResponse
+     */
+    CompletableFuture<DetachGroupPluginResponse> detachGroupPlugin(DetachGroupPluginRequest request);
 
     /**
      * @param request the request parameters of DetachPlugin  DetachPluginRequest

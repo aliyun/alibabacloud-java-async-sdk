@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-cloudapi20160714</artifactId>
-  <version>3.0.29</version>
+  <version>3.0.30</version>
   <packaging>jar</packaging>
   <name>alibabacloud-cloudapi20160714</name>
   <description>Alibaba Cloud CloudAPI (20160714) Async SDK for Java
