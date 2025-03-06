@@ -58,6 +58,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetErrorMinuteStatTrend  GetErrorMinuteStatTrendRequest
+     * @return GetErrorMinuteStatTrendResponse
+     */
+    @Override
+    public CompletableFuture<GetErrorMinuteStatTrendResponse> getErrorMinuteStatTrend(GetErrorMinuteStatTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetErrorMinuteStatTrend").setMethod(HttpMethod.GET).setPathRegex("/stat/GetErrorMinuteStatTrend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetErrorMinuteStatTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetErrorMinuteStatTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetH5PageTrend  GetH5PageTrendRequest
      * @return GetH5PageTrendResponse
      */
@@ -106,6 +124,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetNativePageTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetNetworkMinuteTrend  GetNetworkMinuteTrendRequest
+     * @return GetNetworkMinuteTrendResponse
+     */
+    @Override
+    public CompletableFuture<GetNetworkMinuteTrendResponse> getNetworkMinuteTrend(GetNetworkMinuteTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetNetworkMinuteTrend").setMethod(HttpMethod.GET).setPathRegex("/stat/getNetworkMinuteTrend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNetworkMinuteTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetNetworkMinuteTrendResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

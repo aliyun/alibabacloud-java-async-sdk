@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSymRecordsResponse> deleteSymRecords(DeleteSymRecordsRequest request);
 
     /**
+     * @param request the request parameters of GetErrorMinuteStatTrend  GetErrorMinuteStatTrendRequest
+     * @return GetErrorMinuteStatTrendResponse
+     */
+    CompletableFuture<GetErrorMinuteStatTrendResponse> getErrorMinuteStatTrend(GetErrorMinuteStatTrendRequest request);
+
+    /**
      * @param request the request parameters of GetH5PageTrend  GetH5PageTrendRequest
      * @return GetH5PageTrendResponse
      */
@@ -42,6 +48,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNativePageTrendResponse
      */
     CompletableFuture<GetNativePageTrendResponse> getNativePageTrend(GetNativePageTrendRequest request);
+
+    /**
+     * @param request the request parameters of GetNetworkMinuteTrend  GetNetworkMinuteTrendRequest
+     * @return GetNetworkMinuteTrendResponse
+     */
+    CompletableFuture<GetNetworkMinuteTrendResponse> getNetworkMinuteTrend(GetNetworkMinuteTrendRequest request);
 
     /**
      * @param request the request parameters of GetNetworkTrend  GetNetworkTrendRequest
