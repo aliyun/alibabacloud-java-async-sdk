@@ -20,10 +20,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ConvertHybridInstance  ConvertHybridInstanceRequest
+     * @return ConvertHybridInstanceResponse
+     */
+    CompletableFuture<ConvertHybridInstanceResponse> convertHybridInstance(ConvertHybridInstanceRequest request);
+
+    /**
      * @param request the request parameters of ConvertInstance  ConvertInstanceRequest
      * @return ConvertInstanceResponse
      */
     CompletableFuture<ConvertInstanceResponse> convertInstance(ConvertInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ConvertPrepayInstance  ConvertPrepayInstanceRequest
+     * @return ConvertPrepayInstanceResponse
+     */
+    CompletableFuture<ConvertPrepayInstanceResponse> convertPrepayInstance(ConvertPrepayInstanceRequest request);
 
     /**
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -80,6 +92,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ModifyElasticResourceSpec  ModifyElasticResourceSpecRequest
+     * @return ModifyElasticResourceSpecResponse
+     */
+    CompletableFuture<ModifyElasticResourceSpecResponse> modifyElasticResourceSpec(ModifyElasticResourceSpecRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceVswitch  ModifyInstanceVswitchRequest
+     * @return ModifyInstanceVswitchResponse
+     */
+    CompletableFuture<ModifyInstanceVswitchResponse> modifyInstanceVswitch(ModifyInstanceVswitchRequest request);
+
+    /**
+     * @param request the request parameters of ModifyNamespaceSpecV2  ModifyNamespaceSpecV2Request
+     * @return ModifyNamespaceSpecV2Response
+     */
+    CompletableFuture<ModifyNamespaceSpecV2Response> modifyNamespaceSpecV2(ModifyNamespaceSpecV2Request request);
+
+    /**
      * @deprecated OpenAPI ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.  * @param request  the request parameters of ModifyPrepayInstanceSpec  ModifyPrepayInstanceSpecRequest
      * @return ModifyPrepayInstanceSpecResponse
      */
@@ -98,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryConvertInstancePriceResponse
      */
     CompletableFuture<QueryConvertInstancePriceResponse> queryConvertInstancePrice(QueryConvertInstancePriceRequest request);
+
+    /**
+     * @param request the request parameters of QueryConvertPrepayInstancePrice  QueryConvertPrepayInstancePriceRequest
+     * @return QueryConvertPrepayInstancePriceResponse
+     */
+    CompletableFuture<QueryConvertPrepayInstancePriceResponse> queryConvertPrepayInstancePrice(QueryConvertPrepayInstancePriceRequest request);
 
     /**
      * @param request the request parameters of QueryCreateInstancePrice  QueryCreateInstancePriceRequest
