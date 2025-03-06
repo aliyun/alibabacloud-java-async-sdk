@@ -477,6 +477,9 @@ public class UpdatePolicyV2Request extends Request {
         @com.aliyun.core.annotation.NameInMap("TagFilters")
         private java.util.List<TagFilters> tagFilters;
 
+        @com.aliyun.core.annotation.NameInMap("VaultId")
+        private String vaultId;
+
         private Rules(Builder builder) {
             this.archiveDays = builder.archiveDays;
             this.backupType = builder.backupType;
@@ -491,6 +494,7 @@ public class UpdatePolicyV2Request extends Request {
             this.ruleType = builder.ruleType;
             this.schedule = builder.schedule;
             this.tagFilters = builder.tagFilters;
+            this.vaultId = builder.vaultId;
         }
 
         public static Builder builder() {
@@ -592,6 +596,13 @@ public class UpdatePolicyV2Request extends Request {
             return this.tagFilters;
         }
 
+        /**
+         * @return vaultId
+         */
+        public String getVaultId() {
+            return this.vaultId;
+        }
+
         public static final class Builder {
             private Long archiveDays; 
             private String backupType; 
@@ -606,6 +617,7 @@ public class UpdatePolicyV2Request extends Request {
             private String ruleType; 
             private String schedule; 
             private java.util.List<TagFilters> tagFilters; 
+            private String vaultId; 
 
             /**
              * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the time when data is dumped from a backup vault to an archive vault. Unit: days.</p>
@@ -755,6 +767,17 @@ public class UpdatePolicyV2Request extends Request {
              */
             public Builder tagFilters(java.util.List<TagFilters> tagFilters) {
                 this.tagFilters = tagFilters;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required only if the RuleType parameter is set to BACKUP. The ID of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-0001************aseg</p>
+             */
+            public Builder vaultId(String vaultId) {
+                this.vaultId = vaultId;
                 return this;
             }
 

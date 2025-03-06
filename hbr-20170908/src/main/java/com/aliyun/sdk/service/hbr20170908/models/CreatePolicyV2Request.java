@@ -217,11 +217,11 @@ public class CreatePolicyV2Request extends Request {
             /**
              * <p>The type of the data source. Valid value:</p>
              * <ul>
-             * <li><strong>UDM_ECS</strong>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>.</li>
-             * <li><strong>OSS</strong>: Object Storage Service (OSS) bucket This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
-             * <li><strong>NAS</strong>: File Storage NAS (NAS) file system This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
-             * <li><strong>ECS_FILE</strong>: ECS file This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
-             * <li><strong>OTS</strong>: Tablestore instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>UDM_ECS</strong>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <strong>PolicyType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>.</li>
+             * <li><strong>OSS</strong>: Object Storage Service (OSS) bucket This type of data source is supported only if the <strong>PolicyType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>NAS</strong>: File Storage NAS (NAS) file system This type of data source is supported only if the <strong>PolicyType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>ECS_FILE</strong>: ECS file This type of data source is supported only if the <strong>PolicyType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>OTS</strong>: Tablestore instance This type of data source is supported only if the <strong>PolicyType</strong> parameter is set to <strong>STANDARD</strong>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -651,8 +651,9 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
+             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>, <strong>TRANSITION</strong> or <strong>REPLICATION</strong>.</p>
              * <ul>
+             * <li>If the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>, this parameter specifies the retention period of the backup data. The priority is lower than the Retention field of the rule with RuleType=TRANSITION. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
              * <li>If the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>, this parameter specifies the retention period of the backup data. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
              * <li>If the <strong>RuleType</strong> parameter is set to <strong>REPLICATION</strong>, this parameter specifies the retention period of remote backups. Minimum value: 1. Maximum value: 364635. Unit: days.</li>
              * </ul>
@@ -679,6 +680,7 @@ public class CreatePolicyV2Request extends Request {
              * <li><strong>BACKUP</strong>: backup rule</li>
              * <li><strong>TRANSITION</strong>: lifecycle rule</li>
              * <li><strong>REPLICATION</strong>: replication rule</li>
+             * <li><strong>TAG</strong>: tag rule</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

@@ -225,7 +225,13 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+         * <p>The storage type of the backup vault. Valid value: </p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: standard storage.</li>
+         * <li><strong>ARCHIVE</strong>: deprected.</li>
+         * <li><strong>COLD_ARCHIVE</strong>: deprected.</li>
+         * <li><strong>IA</strong>: deprected.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>

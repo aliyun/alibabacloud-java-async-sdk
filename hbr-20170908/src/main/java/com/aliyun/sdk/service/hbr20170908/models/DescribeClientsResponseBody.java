@@ -249,6 +249,9 @@ public class DescribeClientsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
+        @com.aliyun.core.annotation.NameInMap("HeartBeatTime")
+        private Long heartBeatTime;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -284,6 +287,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             this.clientVersion = builder.clientVersion;
             this.clusterId = builder.clusterId;
             this.createdTime = builder.createdTime;
+            this.heartBeatTime = builder.heartBeatTime;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.maxVersion = builder.maxVersion;
@@ -350,6 +354,13 @@ public class DescribeClientsResponseBody extends TeaModel {
          */
         public Long getCreatedTime() {
             return this.createdTime;
+        }
+
+        /**
+         * @return heartBeatTime
+         */
+        public Long getHeartBeatTime() {
+            return this.heartBeatTime;
         }
 
         /**
@@ -423,6 +434,7 @@ public class DescribeClientsResponseBody extends TeaModel {
             private String clientVersion; 
             private String clusterId; 
             private Long createdTime; 
+            private Long heartBeatTime; 
             private String instanceId; 
             private String instanceName; 
             private String maxVersion; 
@@ -507,6 +519,14 @@ public class DescribeClientsResponseBody extends TeaModel {
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
+             * HeartBeatTime.
+             */
+            public Builder heartBeatTime(Long heartBeatTime) {
+                this.heartBeatTime = heartBeatTime;
                 return this;
             }
 
