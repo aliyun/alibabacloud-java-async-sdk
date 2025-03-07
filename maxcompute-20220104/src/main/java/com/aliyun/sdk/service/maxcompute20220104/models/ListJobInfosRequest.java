@@ -339,7 +339,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * extNodeIdList.
+         * <p>The ancestor node IDs.</p>
          */
         public Builder extNodeIdList(java.util.List<String> extNodeIdList) {
             this.putBodyParameter("extNodeIdList", extNodeIdList);
@@ -348,7 +348,11 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
+         * <p>The start timestamp.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672112000</p>
          */
         public Builder from(Long from) {
             this.putBodyParameter("from", from);
@@ -357,7 +361,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * instanceIdList.
+         * <p>The job instance IDs.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("instanceIdList", instanceIdList);
@@ -366,7 +370,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * jobOwnerList.
+         * <p>The job owners.</p>
          */
         public Builder jobOwnerList(java.util.List<String> jobOwnerList) {
             this.putBodyParameter("jobOwnerList", jobOwnerList);
@@ -375,7 +379,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * priorityList.
+         * <p>The job priorities.</p>
          */
         public Builder priorityList(java.util.List<Long> priorityList) {
             this.putBodyParameter("priorityList", priorityList);
@@ -384,7 +388,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * projectList.
+         * <p>The project names.</p>
          */
         public Builder projectList(java.util.List<String> projectList) {
             this.putBodyParameter("projectList", projectList);
@@ -393,7 +397,10 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * quotaNickname.
+         * <p>The quota nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_nickname</p>
          */
         public Builder quotaNickname(String quotaNickname) {
             this.putBodyParameter("quotaNickname", quotaNickname);
@@ -402,7 +409,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * sceneTagList.
+         * <p>The intelligent diagnostics tags.</p>
          */
         public Builder sceneTagList(java.util.List<String> sceneTagList) {
             this.putBodyParameter("sceneTagList", sceneTagList);
@@ -411,7 +418,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * signatureList.
+         * <p>The job signatures.</p>
          */
         public Builder signatureList(java.util.List<String> signatureList) {
             this.putBodyParameter("signatureList", signatureList);
@@ -420,7 +427,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * sortByList.
+         * <p>The sorting columns.</p>
          */
         public Builder sortByList(java.util.List<String> sortByList) {
             this.putBodyParameter("sortByList", sortByList);
@@ -429,7 +436,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * sortOrderList.
+         * <p>The orders for the sorting columns.</p>
          */
         public Builder sortOrderList(java.util.List<String> sortOrderList) {
             this.putBodyParameter("sortOrderList", sortOrderList);
@@ -438,7 +445,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * statusList.
+         * <p>The job states.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putBodyParameter("statusList", statusList);
@@ -447,7 +454,11 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
+         * <p>The end timestamp.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672112130</p>
          */
         public Builder to(Long to) {
             this.putBodyParameter("to", to);
@@ -456,7 +467,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * typeList.
+         * <p>The job types.</p>
          */
         public Builder typeList(java.util.List<String> typeList) {
             this.putBodyParameter("typeList", typeList);

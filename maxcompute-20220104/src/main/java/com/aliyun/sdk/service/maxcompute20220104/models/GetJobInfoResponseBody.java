@@ -12,13 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListJobInfosResponseBody} extends {@link TeaModel}
+ * {@link GetJobInfoResponseBody} extends {@link TeaModel}
  *
- * <p>ListJobInfosResponseBody</p>
+ * <p>GetJobInfoResponseBody</p>
  */
-public class ListJobInfosResponseBody extends TeaModel {
+public class GetJobInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
+
+    @com.aliyun.core.annotation.NameInMap("errorCode")
+    private String errorCode;
+
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
+    private String errorMsg;
 
     @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
@@ -26,8 +32,10 @@ public class ListJobInfosResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private ListJobInfosResponseBody(Builder builder) {
+    private GetJobInfoResponseBody(Builder builder) {
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
+        this.errorMsg = builder.errorMsg;
         this.httpCode = builder.httpCode;
         this.requestId = builder.requestId;
     }
@@ -36,7 +44,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListJobInfosResponseBody create() {
+    public static GetJobInfoResponseBody create() {
         return builder().build();
     }
 
@@ -45,6 +53,20 @@ public class ListJobInfosResponseBody extends TeaModel {
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMsg
+     */
+    public String getErrorMsg() {
+        return this.errorMsg;
     }
 
     /**
@@ -63,11 +85,13 @@ public class ListJobInfosResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
+        private String errorCode; 
+        private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +99,36 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OBJECT_NOT_EXIST</p>
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This object does not exist.</p>
+         */
+        public Builder errorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+
+        /**
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>1xx: informational response. The request is received and is being processed.</li>
+         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+         * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
+         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -89,24 +142,120 @@ public class ListJobInfosResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0bc13a9516807484336515320e38f5</p>
+         * <p>0be3e0bb16654558425251398e27a9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ListJobInfosResponseBody build() {
-            return new ListJobInfosResponseBody(this);
+        public GetJobInfoResponseBody build() {
+            return new GetJobInfoResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListJobInfosResponseBody} extends {@link TeaModel}
+     * {@link GetJobInfoResponseBody} extends {@link TeaModel}
      *
-     * <p>ListJobInfosResponseBody</p>
+     * <p>GetJobInfoResponseBody</p>
+     */
+    public static class JobSubStatusList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private Integer code;
+
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("startTime")
+        private String startTime;
+
+        private JobSubStatusList(Builder builder) {
+            this.code = builder.code;
+            this.description = builder.description;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static JobSubStatusList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public Integer getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Integer code; 
+            private String description; 
+            private String startTime; 
+
+            /**
+             * <p>The code of the sub-status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1010</p>
+             */
+            public Builder code(Integer code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * <p>The description of the sub-status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Waiting for scheduling</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The start time of the sub-status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-05 00:04:15.717364 +0800</p>
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public JobSubStatusList build() {
+                return new JobSubStatusList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobInfoResponseBody</p>
      */
     public static class SceneResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
@@ -266,17 +415,11 @@ public class ListJobInfosResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListJobInfosResponseBody} extends {@link TeaModel}
+     * {@link GetJobInfoResponseBody} extends {@link TeaModel}
      *
-     * <p>ListJobInfosResponseBody</p>
+     * <p>GetJobInfoResponseBody</p>
      */
-    public static class JobInfoList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("cluster")
-        private String cluster;
-
-        @com.aliyun.core.annotation.NameInMap("cuSnapshot")
-        private Double cuSnapshot;
-
+    public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cuUsage")
         private Long cuUsage;
 
@@ -301,11 +444,11 @@ public class ListJobInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("jobOwner")
         private String jobOwner;
 
+        @com.aliyun.core.annotation.NameInMap("jobSubStatusList")
+        private java.util.List<JobSubStatusList> jobSubStatusList;
+
         @com.aliyun.core.annotation.NameInMap("jobType")
         private String jobType;
-
-        @com.aliyun.core.annotation.NameInMap("memorySnapshot")
-        private Double memorySnapshot;
 
         @com.aliyun.core.annotation.NameInMap("memoryUsage")
         private Long memoryUsage;
@@ -340,14 +483,8 @@ public class ListJobInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @com.aliyun.core.annotation.NameInMap("statusSnapshot")
-        private String statusSnapshot;
-
         @com.aliyun.core.annotation.NameInMap("submittedAtTime")
         private Long submittedAtTime;
-
-        @com.aliyun.core.annotation.NameInMap("tags")
-        private String tags;
 
         @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
@@ -358,9 +495,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("waitingTime")
         private Long waitingTime;
 
-        private JobInfoList(Builder builder) {
-            this.cluster = builder.cluster;
-            this.cuSnapshot = builder.cuSnapshot;
+        private Data(Builder builder) {
             this.cuUsage = builder.cuUsage;
             this.endAtTime = builder.endAtTime;
             this.extNodeId = builder.extNodeId;
@@ -369,8 +504,8 @@ public class ListJobInfosResponseBody extends TeaModel {
             this.inputBytes = builder.inputBytes;
             this.instanceId = builder.instanceId;
             this.jobOwner = builder.jobOwner;
+            this.jobSubStatusList = builder.jobSubStatusList;
             this.jobType = builder.jobType;
-            this.memorySnapshot = builder.memorySnapshot;
             this.memoryUsage = builder.memoryUsage;
             this.priority = builder.priority;
             this.project = builder.project;
@@ -382,9 +517,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             this.sceneResults = builder.sceneResults;
             this.signature = builder.signature;
             this.status = builder.status;
-            this.statusSnapshot = builder.statusSnapshot;
             this.submittedAtTime = builder.submittedAtTime;
-            this.tags = builder.tags;
             this.tenantId = builder.tenantId;
             this.totalTime = builder.totalTime;
             this.waitingTime = builder.waitingTime;
@@ -394,22 +527,8 @@ public class ListJobInfosResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static JobInfoList create() {
+        public static Data create() {
             return builder().build();
-        }
-
-        /**
-         * @return cluster
-         */
-        public String getCluster() {
-            return this.cluster;
-        }
-
-        /**
-         * @return cuSnapshot
-         */
-        public Double getCuSnapshot() {
-            return this.cuSnapshot;
         }
 
         /**
@@ -469,17 +588,17 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobSubStatusList
+         */
+        public java.util.List<JobSubStatusList> getJobSubStatusList() {
+            return this.jobSubStatusList;
+        }
+
+        /**
          * @return jobType
          */
         public String getJobType() {
             return this.jobType;
-        }
-
-        /**
-         * @return memorySnapshot
-         */
-        public Double getMemorySnapshot() {
-            return this.memorySnapshot;
         }
 
         /**
@@ -560,24 +679,10 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
 
         /**
-         * @return statusSnapshot
-         */
-        public String getStatusSnapshot() {
-            return this.statusSnapshot;
-        }
-
-        /**
          * @return submittedAtTime
          */
         public Long getSubmittedAtTime() {
             return this.submittedAtTime;
-        }
-
-        /**
-         * @return tags
-         */
-        public String getTags() {
-            return this.tags;
         }
 
         /**
@@ -602,8 +707,6 @@ public class ListJobInfosResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String cluster; 
-            private Double cuSnapshot; 
             private Long cuUsage; 
             private Long endAtTime; 
             private String extNodeId; 
@@ -612,8 +715,8 @@ public class ListJobInfosResponseBody extends TeaModel {
             private Double inputBytes; 
             private String instanceId; 
             private String jobOwner; 
+            private java.util.List<JobSubStatusList> jobSubStatusList; 
             private String jobType; 
-            private Double memorySnapshot; 
             private Long memoryUsage; 
             private Long priority; 
             private String project; 
@@ -625,37 +728,13 @@ public class ListJobInfosResponseBody extends TeaModel {
             private java.util.List<SceneResults> sceneResults; 
             private String signature; 
             private String status; 
-            private String statusSnapshot; 
             private Long submittedAtTime; 
-            private String tags; 
             private String tenantId; 
             private Long totalTime; 
             private Long waitingTime; 
 
             /**
-             * <p>The cluster ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AY20A</p>
-             */
-            public Builder cluster(String cluster) {
-                this.cluster = cluster;
-                return this;
-            }
-
-            /**
-             * <p>The CU snapshot proportion of the job.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.48</p>
-             */
-            public Builder cuSnapshot(Double cuSnapshot) {
-                this.cuSnapshot = cuSnapshot;
-                return this;
-            }
-
-            /**
-             * <p>The total number of used compute units (CUs).</p>
+             * <p>CPU usage of the job at the snapshot time. Unit: Core.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -666,10 +745,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job stops running.</p>
+             * <p>The time when the job was finished.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>1672112913</p>
              */
             public Builder endAtTime(Long endAtTime) {
                 this.endAtTime = endAtTime;
@@ -677,7 +756,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID of DataWorks.</p>
+             * <p>The ID of the upstream node.</p>
              * 
              * <strong>example:</strong>
              * <p>node_4</p>
@@ -688,7 +767,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account of the node owner.</p>
+             * <p>The account ID of the task owner.</p>
              * 
              * <strong>example:</strong>
              * <p>duty_2</p>
@@ -724,7 +803,7 @@ public class ListJobInfosResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>20230410050036549gfmsdwf60gg</p>
+             * <p>20230410****60gg</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -735,10 +814,18 @@ public class ListJobInfosResponseBody extends TeaModel {
              * <p>The account that commits the job.</p>
              * 
              * <strong>example:</strong>
-             * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
+             * <p>ALIYUN$7632***@aliyun.com</p>
              */
             public Builder jobOwner(String jobOwner) {
                 this.jobOwner = jobOwner;
+                return this;
+            }
+
+            /**
+             * <p>The list of sub-status of the job.</p>
+             */
+            public Builder jobSubStatusList(java.util.List<JobSubStatusList> jobSubStatusList) {
+                this.jobSubStatusList = jobSubStatusList;
                 return this;
             }
 
@@ -754,18 +841,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory snapshot proportion of the job.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.42</p>
-             */
-            public Builder memorySnapshot(Double memorySnapshot) {
-                this.memorySnapshot = memorySnapshot;
-                return this;
-            }
-
-            /**
-             * <p>The total memory usage.</p>
+             * <p>Memory usage of the job at the snapshot time. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -787,10 +863,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MaxCompute project.</p>
+             * <p>The name of the project.</p>
              * 
              * <strong>example:</strong>
-             * <p>openrec_new</p>
+             * <p>dp_cdm_prod</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -798,10 +874,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the quota that is used by the job.</p>
+             * <p>The nickname of the computing Quota used by the job.</p>
              * 
              * <strong>example:</strong>
-             * <p>my_quota</p>
+             * <p>os_bigdata</p>
              */
             public Builder quotaNickname(String quotaNickname) {
                 this.quotaNickname = quotaNickname;
@@ -831,7 +907,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the job starts to run.</p>
+             * <p>The start time of the job.</p>
+             * <blockquote>
+             * <p>The time when the job received the first batch of computing resources.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>1672112113</p>
@@ -842,7 +921,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The period for which the job runs.</p>
+             * <p>The running duration, which is the duration from the runningAtTime to the snapshotTime of the job. Unit: seconds (s).</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>
@@ -864,7 +943,7 @@ public class ListJobInfosResponseBody extends TeaModel {
              * <p>The signature of the SQL job.</p>
              * 
              * <strong>example:</strong>
-             * <p>i094KijGrN3kOXZ74kbexB77XQY=</p>
+             * <p>20c1efb4a7caca1865f4aa784bb500efae74af04</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -883,17 +962,6 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the snapshot.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
-             */
-            public Builder statusSnapshot(String statusSnapshot) {
-                this.statusSnapshot = statusSnapshot;
-                return this;
-            }
-
-            /**
              * <p>The time when the job was committed.</p>
              * 
              * <strong>example:</strong>
@@ -905,21 +973,10 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[]</p>
-             */
-            public Builder tags(String tags) {
-                this.tags = tags;
-                return this;
-            }
-
-            /**
              * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>213065738244354</p>
+             * <p>4784****5249</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -927,7 +984,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total period for which the job runs.</p>
+             * <p>The interval from the time when the job was submitted to the snapshotTime .Unit: seconds (s).</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -938,129 +995,13 @@ public class ListJobInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which the job waits to start.</p>
+             * <p>The duration from the time the job is submitted to the time the job starts to run. Unit: seconds (s).</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
              */
             public Builder waitingTime(Long waitingTime) {
                 this.waitingTime = waitingTime;
-                return this;
-            }
-
-            public JobInfoList build() {
-                return new JobInfoList(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListJobInfosResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListJobInfosResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("jobInfoList")
-        private java.util.List<JobInfoList> jobInfoList;
-
-        @com.aliyun.core.annotation.NameInMap("pageNumber")
-        private Long pageNumber;
-
-        @com.aliyun.core.annotation.NameInMap("pageSize")
-        private Long pageSize;
-
-        @com.aliyun.core.annotation.NameInMap("totalCount")
-        private Long totalCount;
-
-        private Data(Builder builder) {
-            this.jobInfoList = builder.jobInfoList;
-            this.pageNumber = builder.pageNumber;
-            this.pageSize = builder.pageSize;
-            this.totalCount = builder.totalCount;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return jobInfoList
-         */
-        public java.util.List<JobInfoList> getJobInfoList() {
-            return this.jobInfoList;
-        }
-
-        /**
-         * @return pageNumber
-         */
-        public Long getPageNumber() {
-            return this.pageNumber;
-        }
-
-        /**
-         * @return pageSize
-         */
-        public Long getPageSize() {
-            return this.pageSize;
-        }
-
-        /**
-         * @return totalCount
-         */
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
-        public static final class Builder {
-            private java.util.List<JobInfoList> jobInfoList; 
-            private Long pageNumber; 
-            private Long pageSize; 
-            private Long totalCount; 
-
-            /**
-             * <p>The information about the jobs.</p>
-             */
-            public Builder jobInfoList(java.util.List<JobInfoList> jobInfoList) {
-                this.jobInfoList = jobInfoList;
-                return this;
-            }
-
-            /**
-             * <p>The page number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
-             */
-            public Builder pageNumber(Long pageNumber) {
-                this.pageNumber = pageNumber;
-                return this;
-            }
-
-            /**
-             * <p>The number of entries per page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
-             */
-            public Builder pageSize(Long pageSize) {
-                this.pageSize = pageSize;
-                return this;
-            }
-
-            /**
-             * <p>The total number of returned entries.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>64</p>
-             */
-            public Builder totalCount(Long totalCount) {
-                this.totalCount = totalCount;
                 return this;
             }
 

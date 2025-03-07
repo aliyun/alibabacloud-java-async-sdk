@@ -124,6 +124,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetComputeQuotaScheduleResponse> getComputeQuotaSchedule(GetComputeQuotaScheduleRequest request);
 
     /**
+     * @param request the request parameters of GetJobInfo  GetJobInfoRequest
+     * @return GetJobInfoResponse
+     */
+    CompletableFuture<GetJobInfoResponse> getJobInfo(GetJobInfoRequest request);
+
+    /**
      * @param request the request parameters of GetJobResourceUsage  GetJobResourceUsageRequest
      * @return GetJobResourceUsageResponse
      */

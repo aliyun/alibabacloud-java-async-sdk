@@ -391,6 +391,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetJobInfo  GetJobInfoRequest
+     * @return GetJobInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetJobInfoResponse> getJobInfo(GetJobInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetJobInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v1/jobs/{instanceId}/info").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetJobInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetJobInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetJobResourceUsage  GetJobResourceUsageRequest
      * @return GetJobResourceUsageResponse
      */

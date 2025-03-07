@@ -91,7 +91,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -536,7 +536,10 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             private Long waitingTime; 
 
             /**
-             * cpuRequest.
+             * <p>The CPU request amount of the job at the snapshot time point. Unit: Core.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder cpuRequest(Long cpuRequest) {
                 this.cpuRequest = cpuRequest;
@@ -555,7 +558,10 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             }
 
             /**
-             * cpuUsageToRequestRatio.
+             * <p>The CPU satisfaction ratio of the job at the snapshot time point (cpuUsage/cpuRequest).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder cpuUsageToRequestRatio(Double cpuUsageToRequestRatio) {
                 this.cpuUsageToRequestRatio = cpuUsageToRequestRatio;
@@ -651,7 +657,10 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             }
 
             /**
-             * memoryRequest.
+             * <p>The Memory request amount of the job at the snapshot time point. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>409600</p>
              */
             public Builder memoryRequest(Long memoryRequest) {
                 this.memoryRequest = memoryRequest;
@@ -670,7 +679,10 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             }
 
             /**
-             * memoryUsageToRequestRatio.
+             * <p>The Memory satisfaction ratio of the job at the snapshot time point (memoryUsage/memoryRequest).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder memoryUsageToRequestRatio(Double memoryUsageToRequestRatio) {
                 this.memoryUsageToRequestRatio = memoryUsageToRequestRatio;
@@ -935,7 +947,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * <p>The list of jobs snapshot information</p>
+             * <p>The job snapshots.</p>
              */
             public Builder jobInfoList(java.util.List<JobInfoList> jobInfoList) {
                 this.jobInfoList = jobInfoList;

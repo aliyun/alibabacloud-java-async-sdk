@@ -312,7 +312,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to sort query results in ascending or descending order.</p>
+         * <p>Specifies whether to sort data in ascending order.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -454,7 +454,7 @@ public class ListJobSnapshotInfosRequest extends Request {
         }
 
         /**
-         * <p>The column based on which you want to sort query results.</p>
+         * <p>The sorting column.</p>
          * 
          * <strong>example:</strong>
          * <p>cpuUsage</p>
