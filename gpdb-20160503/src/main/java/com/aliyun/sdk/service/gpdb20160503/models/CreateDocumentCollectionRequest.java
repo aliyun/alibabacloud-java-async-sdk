@@ -28,6 +28,10 @@ public class CreateDocumentCollectionRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimension")
+    private Integer dimension;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EmbeddingModel")
     private String embeddingModel;
 
@@ -95,6 +99,7 @@ public class CreateDocumentCollectionRequest extends Request {
         super(builder);
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
+        this.dimension = builder.dimension;
         this.embeddingModel = builder.embeddingModel;
         this.externalStorage = builder.externalStorage;
         this.fullTextRetrievalFields = builder.fullTextRetrievalFields;
@@ -137,6 +142,13 @@ public class CreateDocumentCollectionRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return dimension
+     */
+    public Integer getDimension() {
+        return this.dimension;
     }
 
     /**
@@ -247,6 +259,7 @@ public class CreateDocumentCollectionRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDocumentCollectionRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
+        private Integer dimension; 
         private String embeddingModel; 
         private Integer externalStorage; 
         private String fullTextRetrievalFields; 
@@ -271,6 +284,7 @@ public class CreateDocumentCollectionRequest extends Request {
             super(request);
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
+            this.dimension = request.dimension;
             this.embeddingModel = request.embeddingModel;
             this.externalStorage = request.externalStorage;
             this.fullTextRetrievalFields = request.fullTextRetrievalFields;
@@ -317,6 +331,15 @@ public class CreateDocumentCollectionRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * Dimension.
+         */
+        public Builder dimension(Integer dimension) {
+            this.putQueryParameter("Dimension", dimension);
+            this.dimension = dimension;
             return this;
         }
 
