@@ -1,3 +1,6 @@
+2025-03-07 Version: 1.0.2
+- Generated java-async 2023-06-30 for dataphin-public.
+
 2024-12-30 Version: 1.0.1
 - Generated java-async 2023-06-30 for dataphin-public.
 

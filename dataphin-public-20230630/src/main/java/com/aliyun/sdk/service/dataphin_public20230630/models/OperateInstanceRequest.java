@@ -236,7 +236,7 @@ public class OperateInstanceRequest extends Request {
         private String operation;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 132324)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long projectId;
 
         private OperateCommand(Builder builder) {

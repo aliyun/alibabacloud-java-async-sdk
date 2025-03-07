@@ -368,6 +368,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQueueEngineVersionByEnvResponse> getQueueEngineVersionByEnv(GetQueueEngineVersionByEnvRequest request);
 
     /**
+     * @param request the request parameters of GetSparkLocalClientInfo  GetSparkLocalClientInfoRequest
+     * @return GetSparkLocalClientInfoResponse
+     */
+    CompletableFuture<GetSparkLocalClientInfoResponse> getSparkLocalClientInfo(GetSparkLocalClientInfoRequest request);
+
+    /**
      * @param request the request parameters of GetSupplementDagrun  GetSupplementDagrunRequest
      * @return GetSupplementDagrunResponse
      */
@@ -426,6 +432,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAlertNotificationsResponse
      */
     CompletableFuture<ListAlertNotificationsResponse> listAlertNotifications(ListAlertNotificationsRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizedDataServiceApiDetails  ListAuthorizedDataServiceApiDetailsRequest
+     * @return ListAuthorizedDataServiceApiDetailsResponse
+     */
+    CompletableFuture<ListAuthorizedDataServiceApiDetailsResponse> listAuthorizedDataServiceApiDetails(ListAuthorizedDataServiceApiDetailsRequest request);
 
     /**
      * @param request the request parameters of ListBizEntities  ListBizEntitiesRequest
