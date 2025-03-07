@@ -133,7 +133,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
         } 
 
         /**
-         * AudioSettings.
+         * <p>The audio settings.</p>
          */
         public Builder audioSettings(java.util.List<AudioSettings> audioSettings) {
             String audioSettingsShrink = shrink(audioSettings, "AudioSettings", "json");
@@ -143,6 +143,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
         }
 
         /**
+         * <p>The ID of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
         }
 
         /**
+         * <p>The inputs associated with the channel.</p>
          * <p>This parameter is required.</p>
          */
         public Builder inputAttachments(java.util.List<InputAttachments> inputAttachments) {
@@ -165,6 +167,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
         }
 
         /**
+         * <p>The name of the channel. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,6 +180,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
         }
 
         /**
+         * <p>The output groups.</p>
          * <p>This parameter is required.</p>
          */
         public Builder outputGroups(java.util.List<OutputGroups> outputGroups) {
@@ -187,7 +191,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
         }
 
         /**
-         * VideoSettings.
+         * <p>The video settings.</p>
          */
         public Builder videoSettings(java.util.List<VideoSettings> videoSettings) {
             String videoSettingsShrink = shrink(videoSettings, "VideoSettings", "json");
@@ -260,7 +264,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private Integer sampleRate; 
 
             /**
-             * Bitrate.
+             * <p>The audio bitrate. Unit: bit/s. Valid values: 8000 to 1000000. The value must be divisible by 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder bitrate(Integer bitrate) {
                 this.bitrate = bitrate;
@@ -268,7 +275,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The audio codec profile. When AudioCodec is set to aac, AAC-LOW and AAC-MAIN are supported. When AudioCodec is set to libfdk_aac, AAC-LOW, AAC-HE, and AAC-HEV2 are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC-LOW</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -276,7 +286,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * SampleRate.
+             * <p>The audio sample rate. Unit: Hz. Valid values: 22050, 32000, 44100, 48000, and 96000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder sampleRate(Integer sampleRate) {
                 this.sampleRate = sampleRate;
@@ -384,7 +397,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String name; 
 
             /**
-             * AudioCodec.
+             * <p>The audio codec. If it is not specified, the source specification is used. Valid values: aac and libfdk_aac.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>libfdk_aac</p>
              */
             public Builder audioCodec(String audioCodec) {
                 this.audioCodec = audioCodec;
@@ -392,7 +408,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * AudioCodecSetting.
+             * <p>The audio encoding settings.</p>
              */
             public Builder audioCodecSetting(AudioCodecSetting audioCodecSetting) {
                 this.audioCodecSetting = audioCodecSetting;
@@ -400,7 +416,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * AudioSelectorName.
+             * <p>The name of the audio selector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1</p>
              */
             public Builder audioSelectorName(String audioSelectorName) {
                 this.audioSelectorName = audioSelectorName;
@@ -408,7 +427,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * LanguageCode.
+             * <p>Enter a three-letter ISO 639-2 language code. If the audio track selected by the audio selector has a language code, the language code specified in the audio selector is used. If the selected audio track does not have a language code, or if the audio selector cannot find a track that matches its criteria, this language code is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eng</p>
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -416,7 +438,17 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * LanguageName.
+             * <p>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</p>
+             * <ul>
+             * <li>Unicode letters</li>
+             * <li>Digits (0-9)</li>
+             * <li>Underscore (_)</li>
+             * <li>Hyphen (-)</li>
+             * <li>Space (a space cannot be at the beginning or end)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>English</p>
              */
             public Builder languageName(String languageName) {
                 this.languageName = languageName;
@@ -424,6 +456,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The name of the audio settings. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -475,6 +508,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String languageCode; 
 
             /**
+             * <p>Enter a three-letter ISO 639-2 language code from within an audio source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -526,6 +560,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private Long pid; 
 
             /**
+             * <p>Enter a specific PID from within a source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -577,6 +612,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private Long trackId; 
 
             /**
+             * <p>Specify one or more audio tracks from within a source using Track ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -664,7 +700,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String name; 
 
             /**
-             * AudioLanguageSelection.
+             * <p>The audio language selection.</p>
              */
             public Builder audioLanguageSelection(AudioLanguageSelection audioLanguageSelection) {
                 this.audioLanguageSelection = audioLanguageSelection;
@@ -672,7 +708,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * AudioPidSelection.
+             * <p>The audio PID selection.</p>
              */
             public Builder audioPidSelection(AudioPidSelection audioPidSelection) {
                 this.audioPidSelection = audioPidSelection;
@@ -680,7 +716,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * AudioTrackSelection.
+             * <p>The audio track selection.</p>
              */
             public Builder audioTrackSelection(java.util.List<AudioTrackSelection> audioTrackSelection) {
                 this.audioTrackSelection = audioTrackSelection;
@@ -688,6 +724,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The name of the audio selector. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -763,7 +800,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String languageName; 
 
             /**
-             * AudioSelectors.
+             * <p>The audio selectors.</p>
              */
             public Builder audioSelectors(java.util.List<AudioSelectors> audioSelectors) {
                 this.audioSelectors = audioSelectors;
@@ -771,6 +808,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The ID of the associated input.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -782,7 +820,17 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * LanguageName.
+             * <p>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</p>
+             * <ul>
+             * <li>Unicode letters</li>
+             * <li>Digits (0-9)</li>
+             * <li>Underscore (_)</li>
+             * <li>Hyphen (-)</li>
+             * <li>Space (a space cannot be at the beginning or end)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>English</p>
              */
             public Builder languageName(String languageName) {
                 this.languageName = languageName;
@@ -843,6 +891,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String groupName; 
 
             /**
+             * <p>ChannelName in MediaPackage.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -854,6 +903,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>GroupName in MediaPackage.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -916,7 +966,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String nameModifier; 
 
             /**
-             * AudioGroupId.
+             * <p>The manifest audio group ID. To associate several audio tracks into one group, assign the same audio group ID. Viewers can select a track as needed. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 40 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audiogroup</p>
              */
             public Builder audioGroupId(String audioGroupId) {
                 this.audioGroupId = audioGroupId;
@@ -924,7 +977,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * NameModifier.
+             * <p>The manifest name modifier. The child manifests include this modifier in their M3U8 file names. Letters, digits, hyphens (-), and underscores (_) are supported. The maximum length is 40 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480p</p>
              */
             public Builder nameModifier(String nameModifier) {
                 this.nameModifier = nameModifier;
@@ -1020,7 +1076,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String videoSettingName; 
 
             /**
-             * AudioSettingNames.
+             * <p>The referenced AudioSettings.</p>
              */
             public Builder audioSettingNames(java.util.List<String> audioSettingNames) {
                 this.audioSettingNames = audioSettingNames;
@@ -1028,7 +1084,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * MediaPackageOutputSetting.
+             * <p>The settings of the output delivered to MediaPackage.</p>
              */
             public Builder mediaPackageOutputSetting(MediaPackageOutputSetting mediaPackageOutputSetting) {
                 this.mediaPackageOutputSetting = mediaPackageOutputSetting;
@@ -1036,7 +1092,15 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * MediaType.
+             * <p>The media type of the output. Valid values:</p>
+             * <ul>
+             * <li>0: Audio and Video</li>
+             * <li>1: Audio If you set the value to 1, you cannot reference VideoSettings.</li>
+             * <li>2: Video. If you set the value to 2, you cannot reference AudioSettings.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mediaType(Integer mediaType) {
                 this.mediaType = mediaType;
@@ -1044,6 +1108,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The name of the output. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1055,7 +1120,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * VideoSettingName.
+             * <p>The name of the referenced VideoSettings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myVideo1</p>
              */
             public Builder videoSettingName(String videoSettingName) {
                 this.videoSettingName = videoSettingName;
@@ -1141,7 +1209,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String type; 
 
             /**
-             * MediaPackageGroupSetting.
+             * <p>The MediaPackage destination.</p>
              */
             public Builder mediaPackageGroupSetting(MediaPackageGroupSetting mediaPackageGroupSetting) {
                 this.mediaPackageGroupSetting = mediaPackageGroupSetting;
@@ -1149,6 +1217,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The name of the output group. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1160,6 +1229,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The outputs in the output group.</p>
              * <p>This parameter is required.</p>
              */
             public Builder outputs(java.util.List<Outputs> outputs) {
@@ -1168,6 +1238,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The output group type. Only MediaPackage is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1230,7 +1301,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String profile; 
 
             /**
-             * Level.
+             * <p>The video encoding level. It is not supported yet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H264_LEVEL_AUTO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1238,7 +1312,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The H.264 profile. Valid values: BASELINE, HIGH, and MAIN. Default value: MAIN. The parameter takes effect only when the codec is H.264.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1309,7 +1386,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private Integer framerateNumerator; 
 
             /**
-             * FramerateControl.
+             * <p>The frame rate mode. Valid values: SPECIFIED (fixed frame rate) and FROM_SOURCE (use source specification).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPECIFIED</p>
              */
             public Builder framerateControl(String framerateControl) {
                 this.framerateControl = framerateControl;
@@ -1317,7 +1397,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * FramerateDenominator.
+             * <p>The denominator of the fixed frame rate. The parameter is required when FramerateControl is set to SPECIFIED. Valid values: 1 to 60. The numerator must be divisible by the denominator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder framerateDenominator(Integer framerateDenominator) {
                 this.framerateDenominator = framerateDenominator;
@@ -1325,7 +1408,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * FramerateNumerator.
+             * <p>The numerator of the fixed frame rate. The parameter is required when FramerateControl is set to SPECIFIED. Valid values: 1 to 60. The numerator must be divisible by the denominator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder framerateNumerator(Integer framerateNumerator) {
                 this.framerateNumerator = framerateNumerator;
@@ -1396,7 +1482,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String gopSizeUnits; 
 
             /**
-             * BframesNum.
+             * <p>The number of B frames. Valid values: 1 to 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder bframesNum(Integer bframesNum) {
                 this.bframesNum = bframesNum;
@@ -1404,7 +1493,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * GopSize.
+             * <p>The GOP size. When GopSizeUnits is set to SECONDS, the value range is from 1 to 20. When GopSizeUnits is set to FRAMES, the value range is from 1 to 3000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder gopSize(Integer gopSize) {
                 this.gopSize = gopSize;
@@ -1412,7 +1504,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * GopSizeUnits.
+             * <p>The GOP size unit. Valid values: FRAMES and SECONDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FRAMES</p>
              */
             public Builder gopSizeUnits(String gopSizeUnits) {
                 this.gopSizeUnits = gopSizeUnits;
@@ -1495,7 +1590,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private String rateControlMode; 
 
             /**
-             * Bitrate.
+             * <p>The video bitrate. Unit: bit/s. If you set it to 0 or leave it empty, the source specification is used. Valid values: 50000 to 6000000. The value must be divisible by 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500000</p>
              */
             public Builder bitrate(Integer bitrate) {
                 this.bitrate = bitrate;
@@ -1503,7 +1601,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * BufferSize.
+             * <p>The video buffer size. Unit: bit/s. Valid values: 100000 to 6000000. The value must be divisible by 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000000</p>
              */
             public Builder bufferSize(Integer bufferSize) {
                 this.bufferSize = bufferSize;
@@ -1511,7 +1612,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * MaxBitrate.
+             * <p>The maximum bitrate. Unit: bit/s. Valid values: 100000 to 6000000. The value must be divisible by 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000000</p>
              */
             public Builder maxBitrate(Integer maxBitrate) {
                 this.maxBitrate = maxBitrate;
@@ -1519,7 +1623,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * RateControlMode.
+             * <p>The bitrate control mode. Valid values: CBR, ABR, and VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABR</p>
              */
             public Builder rateControlMode(String rateControlMode) {
                 this.rateControlMode = rateControlMode;
@@ -1602,7 +1709,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private Rate rate; 
 
             /**
-             * CodecDetail.
+             * <p>The video encoding settings.</p>
              */
             public Builder codecDetail(CodecDetail codecDetail) {
                 this.codecDetail = codecDetail;
@@ -1610,7 +1717,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * Framerate.
+             * <p>The frame rate. If it is not specified, the source specification is used.</p>
              */
             public Builder framerate(Framerate framerate) {
                 this.framerate = framerate;
@@ -1618,7 +1725,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * Gop.
+             * <p>The GOP setting. If it is not specified, the source specification is used.</p>
              */
             public Builder gop(Gop gop) {
                 this.gop = gop;
@@ -1626,7 +1733,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * Rate.
+             * <p>The video encoding rate. If it is not specified, the source specification is used.</p>
              */
             public Builder rate(Rate rate) {
                 this.rate = rate;
@@ -1722,7 +1829,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             private Integer width; 
 
             /**
-             * Height.
+             * <p>The height of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -1730,6 +1840,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
+             * <p>The name of the video settings. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1741,7 +1852,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * VideoCodec.
+             * <p>The video codec. Valid values: H264 and H265.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H264</p>
              */
             public Builder videoCodec(String videoCodec) {
                 this.videoCodec = videoCodec;
@@ -1749,7 +1863,7 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * VideoCodecSetting.
+             * <p>The video encoding settings.</p>
              */
             public Builder videoCodecSetting(VideoCodecSetting videoCodecSetting) {
                 this.videoCodecSetting = videoCodecSetting;
@@ -1757,7 +1871,10 @@ public class UpdateMediaLiveChannelRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

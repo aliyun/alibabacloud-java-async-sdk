@@ -43,7 +43,10 @@ public class SetNotifyConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>771A1414-27BF-53E6-AB73-EFCB*****ACF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

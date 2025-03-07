@@ -60,6 +60,7 @@ public class GetMediaLiveInputRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the input.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

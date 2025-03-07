@@ -117,6 +117,7 @@ public class SetNotifyConfigRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class SetNotifyConfigRequest extends Request {
         }
 
         /**
-         * CallbackUrl.
+         * <p>The URL for receiving callback notifications. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://customer.com/callback">http://customer.com/callback</a></p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
@@ -138,6 +142,7 @@ public class SetNotifyConfigRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable event notifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +155,15 @@ public class SetNotifyConfigRequest extends Request {
         }
 
         /**
-         * EventTypes.
+         * <p>The event types. If you do not specify this parameter, all event types are selected.</p>
+         * <ul>
+         * <li>agent_start</li>
+         * <li>agent_stop</li>
+         * <li>error</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_start,agent_stop,error</p>
          */
         public Builder eventTypes(String eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
@@ -159,7 +172,10 @@ public class SetNotifyConfigRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The authentication token for callback. The token is carried in the Authorization header of a callback request. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

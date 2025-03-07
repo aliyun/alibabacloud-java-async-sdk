@@ -90,6 +90,7 @@ public class UpdateMediaLiveInputSecurityGroupRequest extends Request {
         } 
 
         /**
+         * <p>The name of the security group. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class UpdateMediaLiveInputSecurityGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the security group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class UpdateMediaLiveInputSecurityGroupRequest extends Request {
         }
 
         /**
+         * <p>The security group rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder whitelistRules(java.util.List<String> whitelistRules) {

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateMediaLiveChannelResponseBody} extends {@link TeaModel}
+ * {@link SendMessageChatTextResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateMediaLiveChannelResponseBody</p>
+ * <p>SendMessageChatTextResponseBody</p>
  */
-public class UpdateMediaLiveChannelResponseBody extends TeaModel {
+public class SendMessageChatTextResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateMediaLiveChannelResponseBody(Builder builder) {
+    private SendMessageChatTextResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateMediaLiveChannelResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateMediaLiveChannelResponseBody create() {
+    public static SendMessageChatTextResponseBody create() {
         return builder().build();
     }
 
@@ -43,18 +43,15 @@ public class UpdateMediaLiveChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateMediaLiveChannelResponseBody build() {
-            return new UpdateMediaLiveChannelResponseBody(this);
+        public SendMessageChatTextResponseBody build() {
+            return new SendMessageChatTextResponseBody(this);
         } 
 
     } 

@@ -107,7 +107,15 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EventTypes.
+         * <p>The event types. If this parameter is empty, all event types are selected.</p>
+         * <ul>
+         * <li>agent_start: The agent is started.</li>
+         * <li>agent_stop: The agent is stopped.</li>
+         * <li>error: An error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_start,agent_stop,error</p>
          */
         public Builder eventTypes(String eventTypes) {
             this.eventTypes = eventTypes;

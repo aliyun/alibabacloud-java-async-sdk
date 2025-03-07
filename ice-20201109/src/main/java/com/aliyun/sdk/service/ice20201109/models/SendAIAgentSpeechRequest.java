@@ -89,7 +89,10 @@ public class SendAIAgentSpeechRequest extends Request {
         } 
 
         /**
-         * EnableInterrupt.
+         * <p>Specifies whether the broadcast can interrupt the ongoing speech. Default value: true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInterrupt(Boolean enableInterrupt) {
             this.putQueryParameter("EnableInterrupt", enableInterrupt);

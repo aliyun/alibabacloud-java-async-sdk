@@ -104,6 +104,7 @@ public class UpdateMediaLiveInputRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the input.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UpdateMediaLiveInputRequest extends Request {
         }
 
         /**
+         * <p>The input settings. An input can have up to two sources: primary and backup sources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder inputSettings(java.util.List<InputSettings> inputSettings) {
@@ -126,6 +128,7 @@ public class UpdateMediaLiveInputRequest extends Request {
         }
 
         /**
+         * <p>The name of the input. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +141,10 @@ public class UpdateMediaLiveInputRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * <p>The IDs of the security groups to be associated with the input. This parameter is required for PUSH inputs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;G6G4X5T4SZYPSTT5&quot;]</p>
          */
         public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             String securityGroupIdsShrink = shrink(securityGroupIds, "SecurityGroupIds", "json");
@@ -239,7 +245,10 @@ public class UpdateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * SourceUrl.
+             * <p>The source URL where the stream is pulled from. This parameter is required for PULL inputs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://domain/app/stream</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -247,7 +256,10 @@ public class UpdateMediaLiveInputRequest extends Request {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the pushed stream. This parameter is required for PUSH inputs. It can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mystream</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;

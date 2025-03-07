@@ -87,7 +87,10 @@ public class TakeoverAIAgentCallRequest extends Request {
         } 
 
         /**
-         * HumanAgentUserId.
+         * <p>The ID of the human agent that will take over the AI agent (UserId in ARTC). If you do not specify this parameter, it is automatically generated and returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uid2</p>
          */
         public Builder humanAgentUserId(String humanAgentUserId) {
             this.putQueryParameter("HumanAgentUserId", humanAgentUserId);
@@ -96,7 +99,10 @@ public class TakeoverAIAgentCallRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the AI agent that will be taken over.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +111,10 @@ public class TakeoverAIAgentCallRequest extends Request {
         }
 
         /**
-         * RequireToken.
+         * <p>Specifies whether to return the ARTC token. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requireToken(Boolean requireToken) {
             this.putQueryParameter("RequireToken", requireToken);

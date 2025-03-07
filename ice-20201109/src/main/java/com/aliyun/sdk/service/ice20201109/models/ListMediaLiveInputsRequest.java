@@ -129,7 +129,10 @@ public class ListMediaLiveInputsRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The keyword of the query. You can perform a fuzzy search on input ID or name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -138,7 +141,10 @@ public class ListMediaLiveInputsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: If you do not specify this parameter or if you set a value smaller than 10, the default value is 10. If you set a value greater than 100, the default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -147,7 +153,10 @@ public class ListMediaLiveInputsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -156,7 +165,10 @@ public class ListMediaLiveInputsRequest extends Request {
         }
 
         /**
-         * Skip.
+         * <p>The number of entries to be skipped in the query. If the number of entries you attempt to skip exceeds the number of entries that meet the condition, an empty list is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder skip(Integer skip) {
             this.putBodyParameter("Skip", skip);
@@ -165,7 +177,10 @@ public class ListMediaLiveInputsRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sorting order of the inputs by creation time. Default value: asc. Valid values: desc and asc. asc indicates the ascending order, and desc indicates the descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -174,7 +189,10 @@ public class ListMediaLiveInputsRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>The type of inputs you want to query. You can separate multiple input types with commas (,) in a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;RTMP_PUSH&quot;,&quot;SRT_PULL&quot;]</p>
          */
         public Builder types(String types) {
             this.putBodyParameter("Types", types);

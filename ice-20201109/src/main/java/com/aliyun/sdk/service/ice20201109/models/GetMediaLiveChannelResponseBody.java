@@ -55,7 +55,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Channel.
+         * <p>The channel information.</p>
          */
         public Builder channel(Channel channel) {
             this.channel = channel;
@@ -63,7 +63,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +136,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private Integer sampleRate; 
 
             /**
-             * Bitrate.
+             * <p>The audio bitrate. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder bitrate(Integer bitrate) {
                 this.bitrate = bitrate;
@@ -141,7 +147,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The audio codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC-LOW</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -149,7 +158,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * SampleRate.
+             * <p>The audio sample rate. Unit: Hz.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder sampleRate(Integer sampleRate) {
                 this.sampleRate = sampleRate;
@@ -256,7 +268,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AudioCodec.
+             * <p>The audio codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder audioCodec(String audioCodec) {
                 this.audioCodec = audioCodec;
@@ -264,7 +279,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * AudioCodecSetting.
+             * <p>The audio encoding settings.</p>
              */
             public Builder audioCodecSetting(AudioCodecSetting audioCodecSetting) {
                 this.audioCodecSetting = audioCodecSetting;
@@ -272,7 +287,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * AudioSelectorName.
+             * <p>The name of the audio selector.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myselector</p>
              */
             public Builder audioSelectorName(String audioSelectorName) {
                 this.audioSelectorName = audioSelectorName;
@@ -280,7 +298,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageCode.
+             * <p>A three-letter ISO 639-2 language code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eng</p>
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -288,7 +309,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageName.
+             * <p>The name of the language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>English</p>
              */
             public Builder languageName(String languageName) {
                 this.languageName = languageName;
@@ -296,7 +320,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the audio settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhuanfengzhuang</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -344,6 +371,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String languageCode; 
 
             /**
+             * <p>A three-letter ISO 639-2 language code from within an audio source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -395,6 +423,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private Long pid; 
 
             /**
+             * <p>A PID from within a source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -446,6 +475,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private Long trackId; 
 
             /**
+             * <p>The track ID from within a source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -533,7 +563,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AudioLanguageSelection.
+             * <p>The audio language selection.</p>
              */
             public Builder audioLanguageSelection(AudioLanguageSelection audioLanguageSelection) {
                 this.audioLanguageSelection = audioLanguageSelection;
@@ -541,7 +571,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * AudioPidSelection.
+             * <p>The audio PID selection.</p>
              */
             public Builder audioPidSelection(AudioPidSelection audioPidSelection) {
                 this.audioPidSelection = audioPidSelection;
@@ -549,7 +579,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * AudioTrackSelection.
+             * <p>The audio track selection.</p>
              */
             public Builder audioTrackSelection(java.util.List<AudioTrackSelection> audioTrackSelection) {
                 this.audioTrackSelection = audioTrackSelection;
@@ -557,6 +587,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The name of the audio selector.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -644,7 +675,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String languageName; 
 
             /**
-             * AudioSelectors.
+             * <p>The audio selectors.</p>
              */
             public Builder audioSelectors(java.util.List<AudioSelectors> audioSelectors) {
                 this.audioSelectors = audioSelectors;
@@ -652,6 +683,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The ID of the associated input.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -663,7 +695,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * InputName.
+             * <p>The name of the input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myinput</p>
              */
             public Builder inputName(String inputName) {
                 this.inputName = inputName;
@@ -671,7 +706,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageName.
+             * <p>The language name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eng</p>
              */
             public Builder languageName(String languageName) {
                 this.languageName = languageName;
@@ -730,7 +768,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * ChannelName.
+             * <p>ChannelName in MediaPackage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myPackageChannel</p>
              */
             public Builder channelName(String channelName) {
                 this.channelName = channelName;
@@ -738,7 +779,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>GroupName in MediaPackage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myPackageGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -797,7 +841,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String nameModifier; 
 
             /**
-             * AudioGroupId.
+             * <p>The manifest audio group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audiogroup</p>
              */
             public Builder audioGroupId(String audioGroupId) {
                 this.audioGroupId = audioGroupId;
@@ -805,7 +852,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * NameModifier.
+             * <p>The manifest name modifier. The child manifests include this modifier in their M3U8 file names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480p</p>
              */
             public Builder nameModifier(String nameModifier) {
                 this.nameModifier = nameModifier;
@@ -900,7 +950,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String videoSettingName; 
 
             /**
-             * AudioSettingNames.
+             * <p>The referenced AudioSettings.</p>
              */
             public Builder audioSettingNames(java.util.List<String> audioSettingNames) {
                 this.audioSettingNames = audioSettingNames;
@@ -908,7 +958,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * MediaPackageOutputSetting.
+             * <p>The settings of the output delivered to MediaPackage.</p>
              */
             public Builder mediaPackageOutputSetting(MediaPackageOutputSetting mediaPackageOutputSetting) {
                 this.mediaPackageOutputSetting = mediaPackageOutputSetting;
@@ -916,7 +966,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The media type of the output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mediaType(Integer mediaType) {
                 this.mediaType = mediaType;
@@ -924,10 +977,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the output.</p>
              * 
              * <strong>example:</strong>
-             * <p>myselector</p>
+             * <p>output1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -935,7 +988,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * VideoSettingName.
+             * <p>The name of the referenced VideoSettings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myVideo1</p>
              */
             public Builder videoSettingName(String videoSettingName) {
                 this.videoSettingName = videoSettingName;
@@ -1030,7 +1086,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * MediaPackageGroupSetting.
+             * <p>The MediaPackage destination.</p>
              */
             public Builder mediaPackageGroupSetting(MediaPackageGroupSetting mediaPackageGroupSetting) {
                 this.mediaPackageGroupSetting = mediaPackageGroupSetting;
@@ -1038,7 +1094,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorUrl.
+             * <p>The URL for monitoring the output group. The parameter is returned only when the output gourp type is MediaPackage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://xxx</p>
              */
             public Builder monitorUrl(String monitorUrl) {
                 this.monitorUrl = monitorUrl;
@@ -1046,10 +1105,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the output group.</p>
              * 
              * <strong>example:</strong>
-             * <p>myselector</p>
+             * <p>group1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1057,7 +1116,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * <p>The outputs in the output group.</p>
              */
             public Builder outputs(java.util.List<Outputs> outputs) {
                 this.outputs = outputs;
@@ -1065,7 +1124,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The output group type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MediaPackage</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1124,7 +1186,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String profile; 
 
             /**
-             * Level.
+             * <p>The video encoding level. It is not supported yet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H264_LEVEL_AUTO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1132,7 +1197,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The H.264 profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1203,7 +1271,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private Integer framerateNumerator; 
 
             /**
-             * FramerateControl.
+             * <p>The frame rate mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPECIFIED</p>
              */
             public Builder framerateControl(String framerateControl) {
                 this.framerateControl = framerateControl;
@@ -1211,7 +1282,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * FramerateDenominator.
+             * <p>The denominator of the fixed frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder framerateDenominator(Integer framerateDenominator) {
                 this.framerateDenominator = framerateDenominator;
@@ -1219,7 +1293,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * FramerateNumerator.
+             * <p>The numerator of the fixed frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder framerateNumerator(Integer framerateNumerator) {
                 this.framerateNumerator = framerateNumerator;
@@ -1290,7 +1367,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String gopSizeUnits; 
 
             /**
-             * BframesNum.
+             * <p>The number of B frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder bframesNum(Integer bframesNum) {
                 this.bframesNum = bframesNum;
@@ -1298,7 +1378,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * GopSize.
+             * <p>The GOP size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder gopSize(Integer gopSize) {
                 this.gopSize = gopSize;
@@ -1306,7 +1389,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * GopSizeUnits.
+             * <p>The GOP size unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FRAMES</p>
              */
             public Builder gopSizeUnits(String gopSizeUnits) {
                 this.gopSizeUnits = gopSizeUnits;
@@ -1389,7 +1475,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private String rateControlMode; 
 
             /**
-             * Bitrate.
+             * <p>The video bitrate. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500000</p>
              */
             public Builder bitrate(Integer bitrate) {
                 this.bitrate = bitrate;
@@ -1397,7 +1486,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * BufferSize.
+             * <p>The video buffer size. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000000</p>
              */
             public Builder bufferSize(Integer bufferSize) {
                 this.bufferSize = bufferSize;
@@ -1405,7 +1497,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBitrate.
+             * <p>The maximum bitrate. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000000</p>
              */
             public Builder maxBitrate(Integer maxBitrate) {
                 this.maxBitrate = maxBitrate;
@@ -1413,7 +1508,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * RateControlMode.
+             * <p>The bitrate control mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABR</p>
              */
             public Builder rateControlMode(String rateControlMode) {
                 this.rateControlMode = rateControlMode;
@@ -1496,7 +1594,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private Rate rate; 
 
             /**
-             * CodecDetail.
+             * <p>The video encoding settings.</p>
              */
             public Builder codecDetail(CodecDetail codecDetail) {
                 this.codecDetail = codecDetail;
@@ -1504,7 +1602,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Framerate.
+             * <p>The frame rate.</p>
              */
             public Builder framerate(Framerate framerate) {
                 this.framerate = framerate;
@@ -1512,7 +1610,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Gop.
+             * <p>The GOP setting.</p>
              */
             public Builder gop(Gop gop) {
                 this.gop = gop;
@@ -1520,7 +1618,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The video encoding rate.</p>
              */
             public Builder rate(Rate rate) {
                 this.rate = rate;
@@ -1615,7 +1713,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * Height.
+             * <p>The height of the video in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -1623,10 +1724,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the video settings.</p>
              * 
              * <strong>example:</strong>
-             * <p>myselector</p>
+             * <p>video1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1634,7 +1735,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * VideoCodec.
+             * <p>The video codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H264</p>
              */
             public Builder videoCodec(String videoCodec) {
                 this.videoCodec = videoCodec;
@@ -1642,7 +1746,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * VideoCodecSetting.
+             * <p>The video encoding settings.</p>
              */
             public Builder videoCodecSetting(VideoCodecSetting videoCodecSetting) {
                 this.videoCodecSetting = videoCodecSetting;
@@ -1650,7 +1754,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the video in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -1805,7 +1912,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             private java.util.List<VideoSettings> videoSettings; 
 
             /**
-             * AudioSettings.
+             * <p>The audio settings.</p>
              */
             public Builder audioSettings(java.util.List<AudioSettings> audioSettings) {
                 this.audioSettings = audioSettings;
@@ -1813,7 +1920,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The ID of the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEGK5KA6KYKAWQQH</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -1821,7 +1931,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the channel was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-03T06:56:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1829,7 +1942,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * InputAttachments.
+             * <p>The inputs associated with the channel.</p>
              */
             public Builder inputAttachments(java.util.List<InputAttachments> inputAttachments) {
                 this.inputAttachments = inputAttachments;
@@ -1837,7 +1950,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * LastStartTime.
+             * <p>The time when the channel was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If the channel has never been started since it was created, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-03T06:56:42Z</p>
              */
             public Builder lastStartTime(String lastStartTime) {
                 this.lastStartTime = lastStartTime;
@@ -1845,7 +1961,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * LastStopTime.
+             * <p>The time when the channel was last stopped. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If the channel has never stopped since it was created, an empty string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-03T06:56:42Z</p>
              */
             public Builder lastStopTime(String lastStopTime) {
                 this.lastStopTime = lastStopTime;
@@ -1853,10 +1972,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The channel name.</p>
              * 
              * <strong>example:</strong>
-             * <p>myselector</p>
+             * <p>mych</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1864,7 +1983,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * OutputGroups.
+             * <p>The output groups.</p>
              */
             public Builder outputGroups(java.util.List<OutputGroups> outputGroups) {
                 this.outputGroups = outputGroups;
@@ -1872,7 +1991,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The state of the channel. Valid values: IDLE, STARTING, RUNNING, RECOVERING, and STOPPING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDLE</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1880,7 +2002,7 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
             }
 
             /**
-             * VideoSettings.
+             * <p>The video settings.</p>
              */
             public Builder videoSettings(java.util.List<VideoSettings> videoSettings) {
                 this.videoSettings = videoSettings;

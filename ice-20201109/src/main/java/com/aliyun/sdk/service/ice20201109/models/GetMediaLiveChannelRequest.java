@@ -60,6 +60,7 @@ public class GetMediaLiveChannelRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

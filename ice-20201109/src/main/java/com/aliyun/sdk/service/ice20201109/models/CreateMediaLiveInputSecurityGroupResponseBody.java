@@ -55,7 +55,10 @@ public class CreateMediaLiveInputSecurityGroupResponseBody extends TeaModel {
         private String securityGroupId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,10 @@ public class CreateMediaLiveInputSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SEGK5KA6KYKAWQQH</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;

@@ -131,6 +131,7 @@ public class StartAIAgentInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent created in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS</a> console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,7 @@ public class StartAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * ChatSyncConfig.
+         * <p>同步聊天记录配置。</p>
          */
         public Builder chatSyncConfig(ChatSyncConfig chatSyncConfig) {
             String chatSyncConfigShrink = shrink(chatSyncConfig, "ChatSyncConfig", "json");
@@ -242,7 +243,10 @@ public class StartAIAgentInstanceRequest extends Request {
             private String receiverId; 
 
             /**
-             * IMAIAgentId.
+             * <p>IM的智能体Id。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**<strong><strong>005e4f309379701645f4</strong></strong></p>
              */
             public Builder IMAIAgentId(String IMAIAgentId) {
                 this.IMAIAgentId = IMAIAgentId;
@@ -250,7 +254,10 @@ public class StartAIAgentInstanceRequest extends Request {
             }
 
             /**
-             * ReceiverId.
+             * <p>接收用户Id。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4167626d312034b2b1c3b7f2f3e41884</p>
              */
             public Builder receiverId(String receiverId) {
                 this.receiverId = receiverId;

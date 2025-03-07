@@ -91,7 +91,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -99,7 +102,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -107,7 +113,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +124,7 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroups.
+         * <p>The security groups.</p>
          */
         public Builder securityGroups(java.util.List<SecurityGroups> securityGroups) {
             this.securityGroups = securityGroups;
@@ -123,7 +132,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
             private java.util.List<String> whitelistRules; 
 
             /**
-             * CreateTime.
+             * <p>The time when the security group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-03T06:56:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -225,7 +240,7 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InputIds.
+             * <p>The IDs of the inputs associated with the security group.</p>
              */
             public Builder inputIds(java.util.List<String> inputIds) {
                 this.inputIds = inputIds;
@@ -233,7 +248,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The security group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysg</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -241,7 +259,10 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEGK5KA6KYKAWQQH</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -249,7 +270,7 @@ public class ListMediaLiveInputSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistRules.
+             * <p>The security group rules.</p>
              */
             public Builder whitelistRules(java.util.List<String> whitelistRules) {
                 this.whitelistRules = whitelistRules;

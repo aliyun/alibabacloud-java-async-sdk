@@ -103,7 +103,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * AIAgentUserId.
+         * <p>The username of the AI agent in the Alibaba Real-Time Communication (ARTC) channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877ae632caae49b1afc81c2e8194ffb4</p>
          */
         public Builder AIAgentUserId(String AIAgentUserId) {
             this.AIAgentUserId = AIAgentUserId;
@@ -111,7 +114,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * ChannelId.
+         * <p>The ARTC channel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70f22d5784194938a7e387052f2b3208</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -119,7 +125,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the AI agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -127,7 +136,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +147,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The ARTC token of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -143,7 +158,10 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The username in the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

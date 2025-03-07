@@ -79,7 +79,10 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * ChannelId.
+         * <p>The ID of the ARTC channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70f22d5784194938a7e387052f2b3208</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -87,7 +90,10 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * HumanAgentUserId.
+         * <p>The ID of the human agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uid2</p>
          */
         public Builder humanAgentUserId(String humanAgentUserId) {
             this.humanAgentUserId = humanAgentUserId;
@@ -95,7 +101,10 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +112,10 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The ARTC token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
          */
         public Builder token(String token) {
             this.token = token;

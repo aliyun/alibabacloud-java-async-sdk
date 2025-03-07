@@ -259,18 +259,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMediaConnectFlowResponse> createMediaConnectFlow(CreateMediaConnectFlowRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of CreateMediaLiveChannel  CreateMediaLiveChannelRequest
      * @return CreateMediaLiveChannelResponse
      */
     CompletableFuture<CreateMediaLiveChannelResponse> createMediaLiveChannel(CreateMediaLiveChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of CreateMediaLiveInput  CreateMediaLiveInputRequest
      * @return CreateMediaLiveInputResponse
      */
     CompletableFuture<CreateMediaLiveInputResponse> createMediaLiveInput(CreateMediaLiveInputRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of CreateMediaLiveInputSecurityGroup  CreateMediaLiveInputSecurityGroupRequest
      * @return CreateMediaLiveInputSecurityGroupResponse
      */
@@ -555,18 +576,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMediaInfosResponse> deleteMediaInfos(DeleteMediaInfosRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can only delete a channel that is not running.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of DeleteMediaLiveChannel  DeleteMediaLiveChannelRequest
      * @return DeleteMediaLiveChannelResponse
      */
     CompletableFuture<DeleteMediaLiveChannelResponse> deleteMediaLiveChannel(DeleteMediaLiveChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can delete an input only when it is not associated with a MediaLive channel.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of DeleteMediaLiveInput  DeleteMediaLiveInputRequest
      * @return DeleteMediaLiveInputResponse
      */
     CompletableFuture<DeleteMediaLiveInputResponse> deleteMediaLiveInput(DeleteMediaLiveInputRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can only delete a security group not associated with an input.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of DeleteMediaLiveInputSecurityGroup  DeleteMediaLiveInputSecurityGroupRequest
      * @return DeleteMediaLiveInputSecurityGroupResponse
      */
@@ -649,6 +700,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVodPackagingGroupResponse> deleteVodPackagingGroup(DeleteVodPackagingGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li><strong>Feature</strong>: You can call this operation to query the information about an AI agent.</li>
+     * <li><strong>Scenario</strong>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeAIAgentInstance  DescribeAIAgentInstanceRequest
      * @return DescribeAIAgentInstanceResponse
      */
@@ -685,6 +743,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMeterImsSummaryResponse> describeMeterImsSummary(DescribeMeterImsSummaryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the detailed callback configurations of an AI agent.</p>
+     * 
      * @param request the request parameters of DescribeNotifyConfig  DescribeNotifyConfigRequest
      * @return DescribeNotifyConfigResponse
      */
@@ -721,6 +782,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DropSearchLibResponse> dropSearchLib(DropSearchLibRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
+     * <strong>Note:</strong> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</p>
+     * 
      * @param request the request parameters of GenerateAIAgentCall  GenerateAIAgentCallRequest
      * @return GenerateAIAgentCallResponse
      */
@@ -998,18 +1064,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMediaInfoJobResponse> getMediaInfoJob(GetMediaInfoJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of GetMediaLiveChannel  GetMediaLiveChannelRequest
      * @return GetMediaLiveChannelResponse
      */
     CompletableFuture<GetMediaLiveChannelResponse> getMediaLiveChannel(GetMediaLiveChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of GetMediaLiveInput  GetMediaLiveInputRequest
      * @return GetMediaLiveInputResponse
      */
     CompletableFuture<GetMediaLiveInputResponse> getMediaLiveInput(GetMediaLiveInputRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of GetMediaLiveInputSecurityGroup  GetMediaLiveInputSecurityGroupRequest
      * @return GetMediaLiveInputSecurityGroupResponse
      */
@@ -1195,6 +1282,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAIAgentDialoguesResponse> listAIAgentDialogues(ListAIAgentDialoguesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to query a list of AI agents based on the <code>AIAgentId</code>. The optional parameters include <code>StartTime</code>, <code>EndTime</code>, <code>PageSize</code>, and <code>PageNumber</code>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
+     * <strong>Note</strong>:</p>
+     * <ul>
+     * <li>The default value of <code>PageSize</code> is 10, and the default value of <code>PageNumber</code> is 1.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListAIAgentInstance  ListAIAgentInstanceRequest
      * @return ListAIAgentInstanceResponse
      */
@@ -1393,18 +1488,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMediaInfoJobsResponse> listMediaInfoJobs(ListMediaInfoJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of ListMediaLiveChannels  ListMediaLiveChannelsRequest
      * @return ListMediaLiveChannelsResponse
      */
     CompletableFuture<ListMediaLiveChannelsResponse> listMediaLiveChannels(ListMediaLiveChannelsRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of ListMediaLiveInputSecurityGroups  ListMediaLiveInputSecurityGroupsRequest
      * @return ListMediaLiveInputSecurityGroupsResponse
      */
     CompletableFuture<ListMediaLiveInputSecurityGroupsResponse> listMediaLiveInputSecurityGroups(ListMediaLiveInputSecurityGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of ListMediaLiveInputs  ListMediaLiveInputsRequest
      * @return ListMediaLiveInputsResponse
      */
@@ -1755,6 +1871,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendAIAgentDataChannelMessageResponse> sendAIAgentDataChannelMessage(SendAIAgentDataChannelMessageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
+     * <strong>Note</strong></p>
+     * <ul>
+     * <li>Make sure that the <code>InstanceId</code> is valid and corresponds to an existing AI agent.</li>
+     * <li>The content of <code>Text</code> must comply with the specifications and does not contain sensitive or inappropriate information.</li>
+     * <li>If you do not want the new broadcast to interrupt the ongoing speech, you must set <code>EnableInterrupt</code> to <code>false</code>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SendAIAgentSpeech  SendAIAgentSpeechRequest
      * @return SendAIAgentSpeechResponse
      */
@@ -1777,6 +1902,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SendLiveTranscodeJobCommandResponse
      */
     CompletableFuture<SendLiveTranscodeJobCommandResponse> sendLiveTranscodeJobCommand(SendLiveTranscodeJobCommandRequest request);
+
+    /**
+     * @param request the request parameters of SendMessageChatText  SendMessageChatTextRequest
+     * @return SendMessageChatTextResponse
+     */
+    CompletableFuture<SendMessageChatTextResponse> sendMessageChatText(SendMessageChatTextRequest request);
 
     /**
      * @param request the request parameters of SetContentAnalyzeConfig  SetContentAnalyzeConfigRequest
@@ -1803,12 +1934,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetEventCallbackResponse> setEventCallback(SetEventCallbackRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to configure event notifications for an AI agent. You can configure <code>EnableNotify</code> to enable or disable event notifications, configure <code>CallbackUrl</code> to specify a callback URL, and configure <code>EventTypes</code> to specify event types. You can also configure <code>Token</code> to specify an authentication token for enhanced security. The system returns a unique <code>RequestId</code> for subsequent tracing after a successful request.</p>
+     * 
      * @param request the request parameters of SetNotifyConfig  SetNotifyConfigRequest
      * @return SetNotifyConfigResponse
      */
     CompletableFuture<SetNotifyConfigResponse> setNotifyConfig(SetNotifyConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <code>InstanceId</code> for subsequent tracking and operations.</p>
+     * 
      * @param request the request parameters of StartAIAgentInstance  StartAIAgentInstanceRequest
      * @return StartAIAgentInstanceResponse
      */
@@ -1821,6 +1959,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartChannelResponse> startChannel(StartChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of StartMediaLiveChannel  StartMediaLiveChannelRequest
      * @return StartMediaLiveChannelResponse
      */
@@ -1845,6 +1993,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</p>
+     * <ul>
+     * <li>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</li>
+     * </ul>
+     * <hr>
+     * 
      * @param request the request parameters of StopAIAgentInstance  StopAIAgentInstanceRequest
      * @return StopAIAgentInstanceResponse
      */
@@ -1857,6 +2012,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopChannelResponse> stopChannel(StopChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li></li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of StopMediaLiveChannel  StopMediaLiveChannelRequest
      * @return StopMediaLiveChannelResponse
      */
@@ -2167,6 +2332,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TakeoverAIAgentCallResponse> takeoverAIAgentCall(TakeoverAIAgentCallRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</p>
+     * 
      * @param request the request parameters of UpdateAIAgentInstance  UpdateAIAgentInstanceRequest
      * @return UpdateAIAgentInstanceResponse
      */
@@ -2330,18 +2499,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMediaInfoResponse> updateMediaInfo(UpdateMediaInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify a MediaLive channel only when it is not running.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of UpdateMediaLiveChannel  UpdateMediaLiveChannelRequest
      * @return UpdateMediaLiveChannelResponse
      */
     CompletableFuture<UpdateMediaLiveChannelResponse> updateMediaLiveChannel(UpdateMediaLiveChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify an input only when it is not associated with a MediaLive channel.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of UpdateMediaLiveInput  UpdateMediaLiveInputRequest
      * @return UpdateMediaLiveInputResponse
      */
     CompletableFuture<UpdateMediaLiveInputResponse> updateMediaLiveInput(UpdateMediaLiveInputRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify a security group only when it is not associated with a MediaLive input.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
      * @param request the request parameters of UpdateMediaLiveInputSecurityGroup  UpdateMediaLiveInputSecurityGroupRequest
      * @return UpdateMediaLiveInputSecurityGroupResponse
      */

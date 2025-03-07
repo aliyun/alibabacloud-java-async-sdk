@@ -88,6 +88,7 @@ public class UpdateAIAgentInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent that you want to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class UpdateAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The template configurations of the AI agent. The configurations are merged with the template configurations that are used to start the AI agent. For more information, see the definition of TemplateConfig.</p>
          */
         public Builder templateConfig(AIAgentTemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");

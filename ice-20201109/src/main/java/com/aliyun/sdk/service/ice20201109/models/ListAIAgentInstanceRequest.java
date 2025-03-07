@@ -116,6 +116,7 @@ public class ListAIAgentInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter does not have a default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-02T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -137,7 +141,10 @@ public class ListAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +153,10 @@ public class ListAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +165,10 @@ public class ListAIAgentInstanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter does not have a default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

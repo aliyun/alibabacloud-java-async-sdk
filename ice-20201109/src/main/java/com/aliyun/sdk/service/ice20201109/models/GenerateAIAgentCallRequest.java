@@ -144,6 +144,7 @@ public class GenerateAIAgentCallRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AI agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,10 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * Expire.
+         * <p>The time when the token expires. Unit: seconds. Default value: 3600. Valid values: 0 to 604800.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
@@ -184,7 +188,7 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The template configurations of the AI agent. The specified configurations are merged with the template configurations that are specified in the console. If you do not specify this parameter, the system uses the default configurations for an AI agent created in the console.</p>
          */
         public Builder templateConfig(AIAgentTemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -203,7 +207,10 @@ public class GenerateAIAgentCallRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The username of the AI agent in the channel. If you do not specify this parameter, the system automatically generates a username. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>877ae632caae49b1afc81c2e8194ffb4</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

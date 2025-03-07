@@ -75,6 +75,7 @@ public class CreateMediaLiveInputSecurityGroupRequest extends Request {
         } 
 
         /**
+         * <p>The name of the security group. Letters, digits, hyphens (-), and underscores (_) are supported. The maximum length is 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CreateMediaLiveInputSecurityGroupRequest extends Request {
         }
 
         /**
+         * <p>The security group rules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

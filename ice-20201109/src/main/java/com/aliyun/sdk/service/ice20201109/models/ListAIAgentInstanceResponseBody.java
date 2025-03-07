@@ -55,7 +55,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Instances.
+         * <p>The list of the AI agents.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -63,7 +63,10 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +160,10 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * CallLogUrl.
+             * <p>The URL of the call log file for the AI agent. The structure of the file is CallLog in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/call_logs/12345.json">https://example.com/call_logs/12345.json</a></p>
              */
             public Builder callLogUrl(String callLogUrl) {
                 this.callLogUrl = callLogUrl;
@@ -165,7 +171,10 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeConfig.
+             * <p>The runtime configurations of the AI agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</p>
              */
             public Builder runtimeConfig(AIAgentRuntimeConfig runtimeConfig) {
                 this.runtimeConfig = runtimeConfig;
@@ -173,7 +182,14 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the instance. Valid values:</p>
+             * <ul>
+             * <li>Executing</li>
+             * <li>Finished</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -181,7 +197,10 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The template configurations of the AI agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VoiceChat&quot;: {&quot;VoiceId&quot;: &quot;zhixiaoxia&quot;}}</p>
              */
             public Builder templateConfig(AIAgentTemplateConfig templateConfig) {
                 this.templateConfig = templateConfig;
@@ -189,7 +208,10 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The custom information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

@@ -91,7 +91,7 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Inputs.
+         * <p>The inputs.</p>
          */
         public Builder inputs(java.util.List<Inputs> inputs) {
             this.inputs = inputs;
@@ -99,7 +99,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -107,7 +110,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -115,7 +121,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -229,7 +241,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             private String streamName; 
 
             /**
-             * DestHost.
+             * <p>The endpoint that the stream is pushed to. This parameter is returned for PUSH inputs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://domain/app/stream</p>
              */
             public Builder destHost(String destHost) {
                 this.destHost = destHost;
@@ -253,7 +268,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorUrl.
+             * <p>The URL for input monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://domain/app/stream_for_monitor</p>
              */
             public Builder monitorUrl(String monitorUrl) {
                 this.monitorUrl = monitorUrl;
@@ -261,7 +279,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUrl.
+             * <p>The source URL where the stream is pulled from. This parameter is returned for PULL inputs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://domain/app/stream</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -269,7 +290,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the pushed stream. This parameter is returned for PUSH inputs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mystream</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -388,7 +412,7 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ChannelIds.
+             * <p>The IDs of the channels associated with the input.</p>
              */
             public Builder channelIds(java.util.List<String> channelIds) {
                 this.channelIds = channelIds;
@@ -396,7 +420,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the input was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-03T06:56:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -404,7 +431,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * InputId.
+             * <p>The ID of the input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEGK5KA6KYKAWQQH</p>
              */
             public Builder inputId(String inputId) {
                 this.inputId = inputId;
@@ -412,7 +442,7 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * InputInfos.
+             * <p>The input configurations.</p>
              */
             public Builder inputInfos(java.util.List<InputInfos> inputInfos) {
                 this.inputInfos = inputInfos;
@@ -420,7 +450,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myinput</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -428,7 +461,7 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * <p>The IDs of the security groups associated with the input.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -436,7 +469,10 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The input type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RTMP_PUSH</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -55,7 +55,10 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
         private SecurityGroup securityGroup; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroup.
+         * <p>The security group information.</p>
          */
         public Builder securityGroup(SecurityGroup securityGroup) {
             this.securityGroup = securityGroup;
@@ -157,7 +160,10 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
             private java.util.List<String> whitelistRules; 
 
             /**
-             * CreateTime.
+             * <p>The time when the security group was created. It follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-13T08:31:56Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -165,7 +171,7 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InputIds.
+             * <p>The IDs of the inputs associated with the security group.</p>
              */
             public Builder inputIds(java.util.List<String> inputIds) {
                 this.inputIds = inputIds;
@@ -173,7 +179,10 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysg</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -181,7 +190,10 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEGK5KA6KYKAWQQH</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -189,7 +201,7 @@ public class GetMediaLiveInputSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistRules.
+             * <p>The security group rules.</p>
              */
             public Builder whitelistRules(java.util.List<String> whitelistRules) {
                 this.whitelistRules = whitelistRules;

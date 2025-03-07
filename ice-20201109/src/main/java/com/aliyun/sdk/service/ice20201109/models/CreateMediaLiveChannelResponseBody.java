@@ -55,7 +55,10 @@ public class CreateMediaLiveChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ChannelId.
+         * <p>The ID of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SEGK5KA6KYKAWQQH</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -63,7 +66,10 @@ public class CreateMediaLiveChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
