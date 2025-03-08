@@ -990,6 +990,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSecretValueResponse> getSecretValue(GetSecretValueRequest request);
 
     /**
+     * @param request the request parameters of GetStatementResult  GetStatementResultRequest
+     * @return GetStatementResultResponse
+     */
+    CompletableFuture<GetStatementResultResponse> getStatementResult(GetStatementResultRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
      * <blockquote>
