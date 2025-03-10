@@ -20,6 +20,9 @@ public class File extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("action_list")
     private java.util.List<String> actionList;
 
+    @com.aliyun.core.annotation.NameInMap("auto_delete_left_sec")
+    private Long autoDeleteLeftSec;
+
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
@@ -40,6 +43,9 @@ public class File extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
+
+    @com.aliyun.core.annotation.NameInMap("dir_size_info")
+    private DirSizeInfo dirSizeInfo;
 
     @com.aliyun.core.annotation.NameInMap("domain_id")
     private String domainId;
@@ -121,6 +127,7 @@ public class File extends TeaModel {
 
     private File(Builder builder) {
         this.actionList = builder.actionList;
+        this.autoDeleteLeftSec = builder.autoDeleteLeftSec;
         this.category = builder.category;
         this.contentHash = builder.contentHash;
         this.contentHashName = builder.contentHashName;
@@ -128,6 +135,7 @@ public class File extends TeaModel {
         this.crc64Hash = builder.crc64Hash;
         this.createdAt = builder.createdAt;
         this.description = builder.description;
+        this.dirSizeInfo = builder.dirSizeInfo;
         this.domainId = builder.domainId;
         this.downloadUrl = builder.downloadUrl;
         this.driveId = builder.driveId;
@@ -169,6 +177,13 @@ public class File extends TeaModel {
      */
     public java.util.List<String> getActionList() {
         return this.actionList;
+    }
+
+    /**
+     * @return autoDeleteLeftSec
+     */
+    public Long getAutoDeleteLeftSec() {
+        return this.autoDeleteLeftSec;
     }
 
     /**
@@ -218,6 +233,13 @@ public class File extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dirSizeInfo
+     */
+    public DirSizeInfo getDirSizeInfo() {
+        return this.dirSizeInfo;
     }
 
     /**
@@ -404,6 +426,7 @@ public class File extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> actionList; 
+        private Long autoDeleteLeftSec; 
         private String category; 
         private String contentHash; 
         private String contentHashName; 
@@ -411,6 +434,7 @@ public class File extends TeaModel {
         private String crc64Hash; 
         private String createdAt; 
         private String description; 
+        private DirSizeInfo dirSizeInfo; 
         private String domainId; 
         private String downloadUrl; 
         private String driveId; 
@@ -443,6 +467,14 @@ public class File extends TeaModel {
          */
         public Builder actionList(java.util.List<String> actionList) {
             this.actionList = actionList;
+            return this;
+        }
+
+        /**
+         * auto_delete_left_sec.
+         */
+        public Builder autoDeleteLeftSec(Long autoDeleteLeftSec) {
+            this.autoDeleteLeftSec = autoDeleteLeftSec;
             return this;
         }
 
@@ -499,6 +531,14 @@ public class File extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * dir_size_info.
+         */
+        public Builder dirSizeInfo(DirSizeInfo dirSizeInfo) {
+            this.dirSizeInfo = dirSizeInfo;
             return this;
         }
 
@@ -716,4 +756,71 @@ public class File extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link File} extends {@link TeaModel}
+     *
+     * <p>File</p>
+     */
+    public static class DirSizeInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dir_count")
+        private Long dirCount;
+
+        @com.aliyun.core.annotation.NameInMap("file_count")
+        private Long fileCount;
+
+        private DirSizeInfo(Builder builder) {
+            this.dirCount = builder.dirCount;
+            this.fileCount = builder.fileCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DirSizeInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dirCount
+         */
+        public Long getDirCount() {
+            return this.dirCount;
+        }
+
+        /**
+         * @return fileCount
+         */
+        public Long getFileCount() {
+            return this.fileCount;
+        }
+
+        public static final class Builder {
+            private Long dirCount; 
+            private Long fileCount; 
+
+            /**
+             * dir_count.
+             */
+            public Builder dirCount(Long dirCount) {
+                this.dirCount = dirCount;
+                return this;
+            }
+
+            /**
+             * file_count.
+             */
+            public Builder fileCount(Long fileCount) {
+                this.fileCount = fileCount;
+                return this;
+            }
+
+            public DirSizeInfo build() {
+                return new DirSizeInfo(this);
+            } 
+
+        } 
+
+    }
 }

@@ -736,4 +736,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
 
+    /**
+     * @param request the request parameters of VideoDRMLicense  VideoDRMLicenseRequest
+     * @return VideoDRMLicenseResponse
+     */
+    CompletableFuture<VideoDRMLicenseResponse> videoDRMLicense(VideoDRMLicenseRequest request);
+
 }

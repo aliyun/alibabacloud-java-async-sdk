@@ -56,6 +56,10 @@ public class SearchFileRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("return_total_count")
     private Boolean returnTotalCount;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thumbnail_processes")
+    private java.util.Map<String, ImageProcess> thumbnailProcesses;
+
     private SearchFileRequest(Builder builder) {
         super(builder);
         this.domainId = builder.domainId;
@@ -67,6 +71,7 @@ public class SearchFileRequest extends Request {
         this.query = builder.query;
         this.recursive = builder.recursive;
         this.returnTotalCount = builder.returnTotalCount;
+        this.thumbnailProcesses = builder.thumbnailProcesses;
     }
 
     public static Builder builder() {
@@ -145,6 +150,13 @@ public class SearchFileRequest extends Request {
         return this.returnTotalCount;
     }
 
+    /**
+     * @return thumbnailProcesses
+     */
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
+        return this.thumbnailProcesses;
+    }
+
     public static final class Builder extends Request.Builder<SearchFileRequest, Builder> {
         private String domainId; 
         private String driveId; 
@@ -155,6 +167,7 @@ public class SearchFileRequest extends Request {
         private String query; 
         private Boolean recursive; 
         private Boolean returnTotalCount; 
+        private java.util.Map<String, ImageProcess> thumbnailProcesses; 
 
         private Builder() {
             super();
@@ -171,6 +184,7 @@ public class SearchFileRequest extends Request {
             this.query = request.query;
             this.recursive = request.recursive;
             this.returnTotalCount = request.returnTotalCount;
+            this.thumbnailProcesses = request.thumbnailProcesses;
         } 
 
         /**
@@ -288,6 +302,15 @@ public class SearchFileRequest extends Request {
         public Builder returnTotalCount(Boolean returnTotalCount) {
             this.putBodyParameter("return_total_count", returnTotalCount);
             this.returnTotalCount = returnTotalCount;
+            return this;
+        }
+
+        /**
+         * thumbnail_processes.
+         */
+        public Builder thumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
+            this.putBodyParameter("thumbnail_processes", thumbnailProcesses);
+            this.thumbnailProcesses = thumbnailProcesses;
             return this;
         }
 

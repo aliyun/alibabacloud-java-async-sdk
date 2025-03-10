@@ -38,6 +38,10 @@ public class ListRecyclebinRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("marker")
     private String marker;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thumbnail_processes")
+    private java.util.Map<String, ImageProcess> thumbnailProcesses;
+
     private ListRecyclebinRequest(Builder builder) {
         super(builder);
         this.domainId = builder.domainId;
@@ -45,6 +49,7 @@ public class ListRecyclebinRequest extends Request {
         this.fields = builder.fields;
         this.limit = builder.limit;
         this.marker = builder.marker;
+        this.thumbnailProcesses = builder.thumbnailProcesses;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class ListRecyclebinRequest extends Request {
         return this.marker;
     }
 
+    /**
+     * @return thumbnailProcesses
+     */
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
+        return this.thumbnailProcesses;
+    }
+
     public static final class Builder extends Request.Builder<ListRecyclebinRequest, Builder> {
         private String domainId; 
         private String driveId; 
         private String fields; 
         private Integer limit; 
         private String marker; 
+        private java.util.Map<String, ImageProcess> thumbnailProcesses; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class ListRecyclebinRequest extends Request {
             this.fields = request.fields;
             this.limit = request.limit;
             this.marker = request.marker;
+            this.thumbnailProcesses = request.thumbnailProcesses;
         } 
 
         /**
@@ -176,6 +190,15 @@ public class ListRecyclebinRequest extends Request {
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
             this.marker = marker;
+            return this;
+        }
+
+        /**
+         * thumbnail_processes.
+         */
+        public Builder thumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
+            this.putBodyParameter("thumbnail_processes", thumbnailProcesses);
+            this.thumbnailProcesses = thumbnailProcesses;
             return this;
         }
 

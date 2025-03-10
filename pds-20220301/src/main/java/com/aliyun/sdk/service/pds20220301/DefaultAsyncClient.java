@@ -2102,4 +2102,22 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VideoDRMLicense  VideoDRMLicenseRequest
+     * @return VideoDRMLicenseResponse
+     */
+    @Override
+    public CompletableFuture<VideoDRMLicenseResponse> videoDRMLicense(VideoDRMLicenseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("VideoDRMLicense").setMethod(HttpMethod.POST).setPathRegex("/v2/file/video_drm_license").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VideoDRMLicenseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VideoDRMLicenseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }
