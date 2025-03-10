@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DisassociateSourceServersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > sourceId;
+    private java.util.List<String> sourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkgroupId")
@@ -68,7 +73,7 @@ public class DisassociateSourceServersRequest extends Request {
     /**
      * @return sourceId
      */
-    public java.util.List < String > getSourceId() {
+    public java.util.List<String> getSourceId() {
         return this.sourceId;
     }
 
@@ -82,7 +87,7 @@ public class DisassociateSourceServersRequest extends Request {
     public static final class Builder extends Request.Builder<DisassociateSourceServersRequest, Builder> {
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private java.util.List < String > sourceId; 
+        private java.util.List<String> sourceId; 
         private String workgroupId; 
 
         private Builder() {
@@ -119,7 +124,7 @@ public class DisassociateSourceServersRequest extends Request {
          * <p>The IDs of migration sources that you want to disassociate from the workgroup. You can specify up to 50 migration sources.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder sourceId(java.util.List < String > sourceId) {
+        public Builder sourceId(java.util.List<String> sourceId) {
             this.putQueryParameter("SourceId", sourceId);
             this.sourceId = sourceId;
             return this;

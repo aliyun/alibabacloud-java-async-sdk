@@ -38,6 +38,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccessTokenResponse> createAccessToken(CreateAccessTokenRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information about the limits and impacts of cross-zone migration, see <a href="https://help.aliyun.com/document_detail/476797.html">Cross-zone ECS instance migration</a>.</p>
+     * 
      * @param request the request parameters of CreateCrossZoneMigrationJob  CreateCrossZoneMigrationJobRequest
      * @return CreateCrossZoneMigrationJobResponse
      */
@@ -145,8 +148,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are used as filter conditions.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can specify multiple request parameters to filter instances. Specified parameters have logical AND relations. Only the specified parameters are used as filter conditions.</p>
      * 
      * @param request the request parameters of DescribeSourceServers  DescribeSourceServersRequest
      * @return DescribeSourceServersResponse

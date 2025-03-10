@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Disk")
-    private java.util.List < Disk> disk;
+    private java.util.List<Disk> disk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -102,7 +107,7 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
     /**
      * @return disk
      */
-    public java.util.List < Disk> getDisk() {
+    public java.util.List<Disk> getDisk() {
         return this.disk;
     }
 
@@ -165,7 +170,7 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCrossZoneMigrationJobRequest, Builder> {
         private Boolean autoPay; 
         private String clientToken; 
-        private java.util.List < Disk> disk; 
+        private java.util.List<Disk> disk; 
         private String instanceId; 
         private Long ownerId; 
         private String regionId; 
@@ -223,9 +228,9 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
         }
 
         /**
-         * <p>The disk information.</p>
+         * <p>The disk list.</p>
          */
-        public Builder disk(java.util.List < Disk> disk) {
+        public Builder disk(java.util.List<Disk> disk) {
             this.putQueryParameter("Disk", disk);
             this.disk = disk;
             return this;
@@ -387,7 +392,7 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
             private String performanceLevel; 
 
             /**
-             * <p>The disk category. A value of cloud_essd that indicates enhanced SSD (ESSD).</p>
+             * <p>The disk category. A value of cloud_essd indicates enhanced SSD (ESSD).</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_essd</p>

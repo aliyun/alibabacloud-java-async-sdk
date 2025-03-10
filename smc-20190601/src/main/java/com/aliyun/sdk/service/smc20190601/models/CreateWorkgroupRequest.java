@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class CreateWorkgroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateWorkgroupRequest(Builder builder) {
         super(builder);
@@ -97,7 +102,7 @@ public class CreateWorkgroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -107,7 +112,7 @@ public class CreateWorkgroupRequest extends Request {
         private String name; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -183,9 +188,9 @@ public class CreateWorkgroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag information of the workgroup.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -243,7 +248,11 @@ public class CreateWorkgroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of a specified workgroup.</p>
+             * <p>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -251,7 +260,11 @@ public class CreateWorkgroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of a specified workgroup.</p>
+             * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

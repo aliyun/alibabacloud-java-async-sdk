@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class Parts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Part")
-        private java.util.List < Part> part;
+        private java.util.List<Part> part;
 
         private Parts(Builder builder) {
             this.part = builder.part;
@@ -264,17 +269,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return part
          */
-        public java.util.List < Part> getPart() {
+        public java.util.List<Part> getPart() {
             return this.part;
         }
 
         public static final class Builder {
-            private java.util.List < Part> part; 
+            private java.util.List<Part> part; 
 
             /**
              * Part.
              */
-            public Builder part(java.util.List < Part> part) {
+            public Builder part(java.util.List<Part> part) {
                 this.part = part;
                 return this;
             }
@@ -387,7 +392,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class DataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
-        private java.util.List < DataDisk> dataDisk;
+        private java.util.List<DataDisk> dataDisk;
 
         private DataDisks(Builder builder) {
             this.dataDisk = builder.dataDisk;
@@ -404,17 +409,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return dataDisk
          */
-        public java.util.List < DataDisk> getDataDisk() {
+        public java.util.List<DataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
         public static final class Builder {
-            private java.util.List < DataDisk> dataDisk; 
+            private java.util.List<DataDisk> dataDisk; 
 
             /**
              * DataDisk.
              */
-            public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
                 return this;
             }
@@ -483,10 +488,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Long sizeBytes; 
 
             /**
-             * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+             * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
+             * <ul>
+             * <li>true: Block replication is enabled for the data disk partition.</li>
+             * <li>false: Block replication is disabled for the data disk partition.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder block(Boolean block) {
                 this.block = block;
@@ -494,7 +503,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path of the data disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/data</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -527,7 +539,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class DataParts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Part")
-        private java.util.List < PartsPart> part;
+        private java.util.List<PartsPart> part;
 
         private DataParts(Builder builder) {
             this.part = builder.part;
@@ -544,17 +556,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return part
          */
-        public java.util.List < PartsPart> getPart() {
+        public java.util.List<PartsPart> getPart() {
             return this.part;
         }
 
         public static final class Builder {
-            private java.util.List < PartsPart> part; 
+            private java.util.List<PartsPart> part; 
 
             /**
              * Part.
              */
-            public Builder part(java.util.List < PartsPart> part) {
+            public Builder part(java.util.List<PartsPart> part) {
                 this.part = part;
                 return this;
             }
@@ -635,7 +647,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * DiskId.
+             * <p>The ID of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-2zeh4twm100qskw7z41z</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -643,7 +658,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LVM.
+             * <p>Specifies whether to use LVM. Valid values:</p>
+             * <ul>
+             * <li>true: Use LVM.</li>
+             * <li>false: Not use LVM.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder LVM(Boolean LVM) {
                 this.LVM = LVM;
@@ -651,7 +673,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data disk partitions.</p>
+             * <p>The information about the data disk partition.</p>
              */
             public Builder parts(DataParts parts) {
                 this.parts = parts;
@@ -659,10 +681,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>The size of a data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.</p>
+             * <blockquote>
+             * <p> The size of a destination data disk must be larger than the size of data in the corresponding source data disk. For example, if the size of the source disk is 500 GiB but the actual used space is 100 GiB, you must set this parameter to a value greater than 100 GiB.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>40</p>
+             * <p>22548578304</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -684,7 +709,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class DisksData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         private DisksData(Builder builder) {
             this.data = builder.data;
@@ -701,17 +726,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
@@ -780,7 +805,11 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Long sizeBytes; 
 
             /**
-             * <p>Indicates whether block replication is enabled for the data disk partition.</p>
+             * <p>Specifies whether block replication is enabled for the system disk partition. Valid values:</p>
+             * <ul>
+             * <li>true: Block replication is enabled for the system disk partition.</li>
+             * <li>false: Block replication is disabled for the system disk partition.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -791,7 +820,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path of the system disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/boot</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -799,7 +831,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk partition. Unit: bytes.</p>
+             * <p>The size of the system disk partition. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>21474836480</p>
@@ -824,7 +856,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class SystemParts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Part")
-        private java.util.List < SystemPartsPart> part;
+        private java.util.List<SystemPartsPart> part;
 
         private SystemParts(Builder builder) {
             this.part = builder.part;
@@ -841,17 +873,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return part
          */
-        public java.util.List < SystemPartsPart> getPart() {
+        public java.util.List<SystemPartsPart> getPart() {
             return this.part;
         }
 
         public static final class Builder {
-            private java.util.List < SystemPartsPart> part; 
+            private java.util.List<SystemPartsPart> part; 
 
             /**
              * Part.
              */
-            public Builder part(java.util.List < SystemPartsPart> part) {
+            public Builder part(java.util.List<SystemPartsPart> part) {
                 this.part = part;
                 return this;
             }
@@ -932,7 +964,10 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * DiskId.
+             * <p>The ID of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-2zeh4twm100qskw7z41z</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -940,7 +975,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LVM.
+             * <p>Specifies whether to use LVM. Valid values:</p>
+             * <ul>
+             * <li>true: Use LVM.</li>
+             * <li>false: Not use LVM.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder LVM(Boolean LVM) {
                 this.LVM = LVM;
@@ -948,7 +990,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data disk partitions.</p>
+             * <p>The information about the system disk partition.</p>
              */
             public Builder parts(SystemParts parts) {
                 this.parts = parts;
@@ -956,10 +998,13 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
+             * <p>The size of the source system disk. Unit: GiB. Valid values: 20 to 32768.</p>
+             * <blockquote>
+             * <p> The parameter value must be greater than the actual used space of the data disk on the source server. For example, if the size of the source disk is 500 GiB but the actual used space is 100 GiB, you must set this parameter to a value greater than 100 GiB.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>40</p>
+             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1018,7 +1063,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             private System system; 
 
             /**
-             * Data.
+             * <p>The information about the data disk.</p>
              */
             public Builder data(DisksData data) {
                 this.data = data;
@@ -1026,7 +1071,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * <p>The information about the system disk.</p>
              */
             public Builder system(System system) {
                 this.system = system;
@@ -1177,7 +1222,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class ReplicationJobRuns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReplicationJobRun")
-        private java.util.List < ReplicationJobRun> replicationJobRun;
+        private java.util.List<ReplicationJobRun> replicationJobRun;
 
         private ReplicationJobRuns(Builder builder) {
             this.replicationJobRun = builder.replicationJobRun;
@@ -1194,17 +1239,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return replicationJobRun
          */
-        public java.util.List < ReplicationJobRun> getReplicationJobRun() {
+        public java.util.List<ReplicationJobRun> getReplicationJobRun() {
             return this.replicationJobRun;
         }
 
         public static final class Builder {
-            private java.util.List < ReplicationJobRun> replicationJobRun; 
+            private java.util.List<ReplicationJobRun> replicationJobRun; 
 
             /**
              * ReplicationJobRun.
              */
-            public Builder replicationJobRun(java.util.List < ReplicationJobRun> replicationJobRun) {
+            public Builder replicationJobRun(java.util.List<ReplicationJobRun> replicationJobRun) {
                 this.replicationJobRun = replicationJobRun;
                 return this;
             }
@@ -1320,7 +1365,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class SystemDiskParts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemDiskPart")
-        private java.util.List < SystemDiskPart> systemDiskPart;
+        private java.util.List<SystemDiskPart> systemDiskPart;
 
         private SystemDiskParts(Builder builder) {
             this.systemDiskPart = builder.systemDiskPart;
@@ -1337,17 +1382,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return systemDiskPart
          */
-        public java.util.List < SystemDiskPart> getSystemDiskPart() {
+        public java.util.List<SystemDiskPart> getSystemDiskPart() {
             return this.systemDiskPart;
         }
 
         public static final class Builder {
-            private java.util.List < SystemDiskPart> systemDiskPart; 
+            private java.util.List<SystemDiskPart> systemDiskPart; 
 
             /**
              * SystemDiskPart.
              */
-            public Builder systemDiskPart(java.util.List < SystemDiskPart> systemDiskPart) {
+            public Builder systemDiskPart(java.util.List<SystemDiskPart> systemDiskPart) {
                 this.systemDiskPart = systemDiskPart;
                 return this;
             }
@@ -1442,7 +1487,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -1459,17 +1504,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -2098,7 +2143,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>The information about the disk.</p>
              */
             public Builder disks(Disks disks) {
                 this.disks = disks;
@@ -2538,7 +2583,7 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
      */
     public static class ReplicationJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReplicationJob")
-        private java.util.List < ReplicationJob> replicationJob;
+        private java.util.List<ReplicationJob> replicationJob;
 
         private ReplicationJobs(Builder builder) {
             this.replicationJob = builder.replicationJob;
@@ -2555,17 +2600,17 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         /**
          * @return replicationJob
          */
-        public java.util.List < ReplicationJob> getReplicationJob() {
+        public java.util.List<ReplicationJob> getReplicationJob() {
             return this.replicationJob;
         }
 
         public static final class Builder {
-            private java.util.List < ReplicationJob> replicationJob; 
+            private java.util.List<ReplicationJob> replicationJob; 
 
             /**
              * ReplicationJob.
              */
-            public Builder replicationJob(java.util.List < ReplicationJob> replicationJob) {
+            public Builder replicationJob(java.util.List<ReplicationJob> replicationJob) {
                 this.replicationJob = replicationJob;
                 return this;
             }

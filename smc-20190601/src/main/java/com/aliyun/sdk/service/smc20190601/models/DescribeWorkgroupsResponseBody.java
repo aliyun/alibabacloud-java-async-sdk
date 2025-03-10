@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -188,7 +193,11 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of the workgroup.</p>
+             * <p>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -196,7 +205,11 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the workgroup. Valid values of N: 1 to 20.</p>
+             * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -218,7 +231,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -235,17 +248,17 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -265,7 +278,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
      */
     public static class SourceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceId")
-        private java.util.List < String > sourceId;
+        private java.util.List<String> sourceId;
 
         private SourceIds(Builder builder) {
             this.sourceId = builder.sourceId;
@@ -282,17 +295,17 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         /**
          * @return sourceId
          */
-        public java.util.List < String > getSourceId() {
+        public java.util.List<String> getSourceId() {
             return this.sourceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceId; 
+            private java.util.List<String> sourceId; 
 
             /**
              * SourceId.
              */
-            public Builder sourceId(java.util.List < String > sourceId) {
+            public Builder sourceId(java.util.List<String> sourceId) {
                 this.sourceId = sourceId;
                 return this;
             }
@@ -387,7 +400,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
      */
     public static class Warnings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Warning")
-        private java.util.List < Warning> warning;
+        private java.util.List<Warning> warning;
 
         private Warnings(Builder builder) {
             this.warning = builder.warning;
@@ -404,17 +417,17 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         /**
          * @return warning
          */
-        public java.util.List < Warning> getWarning() {
+        public java.util.List<Warning> getWarning() {
             return this.warning;
         }
 
         public static final class Builder {
-            private java.util.List < Warning> warning; 
+            private java.util.List<Warning> warning; 
 
             /**
              * Warning.
              */
-            public Builder warning(java.util.List < Warning> warning) {
+            public Builder warning(java.util.List<Warning> warning) {
                 this.warning = warning;
                 return this;
             }
@@ -558,7 +571,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag information of the workgroup.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -599,7 +612,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
      */
     public static class Workgroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Workgroup")
-        private java.util.List < Workgroup> workgroup;
+        private java.util.List<Workgroup> workgroup;
 
         private Workgroups(Builder builder) {
             this.workgroup = builder.workgroup;
@@ -616,17 +629,17 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         /**
          * @return workgroup
          */
-        public java.util.List < Workgroup> getWorkgroup() {
+        public java.util.List<Workgroup> getWorkgroup() {
             return this.workgroup;
         }
 
         public static final class Builder {
-            private java.util.List < Workgroup> workgroup; 
+            private java.util.List<Workgroup> workgroup; 
 
             /**
              * Workgroup.
              */
-            public Builder workgroup(java.util.List < Workgroup> workgroup) {
+            public Builder workgroup(java.util.List<Workgroup> workgroup) {
                 this.workgroup = workgroup;
                 return this;
             }

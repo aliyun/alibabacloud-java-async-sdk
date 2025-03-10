@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -374,7 +379,7 @@ public class ListAccessTokensResponseBody extends TeaModel {
      */
     public static class AccessTokens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessToken")
-        private java.util.List < AccessToken> accessToken;
+        private java.util.List<AccessToken> accessToken;
 
         private AccessTokens(Builder builder) {
             this.accessToken = builder.accessToken;
@@ -391,17 +396,17 @@ public class ListAccessTokensResponseBody extends TeaModel {
         /**
          * @return accessToken
          */
-        public java.util.List < AccessToken> getAccessToken() {
+        public java.util.List<AccessToken> getAccessToken() {
             return this.accessToken;
         }
 
         public static final class Builder {
-            private java.util.List < AccessToken> accessToken; 
+            private java.util.List<AccessToken> accessToken; 
 
             /**
              * AccessToken.
              */
-            public Builder accessToken(java.util.List < AccessToken> accessToken) {
+            public Builder accessToken(java.util.List<AccessToken> accessToken) {
                 this.accessToken = accessToken;
                 return this;
             }

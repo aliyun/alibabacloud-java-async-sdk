@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class CreateReplicationJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -124,7 +129,7 @@ public class CreateReplicationJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskPart")
-    private java.util.List < SystemDiskPart> systemDiskPart;
+    private java.util.List<SystemDiskPart> systemDiskPart;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
@@ -132,7 +137,7 @@ public class CreateReplicationJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
@@ -232,7 +237,7 @@ public class CreateReplicationJobRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -393,7 +398,7 @@ public class CreateReplicationJobRequest extends Request {
     /**
      * @return systemDiskPart
      */
-    public java.util.List < SystemDiskPart> getSystemDiskPart() {
+    public java.util.List<SystemDiskPart> getSystemDiskPart() {
         return this.systemDiskPart;
     }
 
@@ -407,7 +412,7 @@ public class CreateReplicationJobRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -444,7 +449,7 @@ public class CreateReplicationJobRequest extends Request {
         private String containerNamespace; 
         private String containerRepository; 
         private String containerTag; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private String description; 
         private Disks disks; 
         private Integer frequency; 
@@ -467,9 +472,9 @@ public class CreateReplicationJobRequest extends Request {
         private Boolean runOnce; 
         private String scheduledStartTime; 
         private String sourceId; 
-        private java.util.List < SystemDiskPart> systemDiskPart; 
+        private java.util.List<SystemDiskPart> systemDiskPart; 
         private Integer systemDiskSize; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetType; 
         private String vSwitchId; 
         private String validTime; 
@@ -568,7 +573,7 @@ public class CreateReplicationJobRequest extends Request {
         /**
          * <p>The data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -588,7 +593,7 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * Disks.
+         * <p>The information about the disk.</p>
          */
         public Builder disks(Disks disks) {
             this.putQueryParameter("Disks", disks);
@@ -893,7 +898,7 @@ public class CreateReplicationJobRequest extends Request {
         /**
          * <p>The information about system disk partitions.</p>
          */
-        public Builder systemDiskPart(java.util.List < SystemDiskPart> systemDiskPart) {
+        public Builder systemDiskPart(java.util.List<SystemDiskPart> systemDiskPart) {
             this.putQueryParameter("SystemDiskPart", systemDiskPart);
             this.systemDiskPart = systemDiskPart;
             return this;
@@ -917,7 +922,7 @@ public class CreateReplicationJobRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -1113,7 +1118,7 @@ public class CreateReplicationJobRequest extends Request {
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("Part")
-        private java.util.List < Part> part;
+        private java.util.List<Part> part;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
@@ -1142,7 +1147,7 @@ public class CreateReplicationJobRequest extends Request {
         /**
          * @return part
          */
-        public java.util.List < Part> getPart() {
+        public java.util.List<Part> getPart() {
             return this.part;
         }
 
@@ -1155,7 +1160,7 @@ public class CreateReplicationJobRequest extends Request {
 
         public static final class Builder {
             private Integer index; 
-            private java.util.List < Part> part; 
+            private java.util.List<Part> part; 
             private Integer size; 
 
             /**
@@ -1175,7 +1180,7 @@ public class CreateReplicationJobRequest extends Request {
             /**
              * <p>The data disk partitions.</p>
              */
-            public Builder part(java.util.List < Part> part) {
+            public Builder part(java.util.List<Part> part) {
                 this.part = part;
                 return this;
             }
@@ -1258,12 +1263,11 @@ public class CreateReplicationJobRequest extends Request {
             private Long sizeBytes; 
 
             /**
-             * <p>Specifies whether to enable block replication for partition N in the destination data disk. Valid values:</p>
+             * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Block replication is enabled for the data disk partition.</li>
+             * <li>false: Block replication is disabled for the data disk partition.</li>
              * </ul>
-             * <p>Default value: true</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1274,7 +1278,10 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The path of the data disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/date</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1282,18 +1289,10 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * <p>The size of partition N in the destination data disk. Unit: bytes. The default value is equal to the corresponding partition size of the source data disk.</p>
-             * <blockquote>
-             * </blockquote>
-             * <ul>
-             * <li><p>The total size of all partitions in a destination data disk cannot exceed the size of the destination data disk.</p>
-             * </li>
-             * <li><p>You must set both the <code>DataDisk.N.Part.N.Device</code> and DataDisk.N.Part.N.SizeBytes parameters or leave both parameters empty.</p>
-             * </li>
-             * </ul>
+             * <p>The size of the data disk partition. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>254803968</p>
+             * <p>21474836480</p>
              */
             public Builder sizeBytes(Long sizeBytes) {
                 this.sizeBytes = sizeBytes;
@@ -1321,7 +1320,7 @@ public class CreateReplicationJobRequest extends Request {
         private Boolean LVM;
 
         @com.aliyun.core.annotation.NameInMap("Part")
-        private java.util.List < DataPart> part;
+        private java.util.List<DataPart> part;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
@@ -1358,7 +1357,7 @@ public class CreateReplicationJobRequest extends Request {
         /**
          * @return part
          */
-        public java.util.List < DataPart> getPart() {
+        public java.util.List<DataPart> getPart() {
             return this.part;
         }
 
@@ -1372,11 +1371,14 @@ public class CreateReplicationJobRequest extends Request {
         public static final class Builder {
             private String diskId; 
             private Boolean LVM; 
-            private java.util.List < DataPart> part; 
+            private java.util.List<DataPart> part; 
             private Integer size; 
 
             /**
-             * DiskId.
+             * <p>The ID of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-2ze8hyowhdgd6ou2m5z6</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -1384,7 +1386,11 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * LVM.
+             * <p>Specifies whether the data disk uses LVM. Valid values:</p>
+             * <ul>
+             * <li>true: Use LVM.</li>
+             * <li>false: Not use LVM.</li>
+             * </ul>
              */
             public Builder LVM(Boolean LVM) {
                 this.LVM = LVM;
@@ -1392,21 +1398,18 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * <p>The data disk partitions.</p>
+             * <p>The information about the data disk partition.</p>
              */
-            public Builder part(java.util.List < DataPart> part) {
+            public Builder part(java.util.List<DataPart> part) {
                 this.part = part;
                 return this;
             }
 
             /**
-             * <p>The size of the data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.</p>
-             * <blockquote>
-             * <p> The size of a destination data disk must be larger than the size of data in the source data disk. For example, if the size of the source data disk is 500 GiB and the used space is 100 GiB, you must set this parameter to a value greater than 100.</p>
-             * </blockquote>
+             * <p>The size of the data disk of the migration source. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
-             * <p>100</p>
+             * <p>80</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1477,12 +1480,7 @@ public class CreateReplicationJobRequest extends Request {
             private Long sizeBytes; 
 
             /**
-             * <p>Specifies whether to enable block replication for partition N in the destination data disk. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <p>Default value: true</p>
+             * <p>Specifies whether block replication is enabled for the system disk partition.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1493,7 +1491,10 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The path of the system disk partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/boot</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1501,15 +1502,7 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * <p>The size of partition N in the destination data disk. Unit: bytes. The default value is equal to the corresponding partition size of the source data disk.</p>
-             * <blockquote>
-             * </blockquote>
-             * <ul>
-             * <li><p>The total size of all partitions in a destination data disk cannot exceed the size of the destination data disk.</p>
-             * </li>
-             * <li><p>You must set both the <code>DataDisk.N.Part.N.Device</code> and DataDisk.N.Part.N.SizeBytes parameters or leave both parameters empty.</p>
-             * </li>
-             * </ul>
+             * <p>The size of the system disk partition. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>254803968</p>
@@ -1537,7 +1530,7 @@ public class CreateReplicationJobRequest extends Request {
         private Boolean LVM;
 
         @com.aliyun.core.annotation.NameInMap("Part")
-        private java.util.List < SystemPart> part;
+        private java.util.List<SystemPart> part;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
@@ -1566,7 +1559,7 @@ public class CreateReplicationJobRequest extends Request {
         /**
          * @return part
          */
-        public java.util.List < SystemPart> getPart() {
+        public java.util.List<SystemPart> getPart() {
             return this.part;
         }
 
@@ -1579,11 +1572,28 @@ public class CreateReplicationJobRequest extends Request {
 
         public static final class Builder {
             private Boolean LVM; 
-            private java.util.List < SystemPart> part; 
+            private java.util.List<SystemPart> part; 
             private Integer size; 
 
             /**
-             * LVM.
+             * <p>Specifies whether to use LVM. Valid values:</p>
+             * <ul>
+             * <li>true: Use LVM.</li>
+             * <li>false: Not use LVM.</li>
+             * </ul>
+             * <p>LVM is not supported:</p>
+             * <ul>
+             * <li>If your source server runs Windows, LVM is not supported.</li>
+             * <li>The system disk does not have a boot partition, and LVM is not supported.</li>
+             * </ul>
+             * <p>After LVM is enabled, this feature does not take effect in the following scenarios:</p>
+             * <ul>
+             * <li>LVM2 is not supported on your source server and the software package is not installed.</li>
+             * <li>Your source server runs Debian with a kernel version of 3.x or earlier and XFS file systems are mounted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder LVM(Boolean LVM) {
                 this.LVM = LVM;
@@ -1591,17 +1601,17 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * <p>The data disk partitions.</p>
+             * <p>The information about the system disk partition.</p>
              */
-            public Builder part(java.util.List < SystemPart> part) {
+            public Builder part(java.util.List<SystemPart> part) {
                 this.part = part;
                 return this;
             }
 
             /**
-             * <p>The size of the data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.</p>
+             * <p>The size of the source system disk. Unit: GiB. Valid values: 20 to 32768.</p>
              * <blockquote>
-             * <p> The size of a destination data disk must be larger than the size of data in the source data disk. For example, if the size of the source data disk is 500 GiB and the used space is 100 GiB, you must set this parameter to a value greater than 100.</p>
+             * <p> The parameter value must be greater than the actual used space of the data disk on the source server. For example, if the size of the source disk is 500 GiB but the actual used space is 100 GiB, you must set this parameter to a value greater than 100 GiB.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1627,7 +1637,7 @@ public class CreateReplicationJobRequest extends Request {
      */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("System")
         private System system;
@@ -1648,7 +1658,7 @@ public class CreateReplicationJobRequest extends Request {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -1660,19 +1670,19 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private System system; 
 
             /**
-             * Data.
+             * <p>The information about the data disk partition.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * System.
+             * <p>The information about the system disk.</p>
              */
             public Builder system(System system) {
                 this.system = system;

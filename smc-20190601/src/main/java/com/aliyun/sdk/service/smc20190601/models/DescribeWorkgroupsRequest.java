@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,11 +44,11 @@ public class DescribeWorkgroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkgroupId")
-    private java.util.List < String > workgroupId;
+    private java.util.List<String> workgroupId;
 
     private DescribeWorkgroupsRequest(Builder builder) {
         super(builder);
@@ -115,14 +120,14 @@ public class DescribeWorkgroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return workgroupId
      */
-    public java.util.List < String > getWorkgroupId() {
+    public java.util.List<String> getWorkgroupId() {
         return this.workgroupId;
     }
 
@@ -133,8 +138,8 @@ public class DescribeWorkgroupsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private String status; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > workgroupId; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<String> workgroupId; 
 
         private Builder() {
             super();
@@ -174,7 +179,7 @@ public class DescribeWorkgroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,9 +230,9 @@ public class DescribeWorkgroupsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tag information of workgroups.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -236,7 +241,7 @@ public class DescribeWorkgroupsRequest extends Request {
         /**
          * <p>The workgroup IDs. You can specify up to 50 workgroup IDs.</p>
          */
-        public Builder workgroupId(java.util.List < String > workgroupId) {
+        public Builder workgroupId(java.util.List<String> workgroupId) {
             this.putQueryParameter("WorkgroupId", workgroupId);
             this.workgroupId = workgroupId;
             return this;
@@ -294,7 +299,11 @@ public class DescribeWorkgroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of the workgroup. Valid values of N: 1 to 20.</p>
+             * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +311,11 @@ public class DescribeWorkgroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the workgroup. Valid values of N: 1 to 20.</p>
+             * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

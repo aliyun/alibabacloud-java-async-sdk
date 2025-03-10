@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class DescribeReplicationJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobId")
-    private java.util.List < String > jobId;
+    private java.util.List<String> jobId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobType")
@@ -59,7 +64,7 @@ public class DescribeReplicationJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceId")
-    private java.util.List < String > sourceId;
+    private java.util.List<String> sourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -67,7 +72,7 @@ public class DescribeReplicationJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeReplicationJobsRequest(Builder builder) {
         super(builder);
@@ -110,14 +115,14 @@ public class DescribeReplicationJobsRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
     /**
      * @return jobId
      */
-    public java.util.List < String > getJobId() {
+    public java.util.List<String> getJobId() {
         return this.jobId;
     }
 
@@ -180,7 +185,7 @@ public class DescribeReplicationJobsRequest extends Request {
     /**
      * @return sourceId
      */
-    public java.util.List < String > getSourceId() {
+    public java.util.List<String> getSourceId() {
         return this.sourceId;
     }
 
@@ -194,14 +199,14 @@ public class DescribeReplicationJobsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeReplicationJobsRequest, Builder> {
         private String businessStatus; 
-        private java.util.List < String > instanceId; 
-        private java.util.List < String > jobId; 
+        private java.util.List<String> instanceId; 
+        private java.util.List<String> jobId; 
         private Integer jobType; 
         private String name; 
         private Long ownerId; 
@@ -210,9 +215,9 @@ public class DescribeReplicationJobsRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
-        private java.util.List < String > sourceId; 
+        private java.util.List<String> sourceId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -257,7 +262,7 @@ public class DescribeReplicationJobsRequest extends Request {
         /**
          * <p>The IDs of the destination Elastic Compute Service (ECS) instances.</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -269,7 +274,7 @@ public class DescribeReplicationJobsRequest extends Request {
          * <strong>example:</strong>
          * <p>j-bp19vlwm0tyigbmj****</p>
          */
-        public Builder jobId(java.util.List < String > jobId) {
+        public Builder jobId(java.util.List<String> jobId) {
             this.putQueryParameter("JobId", jobId);
             this.jobId = jobId;
             return this;
@@ -315,7 +320,7 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>The page number. Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -328,7 +333,7 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+         * <p>The number of entries per page. Valid values: 1 to 50.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -380,7 +385,7 @@ public class DescribeReplicationJobsRequest extends Request {
          * <strong>example:</strong>
          * <p>s-bp1e2fsl57knvuug****</p>
          */
-        public Builder sourceId(java.util.List < String > sourceId) {
+        public Builder sourceId(java.util.List<String> sourceId) {
             this.putQueryParameter("SourceId", sourceId);
             this.sourceId = sourceId;
             return this;
@@ -411,7 +416,7 @@ public class DescribeReplicationJobsRequest extends Request {
         /**
          * <p>The information about tags that are attached to the SMC resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

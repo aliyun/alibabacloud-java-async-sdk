@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAccessTokensRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccessTokenId")
-    private java.util.List < String > accessTokenId;
+    private java.util.List<String> accessTokenId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -57,7 +62,7 @@ public class ListAccessTokensRequest extends Request {
     /**
      * @return accessTokenId
      */
-    public java.util.List < String > getAccessTokenId() {
+    public java.util.List<String> getAccessTokenId() {
         return this.accessTokenId;
     }
 
@@ -90,7 +95,7 @@ public class ListAccessTokensRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAccessTokensRequest, Builder> {
-        private java.util.List < String > accessTokenId; 
+        private java.util.List<String> accessTokenId; 
         private String name; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -112,7 +117,7 @@ public class ListAccessTokensRequest extends Request {
         /**
          * <p>The information about activation codes.</p>
          */
-        public Builder accessTokenId(java.util.List < String > accessTokenId) {
+        public Builder accessTokenId(java.util.List<String> accessTokenId) {
             this.putQueryParameter("AccessTokenId", accessTokenId);
             this.accessTokenId = accessTokenId;
             return this;

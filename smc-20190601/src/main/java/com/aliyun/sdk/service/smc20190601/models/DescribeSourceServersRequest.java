@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class DescribeSourceServersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedJobType")
-    private java.util.List < String > relatedJobType;
+    private java.util.List<String> relatedJobType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -47,7 +52,7 @@ public class DescribeSourceServersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceId")
-    private java.util.List < String > sourceId;
+    private java.util.List<String> sourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("State")
@@ -55,7 +60,7 @@ public class DescribeSourceServersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkgroupId")
@@ -128,7 +133,7 @@ public class DescribeSourceServersRequest extends Request {
     /**
      * @return relatedJobType
      */
-    public java.util.List < String > getRelatedJobType() {
+    public java.util.List<String> getRelatedJobType() {
         return this.relatedJobType;
     }
 
@@ -149,7 +154,7 @@ public class DescribeSourceServersRequest extends Request {
     /**
      * @return sourceId
      */
-    public java.util.List < String > getSourceId() {
+    public java.util.List<String> getSourceId() {
         return this.sourceId;
     }
 
@@ -163,7 +168,7 @@ public class DescribeSourceServersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -180,12 +185,12 @@ public class DescribeSourceServersRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > relatedJobType; 
+        private java.util.List<String> relatedJobType; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
-        private java.util.List < String > sourceId; 
+        private java.util.List<String> sourceId; 
         private String state; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String workgroupId; 
 
         private Builder() {
@@ -209,7 +214,7 @@ public class DescribeSourceServersRequest extends Request {
         } 
 
         /**
-         * <p>The migration job ID.</p>
+         * <p>The ID of the migration job.</p>
          * 
          * <strong>example:</strong>
          * <p>j-bp19vlwm0tyigbmj****</p>
@@ -221,8 +226,8 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * <p>The name of the migration source. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
-         * <p>Default value: null.</p>
+         * <p>The name of the migration source. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>This parameter is empty by default.</p>
          * 
          * <strong>example:</strong>
          * <p>testSourceServerName</p>
@@ -243,7 +248,7 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number. Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +262,7 @@ public class DescribeSourceServersRequest extends Request {
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 50.</p>
-         * <p>Default value: 10</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -269,16 +274,16 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * <p>The types of migration jobs that are associated with migration sources.</p>
+         * <p>The type of migration job that is associated with the migration source.</p>
          */
-        public Builder relatedJobType(java.util.List < String > relatedJobType) {
+        public Builder relatedJobType(java.util.List<String> relatedJobType) {
             this.putQueryParameter("RelatedJobType", relatedJobType);
             this.relatedJobType = relatedJobType;
             return this;
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmw3ty5y7****</p>
@@ -299,19 +304,19 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * <p>The migration source IDs. You can specify multiple IDs.</p>
+         * <p>The migration source ID. You can specify multiple IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp1e2fsl57knvuug****</p>
          */
-        public Builder sourceId(java.util.List < String > sourceId) {
+        public Builder sourceId(java.util.List<String> sourceId) {
             this.putQueryParameter("SourceId", sourceId);
             this.sourceId = sourceId;
             return this;
         }
 
         /**
-         * <p>The state of the migration source. Valid Values:</p>
+         * <p>The state of the migration source. Valid values:</p>
          * <ul>
          * <li>Unavailable: The migration source is inactive, or an error occurs in the migration source.</li>
          * <li>Available: The migration source is active.</li>
@@ -331,14 +336,14 @@ public class DescribeSourceServersRequest extends Request {
         /**
          * <p>The tag.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * <p>工作组ID。</p>
+         * <p>The workgroup ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-bp1ja22kdqphehlj****</p>
@@ -401,8 +406,8 @@ public class DescribeSourceServersRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
-             * <p>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+             * <p>The key of tag N that is attached to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -413,8 +418,8 @@ public class DescribeSourceServersRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
-             * <p>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</p>
+             * <p>The value of tag N that is attached to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>You can specify an empty string as a tag key. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -95,7 +100,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskPart")
-    private java.util.List < SystemDiskPart> systemDiskPart;
+    private java.util.List<SystemDiskPart> systemDiskPart;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
@@ -184,7 +189,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -303,7 +308,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
     /**
      * @return systemDiskPart
      */
-    public java.util.List < SystemDiskPart> getSystemDiskPart() {
+    public java.util.List<SystemDiskPart> getSystemDiskPart() {
         return this.systemDiskPart;
     }
 
@@ -346,7 +351,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         private String containerNamespace; 
         private String containerRepository; 
         private String containerTag; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private String description; 
         private Integer frequency; 
         private String imageName; 
@@ -363,7 +368,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         private String replicationParameters; 
         private String resourceOwnerAccount; 
         private String scheduledStartTime; 
-        private java.util.List < SystemDiskPart> systemDiskPart; 
+        private java.util.List<SystemDiskPart> systemDiskPart; 
         private Integer systemDiskSize; 
         private String targetType; 
         private String vSwitchId; 
@@ -443,7 +448,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         /**
          * <p>The information about the data disk.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -674,7 +679,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         /**
          * <p>The partition information of the system disk.</p>
          */
-        public Builder systemDiskPart(java.util.List < SystemDiskPart> systemDiskPart) {
+        public Builder systemDiskPart(java.util.List<SystemDiskPart> systemDiskPart) {
             this.putQueryParameter("SystemDiskPart", systemDiskPart);
             this.systemDiskPart = systemDiskPart;
             return this;
@@ -887,7 +892,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("Part")
-        private java.util.List < Part> part;
+        private java.util.List<Part> part;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
@@ -916,7 +921,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         /**
          * @return part
          */
-        public java.util.List < Part> getPart() {
+        public java.util.List<Part> getPart() {
             return this.part;
         }
 
@@ -929,7 +934,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
 
         public static final class Builder {
             private Integer index; 
-            private java.util.List < Part> part; 
+            private java.util.List<Part> part; 
             private Integer size; 
 
             /**
@@ -950,7 +955,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
             /**
              * <p>The information about partitions.</p>
              */
-            public Builder part(java.util.List < Part> part) {
+            public Builder part(java.util.List<Part> part) {
                 this.part = part;
                 return this;
             }
