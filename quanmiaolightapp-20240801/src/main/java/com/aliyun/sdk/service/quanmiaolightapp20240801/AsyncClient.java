@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateOutputFormatResponse> generateOutputFormat(GenerateOutputFormatRequest request);
 
     /**
+     * @param request the request parameters of GetTagMiningAnalysisTask  GetTagMiningAnalysisTaskRequest
+     * @return GetTagMiningAnalysisTaskResponse
+     */
+    CompletableFuture<GetTagMiningAnalysisTaskResponse> getTagMiningAnalysisTask(GetTagMiningAnalysisTaskRequest request);
+
+    /**
      * @param request the request parameters of GetVideoAnalysisConfig  GetVideoAnalysisConfigRequest
      * @return GetVideoAnalysisConfigResponse
      */
@@ -168,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 <ReturnT> CompletableFuture<ReturnT> runVideoAnalysisWithAsyncResponseHandler(RunVideoAnalysisRequest request, AsyncResponseHandler<RunVideoAnalysisResponse, ReturnT> responseHandler);
 
     ResponseIterable<RunVideoAnalysisResponseBody> runVideoAnalysisWithResponseIterable(RunVideoAnalysisRequest request);
+
+    /**
+     * @param request the request parameters of SubmitTagMiningAnalysisTask  SubmitTagMiningAnalysisTaskRequest
+     * @return SubmitTagMiningAnalysisTaskResponse
+     */
+    CompletableFuture<SubmitTagMiningAnalysisTaskResponse> submitTagMiningAnalysisTask(SubmitTagMiningAnalysisTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitVideoAnalysisTask  SubmitVideoAnalysisTaskRequest
