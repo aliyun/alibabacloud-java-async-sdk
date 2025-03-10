@@ -183,7 +183,10 @@ public class ModifyDBClusterConfigRequest extends Request {
         }
 
         /**
-         * ParallelOperation.
+         * <p>Specifies whether to perform parallel operations on the cluster node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelOperation(Boolean parallelOperation) {
             this.putQueryParameter("ParallelOperation", parallelOperation);

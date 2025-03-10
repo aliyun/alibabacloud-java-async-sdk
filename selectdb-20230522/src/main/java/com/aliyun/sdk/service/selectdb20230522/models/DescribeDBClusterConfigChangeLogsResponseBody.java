@@ -99,7 +99,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The information returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -399,7 +399,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             private Integer taskId; 
 
             /**
-             * DbClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-wny3li00g02-be</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -415,7 +418,10 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-wny3li00g02</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;

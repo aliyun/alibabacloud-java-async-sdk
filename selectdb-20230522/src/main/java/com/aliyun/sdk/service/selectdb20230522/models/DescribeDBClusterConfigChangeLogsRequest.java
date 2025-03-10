@@ -134,7 +134,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         } 
 
         /**
-         * <p>The configuration file to be modified. For a compute cluster, set the value to be.conf. For a frontend (FE) cluster, set the value to fe.conf.</p>
+         * <p>The configuration file that you want to modify. For a compute cluster, set the value to be.conf. For a frontend (FE) cluster, set the value to fe.conf.</p>
          * 
          * <strong>example:</strong>
          * <p>be.conf</p>
@@ -146,6 +146,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +172,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +197,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The beginning of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -127,6 +127,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeElasticRulesResponse> describeElasticRules(DescribeElasticRulesRequest request);
 
     /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
      * @param request the request parameters of DescribeSecurityIPList  DescribeSecurityIPListRequest
      * @return DescribeSecurityIPListResponse
      */

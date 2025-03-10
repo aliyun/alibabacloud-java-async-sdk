@@ -158,7 +158,10 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * ParallelOperation.
+         * <p>Specifies whether to perform parallel operations on the cluster node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelOperation(Boolean parallelOperation) {
             this.putQueryParameter("ParallelOperation", parallelOperation);
@@ -167,7 +170,7 @@ public class RestartDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the ApsaraDB for SelectDB instance resides.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
