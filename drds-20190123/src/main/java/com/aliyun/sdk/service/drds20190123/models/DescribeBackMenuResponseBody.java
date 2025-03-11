@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackMenuResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackMenuResponseBody</p>
  */
 public class DescribeBackMenuResponseBody extends TeaModel {
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private List list;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackMenuResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The backup information list.
+         * <p>The backup information list.</p>
          */
         public Builder list(List list) {
             this.list = list;
@@ -70,7 +75,10 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60C21BE4-EDFE-454C-95ED-3A5C74******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         }
 
         /**
-         * The result of request.
+         * <p>The result of request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeBackMenuResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackMenuResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackMenuResponseBody</p>
+     */
     public static class ListList extends TeaModel {
-        @NameInMap("MenuName")
+        @com.aliyun.core.annotation.NameInMap("MenuName")
         private String menuName;
 
-        @NameInMap("Support")
+        @com.aliyun.core.annotation.NameInMap("Support")
         private Boolean support;
 
         private ListList(Builder builder) {
@@ -130,11 +147,14 @@ public class DescribeBackMenuResponseBody extends TeaModel {
             private Boolean support; 
 
             /**
-             * The backup method. Valid values:
-             * <p>
+             * <p>The backup method. Valid values:</p>
+             * <ul>
+             * <li>**Logic **: logical backup</li>
+             * <li><strong>phy</strong>: physical backup</li>
+             * </ul>
              * 
-             * *   **Logic **: logical backup
-             * *   **phy**: physical backup
+             * <strong>example:</strong>
+             * <p>phy</p>
              */
             public Builder menuName(String menuName) {
                 this.menuName = menuName;
@@ -142,7 +162,10 @@ public class DescribeBackMenuResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether backup recovery is supported.
+             * <p>Indicates whether backup recovery is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder support(Boolean support) {
                 this.support = support;
@@ -156,9 +179,15 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackMenuResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackMenuResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("list")
-        private java.util.List < ListList> list;
+        @com.aliyun.core.annotation.NameInMap("list")
+        private java.util.List<ListList> list;
 
         private List(Builder builder) {
             this.list = builder.list;
@@ -175,17 +204,17 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < ListList> getList() {
+        public java.util.List<ListList> getList() {
             return this.list;
         }
 
         public static final class Builder {
-            private java.util.List < ListList> list; 
+            private java.util.List<ListList> list; 
 
             /**
              * list.
              */
-            public Builder list(java.util.List < ListList> list) {
+            public Builder list(java.util.List<ListList> list) {
                 this.list = list;
                 return this;
             }

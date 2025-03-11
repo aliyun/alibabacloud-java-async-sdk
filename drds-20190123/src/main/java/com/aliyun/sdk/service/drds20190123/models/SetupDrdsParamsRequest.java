@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetupDrdsParamsRequest} extends {@link RequestModel}
  *
  * <p>SetupDrdsParamsRequest</p>
  */
 public class SetupDrdsParamsRequest extends Request {
-    @Query
-    @NameInMap("Data")
-    @Validation(required = true)
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Data> data;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("ParamLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String paramLevel;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetupDrdsParamsRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class SetupDrdsParamsRequest extends Request {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -81,7 +86,7 @@ public class SetupDrdsParamsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetupDrdsParamsRequest, Builder> {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String drdsInstanceId; 
         private String paramLevel; 
         private String regionId; 
@@ -99,16 +104,20 @@ public class SetupDrdsParamsRequest extends Request {
         } 
 
         /**
-         * Data.
+         * <p>This parameter is required.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.putQueryParameter("Data", data);
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance for which you want to configure parameters.
+         * <p>The ID of the PolarDB-X 1.0 instance for which you want to configure parameters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdsjiii1b49****</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -117,11 +126,15 @@ public class SetupDrdsParamsRequest extends Request {
         }
 
         /**
-         * The resource for which you want to configure parameters. Valid values:
-         * <p>
+         * <p>The resource for which you want to configure parameters. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: Configure parameters for the instance.</li>
+         * <li><strong>DB</strong>: Configure parameters for the databases of the instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **INSTANCE**: Configure parameters for the instance.
-         * *   **DB**: Configure parameters for the databases of the instance.
+         * <strong>example:</strong>
+         * <p>DB</p>
          */
         public Builder paramLevel(String paramLevel) {
             this.putQueryParameter("ParamLevel", paramLevel);
@@ -130,7 +143,10 @@ public class SetupDrdsParamsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the PolarDB-X 1.0 instance is located.
+         * <p>The ID of the region in which the PolarDB-X 1.0 instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,20 +161,26 @@ public class SetupDrdsParamsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetupDrdsParamsRequest} extends {@link TeaModel}
+     *
+     * <p>SetupDrdsParamsRequest</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("ParamRanges")
+        @com.aliyun.core.annotation.NameInMap("ParamRanges")
         private String paramRanges;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
-        @NameInMap("ParamVariableName")
+        @com.aliyun.core.annotation.NameInMap("ParamVariableName")
         private String paramVariableName;
 
         private Data(Builder builder) {
@@ -220,7 +242,10 @@ public class SetupDrdsParamsRequest extends Request {
             private String paramVariableName; 
 
             /**
-             * The name of the parameter that you want to configure for a database.
+             * <p>The name of the parameter that you want to configure for a database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -228,7 +253,10 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * The valid values of the parameter.
+             * <p>The valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[true|false]</p>
              */
             public Builder paramRanges(String paramRanges) {
                 this.paramRanges = paramRanges;
@@ -236,12 +264,15 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * The type of the parameter that you want to configure. Valid values:
-             * <p>
+             * <p>The type of the parameter that you want to configure. Valid values:</p>
+             * <ul>
+             * <li><strong>ATOM</strong>: the configuration item in the layer-3 data source.</li>
+             * <li><strong>CONFIG</strong>: the configuration item in ConfigServer.</li>
+             * <li><strong>DIAMOND</strong>: the configuration item in Diamond.</li>
+             * </ul>
              * 
-             * *   **ATOM**: the configuration item in the layer-3 data source.
-             * *   **CONFIG**: the configuration item in ConfigServer.
-             * *   **DIAMOND**: the configuration item in Diamond.
+             * <strong>example:</strong>
+             * <p>ATOM</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -249,7 +280,10 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * The value of parameter that you want to configure.
+             * <p>The value of parameter that you want to configure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -257,7 +291,10 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * The name of the parameter that you want to configure.
+             * <p>The name of the parameter that you want to configure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FORBID_EXECUTE_DML_ALL</p>
              */
             public Builder paramVariableName(String paramVariableName) {
                 this.paramVariableName = paramVariableName;

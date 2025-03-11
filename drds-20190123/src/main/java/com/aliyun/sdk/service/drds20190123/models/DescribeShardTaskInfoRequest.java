@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeShardTaskInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeShardTaskInfoRequest</p>
  */
 public class DescribeShardTaskInfoRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SourceTableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceTableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceTableName;
 
-    @Query
-    @NameInMap("TargetTableName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetTableName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String targetTableName;
 
     private DescribeShardTaskInfoRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class DescribeShardTaskInfoRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jjjjjj_ppppp</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -123,7 +132,11 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds*********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -132,7 +145,10 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +157,11 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * The name of the table that you want to convert or shard.
+         * <p>The name of the table that you want to convert or shard.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1</p>
          */
         public Builder sourceTableName(String sourceTableName) {
             this.putQueryParameter("SourceTableName", sourceTableName);
@@ -150,7 +170,11 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * The name of the table that is generated after you convert or shard the table.
+         * <p>The name of the table that is generated after you convert or shard the table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2</p>
          */
         public Builder targetTableName(String targetTableName) {
             this.putQueryParameter("TargetTableName", targetTableName);

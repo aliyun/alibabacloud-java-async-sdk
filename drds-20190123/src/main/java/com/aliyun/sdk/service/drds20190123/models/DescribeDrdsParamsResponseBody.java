@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsParamsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsParamsResponseBody</p>
  */
 public class DescribeDrdsParamsResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsParamsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Indicates information about parameters.
+         * <p>Indicates information about parameters.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,38 +102,44 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsParamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsParamsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("NeedRestart")
+        @com.aliyun.core.annotation.NameInMap("NeedRestart")
         private Boolean needRestart;
 
-        @NameInMap("ParamDefaultValue")
+        @com.aliyun.core.annotation.NameInMap("ParamDefaultValue")
         private String paramDefaultValue;
 
-        @NameInMap("ParamDesc")
+        @com.aliyun.core.annotation.NameInMap("ParamDesc")
         private String paramDesc;
 
-        @NameInMap("ParamEnglishName")
+        @com.aliyun.core.annotation.NameInMap("ParamEnglishName")
         private String paramEnglishName;
 
-        @NameInMap("ParamLevel")
+        @com.aliyun.core.annotation.NameInMap("ParamLevel")
         private String paramLevel;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamRanges")
+        @com.aliyun.core.annotation.NameInMap("ParamRanges")
         private String paramRanges;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
-        @NameInMap("ParamVariableName")
+        @com.aliyun.core.annotation.NameInMap("ParamVariableName")
         private String paramVariableName;
 
         private List(Builder builder) {
@@ -238,7 +255,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             private String paramVariableName; 
 
             /**
-             * Indicates the name of the database.
+             * <p>Indicates the name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -246,7 +266,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a restart is required.
+             * <p>Indicates whether a restart is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needRestart(Boolean needRestart) {
                 this.needRestart = needRestart;
@@ -254,7 +277,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the default value of a parameter.
+             * <p>Indicates the default value of a parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -262,7 +288,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the description of the parameter.
+             * <p>Indicates the description of the parameter.</p>
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -270,7 +296,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the parameter.
+             * <p>Indicates the name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLOW_SQL_TIME</p>
              */
             public Builder paramEnglishName(String paramEnglishName) {
                 this.paramEnglishName = paramEnglishName;
@@ -278,7 +307,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the parameter level.
+             * <p>Indicates the parameter level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder paramLevel(String paramLevel) {
                 this.paramLevel = paramLevel;
@@ -286,7 +318,7 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the parameter.
+             * <p>Indicates the name of the parameter.</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -294,7 +326,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the value range of the parameter.
+             * <p>Indicates the value range of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1000-900000]</p>
              */
             public Builder paramRanges(String paramRanges) {
                 this.paramRanges = paramRanges;
@@ -302,7 +337,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the parameter.
+             * <p>Indicates the type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONFIG</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -310,7 +348,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the value of the parameter.
+             * <p>Indicates the value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -318,7 +359,10 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the variable.
+             * <p>Indicates the name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slowSqlTime</p>
              */
             public Builder paramVariableName(String paramVariableName) {
                 this.paramVariableName = paramVariableName;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsTasksResponseBody</p>
  */
 public class DescribeDrdsTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
     private DescribeDrdsTasksResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         private Tasks tasks; 
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD412DF7-F21D-44CE-88FF-ED24917174A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +89,7 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates information about the tasks.
+         * <p>Indicates information about the tasks.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -91,14 +102,20 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsTasksResponseBody</p>
+     */
     public static class Task extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Task(Builder builder) {
@@ -142,7 +159,10 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * Indicates the content of a task.
+             * <p>Indicates the content of a task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upgrade_instance</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -150,7 +170,10 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the task.
+             * <p>Indicates the ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64148</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -158,7 +181,10 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the state of the task.
+             * <p>Indicates the state of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAILED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -172,9 +198,15 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
-        private java.util.List < Task> task;
+        @com.aliyun.core.annotation.NameInMap("Task")
+        private java.util.List<Task> task;
 
         private Tasks(Builder builder) {
             this.task = builder.task;
@@ -191,17 +223,17 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
 
             /**
              * Task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }

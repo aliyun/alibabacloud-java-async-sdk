@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlashbackRecycleBinTableResponseBody} extends {@link TeaModel}
  *
  * <p>FlashbackRecycleBinTableResponseBody</p>
  */
 public class FlashbackRecycleBinTableResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private FlashbackRecycleBinTableResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class FlashbackRecycleBinTableResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the deleted logical table is restored.
+         * <p>Indicates whether the deleted logical table is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -70,7 +78,10 @@ public class FlashbackRecycleBinTableResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>463A5F0F-12AD-4544-A902-B2B983******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class FlashbackRecycleBinTableResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDbInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDbInstancesResponseBody</p>
  */
 public class DescribeDbInstancesResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDbInstancesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the instance.
+         * <p>The details of the instance.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293275B3-8FC0-4619-A26E-6F062FASD56R</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDbInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDbInstancesResponseBody</p>
+     */
     public static class ReadOnlyDBInstanceId extends TeaModel {
-        @NameInMap("ReadOnlyDBInstanceId")
-        private java.util.List < String > readOnlyDBInstanceId;
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceId")
+        private java.util.List<String> readOnlyDBInstanceId;
 
         private ReadOnlyDBInstanceId(Builder builder) {
             this.readOnlyDBInstanceId = builder.readOnlyDBInstanceId;
@@ -90,17 +104,17 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         /**
          * @return readOnlyDBInstanceId
          */
-        public java.util.List < String > getReadOnlyDBInstanceId() {
+        public java.util.List<String> getReadOnlyDBInstanceId() {
             return this.readOnlyDBInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > readOnlyDBInstanceId; 
+            private java.util.List<String> readOnlyDBInstanceId; 
 
             /**
              * ReadOnlyDBInstanceId.
              */
-            public Builder readOnlyDBInstanceId(java.util.List < String > readOnlyDBInstanceId) {
+            public Builder readOnlyDBInstanceId(java.util.List<String> readOnlyDBInstanceId) {
                 this.readOnlyDBInstanceId = readOnlyDBInstanceId;
                 return this;
             }
@@ -112,38 +126,44 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDbInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDbInstancesResponseBody</p>
+     */
     public static class DBInstance extends TeaModel {
-        @NameInMap("AllowAllCategory")
+        @com.aliyun.core.annotation.NameInMap("AllowAllCategory")
         private Boolean allowAllCategory;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private Integer DBInstanceStatus;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceNetworkType")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
 
-        @NameInMap("ReadOnlyDBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceId")
         private ReadOnlyDBInstanceId readOnlyDBInstanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstance(Builder builder) {
@@ -267,7 +287,10 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the storage instance.
+             * <p>The description of the storage instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -275,7 +298,10 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the storage instance.
+             * <p>The ID of the storage instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-****************</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -283,16 +309,19 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Storage layer instance status. Valid values:
-             * <p>
+             * <p>Storage layer instance status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: creating</li>
+             * <li><strong>1</strong>: In use</li>
+             * <li><strong>3</strong>: Deleting</li>
+             * <li><strong>5</strong>: restarting</li>
+             * <li><strong>6</strong>: upgrading /Downgrading</li>
+             * <li><strong>7</strong>: Recovering</li>
+             * <li><strong>8</strong>: switching the Internet and intranet</li>
+             * </ul>
              * 
-             * *   **0**: creating
-             * *   **1**: In use
-             * *   **3**: Deleting
-             * *   **5**: restarting
-             * *   **6**: upgrading /Downgrading
-             * *   **7**: Recovering
-             * *   **8**: switching the Internet and intranet
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder DBInstanceStatus(Integer DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -300,7 +329,10 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage layer instance type.
+             * <p>The storage layer instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -308,7 +340,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The engine of the storage instance.
+             * <p>The engine of the storage instance.</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -316,7 +348,10 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the engine for the storage instance.
+             * <p>The version of the engine for the storage instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -324,11 +359,14 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the storage layer. Valid values:
-             * <p>
+             * <p>The network type of the storage layer. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li>**CLASSIC **: Classic Network</li>
+             * </ul>
              * 
-             * *   **VPC**: VPC
-             * *   **CLASSIC **: Classic Network
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -336,7 +374,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The details about a read-only storage instance.
+             * <p>The details about a read-only storage instance.</p>
              */
             public Builder readOnlyDBInstanceId(ReadOnlyDBInstanceId readOnlyDBInstanceId) {
                 this.readOnlyDBInstanceId = readOnlyDBInstanceId;
@@ -344,7 +382,10 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the storage instance resides.
+             * <p>The ID of the region where the storage instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -352,7 +393,10 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the storage instance resides.
+             * <p>The ID of the zone where the storage instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -366,9 +410,15 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDbInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDbInstancesResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstance")
-        private java.util.List < DBInstance> DBInstance;
+        @com.aliyun.core.annotation.NameInMap("DBInstance")
+        private java.util.List<DBInstance> DBInstance;
 
         private Items(Builder builder) {
             this.DBInstance = builder.DBInstance;
@@ -385,17 +435,17 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         /**
          * @return DBInstance
          */
-        public java.util.List < DBInstance> getDBInstance() {
+        public java.util.List<DBInstance> getDBInstance() {
             return this.DBInstance;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstance> DBInstance; 
+            private java.util.List<DBInstance> DBInstance; 
 
             /**
              * DBInstance.
              */
-            public Builder DBInstance(java.util.List < DBInstance> DBInstance) {
+            public Builder DBInstance(java.util.List<DBInstance> DBInstance) {
                 this.DBInstance = DBInstance;
                 return this;
             }

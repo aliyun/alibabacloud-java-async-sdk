@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitHotExpandPreCheckTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitHotExpandPreCheckTaskRequest</p>
  */
 public class SubmitHotExpandPreCheckTaskRequest extends Request {
-    @Query
-    @NameInMap("DbInstType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbInstType;
 
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("TableList")
-    private java.util.List < String > tableList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableList")
+    private java.util.List<String> tableList;
 
     private SubmitHotExpandPreCheckTaskRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
     /**
      * @return tableList
      */
-    public java.util.List < String > getTableList() {
+    public java.util.List<String> getTableList() {
         return this.tableList;
     }
 
@@ -84,7 +89,7 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         private String dbInstType; 
         private String dbName; 
         private String drdsInstanceId; 
-        private java.util.List < String > tableList; 
+        private java.util.List<String> tableList; 
 
         private Builder() {
             super();
@@ -99,11 +104,15 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         } 
 
         /**
-         * The type of the database. Valid values:
-         * <p>
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li>RDS</li>
+         * <li>PolarDB</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RDS
-         * *   PolarDB
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -112,7 +121,11 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         }
 
         /**
-         * The name of the PolarDB-X database.
+         * <p>The name of the PolarDB-X database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -121,7 +134,11 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drd*********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -130,9 +147,12 @@ public class SubmitHotExpandPreCheckTaskRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
-        public Builder tableList(java.util.List < String > tableList) {
+        public Builder tableList(java.util.List<String> tableList) {
             this.putQueryParameter("TableList", tableList);
             this.tableList = tableList;
             return this;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
  */
 public class ModifyAccountDescriptionRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
     private ModifyAccountDescriptionRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * The name of the member account.
+         * <p>The name of the member account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -94,7 +103,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the account.
+         * <p>The description of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -103,7 +116,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB RDS for PostgreSQL instance.
+         * <p>The ID of the ApsaraDB RDS for PostgreSQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

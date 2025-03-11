@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitHotExpandPreCheckTaskResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitHotExpandPreCheckTaskResponseBody</p>
  */
 public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
     private SubmitHotExpandPreCheckTaskResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The result of the task.
+         * <p>The result of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scucess</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -82,7 +90,10 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE104D26-AC19-49B5-AC67-947F69*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +101,10 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -98,7 +112,10 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>SetBackupPolicyRequest</p>
  */
 public class SetBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupDbNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDbNames")
     private String backupDbNames;
 
-    @Query
-    @NameInMap("BackupLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLevel")
     private String backupLevel;
 
-    @Query
-    @NameInMap("BackupLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLog")
     private String backupLog;
 
-    @Query
-    @NameInMap("BackupMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMode")
     private String backupMode;
 
-    @Query
-    @NameInMap("DataBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataBackupRetentionPeriod")
     private String dataBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private String logBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupEndTime")
     private String preferredBackupEndTime;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupStartTime")
     private String preferredBackupStartTime;
 
     private SetBackupPolicyRequest(Builder builder) {
@@ -181,10 +186,13 @@ public class SetBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The databases to be backed up. Separate multiple databases with commas (,).
-         * <p>
+         * <p>The databases to be backed up. Separate multiple databases with commas (,).</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when the backup level is database level.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only when the backup level is database level.
+         * <strong>example:</strong>
+         * <p>test1,test2</p>
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -193,11 +201,14 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The level of the backup. Valid values:
-         * <p>
+         * <p>The level of the backup. Valid values:</p>
+         * <ul>
+         * <li>db: The database type.</li>
+         * <li>instance: instance</li>
+         * </ul>
          * 
-         * *   db: The database type.
-         * *   instance: instance
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -206,11 +217,14 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable log Backup. Valid values:
-         * <p>
+         * <p>Specifies whether to enable log Backup. Valid values:</p>
+         * <ul>
+         * <li>1: enabled.</li>
+         * <li>0: disabled.</li>
+         * </ul>
          * 
-         * *   1: enabled.
-         * *   0: disabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder backupLog(String backupLog) {
             this.putQueryParameter("BackupLog", backupLog);
@@ -219,11 +233,14 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The backup mode. Valid values:
-         * <p>
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li>**Logic **: logical backup</li>
+         * <li><strong>phy</strong>: physical backup</li>
+         * </ul>
          * 
-         * *   **Logic **: logical backup
-         * *   **phy**: physical backup
+         * <strong>example:</strong>
+         * <p>phy</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -232,7 +249,10 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of the backup data. Value range: 7 to 730.
+         * <p>The retention period of the backup data. Value range: 7 to 730.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder dataBackupRetentionPeriod(String dataBackupRetentionPeriod) {
             this.putQueryParameter("DataBackupRetentionPeriod", dataBackupRetentionPeriod);
@@ -241,7 +261,11 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -250,7 +274,10 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The log retention period. Valid values: 7 to 730. This value must be less than or equal to the number of data backup days.
+         * <p>The log retention period. Valid values: 7 to 730. This value must be less than or equal to the number of data backup days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -259,7 +286,10 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The end time of the backup.
+         * <p>The end time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:30:30</p>
          */
         public Builder preferredBackupEndTime(String preferredBackupEndTime) {
             this.putQueryParameter("PreferredBackupEndTime", preferredBackupEndTime);
@@ -268,16 +298,19 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The backup cycle. Valid values:
-         * <p>
+         * <p>The backup cycle. Valid values:</p>
+         * <ul>
+         * <li>0: Monday</li>
+         * <li>1: Tuesday</li>
+         * <li>2: Wednesday</li>
+         * <li>3: Thursday</li>
+         * <li>4: Friday</li>
+         * <li>5: Saturday</li>
+         * <li>6: Sunday</li>
+         * </ul>
          * 
-         * *   0: Monday
-         * *   1: Tuesday
-         * *   2: Wednesday
-         * *   3: Thursday
-         * *   4: Friday
-         * *   5: Saturday
-         * *   6: Sunday
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -286,7 +319,10 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * The start time of the backup.
+         * <p>The start time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11:30:30</p>
          */
         public Builder preferredBackupStartTime(String preferredBackupStartTime) {
             this.putQueryParameter("PreferredBackupStartTime", preferredBackupStartTime);

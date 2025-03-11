@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHotDbListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHotDbListResponseBody</p>
  */
 public class DescribeHotDbListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeHotDbListResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result that is returned.
+         * <p>The result that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +87,10 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -90,7 +98,10 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B6B7BDC-575D-4A77-A4F8-24B7EF******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,9 +125,15 @@ public class DescribeHotDbListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHotDbListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotDbListResponseBody</p>
+     */
     public static class HotDbList extends TeaModel {
-        @NameInMap("data")
-        private java.util.List < String > data;
+        @com.aliyun.core.annotation.NameInMap("data")
+        private java.util.List<String> data;
 
         private HotDbList(Builder builder) {
             this.data = builder.data;
@@ -130,17 +150,17 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < String > getData() {
+        public java.util.List<String> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < String > data; 
+            private java.util.List<String> data; 
 
             /**
              * data.
              */
-            public Builder data(java.util.List < String > data) {
+            public Builder data(java.util.List<String> data) {
                 this.data = data;
                 return this;
             }
@@ -152,11 +172,17 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHotDbListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotDbListResponseBody</p>
+     */
     public static class InstanceDb extends TeaModel {
-        @NameInMap("HotDbList")
+        @com.aliyun.core.annotation.NameInMap("HotDbList")
         private HotDbList hotDbList;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
         private InstanceDb(Builder builder) {
@@ -199,7 +225,10 @@ public class DescribeHotDbListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceName</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -213,9 +242,15 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHotDbListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotDbListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("InstanceDb")
-        private java.util.List < InstanceDb> instanceDb;
+        @com.aliyun.core.annotation.NameInMap("InstanceDb")
+        private java.util.List<InstanceDb> instanceDb;
 
         private List(Builder builder) {
             this.instanceDb = builder.instanceDb;
@@ -232,17 +267,17 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         /**
          * @return instanceDb
          */
-        public java.util.List < InstanceDb> getInstanceDb() {
+        public java.util.List<InstanceDb> getInstanceDb() {
             return this.instanceDb;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceDb> instanceDb; 
+            private java.util.List<InstanceDb> instanceDb; 
 
             /**
              * InstanceDb.
              */
-            public Builder instanceDb(java.util.List < InstanceDb> instanceDb) {
+            public Builder instanceDb(java.util.List<InstanceDb> instanceDb) {
                 this.instanceDb = instanceDb;
                 return this;
             }
@@ -254,11 +289,17 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHotDbListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotDbListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("RandomCode")
+        @com.aliyun.core.annotation.NameInMap("RandomCode")
         private String randomCode;
 
         private Data(Builder builder) {
@@ -293,7 +334,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
             private String randomCode; 
 
             /**
-             * The information about the databases on which hot-spot scale-out is performed.
+             * <p>The information about the databases on which hot-spot scale-out is performed.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -301,7 +342,10 @@ public class DescribeHotDbListResponseBody extends TeaModel {
             }
 
             /**
-             * The random number.
+             * <p>The random number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jzhz</p>
              */
             public Builder randomCode(String randomCode) {
                 this.randomCode = randomCode;

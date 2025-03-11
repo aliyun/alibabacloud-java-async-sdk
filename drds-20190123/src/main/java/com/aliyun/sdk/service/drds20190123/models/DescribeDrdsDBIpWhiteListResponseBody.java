@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsDBIpWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsDBIpWhiteListResponseBody</p>
  */
 public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
-    @NameInMap("IpWhiteList")
+    @com.aliyun.core.annotation.NameInMap("IpWhiteList")
     private IpWhiteList ipWhiteList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsDBIpWhiteListResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The IP address whitelist.
+         * <p>The IP address whitelist.</p>
          */
         public Builder ipWhiteList(IpWhiteList ipWhiteList) {
             this.ipWhiteList = ipWhiteList;
@@ -70,7 +75,10 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017453B9-0001-4745-87BF-DD612D850ED0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,9 +102,15 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsDBIpWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBIpWhiteListResponseBody</p>
+     */
     public static class IpWhiteList extends TeaModel {
-        @NameInMap("Ip")
-        private java.util.List < String > ip;
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        private java.util.List<String> ip;
 
         private IpWhiteList(Builder builder) {
             this.ip = builder.ip;
@@ -110,17 +127,17 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
+            private java.util.List<String> ip; 
 
             /**
              * Ip.
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }

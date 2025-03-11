@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetBackupLocalRequest} extends {@link RequestModel}
  *
  * <p>SetBackupLocalRequest</p>
  */
 public class SetBackupLocalRequest extends Request {
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("HighSpaceUsageProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
-    @Query
-    @NameInMap("LocalLogRetentionHours")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionHours")
     private String localLogRetentionHours;
 
-    @Query
-    @NameInMap("LocalLogRetentionSpace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionSpace")
     private String localLogRetentionSpace;
 
     private SetBackupLocalRequest(Builder builder) {
@@ -97,7 +102,11 @@ public class SetBackupLocalRequest extends Request {
         } 
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdshbgag23d13fds</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -106,7 +115,10 @@ public class SetBackupLocalRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the feature to forcibly delete binary log files if the used storage space reaches 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values: 1 and 0. A value of 1 specifies to enable this feature. A value of 0 specifies not to enable this feature.
+         * <p>Specifies whether to enable the feature to forcibly delete binary log files if the used storage space reaches 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values: 1 and 0. A value of 1 specifies to enable this feature. A value of 0 specifies not to enable this feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
             this.putQueryParameter("HighSpaceUsageProtection", highSpaceUsageProtection);
@@ -115,7 +127,10 @@ public class SetBackupLocalRequest extends Request {
         }
 
         /**
-         * The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: 18. A value of 0 indicates that log backup files are not retained.
+         * <p>The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: 18. A value of 0 indicates that log backup files are not retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder localLogRetentionHours(String localLogRetentionHours) {
             this.putQueryParameter("LocalLogRetentionHours", localLogRetentionHours);
@@ -124,7 +139,10 @@ public class SetBackupLocalRequest extends Request {
         }
 
         /**
-         * The maximum storage space usage that is allowed for log files on the instance. Valid values: 0 to 50. Default value: 30.
+         * <p>The maximum storage space usage that is allowed for log files on the instance. Valid values: 0 to 50. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder localLogRetentionSpace(String localLogRetentionSpace) {
             this.putQueryParameter("LocalLogRetentionSpace", localLogRetentionSpace);

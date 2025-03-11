@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsDBsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsDBsResponseBody</p>
  */
 public class DescribeDrdsDBsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeDrdsDBsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * The list of returned databases.
+         * <p>The list of returned databases.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of databases returned on each page.
+         * <p>The number of databases returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>006B7D19-8CDB-4AA6-AAE7-23C107GS3W2T</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned databases.
+         * <p>The number of returned databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -151,23 +171,29 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsDBsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBsResponseBody</p>
+     */
     public static class Db extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DbInstType")
+        @com.aliyun.core.annotation.NameInMap("DbInstType")
         private String dbInstType;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Db(Builder builder) {
@@ -238,7 +264,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the database is created. The value of this parameter is a UNIX timestamp. Unit: ms.
+             * <p>The time when the database is created. The value of this parameter is a UNIX timestamp. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563773824000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -246,7 +275,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. Valid values: **RDS** and **POLARDB**.
+             * <p>The type of the database. Valid values: <strong>RDS</strong> and <strong>POLARDB</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -254,7 +286,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -262,11 +297,14 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * The partitioning mode of the database. Valid values:
-             * <p>
+             * <p>The partitioning mode of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>HORIZONTAL</strong>: The database is horizontally partitioned.</li>
+             * <li><strong>VERTICAL</strong>: The database is vertically partitioned.</li>
+             * </ul>
              * 
-             * *   **HORIZONTAL**: The database is horizontally partitioned.
-             * *   **VERTICAL**: The database is vertically partitioned.
+             * <strong>example:</strong>
+             * <p>HORIZONTAL</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -274,7 +312,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * The schema ID that is assigned to the partitioned database.
+             * <p>The schema ID that is assigned to the partitioned database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_test_1563773871118kxqd</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -282,7 +323,10 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database.
+             * <p>The state of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -296,9 +340,15 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDBsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Db")
-        private java.util.List < Db> db;
+        @com.aliyun.core.annotation.NameInMap("Db")
+        private java.util.List<Db> db;
 
         private Data(Builder builder) {
             this.db = builder.db;
@@ -315,17 +365,17 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
         /**
          * @return db
          */
-        public java.util.List < Db> getDb() {
+        public java.util.List<Db> getDb() {
             return this.db;
         }
 
         public static final class Builder {
-            private java.util.List < Db> db; 
+            private java.util.List<Db> db; 
 
             /**
              * Db.
              */
-            public Builder db(java.util.List < Db> db) {
+            public Builder db(java.util.List<Db> db) {
                 this.db = db;
                 return this;
             }

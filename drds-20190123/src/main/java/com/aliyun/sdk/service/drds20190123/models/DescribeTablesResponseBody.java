@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTablesResponseBody</p>
  */
 public class DescribeTablesResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeTablesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeTablesResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -90,7 +95,7 @@ public class DescribeTablesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,15 +103,18 @@ public class DescribeTablesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The list of returned tables.
+         * <p>The list of returned tables.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The number of returned pages.
+         * <p>The number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of tables returned per page.
+         * <p>The number of tables returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83AC3D7E-461C-4D87-8ACD-6CC295******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned tables.
+         * <p>The total number of returned tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -151,29 +171,35 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTablesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AllowFullTableScan")
+        @com.aliyun.core.annotation.NameInMap("AllowFullTableScan")
         private Boolean allowFullTableScan;
 
-        @NameInMap("Broadcast")
+        @com.aliyun.core.annotation.NameInMap("Broadcast")
         private Boolean broadcast;
 
-        @NameInMap("DbInstType")
+        @com.aliyun.core.annotation.NameInMap("DbInstType")
         private Integer dbInstType;
 
-        @NameInMap("IsLocked")
+        @com.aliyun.core.annotation.NameInMap("IsLocked")
         private Boolean isLocked;
 
-        @NameInMap("IsShard")
+        @com.aliyun.core.annotation.NameInMap("IsShard")
         private Boolean isShard;
 
-        @NameInMap("ShardKey")
+        @com.aliyun.core.annotation.NameInMap("ShardKey")
         private String shardKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private List(Builder builder) {
@@ -262,7 +288,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * Indicates whether full table scanning is allowed.
+             * <p>Indicates whether full table scanning is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowFullTableScan(Boolean allowFullTableScan) {
                 this.allowFullTableScan = allowFullTableScan;
@@ -270,7 +299,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is a replicated table.
+             * <p>Indicates whether the table is a replicated table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder broadcast(Boolean broadcast) {
                 this.broadcast = broadcast;
@@ -278,11 +310,14 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the PolarDB-X 1.0 instance. Valid values:
-             * <p>
+             * <p>The type of the PolarDB-X 1.0 instance. Valid values:</p>
+             * <ul>
+             * <li>0: The instance is a dedicated instance.</li>
+             * <li>1: The instance is a shard instance.</li>
+             * </ul>
              * 
-             * *   0: The instance is a dedicated instance.
-             * *   1: The instance is a shard instance.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dbInstType(Integer dbInstType) {
                 this.dbInstType = dbInstType;
@@ -290,7 +325,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is locked.
+             * <p>Indicates whether the table is locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isLocked(Boolean isLocked) {
                 this.isLocked = isLocked;
@@ -298,7 +336,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is sharded.
+             * <p>Indicates whether the table is sharded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isShard(Boolean isShard) {
                 this.isShard = isShard;
@@ -306,7 +347,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The shard key of the table.
+             * <p>The shard key of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder shardKey(String shardKey) {
                 this.shardKey = shardKey;
@@ -314,11 +358,14 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether sharding tasks are performed on the table. Valid values:
-             * <p>
+             * <p>Indicates whether sharding tasks are performed on the table. Valid values:</p>
+             * <ul>
+             * <li>0: No sharding task is performed on the table.</li>
+             * <li>1: Sharding tasks are performed on the table.</li>
+             * </ul>
              * 
-             * *   0: No sharding task is performed on the table.
-             * *   1: Sharding tasks are performed on the table.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -326,7 +373,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder table(String table) {
                 this.table = table;

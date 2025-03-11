@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTableResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTableResponseBody</p>
  */
 public class DescribeTableResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeTableResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeTableResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates the returned data.
+         * <p>Indicates the returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DescribeTableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
+         * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5644ABB-559A-4A1C-83F2-9E7209******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeTableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,23 +102,29 @@ public class DescribeTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("IsAllowNull")
+        @com.aliyun.core.annotation.NameInMap("IsAllowNull")
         private String isAllowNull;
 
-        @NameInMap("IsPk")
+        @com.aliyun.core.annotation.NameInMap("IsPk")
         private String isPk;
 
         private List(Builder builder) {
@@ -178,7 +195,10 @@ public class DescribeTableResponseBody extends TeaModel {
             private String isPk; 
 
             /**
-             * Indicates the name of a column.
+             * <p>Indicates the name of a column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Id</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -186,7 +206,10 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the column.
+             * <p>Indicates the type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint(20)</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -194,7 +217,10 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * Extra
+             * <p>Extra</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_increment</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -202,7 +228,10 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the primary key of the table.
+             * <p>Indicates the primary key of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRI</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -210,7 +239,10 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column can be empty.
+             * <p>Indicates whether the column can be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder isAllowNull(String isAllowNull) {
                 this.isAllowNull = isAllowNull;
@@ -218,7 +250,10 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is the primary key column of the table.
+             * <p>Indicates whether the column is the primary key column of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder isPk(String isPk) {
                 this.isPk = isPk;
@@ -232,9 +267,15 @@ public class DescribeTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
         private Data(Builder builder) {
             this.list = builder.list;
@@ -251,17 +292,17 @@ public class DescribeTableResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
 
             /**
-             * Indicates the details about the table schema.
+             * <p>Indicates the details about the table schema.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

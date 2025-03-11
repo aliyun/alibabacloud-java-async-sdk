@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBackupsSetRequest} extends {@link RequestModel}
  *
  * <p>RemoveBackupsSetRequest</p>
  */
 public class RemoveBackupsSetRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupId;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
     private RemoveBackupsSetRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class RemoveBackupsSetRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set. You can call the [DescribeBackupSets](~~139331~~) interface to query the ID of a backup set.
+         * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/139331.html">DescribeBackupSets</a> interface to query the ID of a backup set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ba30d5c4-a6dc-11ea-bd40-************</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -79,7 +88,11 @@ public class RemoveBackupsSetRequest extends Request {
         }
 
         /**
-         * The ID of the DRDS instance.
+         * <p>The ID of the DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

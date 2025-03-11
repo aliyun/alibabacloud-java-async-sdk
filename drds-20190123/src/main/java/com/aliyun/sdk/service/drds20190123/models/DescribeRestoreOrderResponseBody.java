@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreOrderResponseBody</p>
  */
 public class DescribeRestoreOrderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreOrderDO")
+    @com.aliyun.core.annotation.NameInMap("RestoreOrderDO")
     private RestoreOrderDO restoreOrderDO;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRestoreOrderResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AD2DE5D-B86B-40B5-9678-487D37******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data object.
+         * <p>The returned data object.</p>
          */
         public Builder restoreOrderDO(RestoreOrderDO restoreOrderDO) {
             this.restoreOrderDO = restoreOrderDO;
@@ -78,7 +86,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,23 +102,29 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreOrderResponseBody</p>
+     */
     public static class DrdsOrderDOList extends TeaModel {
-        @NameInMap("AzoneId")
+        @com.aliyun.core.annotation.NameInMap("AzoneId")
         private String azoneId;
 
-        @NameInMap("InstSpec")
+        @com.aliyun.core.annotation.NameInMap("InstSpec")
         private String instSpec;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VSwtichId")
+        @com.aliyun.core.annotation.NameInMap("VSwtichId")
         private String vSwtichId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private DrdsOrderDOList(Builder builder) {
@@ -178,7 +195,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the zone for which to query resources.
+             * <p>The ID of the zone for which to query resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -186,7 +206,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * <p>The instance type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4C8G * 2</p>
              */
             public Builder instSpec(String instSpec) {
                 this.instSpec = instSpec;
@@ -194,11 +217,14 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li>**Classic **: Classic Network</li>
+             * <li><strong>vpc</strong>: VPC</li>
+             * </ul>
              * 
-             * *   **Classic **: Classic Network
-             * *   **vpc**: VPC
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -206,7 +232,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -214,7 +243,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch in the VPC.
+             * <p>The ID of the vSwitch in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-*******************</p>
              */
             public Builder vSwtichId(String vSwtichId) {
                 this.vSwtichId = vSwtichId;
@@ -222,7 +254,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC network.
+             * <p>The ID of the VPC network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-*******************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -236,9 +271,15 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreOrderResponseBody</p>
+     */
     public static class RestoreOrderDODrdsOrderDOList extends TeaModel {
-        @NameInMap("DrdsOrderDOList")
-        private java.util.List < DrdsOrderDOList> drdsOrderDOList;
+        @com.aliyun.core.annotation.NameInMap("DrdsOrderDOList")
+        private java.util.List<DrdsOrderDOList> drdsOrderDOList;
 
         private RestoreOrderDODrdsOrderDOList(Builder builder) {
             this.drdsOrderDOList = builder.drdsOrderDOList;
@@ -255,17 +296,17 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         /**
          * @return drdsOrderDOList
          */
-        public java.util.List < DrdsOrderDOList> getDrdsOrderDOList() {
+        public java.util.List<DrdsOrderDOList> getDrdsOrderDOList() {
             return this.drdsOrderDOList;
         }
 
         public static final class Builder {
-            private java.util.List < DrdsOrderDOList> drdsOrderDOList; 
+            private java.util.List<DrdsOrderDOList> drdsOrderDOList; 
 
             /**
              * DrdsOrderDOList.
              */
-            public Builder drdsOrderDOList(java.util.List < DrdsOrderDOList> drdsOrderDOList) {
+            public Builder drdsOrderDOList(java.util.List<DrdsOrderDOList> drdsOrderDOList) {
                 this.drdsOrderDOList = drdsOrderDOList;
                 return this;
             }
@@ -277,29 +318,35 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreOrderResponseBody</p>
+     */
     public static class PolarOrderDOList extends TeaModel {
-        @NameInMap("AzoneId")
+        @com.aliyun.core.annotation.NameInMap("AzoneId")
         private String azoneId;
 
-        @NameInMap("DbInstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceStorage")
         private String dbInstanceStorage;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private Long num;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private PolarOrderDOList(Builder builder) {
@@ -388,7 +435,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The zone ID of the node.
+             * <p>The zone ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -396,7 +446,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of disk.
+             * <p>The capacity of disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder dbInstanceStorage(String dbInstanceStorage) {
                 this.dbInstanceStorage = dbInstanceStorage;
@@ -404,7 +457,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The storage engine of PolarDB.
+             * <p>The storage engine of PolarDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POLARDB</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -412,7 +468,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.large</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -420,11 +479,14 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>Classic</strong>: Classic Network</li>
+             * <li><strong>vpc</strong>: VPC</li>
+             * </ul>
              * 
-             * *   **Classic**: Classic Network
-             * *   **vpc**: VPC
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -432,7 +494,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The number of streams that were returned.
+             * <p>The number of streams that were returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -440,7 +505,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -448,7 +516,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the operating system.
+             * <p>The version of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -462,9 +533,15 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreOrderResponseBody</p>
+     */
     public static class RestoreOrderDOPolarOrderDOList extends TeaModel {
-        @NameInMap("PolarOrderDOList")
-        private java.util.List < PolarOrderDOList> polarOrderDOList;
+        @com.aliyun.core.annotation.NameInMap("PolarOrderDOList")
+        private java.util.List<PolarOrderDOList> polarOrderDOList;
 
         private RestoreOrderDOPolarOrderDOList(Builder builder) {
             this.polarOrderDOList = builder.polarOrderDOList;
@@ -481,17 +558,17 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         /**
          * @return polarOrderDOList
          */
-        public java.util.List < PolarOrderDOList> getPolarOrderDOList() {
+        public java.util.List<PolarOrderDOList> getPolarOrderDOList() {
             return this.polarOrderDOList;
         }
 
         public static final class Builder {
-            private java.util.List < PolarOrderDOList> polarOrderDOList; 
+            private java.util.List<PolarOrderDOList> polarOrderDOList; 
 
             /**
              * PolarOrderDOList.
              */
-            public Builder polarOrderDOList(java.util.List < PolarOrderDOList> polarOrderDOList) {
+            public Builder polarOrderDOList(java.util.List<PolarOrderDOList> polarOrderDOList) {
                 this.polarOrderDOList = polarOrderDOList;
                 return this;
             }
@@ -503,29 +580,35 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreOrderResponseBody</p>
+     */
     public static class RdsOrderDOList extends TeaModel {
-        @NameInMap("AzoneId")
+        @com.aliyun.core.annotation.NameInMap("AzoneId")
         private String azoneId;
 
-        @NameInMap("DbInstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceStorage")
         private String dbInstanceStorage;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private Long num;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private RdsOrderDOList(Builder builder) {
@@ -614,7 +697,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The zone ID of the node.
+             * <p>The zone ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -622,7 +708,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of disk.
+             * <p>The capacity of disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder dbInstanceStorage(String dbInstanceStorage) {
                 this.dbInstanceStorage = dbInstanceStorage;
@@ -630,7 +719,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The storage engine of the instance.
+             * <p>The storage engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MYSQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -638,7 +730,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * <p>The instance type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds.mysql.s2.large</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -646,9 +741,13 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values: - **Classic **: Classic Network
-             * <p>
-             * - **vpc**: VPC
+             * <p>The network type. Valid values: - **Classic **: Classic Network</p>
+             * <ul>
+             * <li><strong>vpc</strong>: VPC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -656,7 +755,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The number of streams that were returned.
+             * <p>The number of streams that were returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -664,7 +766,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -672,7 +777,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the operating system.
+             * <p>The version of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -686,9 +794,15 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreOrderResponseBody</p>
+     */
     public static class RestoreOrderDORdsOrderDOList extends TeaModel {
-        @NameInMap("RdsOrderDOList")
-        private java.util.List < RdsOrderDOList> rdsOrderDOList;
+        @com.aliyun.core.annotation.NameInMap("RdsOrderDOList")
+        private java.util.List<RdsOrderDOList> rdsOrderDOList;
 
         private RestoreOrderDORdsOrderDOList(Builder builder) {
             this.rdsOrderDOList = builder.rdsOrderDOList;
@@ -705,17 +819,17 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         /**
          * @return rdsOrderDOList
          */
-        public java.util.List < RdsOrderDOList> getRdsOrderDOList() {
+        public java.util.List<RdsOrderDOList> getRdsOrderDOList() {
             return this.rdsOrderDOList;
         }
 
         public static final class Builder {
-            private java.util.List < RdsOrderDOList> rdsOrderDOList; 
+            private java.util.List<RdsOrderDOList> rdsOrderDOList; 
 
             /**
              * RdsOrderDOList.
              */
-            public Builder rdsOrderDOList(java.util.List < RdsOrderDOList> rdsOrderDOList) {
+            public Builder rdsOrderDOList(java.util.List<RdsOrderDOList> rdsOrderDOList) {
                 this.rdsOrderDOList = rdsOrderDOList;
                 return this;
             }
@@ -727,14 +841,20 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreOrderResponseBody</p>
+     */
     public static class RestoreOrderDO extends TeaModel {
-        @NameInMap("DrdsOrderDOList")
+        @com.aliyun.core.annotation.NameInMap("DrdsOrderDOList")
         private RestoreOrderDODrdsOrderDOList drdsOrderDOList;
 
-        @NameInMap("PolarOrderDOList")
+        @com.aliyun.core.annotation.NameInMap("PolarOrderDOList")
         private RestoreOrderDOPolarOrderDOList polarOrderDOList;
 
-        @NameInMap("RdsOrderDOList")
+        @com.aliyun.core.annotation.NameInMap("RdsOrderDOList")
         private RestoreOrderDORdsOrderDOList rdsOrderDOList;
 
         private RestoreOrderDO(Builder builder) {
@@ -778,7 +898,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private RestoreOrderDORdsOrderDOList rdsOrderDOList; 
 
             /**
-             * The information of the restored order.
+             * <p>The information of the restored order.</p>
              */
             public Builder drdsOrderDOList(RestoreOrderDODrdsOrderDOList drdsOrderDOList) {
                 this.drdsOrderDOList = drdsOrderDOList;
@@ -786,7 +906,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the restored apsaradb for PolarDB cluster.
+             * <p>The ID of the restored apsaradb for PolarDB cluster.</p>
              */
             public Builder polarOrderDOList(RestoreOrderDOPolarOrderDOList polarOrderDOList) {
                 this.polarOrderDOList = polarOrderDOList;
@@ -794,7 +914,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the restored RDS order.
+             * <p>The information of the restored RDS order.</p>
              */
             public Builder rdsOrderDOList(RestoreOrderDORdsOrderDOList rdsOrderDOList) {
                 this.rdsOrderDOList = rdsOrderDOList;

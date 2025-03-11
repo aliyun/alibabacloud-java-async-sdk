@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsDBResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsDBResponseBody</p>
  */
 public class DescribeDrdsDBResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsDBResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates the details about the database.
+         * <p>Indicates the details about the database.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58FB0EC7-CF71-4E48-92FB-CF070D******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,26 +102,32 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DbInstType")
+        @com.aliyun.core.annotation.NameInMap("DbInstType")
         private String dbInstType;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("InstRole")
+        @com.aliyun.core.annotation.NameInMap("InstRole")
         private String instRole;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -190,7 +207,10 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Indicates the time when the database was created. The value is in the UNIX timestamp format. Unit: ms.
+             * <p>Indicates the time when the database was created. The value is in the UNIX timestamp format. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1602050276000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -198,7 +218,10 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the storage type of the database.
+             * <p>Indicates the storage type of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -206,7 +229,10 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the database.
+             * <p>Indicates the name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -214,11 +240,14 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the instance in which the database is deployed. Valid values:
-             * <p>
+             * <p>Indicates the type of the instance in which the database is deployed. Valid values:</p>
+             * <ul>
+             * <li><strong>MASTER</strong>: The instance is a primary instance.</li>
+             * <li><strong>SLAVE</strong>: The instance is a read-only instance.</li>
+             * </ul>
              * 
-             * *   **MASTER**: The instance is a primary instance.
-             * *   **SLAVE**: The instance is a read-only instance.
+             * <strong>example:</strong>
+             * <p>MASTER</p>
              */
             public Builder instRole(String instRole) {
                 this.instRole = instRole;
@@ -226,11 +255,14 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the database sharding method.
-             * <p>
+             * <p>Indicates the database sharding method.</p>
+             * <ul>
+             * <li><strong>HORIZONTAL</strong>: The database is horizontally sharded.</li>
+             * <li><strong>VERTICAL</strong>: The database is vertically sharded.</li>
+             * </ul>
              * 
-             * *   **HORIZONTAL**: The database is horizontally sharded.
-             * *   **VERTICAL**: The database is vertically sharded.
+             * <strong>example:</strong>
+             * <p>HORIZONTAL</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -238,7 +270,10 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the schema name of the database.
+             * <p>Indicates the schema name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_test*******************</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -246,11 +281,14 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the state of the database. Valid values:
-             * <p>
+             * <p>Indicates the state of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>TO_BE_INIT</strong>: The database is being created.</li>
+             * <li><strong>NORMAL</strong>: The database is running.</li>
+             * </ul>
              * 
-             * *   **TO_BE_INIT**: The database is being created.
-             * *   **NORMAL**: The database is running.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;

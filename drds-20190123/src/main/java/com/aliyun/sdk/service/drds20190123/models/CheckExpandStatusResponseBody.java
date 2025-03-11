@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckExpandStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CheckExpandStatusResponseBody</p>
  */
 public class CheckExpandStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckExpandStatusResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class CheckExpandStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result of the verification.
+         * <p>The result of the verification.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class CheckExpandStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CDBA7D5-8D62-4D24-9C65-510D62******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class CheckExpandStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class CheckExpandStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckExpandStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckExpandStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("IsActive")
+        @com.aliyun.core.annotation.NameInMap("IsActive")
         private Boolean isActive;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
         private Data(Builder builder) {
@@ -130,7 +147,10 @@ public class CheckExpandStatusResponseBody extends TeaModel {
             private String msg; 
 
             /**
-             * Indicates whether scale-out operations can be performed on the database.
+             * <p>Indicates whether scale-out operations can be performed on the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isActive(Boolean isActive) {
                 this.isActive = isActive;
@@ -138,7 +158,10 @@ public class CheckExpandStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;

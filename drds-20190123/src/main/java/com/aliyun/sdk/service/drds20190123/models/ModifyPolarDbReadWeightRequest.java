@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPolarDbReadWeightRequest} extends {@link RequestModel}
  *
  * <p>ModifyPolarDbReadWeightRequest</p>
  */
 public class ModifyPolarDbReadWeightRequest extends Request {
-    @Query
-    @NameInMap("DbInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbInstanceId;
 
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DbNodeIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNodeIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbNodeIds;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("Weights")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Weights")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String weights;
 
     private ModifyPolarDbReadWeightRequest(Builder builder) {
@@ -115,7 +120,11 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         } 
 
         /**
-         * Polar cluster ID.
+         * <p>Polar cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -124,7 +133,11 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -133,7 +146,11 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * The node list in the destination apsaradb for PolarDB cluster. The nodes in each cluster are separated with commas (,) and colons (:).
+         * <p>The node list in the destination apsaradb for PolarDB cluster. The nodes in each cluster are separated with commas (,) and colons (:).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-<strong><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></strong>:pi-****************</p>
          */
         public Builder dbNodeIds(String dbNodeIds) {
             this.putQueryParameter("DbNodeIds", dbNodeIds);
@@ -142,7 +159,11 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * The ID of a DRDS instance.
+         * <p>The ID of a DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -151,7 +172,11 @@ public class ModifyPolarDbReadWeightRequest extends Request {
         }
 
         /**
-         * The weight of the PolarDB cluster. Separate multiple weights with commas (,).
+         * <p>The weight of the PolarDB cluster. Separate multiple weights with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14,86</p>
          */
         public Builder weights(String weights) {
             this.putQueryParameter("Weights", weights);

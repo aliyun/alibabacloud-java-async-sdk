@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupPolicyDO")
+    @com.aliyun.core.annotation.NameInMap("BackupPolicyDO")
     private BackupPolicyDO backupPolicyDO;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the backup policy.
+         * <p>The information about the backup policy.</p>
          */
         public Builder backupPolicyDO(BackupPolicyDO backupPolicyDO) {
             this.backupPolicyDO = backupPolicyDO;
@@ -70,7 +75,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FAF3989-79CD-4A67-8FFD-97899B64****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,59 +102,65 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
     public static class BackupPolicyDO extends TeaModel {
-        @NameInMap("BackupAppName")
+        @com.aliyun.core.annotation.NameInMap("BackupAppName")
         private String backupAppName;
 
-        @NameInMap("BackupDbName")
+        @com.aliyun.core.annotation.NameInMap("BackupDbName")
         private String backupDbName;
 
-        @NameInMap("BackupLevel")
+        @com.aliyun.core.annotation.NameInMap("BackupLevel")
         private String backupLevel;
 
-        @NameInMap("BackupLog")
+        @com.aliyun.core.annotation.NameInMap("BackupLog")
         private String backupLog;
 
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("BackupPolicyMode")
+        @com.aliyun.core.annotation.NameInMap("BackupPolicyMode")
         private String backupPolicyMode;
 
-        @NameInMap("BackupRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
         private Long backupRetentionPeriod;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("DataBackupRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("DataBackupRetentionPeriod")
         private Long dataBackupRetentionPeriod;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("HighSpaceUsageProtection")
+        @com.aliyun.core.annotation.NameInMap("HighSpaceUsageProtection")
         private Long highSpaceUsageProtection;
 
-        @NameInMap("LocalLogRetentionHours")
+        @com.aliyun.core.annotation.NameInMap("LocalLogRetentionHours")
         private Long localLogRetentionHours;
 
-        @NameInMap("LocalLogRetentionSpace")
+        @com.aliyun.core.annotation.NameInMap("LocalLogRetentionSpace")
         private Long localLogRetentionSpace;
 
-        @NameInMap("LogBackupRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
         private Long logBackupRetentionPeriod;
 
-        @NameInMap("NextBackupActuallyTime")
+        @com.aliyun.core.annotation.NameInMap("NextBackupActuallyTime")
         private String nextBackupActuallyTime;
 
-        @NameInMap("PreferredBackupPeriod")
+        @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
         private String preferredBackupPeriod;
 
-        @NameInMap("PreferredBackupTime")
+        @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
         private String preferredBackupTime;
 
         private BackupPolicyDO(Builder builder) {
@@ -322,7 +339,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String preferredBackupTime; 
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupAppName(String backupAppName) {
                 this.backupAppName = backupAppName;
@@ -330,7 +350,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupDbName(String backupDbName) {
                 this.backupDbName = backupDbName;
@@ -338,11 +361,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The backup level. Valid values:
-             * <p>
+             * <p>The backup level. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database backup</li>
+             * <li><strong>instance</strong>: instance backup</li>
+             * </ul>
              * 
-             * *   **db**: database backup
-             * *   **instance**: instance backup
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder backupLevel(String backupLevel) {
                 this.backupLevel = backupLevel;
@@ -350,11 +376,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log backup feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The log backup feature is enabled.</li>
+             * <li><strong>0</strong>: The log backup feature is disabled.</li>
+             * </ul>
              * 
-             * *   **1**: The log backup feature is enabled.
-             * *   **0**: The log backup feature is disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder backupLog(String backupLog) {
                 this.backupLog = backupLog;
@@ -362,11 +391,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The backup mode. Valid values:
-             * <p>
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>logic</strong>: logical backup</li>
+             * <li><strong>phy</strong>: fast backup</li>
+             * </ul>
              * 
-             * *   **logic**: logical backup
-             * *   **phy**: fast backup
+             * <strong>example:</strong>
+             * <p>phy</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -374,11 +406,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backup policy. Valid values:
-             * <p>
+             * <p>The type of the backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>DataBackupPolicy</strong>: a data backup policy</li>
+             * <li><strong>LogBackupPolicy</strong>: a log backup policy</li>
+             * </ul>
              * 
-             * *   **DataBackupPolicy**: a data backup policy
-             * *   **LogBackupPolicy**: a log backup policy
+             * <strong>example:</strong>
+             * <p>DataBackupPolicy</p>
              */
             public Builder backupPolicyMode(String backupPolicyMode) {
                 this.backupPolicyMode = backupPolicyMode;
@@ -386,7 +421,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of backup files. Unit: days.
+             * <p>The retention period of backup files. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
                 this.backupRetentionPeriod = backupRetentionPeriod;
@@ -394,7 +432,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -402,7 +443,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of data backup files. Unit: days.
+             * <p>The retention period of data backup files. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataBackupRetentionPeriod(Long dataBackupRetentionPeriod) {
                 this.dataBackupRetentionPeriod = dataBackupRetentionPeriod;
@@ -410,7 +454,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -418,7 +465,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -426,7 +476,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder highSpaceUsageProtection(Long highSpaceUsageProtection) {
                 this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -434,7 +487,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder localLogRetentionHours(Long localLogRetentionHours) {
                 this.localLogRetentionHours = localLogRetentionHours;
@@ -442,7 +498,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder localLogRetentionSpace(Long localLogRetentionSpace) {
                 this.localLogRetentionSpace = localLogRetentionSpace;
@@ -450,7 +509,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of log backup files. Unit: days.
+             * <p>The retention period of log backup files. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder logBackupRetentionPeriod(Long logBackupRetentionPeriod) {
                 this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -458,7 +520,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder nextBackupActuallyTime(String nextBackupActuallyTime) {
                 this.nextBackupActuallyTime = nextBackupActuallyTime;
@@ -466,16 +531,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The backup cycle. You can specify multiple backup cycles. Separate multiple backup cycles with commas (,). Valid values:
-             * <p>
+             * <p>The backup cycle. You can specify multiple backup cycles. Separate multiple backup cycles with commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: every Monday</li>
+             * <li><strong>1</strong>: every Tuesday</li>
+             * <li><strong>2</strong>: every Wednesday</li>
+             * <li><strong>3</strong>: every Thursday</li>
+             * <li><strong>4</strong>: every Friday</li>
+             * <li><strong>5</strong>: every Saturday</li>
+             * <li><strong>6</strong>: every Sunday</li>
+             * </ul>
              * 
-             * *   **0**: every Monday
-             * *   **1**: every Tuesday
-             * *   **2**: every Wednesday
-             * *   **3**: every Thursday
-             * *   **4**: every Friday
-             * *   **5**: every Saturday
-             * *   **6**: every Sunday
+             * <strong>example:</strong>
+             * <p>1,4</p>
              */
             public Builder preferredBackupPeriod(String preferredBackupPeriod) {
                 this.preferredBackupPeriod = preferredBackupPeriod;
@@ -483,7 +551,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time range in which a backup is performed. The time is displayed in UTC.
+             * <p>The time range in which a backup is performed. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22:00:00-23:00:00</p>
              */
             public Builder preferredBackupTime(String preferredBackupTime) {
                 this.preferredBackupTime = preferredBackupTime;

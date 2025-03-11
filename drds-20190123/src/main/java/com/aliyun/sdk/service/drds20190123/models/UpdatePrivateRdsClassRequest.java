@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrivateRdsClassRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrivateRdsClassRequest</p>
  */
 public class UpdatePrivateRdsClassRequest extends Request {
-    @Query
-    @NameInMap("AutoUseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
     private Boolean autoUseCoupon;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("PrePayDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrePayDuration")
     private Integer prePayDuration;
 
-    @Query
-    @NameInMap("RdsClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsClass")
     private String rdsClass;
 
-    @Query
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private String storage;
 
     private UpdatePrivateRdsClassRequest(Builder builder) {
@@ -126,10 +131,13 @@ public class UpdatePrivateRdsClassRequest extends Request {
         } 
 
         /**
-         * Specifies whether to use vouchers to offset the purchase fees. Valid values: **true** and **false**. Default value: false.
-         * <p>
+         * <p>Specifies whether to use vouchers to offset the purchase fees. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: false.</p>
+         * <blockquote>
+         * <p>If you downgrade the specifications of an instance after you use the vouchers, the vouchers used for the purchase cannot be refunded.</p>
+         * </blockquote>
          * 
-         * > If you downgrade the specifications of an instance after you use the vouchers, the vouchers used for the purchase cannot be refunded.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -138,10 +146,14 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * The ID of the custom ApsaraDB RDS instance at the storage layer.
-         * <p>
+         * <p>The ID of the custom ApsaraDB RDS instance at the storage layer.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~xxxx~~">DescribeDrdsRdsInstances</a> operation to query the details of all ApsaraDB RDS instances at the storage layer of a PolarDB-X 1.0 instance, including the IDs of the ApsaraDB RDS instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDrdsRdsInstances](~~xxxx~~) operation to query the details of all ApsaraDB RDS instances at the storage layer of a PolarDB-X 1.0 instance, including the IDs of the ApsaraDB RDS instances.
+         * <strong>example:</strong>
+         * <p>rm-***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -150,10 +162,14 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
-         * <p>
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/139284.html">DescribeDrdsInstances</a> operation to query the details of all PolarDB-X 1.0 instances within an Alibaba Cloud account, including the IDs of the instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDrdsInstances](~~139284~~) operation to query the details of all PolarDB-X 1.0 instances within an Alibaba Cloud account, including the IDs of the instances.
+         * <strong>example:</strong>
+         * <p>drds*************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -162,7 +178,10 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * This parameter is discontinued.
+         * <p>This parameter is discontinued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder prePayDuration(Integer prePayDuration) {
             this.putQueryParameter("PrePayDuration", prePayDuration);
@@ -171,10 +190,13 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * The new instance type of the custom ApsaraDB RDS instance at the storage layer.
-         * <p>
+         * <p>The new instance type of the custom ApsaraDB RDS instance at the storage layer.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196546.html">DescribeAvailableClasses</a> operation to view the specifications that are supported for a custom ApsaraDB RDS instance. The specifications include the instance type and the storage capacity.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAvailableClasses](~~196546~~) operation to view the specifications that are supported for a custom ApsaraDB RDS instance. The specifications include the instance type and the storage capacity.
+         * <strong>example:</strong>
+         * <p>rds.mysql.c1.xlarge</p>
          */
         public Builder rdsClass(String rdsClass) {
             this.putQueryParameter("RdsClass", rdsClass);
@@ -183,10 +205,13 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * The new storage capacity of the custom ApsaraDB RDS instance at the storage layer.
-         * <p>
+         * <p>The new storage capacity of the custom ApsaraDB RDS instance at the storage layer.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/196546.html">DescribeAvailableClasses</a> operation to view the specifications that are supported for a custom ApsaraDB RDS instance. The specifications include the instance type and the storage capacity.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAvailableClasses](~~196546~~) operation to view the specifications that are supported for a custom ApsaraDB RDS instance. The specifications include the instance type and the storage capacity.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);

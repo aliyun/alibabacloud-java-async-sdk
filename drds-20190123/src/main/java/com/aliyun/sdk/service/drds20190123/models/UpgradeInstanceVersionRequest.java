@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeInstanceVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeInstanceVersionRequest</p>
  */
 public class UpgradeInstanceVersionRequest extends Request {
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Rpm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rpm")
     private String rpm;
 
     private UpgradeInstanceVersionRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class UpgradeInstanceVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the PolarDB-X 1.0 instance that you want to upgrade.
+         * <p>The ID of the PolarDB-X 1.0 instance that you want to upgrade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdshbgaen89****</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -92,7 +101,10 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +113,10 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * The version number of the PolarDB-X 1.0 instance. You can leave this parameter unspecified.
+         * <p>The version number of the PolarDB-X 1.0 instance. You can leave this parameter unspecified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-drds-server-5.4.12-16348095.noarch.rpm</p>
          */
         public Builder rpm(String rpm) {
             this.putQueryParameter("Rpm", rpm);

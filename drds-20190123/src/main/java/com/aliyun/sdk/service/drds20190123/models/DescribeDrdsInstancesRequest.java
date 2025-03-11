@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDrdsInstancesRequest</p>
  */
 public class DescribeDrdsInstancesRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private Boolean expired;
 
-    @Query
-    @NameInMap("Mix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mix")
     private Boolean mix;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductVersion")
     private String productVersion;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeDrdsInstancesRequest(Builder builder) {
@@ -139,7 +144,7 @@ public class DescribeDrdsInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -159,7 +164,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         private String productVersion; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String type; 
 
         private Builder() {
@@ -181,7 +186,10 @@ public class DescribeDrdsInstancesRequest extends Request {
         } 
 
         /**
-         * The description of the instances.
+         * <p>The description of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -190,7 +198,10 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the instances that you want to query expire.
+         * <p>Specifies whether the instances that you want to query expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder expired(Boolean expired) {
             this.putQueryParameter("Expired", expired);
@@ -199,7 +210,10 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether hybrid queries are supported.
+         * <p>Specifies whether hybrid queries are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FALSE</p>
          */
         public Builder mix(Boolean mix) {
             this.putQueryParameter("Mix", mix);
@@ -208,7 +222,10 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +234,10 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * The number of instances returned on each page.
+         * <p>The number of instances returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +246,10 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * The version of the service.
+         * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1</p>
          */
         public Builder productVersion(String productVersion) {
             this.putQueryParameter("ProductVersion", productVersion);
@@ -235,7 +258,11 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +271,10 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instances you want to query belong. The value of this parameter can be NULL.
+         * <p>The ID of the resource group to which the instances you want to query belong. The value of this parameter can be NULL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -255,18 +285,21 @@ public class DescribeDrdsInstancesRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The type of the instances that you want to query. Valid values:
-         * <p>
+         * <p>The type of the instances that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: shared instances</li>
+         * <li><strong>1</strong>: dedicated instances</li>
+         * </ul>
          * 
-         * *   **0**: shared instances
-         * *   **1**: dedicated instances
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -281,11 +314,17 @@ public class DescribeDrdsInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -320,7 +359,10 @@ public class DescribeDrdsInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag configured for the instances you want to query.
+             * <p>The key of the tag configured for the instances you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:newretail:domain</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -328,7 +370,10 @@ public class DescribeDrdsInstancesRequest extends Request {
             }
 
             /**
-             * The value of the tag configured for the instances you want to query.
+             * <p>The value of the tag configured for the instances you want to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW_RETAIL</p>
              */
             public Builder value(String value) {
                 this.value = value;

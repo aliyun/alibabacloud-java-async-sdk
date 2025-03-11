@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreOrderRequest} extends {@link RequestModel}
  *
  * <p>DescribeRestoreOrderRequest</p>
  */
 public class DescribeRestoreOrderRequest extends Request {
-    @Query
-    @NameInMap("BackupDbNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDbNames")
     private String backupDbNames;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("BackupLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLevel")
     private String backupLevel;
 
-    @Query
-    @NameInMap("BackupMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMode")
     private String backupMode;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
     private DescribeRestoreOrderRequest(Builder builder) {
@@ -125,7 +130,10 @@ public class DescribeRestoreOrderRequest extends Request {
         } 
 
         /**
-         * The name of the database involved in the backup.
+         * <p>The name of the database involved in the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_flashback</p>
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -134,7 +142,10 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1918df27-4563-11e9-8403-af4fbe******</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -143,11 +154,14 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * The level of the backup. Valid values:
-         * <p>
+         * <p>The level of the backup. Valid values:</p>
+         * <ul>
+         * <li><strong>DB</strong>: The database Level</li>
+         * <li>**instance **: instance level</li>
+         * </ul>
          * 
-         * *   **DB**: The database Level
-         * *   **instance **: instance level
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -156,7 +170,10 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * The backup mode. Valid values: **logic** or **phy**.
+         * <p>The backup mode. Valid values: <strong>logic</strong> or <strong>phy</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phy</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -165,7 +182,11 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which to modify the backup policy.
+         * <p>The ID of the instance for which to modify the backup policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -174,7 +195,10 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * The preferred backup time.
+         * <p>The preferred backup time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-16 15:12:53</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

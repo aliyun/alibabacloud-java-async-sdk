@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTimesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupTimesResponseBody</p>
  */
 public class DescribeBackupTimesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private RestoreTime restoreTime;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupTimesResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4780A19F-5ECB-4C56-AD20-966A3FF9DE5R</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,7 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the information about the time range within which the data of the instance can be restored to a point in time.
+         * <p>Indicates the information about the time range within which the data of the instance can be restored to a point in time.</p>
          */
         public Builder restoreTime(RestoreTime restoreTime) {
             this.restoreTime = restoreTime;
@@ -78,7 +86,10 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupTimesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTimesResponseBody</p>
+     */
     public static class RestoreTime extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private RestoreTime(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Indicates the end time. The time is in the UNIX timestamp format. The time is in UTC. Unit: ms.
+             * <p>Indicates the end time. The time is in the UNIX timestamp format. The time is in UTC. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568636922671</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -138,7 +158,10 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the start time. The time is in the UNIX timestamp format. The time must be in UTC. Unit: ms.
+             * <p>Indicates the start time. The time is in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568632853000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsInstanceDbMonitorRequest} extends {@link RequestModel}
  *
  * <p>DescribeDrdsInstanceDbMonitorRequest</p>
  */
 public class DescribeDrdsInstanceDbMonitorRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeDrdsInstanceDbMonitorRequest(Builder builder) {
@@ -129,7 +134,11 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -138,7 +147,11 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the Distributed Relational Database Service (DRDS) instance.
+         * <p>The ID of the Distributed Relational Database Service (DRDS) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds*************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -147,7 +160,11 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * The end time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
+         * <p>The end time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603166400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,10 +173,14 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * The performance monitoring metrics. You can specify one or more metrics for a query at a time. Separate multiple metric parameters with commas (,).
-         * <p>
+         * <p>The performance monitoring metrics. You can specify one or more metrics for a query at a time. Separate multiple metric parameters with commas (,).</p>
+         * <blockquote>
+         * <p> For more information about the details of performance monitoring metrics, see <a href="https://help.aliyun.com/document_detail/186704.html">Database monitoring</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about the details of performance monitoring metrics, see [Database monitoring](~~186704~~).
+         * <strong>example:</strong>
+         * <p>qps</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -168,7 +189,10 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +201,11 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * The start time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
+         * <p>The start time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603162800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

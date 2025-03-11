@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateResourceGroupAttributeRequest</p>
  */
 public class UpdateResourceGroupAttributeRequest extends Request {
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("NewResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newResourceGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateResourceGroupAttributeRequest(Builder builder) {
@@ -85,10 +90,14 @@ public class UpdateResourceGroupAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the instance that you want to transfer.
-         * <p>
+         * <p>The ID of the instance that you want to transfer.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/139284.html">DescribeDrdsInstances</a> operation to view the details of the instances under the account, including the instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDrdsInstances](~~139284~~) operation to view the details of the instances under the account, including the instance IDs.
+         * <strong>example:</strong>
+         * <p>drds***********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -97,10 +106,14 @@ public class UpdateResourceGroupAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group that you want to specify.
-         * <p>
+         * <p>The ID of the resource group that you want to specify.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to view the details of the resource groups, including the resource group IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListResourceGroups](~~158855~~) operation to view the details of the resource groups, including the resource group IDs.
+         * <strong>example:</strong>
+         * <p>rg-***************</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -109,10 +122,14 @@ public class UpdateResourceGroupAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance you want to transfer is located.
-         * <p>
+         * <p>The ID of the region where the instance you want to transfer is located.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/139284.html">DescribeDrdsInstances</a> operation to view the details of the instances under the account, including the region IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDrdsInstances](~~139284~~) operation to view the details of the instances under the account, including the region IDs.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

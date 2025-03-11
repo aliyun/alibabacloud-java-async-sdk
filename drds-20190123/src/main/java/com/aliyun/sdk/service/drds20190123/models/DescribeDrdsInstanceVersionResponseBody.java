@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsInstanceVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsInstanceVersionResponseBody</p>
  */
 public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsInstanceVersionResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about the instance version.
+         * <p>The details about the instance version.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsInstanceVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceVersionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("InstanceVersion")
+        @com.aliyun.core.annotation.NameInMap("InstanceVersion")
         private String instanceVersion;
 
-        @NameInMap("NewestVersion")
+        @com.aliyun.core.annotation.NameInMap("NewestVersion")
         private String newestVersion;
 
         private Data(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
             private String newestVersion; 
 
             /**
-             * The current version of the instance.
+             * <p>The current version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.3.12-15682777</p>
              */
             public Builder instanceVersion(String instanceVersion) {
                 this.instanceVersion = instanceVersion;
@@ -138,7 +158,10 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version of the instance.
+             * <p>The latest version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.4.12-16315258</p>
              */
             public Builder newestVersion(String newestVersion) {
                 this.newestVersion = newestVersion;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSwitchNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSwitchNetworkResponseBody</p>
  */
 public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VpcInfos")
+    @com.aliyun.core.annotation.NameInMap("VpcInfos")
     private VpcInfos vpcInfos;
 
     private DescribeInstanceSwitchNetworkResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         private VpcInfos vpcInfos; 
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03E12FE3-1638-483E-A9B6-1A9120SER56T</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +89,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the information about the virtual private cloud (VPC) in which the instance is deployed.
+         * <p>Indicates the information about the virtual private cloud (VPC) in which the instance is deployed.</p>
          */
         public Builder vpcInfos(VpcInfos vpcInfos) {
             this.vpcInfos = vpcInfos;
@@ -91,20 +102,26 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSwitchNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSwitchNetworkResponseBody</p>
+     */
     public static class VswitchInfo extends TeaModel {
-        @NameInMap("AzoneId")
+        @com.aliyun.core.annotation.NameInMap("AzoneId")
         private String azoneId;
 
-        @NameInMap("DrdsSupported")
+        @com.aliyun.core.annotation.NameInMap("DrdsSupported")
         private Boolean drdsSupported;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("VswitchName")
+        @com.aliyun.core.annotation.NameInMap("VswitchName")
         private String vswitchName;
 
         private VswitchInfo(Builder builder) {
@@ -166,7 +183,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             private String vswitchName; 
 
             /**
-             * Indicates the ID of the zone in which the instance is deployed.
+             * <p>Indicates the ID of the zone in which the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -174,7 +194,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether you can change the network type of the instance.
+             * <p>Indicates whether you can change the network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder drdsSupported(Boolean drdsSupported) {
                 this.drdsSupported = drdsSupported;
@@ -182,7 +205,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the VPC.
+             * <p>Indicates the ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_id</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -190,7 +216,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the vSwitch.
+             * <p>Indicates the ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vswitch_id</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -198,7 +227,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the vSwitch.
+             * <p>Indicates the name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vswitch_name</p>
              */
             public Builder vswitchName(String vswitchName) {
                 this.vswitchName = vswitchName;
@@ -212,9 +244,15 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSwitchNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSwitchNetworkResponseBody</p>
+     */
     public static class VswitchInfos extends TeaModel {
-        @NameInMap("VswitchInfo")
-        private java.util.List < VswitchInfo> vswitchInfo;
+        @com.aliyun.core.annotation.NameInMap("VswitchInfo")
+        private java.util.List<VswitchInfo> vswitchInfo;
 
         private VswitchInfos(Builder builder) {
             this.vswitchInfo = builder.vswitchInfo;
@@ -231,17 +269,17 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         /**
          * @return vswitchInfo
          */
-        public java.util.List < VswitchInfo> getVswitchInfo() {
+        public java.util.List<VswitchInfo> getVswitchInfo() {
             return this.vswitchInfo;
         }
 
         public static final class Builder {
-            private java.util.List < VswitchInfo> vswitchInfo; 
+            private java.util.List<VswitchInfo> vswitchInfo; 
 
             /**
              * VswitchInfo.
              */
-            public Builder vswitchInfo(java.util.List < VswitchInfo> vswitchInfo) {
+            public Builder vswitchInfo(java.util.List<VswitchInfo> vswitchInfo) {
                 this.vswitchInfo = vswitchInfo;
                 return this;
             }
@@ -253,17 +291,23 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSwitchNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSwitchNetworkResponseBody</p>
+     */
     public static class VpcInfo extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
-        @NameInMap("VswitchInfos")
+        @com.aliyun.core.annotation.NameInMap("VswitchInfos")
         private VswitchInfos vswitchInfos;
 
         private VpcInfo(Builder builder) {
@@ -316,7 +360,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             private VswitchInfos vswitchInfos; 
 
             /**
-             * Indicates the ID of the region in which the instance is deployed.
+             * <p>Indicates the ID of the region in which the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -324,7 +371,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the VPC.
+             * <p>Indicates the ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_id</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -332,7 +382,10 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the VPC.
+             * <p>Indicates the name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_name</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -340,7 +393,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates information about the vSwitch to which the instance is connected.
+             * <p>Indicates information about the vSwitch to which the instance is connected.</p>
              */
             public Builder vswitchInfos(VswitchInfos vswitchInfos) {
                 this.vswitchInfos = vswitchInfos;
@@ -354,9 +407,15 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSwitchNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSwitchNetworkResponseBody</p>
+     */
     public static class VpcInfos extends TeaModel {
-        @NameInMap("VpcInfo")
-        private java.util.List < VpcInfo> vpcInfo;
+        @com.aliyun.core.annotation.NameInMap("VpcInfo")
+        private java.util.List<VpcInfo> vpcInfo;
 
         private VpcInfos(Builder builder) {
             this.vpcInfo = builder.vpcInfo;
@@ -373,17 +432,17 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         /**
          * @return vpcInfo
          */
-        public java.util.List < VpcInfo> getVpcInfo() {
+        public java.util.List<VpcInfo> getVpcInfo() {
             return this.vpcInfo;
         }
 
         public static final class Builder {
-            private java.util.List < VpcInfo> vpcInfo; 
+            private java.util.List<VpcInfo> vpcInfo; 
 
             /**
              * VpcInfo.
              */
-            public Builder vpcInfo(java.util.List < VpcInfo> vpcInfo) {
+            public Builder vpcInfo(java.util.List<VpcInfo> vpcInfo) {
                 this.vpcInfo = vpcInfo;
                 return this;
             }

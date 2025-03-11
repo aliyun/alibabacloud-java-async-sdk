@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartRestoreRequest} extends {@link RequestModel}
  *
  * <p>StartRestoreRequest</p>
  */
 public class StartRestoreRequest extends Request {
-    @Query
-    @NameInMap("BackupDbNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDbNames")
     private String backupDbNames;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("BackupLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLevel")
     private String backupLevel;
 
-    @Query
-    @NameInMap("BackupMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMode")
     private String backupMode;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
     private StartRestoreRequest(Builder builder) {
@@ -125,10 +130,13 @@ public class StartRestoreRequest extends Request {
         } 
 
         /**
-         * The name of the database to be restored. Separate multiple databases with commas (,).
-         * <p>
+         * <p>The name of the database to be restored. Separate multiple databases with commas (,).</p>
+         * <blockquote>
+         * <p> If you do not specify any database name, all databases in the instance are restored by default.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify any database name, all databases in the instance are restored by default.
+         * <strong>example:</strong>
+         * <p>test1,test2</p>
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -137,10 +145,13 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * The ID of the DRDS backup set.
-         * <p>
+         * <p>The ID of the DRDS backup set.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system restores data by time (PreferredBackupTime).</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the system restores data by time (PreferredBackupTime).
+         * <strong>example:</strong>
+         * <p>23***</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -149,11 +160,14 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * The level of the backup. Valid values:
-         * <p>
+         * <p>The level of the backup. Valid values:</p>
+         * <ul>
+         * <li>db: The database level.</li>
+         * <li>instance: the instance level.</li>
+         * </ul>
          * 
-         * *   db: The database level.
-         * *   instance: the instance level.
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -162,11 +176,14 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * The backup method. Valid values:
-         * <p>
+         * <p>The backup method. Valid values:</p>
+         * <ul>
+         * <li>logic: the logical backup.</li>
+         * <li>phy: fast backup</li>
+         * </ul>
          * 
-         * *   logic: the logical backup.
-         * *   phy: fast backup
+         * <strong>example:</strong>
+         * <p>phy</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -175,7 +192,11 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * The ID of the DRDS instance.
+         * <p>The ID of the DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -184,7 +205,10 @@ public class StartRestoreRequest extends Request {
         }
 
         /**
-         * The restoration time of the instance, in the format of`  yyyy-MM-dd HH:mm:ss `.
+         * <p>The restoration time of the instance, in the format of<code> yyyy-MM-dd HH:mm:ss</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-10 20:18:18</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

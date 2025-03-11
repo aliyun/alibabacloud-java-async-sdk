@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDrdsIpWhiteListRequest} extends {@link RequestModel}
  *
  * <p>ModifyDrdsIpWhiteListRequest</p>
  */
 public class ModifyDrdsIpWhiteListRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("GroupAttribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupAttribute")
     private String groupAttribute;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("IpWhiteList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpWhiteList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipWhiteList;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private Boolean mode;
 
     private ModifyDrdsIpWhiteListRequest(Builder builder) {
@@ -127,7 +132,11 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         } 
 
         /**
-         * The name of the DRDS database.
+         * <p>The name of the DRDS database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -136,7 +145,11 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * The ID of the Message Queue for Apache Kafka instance.
+         * <p>The ID of the Message Queue for Apache Kafka instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds****c6vxxyzd</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -145,7 +158,7 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * The attribute of the IP address whitelist group.
+         * <p>The attribute of the IP address whitelist group.</p>
          */
         public Builder groupAttribute(String groupAttribute) {
             this.putQueryParameter("GroupAttribute", groupAttribute);
@@ -154,7 +167,10 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist group.
+         * <p>The name of the IP address whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_******</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -163,7 +179,11 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * The modified whitelist. Separate multiple IP addresses with commas (,).
+         * <p>The modified whitelist. Separate multiple IP addresses with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.<em><strong>.</strong></em>.<em><strong>,10.</strong></em>.<em><strong>.</strong></em></p>
          */
         public Builder ipWhiteList(String ipWhiteList) {
             this.putQueryParameter("IpWhiteList", ipWhiteList);
@@ -172,11 +192,14 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * Specifies the mode. Valid values:
-         * <p>
+         * <p>Specifies the mode. Valid values:</p>
+         * <ul>
+         * <li><code>True</code>: append modifications</li>
+         * <li><code>False</code>: overwrite modification</li>
+         * </ul>
          * 
-         * *   `True`: append modifications
-         * *   `False`: overwrite modification
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mode(Boolean mode) {
             this.putQueryParameter("Mode", mode);

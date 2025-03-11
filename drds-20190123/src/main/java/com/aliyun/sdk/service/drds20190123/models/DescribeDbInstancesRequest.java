@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDbInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDbInstancesRequest</p>
  */
 public class DescribeDbInstancesRequest extends Request {
-    @Query
-    @NameInMap("DbInstType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstType")
     private String dbInstType;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Search")
     private String search;
 
     private DescribeDbInstancesRequest(Builder builder) {
@@ -125,7 +130,10 @@ public class DescribeDbInstancesRequest extends Request {
         } 
 
         /**
-         * Storage layer type. Valid values: **POLARDB** or **RDS**.
+         * <p>Storage layer type. Valid values: <strong>POLARDB</strong> or <strong>RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -134,7 +142,11 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * The ID of a DRDS instance.
+         * <p>The ID of a DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -143,7 +155,10 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +167,10 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +179,10 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +191,10 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the storage or cluster.
+         * <p>The ID of the storage or cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);

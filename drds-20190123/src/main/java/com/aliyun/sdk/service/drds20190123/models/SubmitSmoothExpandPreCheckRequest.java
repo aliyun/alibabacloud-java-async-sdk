@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSmoothExpandPreCheckRequest} extends {@link RequestModel}
  *
  * <p>SubmitSmoothExpandPreCheckRequest</p>
  */
 public class SubmitSmoothExpandPreCheckRequest extends Request {
-    @Query
-    @NameInMap("DbInstType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbInstType;
 
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
     private SubmitSmoothExpandPreCheckRequest(Builder builder) {
@@ -85,11 +90,15 @@ public class SubmitSmoothExpandPreCheckRequest extends Request {
         } 
 
         /**
-         * The type of the database. Valid values:
-         * <p>
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li>RDS</li>
+         * <li>POLARDB</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RDS
-         * *   POLARDB
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -98,7 +107,11 @@ public class SubmitSmoothExpandPreCheckRequest extends Request {
         }
 
         /**
-         * The name of the PolarDB-X database.
+         * <p>The name of the PolarDB-X database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -107,7 +120,11 @@ public class SubmitSmoothExpandPreCheckRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds*******</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBackupsSetResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveBackupsSetResponseBody</p>
  */
 public class RemoveBackupsSetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private RemoveBackupsSetResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class RemoveBackupsSetResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70FED5BE-4DDC-4556-AD35-5A6D27******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class RemoveBackupsSetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether SQL audit was disabled for the DRDS database.
+         * <p>Indicates whether SQL audit was disabled for the DRDS database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -78,7 +89,10 @@ public class RemoveBackupsSetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

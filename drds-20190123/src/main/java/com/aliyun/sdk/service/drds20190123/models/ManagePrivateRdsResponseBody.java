@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ManagePrivateRdsResponseBody} extends {@link TeaModel}
  *
  * <p>ManagePrivateRdsResponseBody</p>
  */
 public class ManagePrivateRdsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ManagePrivateRdsResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class ManagePrivateRdsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The parameter result set returned for the operation that is called for the custom ApsaraDB RDS instance.
+         * <p>The parameter result set returned for the operation that is called for the custom ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;requestId&quot;:&quot;E63C810A-4A13-47B6-BA67-C0E23A******&quot;}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -70,7 +78,10 @@ public class ManagePrivateRdsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0237BCD2-2C7A-4F86-A766-657AF6******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class ManagePrivateRdsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

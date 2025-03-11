@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsSqlAuditStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsSqlAuditStatusResponseBody</p>
  */
 public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsSqlAuditStatusResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned data set.
+         * <p>The returned data set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC3ABA3E-0F8A-4596-9104-F5155C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,26 +102,32 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsSqlAuditStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsSqlAuditStatusResponseBody</p>
+     */
     public static class DataData extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Detailed")
+        @com.aliyun.core.annotation.NameInMap("Detailed")
         private String detailed;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private String enabled;
 
-        @NameInMap("ExtraAliUid")
+        @com.aliyun.core.annotation.NameInMap("ExtraAliUid")
         private Long extraAliUid;
 
-        @NameInMap("ExtraSlsLogStore")
+        @com.aliyun.core.annotation.NameInMap("ExtraSlsLogStore")
         private String extraSlsLogStore;
 
-        @NameInMap("ExtraSlsProject")
+        @com.aliyun.core.annotation.NameInMap("ExtraSlsProject")
         private String extraSlsProject;
 
-        @NameInMap("ExtraWriteEnabled")
+        @com.aliyun.core.annotation.NameInMap("ExtraWriteEnabled")
         private Boolean extraWriteEnabled;
 
         private DataData(Builder builder) {
@@ -190,7 +207,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             private Boolean extraWriteEnabled; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -198,7 +218,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the complete report of the SQL audit is supported. Valid values: true and false.
+             * <p>Indicates whether the complete report of the SQL audit is supported. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder detailed(String detailed) {
                 this.detailed = detailed;
@@ -206,7 +229,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL audit feature is enabled for the database. Valid values: true and false.
+             * <p>Indicates whether the SQL audit feature is enabled for the database. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -214,10 +240,13 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the external delivery.
-             * <p>
+             * <p>The UID of the external delivery.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if external log delivery is enabled.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if external log delivery is enabled.
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder extraAliUid(Long extraAliUid) {
                 this.extraAliUid = extraAliUid;
@@ -225,10 +254,13 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service Logstore from which logs are delivered.
-             * <p>
+             * <p>The Log Service Logstore from which logs are delivered.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if external log delivery is enabled.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if external log delivery is enabled.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder extraSlsLogStore(String extraSlsLogStore) {
                 this.extraSlsLogStore = extraSlsLogStore;
@@ -236,10 +268,13 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service project from which logs are delivered.
-             * <p>
+             * <p>The Log Service project from which logs are delivered.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if external log delivery is enabled.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if external log delivery is enabled.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder extraSlsProject(String extraSlsProject) {
                 this.extraSlsProject = extraSlsProject;
@@ -247,7 +282,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether external log delivery is enabled. Valid values: true and false.
+             * <p>Indicates whether external log delivery is enabled. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder extraWriteEnabled(Boolean extraWriteEnabled) {
                 this.extraWriteEnabled = extraWriteEnabled;
@@ -261,9 +299,15 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsSqlAuditStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsSqlAuditStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < DataData> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<DataData> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -280,17 +324,17 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < DataData> getData() {
+        public java.util.List<DataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < DataData> data; 
+            private java.util.List<DataData> data; 
 
             /**
-             * The returned data set.
+             * <p>The returned data set.</p>
              */
-            public Builder data(java.util.List < DataData> data) {
+            public Builder data(java.util.List<DataData> data) {
                 this.data = data;
                 return this;
             }

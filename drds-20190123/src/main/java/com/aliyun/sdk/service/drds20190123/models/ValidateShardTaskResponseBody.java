@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateShardTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ValidateShardTaskResponseBody</p>
  */
 public class ValidateShardTaskResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ValidateShardTaskResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ValidateShardTaskResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,20 +62,23 @@ public class ValidateShardTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Indicates the check results.
+         * <p>Indicates the check results.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B6B7BDC-575D-4A77-A4F8-24B7EFAS45FG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ValidateShardTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class ValidateShardTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ValidateShardTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ValidateShardTaskResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Integer result;
 
         private List(Builder builder) {
@@ -130,7 +147,10 @@ public class ValidateShardTaskResponseBody extends TeaModel {
             private Integer result; 
 
             /**
-             * Indicates the name of a check item.
+             * <p>Indicates the name of a check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>same_schema</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -138,11 +158,14 @@ public class ValidateShardTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the result of the check item. Valid values:
-             * <p>
+             * <p>Indicates the result of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: indicates the task is valid.</li>
+             * <li><strong>1</strong>: indicates the task is invalid.</li>
+             * </ul>
              * 
-             * *   **0**: indicates the task is valid.
-             * *   **1**: indicates the task is invalid.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder result(Integer result) {
                 this.result = result;

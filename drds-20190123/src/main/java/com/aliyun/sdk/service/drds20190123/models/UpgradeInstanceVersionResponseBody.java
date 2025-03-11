@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeInstanceVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeInstanceVersionResponseBody</p>
  */
 public class UpgradeInstanceVersionResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpgradeInstanceVersionResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +66,10 @@ public class UpgradeInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

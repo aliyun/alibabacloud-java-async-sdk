@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecycleBinStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecycleBinStatusResponseBody</p>
  */
 public class DescribeRecycleBinStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRecycleBinStatusResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeRecycleBinStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACB5258F-25AF-4D7C-8FAA-B6FE60******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,11 +78,14 @@ public class DescribeRecycleBinStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the table recycle bin. Valid values:
-         * <p>
+         * <p>The status of the table recycle bin. Valid values:</p>
+         * <ul>
+         * <li>disable: The table recycle bin is enabled.</li>
+         * <li>enable: The table recycle bin is disabled.</li>
+         * </ul>
          * 
-         * *   disable: The table recycle bin is enabled.
-         * *   enable: The table recycle bin is disabled.
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -82,7 +93,10 @@ public class DescribeRecycleBinStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

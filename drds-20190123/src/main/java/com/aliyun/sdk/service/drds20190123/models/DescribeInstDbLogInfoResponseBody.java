@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstDbLogInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstDbLogInfoResponseBody</p>
  */
 public class DescribeInstDbLogInfoResponseBody extends TeaModel {
-    @NameInMap("LogTimeRange")
+    @com.aliyun.core.annotation.NameInMap("LogTimeRange")
     private LogTimeRange logTimeRange;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeInstDbLogInfoResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The time range for log query.
+         * <p>The time range for log query.</p>
          */
         public Builder logTimeRange(LogTimeRange logTimeRange) {
             this.logTimeRange = logTimeRange;
@@ -70,7 +75,10 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5438952-70EE-4FA5-87A9-080DB0ASD45F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstDbLogInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstDbLogInfoResponseBody</p>
+     */
     public static class LogTimeRange extends TeaModel {
-        @NameInMap("SupportLatestTime")
+        @com.aliyun.core.annotation.NameInMap("SupportLatestTime")
         private Long supportLatestTime;
 
-        @NameInMap("SupportOldestTime")
+        @com.aliyun.core.annotation.NameInMap("SupportOldestTime")
         private Long supportOldestTime;
 
         private LogTimeRange(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
             private Long supportOldestTime; 
 
             /**
-             * The start time of the query time range.
+             * <p>The start time of the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568267711</p>
              */
             public Builder supportLatestTime(Long supportLatestTime) {
                 this.supportLatestTime = supportLatestTime;
@@ -138,7 +158,10 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task.
+             * <p>The end time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568367711</p>
              */
             public Builder supportOldestTime(Long supportOldestTime) {
                 this.supportOldestTime = supportOldestTime;

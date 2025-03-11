@@ -1,48 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsSlowSqlsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDrdsSlowSqlsRequest</p>
  */
 public class DescribeDrdsSlowSqlsRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("ExeTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExeTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long exeTime;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeDrdsSlowSqlsRequest(Builder builder) {
@@ -53,6 +62,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         this.exeTime = builder.exeTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -112,6 +122,13 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -125,6 +142,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         private Long exeTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
         private Long startTime; 
 
         private Builder() {
@@ -139,11 +157,16 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
             this.exeTime = request.exeTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -152,7 +175,11 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds***************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -161,7 +188,11 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * The start time of the SQL query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
+         * <p>The start time of the SQL query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568267711000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +201,11 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * The SQL execution time. Unit: ms.
+         * <p>The SQL execution time. Unit: ms.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder exeTime(Long exeTime) {
             this.putQueryParameter("ExeTime", exeTime);
@@ -179,7 +214,10 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +226,10 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +238,20 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * The end time of the SQL query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The end time of the SQL query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568269711000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

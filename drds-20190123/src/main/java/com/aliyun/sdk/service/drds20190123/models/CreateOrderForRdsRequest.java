@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderForRdsRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderForRdsRequest</p>
  */
 public class CreateOrderForRdsRequest extends Request {
-    @Query
-    @NameInMap("Params")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String params;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CreateOrderForRdsRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class CreateOrderForRdsRequest extends Request {
         } 
 
         /**
-         * The JSON string that contains the order details. For more information, see [CreateDBInstance](~~26228~~).
+         * <p>The JSON string that contains the order details. For more information, see <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -78,7 +87,10 @@ public class CreateOrderForRdsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

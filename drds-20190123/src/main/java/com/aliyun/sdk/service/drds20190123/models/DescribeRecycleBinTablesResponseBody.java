@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecycleBinTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecycleBinTablesResponseBody</p>
  */
 public class DescribeRecycleBinTablesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRecycleBinTablesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,20 +62,23 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The data object returned.
+         * <p>The data object returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D64DE5944A1E541E0CB908A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,14 +102,20 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecycleBinTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecycleBinTablesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("OriginalTableName")
+        @com.aliyun.core.annotation.NameInMap("OriginalTableName")
         private String originalTableName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Data(Builder builder) {
@@ -142,7 +159,10 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The time when the table was created.
+             * <p>The time when the table was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-16 14:42:06</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -150,7 +170,10 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The original name of the table.
+             * <p>The original name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIN_T4AG3CY5WWXPKHITCHJY</p>
              */
             public Builder originalTableName(String originalTableName) {
                 this.originalTableName = originalTableName;
@@ -158,7 +181,10 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

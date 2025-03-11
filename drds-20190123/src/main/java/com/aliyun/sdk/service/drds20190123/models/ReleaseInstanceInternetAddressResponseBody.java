@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstanceInternetAddressResponseBody} extends {@link TeaModel}
  *
  * <p>ReleaseInstanceInternetAddressResponseBody</p>
  */
 public class ReleaseInstanceInternetAddressResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ReleaseInstanceInternetAddressResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ReleaseInstanceInternetAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result returned by the current API.
+         * <p>The result returned by the current API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +66,10 @@ public class ReleaseInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD17CD3C-3355-49E8-9231-FE2DB0******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

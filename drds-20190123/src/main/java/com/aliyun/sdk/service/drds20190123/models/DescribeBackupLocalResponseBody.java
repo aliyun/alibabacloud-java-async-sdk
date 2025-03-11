@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupLocalResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupLocalResponseBody</p>
  */
 public class DescribeBackupLocalResponseBody extends TeaModel {
-    @NameInMap("BackupPolicyDO")
+    @com.aliyun.core.annotation.NameInMap("BackupPolicyDO")
     private BackupPolicyDO backupPolicyDO;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupLocalResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the backup policy.
+         * <p>The information about the backup policy.</p>
          */
         public Builder backupPolicyDO(BackupPolicyDO backupPolicyDO) {
             this.backupPolicyDO = backupPolicyDO;
@@ -70,7 +75,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDC9CFD5-306D-4A23-9D8C-057274C6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,59 +102,65 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupLocalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupLocalResponseBody</p>
+     */
     public static class BackupPolicyDO extends TeaModel {
-        @NameInMap("BackupAppName")
+        @com.aliyun.core.annotation.NameInMap("BackupAppName")
         private String backupAppName;
 
-        @NameInMap("BackupDbName")
+        @com.aliyun.core.annotation.NameInMap("BackupDbName")
         private String backupDbName;
 
-        @NameInMap("BackupLevel")
+        @com.aliyun.core.annotation.NameInMap("BackupLevel")
         private String backupLevel;
 
-        @NameInMap("BackupLog")
+        @com.aliyun.core.annotation.NameInMap("BackupLog")
         private String backupLog;
 
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("BackupPolicyMode")
+        @com.aliyun.core.annotation.NameInMap("BackupPolicyMode")
         private String backupPolicyMode;
 
-        @NameInMap("BackupRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
         private Long backupRetentionPeriod;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("DataBackupRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("DataBackupRetentionPeriod")
         private Long dataBackupRetentionPeriod;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("HighSpaceUsageProtection")
+        @com.aliyun.core.annotation.NameInMap("HighSpaceUsageProtection")
         private Long highSpaceUsageProtection;
 
-        @NameInMap("LocalLogRetentionHours")
+        @com.aliyun.core.annotation.NameInMap("LocalLogRetentionHours")
         private Long localLogRetentionHours;
 
-        @NameInMap("LocalLogRetentionSpace")
+        @com.aliyun.core.annotation.NameInMap("LocalLogRetentionSpace")
         private Long localLogRetentionSpace;
 
-        @NameInMap("LogBackupRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
         private Long logBackupRetentionPeriod;
 
-        @NameInMap("NextBackupActuallyTime")
+        @com.aliyun.core.annotation.NameInMap("NextBackupActuallyTime")
         private String nextBackupActuallyTime;
 
-        @NameInMap("PreferredBackupPeriod")
+        @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
         private String preferredBackupPeriod;
 
-        @NameInMap("PreferredBackupTime")
+        @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
         private String preferredBackupTime;
 
         private BackupPolicyDO(Builder builder) {
@@ -322,7 +339,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             private String preferredBackupTime; 
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupAppName(String backupAppName) {
                 this.backupAppName = backupAppName;
@@ -330,7 +350,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupDbName(String backupDbName) {
                 this.backupDbName = backupDbName;
@@ -338,7 +361,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupLevel(String backupLevel) {
                 this.backupLevel = backupLevel;
@@ -346,7 +372,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupLog(String backupLog) {
                 this.backupLog = backupLog;
@@ -354,7 +383,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -362,7 +394,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupPolicyMode(String backupPolicyMode) {
                 this.backupPolicyMode = backupPolicyMode;
@@ -370,7 +405,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
                 this.backupRetentionPeriod = backupRetentionPeriod;
@@ -378,7 +416,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -386,7 +427,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dataBackupRetentionPeriod(Long dataBackupRetentionPeriod) {
                 this.dataBackupRetentionPeriod = dataBackupRetentionPeriod;
@@ -394,7 +438,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -402,7 +449,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -410,11 +460,14 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the feature is enabled to forcibly delete binary log files if the used storage space of the instance exceeds 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values:
-             * <p>
+             * <p>Indicates whether the feature is enabled to forcibly delete binary log files if the used storage space of the instance exceeds 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values:</p>
+             * <ul>
+             * <li>1: The feature is enabled.</li>
+             * <li>0: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   1: The feature is enabled.
-             * *   0: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder highSpaceUsageProtection(Long highSpaceUsageProtection) {
                 this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -422,7 +475,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: **18**. The value **0** indicates that log backup files are not retained.
+             * <p>The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: <strong>18</strong>. The value <strong>0</strong> indicates that log backup files are not retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder localLogRetentionHours(Long localLogRetentionHours) {
                 this.localLogRetentionHours = localLogRetentionHours;
@@ -430,7 +486,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum storage usage that is allowed for local log files. Valid values: 0 to 50. Default value: 30.
+             * <p>The maximum storage usage that is allowed for local log files. Valid values: 0 to 50. Default value: 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder localLogRetentionSpace(Long localLogRetentionSpace) {
                 this.localLogRetentionSpace = localLogRetentionSpace;
@@ -438,7 +497,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder logBackupRetentionPeriod(Long logBackupRetentionPeriod) {
                 this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -446,7 +508,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder nextBackupActuallyTime(String nextBackupActuallyTime) {
                 this.nextBackupActuallyTime = nextBackupActuallyTime;
@@ -454,7 +519,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder preferredBackupPeriod(String preferredBackupPeriod) {
                 this.preferredBackupPeriod = preferredBackupPeriod;
@@ -462,7 +530,10 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * No value is returned.
+             * <p>No value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder preferredBackupTime(String preferredBackupTime) {
                 this.preferredBackupTime = preferredBackupTime;

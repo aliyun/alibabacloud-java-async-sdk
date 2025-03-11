@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceInternetAddressResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceInternetAddressResponseBody</p>
  */
 public class CreateInstanceInternetAddressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateInstanceInternetAddressResponseBody(Builder builder) {
@@ -74,10 +79,13 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned when the activity fails.
-         * <p>
+         * <p>The error code returned when the activity fails.</p>
+         * <blockquote>
+         * <p> This parameter appears only when an error occurs during the API call.</p>
+         * </blockquote>
          * 
-         * >  This parameter appears only when an error occurs during the API call.
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -85,7 +93,10 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the public IP address was created.
+         * <p>Indicates whether the public IP address was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -93,7 +104,10 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DF6052F-15E2-4E69-9628-D6BCC3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +115,10 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

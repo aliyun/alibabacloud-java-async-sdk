@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutStartBackupRequest} extends {@link RequestModel}
  *
  * <p>PutStartBackupRequest</p>
  */
 public class PutStartBackupRequest extends Request {
-    @Query
-    @NameInMap("BackupDbNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDbNames")
     private String backupDbNames;
 
-    @Query
-    @NameInMap("BackupLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLevel")
     private String backupLevel;
 
-    @Query
-    @NameInMap("BackupMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMode")
     private String backupMode;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
     private PutStartBackupRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class PutStartBackupRequest extends Request {
         } 
 
         /**
-         * If you need to back up data at the database level, you must specify the list of databases to be backed up, and separate multiple databases with commas (,).
+         * <p>If you need to back up data at the database level, you must specify the list of databases to be backed up, and separate multiple databases with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_1, db_2</p>
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -106,11 +114,14 @@ public class PutStartBackupRequest extends Request {
         }
 
         /**
-         * The backup level. Valid values:
-         * <p>
+         * <p>The backup level. Valid values:</p>
+         * <ul>
+         * <li>instance: instance</li>
+         * <li>db: The database type.</li>
+         * </ul>
          * 
-         * *   instance: instance
-         * *   db: The database type.
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -119,11 +130,14 @@ public class PutStartBackupRequest extends Request {
         }
 
         /**
-         * The backup mode. For more information, see [backup mode](~~108631~~) and the valid values are as follows:
-         * <p>
+         * <p>The backup mode. For more information, see <a href="https://help.aliyun.com/document_detail/108631.html">backup mode</a> and the valid values are as follows:</p>
+         * <ul>
+         * <li>phy: fast backup</li>
+         * <li>logic: Consistent backup</li>
+         * </ul>
          * 
-         * *   phy: fast backup
-         * *   logic: Consistent backup
+         * <strong>example:</strong>
+         * <p>phy</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -132,7 +146,11 @@ public class PutStartBackupRequest extends Request {
         }
 
         /**
-         * The ID of the DRDS instance.
+         * <p>The ID of the DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds****c6vxxyzd</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

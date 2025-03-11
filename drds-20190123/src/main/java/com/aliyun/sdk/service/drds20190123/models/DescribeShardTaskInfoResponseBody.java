@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeShardTaskInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeShardTaskInfoResponseBody</p>
  */
 public class DescribeShardTaskInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeShardTaskInfoResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates the data that is returned.
+         * <p>Indicates the data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
+         * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D64DE5944A1E541E0CB908A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,20 +102,26 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeShardTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardTaskInfoResponseBody</p>
+     */
     public static class Full extends TeaModel {
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Integer expired;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Integer tps;
 
         private Full(Builder builder) {
@@ -166,7 +183,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Indicates the number of remaining days before the tasks expire.
+             * <p>Indicates the number of remaining days before the tasks expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -174,7 +194,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the progress of the tasks.
+             * <p>Indicates the progress of the tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -182,7 +205,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the start time when the tasks are performed.
+             * <p>Indicates the start time when the tasks are performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-16 15:11:53</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -190,7 +216,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of tasks.
+             * <p>Indicates the number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -198,7 +227,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of transactions processed by the database per second.
+             * <p>Indicates the number of transactions processed by the database per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -212,20 +244,26 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardTaskInfoResponseBody</p>
+     */
     public static class FullCheck extends TeaModel {
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Integer expired;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Integer tps;
 
         private FullCheck(Builder builder) {
@@ -287,7 +325,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Indicates the number of remaining days before the tasks expire.
+             * <p>Indicates the number of remaining days before the tasks expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -295,7 +336,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the progress of the tasks.
+             * <p>Indicates the progress of the tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -303,7 +347,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the start time when the tasks are performed.
+             * <p>Indicates the start time when the tasks are performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-16 15:12:53</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -311,7 +358,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of tasks.
+             * <p>Indicates the number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -319,7 +369,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of transactions processed by the database per second.
+             * <p>Indicates the number of transactions processed by the database per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -333,20 +386,26 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardTaskInfoResponseBody</p>
+     */
     public static class FullRevise extends TeaModel {
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Integer expired;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Integer tps;
 
         private FullRevise(Builder builder) {
@@ -408,7 +467,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Indicates the number of remaining days before the tasks expire.
+             * <p>Indicates the number of remaining days before the tasks expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -416,7 +478,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the progress of the tasks.
+             * <p>Indicates the progress of the tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -424,7 +489,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the start time when the tasks are performed.
+             * <p>Indicates the start time when the tasks are performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-16 15:12:53</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -432,7 +500,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of tasks.
+             * <p>Indicates the number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -440,7 +511,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of transactions processed by the database per second.
+             * <p>Indicates the number of transactions processed by the database per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -454,14 +528,20 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardTaskInfoResponseBody</p>
+     */
     public static class Increment extends TeaModel {
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Integer delay;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Integer tps;
 
         private Increment(Builder builder) {
@@ -505,7 +585,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Indicates the latency of the incremental data synchronization.
+             * <p>Indicates the latency of the incremental data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568617906</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -513,7 +596,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the start time when the incremental data synchronization is performed.
+             * <p>Indicates the start time when the incremental data synchronization is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-16 15:12:53</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -521,7 +607,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of transactions processed by the database per second.
+             * <p>Indicates the number of transactions processed by the database per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -535,20 +624,26 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardTaskInfoResponseBody</p>
+     */
     public static class Review extends TeaModel {
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Integer expired;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Integer tps;
 
         private Review(Builder builder) {
@@ -610,7 +705,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Indicates the number of remaining days before the tasks expire.
+             * <p>Indicates the number of remaining days before the tasks expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -618,7 +716,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the progress of the tasks.
+             * <p>Indicates the progress of the tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -626,7 +727,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the start time when the tasks are performed.
+             * <p>Indicates the start time when the tasks are performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-16 15:12:53</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -634,7 +738,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of tasks.
+             * <p>Indicates the number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -642,7 +749,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of transactions processed by the database per second.
+             * <p>Indicates the number of transactions processed by the database per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -656,38 +766,44 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeShardTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeShardTaskInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("Full")
+        @com.aliyun.core.annotation.NameInMap("Full")
         private Full full;
 
-        @NameInMap("FullCheck")
+        @com.aliyun.core.annotation.NameInMap("FullCheck")
         private FullCheck fullCheck;
 
-        @NameInMap("FullRevise")
+        @com.aliyun.core.annotation.NameInMap("FullRevise")
         private FullRevise fullRevise;
 
-        @NameInMap("Increment")
+        @com.aliyun.core.annotation.NameInMap("Increment")
         private Increment increment;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Review")
+        @com.aliyun.core.annotation.NameInMap("Review")
         private Review review;
 
-        @NameInMap("SourceTableName")
+        @com.aliyun.core.annotation.NameInMap("SourceTableName")
         private String sourceTableName;
 
-        @NameInMap("Stage")
+        @com.aliyun.core.annotation.NameInMap("Stage")
         private String stage;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetTableName")
+        @com.aliyun.core.annotation.NameInMap("TargetTableName")
         private String targetTableName;
 
         private Data(Builder builder) {
@@ -803,7 +919,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private String targetTableName; 
 
             /**
-             * Indicates the number of remaining days before the tasks to shard tables or convert tables expire.
+             * <p>Indicates the number of remaining days before the tasks to shard tables or convert tables expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -811,7 +930,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates information about full migration tasks.
+             * <p>Indicates information about full migration tasks.</p>
              */
             public Builder full(Full full) {
                 this.full = full;
@@ -819,7 +938,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates information about full check tasks.
+             * <p>Indicates information about full check tasks.</p>
              */
             public Builder fullCheck(FullCheck fullCheck) {
                 this.fullCheck = fullCheck;
@@ -827,7 +946,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates information about full correction tasks.
+             * <p>Indicates information about full correction tasks.</p>
              */
             public Builder fullRevise(FullRevise fullRevise) {
                 this.fullRevise = fullRevise;
@@ -835,7 +954,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates information about incremental data synchronization.
+             * <p>Indicates information about incremental data synchronization.</p>
              */
             public Builder increment(Increment increment) {
                 this.increment = increment;
@@ -843,7 +962,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the incremental data synchronization progress.
+             * <p>Indicates the incremental data synchronization progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -851,7 +973,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates check tasks.
+             * <p>Indicates check tasks.</p>
              */
             public Builder review(Review review) {
                 this.review = review;
@@ -859,7 +981,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the table that you convert or shard.
+             * <p>Indicates the name of the table that you convert or shard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1</p>
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -867,7 +992,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the current stage of the task.
+             * <p>Indicates the current stage of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -875,7 +1003,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the state of the tasks to shard tables or convert tables.
+             * <p>Indicates the state of the tasks to shard tables or convert tables.</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -883,7 +1011,10 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the table after you convert or shard the table.
+             * <p>Indicates the name of the table after you convert or shard the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a2</p>
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;

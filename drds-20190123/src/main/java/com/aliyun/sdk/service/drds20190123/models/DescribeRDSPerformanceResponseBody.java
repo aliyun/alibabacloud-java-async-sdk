@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRDSPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRDSPerformanceResponseBody</p>
  */
 public class DescribeRDSPerformanceResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRDSPerformanceResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,20 +62,23 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The result set of the query.
+         * <p>The result set of the query.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB53EC68-463C-4187-8D2B-C2AD8C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRDSPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRDSPerformanceResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Values(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The time point when the value of the monitoring metric was obtained. The value is in the UNIX timestamp format. The time is displayed in UTC. Unit: ms.
+             * <p>The time point when the value of the monitoring metric was obtained. The value is in the UNIX timestamp format. The time is displayed in UTC. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603209660000</p>
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -138,7 +158,10 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the monitoring metric.
+             * <p>The value of the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.58</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -152,21 +175,27 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRDSPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRDSPerformanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private Integer nodeNum;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Values")
-        private java.util.List < Values> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Values> values;
 
         private Data(Builder builder) {
             this.key = builder.key;
@@ -215,7 +244,7 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
@@ -224,10 +253,13 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             private String nodeName; 
             private Integer nodeNum; 
             private String unit; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
-             * The name of the monitoring metric.
+             * <p>The name of the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpuusage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -235,10 +267,13 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
-             * <p>
+             * <p>The name of the node.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the storage type of the database is PolarDB for MySQL. If the storage type of the database is ApsaraDB RDS for MySQL, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the storage type of the database is PolarDB for MySQL. If the storage type of the database is ApsaraDB RDS for MySQL, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>pi-*************</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -246,7 +281,10 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -254,7 +292,10 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the monitoring metric.
+             * <p>The unit of the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -262,9 +303,9 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the monitoring metric data.
+             * <p>The details of the monitoring metric data.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }

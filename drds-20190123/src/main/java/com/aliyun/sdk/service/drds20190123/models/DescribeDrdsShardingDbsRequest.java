@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsShardingDbsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDrdsShardingDbsRequest</p>
  */
 public class DescribeDrdsShardingDbsRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DbNamePattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNamePattern")
     private String dbNamePattern;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
     private DescribeDrdsShardingDbsRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         } 
 
         /**
-         * The name of the database whose shards you want to query.
+         * <p>The name of the database whose shards you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -121,7 +130,10 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * The matching pattern of the database name.
+         * <p>The matching pattern of the database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbNamePattern(String dbNamePattern) {
             this.putQueryParameter("DbNamePattern", dbNamePattern);
@@ -130,7 +142,11 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance whose database shards you want to query.
+         * <p>The ID of the PolarDB-X 1.0 instance whose database shards you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdshbgaf3c63qbo</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -139,7 +155,10 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +167,10 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * The number of database shards returned on each page.
+         * <p>The number of database shards returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

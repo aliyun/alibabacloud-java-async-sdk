@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDrdsDBRequest} extends {@link RequestModel}
  *
  * <p>CreateDrdsDBRequest</p>
  */
 public class CreateDrdsDBRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Query
-    @NameInMap("DbInstType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstType")
     private String dbInstType;
 
-    @Query
-    @NameInMap("DbInstanceIsCreating")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstanceIsCreating")
     private Boolean dbInstanceIsCreating;
 
-    @Query
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("Encode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encode")
     private String encode;
 
-    @Query
-    @NameInMap("InstDbName")
-    private java.util.List < InstDbName> instDbName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstDbName")
+    private java.util.List<InstDbName> instDbName;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RdsInstance")
-    private java.util.List < String > rdsInstance;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsInstance")
+    private java.util.List<String> rdsInstance;
 
-    @Query
-    @NameInMap("RdsSuperAccount")
-    private java.util.List < RdsSuperAccount> rdsSuperAccount;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsSuperAccount")
+    private java.util.List<RdsSuperAccount> rdsSuperAccount;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private CreateDrdsDBRequest(Builder builder) {
@@ -130,7 +135,7 @@ public class CreateDrdsDBRequest extends Request {
     /**
      * @return instDbName
      */
-    public java.util.List < InstDbName> getInstDbName() {
+    public java.util.List<InstDbName> getInstDbName() {
         return this.instDbName;
     }
 
@@ -144,14 +149,14 @@ public class CreateDrdsDBRequest extends Request {
     /**
      * @return rdsInstance
      */
-    public java.util.List < String > getRdsInstance() {
+    public java.util.List<String> getRdsInstance() {
         return this.rdsInstance;
     }
 
     /**
      * @return rdsSuperAccount
      */
-    public java.util.List < RdsSuperAccount> getRdsSuperAccount() {
+    public java.util.List<RdsSuperAccount> getRdsSuperAccount() {
         return this.rdsSuperAccount;
     }
 
@@ -169,10 +174,10 @@ public class CreateDrdsDBRequest extends Request {
         private String dbName; 
         private String drdsInstanceId; 
         private String encode; 
-        private java.util.List < InstDbName> instDbName; 
+        private java.util.List<InstDbName> instDbName; 
         private String password; 
-        private java.util.List < String > rdsInstance; 
-        private java.util.List < RdsSuperAccount> rdsSuperAccount; 
+        private java.util.List<String> rdsInstance; 
+        private java.util.List<RdsSuperAccount> rdsSuperAccount; 
         private String type; 
 
         private Builder() {
@@ -195,10 +200,11 @@ public class CreateDrdsDBRequest extends Request {
         } 
 
         /**
-         * The name of the account that has permissions to access all databases on the ApsaraDB RDS for MySQL instance.
-         * <p>
+         * <p>The name of the account that has permissions to access all databases on the ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required only when the Type parameter is set to VERTICAL.</p>
          * 
-         * This parameter is required only when the Type parameter is set to VERTICAL.
+         * <strong>example:</strong>
+         * <p>drds_sample_account</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -207,7 +213,10 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * The type of the storage instances that are used by the PolarDB-X 1.0 database. Set the value to RDS.
+         * <p>The type of the storage instances that are used by the PolarDB-X 1.0 database. Set the value to RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -216,7 +225,10 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * Specifies whether the required ApsaraDB RDS for MySQL instance is being created.
+         * <p>Specifies whether the required ApsaraDB RDS for MySQL instance is being created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dbInstanceIsCreating(Boolean dbInstanceIsCreating) {
             this.putQueryParameter("DbInstanceIsCreating", dbInstanceIsCreating);
@@ -225,7 +237,10 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * The name of the PolarDB-X 1.0 database you want to create.
+         * <p>The name of the PolarDB-X 1.0 database you want to create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -234,7 +249,11 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance on which you want to create the database.
+         * <p>The ID of the PolarDB-X 1.0 instance on which you want to create the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdshbgal154****</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -243,7 +262,10 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * The encoding method that is used by the database.
+         * <p>The encoding method that is used by the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         public Builder encode(String encode) {
             this.putQueryParameter("Encode", encode);
@@ -254,14 +276,17 @@ public class CreateDrdsDBRequest extends Request {
         /**
          * InstDbName.
          */
-        public Builder instDbName(java.util.List < InstDbName> instDbName) {
+        public Builder instDbName(java.util.List<InstDbName> instDbName) {
             this.putQueryParameter("InstDbName", instDbName);
             this.instDbName = instDbName;
             return this;
         }
 
         /**
-         * The password that is used to log on to the database.
+         * <p>The password that is used to log on to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_sample_password</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -272,7 +297,7 @@ public class CreateDrdsDBRequest extends Request {
         /**
          * RdsInstance.
          */
-        public Builder rdsInstance(java.util.List < String > rdsInstance) {
+        public Builder rdsInstance(java.util.List<String> rdsInstance) {
             this.putQueryParameter("RdsInstance", rdsInstance);
             this.rdsInstance = rdsInstance;
             return this;
@@ -281,18 +306,21 @@ public class CreateDrdsDBRequest extends Request {
         /**
          * RdsSuperAccount.
          */
-        public Builder rdsSuperAccount(java.util.List < RdsSuperAccount> rdsSuperAccount) {
+        public Builder rdsSuperAccount(java.util.List<RdsSuperAccount> rdsSuperAccount) {
             this.putQueryParameter("RdsSuperAccount", rdsSuperAccount);
             this.rdsSuperAccount = rdsSuperAccount;
             return this;
         }
 
         /**
-         * The partitioning mode of the database. Valid values:
-         * <p>
+         * <p>The partitioning mode of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>HORIZONTAL</strong>: The database is horizontally partitioned (sharded).</li>
+         * <li><strong>VERTICAL</strong>: The database is vertically partitioned.</li>
+         * </ul>
          * 
-         * *   **HORIZONTAL**: The database is horizontally partitioned (sharded).
-         * *   **VERTICAL**: The database is vertically partitioned.
+         * <strong>example:</strong>
+         * <p>HORIZONTAL</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -307,12 +335,18 @@ public class CreateDrdsDBRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDrdsDBRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDrdsDBRequest</p>
+     */
     public static class InstDbName extends TeaModel {
-        @NameInMap("DbInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceId")
         private String dbInstanceId;
 
-        @NameInMap("ShardDbName")
-        private java.util.List < String > shardDbName;
+        @com.aliyun.core.annotation.NameInMap("ShardDbName")
+        private java.util.List<String> shardDbName;
 
         private InstDbName(Builder builder) {
             this.dbInstanceId = builder.dbInstanceId;
@@ -337,16 +371,19 @@ public class CreateDrdsDBRequest extends Request {
         /**
          * @return shardDbName
          */
-        public java.util.List < String > getShardDbName() {
+        public java.util.List<String> getShardDbName() {
             return this.shardDbName;
         }
 
         public static final class Builder {
             private String dbInstanceId; 
-            private java.util.List < String > shardDbName; 
+            private java.util.List<String> shardDbName; 
 
             /**
-             * The ID of the ApsaraDB RDS for MySQL instance on which the databases need to be vertically partitioned. This parameter is required only when the Type parameter is set to VERTICAL.
+             * <p>The ID of the ApsaraDB RDS for MySQL instance on which the databases need to be vertically partitioned. This parameter is required only when the Type parameter is set to VERTICAL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_sample_rds_id</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -356,7 +393,7 @@ public class CreateDrdsDBRequest extends Request {
             /**
              * ShardDbName.
              */
-            public Builder shardDbName(java.util.List < String > shardDbName) {
+            public Builder shardDbName(java.util.List<String> shardDbName) {
                 this.shardDbName = shardDbName;
                 return this;
             }
@@ -368,14 +405,20 @@ public class CreateDrdsDBRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDrdsDBRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDrdsDBRequest</p>
+     */
     public static class RdsSuperAccount extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DbInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceId")
         private String dbInstanceId;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
         private RdsSuperAccount(Builder builder) {
@@ -419,7 +462,10 @@ public class CreateDrdsDBRequest extends Request {
             private String password; 
 
             /**
-             * The account name of the super administrator that is used to connect to the ApsaraDB RDS for MySQL instance.
+             * <p>The account name of the super administrator that is used to connect to the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_sample_rds_super_account</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -427,7 +473,10 @@ public class CreateDrdsDBRequest extends Request {
             }
 
             /**
-             * The ID of ApsaraDB RDS instance.
+             * <p>The ID of ApsaraDB RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_sample_rds_id</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -435,7 +484,10 @@ public class CreateDrdsDBRequest extends Request {
             }
 
             /**
-             * The password of the super administrator account that is used to connect to the ApsaraDB RDS instance.
+             * <p>The password of the super administrator account that is used to connect to the ApsaraDB RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_sample_rds_super_password</p>
              */
             public Builder password(String password) {
                 this.password = password;

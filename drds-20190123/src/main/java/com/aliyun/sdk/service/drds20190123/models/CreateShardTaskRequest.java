@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateShardTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateShardTaskRequest</p>
  */
 public class CreateShardTaskRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SourceTableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceTableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceTableName;
 
-    @Query
-    @NameInMap("TargetTableName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetTableName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String targetTableName;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private CreateShardTaskRequest(Builder builder) {
@@ -129,7 +134,11 @@ public class CreateShardTaskRequest extends Request {
         } 
 
         /**
-         * The name of the DRDS database.
+         * <p>The name of the DRDS database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -138,7 +147,11 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * The ID of the DRDS instance.
+         * <p>The ID of the DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -147,7 +160,10 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * The ID of the region where the resource group resides.
+         * <p>The ID of the region where the resource group resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +172,11 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * The name of the source table.
+         * <p>The name of the source table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tb1</p>
          */
         public Builder sourceTableName(String sourceTableName) {
             this.putQueryParameter("SourceTableName", sourceTableName);
@@ -165,7 +185,11 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * The name of the destination table.
+         * <p>The name of the destination table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tb2</p>
          */
         public Builder targetTableName(String targetTableName) {
             this.putQueryParameter("TargetTableName", targetTableName);
@@ -174,7 +198,11 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:`  SHARD_TO_SINGLE `,`  SINGLE_TO_SHARD `,`  SHARD_TO_SHARD `.
+         * <p>The type of the task. Valid values:<code> SHARD_TO_SINGLE</code>,<code> SINGLE_TO_SHARD</code>,<code> SHARD_TO_SHARD</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SINGLE_TO_SHARD</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

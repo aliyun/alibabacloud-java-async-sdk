@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsSlowSqlsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsSlowSqlsResponseBody</p>
  */
 public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeDrdsSlowSqlsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Indicates the details of the slow SQL query.
+         * <p>Indicates the details of the slow SQL query.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -106,7 +111,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the page number of the returned page.
+         * <p>Indicates the page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the number of entries returned on each page.
+         * <p>Indicates the number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>509BDE17-505A-4B3B-854D-30D3F0******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the total number of entries.
+         * <p>Indicates the total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -151,20 +171,26 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsSlowSqlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsSlowSqlsResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("ResponseTime")
+        @com.aliyun.core.annotation.NameInMap("ResponseTime")
         private Long responseTime;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("SendTime")
+        @com.aliyun.core.annotation.NameInMap("SendTime")
         private Long sendTime;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
         private Item(Builder builder) {
@@ -226,7 +252,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             private String sql; 
 
             /**
-             * Indicates the IP address of the execution machine.
+             * <p>Indicates the IP address of the execution machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.<em><strong>.</strong></em></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -234,7 +263,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the response time. Unit: ms.
+             * <p>Indicates the response time. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568267711</p>
              */
             public Builder responseTime(Long responseTime) {
                 this.responseTime = responseTime;
@@ -242,7 +274,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the database.
+             * <p>Indicates the name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -250,7 +285,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the time when the slow SQL query was sent. Unit: ms.
+             * <p>Indicates the time when the slow SQL query was sent. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568267711</p>
              */
             public Builder sendTime(Long sendTime) {
                 this.sendTime = sendTime;
@@ -258,7 +296,10 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the content of the slow SQL query.
+             * <p>Indicates the content of the slow SQL query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT   count(1) from   payment_order where   order_status = &quot;08&quot;;</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -272,9 +313,15 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsSlowSqlsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsSlowSqlsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
         private Items(Builder builder) {
             this.item = builder.item;
@@ -291,17 +338,17 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

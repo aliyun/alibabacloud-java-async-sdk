@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTableListByTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTableListByTypeResponseBody</p>
  */
 public class DescribeTableListByTypeResponseBody extends TeaModel {
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeTableListByTypeResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -90,7 +95,7 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,15 +103,18 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Indicates the information about tables.
+         * <p>Indicates the information about tables.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * Indicates the page number of the returned page.
+         * <p>Indicates the page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the number of entries returned per page.
+         * <p>Indicates the number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
+         * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B360F47B-59E3-4D1C-BA03-6BFB1C993F88</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the total number of returned tables.
+         * <p>Indicates the total number of returned tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -151,11 +171,17 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTableListByTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableListByTypeResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private String property;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private List(Builder builder) {
@@ -190,7 +216,10 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Indicates the property of a table.
+             * <p>Indicates the property of a table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>single</p>
              */
             public Builder property(String property) {
                 this.property = property;
@@ -198,7 +227,10 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the table.
+             * <p>Indicates the name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>employee_split</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

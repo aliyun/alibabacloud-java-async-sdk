@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSqlFlashbakTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSqlFlashbakTaskResponseBody</p>
  */
 public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SqlFlashbackTasks")
+    @com.aliyun.core.annotation.NameInMap("SqlFlashbackTasks")
     private SqlFlashbackTasks sqlFlashbackTasks;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSqlFlashbakTaskResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D64DE59-44A1-E541-E0CB-B7E5C4305162</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the information about flashback tasks.
+         * <p>Indicates the information about flashback tasks.</p>
          */
         public Builder sqlFlashbackTasks(SqlFlashbackTasks sqlFlashbackTasks) {
             this.sqlFlashbackTasks = sqlFlashbackTasks;
@@ -78,7 +86,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,59 +102,65 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSqlFlashbakTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlFlashbakTaskResponseBody</p>
+     */
     public static class SqlFlashbackTask extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstId")
+        @com.aliyun.core.annotation.NameInMap("InstId")
         private String instId;
 
-        @NameInMap("RecallProgress")
+        @com.aliyun.core.annotation.NameInMap("RecallProgress")
         private Integer recallProgress;
 
-        @NameInMap("RecallRestoreType")
+        @com.aliyun.core.annotation.NameInMap("RecallRestoreType")
         private Integer recallRestoreType;
 
-        @NameInMap("RecallStatus")
+        @com.aliyun.core.annotation.NameInMap("RecallStatus")
         private Integer recallStatus;
 
-        @NameInMap("RecallType")
+        @com.aliyun.core.annotation.NameInMap("RecallType")
         private Integer recallType;
 
-        @NameInMap("SearchEndTime")
+        @com.aliyun.core.annotation.NameInMap("SearchEndTime")
         private Long searchEndTime;
 
-        @NameInMap("SearchStartTime")
+        @com.aliyun.core.annotation.NameInMap("SearchStartTime")
         private Long searchStartTime;
 
-        @NameInMap("SqlCounter")
+        @com.aliyun.core.annotation.NameInMap("SqlCounter")
         private Long sqlCounter;
 
-        @NameInMap("SqlPk")
+        @com.aliyun.core.annotation.NameInMap("SqlPk")
         private String sqlPk;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TraceId")
+        @com.aliyun.core.annotation.NameInMap("TraceId")
         private String traceId;
 
         private SqlFlashbackTask(Builder builder) {
@@ -322,7 +339,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             private String traceId; 
 
             /**
-             * Indicates the name of the database on which a flashback task is performed.
+             * <p>Indicates the name of the database on which a flashback task is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_flashback</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -330,7 +350,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the download URL.
+             * <p>Indicates the download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://...</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -338,7 +361,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the time when the download URL expires.
+             * <p>Indicates the time when the download URL expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1569216270000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -346,7 +372,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the point in time when the instance was created.
+             * <p>Indicates the point in time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568611408000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -354,7 +383,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the point in time when the flashback task is performed.
+             * <p>Indicates the point in time when the flashback task is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568611469000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -362,7 +394,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the primary key that corresponds to a table used in the flashback task.
+             * <p>Indicates the ID of the primary key that corresponds to a table used in the flashback task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>238</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -370,7 +405,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the instance.
+             * <p>Indicates the ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdshbga76p6****</p>
              */
             public Builder instId(String instId) {
                 this.instId = instId;
@@ -378,7 +416,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the progress of the reverse call.
+             * <p>Indicates the progress of the reverse call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder recallProgress(Integer recallProgress) {
                 this.recallProgress = recallProgress;
@@ -386,11 +427,14 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the flashback task. Valid values:
-             * <p>
+             * <p>Indicates the type of the flashback task. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: image restoration</li>
+             * <li><strong>2</strong>: reverse restoration</li>
+             * </ul>
              * 
-             * *   **1**: image restoration
-             * *   **2**: reverse restoration
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallRestoreType(Integer recallRestoreType) {
                 this.recallRestoreType = recallRestoreType;
@@ -398,7 +442,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the status of the data recall task.
+             * <p>Indicates the status of the data recall task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallStatus(Integer recallStatus) {
                 this.recallStatus = recallStatus;
@@ -406,11 +453,14 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the reverse call. Valid values:
-             * <p>
+             * <p>Indicates the type of the reverse call. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: exact search</li>
+             * <li><strong>1</strong>: fuzzy search</li>
+             * </ul>
              * 
-             * *   **0**: exact search
-             * *   **1**: fuzzy search
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallType(Integer recallType) {
                 this.recallType = recallType;
@@ -418,7 +468,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the start time of the reverse call.
+             * <p>Indicates the start time of the reverse call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568509597000</p>
              */
             public Builder searchEndTime(Long searchEndTime) {
                 this.searchEndTime = searchEndTime;
@@ -426,7 +479,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the end time of the reverse call.
+             * <p>Indicates the end time of the reverse call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568609597000</p>
              */
             public Builder searchStartTime(Long searchStartTime) {
                 this.searchStartTime = searchStartTime;
@@ -434,7 +490,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of data rows that are flashed back.
+             * <p>Indicates the number of data rows that are flashed back.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sqlCounter(Long sqlCounter) {
                 this.sqlCounter = sqlCounter;
@@ -442,7 +501,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the primary key specified in the SQL statements.
+             * <p>Indicates the primary key specified in the SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder sqlPk(String sqlPk) {
                 this.sqlPk = sqlPk;
@@ -450,7 +512,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the types of the SQL statements.
+             * <p>Indicates the types of the SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Insert,Update,Delete</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -458,7 +523,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the table that contains the data that are flashed back.
+             * <p>Indicates the name of the table that contains the data that are flashed back.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_params</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -466,7 +534,10 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the trace of the SQL query.
+             * <p>Indicates the ID of the trace of the SQL query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -480,9 +551,15 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSqlFlashbakTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSqlFlashbakTaskResponseBody</p>
+     */
     public static class SqlFlashbackTasks extends TeaModel {
-        @NameInMap("SqlFlashbackTask")
-        private java.util.List < SqlFlashbackTask> sqlFlashbackTask;
+        @com.aliyun.core.annotation.NameInMap("SqlFlashbackTask")
+        private java.util.List<SqlFlashbackTask> sqlFlashbackTask;
 
         private SqlFlashbackTasks(Builder builder) {
             this.sqlFlashbackTask = builder.sqlFlashbackTask;
@@ -499,17 +576,17 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         /**
          * @return sqlFlashbackTask
          */
-        public java.util.List < SqlFlashbackTask> getSqlFlashbackTask() {
+        public java.util.List<SqlFlashbackTask> getSqlFlashbackTask() {
             return this.sqlFlashbackTask;
         }
 
         public static final class Builder {
-            private java.util.List < SqlFlashbackTask> sqlFlashbackTask; 
+            private java.util.List<SqlFlashbackTask> sqlFlashbackTask; 
 
             /**
              * SqlFlashbackTask.
              */
-            public Builder sqlFlashbackTask(java.util.List < SqlFlashbackTask> sqlFlashbackTask) {
+            public Builder sqlFlashbackTask(java.util.List<SqlFlashbackTask> sqlFlashbackTask) {
                 this.sqlFlashbackTask = sqlFlashbackTask;
                 return this;
             }

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsInstanceDbMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsInstanceDbMonitorResponseBody</p>
  */
 public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsInstanceDbMonitorResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The list of monitoring data.
+         * <p>The list of monitoring data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F7F8080-9132-4279-85D0-B7E5C4******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsInstanceDbMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceDbMonitorResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Values(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The time point when the value of monitoring data was obtained. The value is in the UNIX timestamp format. Unit: ms.
+             * <p>The time point when the value of monitoring data was obtained. The value is in the UNIX timestamp format. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603162805000</p>
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -138,7 +158,10 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The data value.
+             * <p>The data value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -152,15 +175,21 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsInstanceDbMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceDbMonitorResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Values")
-        private java.util.List < Values> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Values> values;
 
         private Data(Builder builder) {
             this.key = builder.key;
@@ -193,17 +222,20 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
             private String unit; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
-             * The name of the monitoring metric.
+             * <p>The name of the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qps</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +243,10 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the monitoring metric.
+             * <p>The unit of the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qps</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -219,9 +254,9 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the value of monitoring data.
+             * <p>The details about the value of monitoring data.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }

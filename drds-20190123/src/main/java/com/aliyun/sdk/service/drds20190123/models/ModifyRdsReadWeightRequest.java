@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRdsReadWeightRequest} extends {@link RequestModel}
  *
  * <p>ModifyRdsReadWeightRequest</p>
  */
 public class ModifyRdsReadWeightRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("InstanceNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceNames;
 
-    @Query
-    @NameInMap("Weights")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Weights")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String weights;
 
     private ModifyRdsReadWeightRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class ModifyRdsReadWeightRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -109,7 +118,11 @@ public class ModifyRdsReadWeightRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -118,7 +131,11 @@ public class ModifyRdsReadWeightRequest extends Request {
         }
 
         /**
-         * The names of the ApsaraDB RDS for MySQL instances. Separate the names with commas (,).
+         * <p>The names of the ApsaraDB RDS for MySQL instances. Separate the names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-<strong><strong><strong><strong><strong><strong><strong><strong>,rm-</strong></strong></strong></strong></strong></strong></strong></strong></p>
          */
         public Builder instanceNames(String instanceNames) {
             this.putQueryParameter("InstanceNames", instanceNames);
@@ -127,7 +144,11 @@ public class ModifyRdsReadWeightRequest extends Request {
         }
 
         /**
-         * The weights of the ApsaraDB RDS for MySQL instances. Separate the weights with commas (,).
+         * <p>The weights of the ApsaraDB RDS for MySQL instances. Separate the weights with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14,86</p>
          */
         public Builder weights(String weights) {
             this.putQueryParameter("Weights", weights);

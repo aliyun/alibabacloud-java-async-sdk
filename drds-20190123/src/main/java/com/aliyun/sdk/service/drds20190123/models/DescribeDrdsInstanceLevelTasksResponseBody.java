@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsInstanceLevelTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsInstanceLevelTasksResponseBody</p>
  */
 public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
     private DescribeDrdsInstanceLevelTasksResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         private Tasks tasks; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +89,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The list of returned unfinished tasks.
+         * <p>The list of returned unfinished tasks.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -91,38 +102,44 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsInstanceLevelTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceLevelTasksResponseBody</p>
+     */
     public static class Task extends TeaModel {
-        @NameInMap("AllowCancel")
+        @com.aliyun.core.annotation.NameInMap("AllowCancel")
         private Boolean allowCancel;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("ProgressDescription")
+        @com.aliyun.core.annotation.NameInMap("ProgressDescription")
         private String progressDescription;
 
-        @NameInMap("ShowProgress")
+        @com.aliyun.core.annotation.NameInMap("ShowProgress")
         private Boolean showProgress;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskPhase")
+        @com.aliyun.core.annotation.NameInMap("TaskPhase")
         private String taskPhase;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
         private Task(Builder builder) {
@@ -238,7 +255,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             private Integer taskType; 
 
             /**
-             * Indicates whether the task can be canceled.
+             * <p>Indicates whether the task can be canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowCancel(Boolean allowCancel) {
                 this.allowCancel = allowCancel;
@@ -246,7 +266,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned for the task.
+             * <p>The error message returned for the task.</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -254,7 +274,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task is created.
+             * <p>The timestamp when the task is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568705520000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -262,7 +285,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task. Valid values: 0 to 100.
+             * <p>The progress of the task. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -270,7 +296,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task progress.
+             * <p>The description of the task progress.</p>
              */
             public Builder progressDescription(String progressDescription) {
                 this.progressDescription = progressDescription;
@@ -278,7 +304,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the progress of the task is displayed.
+             * <p>Indicates whether the progress of the task is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder showProgress(Boolean showProgress) {
                 this.showProgress = showProgress;
@@ -286,7 +315,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312</p>
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -294,7 +326,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upgrade_instance</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -302,7 +337,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The phase of the task.
+             * <p>The phase of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskPhase(String taskPhase) {
                 this.taskPhase = taskPhase;
@@ -310,13 +348,16 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task. Valid values:
-             * <p>
+             * <p>The state of the task. Valid values:</p>
+             * <ul>
+             * <li>0: The task is being executed.</li>
+             * <li>1: The task is executed.</li>
+             * <li>2: The task failed to be executed.</li>
+             * <li>3: The task is canceled.</li>
+             * </ul>
              * 
-             * *   0: The task is being executed.
-             * *   1: The task is executed.
-             * *   2: The task failed to be executed.
-             * *   3: The task is canceled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -324,7 +365,10 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;
@@ -338,9 +382,15 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsInstanceLevelTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceLevelTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
-        private java.util.List < Task> task;
+        @com.aliyun.core.annotation.NameInMap("Task")
+        private java.util.List<Task> task;
 
         private Tasks(Builder builder) {
             this.task = builder.task;
@@ -357,17 +407,17 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
 
             /**
              * Task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }

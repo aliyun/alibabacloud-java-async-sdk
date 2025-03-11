@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAccountsResponseBody</p>
  */
 public class DescribeInstanceAccountsResponseBody extends TeaModel {
-    @NameInMap("InstanceAccounts")
+    @com.aliyun.core.annotation.NameInMap("InstanceAccounts")
     private InstanceAccounts instanceAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeInstanceAccountsResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates the information about the instance accounts.
+         * <p>Indicates the information about the instance accounts.</p>
          */
         public Builder instanceAccounts(InstanceAccounts instanceAccounts) {
             this.instanceAccounts = instanceAccounts;
@@ -70,7 +75,10 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2E4056D-57EB-4353-8355-2E6284******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAccountsResponseBody</p>
+     */
     public static class DbPrivilege extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Privilege")
+        @com.aliyun.core.annotation.NameInMap("Privilege")
         private String privilege;
 
         private DbPrivilege(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             private String privilege; 
 
             /**
-             * Indicates the name of a database.
+             * <p>Indicates the name of a database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_rds3</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -138,13 +158,16 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the permissions that an account is granted on the database. Valid values:
-             * <p>
+             * <p>Indicates the permissions that an account is granted on the database. Valid values:</p>
+             * <ul>
+             * <li><strong>R</strong>: The account is granted the permissions that are required to read the data of the database.</li>
+             * <li><strong>W</strong>: The account is granted the permissions that are required to write data to the database.</li>
+             * <li><strong>DDL</strong>: The account is granted the permissions that are required to perform DDL operations on the database.</li>
+             * <li><strong>DML</strong>: The account is granted the permissions that are required to perform DML operations on the database.</li>
+             * </ul>
              * 
-             * *   **R**: The account is granted the permissions that are required to read the data of the database.
-             * *   **W**: The account is granted the permissions that are required to write data to the database.
-             * *   **DDL**: The account is granted the permissions that are required to perform DDL operations on the database.
-             * *   **DML**: The account is granted the permissions that are required to perform DML operations on the database.
+             * <strong>example:</strong>
+             * <p>R</p>
              */
             public Builder privilege(String privilege) {
                 this.privilege = privilege;
@@ -158,9 +181,15 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAccountsResponseBody</p>
+     */
     public static class DbPrivileges extends TeaModel {
-        @NameInMap("DbPrivilege")
-        private java.util.List < DbPrivilege> dbPrivilege;
+        @com.aliyun.core.annotation.NameInMap("DbPrivilege")
+        private java.util.List<DbPrivilege> dbPrivilege;
 
         private DbPrivileges(Builder builder) {
             this.dbPrivilege = builder.dbPrivilege;
@@ -177,17 +206,17 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         /**
          * @return dbPrivilege
          */
-        public java.util.List < DbPrivilege> getDbPrivilege() {
+        public java.util.List<DbPrivilege> getDbPrivilege() {
             return this.dbPrivilege;
         }
 
         public static final class Builder {
-            private java.util.List < DbPrivilege> dbPrivilege; 
+            private java.util.List<DbPrivilege> dbPrivilege; 
 
             /**
              * DbPrivilege.
              */
-            public Builder dbPrivilege(java.util.List < DbPrivilege> dbPrivilege) {
+            public Builder dbPrivilege(java.util.List<DbPrivilege> dbPrivilege) {
                 this.dbPrivilege = dbPrivilege;
                 return this;
             }
@@ -199,20 +228,26 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAccountsResponseBody</p>
+     */
     public static class InstanceAccount extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private Integer accountType;
 
-        @NameInMap("DbPrivileges")
+        @com.aliyun.core.annotation.NameInMap("DbPrivileges")
         private DbPrivileges dbPrivileges;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
         private InstanceAccount(Builder builder) {
@@ -274,7 +309,10 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             private String host; 
 
             /**
-             * Indicates the username of an instance account.
+             * <p>Indicates the username of an instance account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_rds3</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -282,11 +320,14 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of an instance account. Valid values:
-             * <p>
+             * <p>Indicates the type of an instance account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The instance account is a privileged account.</li>
+             * <li><strong>1</strong>: The instance account is a standard account.</li>
+             * </ul>
              * 
-             * *   **0**: The instance account is a privileged account.
-             * *   **1**: The instance account is a standard account.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder accountType(Integer accountType) {
                 this.accountType = accountType;
@@ -294,7 +335,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the information about the permissions of an account on a database.
+             * <p>Indicates the information about the permissions of an account on a database.</p>
              */
             public Builder dbPrivileges(DbPrivileges dbPrivileges) {
                 this.dbPrivileges = dbPrivileges;
@@ -302,7 +343,10 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the description of an account. By default, if 0 is the value of the AccountType parameter, **Created by DRDS** is returned as the value of the Description parameter. If 1 is the value of the AccountType parameter, an empty string is returned as the value of the Description parameter. You can modify the description of an account on the Accounts page in the PolarDB-X console.
+             * <p>Indicates the description of an account. By default, if 0 is the value of the AccountType parameter, <strong>Created by DRDS</strong> is returned as the value of the Description parameter. If 1 is the value of the AccountType parameter, an empty string is returned as the value of the Description parameter. You can modify the description of an account on the Accounts page in the PolarDB-X console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created by DRDS</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -310,7 +354,10 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates an IP address that is allowed to access the database. The value **%** indicates that each IP address is allowed to access the database. \</note>
+             * <p>Indicates an IP address that is allowed to access the database. The value <strong>%</strong> indicates that each IP address is allowed to access the database. &lt;/note&gt;</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -324,9 +371,15 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAccountsResponseBody</p>
+     */
     public static class InstanceAccounts extends TeaModel {
-        @NameInMap("InstanceAccount")
-        private java.util.List < InstanceAccount> instanceAccount;
+        @com.aliyun.core.annotation.NameInMap("InstanceAccount")
+        private java.util.List<InstanceAccount> instanceAccount;
 
         private InstanceAccounts(Builder builder) {
             this.instanceAccount = builder.instanceAccount;
@@ -343,17 +396,17 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         /**
          * @return instanceAccount
          */
-        public java.util.List < InstanceAccount> getInstanceAccount() {
+        public java.util.List<InstanceAccount> getInstanceAccount() {
             return this.instanceAccount;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceAccount> instanceAccount; 
+            private java.util.List<InstanceAccount> instanceAccount; 
 
             /**
              * InstanceAccount.
              */
-            public Builder instanceAccount(java.util.List < InstanceAccount> instanceAccount) {
+            public Builder instanceAccount(java.util.List<InstanceAccount> instanceAccount) {
                 this.instanceAccount = instanceAccount;
                 return this;
             }

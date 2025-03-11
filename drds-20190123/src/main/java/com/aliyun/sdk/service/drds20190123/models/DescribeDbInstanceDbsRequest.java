@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDbInstanceDbsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDbInstanceDbsRequest</p>
  */
 public class DescribeDbInstanceDbsRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Query
-    @NameInMap("DbInstType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstType")
     private String dbInstType;
 
-    @Query
-    @NameInMap("DbInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbInstanceId;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
     private DescribeDbInstanceDbsRequest(Builder builder) {
@@ -112,7 +117,10 @@ public class DescribeDbInstanceDbsRequest extends Request {
         } 
 
         /**
-         * The name of the privileged account of the PolarDB-X 1.0 instance. You do not need to specify this parameter if you have no privileged account.
+         * <p>The name of the privileged account of the PolarDB-X 1.0 instance. You do not need to specify this parameter if you have no privileged account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -121,7 +129,10 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * The engine type of the storage-layer databases. Valid values: **POLARDB** and **RDS**.
+         * <p>The engine type of the storage-layer databases. Valid values: <strong>POLARDB</strong> and <strong>RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -130,7 +141,11 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * The ID of the instance in which the storage-layer databases are deployed.
+         * <p>The ID of the instance in which the storage-layer databases are deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -139,7 +154,11 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -148,7 +167,10 @@ public class DescribeDbInstanceDbsRequest extends Request {
         }
 
         /**
-         * The password of the privileged account. You do not need to specify this parameter if you have no privileged account.
+         * <p>The password of the privileged account. You do not need to specify this parameter if you have no privileged account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd_111111</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

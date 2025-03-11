@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsParamsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDrdsParamsRequest</p>
  */
 public class DescribeDrdsParamsRequest extends Request {
-    @Query
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("ParamLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String paramLevel;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeDrdsParamsRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDrdsParamsRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -107,7 +115,11 @@ public class DescribeDrdsParamsRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribeDrdsParams</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -116,11 +128,15 @@ public class DescribeDrdsParamsRequest extends Request {
         }
 
         /**
-         * The type of nodes whose parameters you want to query. Valid values:
-         * <p>
+         * <p>The type of nodes whose parameters you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE: the instance level.</strong></li>
+         * <li><strong>DB</strong>: the database level.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **INSTANCE: the instance level.**
-         * *   **DB**: the database level.
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder paramLevel(String paramLevel) {
             this.putQueryParameter("ParamLevel", paramLevel);
@@ -129,7 +145,10 @@ public class DescribeDrdsParamsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the PolarDB-X 1.0 instance is created.
+         * <p>The ID of the region where the PolarDB-X 1.0 instance is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

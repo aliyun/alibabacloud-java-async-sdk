@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsInstanceResponseBody</p>
  */
 public class DescribeDrdsInstanceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsInstanceResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the instance.
+         * <p>The details of the instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4F76641-BA45-4320-BE7C-9C62CFDAC9B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,9 +102,15 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceResponseBody</p>
+     */
     public static class ReadOnlyDBInstanceIds extends TeaModel {
-        @NameInMap("ReadOnlyDBInstanceId")
-        private java.util.List < String > readOnlyDBInstanceId;
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceId")
+        private java.util.List<String> readOnlyDBInstanceId;
 
         private ReadOnlyDBInstanceIds(Builder builder) {
             this.readOnlyDBInstanceId = builder.readOnlyDBInstanceId;
@@ -110,17 +127,17 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         /**
          * @return readOnlyDBInstanceId
          */
-        public java.util.List < String > getReadOnlyDBInstanceId() {
+        public java.util.List<String> getReadOnlyDBInstanceId() {
             return this.readOnlyDBInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > readOnlyDBInstanceId; 
+            private java.util.List<String> readOnlyDBInstanceId; 
 
             /**
              * ReadOnlyDBInstanceId.
              */
-            public Builder readOnlyDBInstanceId(java.util.List < String > readOnlyDBInstanceId) {
+            public Builder readOnlyDBInstanceId(java.util.List<String> readOnlyDBInstanceId) {
                 this.readOnlyDBInstanceId = readOnlyDBInstanceId;
                 return this;
             }
@@ -132,29 +149,39 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceResponseBody</p>
+     */
     public static class Vip extends TeaModel {
-        @NameInMap("Dns")
+        @com.aliyun.core.annotation.NameInMap("Dns")
         private String dns;
 
-        @NameInMap("ExpireDays")
+        @com.aliyun.core.annotation.NameInMap("ExpireDays")
         private Long expireDays;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("RemoveWeight")
+        private Boolean removeWeight;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private Vip(Builder builder) {
             this.dns = builder.dns;
             this.expireDays = builder.expireDays;
             this.port = builder.port;
+            this.removeWeight = builder.removeWeight;
             this.type = builder.type;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
@@ -190,6 +217,13 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return removeWeight
+         */
+        public Boolean getRemoveWeight() {
+            return this.removeWeight;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -214,12 +248,16 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             private String dns; 
             private Long expireDays; 
             private String port; 
+            private Boolean removeWeight; 
             private String type; 
             private String vpcId; 
             private String vswitchId; 
 
             /**
-             * The domain name that is mapped to the VIP.
+             * <p>The domain name that is mapped to the VIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdssen1243as.drds.aliyuncs.com</p>
              */
             public Builder dns(String dns) {
                 this.dns = dns;
@@ -227,7 +265,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of remaining days before the VIP expires.
+             * <p>The number of remaining days before the VIP expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expireDays(Long expireDays) {
                 this.expireDays = expireDays;
@@ -235,7 +276,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ports that are opened on the VIP.
+             * <p>The ports that are opened on the VIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -243,7 +287,18 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the VIP. Valid values: intranet and internet.
+             * RemoveWeight.
+             */
+            public Builder removeWeight(Boolean removeWeight) {
+                this.removeWeight = removeWeight;
+                return this;
+            }
+
+            /**
+             * <p>The type of the VIP. Valid values: intranet and internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -251,7 +306,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp**********</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -259,7 +317,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp***********</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -273,9 +334,15 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceResponseBody</p>
+     */
     public static class Vips extends TeaModel {
-        @NameInMap("Vip")
-        private java.util.List < Vip> vip;
+        @com.aliyun.core.annotation.NameInMap("Vip")
+        private java.util.List<Vip> vip;
 
         private Vips(Builder builder) {
             this.vip = builder.vip;
@@ -292,17 +359,17 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         /**
          * @return vip
          */
-        public java.util.List < Vip> getVip() {
+        public java.util.List<Vip> getVip() {
             return this.vip;
         }
 
         public static final class Builder {
-            private java.util.List < Vip> vip; 
+            private java.util.List<Vip> vip; 
 
             /**
              * Vip.
              */
-            public Builder vip(java.util.List < Vip> vip) {
+            public Builder vip(java.util.List<Vip> vip) {
                 this.vip = vip;
                 return this;
             }
@@ -314,83 +381,89 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DrdsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
         private String drdsInstanceId;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private Long expireDate;
 
-        @NameInMap("InstRole")
+        @com.aliyun.core.annotation.NameInMap("InstRole")
         private String instRole;
 
-        @NameInMap("InstanceSeries")
+        @com.aliyun.core.annotation.NameInMap("InstanceSeries")
         private String instanceSeries;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("MachineType")
+        @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
 
-        @NameInMap("MasterInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MasterInstanceId")
         private String masterInstanceId;
 
-        @NameInMap("MysqlVersion")
+        @com.aliyun.core.annotation.NameInMap("MysqlVersion")
         private Integer mysqlVersion;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("OrderInstanceId")
+        @com.aliyun.core.annotation.NameInMap("OrderInstanceId")
         private String orderInstanceId;
 
-        @NameInMap("ProductVersion")
+        @com.aliyun.core.annotation.NameInMap("ProductVersion")
         private String productVersion;
 
-        @NameInMap("ReadOnlyDBInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceIds")
         private ReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
-        @NameInMap("VersionAction")
+        @com.aliyun.core.annotation.NameInMap("VersionAction")
         private String versionAction;
 
-        @NameInMap("Vips")
+        @com.aliyun.core.annotation.NameInMap("Vips")
         private Vips vips;
 
-        @NameInMap("VpcCloudInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcCloudInstanceId")
         private String vpcCloudInstanceId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Data(Builder builder) {
@@ -641,7 +714,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The commodity code of the instance.
+             * <p>The commodity code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdsPost</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -649,7 +725,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the instance is created.
+             * <p>The timestamp that indicates when the instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1568620311000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -657,7 +736,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -665,7 +747,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdssen1243as</p>
              */
             public Builder drdsInstanceId(String drdsInstanceId) {
                 this.drdsInstanceId = drdsInstanceId;
@@ -673,7 +758,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the instance expires.
+             * <p>The timestamp that indicates when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4724323200000</p>
              */
             public Builder expireDate(Long expireDate) {
                 this.expireDate = expireDate;
@@ -681,12 +769,15 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the instance. Valid values:
-             * <p>
+             * <p>The role of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>MASTER</strong>: The instance is a primary instance.</li>
+             * <li><strong>SLAVE</strong>: The instance is a read-only instance to analyze complex queries</li>
+             * <li><strong>SLAVE_FLOW</strong>: The instance is a read-only instance for high-concurrency scenarios</li>
+             * </ul>
              * 
-             * *   **MASTER**: The instance is a primary instance.
-             * *   **SLAVE**: The instance is a read-only instance to analyze complex queries
-             * *   **SLAVE_FLOW**: The instance is a read-only instance for high-concurrency scenarios
+             * <strong>example:</strong>
+             * <p>MASTER</p>
              */
             public Builder instRole(String instRole) {
                 this.instRole = instRole;
@@ -694,7 +785,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance series of the instance.
+             * <p>The instance series of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds.sn2.4c16g</p>
              */
             public Builder instanceSeries(String instanceSeries) {
                 this.instanceSeries = instanceSeries;
@@ -702,7 +796,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the instance.
+             * <p>The specification of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drds.sn2.4c16g.8C32G</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -710,12 +807,15 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the instance. Valid values:
-             * <p>
+             * <p>The tag of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The instance is a standard instance.</li>
+             * <li><strong>HA</strong>: The instance is a high-availability (HA) instance.</li>
+             * <li><strong>VPC</strong>: The instance is a VPC-based instance.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The instance is a standard instance.
-             * *   **HA**: The instance is a high-availability (HA) instance.
-             * *   **VPC**: The instance is a VPC-based instance.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -723,7 +823,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The machine type of the instance. The value of this parameter is **ecs**.
+             * <p>The machine type of the instance. The value of this parameter is <strong>ecs</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -731,10 +834,13 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary instance.
-             * <p>
+             * <p>The ID of the primary instance.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the instance is a primary instance.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the instance is a primary instance.
+             * <strong>example:</strong>
+             * <p>drdssen1243as</p>
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -742,7 +848,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The MySQL version that is supported by the instance.
+             * <p>The MySQL version that is supported by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder mysqlVersion(Integer mysqlVersion) {
                 this.mysqlVersion = mysqlVersion;
@@ -750,7 +859,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance. Valid values: CLASSIC and VPC.
+             * <p>The network type of the instance. Valid values: CLASSIC and VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLASSIC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -758,7 +870,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the purchased instance.
+             * <p>The ID of the purchased instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdssen12****</p>
              */
             public Builder orderInstanceId(String orderInstanceId) {
                 this.orderInstanceId = orderInstanceId;
@@ -766,7 +881,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The version of .
+             * <p>The version of .</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.3.*</p>
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
@@ -774,7 +892,7 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The details about each read-only instance that is associated with the instance.
+             * <p>The details about each read-only instance that is associated with the instance.</p>
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
@@ -782,7 +900,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance is created.
+             * <p>The ID of the region in which the instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -790,7 +911,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs. The value of this parameter can be null.
+             * <p>The ID of the resource group to which the instance belongs. The value of this parameter can be null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NULL</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -798,7 +922,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance.
+             * <p>The state of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUN</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -806,7 +933,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance used for storage.
+             * <p>The type of the instance used for storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -814,7 +944,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values: PRIVATE and PUBLIC. The value of PRIVATE indicates that the instance is a dedicated instance. The value of PUBLIC indicates that the instance is a shared instance.
+             * <p>The type of the instance. Valid values: PRIVATE and PUBLIC. The value of PRIVATE indicates that the instance is a dedicated instance. The value of PUBLIC indicates that the instance is a shared instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -822,7 +955,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the instance. The value of this parameter is 0.
+             * <p>The version of the instance. The value of this parameter is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -830,7 +966,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the version of the instance can be upgraded.
+             * <p>Indicates whether the version of the instance can be upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Upgradeable</p>
              */
             public Builder versionAction(String versionAction) {
                 this.versionAction = versionAction;
@@ -838,7 +977,7 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The list of returned virtual IP addresses (VIPs).
+             * <p>The list of returned virtual IP addresses (VIPs).</p>
              */
             public Builder vips(Vips vips) {
                 this.vips = vips;
@@ -846,7 +985,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that is deployed in the VPC.
+             * <p>The ID of the instance that is deployed in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drdssen12****</p>
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -854,7 +996,10 @@ public class DescribeDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance is located.
+             * <p>The ID of the zone in which the instance is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

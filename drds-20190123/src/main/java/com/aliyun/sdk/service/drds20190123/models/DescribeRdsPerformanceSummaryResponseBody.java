@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsPerformanceSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRdsPerformanceSummaryResponseBody</p>
  */
 public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
-    @NameInMap("RdsPerformanceInfos")
-    private java.util.List < RdsPerformanceInfos> rdsPerformanceInfos;
+    @com.aliyun.core.annotation.NameInMap("RdsPerformanceInfos")
+    private java.util.List<RdsPerformanceInfos> rdsPerformanceInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRdsPerformanceSummaryResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
     /**
      * @return rdsPerformanceInfos
      */
-    public java.util.List < RdsPerformanceInfos> getRdsPerformanceInfos() {
+    public java.util.List<RdsPerformanceInfos> getRdsPerformanceInfos() {
         return this.rdsPerformanceInfos;
     }
 
@@ -57,20 +62,23 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RdsPerformanceInfos> rdsPerformanceInfos; 
+        private java.util.List<RdsPerformanceInfos> rdsPerformanceInfos; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * A collection of objects.
+         * <p>A collection of objects.</p>
          */
-        public Builder rdsPerformanceInfos(java.util.List < RdsPerformanceInfos> rdsPerformanceInfos) {
+        public Builder rdsPerformanceInfos(java.util.List<RdsPerformanceInfos> rdsPerformanceInfos) {
             this.rdsPerformanceInfos = rdsPerformanceInfos;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6876277-ECFD-4658-AC1E-A7FAD8******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the API request is successful.
+         * <p>Indicates whether the API request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,23 +102,29 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRdsPerformanceSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsPerformanceSummaryResponseBody</p>
+     */
     public static class RdsPerformanceInfos extends TeaModel {
-        @NameInMap("ActiveSessions")
+        @com.aliyun.core.annotation.NameInMap("ActiveSessions")
         private Integer activeSessions;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("Iops")
+        @com.aliyun.core.annotation.NameInMap("Iops")
         private Float iops;
 
-        @NameInMap("RdsId")
+        @com.aliyun.core.annotation.NameInMap("RdsId")
         private String rdsId;
 
-        @NameInMap("SpaceUsage")
+        @com.aliyun.core.annotation.NameInMap("SpaceUsage")
         private Long spaceUsage;
 
-        @NameInMap("TotalSessions")
+        @com.aliyun.core.annotation.NameInMap("TotalSessions")
         private Integer totalSessions;
 
         private RdsPerformanceInfos(Builder builder) {
@@ -178,7 +195,10 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             private Integer totalSessions; 
 
             /**
-             * The number of active sessions of the RDS instance.
+             * <p>The number of active sessions of the RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder activeSessions(Integer activeSessions) {
                 this.activeSessions = activeSessions;
@@ -186,7 +206,10 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization of an RDS instance.
+             * <p>The CPU utilization of an RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.26</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -194,7 +217,10 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The IOPS of the RDS instance.
+             * <p>The IOPS of the RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17.62</p>
              */
             public Builder iops(Float iops) {
                 this.iops = iops;
@@ -202,7 +228,10 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of an RDS instance.
+             * <p>The ID of an RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-**************</p>
              */
             public Builder rdsId(String rdsId) {
                 this.rdsId = rdsId;
@@ -210,7 +239,10 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The disk usage of apsaradb for RDS. Unit: MB.
+             * <p>The disk usage of apsaradb for RDS. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4145144777</p>
              */
             public Builder spaceUsage(Long spaceUsage) {
                 this.spaceUsage = spaceUsage;
@@ -218,7 +250,10 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of current RDS sessions.
+             * <p>The total number of current RDS sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162</p>
              */
             public Builder totalSessions(Integer totalSessions) {
                 this.totalSessions = totalSessions;

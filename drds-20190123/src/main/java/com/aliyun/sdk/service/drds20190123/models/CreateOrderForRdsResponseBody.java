@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderForRdsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrderForRdsResponseBody</p>
  */
 public class CreateOrderForRdsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOrderForRdsResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateOrderForRdsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the purchased RDS instance.
+         * <p>The ID of the purchased RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[rm-***********]</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -70,7 +78,10 @@ public class CreateOrderForRdsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9819BC51-D33D-4EB1-B80F-A89A20******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class CreateOrderForRdsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

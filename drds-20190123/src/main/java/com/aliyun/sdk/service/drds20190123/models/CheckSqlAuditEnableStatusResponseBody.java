@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSqlAuditEnableStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CheckSqlAuditEnableStatusResponseBody</p>
  */
 public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckSqlAuditEnableStatusResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FF13E47D-4E38-4A5A-BA68-32A554******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,11 +78,14 @@ public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the SQL audit feature. Valid values:
-         * <p>
+         * <p>The status of the SQL audit feature. Valid values:</p>
+         * <ul>
+         * <li>enabled: The SQL audit feature is enabled.</li>
+         * <li>disabled: The SQL audit feature is disabled.</li>
+         * </ul>
          * 
-         * *   enabled: The SQL audit feature is enabled.
-         * *   disabled: The SQL audit feature is disabled.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -82,7 +93,10 @@ public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

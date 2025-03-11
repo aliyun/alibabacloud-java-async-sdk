@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableSqlAuditRequest} extends {@link RequestModel}
  *
  * <p>EnableSqlAuditRequest</p>
  */
 public class EnableSqlAuditRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("IsRecall")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsRecall")
     private Boolean isRecall;
 
-    @Query
-    @NameInMap("RecallEndTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallEndTimestamp")
     private String recallEndTimestamp;
 
-    @Query
-    @NameInMap("RecallStartTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallStartTimestamp")
     private String recallStartTimestamp;
 
     private EnableSqlAuditRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class EnableSqlAuditRequest extends Request {
         } 
 
         /**
-         * The name of the database for which you want to enable the SQL audit feature.
+         * <p>The name of the database for which you want to enable the SQL audit feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -121,7 +130,11 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds***********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -130,7 +143,10 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * Specifies whether to backtrack historical SQL statements for auditing.
+         * <p>Specifies whether to backtrack historical SQL statements for auditing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isRecall(Boolean isRecall) {
             this.putQueryParameter("IsRecall", isRecall);
@@ -139,10 +155,13 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * The timestamp that indicates when the backtracking ends. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp that indicates when the backtracking ends. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The end time of the backtracking must be later than the start time of the backtracking.</p>
+         * </blockquote>
          * 
-         * > The end time of the backtracking must be later than the start time of the backtracking.
+         * <strong>example:</strong>
+         * <p>1568875132000</p>
          */
         public Builder recallEndTimestamp(String recallEndTimestamp) {
             this.putQueryParameter("RecallEndTimestamp", recallEndTimestamp);
@@ -151,7 +170,10 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * The timestamp that indicates when the backtracking starts. Unit: milliseconds.
+         * <p>The timestamp that indicates when the backtracking starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568875132000</p>
          */
         public Builder recallStartTimestamp(String recallStartTimestamp) {
             this.putQueryParameter("RecallStartTimestamp", recallStartTimestamp);

@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitHotExpandTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitHotExpandTaskRequest</p>
  */
 public class SubmitHotExpandTaskRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("ExtendedMapping")
-    @Validation(required = true)
-    private java.util.List < ExtendedMapping> extendedMapping;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendedMapping")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ExtendedMapping> extendedMapping;
 
-    @Query
-    @NameInMap("InstanceDbMapping")
-    @Validation(required = true)
-    private java.util.List < InstanceDbMapping> instanceDbMapping;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceDbMapping")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<InstanceDbMapping> instanceDbMapping;
 
-    @Query
-    @NameInMap("Mapping")
-    @Validation(required = true)
-    private java.util.List < Mapping> mapping;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mapping")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Mapping> mapping;
 
-    @Query
-    @NameInMap("SupperAccountMapping")
-    private java.util.List < SupperAccountMapping> supperAccountMapping;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupperAccountMapping")
+    private java.util.List<SupperAccountMapping> supperAccountMapping;
 
-    @Query
-    @NameInMap("TaskDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskDesc")
     private String taskDesc;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private SubmitHotExpandTaskRequest(Builder builder) {
@@ -91,28 +96,28 @@ public class SubmitHotExpandTaskRequest extends Request {
     /**
      * @return extendedMapping
      */
-    public java.util.List < ExtendedMapping> getExtendedMapping() {
+    public java.util.List<ExtendedMapping> getExtendedMapping() {
         return this.extendedMapping;
     }
 
     /**
      * @return instanceDbMapping
      */
-    public java.util.List < InstanceDbMapping> getInstanceDbMapping() {
+    public java.util.List<InstanceDbMapping> getInstanceDbMapping() {
         return this.instanceDbMapping;
     }
 
     /**
      * @return mapping
      */
-    public java.util.List < Mapping> getMapping() {
+    public java.util.List<Mapping> getMapping() {
         return this.mapping;
     }
 
     /**
      * @return supperAccountMapping
      */
-    public java.util.List < SupperAccountMapping> getSupperAccountMapping() {
+    public java.util.List<SupperAccountMapping> getSupperAccountMapping() {
         return this.supperAccountMapping;
     }
 
@@ -133,10 +138,10 @@ public class SubmitHotExpandTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitHotExpandTaskRequest, Builder> {
         private String dbName; 
         private String drdsInstanceId; 
-        private java.util.List < ExtendedMapping> extendedMapping; 
-        private java.util.List < InstanceDbMapping> instanceDbMapping; 
-        private java.util.List < Mapping> mapping; 
-        private java.util.List < SupperAccountMapping> supperAccountMapping; 
+        private java.util.List<ExtendedMapping> extendedMapping; 
+        private java.util.List<InstanceDbMapping> instanceDbMapping; 
+        private java.util.List<Mapping> mapping; 
+        private java.util.List<SupperAccountMapping> supperAccountMapping; 
         private String taskDesc; 
         private String taskName; 
 
@@ -157,7 +162,11 @@ public class SubmitHotExpandTaskRequest extends Request {
         } 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -166,7 +175,11 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdshbga1138****</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -175,43 +188,49 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * The information about the database on which you want to perform hot-spot scale-out.
+         * <p>The information about the database on which you want to perform hot-spot scale-out.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder extendedMapping(java.util.List < ExtendedMapping> extendedMapping) {
+        public Builder extendedMapping(java.util.List<ExtendedMapping> extendedMapping) {
             this.putQueryParameter("ExtendedMapping", extendedMapping);
             this.extendedMapping = extendedMapping;
             return this;
         }
 
         /**
-         * The information about the instance to which the hot-spot database belongs.
+         * <p>The information about the instance to which the hot-spot database belongs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceDbMapping(java.util.List < InstanceDbMapping> instanceDbMapping) {
+        public Builder instanceDbMapping(java.util.List<InstanceDbMapping> instanceDbMapping) {
             this.putQueryParameter("InstanceDbMapping", instanceDbMapping);
             this.instanceDbMapping = instanceDbMapping;
             return this;
         }
 
         /**
-         * The information about the hot-spot database.
+         * <p>The information about the hot-spot database.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder mapping(java.util.List < Mapping> mapping) {
+        public Builder mapping(java.util.List<Mapping> mapping) {
             this.putQueryParameter("Mapping", mapping);
             this.mapping = mapping;
             return this;
         }
 
         /**
-         * The information about the privileged account.
+         * <p>The information about the privileged account.</p>
          */
-        public Builder supperAccountMapping(java.util.List < SupperAccountMapping> supperAccountMapping) {
+        public Builder supperAccountMapping(java.util.List<SupperAccountMapping> supperAccountMapping) {
             this.putQueryParameter("SupperAccountMapping", supperAccountMapping);
             this.supperAccountMapping = supperAccountMapping;
             return this;
         }
 
         /**
-         * The description of the task.
+         * <p>The description of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder taskDesc(String taskDesc) {
             this.putQueryParameter("TaskDesc", taskDesc);
@@ -220,7 +239,10 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -235,11 +257,17 @@ public class SubmitHotExpandTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitHotExpandTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitHotExpandTaskRequest</p>
+     */
     public static class ExtendedMapping extends TeaModel {
-        @NameInMap("SrcDb")
+        @com.aliyun.core.annotation.NameInMap("SrcDb")
         private String srcDb;
 
-        @NameInMap("SrcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SrcInstanceId")
         private String srcInstanceId;
 
         private ExtendedMapping(Builder builder) {
@@ -274,7 +302,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String srcInstanceId; 
 
             /**
-             * The name of the source physical database.
+             * <p>The name of the source physical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder srcDb(String srcDb) {
                 this.srcDb = srcDb;
@@ -282,7 +313,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The ID of the ApsaraDB RDS instance to which the source physical database belongs.
+             * <p>The ID of the ApsaraDB RDS instance to which the source physical database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1t1mk5a5bdj****</p>
              */
             public Builder srcInstanceId(String srcInstanceId) {
                 this.srcInstanceId = srcInstanceId;
@@ -296,12 +330,18 @@ public class SubmitHotExpandTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitHotExpandTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitHotExpandTaskRequest</p>
+     */
     public static class InstanceDbMapping extends TeaModel {
-        @NameInMap("DbList")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbList")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dbList;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
         private InstanceDbMapping(Builder builder) {
@@ -336,7 +376,11 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String instanceName; 
 
             /**
-             * The name of the hot-spot database.
+             * <p>The name of the hot-spot database.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hot_test_****_****</p>
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -344,7 +388,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The name of the ApsaraDB RDS instance to which the hot-spot database belongs.
+             * <p>The name of the ApsaraDB RDS instance to which the hot-spot database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1t1mk5a5bdj****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -358,26 +405,32 @@ public class SubmitHotExpandTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitHotExpandTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitHotExpandTaskRequest</p>
+     */
     public static class Mapping extends TeaModel {
-        @NameInMap("DbShardColumn")
+        @com.aliyun.core.annotation.NameInMap("DbShardColumn")
         private String dbShardColumn;
 
-        @NameInMap("HotDbName")
+        @com.aliyun.core.annotation.NameInMap("HotDbName")
         private String hotDbName;
 
-        @NameInMap("HotTableName")
+        @com.aliyun.core.annotation.NameInMap("HotTableName")
         private String hotTableName;
 
-        @NameInMap("LogicTable")
+        @com.aliyun.core.annotation.NameInMap("LogicTable")
         private String logicTable;
 
-        @NameInMap("ShardDbValue")
+        @com.aliyun.core.annotation.NameInMap("ShardDbValue")
         private String shardDbValue;
 
-        @NameInMap("ShardTbValue")
+        @com.aliyun.core.annotation.NameInMap("ShardTbValue")
         private String shardTbValue;
 
-        @NameInMap("TbShardColumn")
+        @com.aliyun.core.annotation.NameInMap("TbShardColumn")
         private String tbShardColumn;
 
         private Mapping(Builder builder) {
@@ -457,7 +510,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String tbShardColumn; 
 
             /**
-             * The shard key used to split the database to which the associated table belongs.
+             * <p>The shard key used to split the database to which the associated table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>platform</p>
              */
             public Builder dbShardColumn(String dbShardColumn) {
                 this.dbShardColumn = dbShardColumn;
@@ -465,7 +521,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The name of the hot-spot database.
+             * <p>The name of the hot-spot database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hot_test_****_****</p>
              */
             public Builder hotDbName(String hotDbName) {
                 this.hotDbName = hotDbName;
@@ -473,7 +532,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The name of the hot-spot table. The name must be prefixed with the name of a logical table.
+             * <p>The name of the hot-spot table. The name must be prefixed with the name of a logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table_*****</p>
              */
             public Builder hotTableName(String hotTableName) {
                 this.hotTableName = hotTableName;
@@ -481,7 +543,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The name of the logical table on which you want to perform hot-spot scale-out.
+             * <p>The name of the logical table on which you want to perform hot-spot scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder logicTable(String logicTable) {
                 this.logicTable = logicTable;
@@ -489,7 +554,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The value of the shard key used to split a database.
+             * <p>The value of the shard key used to split a database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder shardDbValue(String shardDbValue) {
                 this.shardDbValue = shardDbValue;
@@ -497,7 +565,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The value of the shard key used to split a table.
+             * <p>The value of the shard key used to split a table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder shardTbValue(String shardTbValue) {
                 this.shardTbValue = shardTbValue;
@@ -505,7 +576,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The shard key used to split an associated table.
+             * <p>The shard key used to split an associated table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>platform</p>
              */
             public Builder tbShardColumn(String tbShardColumn) {
                 this.tbShardColumn = tbShardColumn;
@@ -519,14 +593,20 @@ public class SubmitHotExpandTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitHotExpandTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitHotExpandTaskRequest</p>
+     */
     public static class SupperAccountMapping extends TeaModel {
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("SupperAccount")
+        @com.aliyun.core.annotation.NameInMap("SupperAccount")
         private String supperAccount;
 
-        @NameInMap("SupperPassword")
+        @com.aliyun.core.annotation.NameInMap("SupperPassword")
         private String supperPassword;
 
         private SupperAccountMapping(Builder builder) {
@@ -570,7 +650,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String supperPassword; 
 
             /**
-             * The ID of the ApsaraDB RDS instance that has the privileged account.
+             * <p>The ID of the ApsaraDB RDS instance that has the privileged account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1t1mk5a5bdj****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -578,7 +661,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The name of the privileged account of the ApsaraDB RDS instance.
+             * <p>The name of the privileged account of the ApsaraDB RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder supperAccount(String supperAccount) {
                 this.supperAccount = supperAccount;
@@ -586,7 +672,10 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * The password of the privileged account of the ApsaraDB RDS instance.
+             * <p>The password of the privileged account of the ApsaraDB RDS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111111</p>
              */
             public Builder supperPassword(String supperPassword) {
                 this.supperPassword = supperPassword;

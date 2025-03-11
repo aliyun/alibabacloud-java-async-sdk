@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceAccountRequest</p>
  */
 public class CreateInstanceAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("DbPrivilege")
-    @Validation(required = true)
-    private java.util.List < DbPrivilege> dbPrivilege;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbPrivilege")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DbPrivilege> dbPrivilege;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
     private CreateInstanceAccountRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class CreateInstanceAccountRequest extends Request {
     /**
      * @return dbPrivilege
      */
-    public java.util.List < DbPrivilege> getDbPrivilege() {
+    public java.util.List<DbPrivilege> getDbPrivilege() {
         return this.dbPrivilege;
     }
 
@@ -83,7 +88,7 @@ public class CreateInstanceAccountRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceAccountRequest, Builder> {
         private String accountName; 
-        private java.util.List < DbPrivilege> dbPrivilege; 
+        private java.util.List<DbPrivilege> dbPrivilege; 
         private String drdsInstanceId; 
         private String password; 
 
@@ -100,7 +105,11 @@ public class CreateInstanceAccountRequest extends Request {
         } 
 
         /**
-         * The username of the account you want to create.
+         * <p>The username of the account you want to create.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_sample_account</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -109,16 +118,20 @@ public class CreateInstanceAccountRequest extends Request {
         }
 
         /**
-         * DbPrivilege.
+         * <p>This parameter is required.</p>
          */
-        public Builder dbPrivilege(java.util.List < DbPrivilege> dbPrivilege) {
+        public Builder dbPrivilege(java.util.List<DbPrivilege> dbPrivilege) {
             this.putQueryParameter("DbPrivilege", dbPrivilege);
             this.dbPrivilege = dbPrivilege;
             return this;
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance for which you want to create the account.
+         * <p>The ID of the PolarDB-X 1.0 instance for which you want to create the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdsjiii1b49****</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -127,7 +140,11 @@ public class CreateInstanceAccountRequest extends Request {
         }
 
         /**
-         * The password of the account you want to create.
+         * <p>The password of the account you want to create.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_sample_password</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -142,11 +159,17 @@ public class CreateInstanceAccountRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceAccountRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceAccountRequest</p>
+     */
     public static class DbPrivilege extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Privilege")
+        @com.aliyun.core.annotation.NameInMap("Privilege")
         private String privilege;
 
         private DbPrivilege(Builder builder) {
@@ -181,7 +204,10 @@ public class CreateInstanceAccountRequest extends Request {
             private String privilege; 
 
             /**
-             * The name of the database that you want to manage by using the account to create.
+             * <p>The name of the database that you want to manage by using the account to create.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -189,7 +215,10 @@ public class CreateInstanceAccountRequest extends Request {
             }
 
             /**
-             * The permissions that you want to grant to the account to manage the database.
+             * <p>The permissions that you want to grant to the account to manage the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DDL</p>
              */
             public Builder privilege(String privilege) {
                 this.privilege = privilege;

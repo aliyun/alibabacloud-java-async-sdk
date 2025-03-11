@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDrdsDbNameResponseBody} extends {@link TeaModel}
  *
  * <p>CheckDrdsDbNameResponseBody</p>
  */
 public class CheckDrdsDbNameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckDrdsDbNameResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CheckDrdsDbNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF38538C-68BD-4278-B58F-EDE96F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class CheckDrdsDbNameResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the DRDS database name is valid. Valid values: true: The database name is valid. false: the database name is invalid.
+         * <p>Indicates whether the DRDS database name is valid. Valid values: true: The database name is valid. false: the database name is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +89,10 @@ public class CheckDrdsDbNameResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

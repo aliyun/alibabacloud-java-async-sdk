@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSqlFlashbackTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitSqlFlashbackTaskRequest</p>
  */
 public class SubmitSqlFlashbackTaskRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("RecallRestoreType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallRestoreType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer recallRestoreType;
 
-    @Query
-    @NameInMap("RecallType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecallType")
     private Integer recallType;
 
-    @Query
-    @NameInMap("SqlPk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlPk")
     private String sqlPk;
 
-    @Query
-    @NameInMap("SqlType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlType")
     private String sqlType;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @Query
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private SubmitSqlFlashbackTaskRequest(Builder builder) {
@@ -185,7 +190,11 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         } 
 
         /**
-         * The name of the DRDS database.
+         * <p>The name of the DRDS database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -194,7 +203,11 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The ID of a DRDS instance.
+         * <p>The ID of a DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds*********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -203,7 +216,11 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The time when the SQL flashback task ends.
+         * <p>The time when the SQL flashback task ends.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-10 23:23:23</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,11 +229,15 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The restoration type. Valid values:
-         * <p>
+         * <p>The restoration type. Valid values:</p>
+         * <ul>
+         * <li>1: Image restoration</li>
+         * <li>0: reverse recovery</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: Image restoration
-         * *   0: reverse recovery
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder recallRestoreType(Integer recallRestoreType) {
             this.putQueryParameter("RecallRestoreType", recallRestoreType);
@@ -225,11 +246,14 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * Exact match or fuzzy match. Valid values:
-         * <p>
+         * <p>Exact match or fuzzy match. Valid values:</p>
+         * <ul>
+         * <li>0: the exact match.</li>
+         * <li>1: the fuzzy match.</li>
+         * </ul>
          * 
-         * *   0: the exact match.
-         * *   1: the fuzzy match.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder recallType(Integer recallType) {
             this.putQueryParameter("RecallType", recallType);
@@ -238,7 +262,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The primary key of flashback SQL.
+         * <p>The primary key of flashback SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         public Builder sqlPk(String sqlPk) {
             this.putQueryParameter("SqlPk", sqlPk);
@@ -247,7 +274,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The type of the SQL statement. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).
+         * <p>The type of the SQL statement. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT,UPDATE</p>
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -256,7 +286,11 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The start time of the flashback SQL statement.
+         * <p>The start time of the flashback SQL statement.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-10 20:23:23</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -265,7 +299,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The name of the table where the flashback SQL operation was performed.
+         * <p>The name of the table where the flashback SQL operation was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -274,7 +311,10 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * The Trace ID of the flashback SQL.
+         * <p>The Trace ID of the flashback SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ase*****</p>
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

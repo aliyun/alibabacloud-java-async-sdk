@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePreCheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePreCheckResultResponseBody</p>
  */
 public class DescribePreCheckResultResponseBody extends TeaModel {
-    @NameInMap("PreCheckResult")
+    @com.aliyun.core.annotation.NameInMap("PreCheckResult")
     private PreCheckResult preCheckResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribePreCheckResultResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates the result of the precheck task.
+         * <p>Indicates the result of the precheck task.</p>
          */
         public Builder preCheckResult(PreCheckResult preCheckResult) {
             this.preCheckResult = preCheckResult;
@@ -70,7 +75,10 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EED1A59A-CFEA-5CF8-BB4A-090E75B3D05E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,17 +102,23 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePreCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePreCheckResultResponseBody</p>
+     */
     public static class SubCheckItems extends TeaModel {
-        @NameInMap("ErrorMsgCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsgCode")
         private String errorMsgCode;
 
-        @NameInMap("ErrorMsgParams")
-        private java.util.List < String > errorMsgParams;
+        @com.aliyun.core.annotation.NameInMap("ErrorMsgParams")
+        private java.util.List<String> errorMsgParams;
 
-        @NameInMap("PreCheckItemName")
+        @com.aliyun.core.annotation.NameInMap("PreCheckItemName")
         private String preCheckItemName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private SubCheckItems(Builder builder) {
@@ -129,7 +146,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         /**
          * @return errorMsgParams
          */
-        public java.util.List < String > getErrorMsgParams() {
+        public java.util.List<String> getErrorMsgParams() {
             return this.errorMsgParams;
         }
 
@@ -149,12 +166,15 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String errorMsgCode; 
-            private java.util.List < String > errorMsgParams; 
+            private java.util.List<String> errorMsgParams; 
             private String preCheckItemName; 
             private String state; 
 
             /**
-             * Indicates the error code that is returned by a subtask.
+             * <p>Indicates the error code that is returned by a subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1004</p>
              */
             public Builder errorMsgCode(String errorMsgCode) {
                 this.errorMsgCode = errorMsgCode;
@@ -162,15 +182,15 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates an error message.
+             * <p>Indicates an error message.</p>
              */
-            public Builder errorMsgParams(java.util.List < String > errorMsgParams) {
+            public Builder errorMsgParams(java.util.List<String> errorMsgParams) {
                 this.errorMsgParams = errorMsgParams;
                 return this;
             }
 
             /**
-             * Indicates the name of the subtask.
+             * <p>Indicates the name of the subtask.</p>
              */
             public Builder preCheckItemName(String preCheckItemName) {
                 this.preCheckItemName = preCheckItemName;
@@ -178,7 +198,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the state of the subtask.
+             * <p>Indicates the state of the subtask.</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -192,15 +212,21 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePreCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePreCheckResultResponseBody</p>
+     */
     public static class PreCheckResult extends TeaModel {
-        @NameInMap("PreCheckName")
+        @com.aliyun.core.annotation.NameInMap("PreCheckName")
         private String preCheckName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("SubCheckItems")
-        private java.util.List < SubCheckItems> subCheckItems;
+        @com.aliyun.core.annotation.NameInMap("SubCheckItems")
+        private java.util.List<SubCheckItems> subCheckItems;
 
         private PreCheckResult(Builder builder) {
             this.preCheckName = builder.preCheckName;
@@ -233,17 +259,17 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         /**
          * @return subCheckItems
          */
-        public java.util.List < SubCheckItems> getSubCheckItems() {
+        public java.util.List<SubCheckItems> getSubCheckItems() {
             return this.subCheckItems;
         }
 
         public static final class Builder {
             private String preCheckName; 
             private String state; 
-            private java.util.List < SubCheckItems> subCheckItems; 
+            private java.util.List<SubCheckItems> subCheckItems; 
 
             /**
-             * Indicates the name of the precheck task.
+             * <p>Indicates the name of the precheck task.</p>
              */
             public Builder preCheckName(String preCheckName) {
                 this.preCheckName = preCheckName;
@@ -251,7 +277,10 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the state of the precheck task.
+             * <p>Indicates the state of the precheck task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAIL</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -259,9 +288,9 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the details about the subtasks of the precheck task.
+             * <p>Indicates the details about the subtasks of the precheck task.</p>
              */
-            public Builder subCheckItems(java.util.List < SubCheckItems> subCheckItems) {
+            public Builder subCheckItems(java.util.List<SubCheckItems> subCheckItems) {
                 this.subCheckItems = subCheckItems;
                 return this;
             }

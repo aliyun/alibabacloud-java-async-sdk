@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsDbInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsDbInstancesResponseBody</p>
  */
 public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
-    @NameInMap("DbInstances")
+    @com.aliyun.core.annotation.NameInMap("DbInstances")
     private DbInstances dbInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeDrdsDbInstancesResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * Indicates information about the ApsaraDB RDS for MySQL instances that are used to store the data of the specified database.
+         * <p>Indicates information about the ApsaraDB RDS for MySQL instances that are used to store the data of the specified database.</p>
          */
         public Builder dbInstances(DbInstances dbInstances) {
             this.dbInstances = dbInstances;
@@ -106,7 +111,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the page number of the returned page.
+         * <p>Indicates the page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +122,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the number of entries returned per page.
+         * <p>Indicates the number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the number of primary ApsaraDB RDS for MySQL instances.
+         * <p>Indicates the number of primary ApsaraDB RDS for MySQL instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -151,47 +171,53 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsDbInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDbInstancesResponseBody</p>
+     */
     public static class ReadOnlyInstance extends TeaModel {
-        @NameInMap("ConnectUrl")
+        @com.aliyun.core.annotation.NameInMap("ConnectUrl")
         private String connectUrl;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("DbInstType")
+        @com.aliyun.core.annotation.NameInMap("DbInstType")
         private String dbInstType;
 
-        @NameInMap("DmInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DmInstanceId")
         private String dmInstanceId;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RdsInstType")
+        @com.aliyun.core.annotation.NameInMap("RdsInstType")
         private String rdsInstType;
 
-        @NameInMap("ReadWeight")
+        @com.aliyun.core.annotation.NameInMap("ReadWeight")
         private Integer readWeight;
 
-        @NameInMap("RemainDays")
+        @com.aliyun.core.annotation.NameInMap("RemainDays")
         private Integer remainDays;
 
         private ReadOnlyInstance(Builder builder) {
@@ -334,7 +360,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             private Integer remainDays; 
 
             /**
-             * Indicates the endpoint that is used to connect to the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the endpoint that is used to connect to the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1t1mk5a5b******.mysql.rds.aliyuncs.com</p>
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -342,27 +371,30 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the state of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:
-             * <p>
+             * <p>Indicates the state of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The ApsaraDB RDS for MySQL instance is being created.</li>
+             * <li><strong>1</strong>: The ApsaraDB RDS for MySQL instance is running.</li>
+             * <li><strong>3</strong>: The ApsaraDB RDS for MySQL instance is being deleted.</li>
+             * <li><strong>5</strong>: The ApsaraDB RDS for MySQL instance is being restarted.</li>
+             * <li><strong>6</strong>: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.</li>
+             * <li><strong>7</strong>: The ApsaraDB RDS for MySQL instance is being backed up.</li>
+             * <li><strong>8</strong>: The network type of the ApsaraDB RDS for MySQL instance is being changed.</li>
+             * <li><strong>9</strong>: The ApsaraDB RDS for MySQL instance is being migrated.</li>
+             * <li><strong>11</strong>: The data of the ApsaraDB RDS for MySQL instance is being migrated.</li>
+             * <li><strong>12</strong>: A disaster-recovery instance is being generated.</li>
+             * <li><strong>13</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance.</li>
+             * <li><strong>14</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.</li>
+             * <li><strong>15</strong>: A failover is being performed.</li>
+             * <li><strong>16</strong>: A temporary instance is being created.</li>
+             * <li><strong>17</strong>: A network is being created for the ApsaraDB RDS for MySQL instance.</li>
+             * <li><strong>18</strong>: The ApsaraDB RDS for MySQL instance is being cloned.</li>
+             * <li><strong>19</strong>: The link is being changed.</li>
+             * <li><strong>20</strong>: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.</li>
+             * </ul>
              * 
-             * *   **0**: The ApsaraDB RDS for MySQL instance is being created.
-             * *   **1**: The ApsaraDB RDS for MySQL instance is running.
-             * *   **3**: The ApsaraDB RDS for MySQL instance is being deleted.
-             * *   **5**: The ApsaraDB RDS for MySQL instance is being restarted.
-             * *   **6**: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.
-             * *   **7**: The ApsaraDB RDS for MySQL instance is being backed up.
-             * *   **8**: The network type of the ApsaraDB RDS for MySQL instance is being changed.
-             * *   **9**: The ApsaraDB RDS for MySQL instance is being migrated.
-             * *   **11**: The data of the ApsaraDB RDS for MySQL instance is being migrated.
-             * *   **12**: A disaster-recovery instance is being generated.
-             * *   **13**: Data is being imported to the ApsaraDB RDS for MySQL instance.
-             * *   **14**: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.
-             * *   **15**: A failover is being performed.
-             * *   **16**: A temporary instance is being created.
-             * *   **17**: A network is being created for the ApsaraDB RDS for MySQL instance.
-             * *   **18**: The ApsaraDB RDS for MySQL instance is being cloned.
-             * *   **19**: The link is being changed.
-             * *   **20**: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -370,7 +402,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. The value is set to RDS.
+             * <p>Indicates the type of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. The value is set to RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -378,7 +413,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of a resource.
+             * <p>Indicates the ID of a resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm-hbgau1zp****</p>
              */
             public Builder dmInstanceId(String dmInstanceId) {
                 this.dmInstanceId = dmInstanceId;
@@ -386,7 +424,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the engine of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the engine of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -394,7 +435,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the engine version of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the engine version of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -402,7 +446,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the timestamp when the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database expires.
+             * <p>Indicates the timestamp when the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123421352351234</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -410,7 +457,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of a read-only instance.
+             * <p>Indicates the name of a read-only instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -418,7 +468,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the network type of the read-only instance.
+             * <p>Indicates the network type of the read-only instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -426,11 +479,14 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the billing method of the read-only instance.
-             * <p>
+             * <p>Indicates the billing method of the read-only instance.</p>
+             * <ul>
+             * <li><strong>drdsPre</strong>: The instance uses the subscription billing method.</li>
+             * <li><strong>drdsPost</strong>: The instance uses the pay-as-you-go billing method.</li>
+             * </ul>
              * 
-             * *   **drdsPre**: The instance uses the subscription billing method.
-             * *   **drdsPost**: The instance uses the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -438,7 +494,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the port that is used to connect to the read-only instance.
+             * <p>Indicates the port that is used to connect to the read-only instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -446,7 +505,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the read-only instance.
+             * <p>Indicates the type of the read-only instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder rdsInstType(String rdsInstType) {
                 this.rdsInstType = rdsInstType;
@@ -454,7 +516,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the read weight of the read-only instance.
+             * <p>Indicates the read weight of the read-only instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder readWeight(Integer readWeight) {
                 this.readWeight = readWeight;
@@ -462,7 +527,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of remaining days before the read-only instance expires.
+             * <p>Indicates the number of remaining days before the read-only instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainDays(Integer remainDays) {
                 this.remainDays = remainDays;
@@ -476,9 +544,15 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDbInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDbInstancesResponseBody</p>
+     */
     public static class ReadOnlyInstances extends TeaModel {
-        @NameInMap("ReadOnlyInstance")
-        private java.util.List < ReadOnlyInstance> readOnlyInstance;
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyInstance")
+        private java.util.List<ReadOnlyInstance> readOnlyInstance;
 
         private ReadOnlyInstances(Builder builder) {
             this.readOnlyInstance = builder.readOnlyInstance;
@@ -495,17 +569,17 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         /**
          * @return readOnlyInstance
          */
-        public java.util.List < ReadOnlyInstance> getReadOnlyInstance() {
+        public java.util.List<ReadOnlyInstance> getReadOnlyInstance() {
             return this.readOnlyInstance;
         }
 
         public static final class Builder {
-            private java.util.List < ReadOnlyInstance> readOnlyInstance; 
+            private java.util.List<ReadOnlyInstance> readOnlyInstance; 
 
             /**
              * ReadOnlyInstance.
              */
-            public Builder readOnlyInstance(java.util.List < ReadOnlyInstance> readOnlyInstance) {
+            public Builder readOnlyInstance(java.util.List<ReadOnlyInstance> readOnlyInstance) {
                 this.readOnlyInstance = readOnlyInstance;
                 return this;
             }
@@ -517,50 +591,56 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDbInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDbInstancesResponseBody</p>
+     */
     public static class DbInstance extends TeaModel {
-        @NameInMap("ConnectUrl")
+        @com.aliyun.core.annotation.NameInMap("ConnectUrl")
         private String connectUrl;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("DbInstType")
+        @com.aliyun.core.annotation.NameInMap("DbInstType")
         private String dbInstType;
 
-        @NameInMap("DmInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DmInstanceId")
         private String dmInstanceId;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RdsInstType")
+        @com.aliyun.core.annotation.NameInMap("RdsInstType")
         private String rdsInstType;
 
-        @NameInMap("ReadOnlyInstances")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyInstances")
         private ReadOnlyInstances readOnlyInstances;
 
-        @NameInMap("ReadWeight")
+        @com.aliyun.core.annotation.NameInMap("ReadWeight")
         private Integer readWeight;
 
-        @NameInMap("RemainDays")
+        @com.aliyun.core.annotation.NameInMap("RemainDays")
         private Integer remainDays;
 
         private DbInstance(Builder builder) {
@@ -712,7 +792,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             private Integer remainDays; 
 
             /**
-             * Indicates the endpoint that is used to connect to an ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the endpoint that is used to connect to an ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1t1mk5a5b******.mysql.rds.aliyuncs.com</p>
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -720,7 +803,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the ID of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1t1mk5a5bdj****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -728,27 +814,30 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the state of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:
-             * <p>
+             * <p>Indicates the state of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The ApsaraDB RDS for MySQL instance is being created.</li>
+             * <li><strong>1</strong>: The ApsaraDB RDS for MySQL instance is running.</li>
+             * <li><strong>3</strong>: The ApsaraDB RDS for MySQL instance is being deleted.</li>
+             * <li><strong>5</strong>: The ApsaraDB RDS for MySQL instance is being restarted.</li>
+             * <li><strong>6</strong>: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.</li>
+             * <li><strong>7</strong>: The ApsaraDB RDS for MySQL instance is being backed up.</li>
+             * <li><strong>8</strong>: The network type of the ApsaraDB RDS for MySQL instance is being changed.</li>
+             * <li><strong>9</strong>: The ApsaraDB RDS for MySQL instance is being migrated.</li>
+             * <li><strong>11</strong>: The data of the ApsaraDB RDS for MySQL instance is being migrated.</li>
+             * <li><strong>12</strong>: A disaster-recovery instance is being generated.</li>
+             * <li><strong>13</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance.</li>
+             * <li><strong>14</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.</li>
+             * <li><strong>15</strong>: A failover is being performed.</li>
+             * <li><strong>16</strong>: A temporary instance is being created.</li>
+             * <li><strong>17</strong>: A network is being created for the ApsaraDB RDS for MySQL instance.</li>
+             * <li><strong>18</strong>: The ApsaraDB RDS for MySQL instance is being cloned.</li>
+             * <li><strong>19</strong>: The link is being changed.</li>
+             * <li><strong>20</strong>: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.</li>
+             * </ul>
              * 
-             * *   **0**: The ApsaraDB RDS for MySQL instance is being created.
-             * *   **1**: The ApsaraDB RDS for MySQL instance is running.
-             * *   **3**: The ApsaraDB RDS for MySQL instance is being deleted.
-             * *   **5**: The ApsaraDB RDS for MySQL instance is being restarted.
-             * *   **6**: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.
-             * *   **7**: The ApsaraDB RDS for MySQL instance is being backed up.
-             * *   **8**: The network type of the ApsaraDB RDS for MySQL instance is being changed.
-             * *   **9**: The ApsaraDB RDS for MySQL instance is being migrated.
-             * *   **11**: The data of the ApsaraDB RDS for MySQL instance is being migrated.
-             * *   **12**: A disaster-recovery instance is being generated.
-             * *   **13**: Data is being imported to the ApsaraDB RDS for MySQL instance.
-             * *   **14**: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.
-             * *   **15**: A failover is being performed.
-             * *   **16**: A temporary instance is being created.
-             * *   **17**: A network is being created for the ApsaraDB RDS for MySQL instance.
-             * *   **18**: The ApsaraDB RDS for MySQL instance is being cloned.
-             * *   **19**: The link is being changed.
-             * *   **20**: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -756,7 +845,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. The value is set to RDS.
+             * <p>Indicates the type of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. The value is set to RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -764,7 +856,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the ID of a resource.
+             * <p>Indicates the ID of a resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm-hbgau1zp****</p>
              */
             public Builder dmInstanceId(String dmInstanceId) {
                 this.dmInstanceId = dmInstanceId;
@@ -772,7 +867,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the engine of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the engine of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -780,7 +878,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the engine version of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the engine version of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -788,7 +889,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the point in time when the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database expires.
+             * <p>Indicates the point in time when the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1237486127634</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -796,7 +900,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the network type of the ApsaraDB RDS for MySQL instance.
+             * <p>Indicates the network type of the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -804,11 +911,14 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the billing method of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:
-             * <p>
+             * <p>Indicates the billing method of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:</p>
+             * <ul>
+             * <li><strong>drdsPre</strong>: The instance uses the subscription billing method.</li>
+             * <li><strong>drdsPost</strong>: The instance uses the pay-as-you-go billing method.</li>
+             * </ul>
              * 
-             * *   **drdsPre**: The instance uses the subscription billing method.
-             * *   **drdsPost**: The instance uses the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -816,7 +926,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the port that is used to connect to the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates the port that is used to connect to the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -824,11 +937,14 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database is a primary instance or a read-only instance.
-             * <p>
+             * <p>Indicates whether the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database is a primary instance or a read-only instance.</p>
+             * <ul>
+             * <li><strong>Primary</strong>: The instance is a primary instance.</li>
+             * <li><strong>Readonly</strong>: The instance is a read-only instance.</li>
+             * </ul>
              * 
-             * *   **Primary**: The instance is a primary instance.
-             * *   **Readonly**: The instance is a read-only instance.
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder rdsInstType(String rdsInstType) {
                 this.rdsInstType = rdsInstType;
@@ -836,7 +952,7 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates information about the read-only instances of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.
+             * <p>Indicates information about the read-only instances of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
              */
             public Builder readOnlyInstances(ReadOnlyInstances readOnlyInstances) {
                 this.readOnlyInstances = readOnlyInstances;
@@ -844,7 +960,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the read weight of the read-only instance.
+             * <p>Indicates the read weight of the read-only instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder readWeight(Integer readWeight) {
                 this.readWeight = readWeight;
@@ -852,7 +971,10 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the number of remaining days before a subscription instance expires.
+             * <p>Indicates the number of remaining days before a subscription instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainDays(Integer remainDays) {
                 this.remainDays = remainDays;
@@ -866,9 +988,15 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDbInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDbInstancesResponseBody</p>
+     */
     public static class DbInstances extends TeaModel {
-        @NameInMap("DbInstance")
-        private java.util.List < DbInstance> dbInstance;
+        @com.aliyun.core.annotation.NameInMap("DbInstance")
+        private java.util.List<DbInstance> dbInstance;
 
         private DbInstances(Builder builder) {
             this.dbInstance = builder.dbInstance;
@@ -885,17 +1013,17 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
         /**
          * @return dbInstance
          */
-        public java.util.List < DbInstance> getDbInstance() {
+        public java.util.List<DbInstance> getDbInstance() {
             return this.dbInstance;
         }
 
         public static final class Builder {
-            private java.util.List < DbInstance> dbInstance; 
+            private java.util.List<DbInstance> dbInstance; 
 
             /**
              * DbInstance.
              */
-            public Builder dbInstance(java.util.List < DbInstance> dbInstance) {
+            public Builder dbInstance(java.util.List<DbInstance> dbInstance) {
                 this.dbInstance = dbInstance;
                 return this;
             }

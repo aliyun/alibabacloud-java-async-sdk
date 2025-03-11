@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitCleanTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitCleanTaskRequest</p>
  */
 public class SubmitCleanTaskRequest extends Request {
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("ExpandType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpandType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expandType;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("ParentJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentJobId;
 
     private SubmitCleanTaskRequest(Builder builder) {
@@ -115,7 +120,11 @@ public class SubmitCleanTaskRequest extends Request {
         } 
 
         /**
-         * The name of the database that is scaled out.
+         * <p>The name of the database that is scaled out.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -124,7 +133,11 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds*********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -133,11 +146,15 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * The scale-out type. Valid values:
-         * <p>
+         * <p>The scale-out type. Valid values:</p>
+         * <ul>
+         * <li>smooth_expand: smooth scale-out</li>
+         * <li>hot_expand: hot-spot scale-out</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   smooth_expand: smooth scale-out
-         * *   hot_expand: hot-spot scale-out
+         * <strong>example:</strong>
+         * <p>smooth_expand</p>
          */
         public Builder expandType(String expandType) {
             this.putQueryParameter("ExpandType", expandType);
@@ -146,7 +163,11 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * The job ID of the scale-out task. The value of this parameter is the same as that of the ParentJobId parameter.
+         * <p>The job ID of the scale-out task. The value of this parameter is the same as that of the ParentJobId parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -155,7 +176,11 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * The ID of the scale-out task. This parameter is returned if you send a request for the smooth scale-out task.
+         * <p>The ID of the scale-out task. This parameter is returned if you send a request for the smooth scale-out task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder parentJobId(String parentJobId) {
             this.putQueryParameter("ParentJobId", parentJobId);

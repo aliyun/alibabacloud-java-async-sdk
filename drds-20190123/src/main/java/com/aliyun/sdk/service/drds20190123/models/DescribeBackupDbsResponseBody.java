@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupDbsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupDbsResponseBody</p>
  */
 public class DescribeBackupDbsResponseBody extends TeaModel {
-    @NameInMap("DbNames")
+    @com.aliyun.core.annotation.NameInMap("DbNames")
     private DbNames dbNames;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupDbsResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about a database.
+         * <p>The details about a database.</p>
          */
         public Builder dbNames(DbNames dbNames) {
             this.dbNames = dbNames;
@@ -70,7 +75,10 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>842DFA7F-B09B-42A2-B115-E684AE******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The result of request.
+         * <p>The result of request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,9 +102,15 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupDbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDbsResponseBody</p>
+     */
     public static class DbNames extends TeaModel {
-        @NameInMap("dbName")
-        private java.util.List < String > dbName;
+        @com.aliyun.core.annotation.NameInMap("dbName")
+        private java.util.List<String> dbName;
 
         private DbNames(Builder builder) {
             this.dbName = builder.dbName;
@@ -110,17 +127,17 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         /**
          * @return dbName
          */
-        public java.util.List < String > getDbName() {
+        public java.util.List<String> getDbName() {
             return this.dbName;
         }
 
         public static final class Builder {
-            private java.util.List < String > dbName; 
+            private java.util.List<String> dbName; 
 
             /**
              * dbName.
              */
-            public Builder dbName(java.util.List < String > dbName) {
+            public Builder dbName(java.util.List<String> dbName) {
                 this.dbName = dbName;
                 return this;
             }

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeInstanceAzoneRequest} extends {@link RequestModel}
  *
  * <p>ChangeInstanceAzoneRequest</p>
  */
 public class ChangeInstanceAzoneRequest extends Request {
-    @Query
-    @NameInMap("ChangeVSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeVSwitch")
     private Boolean changeVSwitch;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("DrdsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsRegionId;
 
-    @Query
-    @NameInMap("NewVSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewVSwitch")
     private String newVSwitch;
 
-    @Query
-    @NameInMap("OriginAzoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginAzoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String originAzoneId;
 
-    @Query
-    @NameInMap("TargetAzoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetAzoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetAzoneId;
 
     private ChangeInstanceAzoneRequest(Builder builder) {
@@ -137,7 +142,11 @@ public class ChangeInstanceAzoneRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdsjiii1b49****</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -146,7 +155,11 @@ public class ChangeInstanceAzoneRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder drdsRegionId(String drdsRegionId) {
             this.putQueryParameter("DrdsRegionId", drdsRegionId);
@@ -164,7 +177,11 @@ public class ChangeInstanceAzoneRequest extends Request {
         }
 
         /**
-         * The source zone of the PolarDB-X 1.0 instance.
+         * <p>The source zone of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-B</p>
          */
         public Builder originAzoneId(String originAzoneId) {
             this.putQueryParameter("OriginAzoneId", originAzoneId);
@@ -173,7 +190,11 @@ public class ChangeInstanceAzoneRequest extends Request {
         }
 
         /**
-         * The destination zone to which you want to modify
+         * <p>The destination zone to which you want to modify</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-A</p>
          */
         public Builder targetAzoneId(String targetAzoneId) {
             this.putQueryParameter("TargetAzoneId", targetAzoneId);

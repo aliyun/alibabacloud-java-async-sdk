@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceNetworkRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceNetworkRequest</p>
  */
 public class UpdateInstanceNetworkRequest extends Request {
-    @Query
-    @NameInMap("ClassicExpiredDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClassicExpiredDays")
     private Integer classicExpiredDays;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("RetainClassic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainClassic")
     private Boolean retainClassic;
 
-    @Query
-    @NameInMap("SrcInstanceNetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcInstanceNetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcInstanceNetworkType;
 
     private UpdateInstanceNetworkRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class UpdateInstanceNetworkRequest extends Request {
         } 
 
         /**
-         * Specifies the retention period of the classic network endpoint. Unit: days.
+         * <p>Specifies the retention period of the classic network endpoint. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder classicExpiredDays(Integer classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -107,7 +115,11 @@ public class UpdateInstanceNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the PolarDB-X 1.0 instance.
+         * <p>The ID of the PolarDB-X 1.0 instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds******</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -116,7 +128,10 @@ public class UpdateInstanceNetworkRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the classic network endpoint.
+         * <p>Specifies whether to retain the classic network endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder retainClassic(Boolean retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -125,11 +140,15 @@ public class UpdateInstanceNetworkRequest extends Request {
         }
 
         /**
-         * The network type of the PolarDB-X 1.0 instance. Valid values:
-         * <p>
+         * <p>The network type of the PolarDB-X 1.0 instance. Valid values:</p>
+         * <ul>
+         * <li>vpc: Virtual Private Cloud (VPC)</li>
+         * <li>classic: classic network</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   vpc: Virtual Private Cloud (VPC)
-         * *   classic: classic network
+         * <strong>example:</strong>
+         * <p>classic</p>
          */
         public Builder srcInstanceNetworkType(String srcInstanceNetworkType) {
             this.putQueryParameter("SrcInstanceNetworkType", srcInstanceNetworkType);

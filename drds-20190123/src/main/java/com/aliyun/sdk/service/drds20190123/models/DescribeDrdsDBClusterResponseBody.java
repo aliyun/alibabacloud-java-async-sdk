@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsDBClusterResponseBody</p>
  */
 public class DescribeDrdsDBClusterResponseBody extends TeaModel {
-    @NameInMap("DbInstance")
+    @com.aliyun.core.annotation.NameInMap("DbInstance")
     private DbInstance dbInstance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDrdsDBClusterResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of each PolarDB cluster.
+         * <p>The details of each PolarDB cluster.</p>
          */
         public Builder dbInstance(DbInstance dbInstance) {
             this.dbInstance = dbInstance;
@@ -70,7 +75,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60A77FD6-0DE4-4A34-B6FB-9C2673******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,17 +102,23 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBClusterResponseBody</p>
+     */
     public static class DBNode extends TeaModel {
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("DBNodeRole")
+        @com.aliyun.core.annotation.NameInMap("DBNodeRole")
         private String DBNodeRole;
 
-        @NameInMap("DBNodeStatus")
+        @com.aliyun.core.annotation.NameInMap("DBNodeStatus")
         private String DBNodeStatus;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNode(Builder builder) {
@@ -154,7 +171,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the node in the apsaradb for PolarDB cluster.
+             * <p>The ID of the node in the apsaradb for PolarDB cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-***************</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -162,11 +182,14 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The role of a node in the apsaradb for PolarDB cluster. Valid values:
-             * <p>
+             * <p>The role of a node in the apsaradb for PolarDB cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>Reader</strong></li>
+             * <li><strong>Writer</strong></li>
+             * </ul>
              * 
-             * *   **Reader**
-             * *   **Writer**
+             * <strong>example:</strong>
+             * <p>Reader</p>
              */
             public Builder DBNodeRole(String DBNodeRole) {
                 this.DBNodeRole = DBNodeRole;
@@ -174,7 +197,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the nodes in the PolarDB cluster.
+             * <p>The status of the nodes in the PolarDB cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBNodeStatus(String DBNodeStatus) {
                 this.DBNodeStatus = DBNodeStatus;
@@ -182,7 +208,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the node of the PolarDB cluster resides.
+             * <p>The ID of the zone where the node of the PolarDB cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -196,9 +225,15 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBClusterResponseBody</p>
+     */
     public static class DBNodes extends TeaModel {
-        @NameInMap("DBNode")
-        private java.util.List < DBNode> DBNode;
+        @com.aliyun.core.annotation.NameInMap("DBNode")
+        private java.util.List<DBNode> DBNode;
 
         private DBNodes(Builder builder) {
             this.DBNode = builder.DBNode;
@@ -215,17 +250,17 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         /**
          * @return DBNode
          */
-        public java.util.List < DBNode> getDBNode() {
+        public java.util.List<DBNode> getDBNode() {
             return this.DBNode;
         }
 
         public static final class Builder {
-            private java.util.List < DBNode> DBNode; 
+            private java.util.List<DBNode> DBNode; 
 
             /**
              * DBNode.
              */
-            public Builder DBNode(java.util.List < DBNode> DBNode) {
+            public Builder DBNode(java.util.List<DBNode> DBNode) {
                 this.DBNode = DBNode;
                 return this;
             }
@@ -237,14 +272,20 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBClusterResponseBody</p>
+     */
     public static class Endpoint extends TeaModel {
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("NodeIds")
+        @com.aliyun.core.annotation.NameInMap("NodeIds")
         private String nodeIds;
 
-        @NameInMap("ReadWeight")
+        @com.aliyun.core.annotation.NameInMap("ReadWeight")
         private Integer readWeight;
 
         private Endpoint(Builder builder) {
@@ -288,7 +329,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             private Integer readWeight; 
 
             /**
-             * The ID of the PolarDB connection address.
+             * <p>The ID of the PolarDB connection address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pe-*****************</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -296,7 +340,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID list of the nodes in the PolarDB connection string. Separate multiple nodes with commas (,).
+             * <p>The ID list of the nodes in the PolarDB connection string. Separate multiple nodes with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-<em><strong><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></strong></em></p>
              */
             public Builder nodeIds(String nodeIds) {
                 this.nodeIds = nodeIds;
@@ -304,7 +351,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The read ratio of this connection address managed by the DRDS database.
+             * <p>The read ratio of this connection address managed by the DRDS database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder readWeight(Integer readWeight) {
                 this.readWeight = readWeight;
@@ -318,9 +368,15 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBClusterResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("Endpoint")
-        private java.util.List < Endpoint> endpoint;
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        private java.util.List<Endpoint> endpoint;
 
         private Endpoints(Builder builder) {
             this.endpoint = builder.endpoint;
@@ -337,17 +393,17 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         /**
          * @return endpoint
          */
-        public java.util.List < Endpoint> getEndpoint() {
+        public java.util.List<Endpoint> getEndpoint() {
             return this.endpoint;
         }
 
         public static final class Builder {
-            private java.util.List < Endpoint> endpoint; 
+            private java.util.List<Endpoint> endpoint; 
 
             /**
              * Endpoint.
              */
-            public Builder endpoint(java.util.List < Endpoint> endpoint) {
+            public Builder endpoint(java.util.List<Endpoint> endpoint) {
                 this.endpoint = endpoint;
                 return this;
             }
@@ -359,47 +415,53 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsDBClusterResponseBody</p>
+     */
     public static class DbInstance extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("DBNodes")
+        @com.aliyun.core.annotation.NameInMap("DBNodes")
         private DBNodes DBNodes;
 
-        @NameInMap("DbInstType")
+        @com.aliyun.core.annotation.NameInMap("DbInstType")
         private String dbInstType;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private Endpoints endpoints;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RdsInstType")
+        @com.aliyun.core.annotation.NameInMap("RdsInstType")
         private String rdsInstType;
 
-        @NameInMap("ReadMode")
+        @com.aliyun.core.annotation.NameInMap("ReadMode")
         private String readMode;
 
-        @NameInMap("RemainDays")
+        @com.aliyun.core.annotation.NameInMap("RemainDays")
         private String remainDays;
 
         private DbInstance(Builder builder) {
@@ -542,7 +604,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             private String remainDays; 
 
             /**
-             * The ID of the PolarDB cluster.
+             * <p>The ID of the PolarDB cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*****************</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -550,7 +615,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the PolarDB instance.
+             * <p>The status of the PolarDB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -558,7 +626,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the nodes in the PolarDB Cluster.
+             * <p>The information about the nodes in the PolarDB Cluster.</p>
              */
             public Builder DBNodes(DBNodes DBNodes) {
                 this.DBNodes = DBNodes;
@@ -566,7 +634,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of storage used by the DRDS database.
+             * <p>The type of storage used by the DRDS database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POLARDB</p>
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -574,7 +645,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the PolarDB read /write splitting endpoint
+             * <p>The endpoint of the PolarDB read /write splitting endpoint</p>
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -582,7 +653,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DRDS database storage engine.
+             * <p>The type of the DRDS database storage engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POLARDB</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -590,7 +664,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the DRDS database storage engine.
+             * <p>The version of the DRDS database storage engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -598,7 +675,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the PolarDB cluster expires.
+             * <p>The time when the PolarDB cluster expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-27 11:22:33</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -606,7 +686,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the PolarDB cluster.
+             * <p>The network type of the PolarDB cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -614,7 +697,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the PolarDB cluster.
+             * <p>The billing method of the PolarDB cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -622,7 +708,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The PolarDB access port.
+             * <p>The PolarDB access port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -630,7 +719,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of RDS instance. PolarDB cluster does not support this parameter.
+             * <p>The type of RDS instance. PolarDB cluster does not support this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder rdsInstType(String rdsInstType) {
                 this.rdsInstType = rdsInstType;
@@ -638,14 +730,16 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter specifies the Read mode when the database storage type is PolarDB.
-             * <p>
+             * <p>This parameter specifies the Read mode when the database storage type is PolarDB.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>DEFAULT</strong>: the default mode (that is, all read traffic is sent to the PolarDB read /write node).</li>
+             * <li><strong>CUSTOM</strong>: Custom mode (you can customize the ratio of traffic sent to read /write nodes and read-only nodes).</li>
+             * <li><strong>BALANCE</strong>: read balancing mode (the read traffic is automatically distributed by the read load module of the PolarDB cluster, which can also be understood as the read traffic being evenly distributed to each node).</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   **DEFAULT**: the default mode (that is, all read traffic is sent to the PolarDB read /write node).
-             * *   **CUSTOM**: Custom mode (you can customize the ratio of traffic sent to read /write nodes and read-only nodes).
-             * *   **BALANCE**: read balancing mode (the read traffic is automatically distributed by the read load module of the PolarDB cluster, which can also be understood as the read traffic being evenly distributed to each node).
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder readMode(String readMode) {
                 this.readMode = readMode;
@@ -653,7 +747,10 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days remaining on the PolarDB for MySQL instance.
+             * <p>The number of days remaining on the PolarDB for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainDays(String remainDays) {
                 this.remainDays = remainDays;

@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetupTableRequest} extends {@link RequestModel}
  *
  * <p>SetupTableRequest</p>
  */
 public class SetupTableRequest extends Request {
-    @Query
-    @NameInMap("AllowFullTableScan")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowFullTableScan")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean allowFullTableScan;
 
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
-    private java.util.List < String > tableName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> tableName;
 
     private SetupTableRequest(Builder builder) {
         super(builder);
@@ -89,7 +94,7 @@ public class SetupTableRequest extends Request {
     /**
      * @return tableName
      */
-    public java.util.List < String > getTableName() {
+    public java.util.List<String> getTableName() {
         return this.tableName;
     }
 
@@ -98,7 +103,7 @@ public class SetupTableRequest extends Request {
         private String dbName; 
         private String drdsInstanceId; 
         private String regionId; 
-        private java.util.List < String > tableName; 
+        private java.util.List<String> tableName; 
 
         private Builder() {
             super();
@@ -114,7 +119,11 @@ public class SetupTableRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable full table scan.
+         * <p>Specifies whether to enable full table scan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowFullTableScan(Boolean allowFullTableScan) {
             this.putQueryParameter("AllowFullTableScan", allowFullTableScan);
@@ -123,7 +132,11 @@ public class SetupTableRequest extends Request {
         }
 
         /**
-         * The name of the database in which the table resides.
+         * <p>The name of the database in which the table resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -132,7 +145,11 @@ public class SetupTableRequest extends Request {
         }
 
         /**
-         * The ID of the DRDS instance.
+         * <p>The ID of the DRDS instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds************</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -141,7 +158,10 @@ public class SetupTableRequest extends Request {
         }
 
         /**
-         * The ID of the region where the streaming domain resides.
+         * <p>The ID of the region where the streaming domain resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,9 +170,12 @@ public class SetupTableRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
-        public Builder tableName(java.util.List < String > tableName) {
+        public Builder tableName(java.util.List<String> tableName) {
             this.putQueryParameter("TableName", tableName);
             this.tableName = tableName;
             return this;

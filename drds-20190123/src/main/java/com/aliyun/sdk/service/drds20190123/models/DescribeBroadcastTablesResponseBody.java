@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBroadcastTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBroadcastTablesResponseBody</p>
  */
 public class DescribeBroadcastTablesResponseBody extends TeaModel {
-    @NameInMap("IsShard")
+    @com.aliyun.core.annotation.NameInMap("IsShard")
     private Boolean isShard;
 
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeBroadcastTablesResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -102,7 +107,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean isShard; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -110,7 +115,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Indicates whether the database is sharded.
+         * <p>Indicates whether the database is sharded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isShard(Boolean isShard) {
             this.isShard = isShard;
@@ -118,15 +126,18 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates information about broadcast tables.
+         * <p>Indicates information about broadcast tables.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * Indicates the page number of the returned page.
+         * <p>Indicates the page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +145,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the number of entries returned per page.
+         * <p>Indicates the number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +156,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the ID of the request.
+         * <p>Indicates the ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86E420ED-43F2-4788-A58C-921849******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +167,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +178,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the total number of entries returned.
+         * <p>Indicates the total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -171,23 +194,29 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBroadcastTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBroadcastTablesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Broadcast")
+        @com.aliyun.core.annotation.NameInMap("Broadcast")
         private Boolean broadcast;
 
-        @NameInMap("BroadcastType")
+        @com.aliyun.core.annotation.NameInMap("BroadcastType")
         private String broadcastType;
 
-        @NameInMap("DbInstType")
+        @com.aliyun.core.annotation.NameInMap("DbInstType")
         private Integer dbInstType;
 
-        @NameInMap("IsShard")
+        @com.aliyun.core.annotation.NameInMap("IsShard")
         private Boolean isShard;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private List(Builder builder) {
@@ -258,7 +287,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * Indicates whether a table is a broadcast table.
+             * <p>Indicates whether a table is a broadcast table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder broadcast(Boolean broadcast) {
                 this.broadcast = broadcast;
@@ -266,11 +298,14 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the type of the broadcast table. Valid values:
-             * <p>
+             * <p>Indicates the type of the broadcast table. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: multi-write mode</li>
+             * <li><strong>2</strong>: synchronous mode</li>
+             * </ul>
              * 
-             * *   **1**: multi-write mode
-             * *   **2**: synchronous mode
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder broadcastType(String broadcastType) {
                 this.broadcastType = broadcastType;
@@ -278,11 +313,14 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the storage type of the database. Valid values:
-             * <p>
+             * <p>Indicates the storage type of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: RDS</li>
+             * <li><strong>4</strong>: PolarDB</li>
+             * </ul>
              * 
-             * *   **0**: RDS
-             * *   **4**: PolarDB
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dbInstType(Integer dbInstType) {
                 this.dbInstType = dbInstType;
@@ -290,7 +328,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the broadcast table was sharded.
+             * <p>Indicates whether the broadcast table was sharded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isShard(Boolean isShard) {
                 this.isShard = isShard;
@@ -298,12 +339,15 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the activation state of the broadcast table. Valid values:
-             * <p>
+             * <p>Indicates the activation state of the broadcast table. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The broadcast table is activated.</li>
+             * <li><strong>2</strong>: The broadcast table is being activated.</li>
+             * <li><strong>3</strong>: An exception occurs when the broadcast table is being activated.</li>
+             * </ul>
              * 
-             * *   **1**: The broadcast table is activated.
-             * *   **2**: The broadcast table is being activated.
-             * *   **3**: An exception occurs when the broadcast table is being activated.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -311,7 +355,10 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the name of the table.
+             * <p>Indicates the name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nation</p>
              */
             public Builder table(String table) {
                 this.table = table;

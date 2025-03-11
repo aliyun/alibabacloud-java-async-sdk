@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRDSPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeRDSPerformanceRequest</p>
  */
 public class DescribeRDSPerformanceRequest extends Request {
-    @Query
-    @NameInMap("DbInstType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstType")
     private String dbInstType;
 
-    @Query
-    @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DrdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String drdsInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("Keys")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keys")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keys;
 
-    @Query
-    @NameInMap("RdsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsInstanceId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private DescribeRDSPerformanceRequest(Builder builder) {
@@ -127,7 +132,10 @@ public class DescribeRDSPerformanceRequest extends Request {
         } 
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -136,7 +144,11 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the Distributed Relational Database Service (DRDS) instance.
+         * <p>The ID of the Distributed Relational Database Service (DRDS) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds*********</p>
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -145,7 +157,10 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * The end time of the query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
+         * <p>The end time of the query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603209690000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -154,10 +169,14 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * The performance monitoring metrics. You can specify one or more metrics for a query at a time. Separate multiple metric parameters with commas (,).
-         * <p>
+         * <p>The performance monitoring metrics. You can specify one or more metrics for a query at a time. Separate multiple metric parameters with commas (,).</p>
+         * <blockquote>
+         * <p> For more information about the details of performance monitoring metrics, see <a href="https://help.aliyun.com/document_detail/186705.html">Storage monitoring</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about the details of performance monitoring metrics, see [Storage monitoring](~~186705~~).
+         * <strong>example:</strong>
+         * <p>MySQL_MemCpuUsage</p>
          */
         public Builder keys(String keys) {
             this.putQueryParameter("Keys", keys);
@@ -166,7 +185,11 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the storage-layer ApsaraDB RDS for MySQL instance.
+         * <p>The ID of the storage-layer ApsaraDB RDS for MySQL instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-************</p>
          */
         public Builder rdsInstanceId(String rdsInstanceId) {
             this.putQueryParameter("RdsInstanceId", rdsInstanceId);
@@ -175,7 +198,10 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * The start time of the query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
+         * <p>The start time of the query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603123290000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

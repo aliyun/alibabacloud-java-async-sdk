@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstDbSlsInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstDbSlsInfoResponseBody</p>
  */
 public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
-    @NameInMap("AuditInfo")
+    @com.aliyun.core.annotation.NameInMap("AuditInfo")
     private AuditInfo auditInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeInstDbSlsInfoResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the SQL audit.
+         * <p>The details of the SQL audit.</p>
          */
         public Builder auditInfo(AuditInfo auditInfo) {
             this.auditInfo = auditInfo;
@@ -70,7 +75,10 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC3ABA3E-0F8A-4596-9104-F5155C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,11 +102,17 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstDbSlsInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstDbSlsInfoResponseBody</p>
+     */
     public static class AuditInfo extends TeaModel {
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
         private AuditInfo(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
             private String project; 
 
             /**
-             * The name of the LogStore.
+             * <p>The name of the LogStore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -138,7 +158,10 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder project(String project) {
                 this.project = project;

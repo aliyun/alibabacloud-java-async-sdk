@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.drds20190123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDrdsShardingDbsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDrdsShardingDbsResponseBody</p>
  */
 public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShardingDbs")
+    @com.aliyun.core.annotation.NameInMap("ShardingDbs")
     private ShardingDbs shardingDbs;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeDrdsShardingDbsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +114,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of database shards returned per page.
+         * <p>The number of database shards returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +125,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>509BDE17-505A-4B3B-854D-30D3F092502F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,7 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of returned database shards.
+         * <p>The list of returned database shards.</p>
          */
         public Builder shardingDbs(ShardingDbs shardingDbs) {
             this.shardingDbs = shardingDbs;
@@ -130,7 +144,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned database shards.
+         * <p>The number of returned database shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -151,44 +171,50 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDrdsShardingDbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsShardingDbsResponseBody</p>
+     */
     public static class ShardingDb extends TeaModel {
-        @NameInMap("BlockingTimeout")
+        @com.aliyun.core.annotation.NameInMap("BlockingTimeout")
         private Integer blockingTimeout;
 
-        @NameInMap("ConnectUrl")
+        @com.aliyun.core.annotation.NameInMap("ConnectUrl")
         private String connectUrl;
 
-        @NameInMap("ConnectionProperties")
+        @com.aliyun.core.annotation.NameInMap("ConnectionProperties")
         private String connectionProperties;
 
-        @NameInMap("DbInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceId")
         private String dbInstanceId;
 
-        @NameInMap("DbStatus")
+        @com.aliyun.core.annotation.NameInMap("DbStatus")
         private String dbStatus;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("IdleTimeOut")
+        @com.aliyun.core.annotation.NameInMap("IdleTimeOut")
         private Integer idleTimeOut;
 
-        @NameInMap("MaxPoolSize")
+        @com.aliyun.core.annotation.NameInMap("MaxPoolSize")
         private Integer maxPoolSize;
 
-        @NameInMap("MinPoolSize")
+        @com.aliyun.core.annotation.NameInMap("MinPoolSize")
         private Integer minPoolSize;
 
-        @NameInMap("PreparedStatementCacheSize")
+        @com.aliyun.core.annotation.NameInMap("PreparedStatementCacheSize")
         private Integer preparedStatementCacheSize;
 
-        @NameInMap("ShardingDbName")
+        @com.aliyun.core.annotation.NameInMap("ShardingDbName")
         private String shardingDbName;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private ShardingDb(Builder builder) {
@@ -322,7 +348,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The timeout period for a transaction to wait for the release of the data lock.
+             * <p>The timeout period for a transaction to wait for the release of the data lock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder blockingTimeout(Integer blockingTimeout) {
                 this.blockingTimeout = blockingTimeout;
@@ -330,7 +359,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to access the Apsara RDS for MySQL instance.
+             * <p>The URL that is used to access the Apsara RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.64.100:11569</p>
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -338,7 +370,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The properties of the connection string.
+             * <p>The properties of the connection string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connectTimeout=3000;autoReconnect=true;failOverReadOnly=false;socketTimeout=900000;rewriteBatchedStatements=true;characterEncoding=utf8</p>
              */
             public Builder connectionProperties(String connectionProperties) {
                 this.connectionProperties = connectionProperties;
@@ -346,7 +381,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Apsara RDS for MySQL instance that is used as the storage of the database shard.
+             * <p>The ID of the Apsara RDS for MySQL instance that is used as the storage of the database shard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1hjzn0yv5j2****</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -354,7 +392,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database.
+             * <p>The status of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder dbStatus(String dbStatus) {
                 this.dbStatus = dbStatus;
@@ -362,7 +403,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The engine of the database.
+             * <p>The engine of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -370,7 +414,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of group on which the database shard is stored.
+             * <p>The name of group on which the database shard is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMP1_1568171495522SABE_KUP4_0000</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -378,7 +425,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of an idle connection.
+             * <p>The timeout period of an idle connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder idleTimeOut(Integer idleTimeOut) {
                 this.idleTimeOut = idleTimeOut;
@@ -386,7 +436,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of the connection pool.
+             * <p>The maximum size of the connection pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder maxPoolSize(Integer maxPoolSize) {
                 this.maxPoolSize = maxPoolSize;
@@ -394,7 +447,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum size of the connection pool.
+             * <p>The minimum size of the connection pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder minPoolSize(Integer minPoolSize) {
                 this.minPoolSize = minPoolSize;
@@ -402,7 +458,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of cache for the returned results.
+             * <p>The size of cache for the returned results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder preparedStatementCacheSize(Integer preparedStatementCacheSize) {
                 this.preparedStatementCacheSize = preparedStatementCacheSize;
@@ -410,7 +469,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database shard.
+             * <p>The name of the database shard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp1_zhk1_0000</p>
              */
             public Builder shardingDbName(String shardingDbName) {
                 this.shardingDbName = shardingDbName;
@@ -418,7 +480,10 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The username that is used to connect to the ApsaraDB RDS for MySQL instance.
+             * <p>The username that is used to connect to the ApsaraDB RDS for MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg284mi8</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -432,9 +497,15 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDrdsShardingDbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDrdsShardingDbsResponseBody</p>
+     */
     public static class ShardingDbs extends TeaModel {
-        @NameInMap("ShardingDb")
-        private java.util.List < ShardingDb> shardingDb;
+        @com.aliyun.core.annotation.NameInMap("ShardingDb")
+        private java.util.List<ShardingDb> shardingDb;
 
         private ShardingDbs(Builder builder) {
             this.shardingDb = builder.shardingDb;
@@ -451,17 +522,17 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         /**
          * @return shardingDb
          */
-        public java.util.List < ShardingDb> getShardingDb() {
+        public java.util.List<ShardingDb> getShardingDb() {
             return this.shardingDb;
         }
 
         public static final class Builder {
-            private java.util.List < ShardingDb> shardingDb; 
+            private java.util.List<ShardingDb> shardingDb; 
 
             /**
              * ShardingDb.
              */
-            public Builder shardingDb(java.util.List < ShardingDb> shardingDb) {
+            public Builder shardingDb(java.util.List<ShardingDb> shardingDb) {
                 this.shardingDb = shardingDb;
                 return this;
             }
