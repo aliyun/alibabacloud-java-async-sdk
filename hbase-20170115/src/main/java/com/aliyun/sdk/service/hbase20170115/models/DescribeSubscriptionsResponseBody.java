@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubscriptionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSubscriptionsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Subscriptions")
-    private java.util.List < Subscriptions> subscriptions;
+    private java.util.List<Subscriptions> subscriptions;
 
     private DescribeSubscriptionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,13 +46,13 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
     /**
      * @return subscriptions
      */
-    public java.util.List < Subscriptions> getSubscriptions() {
+    public java.util.List<Subscriptions> getSubscriptions() {
         return this.subscriptions;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Subscriptions> subscriptions; 
+        private java.util.List<Subscriptions> subscriptions; 
 
         /**
          * RequestId.
@@ -59,7 +65,7 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
         /**
          * Subscriptions.
          */
-        public Builder subscriptions(java.util.List < Subscriptions> subscriptions) {
+        public Builder subscriptions(java.util.List<Subscriptions> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
@@ -70,6 +76,12 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSubscriptionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionsResponseBody</p>
+     */
     public static class DBInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -151,9 +163,15 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionsResponseBody</p>
+     */
     public static class Subscriptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstances")
-        private java.util.List < DBInstances> DBInstances;
+        private java.util.List<DBInstances> DBInstances;
 
         @com.aliyun.core.annotation.NameInMap("Mapping")
         private String mapping;
@@ -190,7 +208,7 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
         /**
          * @return DBInstances
          */
-        public java.util.List < DBInstances> getDBInstances() {
+        public java.util.List<DBInstances> getDBInstances() {
             return this.DBInstances;
         }
 
@@ -230,7 +248,7 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DBInstances> DBInstances; 
+            private java.util.List<DBInstances> DBInstances; 
             private String mapping; 
             private String subscriptionDescription; 
             private String subscriptionId; 
@@ -240,7 +258,7 @@ public class DescribeSubscriptionsResponseBody extends TeaModel {
             /**
              * DBInstances.
              */
-            public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
+            public Builder DBInstances(java.util.List<DBInstances> DBInstances) {
                 this.DBInstances = DBInstances;
                 return this;
             }

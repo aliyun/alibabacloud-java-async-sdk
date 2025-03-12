@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterServiceConfigHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterServiceConfigHistoryResponseBody</p>
@@ -130,6 +136,12 @@ public class ListClusterServiceConfigHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterServiceConfigHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterServiceConfigHistoryResponseBody</p>
+     */
     public static class ConfigHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -251,9 +263,15 @@ public class ListClusterServiceConfigHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterServiceConfigHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterServiceConfigHistoryResponseBody</p>
+     */
     public static class ConfigHistoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigHistory")
-        private java.util.List < ConfigHistory> configHistory;
+        private java.util.List<ConfigHistory> configHistory;
 
         private ConfigHistoryList(Builder builder) {
             this.configHistory = builder.configHistory;
@@ -270,17 +288,17 @@ public class ListClusterServiceConfigHistoryResponseBody extends TeaModel {
         /**
          * @return configHistory
          */
-        public java.util.List < ConfigHistory> getConfigHistory() {
+        public java.util.List<ConfigHistory> getConfigHistory() {
             return this.configHistory;
         }
 
         public static final class Builder {
-            private java.util.List < ConfigHistory> configHistory; 
+            private java.util.List<ConfigHistory> configHistory; 
 
             /**
              * ConfigHistory.
              */
-            public Builder configHistory(java.util.List < ConfigHistory> configHistory) {
+            public Builder configHistory(java.util.List<ConfigHistory> configHistory) {
                 this.configHistory = configHistory;
                 return this;
             }

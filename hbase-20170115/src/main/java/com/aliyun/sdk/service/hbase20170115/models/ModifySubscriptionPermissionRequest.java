@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySubscriptionPermissionRequest} extends {@link RequestModel}
  *
  * <p>ModifySubscriptionPermissionRequest</p>
@@ -14,6 +20,10 @@ public class ModifySubscriptionPermissionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -31,6 +41,7 @@ public class ModifySubscriptionPermissionRequest extends Request {
     private ModifySubscriptionPermissionRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
@@ -57,6 +68,13 @@ public class ModifySubscriptionPermissionRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -79,6 +97,7 @@ public class ModifySubscriptionPermissionRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySubscriptionPermissionRequest, Builder> {
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer status; 
@@ -90,6 +109,7 @@ public class ModifySubscriptionPermissionRequest extends Request {
         private Builder(ModifySubscriptionPermissionRequest request) {
             super(request);
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
@@ -101,6 +121,15 @@ public class ModifySubscriptionPermissionRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -123,7 +152,7 @@ public class ModifySubscriptionPermissionRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

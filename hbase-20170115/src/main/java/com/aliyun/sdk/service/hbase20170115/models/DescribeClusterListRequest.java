@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterListRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterListRequest</p>
@@ -50,11 +56,11 @@ public class DescribeClusterListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    private java.util.List<String> statusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
@@ -155,14 +161,14 @@ public class DescribeClusterListRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -183,8 +189,8 @@ public class DescribeClusterListRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > statusList; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> statusList; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -262,7 +268,7 @@ public class DescribeClusterListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +297,7 @@ public class DescribeClusterListRequest extends Request {
         /**
          * StatusList.
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;
@@ -300,7 +306,7 @@ public class DescribeClusterListRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -322,6 +328,12 @@ public class DescribeClusterListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterListRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterListRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

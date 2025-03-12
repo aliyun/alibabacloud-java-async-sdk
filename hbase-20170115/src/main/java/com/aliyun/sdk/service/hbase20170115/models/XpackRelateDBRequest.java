@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link XpackRelateDBRequest} extends {@link RequestModel}
  *
  * <p>XpackRelateDBRequest</p>
@@ -154,7 +160,7 @@ public class XpackRelateDBRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -163,7 +169,7 @@ public class XpackRelateDBRequest extends Request {
         }
 
         /**
-         * DbClusterIds.
+         * <p>This parameter is required.</p>
          */
         public Builder dbClusterIds(String dbClusterIds) {
             this.putQueryParameter("DbClusterIds", dbClusterIds);
@@ -190,7 +196,7 @@ public class XpackRelateDBRequest extends Request {
         }
 
         /**
-         * RelateDbType.
+         * <p>This parameter is required.</p>
          */
         public Builder relateDbType(String relateDbType) {
             this.putQueryParameter("RelateDbType", relateDbType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySubscriptionDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifySubscriptionDescriptionRequest</p>
@@ -14,6 +20,10 @@ public class ModifySubscriptionDescriptionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -36,6 +46,7 @@ public class ModifySubscriptionDescriptionRequest extends Request {
     private ModifySubscriptionDescriptionRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.subscriptionDescription = builder.subscriptionDescription;
@@ -60,6 +71,13 @@ public class ModifySubscriptionDescriptionRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -92,6 +110,7 @@ public class ModifySubscriptionDescriptionRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySubscriptionDescriptionRequest, Builder> {
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String subscriptionDescription; 
@@ -104,6 +123,7 @@ public class ModifySubscriptionDescriptionRequest extends Request {
         private Builder(ModifySubscriptionDescriptionRequest request) {
             super(request);
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.subscriptionDescription = request.subscriptionDescription;
@@ -116,6 +136,15 @@ public class ModifySubscriptionDescriptionRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -138,7 +167,7 @@ public class ModifySubscriptionDescriptionRequest extends Request {
         }
 
         /**
-         * SubscriptionDescription.
+         * <p>This parameter is required.</p>
          */
         public Builder subscriptionDescription(String subscriptionDescription) {
             this.putQueryParameter("SubscriptionDescription", subscriptionDescription);
@@ -147,7 +176,7 @@ public class ModifySubscriptionDescriptionRequest extends Request {
         }
 
         /**
-         * SubscriptionId.
+         * <p>This parameter is required.</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.putQueryParameter("SubscriptionId", subscriptionId);

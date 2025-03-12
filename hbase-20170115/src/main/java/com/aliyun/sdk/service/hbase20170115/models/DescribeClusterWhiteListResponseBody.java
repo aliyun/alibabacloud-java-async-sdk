@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterWhiteListResponseBody</p>
@@ -70,9 +76,15 @@ public class DescribeClusterWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterWhiteListResponseBody</p>
+     */
     public static class GroupItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WhiteIp")
-        private java.util.List < String > whiteIp;
+        private java.util.List<String> whiteIp;
 
         private GroupItems(Builder builder) {
             this.whiteIp = builder.whiteIp;
@@ -89,17 +101,17 @@ public class DescribeClusterWhiteListResponseBody extends TeaModel {
         /**
          * @return whiteIp
          */
-        public java.util.List < String > getWhiteIp() {
+        public java.util.List<String> getWhiteIp() {
             return this.whiteIp;
         }
 
         public static final class Builder {
-            private java.util.List < String > whiteIp; 
+            private java.util.List<String> whiteIp; 
 
             /**
              * WhiteIp.
              */
-            public Builder whiteIp(java.util.List < String > whiteIp) {
+            public Builder whiteIp(java.util.List<String> whiteIp) {
                 this.whiteIp = whiteIp;
                 return this;
             }

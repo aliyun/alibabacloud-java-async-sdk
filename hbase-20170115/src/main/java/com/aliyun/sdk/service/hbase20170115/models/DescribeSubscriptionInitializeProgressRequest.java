@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubscriptionInitializeProgressRequest} extends {@link RequestModel}
  *
  * <p>DescribeSubscriptionInitializeProgressRequest</p>
@@ -22,6 +28,10 @@ public class DescribeSubscriptionInitializeProgressRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -41,6 +51,7 @@ public class DescribeSubscriptionInitializeProgressRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.subscriptionId = builder.subscriptionId;
@@ -81,6 +92,13 @@ public class DescribeSubscriptionInitializeProgressRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -105,6 +123,7 @@ public class DescribeSubscriptionInitializeProgressRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String subscriptionId; 
@@ -118,6 +137,7 @@ public class DescribeSubscriptionInitializeProgressRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.subscriptionId = request.subscriptionId;
@@ -151,6 +171,15 @@ public class DescribeSubscriptionInitializeProgressRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -169,7 +198,7 @@ public class DescribeSubscriptionInitializeProgressRequest extends Request {
         }
 
         /**
-         * SubscriptionId.
+         * <p>This parameter is required.</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.putQueryParameter("SubscriptionId", subscriptionId);

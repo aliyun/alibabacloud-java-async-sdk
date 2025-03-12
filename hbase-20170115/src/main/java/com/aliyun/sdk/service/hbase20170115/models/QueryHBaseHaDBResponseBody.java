@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryHBaseHaDBResponseBody} extends {@link TeaModel}
  *
  * <p>QueryHBaseHaDBResponseBody</p>
@@ -130,6 +136,12 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryHBaseHaDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHBaseHaDBResponseBody</p>
+     */
     public static class Cluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveName")
         private String activeName;
@@ -231,9 +243,15 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHBaseHaDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHBaseHaDBResponseBody</p>
+     */
     public static class ClusterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cluster")
-        private java.util.List < Cluster> cluster;
+        private java.util.List<Cluster> cluster;
 
         private ClusterList(Builder builder) {
             this.cluster = builder.cluster;
@@ -250,17 +268,17 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         /**
          * @return cluster
          */
-        public java.util.List < Cluster> getCluster() {
+        public java.util.List<Cluster> getCluster() {
             return this.cluster;
         }
 
         public static final class Builder {
-            private java.util.List < Cluster> cluster; 
+            private java.util.List<Cluster> cluster; 
 
             /**
              * Cluster.
              */
-            public Builder cluster(java.util.List < Cluster> cluster) {
+            public Builder cluster(java.util.List<Cluster> cluster) {
                 this.cluster = cluster;
                 return this;
             }

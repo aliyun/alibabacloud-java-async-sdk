@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubscriptionRequest} extends {@link RequestModel}
  *
  * <p>CreateSubscriptionRequest</p>
@@ -227,7 +233,7 @@ public class CreateSubscriptionRequest extends Request {
         } 
 
         /**
-         * DestinationInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder destinationInstanceId(String destinationInstanceId) {
             this.putQueryParameter("DestinationInstanceId", destinationInstanceId);
@@ -236,7 +242,7 @@ public class CreateSubscriptionRequest extends Request {
         }
 
         /**
-         * DestinationInstanceRegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder destinationInstanceRegionId(String destinationInstanceRegionId) {
             this.putQueryParameter("DestinationInstanceRegionId", destinationInstanceRegionId);
@@ -254,7 +260,7 @@ public class CreateSubscriptionRequest extends Request {
         }
 
         /**
-         * Mapping.
+         * <p>This parameter is required.</p>
          */
         public Builder mapping(String mapping) {
             this.putQueryParameter("Mapping", mapping);
@@ -299,7 +305,7 @@ public class CreateSubscriptionRequest extends Request {
         }
 
         /**
-         * SourceInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);
@@ -308,7 +314,7 @@ public class CreateSubscriptionRequest extends Request {
         }
 
         /**
-         * SourceInstanceRegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder sourceInstanceRegionId(String sourceInstanceRegionId) {
             this.putQueryParameter("SourceInstanceRegionId", sourceInstanceRegionId);
@@ -326,7 +332,7 @@ public class CreateSubscriptionRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * <p>This parameter is required.</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

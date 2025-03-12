@@ -31,18 +31,40 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2017-01-15";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("ap-southeast-1", "hbase.aliyuncs.com"),
-            new TeaPair("cn-beijing", "hbase.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "hbase.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "hbase.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "hbase.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "hbase.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "hbase.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "hbase.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "hbase.aliyuncs.com")
+            new TeaPair("ap-northeast-2-pop", "hbase.aliyuncs.com"),
+            new TeaPair("ap-south-1", "hbase.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "hbase.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "hbase.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "hbase.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "hbase.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "hbase.aliyuncs.com"),
+            new TeaPair("cn-fujian", "hbase.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "hbase.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "hbase.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "hbase.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "hbase.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "hbase.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "hbase.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "hbase.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "hbase.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "hbase.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "hbase.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "hbase.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "hbase.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "hbase.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "hbase.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "hbase.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "hbase.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "hbase.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "hbase.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -52,6 +74,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddUserHdfsInfo  AddUserHdfsInfoRequest
+     * @return AddUserHdfsInfoResponse
+     */
     @Override
     public CompletableFuture<AddUserHdfsInfoResponse> addUserHdfsInfo(AddUserHdfsInfoRequest request) {
         try {
@@ -66,6 +92,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AllocatePublicNetworkAddress  AllocatePublicNetworkAddressRequest
+     * @return AllocatePublicNetworkAddressResponse
+     */
     @Override
     public CompletableFuture<AllocatePublicNetworkAddressResponse> allocatePublicNetworkAddress(AllocatePublicNetworkAddressRequest request) {
         try {
@@ -80,6 +110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckVersionsOfComponents  CheckVersionsOfComponentsRequest
+     * @return CheckVersionsOfComponentsResponse
+     */
     @Override
     public CompletableFuture<CheckVersionsOfComponentsResponse> checkVersionsOfComponents(CheckVersionsOfComponentsRequest request) {
         try {
@@ -94,6 +128,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseBackup  CloseBackupRequest
+     * @return CloseBackupResponse
+     */
     @Override
     public CompletableFuture<CloseBackupResponse> closeBackup(CloseBackupRequest request) {
         try {
@@ -108,6 +146,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConvertCluster  ConvertClusterRequest
+     * @return ConvertClusterResponse
+     */
     @Override
     public CompletableFuture<ConvertClusterResponse> convertCluster(ConvertClusterRequest request) {
         try {
@@ -122,6 +164,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
+     */
     @Override
     public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
         try {
@@ -136,6 +182,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGlobalResource  CreateGlobalResourceRequest
+     * @return CreateGlobalResourceResponse
+     */
     @Override
     public CompletableFuture<CreateGlobalResourceResponse> createGlobalResource(CreateGlobalResourceRequest request) {
         try {
@@ -150,6 +200,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHbaseSlbServer  CreateHbaseSlbServerRequest
+     * @return CreateHbaseSlbServerResponse
+     */
     @Override
     public CompletableFuture<CreateHbaseSlbServerResponse> createHbaseSlbServer(CreateHbaseSlbServerRequest request) {
         try {
@@ -164,6 +218,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSubscription  CreateSubscriptionRequest
+     * @return CreateSubscriptionResponse
+     */
     @Override
     public CompletableFuture<CreateSubscriptionResponse> createSubscription(CreateSubscriptionRequest request) {
         try {
@@ -178,6 +236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCluster  DeleteClusterRequest
+     * @return DeleteClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
         try {
@@ -192,6 +254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGlobalResource  DeleteGlobalResourceRequest
+     * @return DeleteGlobalResourceResponse
+     */
     @Override
     public CompletableFuture<DeleteGlobalResourceResponse> deleteGlobalResource(DeleteGlobalResourceRequest request) {
         try {
@@ -206,6 +272,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHbaseSlbServer  DeleteHbaseSlbServerRequest
+     * @return DeleteHbaseSlbServerResponse
+     */
     @Override
     public CompletableFuture<DeleteHbaseSlbServerResponse> deleteHbaseSlbServer(DeleteHbaseSlbServerRequest request) {
         try {
@@ -220,6 +290,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteServerlessInstance  DeleteServerlessInstanceRequest
+     * @return DeleteServerlessInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteServerlessInstanceResponse> deleteServerlessInstance(DeleteServerlessInstanceRequest request) {
         try {
@@ -234,6 +308,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserHdfsInfo  DeleteUserHdfsInfoRequest
+     * @return DeleteUserHdfsInfoResponse
+     */
     @Override
     public CompletableFuture<DeleteUserHdfsInfoResponse> deleteUserHdfsInfo(DeleteUserHdfsInfoRequest request) {
         try {
@@ -248,6 +326,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
         try {
@@ -262,6 +344,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request) {
         try {
@@ -276,6 +362,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterAttribute  DescribeClusterAttributeRequest
+     * @return DescribeClusterAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterAttributeResponse> describeClusterAttribute(DescribeClusterAttributeRequest request) {
         try {
@@ -290,6 +380,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterConnectAddrs  DescribeClusterConnectAddrsRequest
+     * @return DescribeClusterConnectAddrsResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterConnectAddrsResponse> describeClusterConnectAddrs(DescribeClusterConnectAddrsRequest request) {
         try {
@@ -304,6 +398,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterList  DescribeClusterListRequest
+     * @return DescribeClusterListResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterListResponse> describeClusterList(DescribeClusterListRequest request) {
         try {
@@ -318,6 +416,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterModel  DescribeClusterModelRequest
+     * @return DescribeClusterModelResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterModelResponse> describeClusterModel(DescribeClusterModelRequest request) {
         try {
@@ -332,6 +434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterWhiteList  DescribeClusterWhiteListRequest
+     * @return DescribeClusterWhiteListResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterWhiteListResponse> describeClusterWhiteList(DescribeClusterWhiteListRequest request) {
         try {
@@ -346,6 +452,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeColdStorage  DescribeColdStorageRequest
+     * @return DescribeColdStorageResponse
+     */
     @Override
     public CompletableFuture<DescribeColdStorageResponse> describeColdStorage(DescribeColdStorageRequest request) {
         try {
@@ -360,6 +470,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMultiModDbAttribute  DescribeMultiModDbAttributeRequest
+     * @return DescribeMultiModDbAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeMultiModDbAttributeResponse> describeMultiModDbAttribute(DescribeMultiModDbAttributeRequest request) {
         try {
@@ -374,6 +488,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRdsVSwitchs  DescribeRdsVSwitchsRequest
+     * @return DescribeRdsVSwitchsResponse
+     */
     @Override
     public CompletableFuture<DescribeRdsVSwitchsResponse> describeRdsVSwitchs(DescribeRdsVSwitchsRequest request) {
         try {
@@ -388,6 +506,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -402,6 +524,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServerlessInstance  DescribeServerlessInstanceRequest
+     * @return DescribeServerlessInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeServerlessInstanceResponse> describeServerlessInstance(DescribeServerlessInstanceRequest request) {
         try {
@@ -416,6 +542,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSubscriptionInitializeProgress  DescribeSubscriptionInitializeProgressRequest
+     * @return DescribeSubscriptionInitializeProgressResponse
+     */
     @Override
     public CompletableFuture<DescribeSubscriptionInitializeProgressResponse> describeSubscriptionInitializeProgress(DescribeSubscriptionInitializeProgressRequest request) {
         try {
@@ -430,6 +560,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSubscriptionPerformance  DescribeSubscriptionPerformanceRequest
+     * @return DescribeSubscriptionPerformanceResponse
+     */
     @Override
     public CompletableFuture<DescribeSubscriptionPerformanceResponse> describeSubscriptionPerformance(DescribeSubscriptionPerformanceRequest request) {
         try {
@@ -444,6 +578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSubscriptionPermission  DescribeSubscriptionPermissionRequest
+     * @return DescribeSubscriptionPermissionResponse
+     */
     @Override
     public CompletableFuture<DescribeSubscriptionPermissionResponse> describeSubscriptionPermission(DescribeSubscriptionPermissionRequest request) {
         try {
@@ -458,6 +596,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSubscriptions  DescribeSubscriptionsRequest
+     * @return DescribeSubscriptionsResponse
+     */
     @Override
     public CompletableFuture<DescribeSubscriptionsResponse> describeSubscriptions(DescribeSubscriptionsRequest request) {
         try {
@@ -472,6 +614,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableServerlessPublicConnection  EnableServerlessPublicConnectionRequest
+     * @return EnableServerlessPublicConnectionResponse
+     */
     @Override
     public CompletableFuture<EnableServerlessPublicConnectionResponse> enableServerlessPublicConnection(EnableServerlessPublicConnectionRequest request) {
         try {
@@ -486,6 +632,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMultimodeCmsUrl  GetMultimodeCmsUrlRequest
+     * @return GetMultimodeCmsUrlResponse
+     */
     @Override
     public CompletableFuture<GetMultimodeCmsUrlResponse> getMultimodeCmsUrl(GetMultimodeCmsUrlRequest request) {
         try {
@@ -500,6 +650,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterServiceConfig  ListClusterServiceConfigRequest
+     * @return ListClusterServiceConfigResponse
+     */
     @Override
     public CompletableFuture<ListClusterServiceConfigResponse> listClusterServiceConfig(ListClusterServiceConfigRequest request) {
         try {
@@ -514,6 +668,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterServiceConfigHistory  ListClusterServiceConfigHistoryRequest
+     * @return ListClusterServiceConfigHistoryResponse
+     */
     @Override
     public CompletableFuture<ListClusterServiceConfigHistoryResponse> listClusterServiceConfigHistory(ListClusterServiceConfigHistoryRequest request) {
         try {
@@ -528,6 +686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHbaseInstances  ListHbaseInstancesRequest
+     * @return ListHbaseInstancesResponse
+     */
     @Override
     public CompletableFuture<ListHbaseInstancesResponse> listHbaseInstances(ListHbaseInstancesRequest request) {
         try {
@@ -542,6 +704,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -556,6 +722,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
         try {
@@ -570,6 +740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClusterName  ModifyClusterNameRequest
+     * @return ModifyClusterNameResponse
+     */
     @Override
     public CompletableFuture<ModifyClusterNameResponse> modifyClusterName(ModifyClusterNameRequest request) {
         try {
@@ -584,6 +758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClusterNetType  ModifyClusterNetTypeRequest
+     * @return ModifyClusterNetTypeResponse
+     */
     @Override
     public CompletableFuture<ModifyClusterNetTypeResponse> modifyClusterNetType(ModifyClusterNetTypeRequest request) {
         try {
@@ -598,6 +776,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClusterSecurityIpList  ModifyClusterSecurityIpListRequest
+     * @return ModifyClusterSecurityIpListResponse
+     */
     @Override
     public CompletableFuture<ModifyClusterSecurityIpListResponse> modifyClusterSecurityIpList(ModifyClusterSecurityIpListRequest request) {
         try {
@@ -612,6 +794,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClusterServiceConfig  ModifyClusterServiceConfigRequest
+     * @return ModifyClusterServiceConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyClusterServiceConfigResponse> modifyClusterServiceConfig(ModifyClusterServiceConfigRequest request) {
         try {
@@ -626,6 +812,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyHasRootPassword  ModifyHasRootPasswordRequest
+     * @return ModifyHasRootPasswordResponse
+     */
     @Override
     public CompletableFuture<ModifyHasRootPasswordResponse> modifyHasRootPassword(ModifyHasRootPasswordRequest request) {
         try {
@@ -640,6 +830,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRestartCluster  ModifyRestartClusterRequest
+     * @return ModifyRestartClusterResponse
+     */
     @Override
     public CompletableFuture<ModifyRestartClusterResponse> modifyRestartCluster(ModifyRestartClusterRequest request) {
         try {
@@ -654,6 +848,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRollbackHasForHbase  ModifyRollbackHasForHbaseRequest
+     * @return ModifyRollbackHasForHbaseResponse
+     */
     @Override
     public CompletableFuture<ModifyRollbackHasForHbaseResponse> modifyRollbackHasForHbase(ModifyRollbackHasForHbaseRequest request) {
         try {
@@ -668,6 +866,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySubscriptionDescription  ModifySubscriptionDescriptionRequest
+     * @return ModifySubscriptionDescriptionResponse
+     */
     @Override
     public CompletableFuture<ModifySubscriptionDescriptionResponse> modifySubscriptionDescription(ModifySubscriptionDescriptionRequest request) {
         try {
@@ -682,6 +884,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySubscriptionMapping  ModifySubscriptionMappingRequest
+     * @return ModifySubscriptionMappingResponse
+     */
     @Override
     public CompletableFuture<ModifySubscriptionMappingResponse> modifySubscriptionMapping(ModifySubscriptionMappingRequest request) {
         try {
@@ -696,6 +902,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySubscriptionPermission  ModifySubscriptionPermissionRequest
+     * @return ModifySubscriptionPermissionResponse
+     */
     @Override
     public CompletableFuture<ModifySubscriptionPermissionResponse> modifySubscriptionPermission(ModifySubscriptionPermissionRequest request) {
         try {
@@ -710,6 +920,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUIProxyAccountPassword  ModifyUIProxyAccountPasswordRequest
+     * @return ModifyUIProxyAccountPasswordResponse
+     */
     @Override
     public CompletableFuture<ModifyUIProxyAccountPasswordResponse> modifyUIProxyAccountPassword(ModifyUIProxyAccountPasswordRequest request) {
         try {
@@ -724,6 +938,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUpgradeToHasForHbase  ModifyUpgradeToHasForHbaseRequest
+     * @return ModifyUpgradeToHasForHbaseResponse
+     */
     @Override
     public CompletableFuture<ModifyUpgradeToHasForHbaseResponse> modifyUpgradeToHasForHbase(ModifyUpgradeToHasForHbaseRequest request) {
         try {
@@ -738,6 +956,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MultimodAddComponents  MultimodAddComponentsRequest
+     * @return MultimodAddComponentsResponse
+     */
     @Override
     public CompletableFuture<MultimodAddComponentsResponse> multimodAddComponents(MultimodAddComponentsRequest request) {
         try {
@@ -752,6 +974,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenBackup  OpenBackupRequest
+     * @return OpenBackupResponse
+     */
     @Override
     public CompletableFuture<OpenBackupResponse> openBackup(OpenBackupRequest request) {
         try {
@@ -766,6 +992,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryHBaseHaDB  QueryHBaseHaDBRequest
+     * @return QueryHBaseHaDBResponse
+     */
     @Override
     public CompletableFuture<QueryHBaseHaDBResponse> queryHBaseHaDB(QueryHBaseHaDBRequest request) {
         try {
@@ -780,6 +1010,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySparkRelateHBase  QuerySparkRelateHBaseRequest
+     * @return QuerySparkRelateHBaseResponse
+     */
     @Override
     public CompletableFuture<QuerySparkRelateHBaseResponse> querySparkRelateHBase(QuerySparkRelateHBaseRequest request) {
         try {
@@ -794,6 +1028,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryXpackRelatedDB  QueryXpackRelatedDBRequest
+     * @return QueryXpackRelatedDBResponse
+     */
     @Override
     public CompletableFuture<QueryXpackRelatedDBResponse> queryXpackRelatedDB(QueryXpackRelatedDBRequest request) {
         try {
@@ -808,6 +1046,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RelateDbForHBaseHa  RelateDbForHBaseHaRequest
+     * @return RelateDbForHBaseHaResponse
+     */
     @Override
     public CompletableFuture<RelateDbForHBaseHaResponse> relateDbForHBaseHa(RelateDbForHBaseHaRequest request) {
         try {
@@ -822,6 +1064,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleasePublicNetworkAddress  ReleasePublicNetworkAddressRequest
+     * @return ReleasePublicNetworkAddressResponse
+     */
     @Override
     public CompletableFuture<ReleasePublicNetworkAddressResponse> releasePublicNetworkAddress(ReleasePublicNetworkAddressRequest request) {
         try {
@@ -836,6 +1082,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseSubscription  ReleaseSubscriptionRequest
+     * @return ReleaseSubscriptionResponse
+     */
     @Override
     public CompletableFuture<ReleaseSubscriptionResponse> releaseSubscription(ReleaseSubscriptionRequest request) {
         try {
@@ -850,6 +1100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewCluster  RenewClusterRequest
+     * @return RenewClusterResponse
+     */
     @Override
     public CompletableFuture<RenewClusterResponse> renewCluster(RenewClusterRequest request) {
         try {
@@ -864,6 +1118,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeCluster  ResizeClusterRequest
+     * @return ResizeClusterResponse
+     */
     @Override
     public CompletableFuture<ResizeClusterResponse> resizeCluster(ResizeClusterRequest request) {
         try {
@@ -878,6 +1136,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SparkRelateHBase  SparkRelateHBaseRequest
+     * @return SparkRelateHBaseResponse
+     */
     @Override
     public CompletableFuture<SparkRelateHBaseResponse> sparkRelateHBase(SparkRelateHBaseRequest request) {
         try {
@@ -892,6 +1154,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -906,6 +1172,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -920,6 +1190,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeMinorVersion  UpgradeMinorVersionRequest
+     * @return UpgradeMinorVersionResponse
+     */
     @Override
     public CompletableFuture<UpgradeMinorVersionResponse> upgradeMinorVersion(UpgradeMinorVersionRequest request) {
         try {
@@ -934,6 +1208,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of XpackRelateDB  XpackRelateDBRequest
+     * @return XpackRelateDBResponse
+     */
     @Override
     public CompletableFuture<XpackRelateDBResponse> xpackRelateDB(XpackRelateDBRequest request) {
         try {

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterAttributeResponseBody</p>
@@ -610,9 +616,15 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class ZKClassicConnectionStringList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private ZKClassicConnectionStringList(Builder builder) {
             this.string = builder.string;
@@ -629,17 +641,17 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }
@@ -651,9 +663,15 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class ZKConnectionStringList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private ZKConnectionStringList(Builder builder) {
             this.string = builder.string;
@@ -670,17 +688,17 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }
@@ -692,9 +710,15 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class ZKInnerConnectionStringList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private ZKInnerConnectionStringList(Builder builder) {
             this.string = builder.string;
@@ -711,17 +735,17 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }
@@ -733,9 +757,15 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class ZKPublicConnectionStringList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private ZKPublicConnectionStringList(Builder builder) {
             this.string = builder.string;
@@ -752,17 +782,17 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }
@@ -774,6 +804,12 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class ConnectionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HaRestConnectionString")
         private String haRestConnectionString;
@@ -1035,6 +1071,12 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class NetInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InnerIpAddress")
         private String innerIpAddress;
@@ -1176,6 +1218,12 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class Daemon extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DaemonName")
         private String daemonName;
@@ -1237,9 +1285,15 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class DaemonList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Daemon")
-        private java.util.List < Daemon> daemon;
+        private java.util.List<Daemon> daemon;
 
         private DaemonList(Builder builder) {
             this.daemon = builder.daemon;
@@ -1256,17 +1310,17 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         /**
          * @return daemon
          */
-        public java.util.List < Daemon> getDaemon() {
+        public java.util.List<Daemon> getDaemon() {
             return this.daemon;
         }
 
         public static final class Builder {
-            private java.util.List < Daemon> daemon; 
+            private java.util.List<Daemon> daemon; 
 
             /**
              * Daemon.
              */
-            public Builder daemon(java.util.List < Daemon> daemon) {
+            public Builder daemon(java.util.List<Daemon> daemon) {
                 this.daemon = daemon;
                 return this;
             }
@@ -1278,6 +1332,12 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DaemonList")
         private DaemonList daemonList;
@@ -1539,9 +1599,15 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterAttributeResponseBody</p>
+     */
     public static class NodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Node")
-        private java.util.List < Node> node;
+        private java.util.List<Node> node;
 
         private NodeList(Builder builder) {
             this.node = builder.node;
@@ -1558,17 +1624,17 @@ public class DescribeClusterAttributeResponseBody extends TeaModel {
         /**
          * @return node
          */
-        public java.util.List < Node> getNode() {
+        public java.util.List<Node> getNode() {
             return this.node;
         }
 
         public static final class Builder {
-            private java.util.List < Node> node; 
+            private java.util.List<Node> node; 
 
             /**
              * Node.
              */
-            public Builder node(java.util.List < Node> node) {
+            public Builder node(java.util.List<Node> node) {
                 this.node = node;
                 return this;
             }

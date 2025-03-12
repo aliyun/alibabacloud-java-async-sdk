@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySubscriptionMappingRequest} extends {@link RequestModel}
  *
  * <p>ModifySubscriptionMappingRequest</p>
@@ -19,6 +25,10 @@ public class ModifySubscriptionMappingRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -37,6 +47,7 @@ public class ModifySubscriptionMappingRequest extends Request {
         super(builder);
         this.mapping = builder.mapping;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.subscriptionId = builder.subscriptionId;
@@ -70,6 +81,13 @@ public class ModifySubscriptionMappingRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -93,6 +111,7 @@ public class ModifySubscriptionMappingRequest extends Request {
     public static final class Builder extends Request.Builder<ModifySubscriptionMappingRequest, Builder> {
         private String mapping; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String subscriptionId; 
@@ -105,13 +124,14 @@ public class ModifySubscriptionMappingRequest extends Request {
             super(request);
             this.mapping = request.mapping;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.subscriptionId = request.subscriptionId;
         } 
 
         /**
-         * Mapping.
+         * <p>This parameter is required.</p>
          */
         public Builder mapping(String mapping) {
             this.putQueryParameter("Mapping", mapping);
@@ -125,6 +145,15 @@ public class ModifySubscriptionMappingRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -147,7 +176,7 @@ public class ModifySubscriptionMappingRequest extends Request {
         }
 
         /**
-         * SubscriptionId.
+         * <p>This parameter is required.</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.putQueryParameter("SubscriptionId", subscriptionId);

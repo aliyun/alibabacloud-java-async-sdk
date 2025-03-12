@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckVersionsOfComponentsResponseBody} extends {@link TeaModel}
  *
  * <p>CheckVersionsOfComponentsResponseBody</p>
@@ -70,6 +76,12 @@ public class CheckVersionsOfComponentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckVersionsOfComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckVersionsOfComponentsResponseBody</p>
+     */
     public static class ComponentsComponents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Component")
         private String component;
@@ -131,9 +143,15 @@ public class CheckVersionsOfComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckVersionsOfComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckVersionsOfComponentsResponseBody</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Components")
-        private java.util.List < ComponentsComponents> components;
+        private java.util.List<ComponentsComponents> components;
 
         private Components(Builder builder) {
             this.components = builder.components;
@@ -150,17 +168,17 @@ public class CheckVersionsOfComponentsResponseBody extends TeaModel {
         /**
          * @return components
          */
-        public java.util.List < ComponentsComponents> getComponents() {
+        public java.util.List<ComponentsComponents> getComponents() {
             return this.components;
         }
 
         public static final class Builder {
-            private java.util.List < ComponentsComponents> components; 
+            private java.util.List<ComponentsComponents> components; 
 
             /**
              * Components.
              */
-            public Builder components(java.util.List < ComponentsComponents> components) {
+            public Builder components(java.util.List<ComponentsComponents> components) {
                 this.components = components;
                 return this;
             }

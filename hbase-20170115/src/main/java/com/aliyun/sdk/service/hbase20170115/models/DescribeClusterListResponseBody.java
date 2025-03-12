@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterListResponseBody</p>
@@ -130,6 +136,12 @@ public class DescribeClusterListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterListResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -191,9 +203,15 @@ public class DescribeClusterListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -210,17 +228,17 @@ public class DescribeClusterListResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -232,6 +250,12 @@ public class DescribeClusterListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterListResponseBody</p>
+     */
     public static class Cluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -653,9 +677,15 @@ public class DescribeClusterListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterListResponseBody</p>
+     */
     public static class ClusterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cluster")
-        private java.util.List < Cluster> cluster;
+        private java.util.List<Cluster> cluster;
 
         private ClusterList(Builder builder) {
             this.cluster = builder.cluster;
@@ -672,17 +702,17 @@ public class DescribeClusterListResponseBody extends TeaModel {
         /**
          * @return cluster
          */
-        public java.util.List < Cluster> getCluster() {
+        public java.util.List<Cluster> getCluster() {
             return this.cluster;
         }
 
         public static final class Builder {
-            private java.util.List < Cluster> cluster; 
+            private java.util.List<Cluster> cluster; 
 
             /**
              * Cluster.
              */
-            public Builder cluster(java.util.List < Cluster> cluster) {
+            public Builder cluster(java.util.List<Cluster> cluster) {
                 this.cluster = cluster;
                 return this;
             }

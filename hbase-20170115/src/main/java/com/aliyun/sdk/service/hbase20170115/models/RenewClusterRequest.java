@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewClusterRequest} extends {@link RequestModel}
  *
  * <p>RenewClusterRequest</p>
@@ -126,7 +132,7 @@ public class RenewClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -135,7 +141,7 @@ public class RenewClusterRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>This parameter is required.</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -153,7 +159,7 @@ public class RenewClusterRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>This parameter is required.</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

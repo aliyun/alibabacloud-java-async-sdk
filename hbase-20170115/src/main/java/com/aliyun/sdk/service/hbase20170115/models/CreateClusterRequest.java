@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20170115.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
@@ -500,7 +506,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CloudType.
+         * <p>This parameter is required.</p>
          */
         public Builder cloudType(String cloudType) {
             this.putQueryParameter("CloudType", cloudType);
@@ -509,7 +515,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>This parameter is required.</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -527,7 +533,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CoreDiskQuantity.
+         * <p>This parameter is required.</p>
          */
         public Builder coreDiskQuantity(String coreDiskQuantity) {
             this.putQueryParameter("CoreDiskQuantity", coreDiskQuantity);
@@ -536,7 +542,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CoreDiskSize.
+         * <p>This parameter is required.</p>
          */
         public Builder coreDiskSize(String coreDiskSize) {
             this.putQueryParameter("CoreDiskSize", coreDiskSize);
@@ -545,7 +551,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CoreDiskType.
+         * <p>This parameter is required.</p>
          */
         public Builder coreDiskType(String coreDiskType) {
             this.putQueryParameter("CoreDiskType", coreDiskType);
@@ -554,7 +560,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CoreInstanceQuantity.
+         * <p>This parameter is required.</p>
          */
         public Builder coreInstanceQuantity(String coreInstanceQuantity) {
             this.putQueryParameter("CoreInstanceQuantity", coreInstanceQuantity);
@@ -563,7 +569,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>This parameter is required.</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.putQueryParameter("CoreInstanceType", coreInstanceType);
@@ -617,7 +623,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>This parameter is required.</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -626,7 +632,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>This parameter is required.</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -644,7 +650,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * MasterInstanceType.
+         * <p>This parameter is required.</p>
          */
         public Builder masterInstanceType(String masterInstanceType) {
             this.putQueryParameter("MasterInstanceType", masterInstanceType);
@@ -653,7 +659,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * NetType.
+         * <p>This parameter is required.</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -680,7 +686,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -698,7 +704,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>This parameter is required.</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -734,7 +740,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
