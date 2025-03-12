@@ -83,6 +83,9 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
      * <p>ListFeatureViewFieldRelationshipsResponseBody</p>
      */
     public static class Models extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FeatureAliasName")
+        private String featureAliasName;
+
         @com.aliyun.core.annotation.NameInMap("ModelId")
         private String modelId;
 
@@ -90,6 +93,7 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         private String modelName;
 
         private Models(Builder builder) {
+            this.featureAliasName = builder.featureAliasName;
             this.modelId = builder.modelId;
             this.modelName = builder.modelName;
         }
@@ -100,6 +104,13 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
 
         public static Models create() {
             return builder().build();
+        }
+
+        /**
+         * @return featureAliasName
+         */
+        public String getFeatureAliasName() {
+            return this.featureAliasName;
         }
 
         /**
@@ -117,8 +128,17 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String featureAliasName; 
             private String modelId; 
             private String modelName; 
+
+            /**
+             * FeatureAliasName.
+             */
+            public Builder featureAliasName(String featureAliasName) {
+                this.featureAliasName = featureAliasName;
+                return this;
+            }
 
             /**
              * ModelId.
