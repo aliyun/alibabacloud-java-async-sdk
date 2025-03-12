@@ -780,7 +780,14 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * TrialPermissionType.
+             * <p>Check whether the data delivery period for ActionTrail is enabled for more than 30 days to establish a baseline of behaviour.</p>
+             * <ul>
+             * <li><strong>0</strong>: REQUIRED</li>
+             * <li><strong>1</strong>: NOT REQUIRED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trialPermissionType(Integer trialPermissionType) {
                 this.trialPermissionType = trialPermissionType;

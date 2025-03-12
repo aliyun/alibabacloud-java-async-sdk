@@ -5556,6 +5556,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateOssScanConfigResponse> updateOssScanConfig(UpdateOssScanConfigRequest request);
 
     /**
+     * @param request the request parameters of UpdatePostPaidBindRel  UpdatePostPaidBindRelRequest
+     * @return UpdatePostPaidBindRelResponse
+     */
+    CompletableFuture<UpdatePostPaidBindRelResponse> updatePostPaidBindRel(UpdatePostPaidBindRelRequest request);
+
+    /**
      * @param request the request parameters of UpdatePublishAutoUpgrade  UpdatePublishAutoUpgradeRequest
      * @return UpdatePublishAutoUpgradeResponse
      */

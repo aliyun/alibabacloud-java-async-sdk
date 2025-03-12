@@ -25,7 +25,6 @@ public class ModifyBackupPolicyStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyVersion")
     @Deprecated
-    @com.aliyun.core.annotation.Validation(required = true)
     private String policyVersion;
 
     @com.aliyun.core.annotation.Query
@@ -105,7 +104,6 @@ public class ModifyBackupPolicyStatusRequest extends Request {
 
         /**
          * <p>The version of the anti-ransomware policy. Set the value to <strong>2.0.0</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.0</p>

@@ -1285,7 +1285,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PostPaidFlag.
+             * <p>The billing method of the protection version currently bound to the asset. Values: - <strong>0</strong>: Subscription - <strong>1</strong>: Pay-as-you-go</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder postPaidFlag(Integer postPaidFlag) {
                 this.postPaidFlag = postPaidFlag;

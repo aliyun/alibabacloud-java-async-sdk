@@ -346,7 +346,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidHighestVersion.
+         * <p>Activate the pay-as-you-go service protection version for hosts and container security, which is the highest protection version among all bound hosts. Values:   - <strong>1</strong>: Free Edition  - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Antivirus Edition     - <strong>7</strong>: Flagship Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder postPaidHighestVersion(String postPaidHighestVersion) {
             this.postPaidHighestVersion = postPaidHighestVersion;
@@ -354,7 +357,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidHostAutoBind.
+         * <p>The pay-as-you-go service for host and container security adds an automatic binding identifier for new hosts, with values: - <strong>0</strong>: Off - <strong>1</strong>: On</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder postPaidHostAutoBind(String postPaidHostAutoBind) {
             this.postPaidHostAutoBind = postPaidHostAutoBind;
@@ -362,7 +368,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidHostAutoBindVersion.
+         * <p>The version for the pay-as-you-go service of host and container security to automatically bind new assets, with values: - <strong>1</strong>: Free Edition - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Antivirus Edition - <strong>7</strong>: Flagship Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder postPaidHostAutoBindVersion(String postPaidHostAutoBindVersion) {
             this.postPaidHostAutoBindVersion = postPaidHostAutoBindVersion;
@@ -370,7 +379,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidVersionSummary.
+         * <p>Statistics on pay-as-you-go service authorization for host and container security.</p>
          */
         public Builder postPaidVersionSummary(java.util.List<PostPaidVersionSummary> postPaidVersionSummary) {
             this.postPaidVersionSummary = postPaidVersionSummary;
@@ -565,7 +574,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PostPaidBindCoreCount.
+             * <p>Bind the number of cores for postpaid authorization assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder postPaidBindCoreCount(Integer postPaidBindCoreCount) {
                 this.postPaidBindCoreCount = postPaidBindCoreCount;
@@ -573,7 +585,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PostPaidBindEcsCount.
+             * <p>The number of assets bound to the postpaid authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder postPaidBindEcsCount(Integer postPaidBindEcsCount) {
                 this.postPaidBindEcsCount = postPaidBindEcsCount;
@@ -734,7 +749,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             private Integer version; 
 
             /**
-             * AuthBindType.
+             * <p>The type of authorization consumed during binding, with values: - <strong>ASSET</strong>: Consumes the number of authorized devices - <strong>CORE</strong>: Consumes the number of authorized cores - <strong>ASSET_AND_CORE</strong>: Consumes both the number of authorized devices and cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASSET</p>
              */
             public Builder authBindType(String authBindType) {
                 this.authBindType = authBindType;
@@ -742,7 +760,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Current version index, the higher the number, the newer the version, used for sorting. Values: - <strong>1</strong>: Free Edition - <strong>2</strong>: Anti-virus Edition - <strong>3</strong>: Advanced Edition - <strong>4</strong>: Enterprise Edition - <strong>5</strong>: Flagship Edition</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -750,7 +771,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCoreCount.
+             * <p>Number of authorized cores used. &gt; This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedCoreCount(Long usedCoreCount) {
                 this.usedCoreCount = usedCoreCount;
@@ -758,7 +782,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * UsedEcsCount.
+             * <p>Number of authorized devices used. &gt; This parameter is valid when AuthBindType is ASSET or ASSET_AND_CORE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedEcsCount(Long usedEcsCount) {
                 this.usedEcsCount = usedEcsCount;
@@ -766,7 +793,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Bound host assets with postpaid versions, values:   - <strong>1</strong>: Free version  - <strong>3</strong>: Enterprise version - <strong>5</strong>: Advanced version - <strong>6</strong>: Anti-virus version     - <strong>7</strong>: Flagship version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

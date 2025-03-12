@@ -796,7 +796,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * MergedVersion.
+         * <p>When both the annual/monthly and pay-as-you-go services of Cloud Security Center&quot;s host and container security are activated, the higher protection version among the two is selected. Values: - <strong>1</strong>: Free Edition - <strong>6</strong>: Anti-Virus Edition - <strong>5</strong>: Advanced Edition - <strong>3</strong>: Enterprise Edition - <strong>7</strong>: Ultimate Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder mergedVersion(Integer mergedVersion) {
             this.mergedVersion = mergedVersion;
@@ -830,7 +833,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PostPayHostVersion.
+         * <p>When activating the pay-as-you-go service for host and container security, this represents the highest protection version for the already bound assets. The values are as follows: - <strong>1</strong>: Free Edition - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Anti-Virus Edition - <strong>7</strong>: Flagship Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder postPayHostVersion(Integer postPayHostVersion) {
             this.postPayHostVersion = postPayHostVersion;
