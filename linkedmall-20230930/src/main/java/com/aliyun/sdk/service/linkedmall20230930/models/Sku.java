@@ -56,6 +56,9 @@ public class Sku extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
+    @com.aliyun.core.annotation.NameInMap("skuAlias")
+    private String skuAlias;
+
     @com.aliyun.core.annotation.NameInMap("skuId")
     private String skuId;
 
@@ -88,6 +91,7 @@ public class Sku extends TeaModel {
         this.quantity = builder.quantity;
         this.rankValue = builder.rankValue;
         this.shopId = builder.shopId;
+        this.skuAlias = builder.skuAlias;
         this.skuId = builder.skuId;
         this.skuSpecs = builder.skuSpecs;
         this.skuSpecsCode = builder.skuSpecsCode;
@@ -196,6 +200,13 @@ public class Sku extends TeaModel {
     }
 
     /**
+     * @return skuAlias
+     */
+    public String getSkuAlias() {
+        return this.skuAlias;
+    }
+
+    /**
      * @return skuId
      */
     public String getSkuId() {
@@ -251,6 +262,7 @@ public class Sku extends TeaModel {
         private Long quantity; 
         private Long rankValue; 
         private String shopId; 
+        private String skuAlias; 
         private String skuId; 
         private java.util.List<SkuSpec> skuSpecs; 
         private String skuSpecsCode; 
@@ -359,6 +371,14 @@ public class Sku extends TeaModel {
          */
         public Builder shopId(String shopId) {
             this.shopId = shopId;
+            return this;
+        }
+
+        /**
+         * skuAlias.
+         */
+        public Builder skuAlias(String skuAlias) {
+            this.skuAlias = skuAlias;
             return this;
         }
 
