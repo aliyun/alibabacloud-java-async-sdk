@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHealthCheckStatusListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHealthCheckStatusListResponseBody</p>
  */
 public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
-    @NameInMap("HealthCheckStatusList")
-    private java.util.List < HealthCheckStatusList> healthCheckStatusList;
+    @com.aliyun.core.annotation.NameInMap("HealthCheckStatusList")
+    private java.util.List<HealthCheckStatusList> healthCheckStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHealthCheckStatusListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
     /**
      * @return healthCheckStatusList
      */
-    public java.util.List < HealthCheckStatusList> getHealthCheckStatusList() {
+    public java.util.List<HealthCheckStatusList> getHealthCheckStatusList() {
         return this.healthCheckStatusList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HealthCheckStatusList> healthCheckStatusList; 
+        private java.util.List<HealthCheckStatusList> healthCheckStatusList; 
         private String requestId; 
 
         /**
          * HealthCheckStatusList.
          */
-        public Builder healthCheckStatusList(java.util.List < HealthCheckStatusList> healthCheckStatusList) {
+        public Builder healthCheckStatusList(java.util.List<HealthCheckStatusList> healthCheckStatusList) {
             this.healthCheckStatusList = healthCheckStatusList;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHealthCheckStatusListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckStatusListResponseBody</p>
+     */
     public static class RealServerStatusList extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RealServerStatusList(Builder builder) {
@@ -132,20 +143,26 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthCheckStatusListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckStatusListResponseBody</p>
+     */
     public static class HealthCheckStatusList extends TeaModel {
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServerStatusList")
-        private java.util.List < RealServerStatusList> realServerStatusList;
+        @com.aliyun.core.annotation.NameInMap("RealServerStatusList")
+        private java.util.List<RealServerStatusList> realServerStatusList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private HealthCheckStatusList(Builder builder) {
@@ -188,7 +205,7 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
         /**
          * @return realServerStatusList
          */
-        public java.util.List < RealServerStatusList> getRealServerStatusList() {
+        public java.util.List<RealServerStatusList> getRealServerStatusList() {
             return this.realServerStatusList;
         }
 
@@ -203,7 +220,7 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
             private Integer frontendPort; 
             private String instanceId; 
             private String protocol; 
-            private java.util.List < RealServerStatusList> realServerStatusList; 
+            private java.util.List<RealServerStatusList> realServerStatusList; 
             private String status; 
 
             /**
@@ -233,7 +250,7 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
             /**
              * RealServerStatusList.
              */
-            public Builder realServerStatusList(java.util.List < RealServerStatusList> realServerStatusList) {
+            public Builder realServerStatusList(java.util.List<RealServerStatusList> realServerStatusList) {
                 this.realServerStatusList = realServerStatusList;
                 return this;
             }

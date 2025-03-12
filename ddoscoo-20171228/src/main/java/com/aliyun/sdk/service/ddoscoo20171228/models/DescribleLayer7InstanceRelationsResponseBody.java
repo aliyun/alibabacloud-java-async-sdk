@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribleLayer7InstanceRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribleLayer7InstanceRelationsResponseBody</p>
  */
 public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
-    @NameInMap("Layer7InstanceRelations")
-    private java.util.List < Layer7InstanceRelations> layer7InstanceRelations;
+    @com.aliyun.core.annotation.NameInMap("Layer7InstanceRelations")
+    private java.util.List<Layer7InstanceRelations> layer7InstanceRelations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribleLayer7InstanceRelationsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
     /**
      * @return layer7InstanceRelations
      */
-    public java.util.List < Layer7InstanceRelations> getLayer7InstanceRelations() {
+    public java.util.List<Layer7InstanceRelations> getLayer7InstanceRelations() {
         return this.layer7InstanceRelations;
     }
 
@@ -46,13 +51,13 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Layer7InstanceRelations> layer7InstanceRelations; 
+        private java.util.List<Layer7InstanceRelations> layer7InstanceRelations; 
         private String requestId; 
 
         /**
          * Layer7InstanceRelations.
          */
-        public Builder layer7InstanceRelations(java.util.List < Layer7InstanceRelations> layer7InstanceRelations) {
+        public Builder layer7InstanceRelations(java.util.List<Layer7InstanceRelations> layer7InstanceRelations) {
             this.layer7InstanceRelations = layer7InstanceRelations;
             return this;
         }
@@ -71,20 +76,26 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribleLayer7InstanceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribleLayer7InstanceRelationsResponseBody</p>
+     */
     public static class InstanceDetails extends TeaModel {
-        @NameInMap("EipList")
-        private java.util.List < String > eipList;
+        @com.aliyun.core.annotation.NameInMap("EipList")
+        private java.util.List<String> eipList;
 
-        @NameInMap("FunctionVersion")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private String functionVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpMode")
+        @com.aliyun.core.annotation.NameInMap("IpMode")
         private String ipMode;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
         private InstanceDetails(Builder builder) {
@@ -106,7 +117,7 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
         /**
          * @return eipList
          */
-        public java.util.List < String > getEipList() {
+        public java.util.List<String> getEipList() {
             return this.eipList;
         }
 
@@ -139,7 +150,7 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > eipList; 
+            private java.util.List<String> eipList; 
             private String functionVersion; 
             private String instanceId; 
             private String ipMode; 
@@ -148,7 +159,7 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
             /**
              * EipList.
              */
-            public Builder eipList(java.util.List < String > eipList) {
+            public Builder eipList(java.util.List<String> eipList) {
                 this.eipList = eipList;
                 return this;
             }
@@ -192,12 +203,18 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribleLayer7InstanceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribleLayer7InstanceRelationsResponseBody</p>
+     */
     public static class Layer7InstanceRelations extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("InstanceDetails")
-        private java.util.List < InstanceDetails> instanceDetails;
+        @com.aliyun.core.annotation.NameInMap("InstanceDetails")
+        private java.util.List<InstanceDetails> instanceDetails;
 
         private Layer7InstanceRelations(Builder builder) {
             this.domain = builder.domain;
@@ -222,13 +239,13 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
         /**
          * @return instanceDetails
          */
-        public java.util.List < InstanceDetails> getInstanceDetails() {
+        public java.util.List<InstanceDetails> getInstanceDetails() {
             return this.instanceDetails;
         }
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < InstanceDetails> instanceDetails; 
+            private java.util.List<InstanceDetails> instanceDetails; 
 
             /**
              * Domain.
@@ -241,7 +258,7 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
             /**
              * InstanceDetails.
              */
-            public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
+            public Builder instanceDetails(java.util.List<InstanceDetails> instanceDetails) {
                 this.instanceDetails = instanceDetails;
                 return this;
             }

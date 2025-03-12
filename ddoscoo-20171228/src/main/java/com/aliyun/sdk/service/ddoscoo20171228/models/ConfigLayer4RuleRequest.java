@@ -1,30 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigLayer4RuleRequest} extends {@link RequestModel}
  *
  * <p>ConfigLayer4RuleRequest</p>
  */
 public class ConfigLayer4RuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Listeners")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Listeners")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listeners;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyEnable")
+    private Long proxyEnable;
 
     private ConfigLayer4RuleRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.listeners = builder.listeners;
+        this.proxyEnable = builder.proxyEnable;
     }
 
     public static Builder builder() {
@@ -54,9 +64,17 @@ public class ConfigLayer4RuleRequest extends Request {
         return this.listeners;
     }
 
+    /**
+     * @return proxyEnable
+     */
+    public Long getProxyEnable() {
+        return this.proxyEnable;
+    }
+
     public static final class Builder extends Request.Builder<ConfigLayer4RuleRequest, Builder> {
         private String regionId; 
         private String listeners; 
+        private Long proxyEnable; 
 
         private Builder() {
             super();
@@ -66,6 +84,7 @@ public class ConfigLayer4RuleRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.listeners = request.listeners;
+            this.proxyEnable = request.proxyEnable;
         } 
 
         /**
@@ -78,11 +97,23 @@ public class ConfigLayer4RuleRequest extends Request {
         }
 
         /**
-         * Listeners.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;InstanceId&quot;:&quot;xxxxxx-xxxxxx-xxxxxx-xxxxxxx&quot;,&quot;Protocol&quot;:&quot;tcp&quot;,&quot;FrontendPort&quot;:80,&quot;BackendPort&quot;:5,&quot;RealServers&quot;:&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;}]</p>
          */
         public Builder listeners(String listeners) {
             this.putQueryParameter("Listeners", listeners);
             this.listeners = listeners;
+            return this;
+        }
+
+        /**
+         * ProxyEnable.
+         */
+        public Builder proxyEnable(Long proxyEnable) {
+            this.putQueryParameter("ProxyEnable", proxyEnable);
+            this.proxyEnable = proxyEnable;
             return this;
         }
 

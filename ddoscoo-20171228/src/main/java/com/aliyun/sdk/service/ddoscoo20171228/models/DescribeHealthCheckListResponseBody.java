@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHealthCheckListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHealthCheckListResponseBody</p>
  */
 public class DescribeHealthCheckListResponseBody extends TeaModel {
-    @NameInMap("Listeners")
-    private java.util.List < Listeners> listeners;
+    @com.aliyun.core.annotation.NameInMap("Listeners")
+    private java.util.List<Listeners> listeners;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHealthCheckListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     /**
      * @return listeners
      */
-    public java.util.List < Listeners> getListeners() {
+    public java.util.List<Listeners> getListeners() {
         return this.listeners;
     }
 
@@ -46,13 +51,13 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Listeners> listeners; 
+        private java.util.List<Listeners> listeners; 
         private String requestId; 
 
         /**
          * Listeners.
          */
-        public Builder listeners(java.util.List < Listeners> listeners) {
+        public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
             return this;
         }
@@ -71,29 +76,35 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHealthCheckListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckListResponseBody</p>
+     */
     public static class HealthCheck extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Down")
+        @com.aliyun.core.annotation.NameInMap("Down")
         private Integer down;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Up")
+        @com.aliyun.core.annotation.NameInMap("Up")
         private Integer up;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private HealthCheck(Builder builder) {
@@ -252,17 +263,23 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthCheckListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckListResponseBody</p>
+     */
     public static class Listeners extends TeaModel {
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("HealthCheck")
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private HealthCheck healthCheck;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Listeners(Builder builder) {

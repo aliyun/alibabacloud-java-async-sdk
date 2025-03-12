@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigLayer7BlackWhiteListRequest} extends {@link RequestModel}
  *
  * <p>ConfigLayer7BlackWhiteListRequest</p>
  */
 public class ConfigLayer7BlackWhiteListRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BlackList")
-    private java.util.List < String > blackList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlackList")
+    private java.util.List<String> blackList;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("WhiteList")
-    private java.util.List < String > whiteList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhiteList")
+    private java.util.List<String> whiteList;
 
     private ConfigLayer7BlackWhiteListRequest(Builder builder) {
         super(builder);
@@ -65,7 +70,7 @@ public class ConfigLayer7BlackWhiteListRequest extends Request {
     /**
      * @return blackList
      */
-    public java.util.List < String > getBlackList() {
+    public java.util.List<String> getBlackList() {
         return this.blackList;
     }
 
@@ -86,16 +91,16 @@ public class ConfigLayer7BlackWhiteListRequest extends Request {
     /**
      * @return whiteList
      */
-    public java.util.List < String > getWhiteList() {
+    public java.util.List<String> getWhiteList() {
         return this.whiteList;
     }
 
     public static final class Builder extends Request.Builder<ConfigLayer7BlackWhiteListRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > blackList; 
+        private java.util.List<String> blackList; 
         private String domain; 
         private String resourceGroupId; 
-        private java.util.List < String > whiteList; 
+        private java.util.List<String> whiteList; 
 
         private Builder() {
             super();
@@ -122,14 +127,17 @@ public class ConfigLayer7BlackWhiteListRequest extends Request {
         /**
          * BlackList.
          */
-        public Builder blackList(java.util.List < String > blackList) {
+        public Builder blackList(java.util.List<String> blackList) {
             this.putQueryParameter("BlackList", blackList);
             this.blackList = blackList;
             return this;
         }
 
         /**
-         * Domain.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -149,7 +157,7 @@ public class ConfigLayer7BlackWhiteListRequest extends Request {
         /**
          * WhiteList.
          */
-        public Builder whiteList(java.util.List < String > whiteList) {
+        public Builder whiteList(java.util.List<String> whiteList) {
             this.putQueryParameter("WhiteList", whiteList);
             this.whiteList = whiteList;
             return this;

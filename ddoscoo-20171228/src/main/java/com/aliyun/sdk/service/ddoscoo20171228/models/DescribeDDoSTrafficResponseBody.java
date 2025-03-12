@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDoSTrafficResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDDoSTrafficResponseBody</p>
  */
 public class DescribeDDoSTrafficResponseBody extends TeaModel {
-    @NameInMap("DDoSTrafficPoints")
-    private java.util.List < DDoSTrafficPoints> dDoSTrafficPoints;
+    @com.aliyun.core.annotation.NameInMap("DDoSTrafficPoints")
+    private java.util.List<DDoSTrafficPoints> dDoSTrafficPoints;
 
-    @NameInMap("DefenseInBytes")
+    @com.aliyun.core.annotation.NameInMap("DefenseInBytes")
     private Long defenseInBytes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceInBytes")
+    @com.aliyun.core.annotation.NameInMap("SourceInBytes")
     private Long sourceInBytes;
 
     private DescribeDDoSTrafficResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
     /**
      * @return dDoSTrafficPoints
      */
-    public java.util.List < DDoSTrafficPoints> getDDoSTrafficPoints() {
+    public java.util.List<DDoSTrafficPoints> getDDoSTrafficPoints() {
         return this.dDoSTrafficPoints;
     }
 
@@ -68,7 +73,7 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DDoSTrafficPoints> dDoSTrafficPoints; 
+        private java.util.List<DDoSTrafficPoints> dDoSTrafficPoints; 
         private Long defenseInBytes; 
         private String requestId; 
         private Long sourceInBytes; 
@@ -76,7 +81,7 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
         /**
          * DDoSTrafficPoints.
          */
-        public Builder dDoSTrafficPoints(java.util.List < DDoSTrafficPoints> dDoSTrafficPoints) {
+        public Builder dDoSTrafficPoints(java.util.List<DDoSTrafficPoints> dDoSTrafficPoints) {
             this.dDoSTrafficPoints = dDoSTrafficPoints;
             return this;
         }
@@ -111,14 +116,20 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDDoSTrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDDoSTrafficResponseBody</p>
+     */
     public static class DDoSTrafficPoints extends TeaModel {
-        @NameInMap("DefenseMaxInBps")
+        @com.aliyun.core.annotation.NameInMap("DefenseMaxInBps")
         private Long defenseMaxInBps;
 
-        @NameInMap("SourceMaxInBps")
+        @com.aliyun.core.annotation.NameInMap("SourceMaxInBps")
         private Long sourceMaxInBps;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private DDoSTrafficPoints(Builder builder) {

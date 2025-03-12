@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseCountStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseCountStatisticsResponseBody</p>
  */
 public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
-    @NameInMap("DefenseCountStatistics")
+    @com.aliyun.core.annotation.NameInMap("DefenseCountStatistics")
     private DefenseCountStatistics defenseCountStatistics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDefenseCountStatisticsResponseBody(Builder builder) {
@@ -71,14 +76,20 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseCountStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseCountStatisticsResponseBody</p>
+     */
     public static class DefenseCountStatistics extends TeaModel {
-        @NameInMap("DefenseCountTotalUsageOfCurrentMonth")
+        @com.aliyun.core.annotation.NameInMap("DefenseCountTotalUsageOfCurrentMonth")
         private Integer defenseCountTotalUsageOfCurrentMonth;
 
-        @NameInMap("FlowPackCountRemain")
+        @com.aliyun.core.annotation.NameInMap("FlowPackCountRemain")
         private Integer flowPackCountRemain;
 
-        @NameInMap("MaxUsableDefenseCountCurrentMonth")
+        @com.aliyun.core.annotation.NameInMap("MaxUsableDefenseCountCurrentMonth")
         private Integer maxUsableDefenseCountCurrentMonth;
 
         private DefenseCountStatistics(Builder builder) {

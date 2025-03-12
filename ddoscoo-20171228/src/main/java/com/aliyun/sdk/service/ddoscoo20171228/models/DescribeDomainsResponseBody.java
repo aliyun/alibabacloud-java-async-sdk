@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainsResponseBody</p>
  */
 public class DescribeDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    @com.aliyun.core.annotation.NameInMap("Domains")
+    private java.util.List<Domains> domains;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeDomainsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private String requestId; 
         private Long total; 
 
         /**
          * Domains.
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
@@ -91,11 +96,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class ProxyTypeList extends TeaModel {
-        @NameInMap("ProxyPorts")
-        private java.util.List < String > proxyPorts;
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
+        private java.util.List<String> proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private ProxyTypeList(Builder builder) {
@@ -114,7 +125,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return proxyPorts
          */
-        public java.util.List < String > getProxyPorts() {
+        public java.util.List<String> getProxyPorts() {
             return this.proxyPorts;
         }
 
@@ -126,13 +137,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > proxyPorts; 
+            private java.util.List<String> proxyPorts; 
             private String proxyType; 
 
             /**
              * ProxyPorts.
              */
-            public Builder proxyPorts(java.util.List < String > proxyPorts) {
+            public Builder proxyPorts(java.util.List<String> proxyPorts) {
                 this.proxyPorts = proxyPorts;
                 return this;
             }
@@ -152,11 +163,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class RealServers extends TeaModel {
-        @NameInMap("RealServer")
+        @com.aliyun.core.annotation.NameInMap("RealServer")
         private String realServer;
 
-        @NameInMap("RsType")
+        @com.aliyun.core.annotation.NameInMap("RsType")
         private Integer rsType;
 
         private RealServers(Builder builder) {
@@ -213,45 +230,54 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("BlackList")
-        private java.util.List < String > blackList;
+        @com.aliyun.core.annotation.NameInMap("BlackList")
+        private java.util.List<String> blackList;
 
-        @NameInMap("CcEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcEnabled")
         private Boolean ccEnabled;
 
-        @NameInMap("CcRuleEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcRuleEnabled")
         private Boolean ccRuleEnabled;
 
-        @NameInMap("CcTemplate")
+        @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("CertRegion")
+        private String certRegion;
+
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Http2Enable")
+        @com.aliyun.core.annotation.NameInMap("Http2Enable")
         private Boolean http2Enable;
 
-        @NameInMap("ProxyTypeList")
-        private java.util.List < ProxyTypeList> proxyTypeList;
+        @com.aliyun.core.annotation.NameInMap("ProxyTypeList")
+        private java.util.List<ProxyTypeList> proxyTypeList;
 
-        @NameInMap("RealServers")
-        private java.util.List < RealServers> realServers;
+        @com.aliyun.core.annotation.NameInMap("RealServers")
+        private java.util.List<RealServers> realServers;
 
-        @NameInMap("SslCiphers")
+        @com.aliyun.core.annotation.NameInMap("SslCiphers")
         private String sslCiphers;
 
-        @NameInMap("SslProtocols")
+        @com.aliyun.core.annotation.NameInMap("SslProtocols")
         private String sslProtocols;
 
-        @NameInMap("WhiteList")
-        private java.util.List < String > whiteList;
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
+        private java.util.List<String> whiteList;
 
         private Domains(Builder builder) {
             this.blackList = builder.blackList;
@@ -259,6 +285,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             this.ccRuleEnabled = builder.ccRuleEnabled;
             this.ccTemplate = builder.ccTemplate;
             this.certName = builder.certName;
+            this.certRegion = builder.certRegion;
             this.cname = builder.cname;
             this.domain = builder.domain;
             this.http2Enable = builder.http2Enable;
@@ -280,7 +307,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return blackList
          */
-        public java.util.List < String > getBlackList() {
+        public java.util.List<String> getBlackList() {
             return this.blackList;
         }
 
@@ -313,6 +340,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return certRegion
+         */
+        public String getCertRegion() {
+            return this.certRegion;
+        }
+
+        /**
          * @return cname
          */
         public String getCname() {
@@ -336,14 +370,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return proxyTypeList
          */
-        public java.util.List < ProxyTypeList> getProxyTypeList() {
+        public java.util.List<ProxyTypeList> getProxyTypeList() {
             return this.proxyTypeList;
         }
 
         /**
          * @return realServers
          */
-        public java.util.List < RealServers> getRealServers() {
+        public java.util.List<RealServers> getRealServers() {
             return this.realServers;
         }
 
@@ -364,29 +398,30 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return whiteList
          */
-        public java.util.List < String > getWhiteList() {
+        public java.util.List<String> getWhiteList() {
             return this.whiteList;
         }
 
         public static final class Builder {
-            private java.util.List < String > blackList; 
+            private java.util.List<String> blackList; 
             private Boolean ccEnabled; 
             private Boolean ccRuleEnabled; 
             private String ccTemplate; 
             private String certName; 
+            private String certRegion; 
             private String cname; 
             private String domain; 
             private Boolean http2Enable; 
-            private java.util.List < ProxyTypeList> proxyTypeList; 
-            private java.util.List < RealServers> realServers; 
+            private java.util.List<ProxyTypeList> proxyTypeList; 
+            private java.util.List<RealServers> realServers; 
             private String sslCiphers; 
             private String sslProtocols; 
-            private java.util.List < String > whiteList; 
+            private java.util.List<String> whiteList; 
 
             /**
              * BlackList.
              */
-            public Builder blackList(java.util.List < String > blackList) {
+            public Builder blackList(java.util.List<String> blackList) {
                 this.blackList = blackList;
                 return this;
             }
@@ -424,6 +459,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
+             * CertRegion.
+             */
+            public Builder certRegion(String certRegion) {
+                this.certRegion = certRegion;
+                return this;
+            }
+
+            /**
              * Cname.
              */
             public Builder cname(String cname) {
@@ -450,7 +493,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             /**
              * ProxyTypeList.
              */
-            public Builder proxyTypeList(java.util.List < ProxyTypeList> proxyTypeList) {
+            public Builder proxyTypeList(java.util.List<ProxyTypeList> proxyTypeList) {
                 this.proxyTypeList = proxyTypeList;
                 return this;
             }
@@ -458,7 +501,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             /**
              * RealServers.
              */
-            public Builder realServers(java.util.List < RealServers> realServers) {
+            public Builder realServers(java.util.List<RealServers> realServers) {
                 this.realServers = realServers;
                 return this;
             }
@@ -482,7 +525,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             /**
              * WhiteList.
              */
-            public Builder whiteList(java.util.List < String > whiteList) {
+            public Builder whiteList(java.util.List<String> whiteList) {
                 this.whiteList = whiteList;
                 return this;
             }

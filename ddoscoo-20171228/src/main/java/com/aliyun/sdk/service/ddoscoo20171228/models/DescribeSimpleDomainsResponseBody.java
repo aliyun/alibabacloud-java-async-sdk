@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimpleDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSimpleDomainsResponseBody</p>
  */
 public class DescribeSimpleDomainsResponseBody extends TeaModel {
-    @NameInMap("DomainList")
-    private java.util.List < String > domainList;
+    @com.aliyun.core.annotation.NameInMap("DomainList")
+    private java.util.List<String> domainList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSimpleDomainsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeSimpleDomainsResponseBody extends TeaModel {
     /**
      * @return domainList
      */
-    public java.util.List < String > getDomainList() {
+    public java.util.List<String> getDomainList() {
         return this.domainList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeSimpleDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > domainList; 
+        private java.util.List<String> domainList; 
         private String requestId; 
 
         /**
          * DomainList.
          */
-        public Builder domainList(java.util.List < String > domainList) {
+        public Builder domainList(java.util.List<String> domainList) {
             this.domainList = domainList;
             return this;
         }

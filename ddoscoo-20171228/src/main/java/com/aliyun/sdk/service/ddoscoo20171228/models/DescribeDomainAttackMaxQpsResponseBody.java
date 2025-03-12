@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainAttackMaxQpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainAttackMaxQpsResponseBody</p>
  */
 public class DescribeDomainAttackMaxQpsResponseBody extends TeaModel {
-    @NameInMap("Qps")
+    @com.aliyun.core.annotation.NameInMap("Qps")
     private String qps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainAttackMaxQpsResponseBody(Builder builder) {

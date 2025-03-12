@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainAccessModeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainAccessModeResponseBody</p>
  */
 public class DescribeDomainAccessModeResponseBody extends TeaModel {
-    @NameInMap("DomainModeList")
-    private java.util.List < DomainModeList> domainModeList;
+    @com.aliyun.core.annotation.NameInMap("DomainModeList")
+    private java.util.List<DomainModeList> domainModeList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainAccessModeResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
     /**
      * @return domainModeList
      */
-    public java.util.List < DomainModeList> getDomainModeList() {
+    public java.util.List<DomainModeList> getDomainModeList() {
         return this.domainModeList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainModeList> domainModeList; 
+        private java.util.List<DomainModeList> domainModeList; 
         private String requestId; 
 
         /**
          * DomainModeList.
          */
-        public Builder domainModeList(java.util.List < DomainModeList> domainModeList) {
+        public Builder domainModeList(java.util.List<DomainModeList> domainModeList) {
             this.domainModeList = domainModeList;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainAccessModeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainAccessModeResponseBody</p>
+     */
     public static class DomainModeList extends TeaModel {
-        @NameInMap("AccessMode")
+        @com.aliyun.core.annotation.NameInMap("AccessMode")
         private Integer accessMode;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
         private DomainModeList(Builder builder) {

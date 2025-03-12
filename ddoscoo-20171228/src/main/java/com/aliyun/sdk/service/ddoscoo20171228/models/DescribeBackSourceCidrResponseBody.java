@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackSourceCidrResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackSourceCidrResponseBody</p>
  */
 public class DescribeBackSourceCidrResponseBody extends TeaModel {
-    @NameInMap("CidrList")
-    private java.util.List < String > cidrList;
+    @com.aliyun.core.annotation.NameInMap("CidrList")
+    private java.util.List<String> cidrList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackSourceCidrResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
     /**
      * @return cidrList
      */
-    public java.util.List < String > getCidrList() {
+    public java.util.List<String> getCidrList() {
         return this.cidrList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > cidrList; 
+        private java.util.List<String> cidrList; 
         private String requestId; 
 
         /**
          * CidrList.
          */
-        public Builder cidrList(java.util.List < String > cidrList) {
+        public Builder cidrList(java.util.List<String> cidrList) {
             this.cidrList = cidrList;
             return this;
         }

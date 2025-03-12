@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLayer7CustomPortsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLayer7CustomPortsResponseBody</p>
  */
 public class ListLayer7CustomPortsResponseBody extends TeaModel {
-    @NameInMap("Layer7CustomPorts")
-    private java.util.List < Layer7CustomPorts> layer7CustomPorts;
+    @com.aliyun.core.annotation.NameInMap("Layer7CustomPorts")
+    private java.util.List<Layer7CustomPorts> layer7CustomPorts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListLayer7CustomPortsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
     /**
      * @return layer7CustomPorts
      */
-    public java.util.List < Layer7CustomPorts> getLayer7CustomPorts() {
+    public java.util.List<Layer7CustomPorts> getLayer7CustomPorts() {
         return this.layer7CustomPorts;
     }
 
@@ -46,13 +51,13 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Layer7CustomPorts> layer7CustomPorts; 
+        private java.util.List<Layer7CustomPorts> layer7CustomPorts; 
         private String requestId; 
 
         /**
          * Layer7CustomPorts.
          */
-        public Builder layer7CustomPorts(java.util.List < Layer7CustomPorts> layer7CustomPorts) {
+        public Builder layer7CustomPorts(java.util.List<Layer7CustomPorts> layer7CustomPorts) {
             this.layer7CustomPorts = layer7CustomPorts;
             return this;
         }
@@ -71,14 +76,20 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLayer7CustomPortsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLayer7CustomPortsResponseBody</p>
+     */
     public static class Layer7CustomPorts extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("ProxyPorts")
-        private java.util.List < String > proxyPorts;
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
+        private java.util.List<String> proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private Layer7CustomPorts(Builder builder) {
@@ -105,7 +116,7 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
         /**
          * @return proxyPorts
          */
-        public java.util.List < String > getProxyPorts() {
+        public java.util.List<String> getProxyPorts() {
             return this.proxyPorts;
         }
 
@@ -118,7 +129,7 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String flag; 
-            private java.util.List < String > proxyPorts; 
+            private java.util.List<String> proxyPorts; 
             private String proxyType; 
 
             /**
@@ -132,7 +143,7 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
             /**
              * ProxyPorts.
              */
-            public Builder proxyPorts(java.util.List < String > proxyPorts) {
+            public Builder proxyPorts(java.util.List<String> proxyPorts) {
                 this.proxyPorts = proxyPorts;
                 return this;
             }

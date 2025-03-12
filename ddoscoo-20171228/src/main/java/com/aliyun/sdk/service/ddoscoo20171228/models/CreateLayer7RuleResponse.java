@@ -1,28 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLayer7RuleResponse} extends {@link TeaModel}
  *
  * <p>CreateLayer7RuleResponse</p>
  */
 public class CreateLayer7RuleResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CreateLayer7RuleResponseBody body;
 
     private CreateLayer7RuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -38,8 +45,15 @@ public class CreateLayer7RuleResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     /**
@@ -51,7 +65,9 @@ public class CreateLayer7RuleResponse extends Response {
 
     public interface Builder extends Response.Builder<CreateLayer7RuleResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateLayer7RuleResponseBody body);
 
@@ -63,7 +79,8 @@ public class CreateLayer7RuleResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<CreateLayer7RuleResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
         private CreateLayer7RuleResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +90,7 @@ public class CreateLayer7RuleResponse extends Response {
         private BuilderImpl(CreateLayer7RuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -80,8 +98,17 @@ public class CreateLayer7RuleResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

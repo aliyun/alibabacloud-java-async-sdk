@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainQpsListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainQpsListResponseBody</p>
  */
 public class DescribeDomainQpsListResponseBody extends TeaModel {
-    @NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    @com.aliyun.core.annotation.NameInMap("DataList")
+    private java.util.List<DataList> dataList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainQpsListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeDomainQpsListResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDomainQpsListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String requestId; 
 
         /**
          * DataList.
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -71,29 +76,35 @@ public class DescribeDomainQpsListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainQpsListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainQpsListResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("AttackQps")
+        @com.aliyun.core.annotation.NameInMap("AttackQps")
         private Long attackQps;
 
-        @NameInMap("CacheHits")
+        @com.aliyun.core.annotation.NameInMap("CacheHits")
         private Long cacheHits;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("MaxAttackQps")
+        @com.aliyun.core.annotation.NameInMap("MaxAttackQps")
         private Long maxAttackQps;
 
-        @NameInMap("MaxNormalQps")
+        @com.aliyun.core.annotation.NameInMap("MaxNormalQps")
         private Long maxNormalQps;
 
-        @NameInMap("MaxQps")
+        @com.aliyun.core.annotation.NameInMap("MaxQps")
         private Long maxQps;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("TotalQps")
+        @com.aliyun.core.annotation.NameInMap("TotalQps")
         private Long totalQps;
 
         private DataList(Builder builder) {

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAsyncTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateAsyncTaskRequest</p>
  */
 public class CreateAsyncTaskRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("TaskParams")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskParams")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskParams;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer taskType;
 
     private CreateAsyncTaskRequest(Builder builder) {
@@ -116,7 +121,10 @@ public class CreateAsyncTaskRequest extends Request {
         }
 
         /**
-         * TaskParams.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;timestamp&quot;: 1530276554, &quot;instanceId&quot;: &quot;ddoscoo-woieuroi234&quot;}</p>
          */
         public Builder taskParams(String taskParams) {
             this.putQueryParameter("TaskParams", taskParams);
@@ -125,7 +133,10 @@ public class CreateAsyncTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskType(Integer taskType) {
             this.putQueryParameter("TaskType", taskType);

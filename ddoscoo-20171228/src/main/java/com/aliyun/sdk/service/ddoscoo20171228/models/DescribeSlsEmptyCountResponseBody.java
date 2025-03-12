@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlsEmptyCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlsEmptyCountResponseBody</p>
  */
 public class DescribeSlsEmptyCountResponseBody extends TeaModel {
-    @NameInMap("AvailableCount")
+    @com.aliyun.core.annotation.NameInMap("AvailableCount")
     private Integer availableCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSlsEmptyCountResponseBody(Builder builder) {

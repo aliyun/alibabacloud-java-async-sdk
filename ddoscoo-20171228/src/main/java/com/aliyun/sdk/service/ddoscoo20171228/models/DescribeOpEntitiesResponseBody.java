@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOpEntitiesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOpEntitiesResponseBody</p>
  */
 public class DescribeOpEntitiesResponseBody extends TeaModel {
-    @NameInMap("OpEntities")
-    private java.util.List < OpEntities> opEntities;
+    @com.aliyun.core.annotation.NameInMap("OpEntities")
+    private java.util.List<OpEntities> opEntities;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeOpEntitiesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     /**
      * @return opEntities
      */
-    public java.util.List < OpEntities> getOpEntities() {
+    public java.util.List<OpEntities> getOpEntities() {
         return this.opEntities;
     }
 
@@ -57,14 +62,14 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OpEntities> opEntities; 
+        private java.util.List<OpEntities> opEntities; 
         private String requestId; 
         private Long total; 
 
         /**
          * OpEntities.
          */
-        public Builder opEntities(java.util.List < OpEntities> opEntities) {
+        public Builder opEntities(java.util.List<OpEntities> opEntities) {
             this.opEntities = opEntities;
             return this;
         }
@@ -91,23 +96,29 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOpEntitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOpEntitiesResponseBody</p>
+     */
     public static class OpEntities extends TeaModel {
-        @NameInMap("EntityObject")
+        @com.aliyun.core.annotation.NameInMap("EntityObject")
         private String entityObject;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private Integer entityType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("OpAccount")
+        @com.aliyun.core.annotation.NameInMap("OpAccount")
         private String opAccount;
 
-        @NameInMap("OpAction")
+        @com.aliyun.core.annotation.NameInMap("OpAction")
         private Integer opAction;
 
-        @NameInMap("OpDesc")
+        @com.aliyun.core.annotation.NameInMap("OpDesc")
         private String opDesc;
 
         private OpEntities(Builder builder) {

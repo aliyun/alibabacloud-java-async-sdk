@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainAttackEventListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainAttackEventListResponseBody</p>
  */
 public class DescribeDomainAttackEventListResponseBody extends TeaModel {
-    @NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    @com.aliyun.core.annotation.NameInMap("DataList")
+    private java.util.List<DataList> dataList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeDomainAttackEventListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String requestId; 
         private Long total; 
 
         /**
          * DataList.
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -91,17 +96,23 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainAttackEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainAttackEventListResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("MaxQps")
+        @com.aliyun.core.annotation.NameInMap("MaxQps")
         private Long maxQps;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private DataList(Builder builder) {

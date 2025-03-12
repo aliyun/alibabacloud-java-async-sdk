@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLayer4RuleAttributesResponseBody</p>
  */
 public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
-    @NameInMap("Listeners")
-    private java.util.List < Listeners> listeners;
+    @com.aliyun.core.annotation.NameInMap("Listeners")
+    private java.util.List<Listeners> listeners;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLayer4RuleAttributesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     /**
      * @return listeners
      */
-    public java.util.List < Listeners> getListeners() {
+    public java.util.List<Listeners> getListeners() {
         return this.listeners;
     }
 
@@ -46,13 +51,13 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Listeners> listeners; 
+        private java.util.List<Listeners> listeners; 
         private String requestId; 
 
         /**
          * Listeners.
          */
-        public Builder listeners(java.util.List < Listeners> listeners) {
+        public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
             return this;
         }
@@ -71,17 +76,23 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RuleAttributesResponseBody</p>
+     */
     public static class Sblack extends TeaModel {
-        @NameInMap("Cnt")
+        @com.aliyun.core.annotation.NameInMap("Cnt")
         private Integer cnt;
 
-        @NameInMap("During")
+        @com.aliyun.core.annotation.NameInMap("During")
         private Integer during;
 
-        @NameInMap("Expires")
+        @com.aliyun.core.annotation.NameInMap("Expires")
         private Integer expires;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Sblack(Builder builder) {
@@ -172,9 +183,15 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RuleAttributesResponseBody</p>
+     */
     public static class Cc extends TeaModel {
-        @NameInMap("Sblack")
-        private java.util.List < Sblack> sblack;
+        @com.aliyun.core.annotation.NameInMap("Sblack")
+        private java.util.List<Sblack> sblack;
 
         private Cc(Builder builder) {
             this.sblack = builder.sblack;
@@ -191,17 +208,17 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         /**
          * @return sblack
          */
-        public java.util.List < Sblack> getSblack() {
+        public java.util.List<Sblack> getSblack() {
             return this.sblack;
         }
 
         public static final class Builder {
-            private java.util.List < Sblack> sblack; 
+            private java.util.List<Sblack> sblack; 
 
             /**
              * Sblack.
              */
-            public Builder sblack(java.util.List < Sblack> sblack) {
+            public Builder sblack(java.util.List<Sblack> sblack) {
                 this.sblack = sblack;
                 return this;
             }
@@ -213,11 +230,17 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RuleAttributesResponseBody</p>
+     */
     public static class PayloadLen extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
         private PayloadLen(Builder builder) {
@@ -274,17 +297,23 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RuleAttributesResponseBody</p>
+     */
     public static class Sla extends TeaModel {
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Integer cps;
 
-        @NameInMap("CpsEnable")
+        @com.aliyun.core.annotation.NameInMap("CpsEnable")
         private Integer cpsEnable;
 
-        @NameInMap("Maxconn")
+        @com.aliyun.core.annotation.NameInMap("Maxconn")
         private Integer maxconn;
 
-        @NameInMap("MaxconnEnable")
+        @com.aliyun.core.annotation.NameInMap("MaxconnEnable")
         private Integer maxconnEnable;
 
         private Sla(Builder builder) {
@@ -375,26 +404,32 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RuleAttributesResponseBody</p>
+     */
     public static class Slimit extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
 
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Integer cps;
 
-        @NameInMap("CpsEnable")
+        @com.aliyun.core.annotation.NameInMap("CpsEnable")
         private Integer cpsEnable;
 
-        @NameInMap("CpsMode")
+        @com.aliyun.core.annotation.NameInMap("CpsMode")
         private Integer cpsMode;
 
-        @NameInMap("Maxconn")
+        @com.aliyun.core.annotation.NameInMap("Maxconn")
         private Integer maxconn;
 
-        @NameInMap("MaxconnEnable")
+        @com.aliyun.core.annotation.NameInMap("MaxconnEnable")
         private Integer maxconnEnable;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Long pps;
 
         private Slimit(Builder builder) {
@@ -536,26 +571,32 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RuleAttributesResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("Cc")
+        @com.aliyun.core.annotation.NameInMap("Cc")
         private Cc cc;
 
-        @NameInMap("NodataConn")
+        @com.aliyun.core.annotation.NameInMap("NodataConn")
         private String nodataConn;
 
-        @NameInMap("PayloadLen")
+        @com.aliyun.core.annotation.NameInMap("PayloadLen")
         private PayloadLen payloadLen;
 
-        @NameInMap("PersistenceTimeout")
+        @com.aliyun.core.annotation.NameInMap("PersistenceTimeout")
         private Integer persistenceTimeout;
 
-        @NameInMap("Sla")
+        @com.aliyun.core.annotation.NameInMap("Sla")
         private Sla sla;
 
-        @NameInMap("Slimit")
+        @com.aliyun.core.annotation.NameInMap("Slimit")
         private Slimit slimit;
 
-        @NameInMap("Synproxy")
+        @com.aliyun.core.annotation.NameInMap("Synproxy")
         private String synproxy;
 
         private Config(Builder builder) {
@@ -697,17 +738,23 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLayer4RuleAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RuleAttributesResponseBody</p>
+     */
     public static class Listeners extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private Config config;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Listeners(Builder builder) {

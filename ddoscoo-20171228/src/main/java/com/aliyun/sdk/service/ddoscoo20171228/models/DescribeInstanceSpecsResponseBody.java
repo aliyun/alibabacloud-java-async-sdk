@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSpecsResponseBody</p>
  */
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("InstanceSpecs")
-    private java.util.List < InstanceSpecs> instanceSpecs;
+    @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
+    private java.util.List<InstanceSpecs> instanceSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSpecsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     /**
      * @return instanceSpecs
      */
-    public java.util.List < InstanceSpecs> getInstanceSpecs() {
+    public java.util.List<InstanceSpecs> getInstanceSpecs() {
         return this.instanceSpecs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceSpecs> instanceSpecs; 
+        private java.util.List<InstanceSpecs> instanceSpecs; 
         private String requestId; 
 
         /**
          * InstanceSpecs.
          */
-        public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
+        public Builder instanceSpecs(java.util.List<InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
             return this;
         }
@@ -71,35 +76,41 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecsResponseBody</p>
+     */
     public static class InstanceSpecs extends TeaModel {
-        @NameInMap("BandwidthMbps")
+        @com.aliyun.core.annotation.NameInMap("BandwidthMbps")
         private Integer bandwidthMbps;
 
-        @NameInMap("BaseBandwidth")
+        @com.aliyun.core.annotation.NameInMap("BaseBandwidth")
         private Integer baseBandwidth;
 
-        @NameInMap("DefenseCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseCount")
         private Integer defenseCount;
 
-        @NameInMap("DomainLimit")
+        @com.aliyun.core.annotation.NameInMap("DomainLimit")
         private Integer domainLimit;
 
-        @NameInMap("ElasticBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ElasticBandwidth")
         private Integer elasticBandwidth;
 
-        @NameInMap("FunctionVersion")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private String functionVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PortLimit")
+        @com.aliyun.core.annotation.NameInMap("PortLimit")
         private Integer portLimit;
 
-        @NameInMap("QpsLimit")
+        @com.aliyun.core.annotation.NameInMap("QpsLimit")
         private Integer qpsLimit;
 
-        @NameInMap("SiteLimit")
+        @com.aliyun.core.annotation.NameInMap("SiteLimit")
         private Integer siteLimit;
 
         private InstanceSpecs(Builder builder) {

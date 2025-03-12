@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListValueAddedResponseBody} extends {@link TeaModel}
  *
  * <p>ListValueAddedResponseBody</p>
  */
 public class ListValueAddedResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ValueAddedList")
-    private java.util.List < ValueAddedList> valueAddedList;
+    @com.aliyun.core.annotation.NameInMap("ValueAddedList")
+    private java.util.List<ValueAddedList> valueAddedList;
 
     private ListValueAddedResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListValueAddedResponseBody extends TeaModel {
     /**
      * @return valueAddedList
      */
-    public java.util.List < ValueAddedList> getValueAddedList() {
+    public java.util.List<ValueAddedList> getValueAddedList() {
         return this.valueAddedList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ValueAddedList> valueAddedList; 
+        private java.util.List<ValueAddedList> valueAddedList; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListValueAddedResponseBody extends TeaModel {
         /**
          * ValueAddedList.
          */
-        public Builder valueAddedList(java.util.List < ValueAddedList> valueAddedList) {
+        public Builder valueAddedList(java.util.List<ValueAddedList> valueAddedList) {
             this.valueAddedList = valueAddedList;
             return this;
         }
@@ -71,21 +76,30 @@ public class ListValueAddedResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListValueAddedResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListValueAddedResponseBody</p>
+     */
     public static class ValueAddedList extends TeaModel {
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LogSize")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
         private Long logSize;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
+
+        @com.aliyun.core.annotation.NameInMap("StoreRegion")
+        private String storeRegion;
 
         private ValueAddedList(Builder builder) {
             this.expireTime = builder.expireTime;
@@ -93,6 +107,7 @@ public class ListValueAddedResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.logSize = builder.logSize;
             this.status = builder.status;
+            this.storeRegion = builder.storeRegion;
         }
 
         public static Builder builder() {
@@ -138,12 +153,20 @@ public class ListValueAddedResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return storeRegion
+         */
+        public String getStoreRegion() {
+            return this.storeRegion;
+        }
+
         public static final class Builder {
             private Long expireTime; 
             private Long gmtCreate; 
             private String instanceId; 
             private Long logSize; 
             private Integer status; 
+            private String storeRegion; 
 
             /**
              * ExpireTime.
@@ -182,6 +205,14 @@ public class ListValueAddedResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StoreRegion.
+             */
+            public Builder storeRegion(String storeRegion) {
+                this.storeRegion = storeRegion;
                 return this;
             }
 

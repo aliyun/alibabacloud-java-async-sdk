@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLayer7CCRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLayer7CCRulesResponseBody</p>
  */
 public class DescribeLayer7CCRulesResponseBody extends TeaModel {
-    @NameInMap("Layer7CCRules")
-    private java.util.List < Layer7CCRules> layer7CCRules;
+    @com.aliyun.core.annotation.NameInMap("Layer7CCRules")
+    private java.util.List<Layer7CCRules> layer7CCRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeLayer7CCRulesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
     /**
      * @return layer7CCRules
      */
-    public java.util.List < Layer7CCRules> getLayer7CCRules() {
+    public java.util.List<Layer7CCRules> getLayer7CCRules() {
         return this.layer7CCRules;
     }
 
@@ -57,14 +62,14 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Layer7CCRules> layer7CCRules; 
+        private java.util.List<Layer7CCRules> layer7CCRules; 
         private String requestId; 
         private Long total; 
 
         /**
          * Layer7CCRules.
          */
-        public Builder layer7CCRules(java.util.List < Layer7CCRules> layer7CCRules) {
+        public Builder layer7CCRules(java.util.List<Layer7CCRules> layer7CCRules) {
             this.layer7CCRules = layer7CCRules;
             return this;
         }
@@ -91,26 +96,32 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLayer7CCRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer7CCRulesResponseBody</p>
+     */
     public static class Layer7CCRules extends TeaModel {
-        @NameInMap("Act")
+        @com.aliyun.core.annotation.NameInMap("Act")
         private String act;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private Layer7CCRules(Builder builder) {

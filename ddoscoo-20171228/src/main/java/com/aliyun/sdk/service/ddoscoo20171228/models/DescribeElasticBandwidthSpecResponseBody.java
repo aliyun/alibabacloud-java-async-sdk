@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticBandwidthSpecResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticBandwidthSpecResponseBody</p>
  */
 public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
-    @NameInMap("ElasticBandwidthSpec")
-    private java.util.List < String > elasticBandwidthSpec;
+    @com.aliyun.core.annotation.NameInMap("ElasticBandwidthSpec")
+    private java.util.List<String> elasticBandwidthSpec;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElasticBandwidthSpecResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
     /**
      * @return elasticBandwidthSpec
      */
-    public java.util.List < String > getElasticBandwidthSpec() {
+    public java.util.List<String> getElasticBandwidthSpec() {
         return this.elasticBandwidthSpec;
     }
 
@@ -46,13 +51,13 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > elasticBandwidthSpec; 
+        private java.util.List<String> elasticBandwidthSpec; 
         private String requestId; 
 
         /**
          * ElasticBandwidthSpec.
          */
-        public Builder elasticBandwidthSpec(java.util.List < String > elasticBandwidthSpec) {
+        public Builder elasticBandwidthSpec(java.util.List<String> elasticBandwidthSpec) {
             this.elasticBandwidthSpec = elasticBandwidthSpec;
             return this;
         }

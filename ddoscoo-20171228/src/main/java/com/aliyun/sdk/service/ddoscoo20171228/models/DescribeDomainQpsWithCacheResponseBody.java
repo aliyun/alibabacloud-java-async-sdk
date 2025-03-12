@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainQpsWithCacheResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainQpsWithCacheResponseBody</p>
  */
 public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
-    @NameInMap("Blocks")
-    private java.util.List < String > blocks;
+    @com.aliyun.core.annotation.NameInMap("Blocks")
+    private java.util.List<String> blocks;
 
-    @NameInMap("CacheHits")
-    private java.util.List < String > cacheHits;
+    @com.aliyun.core.annotation.NameInMap("CacheHits")
+    private java.util.List<String> cacheHits;
 
-    @NameInMap("CcBlockQps")
-    private java.util.List < String > ccBlockQps;
+    @com.aliyun.core.annotation.NameInMap("CcBlockQps")
+    private java.util.List<String> ccBlockQps;
 
-    @NameInMap("CcJsQps")
-    private java.util.List < String > ccJsQps;
+    @com.aliyun.core.annotation.NameInMap("CcJsQps")
+    private java.util.List<String> ccJsQps;
 
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @NameInMap("IpBlockQps")
-    private java.util.List < String > ipBlockQps;
+    @com.aliyun.core.annotation.NameInMap("IpBlockQps")
+    private java.util.List<String> ipBlockQps;
 
-    @NameInMap("PreciseBlocks")
-    private java.util.List < String > preciseBlocks;
+    @com.aliyun.core.annotation.NameInMap("PreciseBlocks")
+    private java.util.List<String> preciseBlocks;
 
-    @NameInMap("PreciseJsQps")
-    private java.util.List < String > preciseJsQps;
+    @com.aliyun.core.annotation.NameInMap("PreciseJsQps")
+    private java.util.List<String> preciseJsQps;
 
-    @NameInMap("RegionBlocks")
-    private java.util.List < String > regionBlocks;
+    @com.aliyun.core.annotation.NameInMap("RegionBlocks")
+    private java.util.List<String> regionBlocks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Totals")
-    private java.util.List < String > totals;
+    @com.aliyun.core.annotation.NameInMap("Totals")
+    private java.util.List<String> totals;
 
     private DescribeDomainQpsWithCacheResponseBody(Builder builder) {
         this.blocks = builder.blocks;
@@ -74,28 +79,28 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
     /**
      * @return blocks
      */
-    public java.util.List < String > getBlocks() {
+    public java.util.List<String> getBlocks() {
         return this.blocks;
     }
 
     /**
      * @return cacheHits
      */
-    public java.util.List < String > getCacheHits() {
+    public java.util.List<String> getCacheHits() {
         return this.cacheHits;
     }
 
     /**
      * @return ccBlockQps
      */
-    public java.util.List < String > getCcBlockQps() {
+    public java.util.List<String> getCcBlockQps() {
         return this.ccBlockQps;
     }
 
     /**
      * @return ccJsQps
      */
-    public java.util.List < String > getCcJsQps() {
+    public java.util.List<String> getCcJsQps() {
         return this.ccJsQps;
     }
 
@@ -109,28 +114,28 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
     /**
      * @return ipBlockQps
      */
-    public java.util.List < String > getIpBlockQps() {
+    public java.util.List<String> getIpBlockQps() {
         return this.ipBlockQps;
     }
 
     /**
      * @return preciseBlocks
      */
-    public java.util.List < String > getPreciseBlocks() {
+    public java.util.List<String> getPreciseBlocks() {
         return this.preciseBlocks;
     }
 
     /**
      * @return preciseJsQps
      */
-    public java.util.List < String > getPreciseJsQps() {
+    public java.util.List<String> getPreciseJsQps() {
         return this.preciseJsQps;
     }
 
     /**
      * @return regionBlocks
      */
-    public java.util.List < String > getRegionBlocks() {
+    public java.util.List<String> getRegionBlocks() {
         return this.regionBlocks;
     }
 
@@ -151,28 +156,28 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
     /**
      * @return totals
      */
-    public java.util.List < String > getTotals() {
+    public java.util.List<String> getTotals() {
         return this.totals;
     }
 
     public static final class Builder {
-        private java.util.List < String > blocks; 
-        private java.util.List < String > cacheHits; 
-        private java.util.List < String > ccBlockQps; 
-        private java.util.List < String > ccJsQps; 
+        private java.util.List<String> blocks; 
+        private java.util.List<String> cacheHits; 
+        private java.util.List<String> ccBlockQps; 
+        private java.util.List<String> ccJsQps; 
         private Integer interval; 
-        private java.util.List < String > ipBlockQps; 
-        private java.util.List < String > preciseBlocks; 
-        private java.util.List < String > preciseJsQps; 
-        private java.util.List < String > regionBlocks; 
+        private java.util.List<String> ipBlockQps; 
+        private java.util.List<String> preciseBlocks; 
+        private java.util.List<String> preciseJsQps; 
+        private java.util.List<String> regionBlocks; 
         private String requestId; 
         private Long startTime; 
-        private java.util.List < String > totals; 
+        private java.util.List<String> totals; 
 
         /**
          * Blocks.
          */
-        public Builder blocks(java.util.List < String > blocks) {
+        public Builder blocks(java.util.List<String> blocks) {
             this.blocks = blocks;
             return this;
         }
@@ -180,7 +185,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * CacheHits.
          */
-        public Builder cacheHits(java.util.List < String > cacheHits) {
+        public Builder cacheHits(java.util.List<String> cacheHits) {
             this.cacheHits = cacheHits;
             return this;
         }
@@ -188,7 +193,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * CcBlockQps.
          */
-        public Builder ccBlockQps(java.util.List < String > ccBlockQps) {
+        public Builder ccBlockQps(java.util.List<String> ccBlockQps) {
             this.ccBlockQps = ccBlockQps;
             return this;
         }
@@ -196,7 +201,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * CcJsQps.
          */
-        public Builder ccJsQps(java.util.List < String > ccJsQps) {
+        public Builder ccJsQps(java.util.List<String> ccJsQps) {
             this.ccJsQps = ccJsQps;
             return this;
         }
@@ -212,7 +217,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * IpBlockQps.
          */
-        public Builder ipBlockQps(java.util.List < String > ipBlockQps) {
+        public Builder ipBlockQps(java.util.List<String> ipBlockQps) {
             this.ipBlockQps = ipBlockQps;
             return this;
         }
@@ -220,7 +225,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * PreciseBlocks.
          */
-        public Builder preciseBlocks(java.util.List < String > preciseBlocks) {
+        public Builder preciseBlocks(java.util.List<String> preciseBlocks) {
             this.preciseBlocks = preciseBlocks;
             return this;
         }
@@ -228,7 +233,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * PreciseJsQps.
          */
-        public Builder preciseJsQps(java.util.List < String > preciseJsQps) {
+        public Builder preciseJsQps(java.util.List<String> preciseJsQps) {
             this.preciseJsQps = preciseJsQps;
             return this;
         }
@@ -236,7 +241,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * RegionBlocks.
          */
-        public Builder regionBlocks(java.util.List < String > regionBlocks) {
+        public Builder regionBlocks(java.util.List<String> regionBlocks) {
             this.regionBlocks = regionBlocks;
             return this;
         }
@@ -260,7 +265,7 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
         /**
          * Totals.
          */
-        public Builder totals(java.util.List < String > totals) {
+        public Builder totals(java.util.List<String> totals) {
             this.totals = totals;
             return this;
         }

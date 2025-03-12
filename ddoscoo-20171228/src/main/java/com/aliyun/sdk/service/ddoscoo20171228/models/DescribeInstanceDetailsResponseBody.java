@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceDetailsResponseBody</p>
  */
 public class DescribeInstanceDetailsResponseBody extends TeaModel {
-    @NameInMap("InstanceDetails")
-    private java.util.List < InstanceDetails> instanceDetails;
+    @com.aliyun.core.annotation.NameInMap("InstanceDetails")
+    private java.util.List<InstanceDetails> instanceDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceDetailsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     /**
      * @return instanceDetails
      */
-    public java.util.List < InstanceDetails> getInstanceDetails() {
+    public java.util.List<InstanceDetails> getInstanceDetails() {
         return this.instanceDetails;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceDetails> instanceDetails; 
+        private java.util.List<InstanceDetails> instanceDetails; 
         private String requestId; 
 
         /**
          * InstanceDetails.
          */
-        public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
+        public Builder instanceDetails(java.util.List<InstanceDetails> instanceDetails) {
             this.instanceDetails = instanceDetails;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDetailsResponseBody</p>
+     */
     public static class EipInfoList extends TeaModel {
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EipInfoList(Builder builder) {
@@ -132,14 +143,20 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceDetailsResponseBody</p>
+     */
     public static class InstanceDetails extends TeaModel {
-        @NameInMap("EipInfoList")
-        private java.util.List < EipInfoList> eipInfoList;
+        @com.aliyun.core.annotation.NameInMap("EipInfoList")
+        private java.util.List<EipInfoList> eipInfoList;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
         private InstanceDetails(Builder builder) {
@@ -159,7 +176,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         /**
          * @return eipInfoList
          */
-        public java.util.List < EipInfoList> getEipInfoList() {
+        public java.util.List<EipInfoList> getEipInfoList() {
             return this.eipInfoList;
         }
 
@@ -178,14 +195,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EipInfoList> eipInfoList; 
+            private java.util.List<EipInfoList> eipInfoList; 
             private String instanceId; 
             private String line; 
 
             /**
              * EipInfoList.
              */
-            public Builder eipInfoList(java.util.List < EipInfoList> eipInfoList) {
+            public Builder eipInfoList(java.util.List<EipInfoList> eipInfoList) {
                 this.eipInfoList = eipInfoList;
                 return this;
             }

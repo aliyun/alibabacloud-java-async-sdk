@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceStatisticsResponseBody</p>
  */
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
-    @NameInMap("InstanceStatistics")
-    private java.util.List < InstanceStatistics> instanceStatistics;
+    @com.aliyun.core.annotation.NameInMap("InstanceStatistics")
+    private java.util.List<InstanceStatistics> instanceStatistics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceStatisticsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     /**
      * @return instanceStatistics
      */
-    public java.util.List < InstanceStatistics> getInstanceStatistics() {
+    public java.util.List<InstanceStatistics> getInstanceStatistics() {
         return this.instanceStatistics;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceStatistics> instanceStatistics; 
+        private java.util.List<InstanceStatistics> instanceStatistics; 
         private String requestId; 
 
         /**
          * InstanceStatistics.
          */
-        public Builder instanceStatistics(java.util.List < InstanceStatistics> instanceStatistics) {
+        public Builder instanceStatistics(java.util.List<InstanceStatistics> instanceStatistics) {
             this.instanceStatistics = instanceStatistics;
             return this;
         }
@@ -71,20 +76,26 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceStatisticsResponseBody</p>
+     */
     public static class InstanceStatistics extends TeaModel {
-        @NameInMap("DefenseCountUsage")
+        @com.aliyun.core.annotation.NameInMap("DefenseCountUsage")
         private Integer defenseCountUsage;
 
-        @NameInMap("DomainUsage")
+        @com.aliyun.core.annotation.NameInMap("DomainUsage")
         private Integer domainUsage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PortUsage")
+        @com.aliyun.core.annotation.NameInMap("PortUsage")
         private Integer portUsage;
 
-        @NameInMap("SiteUsage")
+        @com.aliyun.core.annotation.NameInMap("SiteUsage")
         private Integer siteUsage;
 
         private InstanceStatistics(Builder builder) {

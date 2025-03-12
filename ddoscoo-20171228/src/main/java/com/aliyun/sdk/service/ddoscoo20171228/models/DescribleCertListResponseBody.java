@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribleCertListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribleCertListResponseBody</p>
  */
 public class DescribleCertListResponseBody extends TeaModel {
-    @NameInMap("CertList")
-    private java.util.List < CertList> certList;
+    @com.aliyun.core.annotation.NameInMap("CertList")
+    private java.util.List<CertList> certList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribleCertListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribleCertListResponseBody extends TeaModel {
     /**
      * @return certList
      */
-    public java.util.List < CertList> getCertList() {
+    public java.util.List<CertList> getCertList() {
         return this.certList;
     }
 
@@ -46,13 +51,13 @@ public class DescribleCertListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CertList> certList; 
+        private java.util.List<CertList> certList; 
         private String requestId; 
 
         /**
          * CertList.
          */
-        public Builder certList(java.util.List < CertList> certList) {
+        public Builder certList(java.util.List<CertList> certList) {
             this.certList = certList;
             return this;
         }
@@ -71,29 +76,39 @@ public class DescribleCertListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribleCertListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribleCertListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
+        private String certIdentifier;
+
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("DomainRelated")
+        @com.aliyun.core.annotation.NameInMap("DomainRelated")
         private Boolean domainRelated;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
         private CertList(Builder builder) {
+            this.certIdentifier = builder.certIdentifier;
             this.common = builder.common;
             this.domainRelated = builder.domainRelated;
             this.endDate = builder.endDate;
@@ -109,6 +124,13 @@ public class DescribleCertListResponseBody extends TeaModel {
 
         public static CertList create() {
             return builder().build();
+        }
+
+        /**
+         * @return certIdentifier
+         */
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         /**
@@ -161,6 +183,7 @@ public class DescribleCertListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String certIdentifier; 
             private String common; 
             private Boolean domainRelated; 
             private String endDate; 
@@ -168,6 +191,14 @@ public class DescribleCertListResponseBody extends TeaModel {
             private String issuer; 
             private String name; 
             private String startDate; 
+
+            /**
+             * CertIdentifier.
+             */
+            public Builder certIdentifier(String certIdentifier) {
+                this.certIdentifier = certIdentifier;
+                return this;
+            }
 
             /**
              * Common.

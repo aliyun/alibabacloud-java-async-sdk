@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainOverviewResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainOverviewResponseBody</p>
  */
 public class DescribeDomainOverviewResponseBody extends TeaModel {
-    @NameInMap("MaxHttp")
+    @com.aliyun.core.annotation.NameInMap("MaxHttp")
     private Long maxHttp;
 
-    @NameInMap("MaxHttps")
+    @com.aliyun.core.annotation.NameInMap("MaxHttps")
     private Long maxHttps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainOverviewResponseBody(Builder builder) {

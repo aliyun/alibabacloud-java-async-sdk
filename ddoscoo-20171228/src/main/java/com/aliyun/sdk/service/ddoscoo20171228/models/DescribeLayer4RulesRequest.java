@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLayer4RulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeLayer4RulesRequest</p>
  */
 public class DescribeLayer4RulesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ForwardProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardProtocol")
     private String forwardProtocol;
 
-    @Query
-    @NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
     private Integer frontendPort;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Offset")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer offset;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageSize;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private DescribeLayer4RulesRequest(Builder builder) {
@@ -150,7 +155,14 @@ public class DescribeLayer4RulesRequest extends Request {
         }
 
         /**
-         * ForwardProtocol.
+         * <p>The type of forwarding protocol. Values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: Indicates TCP protocol.</li>
+         * <li><strong>udp</strong>: Indicates UDP protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder forwardProtocol(String forwardProtocol) {
             this.putQueryParameter("ForwardProtocol", forwardProtocol);
@@ -159,7 +171,10 @@ public class DescribeLayer4RulesRequest extends Request {
         }
 
         /**
-         * FrontendPort.
+         * <p>The forwarding port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
          */
         public Builder frontendPort(Integer frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -168,7 +183,14 @@ public class DescribeLayer4RulesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the DDoS protection instance to be queried.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query all DDoS protection instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-zvp2ay9b****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -177,7 +199,11 @@ public class DescribeLayer4RulesRequest extends Request {
         }
 
         /**
-         * Offset.
+         * <p>In paginated queries, specifies which page of data to return. The minimum value is <strong>1</strong>, indicating the first page of data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -186,7 +212,11 @@ public class DescribeLayer4RulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>In paginated queries, specifies the number of results per page. The maximum value is <strong>50</strong>, indicating that each page can contain up to 50 results.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,7 +225,10 @@ public class DescribeLayer4RulesRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request. You do not need to fill this in; it is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBatchSlsDispatchStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBatchSlsDispatchStatusResponseBody</p>
  */
 public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsConfigStatusList")
-    private java.util.List < SlsConfigStatusList> slsConfigStatusList;
+    @com.aliyun.core.annotation.NameInMap("SlsConfigStatusList")
+    private java.util.List<SlsConfigStatusList> slsConfigStatusList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBatchSlsDispatchStatusResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     /**
      * @return slsConfigStatusList
      */
-    public java.util.List < SlsConfigStatusList> getSlsConfigStatusList() {
+    public java.util.List<SlsConfigStatusList> getSlsConfigStatusList() {
         return this.slsConfigStatusList;
     }
 
@@ -58,7 +63,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SlsConfigStatusList> slsConfigStatusList; 
+        private java.util.List<SlsConfigStatusList> slsConfigStatusList; 
         private Integer totalCount; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         /**
          * SlsConfigStatusList.
          */
-        public Builder slsConfigStatusList(java.util.List < SlsConfigStatusList> slsConfigStatusList) {
+        public Builder slsConfigStatusList(java.util.List<SlsConfigStatusList> slsConfigStatusList) {
             this.slsConfigStatusList = slsConfigStatusList;
             return this;
         }
@@ -91,11 +96,17 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBatchSlsDispatchStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBatchSlsDispatchStatusResponseBody</p>
+     */
     public static class SlsConfigStatusList extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
         private SlsConfigStatusList(Builder builder) {

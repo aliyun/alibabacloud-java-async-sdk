@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpTrafficResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpTrafficResponseBody</p>
  */
 public class DescribeIpTrafficResponseBody extends TeaModel {
-    @NameInMap("AvgInBps")
+    @com.aliyun.core.annotation.NameInMap("AvgInBps")
     private Long avgInBps;
 
-    @NameInMap("AvgOutBps")
+    @com.aliyun.core.annotation.NameInMap("AvgOutBps")
     private Long avgOutBps;
 
-    @NameInMap("IpTrafficPoints")
-    private java.util.List < IpTrafficPoints> ipTrafficPoints;
+    @com.aliyun.core.annotation.NameInMap("IpTrafficPoints")
+    private java.util.List<IpTrafficPoints> ipTrafficPoints;
 
-    @NameInMap("MaxInBps")
+    @com.aliyun.core.annotation.NameInMap("MaxInBps")
     private Long maxInBps;
 
-    @NameInMap("MaxOutBps")
+    @com.aliyun.core.annotation.NameInMap("MaxOutBps")
     private Long maxOutBps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIpTrafficResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
     /**
      * @return ipTrafficPoints
      */
-    public java.util.List < IpTrafficPoints> getIpTrafficPoints() {
+    public java.util.List<IpTrafficPoints> getIpTrafficPoints() {
         return this.ipTrafficPoints;
     }
 
@@ -92,7 +97,7 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
     public static final class Builder {
         private Long avgInBps; 
         private Long avgOutBps; 
-        private java.util.List < IpTrafficPoints> ipTrafficPoints; 
+        private java.util.List<IpTrafficPoints> ipTrafficPoints; 
         private Long maxInBps; 
         private Long maxOutBps; 
         private String requestId; 
@@ -116,7 +121,7 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
         /**
          * IpTrafficPoints.
          */
-        public Builder ipTrafficPoints(java.util.List < IpTrafficPoints> ipTrafficPoints) {
+        public Builder ipTrafficPoints(java.util.List<IpTrafficPoints> ipTrafficPoints) {
             this.ipTrafficPoints = ipTrafficPoints;
             return this;
         }
@@ -151,23 +156,29 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpTrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpTrafficResponseBody</p>
+     */
     public static class IpTrafficPoints extends TeaModel {
-        @NameInMap("ActConns")
+        @com.aliyun.core.annotation.NameInMap("ActConns")
         private Integer actConns;
 
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Integer cps;
 
-        @NameInMap("InactConns")
+        @com.aliyun.core.annotation.NameInMap("InactConns")
         private Integer inactConns;
 
-        @NameInMap("MaxInbps")
+        @com.aliyun.core.annotation.NameInMap("MaxInbps")
         private Long maxInbps;
 
-        @NameInMap("MaxOutbps")
+        @com.aliyun.core.annotation.NameInMap("MaxOutbps")
         private Long maxOutbps;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private IpTrafficPoints(Builder builder) {

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribleLayer7InstanceRelationsRequest} extends {@link RequestModel}
  *
  * <p>DescribleLayer7InstanceRelationsRequest</p>
  */
 public class DescribleLayer7InstanceRelationsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DomainList")
-    @Validation(required = true)
-    private java.util.List < String > domainList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> domainList;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private DescribleLayer7InstanceRelationsRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class DescribleLayer7InstanceRelationsRequest extends Request {
     /**
      * @return domainList
      */
-    public java.util.List < String > getDomainList() {
+    public java.util.List<String> getDomainList() {
         return this.domainList;
     }
 
@@ -80,7 +85,7 @@ public class DescribleLayer7InstanceRelationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribleLayer7InstanceRelationsRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > domainList; 
+        private java.util.List<String> domainList; 
         private String resourceGroupId; 
         private String sourceIp; 
 
@@ -106,9 +111,12 @@ public class DescribleLayer7InstanceRelationsRequest extends Request {
         }
 
         /**
-         * DomainList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
-        public Builder domainList(java.util.List < String > domainList) {
+        public Builder domainList(java.util.List<String> domainList) {
             this.putQueryParameter("DomainList", domainList);
             this.domainList = domainList;
             return this;

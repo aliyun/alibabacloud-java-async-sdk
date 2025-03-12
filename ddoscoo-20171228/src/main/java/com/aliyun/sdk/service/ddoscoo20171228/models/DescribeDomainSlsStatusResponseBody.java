@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSlsStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSlsStatusResponseBody</p>
  */
 public class DescribeDomainSlsStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsLogstore")
+    @com.aliyun.core.annotation.NameInMap("SlsLogstore")
     private String slsLogstore;
 
-    @NameInMap("SlsProject")
+    @com.aliyun.core.annotation.NameInMap("SlsProject")
     private String slsProject;
 
-    @NameInMap("SlsStatus")
+    @com.aliyun.core.annotation.NameInMap("SlsStatus")
     private Boolean slsStatus;
 
     private DescribeDomainSlsStatusResponseBody(Builder builder) {

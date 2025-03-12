@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListAsyncTaskResponseBody</p>
  */
 public class ListAsyncTaskResponseBody extends TeaModel {
-    @NameInMap("AsyncTasks")
-    private java.util.List < AsyncTasks> asyncTasks;
+    @com.aliyun.core.annotation.NameInMap("AsyncTasks")
+    private java.util.List<AsyncTasks> asyncTasks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListAsyncTaskResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListAsyncTaskResponseBody extends TeaModel {
     /**
      * @return asyncTasks
      */
-    public java.util.List < AsyncTasks> getAsyncTasks() {
+    public java.util.List<AsyncTasks> getAsyncTasks() {
         return this.asyncTasks;
     }
 
@@ -57,14 +62,14 @@ public class ListAsyncTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AsyncTasks> asyncTasks; 
+        private java.util.List<AsyncTasks> asyncTasks; 
         private String requestId; 
         private Integer total; 
 
         /**
          * AsyncTasks.
          */
-        public Builder asyncTasks(java.util.List < AsyncTasks> asyncTasks) {
+        public Builder asyncTasks(java.util.List<AsyncTasks> asyncTasks) {
             this.asyncTasks = asyncTasks;
             return this;
         }
@@ -91,26 +96,32 @@ public class ListAsyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAsyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAsyncTaskResponseBody</p>
+     */
     public static class AsyncTasks extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("TaskParams")
+        @com.aliyun.core.annotation.NameInMap("TaskParams")
         private String taskParams;
 
-        @NameInMap("TaskResult")
+        @com.aliyun.core.annotation.NameInMap("TaskResult")
         private String taskResult;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
         private AsyncTasks(Builder builder) {

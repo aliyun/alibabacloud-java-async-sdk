@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20171228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigLayer4RuleAttributeRequest} extends {@link RequestModel}
  *
  * <p>ConfigLayer4RuleAttributeRequest</p>
  */
 public class ConfigLayer4RuleAttributeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Query
-    @NameInMap("ForwardProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardProtocol;
 
-    @Query
-    @NameInMap("FrontendPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer frontendPort;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private ConfigLayer4RuleAttributeRequest(Builder builder) {
@@ -123,7 +128,10 @@ public class ConfigLayer4RuleAttributeRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Slimit&quot;:{&quot;CpsEnable&quot;:1,&quot;MaxconnEnable&quot;:1,&quot;Cps&quot;:1,&quot;Maxconn&quot;:1},&quot;Sla&quot;:{&quot;CpsEnable&quot;:1,&quot;MaxconnEnable&quot;:1,&quot;Cps&quot;:100,&quot;Maxconn&quot;:1000},&quot;PayloadLen&quot;:{&quot;Min&quot;:0,&quot;Max&quot;:6000}}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -132,7 +140,10 @@ public class ConfigLayer4RuleAttributeRequest extends Request {
         }
 
         /**
-         * ForwardProtocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder forwardProtocol(String forwardProtocol) {
             this.putQueryParameter("ForwardProtocol", forwardProtocol);
@@ -141,7 +152,10 @@ public class ConfigLayer4RuleAttributeRequest extends Request {
         }
 
         /**
-         * FrontendPort.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
          */
         public Builder frontendPort(Integer frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -150,7 +164,10 @@ public class ConfigLayer4RuleAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-XXXXX</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
