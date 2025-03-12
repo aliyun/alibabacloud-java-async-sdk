@@ -38,6 +38,10 @@ public class DescribeCostCheckResultsRequest extends Request {
     private java.util.List<String> regionIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdList")
+    private java.util.List<String> resourceGroupIdList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
     private java.util.List<String> resourceIds;
 
@@ -68,6 +72,7 @@ public class DescribeCostCheckResultsRequest extends Request {
         this.groupBy = builder.groupBy;
         this.product = builder.product;
         this.regionIds = builder.regionIds;
+        this.resourceGroupIdList = builder.resourceGroupIdList;
         this.resourceIds = builder.resourceIds;
         this.resourceName = builder.resourceName;
         this.severity = builder.severity;
@@ -125,6 +130,13 @@ public class DescribeCostCheckResultsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupIdList
+     */
+    public java.util.List<String> getResourceGroupIdList() {
+        return this.resourceGroupIdList;
+    }
+
+    /**
      * @return resourceIds
      */
     public java.util.List<String> getResourceIds() {
@@ -172,6 +184,7 @@ public class DescribeCostCheckResultsRequest extends Request {
         private String groupBy; 
         private String product; 
         private java.util.List<String> regionIds; 
+        private java.util.List<String> resourceGroupIdList; 
         private java.util.List<String> resourceIds; 
         private String resourceName; 
         private Integer severity; 
@@ -190,6 +203,7 @@ public class DescribeCostCheckResultsRequest extends Request {
             this.groupBy = request.groupBy;
             this.product = request.product;
             this.regionIds = request.regionIds;
+            this.resourceGroupIdList = request.resourceGroupIdList;
             this.resourceIds = request.resourceIds;
             this.resourceName = request.resourceName;
             this.severity = request.severity;
@@ -243,6 +257,16 @@ public class DescribeCostCheckResultsRequest extends Request {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
             this.putQueryParameter("RegionIds", regionIdsShrink);
             this.regionIds = regionIds;
+            return this;
+        }
+
+        /**
+         * ResourceGroupIdList.
+         */
+        public Builder resourceGroupIdList(java.util.List<String> resourceGroupIdList) {
+            String resourceGroupIdListShrink = shrink(resourceGroupIdList, "ResourceGroupIdList", "json");
+            this.putQueryParameter("ResourceGroupIdList", resourceGroupIdListShrink);
+            this.resourceGroupIdList = resourceGroupIdList;
             return this;
         }
 

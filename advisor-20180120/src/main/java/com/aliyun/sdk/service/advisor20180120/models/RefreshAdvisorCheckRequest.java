@@ -45,6 +45,10 @@ public class RefreshAdvisorCheckRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
+    private String token;
+
     private RefreshAdvisorCheckRequest(Builder builder) {
         super(builder);
         this.assumeAliyunId = builder.assumeAliyunId;
@@ -54,6 +58,7 @@ public class RefreshAdvisorCheckRequest extends Request {
         this.product = builder.product;
         this.resourceDimensionList = builder.resourceDimensionList;
         this.resourceId = builder.resourceId;
+        this.token = builder.token;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class RefreshAdvisorCheckRequest extends Request {
         return this.resourceId;
     }
 
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
     public static final class Builder extends Request.Builder<RefreshAdvisorCheckRequest, Builder> {
         private Long assumeAliyunId; 
         private String checkId; 
@@ -126,6 +138,7 @@ public class RefreshAdvisorCheckRequest extends Request {
         private String product; 
         private java.util.List<ResourceDimensionList> resourceDimensionList; 
         private String resourceId; 
+        private String token; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class RefreshAdvisorCheckRequest extends Request {
             this.product = request.product;
             this.resourceDimensionList = request.resourceDimensionList;
             this.resourceId = request.resourceId;
+            this.token = request.token;
         } 
 
         /**
@@ -203,6 +217,15 @@ public class RefreshAdvisorCheckRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
             return this;
         }
 
