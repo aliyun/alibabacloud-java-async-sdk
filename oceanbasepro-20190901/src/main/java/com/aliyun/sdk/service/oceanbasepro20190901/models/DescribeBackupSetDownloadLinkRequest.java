@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSetDownloadLinkRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupSetDownloadLinkRequest</p>
@@ -92,7 +98,11 @@ public class DescribeBackupSetDownloadLinkRequest extends Request {
         }
 
         /**
-         * The ID of the download task corresponding to the target backup set.
+         * <p>The ID of the download task corresponding to the target backup set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000002</p>
          */
         public Builder downloadTaskId(String downloadTaskId) {
             this.putBodyParameter("DownloadTaskId", downloadTaskId);
@@ -101,7 +111,11 @@ public class DescribeBackupSetDownloadLinkRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

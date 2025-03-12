@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantEncryptionResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTenantEncryptionResponseBody</p>
@@ -49,7 +55,10 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
         private TenantEncryption tenantEncryption; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
         }
 
         /**
-         * job
+         * <p>job</p>
          */
         public Builder tenantEncryption(TenantEncryption tenantEncryption) {
             this.tenantEncryption = tenantEncryption;
@@ -70,6 +79,12 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTenantEncryptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTenantEncryptionResponseBody</p>
+     */
     public static class TenantEncryption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EncryptionType")
         private String encryptionType;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateProjectConfigRequest</p>
@@ -153,7 +159,10 @@ public class UpdateProjectConfigRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np_fe****</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -188,6 +197,12 @@ public class UpdateProjectConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProjectConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectConfigRequest</p>
+     */
     public static class CommonTransferConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SinkStoreFormat")
         private String sinkStoreFormat;
@@ -249,7 +264,19 @@ public class UpdateProjectConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProjectConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectConfigRequest</p>
+     */
     public static class FullTransferConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IndexDDLConcurrencyLimit")
+        private Integer indexDDLConcurrencyLimit;
+
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrentIndexDDLs")
+        private Integer maxConcurrentIndexDDLs;
+
         @com.aliyun.core.annotation.NameInMap("ReadWorkerNum")
         private Integer readWorkerNum;
 
@@ -263,6 +290,8 @@ public class UpdateProjectConfigRequest extends Request {
         private Integer writeWorkerNum;
 
         private FullTransferConfig(Builder builder) {
+            this.indexDDLConcurrencyLimit = builder.indexDDLConcurrencyLimit;
+            this.maxConcurrentIndexDDLs = builder.maxConcurrentIndexDDLs;
             this.readWorkerNum = builder.readWorkerNum;
             this.throttleIOPS = builder.throttleIOPS;
             this.throttleRps = builder.throttleRps;
@@ -275,6 +304,20 @@ public class UpdateProjectConfigRequest extends Request {
 
         public static FullTransferConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return indexDDLConcurrencyLimit
+         */
+        public Integer getIndexDDLConcurrencyLimit() {
+            return this.indexDDLConcurrencyLimit;
+        }
+
+        /**
+         * @return maxConcurrentIndexDDLs
+         */
+        public Integer getMaxConcurrentIndexDDLs() {
+            return this.maxConcurrentIndexDDLs;
         }
 
         /**
@@ -306,10 +349,28 @@ public class UpdateProjectConfigRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer indexDDLConcurrencyLimit; 
+            private Integer maxConcurrentIndexDDLs; 
             private Integer readWorkerNum; 
             private Integer throttleIOPS; 
             private Integer throttleRps; 
             private Integer writeWorkerNum; 
+
+            /**
+             * IndexDDLConcurrencyLimit.
+             */
+            public Builder indexDDLConcurrencyLimit(Integer indexDDLConcurrencyLimit) {
+                this.indexDDLConcurrencyLimit = indexDDLConcurrencyLimit;
+                return this;
+            }
+
+            /**
+             * MaxConcurrentIndexDDLs.
+             */
+            public Builder maxConcurrentIndexDDLs(Integer maxConcurrentIndexDDLs) {
+                this.maxConcurrentIndexDDLs = maxConcurrentIndexDDLs;
+                return this;
+            }
 
             /**
              * ReadWorkerNum.
@@ -350,15 +411,21 @@ public class UpdateProjectConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProjectConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectConfigRequest</p>
+     */
     public static class IncrTransferConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncrSyncThreadCount")
         private Integer incrSyncThreadCount;
 
         @com.aliyun.core.annotation.NameInMap("RecordTypeWhiteList")
-        private java.util.List < String > recordTypeWhiteList;
+        private java.util.List<String> recordTypeWhiteList;
 
         @com.aliyun.core.annotation.NameInMap("SupportDDLTypes")
-        private java.util.List < String > supportDDLTypes;
+        private java.util.List<String> supportDDLTypes;
 
         @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
         private Integer throttleIOPS;
@@ -392,14 +459,14 @@ public class UpdateProjectConfigRequest extends Request {
         /**
          * @return recordTypeWhiteList
          */
-        public java.util.List < String > getRecordTypeWhiteList() {
+        public java.util.List<String> getRecordTypeWhiteList() {
             return this.recordTypeWhiteList;
         }
 
         /**
          * @return supportDDLTypes
          */
-        public java.util.List < String > getSupportDDLTypes() {
+        public java.util.List<String> getSupportDDLTypes() {
             return this.supportDDLTypes;
         }
 
@@ -419,8 +486,8 @@ public class UpdateProjectConfigRequest extends Request {
 
         public static final class Builder {
             private Integer incrSyncThreadCount; 
-            private java.util.List < String > recordTypeWhiteList; 
-            private java.util.List < String > supportDDLTypes; 
+            private java.util.List<String> recordTypeWhiteList; 
+            private java.util.List<String> supportDDLTypes; 
             private Integer throttleIOPS; 
             private Integer throttleRps; 
 
@@ -435,7 +502,7 @@ public class UpdateProjectConfigRequest extends Request {
             /**
              * RecordTypeWhiteList.
              */
-            public Builder recordTypeWhiteList(java.util.List < String > recordTypeWhiteList) {
+            public Builder recordTypeWhiteList(java.util.List<String> recordTypeWhiteList) {
                 this.recordTypeWhiteList = recordTypeWhiteList;
                 return this;
             }
@@ -443,7 +510,7 @@ public class UpdateProjectConfigRequest extends Request {
             /**
              * SupportDDLTypes.
              */
-            public Builder supportDDLTypes(java.util.List < String > supportDDLTypes) {
+            public Builder supportDDLTypes(java.util.List<String> supportDDLTypes) {
                 this.supportDDLTypes = supportDDLTypes;
                 return this;
             }
@@ -471,15 +538,21 @@ public class UpdateProjectConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProjectConfigRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectConfigRequest</p>
+     */
     public static class ReverseIncrTransferConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncrSyncThreadCount")
         private Integer incrSyncThreadCount;
 
         @com.aliyun.core.annotation.NameInMap("RecordTypeWhiteList")
-        private java.util.List < String > recordTypeWhiteList;
+        private java.util.List<String> recordTypeWhiteList;
 
         @com.aliyun.core.annotation.NameInMap("SupportDDLTypes")
-        private java.util.List < String > supportDDLTypes;
+        private java.util.List<String> supportDDLTypes;
 
         @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
         private Integer throttleIOPS;
@@ -513,14 +586,14 @@ public class UpdateProjectConfigRequest extends Request {
         /**
          * @return recordTypeWhiteList
          */
-        public java.util.List < String > getRecordTypeWhiteList() {
+        public java.util.List<String> getRecordTypeWhiteList() {
             return this.recordTypeWhiteList;
         }
 
         /**
          * @return supportDDLTypes
          */
-        public java.util.List < String > getSupportDDLTypes() {
+        public java.util.List<String> getSupportDDLTypes() {
             return this.supportDDLTypes;
         }
 
@@ -540,8 +613,8 @@ public class UpdateProjectConfigRequest extends Request {
 
         public static final class Builder {
             private Integer incrSyncThreadCount; 
-            private java.util.List < String > recordTypeWhiteList; 
-            private java.util.List < String > supportDDLTypes; 
+            private java.util.List<String> recordTypeWhiteList; 
+            private java.util.List<String> supportDDLTypes; 
             private Integer throttleIOPS; 
             private Integer throttleRps; 
 
@@ -556,7 +629,7 @@ public class UpdateProjectConfigRequest extends Request {
             /**
              * RecordTypeWhiteList.
              */
-            public Builder recordTypeWhiteList(java.util.List < String > recordTypeWhiteList) {
+            public Builder recordTypeWhiteList(java.util.List<String> recordTypeWhiteList) {
                 this.recordTypeWhiteList = recordTypeWhiteList;
                 return this;
             }
@@ -564,7 +637,7 @@ public class UpdateProjectConfigRequest extends Request {
             /**
              * SupportDDLTypes.
              */
-            public Builder supportDDLTypes(java.util.List < String > supportDDLTypes) {
+            public Builder supportDDLTypes(java.util.List<String> supportDDLTypes) {
                 this.supportDDLTypes = supportDDLTypes;
                 return this;
             }

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCharsetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCharsetResponseBody</p>
  */
 public class DescribeCharsetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Charset")
-    private java.util.List < Charset> charset;
+    private java.util.List<Charset> charset;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
     /**
      * @return charset
      */
-    public java.util.List < Charset> getCharset() {
+    public java.util.List<Charset> getCharset() {
         return this.charset;
     }
 
@@ -45,26 +51,25 @@ public class DescribeCharsetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Charset> charset; 
+        private java.util.List<Charset> charset; 
         private String requestId; 
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=DescribeCharset
-         * &TenantMode=Oracle
-         * &Common request parameters
-         * ```
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeCharset
+         * &amp;TenantMode=Oracle
+         * &amp;Common request parameters
+         * </code></pre>
          */
-        public Builder charset(java.util.List < Charset> charset) {
+        public Builder charset(java.util.List<Charset> charset) {
             this.charset = charset;
             return this;
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **DescribeCharset**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeCharset</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,12 +82,18 @@ public class DescribeCharsetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCharsetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCharsetResponseBody</p>
+     */
     public static class Charset extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
         @com.aliyun.core.annotation.NameInMap("Collations")
-        private java.util.List < String > collations;
+        private java.util.List<String> collations;
 
         private Charset(Builder builder) {
             this.charset = builder.charset;
@@ -107,16 +118,19 @@ public class DescribeCharsetResponseBody extends TeaModel {
         /**
          * @return collations
          */
-        public java.util.List < String > getCollations() {
+        public java.util.List<String> getCollations() {
             return this.collations;
         }
 
         public static final class Builder {
             private String charset; 
-            private java.util.List < String > collations; 
+            private java.util.List<String> collations; 
 
             /**
-             * DescribeCharset
+             * <p>DescribeCharset</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -126,7 +140,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
             /**
              * Collations.
              */
-            public Builder collations(java.util.List < String > collations) {
+            public Builder collations(java.util.List<String> collations) {
                 this.collations = collations;
                 return this;
             }

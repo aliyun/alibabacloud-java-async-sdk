@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantResourceRequest} extends {@link RequestModel}
  *
  * <p>ModifyTenantResourceRequest</p>
@@ -142,7 +148,10 @@ public class ModifyTenantResourceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -151,7 +160,11 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The information about the CPU resources of the tenant.
+         * <p>The information about the CPU resources of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Integer cpu) {
             this.putBodyParameter("Cpu", cpu);
@@ -160,7 +173,11 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -169,7 +186,10 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The size of the log disk allocated to the tenant, in GB.
+         * <p>The size of the log disk allocated to the tenant, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder logDisk(Long logDisk) {
             this.putBodyParameter("LogDisk", logDisk);
@@ -178,7 +198,11 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The memory size of the tenant, in GB.
+         * <p>The memory size of the tenant, in GB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
@@ -187,7 +211,10 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).
+         * <p>Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-g-ro,cn-shanghai-h-ro</p>
          */
         public Builder readOnlyZoneList(String readOnlyZoneList) {
             this.putBodyParameter("ReadOnlyZoneList", readOnlyZoneList);
@@ -196,7 +223,11 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

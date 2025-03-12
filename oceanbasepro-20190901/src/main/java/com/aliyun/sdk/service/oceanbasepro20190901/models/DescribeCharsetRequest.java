@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCharsetRequest} extends {@link RequestModel}
  *
  * <p>DescribeCharsetRequest</p>
@@ -114,7 +120,10 @@ public class DescribeCharsetRequest extends Request {
         }
 
         /**
-         * 实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。
+         * <p>实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder series(String series) {
             this.putBodyParameter("Series", series);
@@ -123,7 +132,11 @@ public class DescribeCharsetRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oracle</p>
          */
         public Builder tenantMode(String tenantMode) {
             this.putBodyParameter("TenantMode", tenantMode);

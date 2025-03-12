@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLSamplesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLSamplesResponseBody</p>
  */
 public class DescribeSQLSamplesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +51,22 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The list of sample data of slow query execution details.
+         * <p>The list of sample data of slow query execution details.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Request ID.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLSamplesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLSamplesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectedRows")
         private Double affectedRows;
@@ -733,7 +748,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double waitTime; 
 
             /**
-             * Average updated rows during the execution period.
+             * <p>Average updated rows during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000.0</p>
              */
             public Builder affectedRows(Double affectedRows) {
                 this.affectedRows = affectedRows;
@@ -741,7 +759,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Application event waiting time (in milliseconds).
+             * <p>Application event waiting time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder applicationWaitTime(Double applicationWaitTime) {
                 this.applicationWaitTime = applicationWaitTime;
@@ -749,7 +770,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * BlockCache hit count
+             * <p>BlockCache hit count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99279.0</p>
              */
             public Builder blockCacheHit(Double blockCacheHit) {
                 this.blockCacheHit = blockCacheHit;
@@ -757,7 +781,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * BlockIndexCache hit count
+             * <p>BlockIndexCache hit count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>142514.0</p>
              */
             public Builder blockIndexCacheHit(Double blockIndexCacheHit) {
                 this.blockIndexCacheHit = blockIndexCacheHit;
@@ -765,7 +792,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * BloomFilterCache hit count.
+             * <p>BloomFilterCache hit count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder bloomFilterCacheHit(Double bloomFilterCacheHit) {
                 this.bloomFilterCacheHit = bloomFilterCacheHit;
@@ -773,7 +803,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Client IP.
+             * <p>Client IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1db****38uemejio</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -781,7 +814,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Client port.
+             * <p>Client port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4****</p>
              */
             public Builder clientPort(String clientPort) {
                 this.clientPort = clientPort;
@@ -789,7 +825,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Concurrency event waiting time (in milliseconds).
+             * <p>Concurrency event waiting time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder concurrencyWaitTime(Double concurrencyWaitTime) {
                 this.concurrencyWaitTime = concurrencyWaitTime;
@@ -797,7 +836,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Consistency level.
+             * <p>Consistency level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder consistencyLevel(String consistencyLevel) {
                 this.consistencyLevel = consistencyLevel;
@@ -805,7 +847,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * CPU time (in milliseconds).
+             * <p>CPU time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3377.57</p>
              */
             public Builder cpuTime(Double cpuTime) {
                 this.cpuTime = cpuTime;
@@ -813,7 +858,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Database name.
+             * <p>Database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -821,7 +869,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Syntax parsing time (in milliseconds).
+             * <p>Syntax parsing time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder decodeTime(Double decodeTime) {
                 this.decodeTime = decodeTime;
@@ -829,7 +880,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Disk read count.
+             * <p>Disk read count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96972.0</p>
              */
             public Builder diskReads(Double diskReads) {
                 this.diskReads = diskReads;
@@ -837,7 +891,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Response time (in milliseconds).
+             * <p>Response time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2182.66</p>
              */
             public Builder elapsedTime(Double elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -845,7 +902,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Plan execution time (in milliseconds).
+             * <p>Plan execution time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8262.01</p>
              */
             public Builder executeTime(Double executeTime) {
                 this.executeTime = executeTime;
@@ -853,7 +913,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to initiate RPC.
+             * <p>Whether to initiate RPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder executorRpc(Boolean executorRpc) {
                 this.executorRpc = executorRpc;
@@ -861,7 +924,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Degree of parallelism.
+             * <p>Degree of parallelism.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expectedWorkerCount(Double expectedWorkerCount) {
                 this.expectedWorkerCount = expectedWorkerCount;
@@ -869,7 +935,13 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * FullSqlText.
+             * <p>The full SQL text. </p>
+             * <blockquote>
+             * <p>This parameter is unavailable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test where c1 &gt; 1 and c2 &gt; 3;</p>
              */
             public Builder fullSqlText(String fullSqlText) {
                 this.fullSqlText = fullSqlText;
@@ -877,7 +949,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Plan generation time (in milliseconds).
+             * <p>Plan generation time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.19</p>
              */
             public Builder getPlanTime(Double getPlanTime) {
                 this.getPlanTime = getPlanTime;
@@ -885,7 +960,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to hit the execution plan.
+             * <p>Whether to hit the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hitPlan(Boolean hitPlan) {
                 this.hitPlan = hitPlan;
@@ -893,7 +971,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether an internal SQL.
+             * <p>Whether an internal SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inner(Boolean inner) {
                 this.inner = inner;
@@ -901,7 +982,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Memstore read row count.
+             * <p>Memstore read row count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder memstoreReadRows(Double memstoreReadRows) {
                 this.memstoreReadRows = memstoreReadRows;
@@ -909,7 +993,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Network transmission time (in milliseconds).
+             * <p>Network transmission time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder netTime(Double netTime) {
                 this.netTime = netTime;
@@ -917,7 +1004,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Network enqueue time (in milliseconds).
+             * <p>Network enqueue time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder netWaitTime(Double netWaitTime) {
                 this.netWaitTime = netWaitTime;
@@ -925,7 +1015,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Database ID.
+             * <p>Database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11006111****4828</p>
              */
             public Builder obDbId(Double obDbId) {
                 this.obDbId = obDbId;
@@ -933,7 +1026,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Server  ID.
+             * <p>Server  ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder obServerId(Double obServerId) {
                 this.obServerId = obServerId;
@@ -941,7 +1037,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * User ID.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100010</p>
              */
             public Builder obUserId(Double obUserId) {
                 this.obUserId = obUserId;
@@ -949,7 +1048,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * ParamsValue.
+             * <p>The parameter value of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1****</p>
              */
             public Builder paramsValue(String paramsValue) {
                 this.paramsValue = paramsValue;
@@ -957,7 +1059,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Average number of partition accessed during the execution period.
+             * <p>Average number of partition accessed during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder partitionCount(Double partitionCount) {
                 this.partitionCount = partitionCount;
@@ -965,7 +1070,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution plan ID.
+             * <p>The execution plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>590****</p>
              */
             public Builder planId(Double planId) {
                 this.planId = planId;
@@ -973,7 +1081,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Plan type.
+             * <p>Plan type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOCAL</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -981,7 +1092,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Queueing time (in milliseconds).
+             * <p>Queueing time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder queueTime(Double queueTime) {
                 this.queueTime = queueTime;
@@ -989,7 +1103,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Request ID.
+             * <p>Request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -997,7 +1114,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * SQL request time.
+             * <p>SQL request time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-12T04:46:38Z</p>
              */
             public Builder requestTime(String requestTime) {
                 this.requestTime = requestTime;
@@ -1005,7 +1125,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Result code.
+             * <p>Result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode(Double retCode) {
                 this.retCode = retCode;
@@ -1013,7 +1136,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Retry count.
+             * <p>Retry count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retryCount(Double retryCount) {
                 this.retryCount = retryCount;
@@ -1021,7 +1147,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Average returned rows during the execution period.
+             * <p>Average returned rows during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder returnRows(Double returnRows) {
                 this.returnRows = returnRows;
@@ -1029,7 +1158,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * RowCache hit count.
+             * <p>RowCache hit count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>498.0</p>
              */
             public Builder rowCacheHit(Double rowCacheHit) {
                 this.rowCacheHit = rowCacheHit;
@@ -1037,7 +1169,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Number of RPC sent.
+             * <p>Number of RPC sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder rpcCount(Double rpcCount) {
                 this.rpcCount = rpcCount;
@@ -1045,7 +1180,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Schedule event waiting time (in milliseconds).
+             * <p>Schedule event waiting time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder scheduleTime(Double scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -1053,7 +1191,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * The server where the SQL is executed.
+             * <p>The server where the SQL is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1db1****8uemejio</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -1061,7 +1202,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * SqlText.
+             * <p>The SQL text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select ** from t</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -1069,7 +1213,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * SQL type.
+             * <p>SQL type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -1077,7 +1224,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Ssstore read row count.
+             * <p>Ssstore read row count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>986190</p>
              */
             public Builder ssstoreReadRows(Double ssstoreReadRows) {
                 this.ssstoreReadRows = ssstoreReadRows;
@@ -1085,7 +1235,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Parameterized SQL text.
+             * <p>Parameterized SQL text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select a from b</p>
              */
             public Builder statement(String statement) {
                 this.statement = statement;
@@ -1093,7 +1246,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to perform full table scan.
+             * <p>Whether to perform full table scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder tableScan(Boolean tableScan) {
                 this.tableScan = tableScan;
@@ -1101,7 +1257,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Trace ID.
+             * <p>Trace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YB42C****-0005E303D1****-0-0</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -1109,7 +1268,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Transaction hash.
+             * <p>Transaction hash.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1219<strong><strong>927</strong></strong>73791</p>
              */
             public Builder transHash(String transHash) {
                 this.transHash = transHash;
@@ -1117,7 +1279,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Actual number of SQL execution threads.
+             * <p>Actual number of SQL execution threads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usedWorkerCount(Double usedWorkerCount) {
                 this.usedWorkerCount = usedWorkerCount;
@@ -1125,7 +1290,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * UserIO event waiting time (in milliseconds).
+             * <p>UserIO event waiting time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder userIoWaitTime(Double userIoWaitTime) {
                 this.userIoWaitTime = userIoWaitTime;
@@ -1133,7 +1301,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1141,7 +1312,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Wait count.
+             * <p>Wait count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder waitCount(Double waitCount) {
                 this.waitCount = waitCount;
@@ -1149,7 +1323,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Longest wait event during the execution period.
+             * <p>Longest wait event during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder waitEvent(String waitEvent) {
                 this.waitEvent = waitEvent;
@@ -1157,7 +1334,10 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Wait time (in milliseconds).
+             * <p>Wait time (in milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder waitTime(Double waitTime) {
                 this.waitTime = waitTime;

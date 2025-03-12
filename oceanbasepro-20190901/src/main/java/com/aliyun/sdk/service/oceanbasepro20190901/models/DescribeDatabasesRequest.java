@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabasesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatabasesRequest</p>
@@ -160,9 +166,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The name of the database.    
-         * <p>
-         * You cannot use reserved keywords, such as test and mysql.
+         * <p>The name of the database.<br>You cannot use reserved keywords, such as test and mysql.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms_pre</p>
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -171,7 +178,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob****n0abo9uo</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -180,10 +190,14 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The number of the page returned.  
-         * <p>
-         * - Start value: 1   
-         * - Default value: 1
+         * <p>The number of the page returned.  </p>
+         * <ul>
+         * <li>Start value: 1   </li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -192,10 +206,14 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The number of rows returned on each page.  
-         * <p>
-         * - Maximum value: 100.  
-         * - Default value: 10
+         * <p>The number of rows returned on each page.  </p>
+         * <ul>
+         * <li>Maximum value: 100.  </li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -204,7 +222,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay</p>
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -213,7 +234,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -222,10 +246,14 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information about tables in the database.
-         * <p>
-         * Default value: false. 
-         * > The operation may time out if the database contains a large number of tables.
+         * <p>Specifies whether to return the information about tables in the database.
+         * Default value: false. </p>
+         * <blockquote>
+         * <p>The operation may time out if the database contains a large number of tables.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withTables(Boolean withTables) {
             this.putBodyParameter("WithTables", withTables);

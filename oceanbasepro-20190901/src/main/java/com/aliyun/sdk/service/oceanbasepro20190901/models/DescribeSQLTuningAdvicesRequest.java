@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLTuningAdvicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSQLTuningAdvicesRequest</p>
@@ -157,7 +163,10 @@ public class DescribeSQLTuningAdvicesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -175,7 +184,10 @@ public class DescribeSQLTuningAdvicesRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -184,7 +196,10 @@ public class DescribeSQLTuningAdvicesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T05:38:38Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -193,7 +208,10 @@ public class DescribeSQLTuningAdvicesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obsdf43****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -202,7 +220,11 @@ public class DescribeSQLTuningAdvicesRequest extends Request {
         }
 
         /**
-         * SqlId
+         * <p>SqlId</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -211,7 +233,10 @@ public class DescribeSQLTuningAdvicesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -220,7 +245,10 @@ public class DescribeSQLTuningAdvicesRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tsdc2s2****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

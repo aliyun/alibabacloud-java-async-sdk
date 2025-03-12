@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectFullVerifyResultRequest} extends {@link RequestModel}
  *
  * <p>ListProjectFullVerifyResultRequest</p>
@@ -17,7 +23,7 @@ public class ListProjectFullVerifyResultRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DestSchemas")
-    private java.util.List < String > destSchemas;
+    private java.util.List<String> destSchemas;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -35,7 +41,7 @@ public class ListProjectFullVerifyResultRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceSchemas")
-    private java.util.List < String > sourceSchemas;
+    private java.util.List<String> sourceSchemas;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -75,7 +81,7 @@ public class ListProjectFullVerifyResultRequest extends Request {
     /**
      * @return destSchemas
      */
-    public java.util.List < String > getDestSchemas() {
+    public java.util.List<String> getDestSchemas() {
         return this.destSchemas;
     }
 
@@ -103,7 +109,7 @@ public class ListProjectFullVerifyResultRequest extends Request {
     /**
      * @return sourceSchemas
      */
-    public java.util.List < String > getSourceSchemas() {
+    public java.util.List<String> getSourceSchemas() {
         return this.sourceSchemas;
     }
 
@@ -116,11 +122,11 @@ public class ListProjectFullVerifyResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListProjectFullVerifyResultRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > destSchemas; 
+        private java.util.List<String> destSchemas; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
-        private java.util.List < String > sourceSchemas; 
+        private java.util.List<String> sourceSchemas; 
         private String status; 
 
         private Builder() {
@@ -150,7 +156,7 @@ public class ListProjectFullVerifyResultRequest extends Request {
         /**
          * DestSchemas.
          */
-        public Builder destSchemas(java.util.List < String > destSchemas) {
+        public Builder destSchemas(java.util.List<String> destSchemas) {
             String destSchemasShrink = shrink(destSchemas, "DestSchemas", "json");
             this.putBodyParameter("DestSchemas", destSchemasShrink);
             this.destSchemas = destSchemas;
@@ -176,7 +182,10 @@ public class ListProjectFullVerifyResultRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np_4w5abs****</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -187,7 +196,7 @@ public class ListProjectFullVerifyResultRequest extends Request {
         /**
          * SourceSchemas.
          */
-        public Builder sourceSchemas(java.util.List < String > sourceSchemas) {
+        public Builder sourceSchemas(java.util.List<String> sourceSchemas) {
             String sourceSchemasShrink = shrink(sourceSchemas, "SourceSchemas", "json");
             this.putBodyParameter("SourceSchemas", sourceSchemasShrink);
             this.sourceSchemas = sourceSchemas;

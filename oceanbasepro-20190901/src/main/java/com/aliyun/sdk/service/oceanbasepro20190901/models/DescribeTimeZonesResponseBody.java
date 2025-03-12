@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTimeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTimeZonesResponseBody</p>
@@ -49,7 +55,10 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         private TimeZones timeZones; 
 
         /**
-         * DescribeTimeZones
+         * <p>DescribeTimeZones</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the time zone.
+         * <p>The description of the time zone.</p>
          */
         public Builder timeZones(TimeZones timeZones) {
             this.timeZones = timeZones;
@@ -70,6 +79,12 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTimeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTimeZonesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -109,7 +124,10 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * Example 1
+             * <p>Example 1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(GMT+8:00) Asia/Shanghai</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -117,9 +135,10 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform.   
-             * <p>
-             * Set the value to **DescribeTimeZones**.
+             * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeTimeZones</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -133,12 +152,18 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTimeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTimeZonesResponseBody</p>
+     */
     public static class TimeZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Default")
         private String _default;
 
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         private TimeZones(Builder builder) {
             this._default = builder._default;
@@ -163,13 +188,13 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
         public static final class Builder {
             private String _default; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
 
             /**
              * Default.
@@ -180,9 +205,9 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of time zones.
+             * <p>The list of time zones.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

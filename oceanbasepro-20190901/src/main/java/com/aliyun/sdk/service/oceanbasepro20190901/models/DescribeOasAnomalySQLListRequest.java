@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasAnomalySQLListRequest} extends {@link RequestModel}
  *
  * <p>DescribeOasAnomalySQLListRequest</p>
@@ -309,7 +315,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -318,10 +327,14 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * - zh: Chinese
-         * - en: English
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -330,7 +343,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The current page.
+         * <p>The current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putBodyParameter("Current", current);
@@ -339,7 +355,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_****</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -348,7 +367,13 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * DynamicSql.
+         * <p>Specifies whether the specified SQL statements are dynamic SQL statements.</p>
+         * <blockquote>
+         * <p>This parameter specifies whether the values of the <code>SqlId</code> parameter are the IDs of dynamic SQL statements.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dynamicSql(Boolean dynamicSql) {
             this.putBodyParameter("DynamicSql", dynamicSql);
@@ -357,9 +382,11 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The end time of the monitoring data.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of the monitoring data.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T05:38:38Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -368,7 +395,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * All parameters are referenced by the symbol @. For a list of available parameters, refer to the returned parameters in [Query performance indicators of an SQL statement](https://en.oceanbase.com/docs/community-ocp-en-10000000000840290).
+         * <p>All parameters are referenced by the symbol @. For a list of available parameters, refer to the returned parameters in <a href="https://en.oceanbase.com/docs/community-ocp-en-10000000000840290">Query performance indicators of an SQL statement</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@avgCpuTime &gt; 20 and @executions &gt; 100</p>
          */
         public Builder filterCondition(String filterCondition) {
             this.putBodyParameter("FilterCondition", filterCondition);
@@ -377,7 +407,11 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -386,7 +420,13 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * MergeDynamicSql.
+         * <p>Specifies whether to merge dynamic SQL statements in the return result. </p>
+         * <blockquote>
+         * <p>This parameter specifies whether to aggregate the results of IN queries.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mergeDynamicSql(Boolean mergeDynamicSql) {
             this.putBodyParameter("MergeDynamicSql", mergeDynamicSql);
@@ -395,7 +435,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The node IP.
+         * <p>The node IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19y05uq6x*********</p>
          */
         public Builder nodeIp(String nodeIp) {
             this.putBodyParameter("NodeIp", nodeIp);
@@ -404,10 +447,14 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * Page size.
-         * <p>
-         * - Start value: 1
-         * - Default value: 1
+         * <p>Page size.</p>
+         * <ul>
+         * <li>Start value: 1</li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -416,7 +463,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putBodyParameter("SearchKeyWord", searchKeyWord);
@@ -425,7 +475,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search parameter.
+         * <p>The search parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder searchParam(String searchParam) {
             this.putBodyParameter("SearchParam", searchParam);
@@ -434,9 +487,11 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search rule.   
-         * <p>
-         * Valid values: "=", ">", ">=", "<", and "<="
+         * <p>The search rule.<br>Valid values: &quot;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;, &quot;&lt;&quot;, and &quot;&lt;=&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         public Builder searchRule(String searchRule) {
             this.putBodyParameter("SearchRule", searchRule);
@@ -445,7 +500,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search value.
+         * <p>The search value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder searchValue(String searchValue) {
             this.putBodyParameter("SearchValue", searchValue);
@@ -454,7 +512,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * SQL ID.
+         * <p>SQL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -463,7 +524,10 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * Max length of the returned SQL text.
+         * <p>Max length of the returned SQL text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65535</p>
          */
         public Builder sqlTextLength(Long sqlTextLength) {
             this.putBodyParameter("SqlTextLength", sqlTextLength);
@@ -472,9 +536,11 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The start time of the monitoring data.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of the monitoring data.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -483,7 +549,11 @@ public class DescribeOasAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

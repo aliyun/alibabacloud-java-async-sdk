@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTopSQLListRequest} extends {@link RequestModel}
  *
  * <p>DescribeTopSQLListRequest</p>
@@ -26,7 +32,7 @@ public class DescribeTopSQLListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterCondition")
-    private java.util.Map < String, ? > filterCondition;
+    private java.util.Map<String, ?> filterCondition;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NodeIp")
@@ -135,7 +141,7 @@ public class DescribeTopSQLListRequest extends Request {
     /**
      * @return filterCondition
      */
-    public java.util.Map < String, ? > getFilterCondition() {
+    public java.util.Map<String, ?> getFilterCondition() {
         return this.filterCondition;
     }
 
@@ -227,7 +233,7 @@ public class DescribeTopSQLListRequest extends Request {
         private String regionId; 
         private String dbName; 
         private String endTime; 
-        private java.util.Map < String, ? > filterCondition; 
+        private java.util.Map<String, ?> filterCondition; 
         private String nodeIp; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -266,7 +272,10 @@ public class DescribeTopSQLListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -275,7 +284,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The number of block index cache hits.
+         * <p>The number of block index cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -284,7 +296,11 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The SQL type.
+         * <p>The SQL type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-13T15:40:43Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -293,13 +309,15 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The average number of logical reads of the SQL statement during the specified period of time.   
-         * <p>
-         * The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   
+         * <p>The average number of logical reads of the SQL statement during the specified period of time.<br>The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   </p>
+         * <blockquote>
+         * <p><br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.</p>
+         * </blockquote>
          * 
-         * > <br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.
+         * <strong>example:</strong>
+         * <p>[dbName:sys]</p>
          */
-        public Builder filterCondition(java.util.Map < String, ? > filterCondition) {
+        public Builder filterCondition(java.util.Map<String, ?> filterCondition) {
             String filterConditionShrink = shrink(filterCondition, "FilterCondition", "json");
             this.putBodyParameter("FilterCondition", filterConditionShrink);
             this.filterCondition = filterCondition;
@@ -307,7 +325,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The number of failures.
+         * <p>The number of failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19y05uq6xpacyqnlrc</p>
          */
         public Builder nodeIp(String nodeIp) {
             this.putBodyParameter("NodeIp", nodeIp);
@@ -316,7 +337,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The queuing time, in ms.
+         * <p>The queuing time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -325,7 +349,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The number of row cache hits.
+         * <p>The number of row cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -334,7 +361,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The I/O wait time, in ms.
+         * <p>The I/O wait time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -343,7 +373,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The number of retries.
+         * <p>The number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putBodyParameter("SearchKeyWord", searchKeyWord);
@@ -352,7 +385,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * SQLID.
+         * <p>SQLID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder searchParameter(String searchParameter) {
             this.putBodyParameter("SearchParameter", searchParameter);
@@ -361,7 +397,11 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         public Builder searchRule(String searchRule) {
             this.putBodyParameter("SearchRule", searchRule);
@@ -370,7 +410,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The number of Bloom filter cache hits.
+         * <p>The number of Bloom filter cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder searchValue(String searchValue) {
             this.putBodyParameter("SearchValue", searchValue);
@@ -379,7 +422,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The number of rows read from the disk.
+         * <p>The number of rows read from the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder sortColumn(String sortColumn) {
             this.putBodyParameter("SortColumn", sortColumn);
@@ -388,7 +434,10 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The list of top SQL statements.
+         * <p>The list of top SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -397,7 +446,11 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The maximum response time, in ms.
+         * <p>The maximum response time, in ms.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:40:43Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -406,7 +459,11 @@ public class DescribeTopSQLListRequest extends Request {
         }
 
         /**
-         * The average CPU time, in ms.
+         * <p>The average CPU time, in ms.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

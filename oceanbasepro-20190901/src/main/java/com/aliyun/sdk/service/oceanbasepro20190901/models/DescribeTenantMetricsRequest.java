@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantMetricsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTenantMetricsRequest</p>
@@ -194,7 +200,10 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:45:43Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -203,7 +212,11 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 2021-06-13T15:40:43Z
+         * <p>2021-06-13T15:40:43Z</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -212,7 +225,11 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * {"name":"DescribeTenantMetrics","product":"OceanBasePro","version":"2019-09-01","path":"/","deprecated":0,"method":"POST|GET","protocol":"HTTP|HTTPS","hidden":0,"timeout":10000,"parameter_type":"Single","params":"[{\"name\":\"Action\",\"position\":\"Query\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"DescribeTenantMetrics\"},{\"name\":\"InstanceId\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"ob317v4uif****\"},{\"name\":\"PageSize\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"10\"},{\"name\":\"PageNumber\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"1\"},{\"name\":\"TenantName\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":true,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"pay_online\"},{\"name\":\"StartTime\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"2021-06-13T15:40:43Z\"},{\"name\":\"EndTime\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"2021-06-13T15:45:43Z\"},{\"name\":\"Metrics\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"tps\"},{\"name\":\"TenantId\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":true,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"tfafd34fs****\"},{\"name\":\"TenantIdList\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"[tdak3nac****,tdakc42df****]\"}]","response_headers":"[]","response":"{\"type\":\"Object\",\"children\":[{\"name\":\"TotalCount\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"9\"},{\"name\":\"RequestId\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C\"},{\"name\":\"TenantMetrics\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"\\\"Metrics\\\":[ {\\\"request_queue_rt\\\":0.0,\\\"TimeStamp\\\":\\\"2022-02-23T01:58:00Z\\\"}]\"}],\"title\":\"\",\"description\":\"\"}","errors":"{}"}
+         * <p>{&quot;name&quot;:&quot;DescribeTenantMetrics&quot;,&quot;product&quot;:&quot;OceanBasePro&quot;,&quot;version&quot;:&quot;2019-09-01&quot;,&quot;path&quot;:&quot;/&quot;,&quot;deprecated&quot;:0,&quot;method&quot;:&quot;POST|GET&quot;,&quot;protocol&quot;:&quot;HTTP|HTTPS&quot;,&quot;hidden&quot;:0,&quot;timeout&quot;:10000,&quot;parameter_type&quot;:&quot;Single&quot;,&quot;params&quot;:&quot;[{&quot;name&quot;:&quot;Action&quot;,&quot;position&quot;:&quot;Query&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;DescribeTenantMetrics&quot;},{&quot;name&quot;:&quot;InstanceId&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;ob317v4uif****&quot;},{&quot;name&quot;:&quot;PageSize&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;Integer&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;10&quot;},{&quot;name&quot;:&quot;PageNumber&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;Integer&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;1&quot;},{&quot;name&quot;:&quot;TenantName&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:true,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;pay_online&quot;},{&quot;name&quot;:&quot;StartTime&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;2021-06-13T15:40:43Z&quot;},{&quot;name&quot;:&quot;EndTime&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;2021-06-13T15:45:43Z&quot;},{&quot;name&quot;:&quot;Metrics&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;tps&quot;},{&quot;name&quot;:&quot;TenantId&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:true,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;tfafd34fs****&quot;},{&quot;name&quot;:&quot;TenantIdList&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;[tdak3nac****,tdakc42df****]&quot;}]&quot;,&quot;response_headers&quot;:&quot;[]&quot;,&quot;response&quot;:&quot;{&quot;type&quot;:&quot;Object&quot;,&quot;children&quot;:[{&quot;name&quot;:&quot;TotalCount&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;Integer&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;9&quot;},{&quot;name&quot;:&quot;RequestId&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C&quot;},{&quot;name&quot;:&quot;TenantMetrics&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;\&quot;Metrics\&quot;:[ {\&quot;request_queue_rt\&quot;:0.0,\&quot;TimeStamp\&quot;:\&quot;2022-02-23T01:58:00Z\&quot;}]&quot;}],&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;}&quot;,&quot;errors&quot;:&quot;{}&quot;}</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tps</p>
          */
         public Builder metrics(String metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -221,7 +238,10 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -230,7 +250,10 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * tfafd34fs****
+         * <p>tfafd34fs****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -239,7 +262,11 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * Example 1
+         * <p>Example 1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:40:43Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -266,7 +293,10 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * 2021-06-13T15:45:43Z
+         * <p>2021-06-13T15:45:43Z</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_online</p>
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);

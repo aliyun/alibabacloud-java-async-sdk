@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSpecResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceSpecResponseBody</p>
@@ -49,7 +55,10 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return data of the request.
+         * <p>The return data of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +66,10 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +82,12 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceSpecResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DryRunResult")
         private Boolean dryRunResult;
@@ -109,10 +127,14 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * The result of the dry-run request.
-             * <p>
-             * - If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
-             * - If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
+             * <p>The result of the dry-run request.</p>
+             * <ul>
+             * <li>If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</li>
+             * <li>If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRunResult(Boolean dryRunResult) {
                 this.dryRunResult = dryRunResult;
@@ -120,7 +142,10 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order that you have placed.
+             * <p>The ID of the order that you have placed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213290*********</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

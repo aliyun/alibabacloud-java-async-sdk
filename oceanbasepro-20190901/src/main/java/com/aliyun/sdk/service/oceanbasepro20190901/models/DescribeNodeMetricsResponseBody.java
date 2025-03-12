@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodeMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNodeMetricsResponseBody</p>
@@ -69,7 +75,10 @@ public class DescribeNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * You can call this operation to query the detailed metrics information of an OceanBase Database node.
+         * <p>You can call this operation to query the detailed metrics information of an OceanBase Database node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,20 +86,21 @@ public class DescribeNodeMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=DescribeNodeMetrics
-         * &InstanceId=ob317v4uif****
-         * &PageSize=10
-         * &PageNumber=1
-         * &TenantId=ob2mr3oae0****
-         * &StartTime=2021-06-13 15:40:43
-         * &EndTime=2021-09-13 15:40:43
-         * &Metrics=tps
-         * &NodeName=i-bp16niirq4zdmgvm****
-         * &NodeIdList=["i-bp19y05uq6xpacyqnlrc","i-bp1blcr3htr3g3u2vqvu","i-bp1392ikhayhr3hi4fli"]
-         * &Common request parameters
-         * ```
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeNodeMetrics
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;PageSize=10
+         * &amp;PageNumber=1
+         * &amp;TenantId=ob2mr3oae0****
+         * &amp;StartTime=2021-06-13 15:40:43
+         * &amp;EndTime=2021-09-13 15:40:43
+         * &amp;Metrics=tps
+         * &amp;NodeName=i-bp16niirq4zdmgvm****
+         * &amp;NodeIdList=[&quot;i-bp19y05uq6xpacyqnlrc&quot;,&quot;i-bp1blcr3htr3g3u2vqvu&quot;,&quot;i-bp1392ikhayhr3hi4fli&quot;]
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

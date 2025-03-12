@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodeMetricsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNodeMetricsRequest</p>
@@ -192,7 +198,11 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.description
+         * <p>$.parameters[7].schema.description</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-13T15:40:43Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -201,7 +211,11 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The list of nodes.
+         * <p>The list of nodes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -210,7 +224,11 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.enumValueTitles
+         * <p>$.parameters[7].schema.enumValueTitles</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tps</p>
          */
         public Builder metrics(String metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -219,7 +237,10 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * $.parameters[10].schema.description
+         * <p>$.parameters[10].schema.description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[i-bp16niirq4zdmgvm****,i-bp16n56hq4z4fgvm****]</p>
          */
         public Builder nodeIdList(String nodeIdList) {
             this.putBodyParameter("NodeIdList", nodeIdList);
@@ -228,7 +249,10 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * $.parameters[8].schema.example
+         * <p>$.parameters[8].schema.example</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp16niirq4zdmgvm****</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -237,7 +261,10 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * $.parameters[6].schema.description
+         * <p>$.parameters[6].schema.description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -246,7 +273,10 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -255,7 +285,11 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * $.parameters[9].schema.example
+         * <p>$.parameters[9].schema.example</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:40:43Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -264,7 +298,10 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * $.parameters[6].schema.enumValueTitles
+         * <p>$.parameters[6].schema.enumValueTitles</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tfafd34fs****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

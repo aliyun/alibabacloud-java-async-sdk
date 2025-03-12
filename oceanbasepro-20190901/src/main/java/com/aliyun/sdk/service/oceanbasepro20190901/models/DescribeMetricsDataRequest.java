@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricsDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeMetricsDataRequest</p>
@@ -199,7 +205,10 @@ public class DescribeMetricsDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -208,7 +217,10 @@ public class DescribeMetricsDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:40:43Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -217,7 +229,10 @@ public class DescribeMetricsDataRequest extends Request {
         }
 
         /**
-         * GroupByLabels.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app,clusterId</p>
          */
         public Builder groupByLabels(String groupByLabels) {
             this.putQueryParameter("GroupByLabels", groupByLabels);
@@ -226,7 +241,10 @@ public class DescribeMetricsDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -235,7 +253,10 @@ public class DescribeMetricsDataRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app:OB,clusterId:ob***</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -253,7 +274,10 @@ public class DescribeMetricsDataRequest extends Request {
         }
 
         /**
-         * Metrics.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tps</p>
          */
         public Builder metrics(String metrics) {
             this.putQueryParameter("Metrics", metrics);
@@ -289,7 +313,10 @@ public class DescribeMetricsDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:40:43Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

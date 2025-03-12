@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The log disk space of each replica node in the cluster. Unit: GB.
+         * <p>The information of the OceanBase cluster.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -57,7 +63,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total log disk space of the cluster, in GB.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class DataDiskAutoScaleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
@@ -193,7 +208,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long upperbound; 
 
             /**
-             * AutoScale.
+             * <p>Specifies whether to enable the automatic scaling of the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoScale(Boolean autoScale) {
                 this.autoScale = autoScale;
@@ -201,7 +219,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDiskSize.
+             * <p>The maximum size of the disk, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80000</p>
              */
             public Builder maxDiskSize(Long maxDiskSize) {
                 this.maxDiskSize = maxDiskSize;
@@ -209,7 +230,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleStepInMerge.
+             * <p>The size of scaling step during a major compaction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder scaleStepInMerge(Long scaleStepInMerge) {
                 this.scaleStepInMerge = scaleStepInMerge;
@@ -217,7 +241,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleStepInNormal.
+             * <p>The size of scaling step during daily use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder scaleStepInNormal(Long scaleStepInNormal) {
                 this.scaleStepInNormal = scaleStepInNormal;
@@ -225,7 +252,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpperMergeThreshold.
+             * <p>The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for major compactions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder upperMergeThreshold(Long upperMergeThreshold) {
                 this.upperMergeThreshold = upperMergeThreshold;
@@ -233,7 +263,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpperScaleStep.
+             * <p>The step size of the scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder upperScaleStep(String upperScaleStep) {
                 this.upperScaleStep = upperScaleStep;
@@ -241,7 +274,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpperScaleStrategy.
+             * <p>The scale-out strategy. Valid values: RAW and PERCENTAGE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RAW</p>
              */
             public Builder upperScaleStrategy(String upperScaleStrategy) {
                 this.upperScaleStrategy = upperScaleStrategy;
@@ -249,7 +285,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpperThreshold.
+             * <p>The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for daily use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder upperThreshold(Long upperThreshold) {
                 this.upperThreshold = upperThreshold;
@@ -257,7 +296,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Upperbound.
+             * <p>The maximum space, in GB, to which the data disk can be scaled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder upperbound(Long upperbound) {
                 this.upperbound = upperbound;
@@ -271,6 +313,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class CapacityUnit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
@@ -322,7 +370,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String usedCapacityUnit; 
 
             /**
-             * MaxCapacityUnit.
+             * <p>The maximum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxCapacityUnit(Integer maxCapacityUnit) {
                 this.maxCapacityUnit = maxCapacityUnit;
@@ -330,7 +381,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MinCapacityUnit.
+             * <p>The minimum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minCapacityUnit(Integer minCapacityUnit) {
                 this.minCapacityUnit = minCapacityUnit;
@@ -338,7 +392,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacityUnit.
+             * <p>The number of used capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usedCapacityUnit(String usedCapacityUnit) {
                 this.usedCapacityUnit = usedCapacityUnit;
@@ -352,6 +409,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Cpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginalTotalCpu")
         private Long originalTotalCpu;
@@ -415,7 +478,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedCpu; 
 
             /**
-             * OriginalTotalCpu.
+             * <p>The number of original CPU cores in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder originalTotalCpu(Long originalTotalCpu) {
                 this.originalTotalCpu = originalTotalCpu;
@@ -423,7 +489,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCpu.
+             * <p>The total number of CPU cores of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder totalCpu(Long totalCpu) {
                 this.totalCpu = totalCpu;
@@ -431,7 +500,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitCpu.
+             * <p>The number of CPU cores of each replica node in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitCpu(Long unitCpu) {
                 this.unitCpu = unitCpu;
@@ -439,7 +511,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCpu.
+             * <p>The number of CPU cores used by the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedCpu(Long usedCpu) {
                 this.usedCpu = usedCpu;
@@ -453,6 +528,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class DiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataUsedSize")
         private Double dataUsedSize;
@@ -461,7 +542,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Double maxDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
-        private java.util.List < String > maxDiskUsedObServer;
+        private java.util.List<String> maxDiskUsedObServer;
 
         @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
         private Double maxDiskUsedPercent;
@@ -514,7 +595,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return maxDiskUsedObServer
          */
-        public java.util.List < String > getMaxDiskUsedObServer() {
+        public java.util.List<String> getMaxDiskUsedObServer() {
             return this.maxDiskUsedObServer;
         }
 
@@ -556,7 +637,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Double dataUsedSize; 
             private Double maxDiskSize; 
-            private java.util.List < String > maxDiskUsedObServer; 
+            private java.util.List<String> maxDiskUsedObServer; 
             private Double maxDiskUsedPercent; 
             private Long originalTotalDiskSize; 
             private Long totalDiskSize; 
@@ -564,7 +645,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedDiskSize; 
 
             /**
-             * DataUsedSize.
+             * <p>The size of the data disk, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder dataUsedSize(Double dataUsedSize) {
                 this.dataUsedSize = dataUsedSize;
@@ -572,7 +656,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDiskSize.
+             * <p>The maximum disk size that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80000</p>
              */
             public Builder maxDiskSize(Double maxDiskSize) {
                 this.maxDiskSize = maxDiskSize;
@@ -580,15 +667,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDiskUsedObServer.
+             * <p>The maximum disk usage of the OBServer node.</p>
              */
-            public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
+            public Builder maxDiskUsedObServer(java.util.List<String> maxDiskUsedObServer) {
                 this.maxDiskUsedObServer = maxDiskUsedObServer;
                 return this;
             }
 
             /**
-             * MaxDiskUsedPercent.
+             * <p>The maximum disk usage, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.14</p>
              */
             public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
                 this.maxDiskUsedPercent = maxDiskUsedPercent;
@@ -596,7 +686,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalTotalDiskSize.
+             * <p>The original size of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder originalTotalDiskSize(Long originalTotalDiskSize) {
                 this.originalTotalDiskSize = originalTotalDiskSize;
@@ -604,7 +697,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDiskSize.
+             * <p>The total storage space of the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -612,7 +708,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitDiskSize.
+             * <p>The storage space of each replica node in the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -620,7 +719,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UsedDiskSize.
+             * <p>The size of used storage space of the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder usedDiskSize(Long usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -634,12 +736,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class LogDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogAssignedSize")
         private String logAssignedSize;
 
         @com.aliyun.core.annotation.NameInMap("MaxLogAssignedObServer")
-        private java.util.List < String > maxLogAssignedObServer;
+        private java.util.List<String> maxLogAssignedObServer;
 
         @com.aliyun.core.annotation.NameInMap("MaxLogAssignedPercent")
         private String maxLogAssignedPercent;
@@ -676,7 +784,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return maxLogAssignedObServer
          */
-        public java.util.List < String > getMaxLogAssignedObServer() {
+        public java.util.List<String> getMaxLogAssignedObServer() {
             return this.maxLogAssignedObServer;
         }
 
@@ -703,13 +811,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String logAssignedSize; 
-            private java.util.List < String > maxLogAssignedObServer; 
+            private java.util.List<String> maxLogAssignedObServer; 
             private String maxLogAssignedPercent; 
             private Long totalDiskSize; 
             private Long unitDiskSize; 
 
             /**
-             * LogAssignedSize.
+             * <p>The allocated disk space for log storage, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder logAssignedSize(String logAssignedSize) {
                 this.logAssignedSize = logAssignedSize;
@@ -717,15 +828,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLogAssignedObServer.
+             * <p>The maximum storage space allocated for.</p>
              */
-            public Builder maxLogAssignedObServer(java.util.List < String > maxLogAssignedObServer) {
+            public Builder maxLogAssignedObServer(java.util.List<String> maxLogAssignedObServer) {
                 this.maxLogAssignedObServer = maxLogAssignedObServer;
                 return this;
             }
 
             /**
-             * MaxLogAssignedPercent.
+             * <p>The maximum percentage of space allocated for log storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.68</p>
              */
             public Builder maxLogAssignedPercent(String maxLogAssignedPercent) {
                 this.maxLogAssignedPercent = maxLogAssignedPercent;
@@ -733,7 +847,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDiskSize.
+             * <p>The information about the log disk space of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -741,7 +858,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitDiskSize.
+             * <p>The log disk space of each replica node in the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -755,6 +875,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Memory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginalTotalMemory")
         private Long originalTotalMemory;
@@ -818,7 +944,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedMemory; 
 
             /**
-             * OriginalTotalMemory.
+             * <p>The original memory size of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder originalTotalMemory(Long originalTotalMemory) {
                 this.originalTotalMemory = originalTotalMemory;
@@ -826,7 +955,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalMemory.
+             * <p>The total memory size of the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -834,7 +966,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitMemory.
+             * <p>The memory size of each replica node in the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitMemory(Long unitMemory) {
                 this.unitMemory = unitMemory;
@@ -842,7 +977,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UsedMemory.
+             * <p>The size of memory used by the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedMemory(Long usedMemory) {
                 this.usedMemory = usedMemory;
@@ -856,6 +994,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ReadOnlyResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private CapacityUnit capacityUnit;
@@ -943,7 +1087,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long unitCount; 
 
             /**
-             * CapacityUnit.
+             * <p>The information about capacity units.</p>
              */
             public Builder capacityUnit(CapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -951,7 +1095,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The information about the CPU resources of the cluster.</p>
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -959,7 +1103,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The information about the storage resources of the cluster.</p>
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -967,7 +1111,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LogDiskSize.
+             * <p>The information about the log disk space of the cluster.</p>
              */
             public Builder logDiskSize(LogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
@@ -975,7 +1119,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The information about the memory resources of the cluster.</p>
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -983,7 +1127,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitCount.
+             * <p>The number of resource units in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unitCount(Long unitCount) {
                 this.unitCount = unitCount;
@@ -997,6 +1144,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ResourceCapacityUnit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
@@ -1048,7 +1201,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String usedCapacityUnit; 
 
             /**
-             * MaxCapacityUnit.
+             * <p>The maximum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxCapacityUnit(Integer maxCapacityUnit) {
                 this.maxCapacityUnit = maxCapacityUnit;
@@ -1056,7 +1212,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MinCapacityUnit.
+             * <p>The minimum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minCapacityUnit(Integer minCapacityUnit) {
                 this.minCapacityUnit = minCapacityUnit;
@@ -1064,7 +1223,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacityUnit.
+             * <p>The number of used capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usedCapacityUnit(String usedCapacityUnit) {
                 this.usedCapacityUnit = usedCapacityUnit;
@@ -1078,6 +1240,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ResourceCpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginalTotalCpu")
         private Long originalTotalCpu;
@@ -1141,7 +1309,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedCpu; 
 
             /**
-             * OriginalTotalCpu.
+             * <p>The number of original CPU cores in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder originalTotalCpu(Long originalTotalCpu) {
                 this.originalTotalCpu = originalTotalCpu;
@@ -1149,10 +1320,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The series of the OceanBase cluster. Valid values:   
-             * <p>
-             * - NORMAL: the high availability edition.   
-             * - BASIC: the basic edition.
+             * <p>The total number of CPU cores of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder totalCpu(Long totalCpu) {
                 this.totalCpu = totalCpu;
@@ -1160,10 +1331,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the storage disk where the cluster is deployed. 
-             * <p>
+             * <p>The number of CPU cores of each replica node in the cluster.</p>
              * 
-             * The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitCpu(Long unitCpu) {
                 this.unitCpu = unitCpu;
@@ -1171,7 +1342,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic upgrade of the OBServer version is enabled.
+             * <p>The number of CPU cores used in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedCpu(Long usedCpu) {
                 this.usedCpu = usedCpu;
@@ -1185,6 +1359,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ResourceDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataUsedSize")
         private Double dataUsedSize;
@@ -1193,7 +1373,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Double maxDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
-        private java.util.List < String > maxDiskUsedObServer;
+        private java.util.List<String> maxDiskUsedObServer;
 
         @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
         private Double maxDiskUsedPercent;
@@ -1246,7 +1426,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return maxDiskUsedObServer
          */
-        public java.util.List < String > getMaxDiskUsedObServer() {
+        public java.util.List<String> getMaxDiskUsedObServer() {
             return this.maxDiskUsedObServer;
         }
 
@@ -1288,7 +1468,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Double dataUsedSize; 
             private Double maxDiskSize; 
-            private java.util.List < String > maxDiskUsedObServer; 
+            private java.util.List<String> maxDiskUsedObServer; 
             private Double maxDiskUsedPercent; 
             private Long originalTotalDiskSize; 
             private Long totalDiskSize; 
@@ -1296,7 +1476,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedDiskSize; 
 
             /**
-             * The ID of the OceanBase cluster.
+             * <p>The size of the data disk, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder dataUsedSize(Double dataUsedSize) {
                 this.dataUsedSize = dataUsedSize;
@@ -1304,7 +1487,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDiskSize.
+             * <p>The maximum disk size that can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80000</p>
              */
             public Builder maxDiskSize(Double maxDiskSize) {
                 this.maxDiskSize = maxDiskSize;
@@ -1312,15 +1498,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time in UTC when the cluster expires.
+             * <p>The maximum disk usage of the OBServer node.</p>
              */
-            public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
+            public Builder maxDiskUsedObServer(java.util.List<String> maxDiskUsedObServer) {
                 this.maxDiskUsedObServer = maxDiskUsedObServer;
                 return this;
             }
 
             /**
-             * The maximum disk usage, in percentage.
+             * <p>The maximum disk usage, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.14</p>
              */
             public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
                 this.maxDiskUsedPercent = maxDiskUsedPercent;
@@ -1328,7 +1517,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalTotalDiskSize.
+             * <p>The original size of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder originalTotalDiskSize(Long originalTotalDiskSize) {
                 this.originalTotalDiskSize = originalTotalDiskSize;
@@ -1336,13 +1528,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The data replica distribution mode of the cluster. Valid values: 
-             * <p>
-             * - n: indicates the single-IDC mode. 
-             * - n-n: indicates the dual-IDC mode. 
-             * - n-n-n: indicates the multi-IDC mode. 
+             * <p>The total storage space of the cluster, in GB.</p>
              * 
-             * > <br>The integer n represents the number of OBServer nodes in each IDC.
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -1350,7 +1539,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The list of zones.
+             * <p>The storage space of each replica node in the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -1358,12 +1550,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the cluster.  You can specify one of the following four plans:    
-             * <p>
-             * - 8C32G: indicates 8 CPU cores and 32 GB of memory. 
-             * - 14C70G: indicates 14 CPU cores and 70 GB of memory. 
-             * - 30C180G: indicates 30 CPU cores and 180 GB of memory. 
-             * - 62C400G: indicates 62 CPU cores and 400 GB of memory.
+             * <p>The size of used storage space of the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder usedDiskSize(Long usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -1377,12 +1567,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ResourceLogDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogAssignedSize")
         private String logAssignedSize;
 
         @com.aliyun.core.annotation.NameInMap("MaxLogAssignedObServer")
-        private java.util.List < String > maxLogAssignedObServer;
+        private java.util.List<String> maxLogAssignedObServer;
 
         @com.aliyun.core.annotation.NameInMap("MaxLogAssignedPercent")
         private String maxLogAssignedPercent;
@@ -1423,7 +1619,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return maxLogAssignedObServer
          */
-        public java.util.List < String > getMaxLogAssignedObServer() {
+        public java.util.List<String> getMaxLogAssignedObServer() {
             return this.maxLogAssignedObServer;
         }
 
@@ -1457,14 +1653,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String logAssignedSize; 
-            private java.util.List < String > maxLogAssignedObServer; 
+            private java.util.List<String> maxLogAssignedObServer; 
             private String maxLogAssignedPercent; 
             private Integer originalTotalDiskSize; 
             private Long totalDiskSize; 
             private Long unitDiskSize; 
 
             /**
-             * LogAssignedSize.
+             * <p>The allocated disk space for log storage, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder logAssignedSize(String logAssignedSize) {
                 this.logAssignedSize = logAssignedSize;
@@ -1472,15 +1671,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLogAssignedObServer.
+             * <p>The maximum storage space allocated for.</p>
              */
-            public Builder maxLogAssignedObServer(java.util.List < String > maxLogAssignedObServer) {
+            public Builder maxLogAssignedObServer(java.util.List<String> maxLogAssignedObServer) {
                 this.maxLogAssignedObServer = maxLogAssignedObServer;
                 return this;
             }
 
             /**
-             * MaxLogAssignedPercent.
+             * <p>The maximum percentage of space allocated for log storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.68</p>
              */
             public Builder maxLogAssignedPercent(String maxLogAssignedPercent) {
                 this.maxLogAssignedPercent = maxLogAssignedPercent;
@@ -1488,7 +1690,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalTotalDiskSize.
+             * <p>The original size of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder originalTotalDiskSize(Integer originalTotalDiskSize) {
                 this.originalTotalDiskSize = originalTotalDiskSize;
@@ -1496,7 +1701,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The total log disk space of the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -1504,7 +1712,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The log disk space of each replica node in the cluster. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -1518,6 +1729,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ResourceMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OriginalTotalMemory")
         private Long originalTotalMemory;
@@ -1581,7 +1798,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long usedMemory; 
 
             /**
-             * OriginalTotalMemory.
+             * <p>The original memory size of the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder originalTotalMemory(Long originalTotalMemory) {
                 this.originalTotalMemory = originalTotalMemory;
@@ -1589,7 +1809,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether trusted ECS instances are used.
+             * <p>The total memory size of the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -1597,7 +1820,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The log disk space of each replica node in the cluster. Unit: GB.
+             * <p>The memory size of each replica node in the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitMemory(Long unitMemory) {
                 this.unitMemory = unitMemory;
@@ -1605,7 +1831,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time in UTC when the cluster was created.
+             * <p>The size of used memory in the cluster, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedMemory(Long usedMemory) {
                 this.usedMemory = usedMemory;
@@ -1619,6 +1848,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private ResourceCapacityUnit capacityUnit;
@@ -1706,7 +1941,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long unitCount; 
 
             /**
-             * CapacityUnit.
+             * <p>The information about capacity units.</p>
              */
             public Builder capacityUnit(ResourceCapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -1714,7 +1949,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the OceanBase cluster.
+             * <p>The information about the CPU resources of the cluster.</p>
              */
             public Builder cpu(ResourceCpu cpu) {
                 this.cpu = cpu;
@@ -1722,10 +1957,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return. 
-             * <p>
-             * - Start value: 1  
-             * - Default value: 1
+             * <p>The information about the storage resources of the cluster.</p>
              */
             public Builder diskSize(ResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -1733,7 +1965,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The server with the highest disk usage.
+             * <p>The information about the log disk space of the cluster.</p>
              */
             public Builder logDiskSize(ResourceLogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
@@ -1741,7 +1973,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OceanBase cluster.
+             * <p>The information about the memory resources of the cluster.</p>
              */
             public Builder memory(ResourceMemory memory) {
                 this.memory = memory;
@@ -1749,7 +1981,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores used in the cluster.
+             * <p>The number of resource units in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unitCount(Long unitCount) {
                 this.unitCount = unitCount;
@@ -1763,6 +1998,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class TenantCreatable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisableCreateTenantReason")
         private String disableCreateTenantReason;
@@ -1802,7 +2043,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean enableCreateTenant; 
 
             /**
-             * DisableCreateTenantReason.
+             * <p>The reason why you cannot create a tenant in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU_NOT_ENOUGH,  MEMORY_NOT_ENOUGH, TENANT_COUNT_EXCEEDS_LIMIT</p>
              */
             public Builder disableCreateTenantReason(String disableCreateTenantReason) {
                 this.disableCreateTenantReason = disableCreateTenantReason;
@@ -1810,7 +2054,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableCreateTenant.
+             * <p>Specifies whether a tenant can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableCreateTenant(Boolean enableCreateTenant) {
                 this.enableCreateTenant = enableCreateTenant;
@@ -1824,6 +2071,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowCreateProxySqlFirewallRule")
         private Boolean allowCreateProxySqlFirewallRule;
@@ -1838,7 +2091,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Boolean autoUpgradeObVersion;
 
         @com.aliyun.core.annotation.NameInMap("AvailableZones")
-        private java.util.List < String > availableZones;
+        private java.util.List<String> availableZones;
 
         @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
         private String cpuArchitecture;
@@ -1964,7 +2217,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String version;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < String > zones;
+        private java.util.List<String> zones;
 
         private Instance(Builder builder) {
             this.allowCreateProxySqlFirewallRule = builder.allowCreateProxySqlFirewallRule;
@@ -2055,7 +2308,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return availableZones
          */
-        public java.util.List < String > getAvailableZones() {
+        public java.util.List<String> getAvailableZones() {
             return this.availableZones;
         }
 
@@ -2349,7 +2602,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < String > getZones() {
+        public java.util.List<String> getZones() {
             return this.zones;
         }
 
@@ -2358,7 +2611,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean allowModifyInternetAddressConnectionLimit; 
             private Boolean autoRenewal; 
             private Boolean autoUpgradeObVersion; 
-            private java.util.List < String > availableZones; 
+            private java.util.List<String> availableZones; 
             private String cpuArchitecture; 
             private String createTime; 
             private Boolean dataDiskAutoScale; 
@@ -2400,10 +2653,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private TenantCreatable tenantCreatable; 
             private String unitSpec; 
             private String version; 
-            private java.util.List < String > zones; 
+            private java.util.List<String> zones; 
 
             /**
-             * AllowCreateProxySqlFirewallRule.
+             * <p>Indicates whether the OceanBase Database Proxy (ODP) SQL firewall is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowCreateProxySqlFirewallRule(Boolean allowCreateProxySqlFirewallRule) {
                 this.allowCreateProxySqlFirewallRule = allowCreateProxySqlFirewallRule;
@@ -2411,7 +2667,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AllowModifyInternetAddressConnectionLimit.
+             * <p>Indicates whether the maximum number of public connections can be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowModifyInternetAddressConnectionLimit(Boolean allowModifyInternetAddressConnectionLimit) {
                 this.allowModifyInternetAddressConnectionLimit = allowModifyInternetAddressConnectionLimit;
@@ -2419,7 +2678,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. <br>Set the value to **DescribeInstance**.
+             * <p>Indicates whether automatic renewal is enabled. </p>
+             * <p>This parameter is valid only for clusters whose billing methods are set to PREPAY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -2427,7 +2690,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Example 1
+             * <p>Indicates whether automatic upgrade of the OBServer version is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoUpgradeObVersion(Boolean autoUpgradeObVersion) {
                 this.autoUpgradeObVersion = autoUpgradeObVersion;
@@ -2435,15 +2701,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableZones.
+             * <p>The list of zones.</p>
              */
-            public Builder availableZones(java.util.List < String > availableZones) {
+            public Builder availableZones(java.util.List<String> availableZones) {
                 this.availableZones = availableZones;
                 return this;
             }
 
             /**
-             * CpuArchitecture.
+             * <p>The CPU architecture of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X86</p>
              */
             public Builder cpuArchitecture(String cpuArchitecture) {
                 this.cpuArchitecture = cpuArchitecture;
@@ -2451,7 +2720,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log disk specifications can be upgraded.
+             * <p>The time in UTC when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-19T07:13:41Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2459,7 +2731,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskAutoScale.
+             * <p>Specifies whether to enable automatic scaling of the data disk.</p>
+             * <blockquote>
+             * <p><br>This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder dataDiskAutoScale(Boolean dataDiskAutoScale) {
                 this.dataDiskAutoScale = dataDiskAutoScale;
@@ -2467,7 +2747,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskAutoScaleConfig.
+             * <p>Specifies parameters for the automatic scaling of the data disk.</p>
              */
             public Builder dataDiskAutoScaleConfig(DataDiskAutoScaleConfig dataDiskAutoScaleConfig) {
                 this.dataDiskAutoScaleConfig = dataDiskAutoScaleConfig;
@@ -2475,7 +2755,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPU cores of the cluster.
+             * <p>The time when the major compaction of cluster data is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00</p>
              */
             public Builder dataMergeTime(String dataMergeTime) {
                 this.dataMergeTime = dataMergeTime;
@@ -2483,7 +2766,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Alibaba Cloud CLI
+             * <p>The data replica distribution mode of the cluster. Valid values: </p>
+             * <ul>
+             * <li>n: indicates the single-IDC mode. </li>
+             * <li>n-n: indicates the dual-IDC mode. </li>
+             * <li>n-n-n: indicates the multi-IDC mode.</li>
+             * </ul>
+             * <blockquote>
+             * <p><br>The integer n represents the number of OBServer nodes in each IDC.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1-1-1</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -2491,7 +2785,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
+             * <p>The deployment type of the cluster. Valid values:  </p>
+             * <ul>
+             * <li>multiple: multi-IDC deployment   </li>
+             * <li>single: single-IDC deployment   </li>
+             * <li>dual: dual-IDC deployment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>multiple</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -2499,7 +2801,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total storage space of the cluster, in GB.
+             * <p>The type of the storage disk where the cluster is deployed. </p>
+             * <p>The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd_pl1</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -2507,7 +2813,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableIsolationOptimization.
+             * <p>Specifies whether to enable isolation optimization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableIsolationOptimization(Boolean enableIsolationOptimization) {
                 this.enableIsolationOptimization = enableIsolationOptimization;
@@ -2515,7 +2824,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableProxyService.
+             * <p>Specifies whether to enable the proxy service.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableProxyService(Boolean enableProxyService) {
                 this.enableProxyService = enableProxyService;
@@ -2523,7 +2839,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableReadOnlyReplica.
+             * <p>Indicates whether read-only replicas are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
                 this.enableReadOnlyReplica = enableReadOnlyReplica;
@@ -2531,7 +2850,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableReadOnlyReplicaManagement.
+             * <p>Indicates whether read-only replicas can be purchased for the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableReadOnlyReplicaManagement(Boolean enableReadOnlyReplicaManagement) {
                 this.enableReadOnlyReplicaManagement = enableReadOnlyReplicaManagement;
@@ -2539,7 +2861,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableUpgradeLogDisk.
+             * <p>Indicates whether the log disk specifications can be upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableUpgradeLogDisk(Boolean enableUpgradeLogDisk) {
                 this.enableUpgradeLogDisk = enableUpgradeLogDisk;
@@ -2547,7 +2872,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExclusiveUnitNumLimit.
+             * <p>The maximum number of units of the proxy service in exclusive mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder exclusiveUnitNumLimit(Integer exclusiveUnitNumLimit) {
                 this.exclusiveUnitNumLimit = exclusiveUnitNumLimit;
@@ -2555,7 +2883,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the OceanBase cluster.
+             * <p>The time in UTC when the cluster expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-17T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -2563,7 +2894,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InTempCapacityStatus.
+             * <p>Specifies whether to indicate the temporary status of the capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inTempCapacityStatus(Boolean inTempCapacityStatus) {
                 this.inTempCapacityStatus = inTempCapacityStatus;
@@ -2571,7 +2905,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information of the OBServer version.
+             * <p>The specifications of the cluster.  You can specify one of the following four plans:    </p>
+             * <ul>
+             * <li>8C32G: indicates 8 CPU cores and 32 GB of memory. </li>
+             * <li>14C70G: indicates 14 CPU cores and 70 GB of memory. </li>
+             * <li>30C180G: indicates 30 CPU cores and 180 GB of memory. </li>
+             * <li>62C400G: indicates 62 CPU cores and 400 GB of memory.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>14C70G</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -2579,7 +2922,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the log disk space of the cluster.
+             * <p>The ID of the OceanBase cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ob317v4uif****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2587,7 +2933,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic upgrade of the OBServer version is enabled.
+             * <p>The name of the OceanBase cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ob4test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2595,7 +2944,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRole.
+             * <p>The role of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder instanceRole(String instanceRole) {
                 this.instanceRole = instanceRole;
@@ -2603,7 +2955,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IsLatestObVersion.
+             * <p>Indicates whether the OBServer version is the latest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLatestObVersion(Boolean isLatestObVersion) {
                 this.isLatestObVersion = isLatestObVersion;
@@ -2611,7 +2966,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the CPU resources of the cluster.
+             * <p>Indicates whether trusted ECS instances are used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTrustEcs(Boolean isTrustEcs) {
                 this.isTrustEcs = isTrustEcs;
@@ -2619,7 +2977,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IsolationOptimization.
+             * <p>Specifies whether to enable the control group feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isolationOptimization(Boolean isolationOptimization) {
                 this.isolationOptimization = isolationOptimization;
@@ -2627,7 +2988,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the major compaction of cluster data is performed.
+             * <p>The period in UTC for the daily routine maintenance of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19:00Z-20:00Z</p>
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -2635,7 +2999,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNum.
+             * <p>The number of nodes in the cluster. If the cluster is deployed in n-n-n mode, the number of nodes in the cluster equals n × 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder nodeNum(String nodeNum) {
                 this.nodeNum = nodeNum;
@@ -2643,7 +3010,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ObRpmVersion.
+             * <p>The detailed information of the OBServer version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.77-20210526202046</p>
              */
             public Builder obRpmVersion(String obRpmVersion) {
                 this.obRpmVersion = obRpmVersion;
@@ -2651,7 +3021,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The list of zones.
+             * <p>The billing method of the OceanBase cluster. Valid values: </p>
+             * <ul>
+             * <li>PREPAY: the subscription billing method. </li>
+             * <li>POSTPAY: the pay-as-you-go billing method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -2659,7 +3036,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryInstance.
+             * <p>The ID of the primary cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ob3h8ytroxxxxx</p>
              */
             public Builder primaryInstance(String primaryInstance) {
                 this.primaryInstance = primaryInstance;
@@ -2667,7 +3047,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryRegion.
+             * <p>The region of the primary cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder primaryRegion(String primaryRegion) {
                 this.primaryRegion = primaryRegion;
@@ -2675,7 +3058,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyClusterId.
+             * <p>The ID of the proxy cluster.</p>
+             * <blockquote>
+             * <p>This parameter returns a value only if you set the <strong>EnableProxyService</strong> parameter to true.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy-56****a6tg2o</p>
              */
             public Builder proxyClusterId(String proxyClusterId) {
                 this.proxyClusterId = proxyClusterId;
@@ -2683,7 +3072,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyServiceStatus.
+             * <p>The status of the proxy service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder proxyServiceStatus(String proxyServiceStatus) {
                 this.proxyServiceStatus = proxyServiceStatus;
@@ -2691,7 +3083,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyResource.
+             * <p>The information about cluster resources.</p>
              */
             public Builder readOnlyResource(ReadOnlyResource readOnlyResource) {
                 this.readOnlyResource = readOnlyResource;
@@ -2699,7 +3091,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaMode.
+             * <p>The number of full-featured replicas. Return value: 3 or 2.</p>
+             * <ul>
+             * <li>3: three full-featured replicas.</li>
+             * <li>2: two full-featured replicas.</li>
+             * </ul>
+             * <p>An OceanBase cluster deployed in three-zone mode supports only three full-featured replicas. An OceanBase cluster deployed in two-zone mode supports only two full-featured replicas. An OceanBase cluster deployed in one single zone supports two or three full-featured replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2F1A</p>
              */
             public Builder replicaMode(String replicaMode) {
                 this.replicaMode = replicaMode;
@@ -2707,7 +3107,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used memory in the cluster, in GB.
+             * <p>The information about cluster resources.</p>
              */
             public Builder resource(Resource resource) {
                 this.resource = resource;
@@ -2715,7 +3115,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the OBServer version is the latest.
+             * <p>The series of the instance. Valid values:</p>
+             * <ul>
+             * <li><p>normal: Standard Cluster Edition (Cloud Disk). This is the default value.</p>
+             * </li>
+             * <li><p>normal_ssd: Standard Cluster Edition (Local Disk)</p>
+             * </li>
+             * <li><p>history: History Database Cluster Edition</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder series(String series) {
                 this.series = series;
@@ -2723,7 +3134,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SharedUnitNumLimit.
+             * <p>The maximum number of units of the proxy service in shared mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sharedUnitNumLimit(Integer sharedUnitNumLimit) {
                 this.sharedUnitNumLimit = sharedUnitNumLimit;
@@ -2731,7 +3145,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The specification type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dedicatedspec</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -2739,7 +3156,26 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about cluster resources.
+             * <p>The status of the cluster. Valid values: </p>
+             * <ul>
+             * <li>PENDING_CREATE: The cluster is being created. </li>
+             * <li>ONLINE: The cluster is running. </li>
+             * <li>TENANT_CREATING: The tenant is being created. </li>
+             * <li>TENANT_SPEC_MODIFYING: The tenant specifications are being modified. </li>
+             * <li>EXPANDING: Nodes are being added to the cluster to increase its capacity. </li>
+             * <li>REDUCING: Nodes are being removed from the cluster to reduce its capacity. </li>
+             * <li>SPEC_UPGRADING: The service plan is being upgraded. </li>
+             * <li>DISK_UPGRADING: The storage space is being expanded. </li>
+             * <li>WHITE_LIST_MODIFYING: The whitelist is being modified. </li>
+             * <li>PARAMETER_MODIFYING: Parameters are being modified. </li>
+             * <li>SSL_MODIFYING: The SSL certificate is being changed. </li>
+             * <li>PREPAID_EXPIRE_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to PREPAY. </li>
+             * <li>ARREARS_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to POSTPAY. </li>
+             * <li>PENDING_DELETE: The cluster is being deleted.<br>Generally, the cluster is in the ONLINE state.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2747,7 +3183,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantCreatable.
+             * <p>Specifies whether a tenant can be created.</p>
              */
             public Builder tenantCreatable(TenantCreatable tenantCreatable) {
                 this.tenantCreatable = tenantCreatable;
@@ -2755,7 +3191,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitSpec.
+             * <p>The unit specification of the proxy service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2C4G</p>
              */
             public Builder unitSpec(String unitSpec) {
                 this.unitSpec = unitSpec;
@@ -2763,7 +3202,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to query the detailed information of an OceanBase cluster.
+             * <p>The version of OceanBase Database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.77</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2771,9 +3213,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * <p>The ID of the zone to which the instance belongs.
+             * &lt;props=&quot;intl&quot;&gt;For more information about how to obtain the list of zones, see <a href="https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describezones">DescribeZones</a>.</p>
              */
-            public Builder zones(java.util.List < String > zones) {
+            public Builder zones(java.util.List<String> zones) {
                 this.zones = zones;
                 return this;
             }

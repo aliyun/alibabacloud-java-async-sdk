@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstancesRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstancesRequest</p>
@@ -105,13 +111,18 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * The backup retention strategy for cluster deletion. Valid values:  
-         * <p>
-         * - receive_all: retains all backup sets.   
-         * - delete_all: deletes all backup sets.   
-         * - receive_last: retains the last backup set.    
+         * <p>The backup retention strategy for cluster deletion. Valid values:  </p>
+         * <ul>
+         * <li>receive_all: retains all backup sets.   </li>
+         * <li>delete_all: deletes all backup sets.   </li>
+         * <li>receive_last: retains the last backup set.</li>
+         * </ul>
+         * <blockquote>
+         * <p><br>Default value: delete_all.</p>
+         * </blockquote>
          * 
-         * > <br>Default value: delete_all.
+         * <strong>example:</strong>
+         * <p>delete_all</p>
          */
         public Builder backupRetainMode(String backupRetainMode) {
             this.putBodyParameter("BackupRetainMode", backupRetainMode);
@@ -120,10 +131,14 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run for the request. Default value: false. Valid values:
-         * <p>
-         * - true: Only a dry-run request is sent and the instance is not deleted. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.
-         * - false: The actual request is sent and no dry run is performed. The instance is deleted if the requirements are met. By default, false is returned for the parameter DryRunResult if you set DryRun to false.
+         * <p>Specifies whether to perform only a dry run for the request. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: Only a dry-run request is sent and the instance is not deleted. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.</li>
+         * <li>false: The actual request is sent and no dry run is performed. The instance is deleted if the requirements are met. By default, false is returned for the parameter DryRunResult if you set DryRun to false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -132,9 +147,11 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster to be deleted.   
-         * <p>
-         * The value is a string in the JSON format.
+         * <p>The ID of the cluster to be deleted.<br>The value is a string in the JSON format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[”ob ob3f6yhv9uxxxx“]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);

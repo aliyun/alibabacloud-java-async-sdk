@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnomalySQLListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAnomalySQLListResponseBody</p>
  */
 public class DescribeAnomalySQLListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AnomalySQLList")
-    private java.util.List < AnomalySQLList> anomalySQLList;
+    private java.util.List<AnomalySQLList> anomalySQLList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
     /**
      * @return anomalySQLList
      */
-    public java.util.List < AnomalySQLList> getAnomalySQLList() {
+    public java.util.List<AnomalySQLList> getAnomalySQLList() {
         return this.anomalySQLList;
     }
 
@@ -56,20 +62,23 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AnomalySQLList> anomalySQLList; 
+        private java.util.List<AnomalySQLList> anomalySQLList; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The list of suspicious SQL statements.
+         * <p>The list of suspicious SQL statements.</p>
          */
-        public Builder anomalySQLList(java.util.List < AnomalySQLList> anomalySQLList) {
+        public Builder anomalySQLList(java.util.List<AnomalySQLList> anomalySQLList) {
             this.anomalySQLList = anomalySQLList;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +86,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
         }
 
         /**
-         * The total count.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAnomalySQLListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAnomalySQLListResponseBody</p>
+     */
     public static class AnomalySQLList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Float cpuTime;
@@ -249,7 +267,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The average CPU time, in ms.
+             * <p>The average CPU time, in ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.13</p>
              */
             public Builder cpuTime(Float cpuTime) {
                 this.cpuTime = cpuTime;
@@ -257,7 +278,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database1</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -265,7 +289,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnosis information.
+             * <p>The diagnosis information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total number of executions = 80199, Average CPU time = 6.8 ms, Overall CPU utilization = 87%</p>
              */
             public Builder diagnosis(String diagnosis) {
                 this.diagnosis = diagnosis;
@@ -273,7 +300,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnostic rule.
+             * <p>The diagnostic rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Utilization above threshold</p>
              */
             public Builder diagnosisRule(String diagnosisRule) {
                 this.diagnosisRule = diagnosisRule;
@@ -281,7 +311,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of executions.
+             * <p>The number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89043</p>
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -289,7 +322,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the returned SQL statement.
+             * <p>The sequence number of the returned SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder key(Long key) {
                 this.key = key;
@@ -297,7 +333,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The request time, in ms.
+             * <p>The request time, in ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.00</p>
              */
             public Builder requestTime(Float requestTime) {
                 this.requestTime = requestTime;
@@ -305,7 +344,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The request time in UTC +0.
+             * <p>The request time in UTC +0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-11T07:08:00Z</p>
              */
             public Builder requestTimeUTCString(String requestTimeUTCString) {
                 this.requestTimeUTCString = requestTimeUTCString;
@@ -313,7 +355,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLID.
+             * <p>SQLID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99E9D3BF<strong><strong>B486239E6C7BC79B</strong></strong></p>
              */
             public Builder SQLId(String SQLId) {
                 this.SQLId = SQLId;
@@ -321,7 +366,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL text.
+             * <p>The SQL text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -329,7 +377,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestions.
+             * <p>The suggestions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check your business scenarios, data distribution changes, request surges, and execution plan changes.</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -337,7 +388,10 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tester</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

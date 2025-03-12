@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveStandbyInstanceRequest} extends {@link RequestModel}
  *
  * <p>RemoveStandbyInstanceRequest</p>
@@ -115,7 +121,10 @@ public class RemoveStandbyInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob608fgj1q****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -124,7 +133,10 @@ public class RemoveStandbyInstanceRequest extends Request {
         }
 
         /**
-         * TargetInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob4bv8o7sp****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putBodyParameter("TargetInstanceId", targetInstanceId);

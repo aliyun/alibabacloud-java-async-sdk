@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTenantSecurityIpGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateTenantSecurityIpGroupRequest</p>
@@ -113,7 +119,10 @@ public class CreateTenantSecurityIpGroupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,7 +131,11 @@ public class CreateTenantSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -131,10 +144,12 @@ public class CreateTenantSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The group name of the whitelist group of IP addresses.
-         * <p>
+         * <p>The group name of the whitelist group of IP addresses.</p>
+         * <p>It starts with lowercase letters and ends with lowercase letters or numbers. It can only contain lowercase letters, numbers, and underscores, and should be 2~32 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * It starts with lowercase letters and ends with lowercase letters or numbers. It can only contain lowercase letters, numbers, and underscores, and should be 2~32 characters in length.
+         * <strong>example:</strong>
+         * <p>paytest</p>
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);
@@ -143,10 +158,12 @@ public class CreateTenantSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The list of IP addresses in the whitelist group.
-         * <p>
+         * <p>The list of IP addresses in the whitelist group.</p>
+         * <p>It is a JSON array. Each object in the array is an IP address or a CIDR block. You can have up to 40 whitelists.</p>
+         * <p>This parameter is required.</p>
          * 
-         * It is a JSON array. Each object in the array is an IP address or a CIDR block. You can have up to 40 whitelists.
+         * <strong>example:</strong>
+         * <p>192.***.<em>.</em>&quot;</p>
          */
         public Builder securityIps(String securityIps) {
             this.putBodyParameter("SecurityIps", securityIps);
@@ -155,7 +172,11 @@ public class CreateTenantSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

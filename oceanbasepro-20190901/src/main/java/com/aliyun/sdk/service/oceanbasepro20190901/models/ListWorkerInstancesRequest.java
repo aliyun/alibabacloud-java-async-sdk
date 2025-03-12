@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkerInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListWorkerInstancesRequest</p>
@@ -41,7 +47,7 @@ public class ListWorkerInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Specs")
-    private java.util.List < String > specs;
+    private java.util.List<String> specs;
 
     private ListWorkerInstancesRequest(Builder builder) {
         super(builder);
@@ -120,7 +126,7 @@ public class ListWorkerInstancesRequest extends Request {
     /**
      * @return specs
      */
-    public java.util.List < String > getSpecs() {
+    public java.util.List<String> getSpecs() {
         return this.specs;
     }
 
@@ -132,7 +138,7 @@ public class ListWorkerInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String sourceType; 
-        private java.util.List < String > specs; 
+        private java.util.List<String> specs; 
 
         private Builder() {
             super();
@@ -216,7 +222,7 @@ public class ListWorkerInstancesRequest extends Request {
         /**
          * Specs.
          */
-        public Builder specs(java.util.List < String > specs) {
+        public Builder specs(java.util.List<String> specs) {
             String specsShrink = shrink(specs, "Specs", "json");
             this.putBodyParameter("Specs", specsShrink);
             this.specs = specs;

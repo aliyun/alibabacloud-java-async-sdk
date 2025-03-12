@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSessionListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSessionListResponseBody</p>
  */
 public class DescribeSessionListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeSessionListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +51,22 @@ public class DescribeSessionListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The object information.
+         * <p>The object information.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeSessionListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSessionListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSessionListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
@@ -109,7 +124,10 @@ public class DescribeSessionListResponseBody extends TeaModel {
             private String sessionId; 
 
             /**
-             * The address of the client, with the format ip:port.
+             * <p>The address of the client, with the format ip:port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.***.**.100:80</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -117,7 +135,10 @@ public class DescribeSessionListResponseBody extends TeaModel {
             }
 
             /**
-             * The session ID of the proxy service.
+             * <p>The session ID of the proxy service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d2c90ad0-bc54-410f-bb89-2dcf14aa3c6d</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

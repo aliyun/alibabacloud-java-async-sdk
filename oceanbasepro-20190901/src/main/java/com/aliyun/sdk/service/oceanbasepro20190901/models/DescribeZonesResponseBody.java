@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Zones")
-    private java.util.List < Zones> zones;
+    private java.util.List<Zones> zones;
 
     private DescribeZonesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,22 +46,23 @@ public class DescribeZonesResponseBody extends TeaModel {
     /**
      * @return zones
      */
-    public java.util.List < Zones> getZones() {
+    public java.util.List<Zones> getZones() {
         return this.zones;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Zones> zones; 
+        private java.util.List<Zones> zones; 
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=DescribeZones
-         * &Series=normal
-         * &DeployType=single
-         * &Common request parameters
-         * ```
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeZones
+         * &amp;Series=normal
+         * &amp;DeployType=single
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,9 +70,9 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * You can call this operation to learn of zones where a cluster can be created in an Alibaba Cloud region.
+         * <p>You can call this operation to learn of zones where a cluster can be created in an Alibaba Cloud region.</p>
          */
-        public Builder zones(java.util.List < Zones> zones) {
+        public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
             return this;
         }
@@ -76,6 +83,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;

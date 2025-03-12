@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTenantReadOnlyConnectionRequest} extends {@link RequestModel}
  *
  * <p>CreateTenantReadOnlyConnectionRequest</p>
@@ -136,7 +142,10 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -145,7 +154,10 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -154,7 +166,10 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp11k1aypnzu1l3whi****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putBodyParameter("VSwitchId", vSwitchId);
@@ -172,7 +187,10 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);

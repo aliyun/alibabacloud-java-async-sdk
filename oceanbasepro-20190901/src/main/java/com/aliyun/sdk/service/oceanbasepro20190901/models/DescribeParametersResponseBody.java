@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -45,22 +51,26 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
 
         /**
-         * Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   
-         * <p>
-         * - true: A restart is required.   
-         * - false: A restart is not required.
+         * <p>Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   </p>
+         * <ul>
+         * <li>true: A restart is required.   </li>
+         * <li>false: A restart is not required.</li>
+         * </ul>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -73,9 +83,15 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceptableValue")
-        private java.util.List < String > acceptableValue;
+        private java.util.List<String> acceptableValue;
 
         @com.aliyun.core.annotation.NameInMap("CurrentValue")
         private String currentValue;
@@ -96,7 +112,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private Boolean readonly;
 
         @com.aliyun.core.annotation.NameInMap("RejectedValue")
-        private java.util.List < String > rejectedValue;
+        private java.util.List<String> rejectedValue;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -128,7 +144,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return acceptableValue
          */
-        public java.util.List < String > getAcceptableValue() {
+        public java.util.List<String> getAcceptableValue() {
             return this.acceptableValue;
         }
 
@@ -177,7 +193,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return rejectedValue
          */
-        public java.util.List < String > getRejectedValue() {
+        public java.util.List<String> getRejectedValue() {
             return this.rejectedValue;
         }
 
@@ -196,27 +212,30 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > acceptableValue; 
+            private java.util.List<String> acceptableValue; 
             private String currentValue; 
             private String defaultValue; 
             private String description; 
             private String name; 
             private Boolean needReboot; 
             private Boolean readonly; 
-            private java.util.List < String > rejectedValue; 
+            private java.util.List<String> rejectedValue; 
             private String unit; 
             private String valueType; 
 
             /**
-             * DescribeParameters
+             * <p>DescribeParameters</p>
              */
-            public Builder acceptableValue(java.util.List < String > acceptableValue) {
+            public Builder acceptableValue(java.util.List<String> acceptableValue) {
                 this.acceptableValue = acceptableValue;
                 return this;
             }
 
             /**
-             * The ID of the OceanBase cluster.
+             * <p>The ID of the OceanBase cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder currentValue(String currentValue) {
                 this.currentValue = currentValue;
@@ -224,14 +243,15 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ```
-             * <p>
-             * http(s)://[Endpoint]/?Action=DescribeParameters
-             * &InstanceId=ob317v4uif****
-             * &Dimension=TENANT
-             * &DimensionValue=ob2mr3oae0****
-             * &Common request parameters
-             * ```
+             * <pre><code>http(s)://[Endpoint]/?Action=DescribeParameters
+             * &amp;InstanceId=ob317v4uif****
+             * &amp;Dimension=TENANT
+             * &amp;DimensionValue=ob2mr3oae0****
+             * &amp;Common request parameters
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>600s</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -239,7 +259,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeParameters</strong>.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -247,7 +270,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connect_timeout</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -255,7 +281,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needReboot(Boolean needReboot) {
                 this.needReboot = needReboot;
@@ -263,7 +292,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * 参数是否只读
+             * <p>参数是否只读</p>
              */
             public Builder readonly(Boolean readonly) {
                 this.readonly = readonly;
@@ -271,28 +300,27 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * {
-             * <p>
-             *     "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",
-             *     "Parameters": [
+             * <p>{
+             *     &quot;RequestId&quot;: &quot;EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C&quot;,
+             *     &quot;Parameters&quot;: [
              *         {
-             *             "Description": "The maximum delay allowed in weak-consistency reads.",
-             *             "ValueType": "CAPACITY",
-             *             "CurrentValue": "600",
-             *             "NeedReboot": false,
-             *             "Name": "connect_timeout",
-             *             "DefaultValue": "600s",
-             *             "RejectedValue": [
-             *                 "1s"
+             *             &quot;Description&quot;: &quot;The maximum delay allowed in weak-consistency reads.&quot;,
+             *             &quot;ValueType&quot;: &quot;CAPACITY&quot;,
+             *             &quot;CurrentValue&quot;: &quot;600&quot;,
+             *             &quot;NeedReboot&quot;: false,
+             *             &quot;Name&quot;: &quot;connect_timeout&quot;,
+             *             &quot;DefaultValue&quot;: &quot;600s&quot;,
+             *             &quot;RejectedValue&quot;: [
+             *                 &quot;1s&quot;
              *             ],
-             *             "AcceptableValue": [
-             *                 "1s"
+             *             &quot;AcceptableValue&quot;: [
+             *                 &quot;1s&quot;
              *             ]
              *         }
              *     ]
-             * }
+             * }</p>
              */
-            public Builder rejectedValue(java.util.List < String > rejectedValue) {
+            public Builder rejectedValue(java.util.List<String> rejectedValue) {
                 this.rejectedValue = rejectedValue;
                 return this;
             }
@@ -306,9 +334,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The invalid value range of the parameter.    
-             * <p>
-             * It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.
+             * <p>The invalid value range of the parameter.<br>It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAPACITY</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;

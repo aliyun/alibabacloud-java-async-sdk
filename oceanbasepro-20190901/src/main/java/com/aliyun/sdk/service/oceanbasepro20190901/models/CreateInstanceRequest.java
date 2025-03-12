@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
@@ -324,7 +330,10 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -333,11 +342,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic renewal.   
-         * <p>
-         * This parameter is valid only when the ChargeType parameter is set to PrePaid. Valid values: 
-         * - true: enables automatic renewal for the instance.   
-         * - false: disables automatic renewal for the instance. This is the default value.
+         * <p>Specifies whether to enable automatic renewal.<br>This parameter is valid only when the ChargeType parameter is set to PrePaid. Valid values: </p>
+         * <ul>
+         * <li>true: enables automatic renewal for the instance.   </li>
+         * <li>false: disables automatic renewal for the instance. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -346,10 +358,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The automatic renewal period of the instance. This parameter is required when the AutoRenew parameter is set to true. Valid values:  
-         * <p>
-         * - If the PeriodUnit parameter is set to Year: "1", "2", and "3".   
-         * - If the PeriodUnit parameter is set to Month: "1", "2", "3", "6", and "12".
+         * <p>The automatic renewal period of the instance. This parameter is required when the AutoRenew parameter is set to true. Valid values:  </p>
+         * <ul>
+         * <li>If the PeriodUnit parameter is set to Year: &quot;1&quot;, &quot;2&quot;, and &quot;3&quot;.   </li>
+         * <li>If the PeriodUnit parameter is set to Month: &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, and &quot;12&quot;.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder autoRenewPeriod(Long autoRenewPeriod) {
             this.putBodyParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -358,10 +374,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:  
-         * <p>
-         * - PrePay: the subscription billing method. You must ensure that the remaining balance or credit balance of your account can cover the cost of the subscription. Otherwise, you will receive an InvalidPayMethod error. 
-         * - PostPay: the pay-as-you-go billing method. This is the default value. By default, fees are charged on an hourly basis.
+         * <p>The billing method of the instance. Valid values:  </p>
+         * <ul>
+         * <li>PrePay: the subscription billing method. You must ensure that the remaining balance or credit balance of your account can cover the cost of the subscription. Otherwise, you will receive an InvalidPayMethod error. </li>
+         * <li>PostPay: the pay-as-you-go billing method. This is the default value. By default, fees are charged on an hourly basis.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePay</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -379,14 +400,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The size of the storage space,in GB.    
-         * <p>
-         * The limits on the storage space vary with the cluster specifications:   
-         * - 8C32GB: 100 GB to 10000 GB   
-         * - 14C70GB: 200 GB to 10000 GB   
-         * - 30C180GB: 400 GB to 10000 GB   
-         * - 62C400GB: 800 GB to 10000 GB    
-         * The preceding minimum storage space sizes are the default storage space sizes of the corresponding cluster specification plans.
+         * <p>The size of the storage space,in GB.<br>The limits on the storage space vary with the cluster specifications:   </p>
+         * <ul>
+         * <li>8C32GB: 100 GB to 10000 GB   </li>
+         * <li>14C70GB: 200 GB to 10000 GB   </li>
+         * <li>30C180GB: 400 GB to 10000 GB   </li>
+         * <li>62C400GB: 800 GB to 10000 GB<br>The preceding minimum storage space sizes are the default storage space sizes of the corresponding cluster specification plans.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder diskSize(Long diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
@@ -395,11 +418,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The type of the storage disk where the cluster is deployed. This parameter takes effect only for Standard Cluster Edition (Cloud Disk).
-         * <p>
-         * Valid values:
-         * - cloud_essd_pl1: ESSD PL1.
-         * - cloud_essd_pl0: ESSD PL0. Default value: cloud_essd_pl1.
+         * <p>The type of the storage disk where the cluster is deployed. This parameter takes effect only for Standard Cluster Edition (Cloud Disk).
+         * Valid values:</p>
+         * <ul>
+         * <li>cloud_essd_pl1: ESSD PL1.</li>
+         * <li>cloud_essd_pl0: ESSD PL0. Default value: cloud_essd_pl1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd_pl1</p>
          */
         public Builder diskType(String diskType) {
             this.putBodyParameter("DiskType", diskType);
@@ -408,10 +435,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run for the request. Default value: false. Valid values:
-         * <p>
-         * - true: Only a dry-run request is sent and the instance is not created. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.
-         * - false: The actual request is sent and no dry run is performed. The instance is created if the requirements are met. By default, the DryRunResult parameter returns false if you set DryRun to false.
+         * <p>Specifies whether to perform only a dry run for the request. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: Only a dry-run request is sent and the instance is not created. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.</li>
+         * <li>false: The actual request is sent and no dry run is performed. The instance is created if the requirements are met. By default, the DryRunResult parameter returns false if you set DryRun to false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -420,13 +451,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of the cluster.     
-         * <p>
-         * You can specify one of the following four plans:   
-         *  - 8C32GB: indicates 8 CPU cores and 32 GB of memory.    
-         *  - 14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.
-         * - 30C180GB: indicates 30 CPU cores and 180 GB of memory.     
-         * - 62C400GB: indicates 62 CPU cores and 400 GB of memory.
+         * <p>The specifications of the cluster.<br>You can specify one of the following four plans:   </p>
+         * <ul>
+         * <li>8C32GB: indicates 8 CPU cores and 32 GB of memory.    </li>
+         * <li>14C70GB: indicates 14 CPU cores and 70 GB of memory. This is the default value.</li>
+         * <li>30C180GB: indicates 30 CPU cores and 180 GB of memory.     </li>
+         * <li>62C400GB: indicates 62 CPU cores and 400 GB of memory.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C70GB</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putBodyParameter("InstanceClass", instanceClass);
@@ -435,10 +470,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The name of the OceanBase cluster.    
-         * <p>
-         * It must be 1 to 20 characters in length.   
-         * If this parameter is not specified, the value is the instance ID of the cluster by default.
+         * <p>The name of the OceanBase cluster.<br>It must be 1 to 20 characters in length.<br>If this parameter is not specified, the value is the instance ID of the cluster by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amap_aos_tx_ob</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -447,11 +482,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the control group feature.
-         * <p>
-         * Valid values:
-         * - true
-         * - false
+         * <p>Specifies whether to enable the control group feature.
+         * Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isolationOptimization(String isolationOptimization) {
             this.putBodyParameter("IsolationOptimization", isolationOptimization);
@@ -460,7 +499,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * OceanBase Server version number.
+         * <p>OceanBase Server version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.77</p>
          */
         public Builder obVersion(String obVersion) {
             this.putBodyParameter("ObVersion", obVersion);
@@ -469,12 +511,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The valid duration of the purchased resources. The unit is specified by the PeriodUnit parameter.   
-         * <p>
-         * This parameter is valid and required only when the InstanceChargeType parameter is set to PrePaid.      
-         * Valid values:     
-         * - When the PeriodUnit parameter is set to Month: "1", "2", "3", "4", "5", "6", "7", "8", "9". 
-         * - When the PeriodUnit parameter is set to Year: "1", "2", "3".
+         * <p>The valid duration of the purchased resources. The unit is specified by the PeriodUnit parameter.<br>This parameter is valid and required only when the InstanceChargeType parameter is set to PrePaid.<br>Valid values:     </p>
+         * <ul>
+         * <li>When the PeriodUnit parameter is set to Month: &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;. </li>
+         * <li>When the PeriodUnit parameter is set to Year: &quot;1&quot;, &quot;2&quot;, &quot;3&quot;.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putBodyParameter("Period", period);
@@ -483,10 +527,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the valid duration of the purchased resources.     
-         * <p>
-         * Valid value for subscription: Month or Year.
-         * Default value: Month for subscription, and Hour for pay-as-you-go.
+         * <p>The unit of the valid duration of the purchased resources.<br>Valid value for subscription: Month or Year.
+         * Default value: Month for subscription, and Hour for pay-as-you-go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
@@ -495,7 +540,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Primary instance ID.
+         * <p>Primary instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob3h8ytroxxxxx</p>
          */
         public Builder primaryInstance(String primaryInstance) {
             this.putBodyParameter("PrimaryInstance", primaryInstance);
@@ -504,7 +552,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Primary instance region.
+         * <p>Primary instance region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder primaryRegion(String primaryRegion) {
             this.putBodyParameter("PrimaryRegion", primaryRegion);
@@ -513,16 +564,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The number of full-featured replicas.
-         * <p>
-         * - 3F: three full-featured replicas.
-         * - 2F1L: two full-featured replicas and one log replica.
-         * - 2F1A: two full-featured replicas and one arbitration service.
-         * - ApsaraDB for OceanBase earlier than V4.1 supports 3F and 2F1L.
-         * - ApsaraDB for OceanBase V4.1 or later supports 3F and 2F1A.
-         * - An ApsaraDB for OceanBase instance deployed across three zones supports only 3F.
-         * - An ApsaraDB for OceanBase instance deployed across two zones supports 2F1A or 2F1L, depending on the version.
-         * - An ApsaraDB for OceanBase instance deployed in a single zone supports 3F, 2F1A, or 2F1L, depending on the version.
+         * <p>The number of full-featured replicas.</p>
+         * <ul>
+         * <li>3F: three full-featured replicas.</li>
+         * <li>2F1L: two full-featured replicas and one log replica.</li>
+         * <li>2F1A: two full-featured replicas and one arbitration service.</li>
+         * <li>ApsaraDB for OceanBase earlier than V4.1 supports 3F and 2F1L.</li>
+         * <li>ApsaraDB for OceanBase V4.1 or later supports 3F and 2F1A.</li>
+         * <li>An ApsaraDB for OceanBase instance deployed across three zones supports only 3F.</li>
+         * <li>An ApsaraDB for OceanBase instance deployed across two zones supports 2F1A or 2F1L, depending on the version.</li>
+         * <li>An ApsaraDB for OceanBase instance deployed in a single zone supports 3F, 2F1A, or 2F1L, depending on the version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3F</p>
          */
         public Builder replicaMode(String replicaMode) {
             this.putBodyParameter("ReplicaMode", replicaMode);
@@ -531,7 +586,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -540,11 +598,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The series of the OceanBase cluster. Valid values:    
-         * <p>
-         * - normal: Standard Cluster Edition (Cloud Disk). This is the default value.
-         * - normal_ssd: Standard Cluster Edition (Local Disk).
-         * - history: History Database Cluster Edition.
+         * <p>The series of the OceanBase cluster. Valid values:    </p>
+         * <ul>
+         * <li>normal: Standard Cluster Edition (Cloud Disk). This is the default value.</li>
+         * <li>normal_ssd: Standard Cluster Edition (Local Disk).</li>
+         * <li>history: History Database Cluster Edition.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder series(String series) {
             this.putBodyParameter("Series", series);
@@ -553,9 +616,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the instance belongs.   
-         * <p>
-         * For more information about how to obtain the list of zones, see [DescribeZones](~~25610~~).
+         * <p>The ID of the zone to which the instance belongs.<br>For more information about how to obtain the list of zones, see <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h,cn-hangzhou-i,cn-hangzhou-j</p>
          */
         public Builder zones(String zones) {
             this.putBodyParameter("Zones", zones);

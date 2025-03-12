@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteInstancesResponseBody</p>
@@ -49,7 +55,7 @@ public class DeleteInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-<strong><strong>-</strong></strong>-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DeleteInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DryRunResult")
         private Boolean dryRunResult;
@@ -97,10 +112,14 @@ public class DeleteInstancesResponseBody extends TeaModel {
             private Boolean dryRunResult; 
 
             /**
-             * The result of the dry-run request.
-             * <p>
-             * - If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
-             * - If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
+             * <p>The result of the dry-run request.</p>
+             * <ul>
+             * <li>If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</li>
+             * <li>If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRunResult(Boolean dryRunResult) {
                 this.dryRunResult = dryRunResult;

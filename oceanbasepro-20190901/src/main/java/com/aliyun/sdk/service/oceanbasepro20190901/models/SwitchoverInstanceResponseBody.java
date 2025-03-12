@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchoverInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchoverInstanceResponseBody</p>
@@ -49,7 +55,7 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of data for the switchover.
+         * <p>The list of data for the switchover.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469**-AA6F-4D**-B3DB-A***********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SwitchoverInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SwitchoverInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -109,7 +124,10 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The message of the switchover.
+             * <p>The message of the switchover.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>delete tag-value success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -117,10 +135,14 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Whether the switchover is successful.
-             * <p>
-             * - true: the switchover succeeded.
-             * - false: the switchover failed.
+             * <p>Whether the switchover is successful.</p>
+             * <ul>
+             * <li>true: the switchover succeeded.</li>
+             * <li>false: the switchover failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

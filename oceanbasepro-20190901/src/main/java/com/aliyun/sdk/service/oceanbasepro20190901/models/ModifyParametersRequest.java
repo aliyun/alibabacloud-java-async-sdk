@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParametersRequest} extends {@link RequestModel}
  *
  * <p>ModifyParametersRequest</p>
@@ -121,7 +127,11 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
          */
         public Builder dimension(String dimension) {
             this.putBodyParameter("Dimension", dimension);
@@ -130,7 +140,10 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The cause of the modification failure.
+         * <p>The cause of the modification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder dimensionValue(String dimensionValue) {
             this.putBodyParameter("DimensionValue", dimensionValue);
@@ -139,7 +152,11 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud CLI
+         * <p>Alibaba Cloud CLI</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -148,9 +165,11 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The resource ID of the parameter type.    
-         * <p>
-         * You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.
+         * <p>The resource ID of the parameter type.<br>You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Name&quot;:&quot;connect_timeout&quot;,&quot;Value&quot;:&quot;20&quot;}]</p>
          */
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);

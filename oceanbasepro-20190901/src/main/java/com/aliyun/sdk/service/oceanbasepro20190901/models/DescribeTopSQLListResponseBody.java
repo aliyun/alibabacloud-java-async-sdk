@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTopSQLListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTopSQLListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TopSQLList")
-    private java.util.List < TopSQLList> topSQLList;
+    private java.util.List<TopSQLList> topSQLList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -44,7 +50,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
     /**
      * @return topSQLList
      */
-    public java.util.List < TopSQLList> getTopSQLList() {
+    public java.util.List<TopSQLList> getTopSQLList() {
         return this.topSQLList;
     }
 
@@ -57,11 +63,14 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TopSQLList> topSQLList; 
+        private java.util.List<TopSQLList> topSQLList; 
         private Long totalCount; 
 
         /**
-         * Alibaba Cloud CLI
+         * <p>Alibaba Cloud CLI</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,15 +78,18 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
         }
 
         /**
-         * The I/O wait time, in ms.
+         * <p>The I/O wait time, in ms.</p>
          */
-        public Builder topSQLList(java.util.List < TopSQLList> topSQLList) {
+        public Builder topSQLList(java.util.List<TopSQLList> topSQLList) {
             this.topSQLList = topSQLList;
             return this;
         }
 
         /**
-         * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
+         * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTopSQLListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTopSQLListResponseBody</p>
+     */
     public static class TopSQLList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectedRows")
         private Long affectedRows;
@@ -585,7 +603,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The internal wait time, in ms.
+             * <p>The internal wait time, in ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder affectedRows(Long affectedRows) {
                 this.affectedRows = affectedRows;
@@ -593,7 +614,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait time in concurrent execution, in ms.
+             * <p>The wait time in concurrent execution, in ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder appWaitTime(Float appWaitTime) {
                 this.appWaitTime = appWaitTime;
@@ -601,7 +625,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The average CPU time, in ms.
+             * <p>The average CPU time, in ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder blockCacheHit(Long blockCacheHit) {
                 this.blockCacheHit = blockCacheHit;
@@ -609,7 +636,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[16].schema.example
+             * <p>$.parameters[16].schema.example</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder blockIndexCacheHit(Long blockIndexCacheHit) {
                 this.blockIndexCacheHit = blockIndexCacheHit;
@@ -617,7 +647,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[14].schema.enumValueTitles
+             * <p>$.parameters[14].schema.enumValueTitles</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bloomFilterCacheHit(Long bloomFilterCacheHit) {
                 this.bloomFilterCacheHit = bloomFilterCacheHit;
@@ -625,7 +658,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[14].schema.description
+             * <p>$.parameters[14].schema.description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1<em>2.</em><strong>.1<em>3.</em></strong></p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -633,7 +669,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned.
+             * <p>The number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder concurrencyWaitTime(Float concurrencyWaitTime) {
                 this.concurrencyWaitTime = concurrencyWaitTime;
@@ -641,7 +680,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum CPU time, in ms.
+             * <p>The maximum CPU time, in ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.13</p>
              */
             public Builder cpuTime(Float cpuTime) {
                 this.cpuTime = cpuTime;
@@ -649,7 +691,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of remote plans.
+             * <p>The number of remote plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -657,10 +702,14 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows to return on each page.   
-             * <p>
-             * - Maximum value: 100   
-             * - Default value: 10
+             * <p>The number of rows to return on each page.   </p>
+             * <ul>
+             * <li>Maximum value: 100   </li>
+             * <li>Default value: 10</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder decodeTime(Float decodeTime) {
                 this.decodeTime = decodeTime;
@@ -668,7 +717,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder diskRead(Long diskRead) {
                 this.diskRead = diskRead;
@@ -676,7 +728,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The sorting rule.
+             * <p>The sorting rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76.382</p>
              */
             public Builder elapsedTime(Float elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -684,7 +739,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows read from the disk.
+             * <p>The number of rows read from the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql response wait client</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -692,9 +750,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform.   
-             * <p>
-             * Set the value to **DescribeTopSQLList**.
+             * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeTopSQLList</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>163.0</p>
              */
             public Builder execPerSecond(Float execPerSecond) {
                 this.execPerSecond = execPerSecond;
@@ -702,7 +761,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows read from the memory.
+             * <p>The number of rows read from the memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61.044</p>
              */
             public Builder executeTime(Float executeTime) {
                 this.executeTime = executeTime;
@@ -710,7 +772,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of executions per second.
+             * <p>The number of executions per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89403</p>
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -718,7 +783,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[12].schema.description
+             * <p>$.parameters[12].schema.description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failTimes(Long failTimes) {
                 this.failTimes = failTimes;
@@ -726,7 +794,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The queuing time, in ms.
+             * <p>The queuing time, in ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.052</p>
              */
             public Builder getPlanTime(Float getPlanTime) {
                 this.getPlanTime = getPlanTime;
@@ -734,7 +805,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[15].schema.example
+             * <p>$.parameters[15].schema.example</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder IOWaitTime(Float IOWaitTime) {
                 this.IOWaitTime = IOWaitTime;
@@ -742,7 +816,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder key(Long key) {
                 this.key = key;
@@ -750,7 +827,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to query SQL execution performance data collected by the diagnostic system.
+             * <p>You can call this operation to query SQL execution performance data collected by the diagnostic system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder logicalRead(Long logicalRead) {
                 this.logicalRead = logicalRead;
@@ -758,7 +838,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLID.
+             * <p>SQLID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>257.967</p>
              */
             public Builder maxCpuTime(Float maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -766,7 +849,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the returned SQL statement.
+             * <p>The sequence number of the returned SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>260.044</p>
              */
             public Builder maxElapsedTime(Float maxElapsedTime) {
                 this.maxElapsedTime = maxElapsedTime;
@@ -774,7 +860,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>527</p>
              */
             public Builder memstoreReadRowCount(Long memstoreReadRowCount) {
                 this.memstoreReadRowCount = memstoreReadRowCount;
@@ -782,7 +871,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The total count.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder missPlans(Long missPlans) {
                 this.missPlans = missPlans;
@@ -790,9 +882,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the time range for querying TOP SQL statements.   
-             * <p>
-             * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+             * <p>The end time of the time range for querying TOP SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder netWaitTime(Float netWaitTime) {
                 this.netWaitTime = netWaitTime;
@@ -800,7 +893,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp18qljorblo8es*****</p>
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -808,7 +904,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[12].schema.enumValueTitles
+             * <p>$.parameters[12].schema.enumValueTitles</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15.275</p>
              */
             public Builder queueTime(Float queueTime) {
                 this.queueTime = queueTime;
@@ -816,9 +915,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the time range for querying TOP SQL statements.   
-             * <p>
-             * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+             * <p>The start time of the time range for querying TOP SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder RPCCount(Long RPCCount) {
                 this.RPCCount = RPCCount;
@@ -826,7 +926,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The return result of the request.
+             * <p>The return result of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remotePlans(Long remotePlans) {
                 this.remotePlans = remotePlans;
@@ -834,7 +937,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[13].schema.description
+             * <p>$.parameters[13].schema.description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
@@ -842,7 +948,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait event.
+             * <p>The wait event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
@@ -850,25 +959,26 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * ```
-             * <p>
-             * http(s)://[Endpoint]/?Action=DescribeTopSQLList
-             * &TenantId=t2mr3oae0****
-             * &StartTime=2021-06-13 15:40:43
-             * &EndTime=2021-09-13 15:40:43
-             * &DbName=testdb
-             * &SearchKeyWord=update
-             * &SearchParameter=cputime
-             * &SearchRule=>
-             * &SearchValue=0.01
-             * &SQLId=8D6E84****0B8FB1823D199E2CA1****
-             * &NodeIp=i-bp19y05uq6xpacyqnlrc
-             * &PageNumber=1
-             * &PageSize=10
-             * &SortColumn=cputime
-             * &SortOrder=desc
-             * &Common request parameters
-             * ```
+             * <pre><code>http(s)://[Endpoint]/?Action=DescribeTopSQLList
+             * &amp;TenantId=t2mr3oae0****
+             * &amp;StartTime=2021-06-13 15:40:43
+             * &amp;EndTime=2021-09-13 15:40:43
+             * &amp;DbName=testdb
+             * &amp;SearchKeyWord=update
+             * &amp;SearchParameter=cputime
+             * &amp;SearchRule=&gt;
+             * &amp;SearchValue=0.01
+             * &amp;SQLId=8D6E84****0B8FB1823D199E2CA1****
+             * &amp;NodeIp=i-bp19y05uq6xpacyqnlrc
+             * &amp;PageNumber=1
+             * &amp;PageSize=10
+             * &amp;SortColumn=cputime
+             * &amp;SortOrder=desc
+             * &amp;Common request parameters
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowCacheHit(Long rowCacheHit) {
                 this.rowCacheHit = rowCacheHit;
@@ -876,7 +986,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[13].schema.example
+             * <p>$.parameters[13].schema.example</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
              */
             public Builder SQLId(String SQLId) {
                 this.SQLId = SQLId;
@@ -884,7 +997,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The list of top SQL statements.
+             * <p>The list of top SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -892,7 +1008,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder SQLType(Long SQLType) {
                 this.SQLType = SQLType;
@@ -900,7 +1019,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The search keyword.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder scheduleTime(Float scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -916,7 +1038,12 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * -
+             * <ul>
+             * <li></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10.966</p>
              */
             public Builder totalWaitTime(Float totalWaitTime) {
                 this.totalWaitTime = totalWaitTime;
@@ -924,7 +1051,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Bloom filter cache hits.
+             * <p>The number of Bloom filter cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tester</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

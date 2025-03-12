@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTenantRequest} extends {@link RequestModel}
  *
  * <p>CreateTenantRequest</p>
@@ -27,7 +33,7 @@ public class CreateTenantRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CreateParams")
-    private java.util.Map < String, String > createParams;
+    private java.util.Map<String, String> createParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -147,7 +153,7 @@ public class CreateTenantRequest extends Request {
     /**
      * @return createParams
      */
-    public java.util.Map < String, String > getCreateParams() {
+    public java.util.Map<String, String> getCreateParams() {
         return this.createParams;
     }
 
@@ -246,7 +252,7 @@ public class CreateTenantRequest extends Request {
         private String regionId; 
         private String charset; 
         private Integer cpu; 
-        private java.util.Map < String, String > createParams; 
+        private java.util.Map<String, String> createParams; 
         private String description; 
         private String instanceId; 
         private Long logDisk; 
@@ -287,7 +293,10 @@ public class CreateTenantRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -296,9 +305,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The character set.    
-         * <p>
-         * For more information, see [DescribeCharset](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describecharset).
+         * <p>The character set.<br>For more information, see <a href="https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describecharset">DescribeCharset</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
          */
         public Builder charset(String charset) {
             this.putBodyParameter("Charset", charset);
@@ -307,10 +318,14 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The number of CPU cores of the tenant.   
-         * <p>
+         * <p>The number of CPU cores of the tenant.   </p>
+         * <blockquote>
+         * <p><br>The CPU specification of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the CPU specification of the tenant cannot exceed 14 cores.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > <br>The CPU specification of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the CPU specification of the tenant cannot exceed 14 cores.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Integer cpu) {
             this.putBodyParameter("Cpu", cpu);
@@ -319,9 +334,9 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * CreateParams.
+         * <p>The initialization parameters.</p>
          */
-        public Builder createParams(java.util.Map < String, String > createParams) {
+        public Builder createParams(java.util.Map<String, String> createParams) {
             String createParamsShrink = shrink(createParams, "CreateParams", "json");
             this.putBodyParameter("CreateParams", createParamsShrink);
             this.createParams = createParams;
@@ -329,7 +344,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The description of the database.
+         * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test database</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -338,7 +356,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -347,7 +369,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The size of the log disk allocated to the tenant, in GB.
+         * <p>The size of the log disk allocated to the tenant, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder logDisk(Long logDisk) {
             this.putBodyParameter("LogDisk", logDisk);
@@ -356,10 +381,14 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The memory size of the tenant, in GB.   
-         * <p>
+         * <p>The memory size of the tenant, in GB.   </p>
+         * <blockquote>
+         * <p><br>The memory size of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the memory size of the tenant cannot exceed 70 GB.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > <br>The memory size of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the memory size of the tenant cannot exceed 70 GB.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
@@ -368,9 +397,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The primary zone of the tenant.    
-         * <p>
-         * It is one of the zones in which the cluster is deployed.
+         * <p>The primary zone of the tenant.<br>It is one of the zones in which the cluster is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder primaryZone(String primaryZone) {
             this.putBodyParameter("PrimaryZone", primaryZone);
@@ -379,9 +410,13 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).
-         * <p>
-         * ><notice><br>At present, this parameter is unavailable.></notice>
+         * <p>Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).</p>
+         * <blockquote>
+         * <p>Notice: <br>At present, this parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-g-ro,cn-shanghai-h-ro</p>
          */
         public Builder readOnlyZoneList(String readOnlyZoneList) {
             this.putBodyParameter("ReadOnlyZoneList", readOnlyZoneList);
@@ -390,10 +425,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The tenant mode.    
-         * <p>
-         * Valid values: Oracle and MySQL.   
-         * For more information, see [DescribeInstanceTenantModes](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describeinstancetenantmodes).
+         * <p>The tenant mode.<br>Valid values: Oracle and MySQL.<br>For more information, see <a href="https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describeinstancetenantmodes">DescribeInstanceTenantModes</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oracle</p>
          */
         public Builder tenantMode(String tenantMode) {
             this.putBodyParameter("TenantMode", tenantMode);
@@ -402,9 +438,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The name of the tenant.    
-         * <p>
-         * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
+         * <p>The name of the tenant.<br>It must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>).  It cannot be set to sys.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_online</p>
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);
@@ -413,7 +451,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The time zone of the tenant. For more information, see [DescribeTimeZones](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describetimezones).
+         * <p>The time zone of the tenant. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describetimezones">DescribeTimeZones</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timeZone(String timeZone) {
             this.putBodyParameter("TimeZone", timeZone);
@@ -422,9 +464,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The number of resource distribution nodes in the tenant.    
-         * <p>
-         * The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
+         * <p>The number of resource distribution nodes in the tenant.<br>The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder unitNum(Integer unitNum) {
             this.putBodyParameter("UnitNum", unitNum);
@@ -433,10 +476,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.    
-         * <p>
-         * If no suitable vSwitch is available, create a vSwitch as prompted.   
-         * For more information, see Use a vSwitch.
+         * <p>The ID of the vSwitch.<br>If no suitable vSwitch is available, create a vSwitch as prompted.<br>For more information, see Use a vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp11k1aypnzu1l3whi****</p>
          */
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);
@@ -445,10 +489,11 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.   
-         * <p>
-         *  If no suitable VPC is available, create a VPC as prompted.   
-         * For more information, see "What is a VPC".
+         * <p>The ID of the VPC.<br> If no suitable VPC is available, create a VPC as prompted.<br>For more information, see &quot;What is a VPC&quot;.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1d2q3mhg9i23ofi****</p>
          */
         public Builder userVpcId(String userVpcId) {
             this.putBodyParameter("UserVpcId", userVpcId);
@@ -457,7 +502,10 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * UserVpcOwnerId.
+         * <p>The ID of the VPC owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-********</p>
          */
         public Builder userVpcOwnerId(String userVpcOwnerId) {
             this.putBodyParameter("UserVpcOwnerId", userVpcOwnerId);

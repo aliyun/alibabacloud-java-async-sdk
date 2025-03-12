@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParametersHistoryResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Respond")
-    private java.util.List < Respond> respond;
+    private Respond respond;
 
     private DescribeParametersHistoryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,16 +46,19 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
     /**
      * @return respond
      */
-    public java.util.List < Respond> getRespond() {
+    public Respond getRespond() {
         return this.respond;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Respond> respond; 
+        private Respond respond; 
 
         /**
-         * The request ID.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +66,9 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The list of parameter modification records.
+         * <p>The list of parameter modification records.</p>
          */
-        public Builder respond(java.util.List < Respond> respond) {
+        public Builder respond(Respond respond) {
             this.respond = respond;
             return this;
         }
@@ -70,6 +79,12 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParametersHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersHistoryResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -169,7 +184,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the parameter modification was initiated.
+             * <p>The time when the parameter modification was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-26T08:03:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -177,10 +195,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID of the parameter type.    
-             * <p>
-             * - When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE.   
-             * - When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.
+             * <p>The resource ID of the parameter type. When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE. When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t69uo********</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -188,7 +206,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connect_timeout</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -196,7 +217,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter after the modification.
+             * <p>The value of the parameter after the modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder newValue(String newValue) {
                 this.newValue = newValue;
@@ -204,7 +228,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value before modification.
+             * <p>The value of the parameter before the modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder oldValue(String oldValue) {
                 this.oldValue = oldValue;
@@ -212,10 +239,14 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The modification status. Valid values:    
-             * <p>
-             * - APPLIED: The modification was successful.   
-             * - SCHEDULING: The modification was to be made.
+             * <p>The modification status of the parameter. Valid values: </p>
+             * <ul>
+             * <li>APPLIED: The parameter was modified.</li>
+             * <li>SCHEDULING: The parameter was to be modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APPLIED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -223,7 +254,10 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the parameter modification took effect.
+             * <p>The time when the parameter modification took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-26T08:03:34Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -237,12 +271,18 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParametersHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersHistoryResponseBody</p>
+     */
     public static class Respond extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.List < Parameters> parameters;
+        private java.util.List<Parameters> parameters;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -271,7 +311,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
@@ -284,11 +324,18 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer pageNumber; 
-            private java.util.List < Parameters> parameters; 
+            private java.util.List<Parameters> parameters; 
             private Integer totalCount; 
 
             /**
-             * The number of returned entries on each page.
+             * <p>The number of the page to return.    </p>
+             * <ul>
+             * <li>Start value: 1   </li>
+             * <li>Default value: 1</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -296,15 +343,18 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter modification history.
+             * <p>The information about parameters.</p>
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
 
             /**
-             * The number of parameter modification records.
+             * <p>The total count, which takes effect in a pagination query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

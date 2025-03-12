@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatabasesResponseBody</p>
  */
 public class DescribeDatabasesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Databases")
-    private java.util.List < Databases> databases;
+    private java.util.List<Databases> databases;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     /**
      * @return databases
      */
-    public java.util.List < Databases> getDatabases() {
+    public java.util.List<Databases> getDatabases() {
         return this.databases;
     }
 
@@ -56,20 +62,23 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Databases> databases; 
+        private java.util.List<Databases> databases; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The list of databases in the tenant.
+         * <p>The list of databases in the tenant.</p>
          */
-        public Builder databases(java.util.List < Databases> databases) {
+        public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +86,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of databases in the tenant.
+         * <p>The total number of databases in the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
@@ -117,7 +135,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the database table.
+             * <p>The name of the database table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testTables</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -131,6 +152,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Privileges")
         private String privileges;
@@ -194,7 +221,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * If you have granted custom privileges on the database, this parameter indicates the custom privileges, separated by commas (,). Otherwise, no data is returned for this parameter.
+             * <p>If you have granted custom privileges on the database, this parameter indicates the custom privileges, separated by commas (,). Otherwise, no data is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select,delete,update</p>
              */
             public Builder privileges(String privileges) {
                 this.privileges = privileges;
@@ -202,13 +232,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the account.    
-             * <p>
-             * In MySQL mode, a role is a database-level role. Valid values:  
-             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  
-             * - ReadOnly: a role that has only the read-only privilege SELECT.   
-             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
-             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+             * <p>The role of the account.<br>In MySQL mode, a role is a database-level role. Valid values:  </p>
+             * <ul>
+             * <li>ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  </li>
+             * <li>ReadOnly: a role that has only the read-only privilege SELECT.   </li>
+             * <li>DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </li>
+             * <li>DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -216,7 +249,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_pay_ro</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -224,10 +260,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account. Valid values:  
-             * <p>
-             * - Admin: the super administrator account. 
-             * - Normal: a general account.
+             * <p>The type of the account. Valid values:  </p>
+             * <ul>
+             * <li>Admin: the super administrator account. </li>
+             * <li>Normal: a general account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -241,6 +281,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Collation")
         private String collation;
@@ -273,7 +319,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < Tables> tables;
+        private java.util.List<Tables> tables;
 
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
@@ -282,7 +328,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String tenantName;
 
         @com.aliyun.core.annotation.NameInMap("Users")
-        private java.util.List < Users> users;
+        private java.util.List<Users> users;
 
         private Databases(Builder builder) {
             this.collation = builder.collation;
@@ -382,7 +428,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < Tables> getTables() {
+        public java.util.List<Tables> getTables() {
             return this.tables;
         }
 
@@ -403,7 +449,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return users
          */
-        public java.util.List < Users> getUsers() {
+        public java.util.List<Users> getUsers() {
             return this.users;
         }
 
@@ -418,13 +464,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String instanceId; 
             private Double requiredSize; 
             private String status; 
-            private java.util.List < Tables> tables; 
+            private java.util.List<Tables> tables; 
             private String tenantId; 
             private String tenantName; 
-            private java.util.List < Users> users; 
+            private java.util.List<Users> users; 
 
             /**
-             * The collation.
+             * <p>The collation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4_general_ci</p>
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -432,7 +481,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the database was created.
+             * <p>The time when the database was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-21 15:41:06</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -440,9 +492,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The actual data size, in GB. 
-             * <p>
-             * ><notice>This parameter is no longer used in later versions. RequiredSize is used instead.></notice>
+             * <p>The actual data size, in GB. </p>
+             * <blockquote>
+             * <p>Notice: This parameter is no longer used in later versions. RequiredSize is used instead.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5.67 GB</p>
              */
             public Builder dataSize(Double dataSize) {
                 this.dataSize = dataSize;
@@ -450,7 +506,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sms_pre</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -458,7 +517,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The database type.
+             * <p>The database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -466,7 +528,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the database.
+             * <p>The description of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test db</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -474,7 +539,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.
+             * <p>The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -482,7 +550,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster to which the tenant belongs.
+             * <p>The ID of the cluster to which the tenant belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obsdh2f****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -490,7 +561,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space required, in GB.
+             * <p>The storage space required, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.67 GB</p>
              */
             public Builder requiredSize(Double requiredSize) {
                 this.requiredSize = requiredSize;
@@ -498,10 +572,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database. Valid values:    
-             * <p>
-             * - ONLINE: The database is running.  
-             * - DELETING: The database is being deleted.
+             * <p>The status of the database. Valid values:    </p>
+             * <ul>
+             * <li>ONLINE: The database is running.  </li>
+             * <li>DELETING: The database is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -509,15 +587,18 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of database tables.
+             * <p>The list of database tables.</p>
              */
-            public Builder tables(java.util.List < Tables> tables) {
+            public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
                 return this;
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t33h8y08k****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -525,7 +606,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tenantABC</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -533,9 +617,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of accounts that are granted privileges on this database.
+             * <p>The list of accounts that are granted privileges on this database.</p>
              */
-            public Builder users(java.util.List < Users> users) {
+            public Builder users(java.util.List<Users> users) {
                 this.users = users;
                 return this;
             }

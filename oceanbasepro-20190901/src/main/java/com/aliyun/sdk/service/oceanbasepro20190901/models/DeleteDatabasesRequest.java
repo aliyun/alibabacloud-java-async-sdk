@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDatabasesRequest} extends {@link RequestModel}
  *
  * <p>DeleteDatabasesRequest</p>
@@ -106,7 +112,10 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * DatabaseNames.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sms_pre&quot;, &quot;pay_pre&quot;]</p>
          */
         public Builder databaseNames(String databaseNames) {
             this.putBodyParameter("DatabaseNames", databaseNames);
@@ -124,7 +133,10 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

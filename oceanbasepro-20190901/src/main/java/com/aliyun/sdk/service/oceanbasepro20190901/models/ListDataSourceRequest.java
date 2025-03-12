@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourceRequest} extends {@link RequestModel}
  *
  * <p>ListDataSourceRequest</p>
@@ -38,7 +44,7 @@ public class ListDataSourceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Types")
-    private java.util.List < String > types;
+    private java.util.List<String> types;
 
     private ListDataSourceRequest(Builder builder) {
         super(builder);
@@ -109,7 +115,7 @@ public class ListDataSourceRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
@@ -120,7 +126,7 @@ public class ListDataSourceRequest extends Request {
         private String pageSize; 
         private String searchKey; 
         private String sortField; 
-        private java.util.List < String > types; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
@@ -194,7 +200,7 @@ public class ListDataSourceRequest extends Request {
         /**
          * Types.
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "json");
             this.putBodyParameter("Types", typesShrink);
             this.types = types;

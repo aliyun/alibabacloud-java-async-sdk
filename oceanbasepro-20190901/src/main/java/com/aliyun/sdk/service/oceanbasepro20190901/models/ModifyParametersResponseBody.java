@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParametersResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyParametersResponseBody</p>
@@ -49,9 +55,10 @@ public class ModifyParametersResponseBody extends TeaModel {
         private Results results; 
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **ModifyParameters**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyParameters</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -59,7 +66,7 @@ public class ModifyParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Example 1
+         * <p>Example 1</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -72,6 +79,12 @@ public class ModifyParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyParametersResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;

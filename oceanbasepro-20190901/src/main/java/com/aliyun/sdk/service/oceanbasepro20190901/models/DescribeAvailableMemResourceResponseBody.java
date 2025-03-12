@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableMemResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableMemResourceResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The available memory size.
+         * <p>The available memory size.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableMemResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableMemResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxMem")
         private Long maxMem;
@@ -133,7 +148,10 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             private Long usedMem; 
 
             /**
-             * The maximum memory size for each resource unit, in GB.
+             * <p>The maximum memory size for each resource unit, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxMem(Long maxMem) {
                 this.maxMem = maxMem;
@@ -141,7 +159,10 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum memory size required for each resource unit, in GB.
+             * <p>The minimum memory size required for each resource unit, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder minMem(Long minMem) {
                 this.minMem = minMem;
@@ -149,7 +170,10 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum allowed memory usage, in GB.
+             * <p>The maximum allowed memory usage, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder safeMem(String safeMem) {
                 this.safeMem = safeMem;
@@ -157,7 +181,10 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the tenant.
+             * <p>The number of resource units in the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usedMem(Long usedMem) {
                 this.usedMem = usedMem;

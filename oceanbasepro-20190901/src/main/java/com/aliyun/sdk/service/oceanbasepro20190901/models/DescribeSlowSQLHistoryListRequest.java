@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowSQLHistoryListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlowSQLHistoryListRequest</p>
@@ -141,7 +147,10 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -150,9 +159,11 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The end time of the time range for querying the execution history of the slow SQL statement.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of the time range for querying the execution history of the slow SQL statement.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-14T08:34:49Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -161,10 +172,14 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.    
-         * <p>
-         * - Start value: 1   
-         * - Default value: 1
+         * <p>The number of the page to return.    </p>
+         * <ul>
+         * <li>Start value: 1   </li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -173,10 +188,14 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.  
-         * <p>
-         * - Maximum value: 100   
-         * - Default value: 10
+         * <p>The number of rows to return on each page.  </p>
+         * <ul>
+         * <li>Maximum value: 100   </li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -185,7 +204,11 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The SQL ID, which uniquely identifies an SQL statement.
+         * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84735C0<strong><strong>1823D199E2CA1</strong></strong></p>
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -194,9 +217,11 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The start time of the time range for querying the execution history of the slow SQL statement.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of the time range for querying the execution history of the slow SQL statement.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-14T02:34:49Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -205,7 +230,11 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t384tolsj****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

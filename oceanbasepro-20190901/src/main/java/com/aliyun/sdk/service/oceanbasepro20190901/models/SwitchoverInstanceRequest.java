@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchoverInstanceRequest} extends {@link RequestModel}
  *
  * <p>SwitchoverInstanceRequest</p>
@@ -106,10 +112,14 @@ public class SwitchoverInstanceRequest extends Request {
         }
 
         /**
-         * Whether to force the switchover.
-         * <p>
-         * - true: Force the switchover.
-         * - false: Do not force the switchover.
+         * <p>Whether to force the switchover.</p>
+         * <ul>
+         * <li>true: Force the switchover.</li>
+         * <li>false: Do not force the switchover.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forced(Boolean forced) {
             this.putBodyParameter("Forced", forced);
@@ -118,7 +128,11 @@ public class SwitchoverInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID of the primary/standby instance. You can set the default value to the instance ID of the instance to be switched to the primary instance.
+         * <p>The instance ID of the primary/standby instance. You can set the default value to the instance ID of the instance to be switched to the primary instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -127,7 +141,11 @@ public class SwitchoverInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID of the instance to be switched to the primary instance.
+         * <p>The instance ID of the instance to be switched to the primary instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob4bv8o7sp****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putBodyParameter("TargetInstanceId", targetInstanceId);

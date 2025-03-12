@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantUsersRequest} extends {@link RequestModel}
  *
  * <p>DescribeTenantUsersRequest</p>
@@ -124,7 +130,10 @@ public class DescribeTenantUsersRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -133,7 +142,10 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The database privileges of the account.
+         * <p>The database privileges of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -142,7 +154,10 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -151,7 +166,10 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay</p>
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -160,7 +178,11 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -169,9 +191,10 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **DescribeTenantUsers**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeTenantUsers</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_test</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasSQLDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribeOasSQLDetailsRequest</p>
@@ -171,7 +177,10 @@ public class DescribeOasSQLDetailsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -180,7 +189,11 @@ public class DescribeOasSQLDetailsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -198,9 +211,11 @@ public class DescribeOasSQLDetailsRequest extends Request {
         }
 
         /**
-         * The end time of querying the SQL execution plan.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of querying the SQL execution plan.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T05:38:38Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -209,7 +224,11 @@ public class DescribeOasSQLDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -227,7 +246,11 @@ public class DescribeOasSQLDetailsRequest extends Request {
         }
 
         /**
-         * SQL ID.
+         * <p>SQL ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -236,9 +259,11 @@ public class DescribeOasSQLDetailsRequest extends Request {
         }
 
         /**
-         * The start time of querying the SQL execution plan.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of querying the SQL execution plan.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -247,7 +272,11 @@ public class DescribeOasSQLDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

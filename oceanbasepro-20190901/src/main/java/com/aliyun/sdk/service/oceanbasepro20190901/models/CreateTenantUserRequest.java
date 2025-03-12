@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTenantUserRequest} extends {@link RequestModel}
  *
  * <p>CreateTenantUserRequest</p>
@@ -22,6 +28,10 @@ public class CreateTenantUserRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EncryptionType")
     private String encryptionType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GlobalPermissions")
+    private String globalPermissions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -57,6 +67,7 @@ public class CreateTenantUserRequest extends Request {
         this.regionId = builder.regionId;
         this.description = builder.description;
         this.encryptionType = builder.encryptionType;
+        this.globalPermissions = builder.globalPermissions;
         this.instanceId = builder.instanceId;
         this.roles = builder.roles;
         this.tenantId = builder.tenantId;
@@ -97,6 +108,13 @@ public class CreateTenantUserRequest extends Request {
      */
     public String getEncryptionType() {
         return this.encryptionType;
+    }
+
+    /**
+     * @return globalPermissions
+     */
+    public String getGlobalPermissions() {
+        return this.globalPermissions;
     }
 
     /**
@@ -145,6 +163,7 @@ public class CreateTenantUserRequest extends Request {
         private String regionId; 
         private String description; 
         private String encryptionType; 
+        private String globalPermissions; 
         private String instanceId; 
         private String roles; 
         private String tenantId; 
@@ -161,6 +180,7 @@ public class CreateTenantUserRequest extends Request {
             this.regionId = request.regionId;
             this.description = request.description;
             this.encryptionType = request.encryptionType;
+            this.globalPermissions = request.globalPermissions;
             this.instanceId = request.instanceId;
             this.roles = request.roles;
             this.tenantId = request.tenantId;
@@ -179,7 +199,10 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The description of the database.
+         * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test database</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -188,7 +211,10 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * 加密方式。
+         * <p>加密方式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAS</p>
          */
         public Builder encryptionType(String encryptionType) {
             this.putBodyParameter("EncryptionType", encryptionType);
@@ -197,7 +223,20 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * GlobalPermissions.
+         */
+        public Builder globalPermissions(String globalPermissions) {
+            this.putBodyParameter("GlobalPermissions", globalPermissions);
+            this.globalPermissions = globalPermissions;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -206,7 +245,10 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The role of the user account.  In Oracle mode, this parameter unspecified is left unspecified.  In MySQL mode, the super administrator account has ALL PRIVILEGES, and you can leave this parameter unspecified.  You need to specify the account information for a general user account. By default, the account information is a JSON array that contains the information of the role and the schema (Oracle mode) or database (MySQL mode).  Valid values: ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES. ReadOnly: a role that has only the read-only privilege SELECT. DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW. DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+         * <p>The role of the user account.  In Oracle mode, this parameter unspecified is left unspecified.  In MySQL mode, the super administrator account has ALL PRIVILEGES, and you can leave this parameter unspecified.  You need to specify the account information for a general user account. By default, the account information is a JSON array that contains the information of the role and the schema (Oracle mode) or database (MySQL mode).  Valid values: ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES. ReadOnly: a role that has only the read-only privilege SELECT. DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW. DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Database&quot;:&quot;oceanbase1&quot;,&quot;Role&quot;:&quot;readwrite&quot;},{&quot;Database&quot;:&quot;oceanbase2&quot;,&quot;Role&quot;:&quot;readonly&quot;}]</p>
          */
         public Builder roles(String roles) {
             this.putBodyParameter("Roles", roles);
@@ -215,7 +257,11 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -224,7 +270,11 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The name of the database account.  You cannot use reserved keywords, such as SYS and root.
+         * <p>The name of the database account.  You cannot use reserved keywords, such as SYS and root.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_test</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -233,7 +283,11 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =
+         * <p>The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ &amp; \ * ( ) _ + - =</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>!Aliyun4Oceanbase</p>
          */
         public Builder userPassword(String userPassword) {
             this.putBodyParameter("UserPassword", userPassword);
@@ -242,7 +296,11 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The type of the database account. Valid values: Admin: the super administrator account. Normal: a general account.
+         * <p>The type of the database account. Valid values: Admin: the super administrator account. Normal: a general account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

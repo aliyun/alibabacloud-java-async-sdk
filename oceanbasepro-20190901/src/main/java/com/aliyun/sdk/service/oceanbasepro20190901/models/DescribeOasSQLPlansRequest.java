@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasSQLPlansRequest} extends {@link RequestModel}
  *
  * <p>DescribeOasSQLPlansRequest</p>
@@ -199,7 +205,10 @@ public class DescribeOasSQLPlansRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -208,10 +217,14 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * Supported language. Valid values:
-         * <p>
-         * - zh-CN: Chinese
-         * - en-US: English
+         * <p>Supported language. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -220,7 +233,11 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -229,7 +246,10 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * DynamicSql.
+         * <p>Specifies whether the SQL statement is dynamic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dynamicSql(Boolean dynamicSql) {
             this.putBodyParameter("DynamicSql", dynamicSql);
@@ -238,9 +258,11 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * The end time of querying the SQL execution plan.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of querying the SQL execution plan.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T05:38:38Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -249,7 +271,11 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -258,7 +284,10 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * PlanUnionHash.
+         * <p>The unique identifier of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c4e9aaa797428df9a5a41828********</p>
          */
         public Builder planUnionHash(String planUnionHash) {
             this.putBodyParameter("PlanUnionHash", planUnionHash);
@@ -267,7 +296,10 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * ReturnBriefInfo.
+         * <p>Specifies whether to return an overview of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder returnBriefInfo(Boolean returnBriefInfo) {
             this.putBodyParameter("ReturnBriefInfo", returnBriefInfo);
@@ -276,7 +308,11 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * SQL ID.
+         * <p>SQL ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -285,9 +321,11 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * The start time of querying the SQL execution plan.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of querying the SQL execution plan.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -296,7 +334,11 @@ public class DescribeOasSQLPlansRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

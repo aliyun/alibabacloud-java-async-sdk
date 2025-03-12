@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSampleSqlRawTextsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSampleSqlRawTextsRequest</p>
@@ -19,6 +25,10 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DbName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicSql")
+    private Boolean dynamicSql;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -55,6 +65,7 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.dbName = builder.dbName;
+        this.dynamicSql = builder.dynamicSql;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.limit = builder.limit;
@@ -89,6 +100,13 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
      */
     public String getDbName() {
         return this.dbName;
+    }
+
+    /**
+     * @return dynamicSql
+     */
+    public Boolean getDynamicSql() {
+        return this.dynamicSql;
     }
 
     /**
@@ -143,6 +161,7 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeSampleSqlRawTextsRequest, Builder> {
         private String regionId; 
         private String dbName; 
+        private Boolean dynamicSql; 
         private String endTime; 
         private String instanceId; 
         private String limit; 
@@ -159,6 +178,7 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.dbName = request.dbName;
+            this.dynamicSql = request.dynamicSql;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.limit = request.limit;
@@ -178,7 +198,10 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -187,7 +210,19 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * DynamicSql.
+         */
+        public Builder dynamicSql(Boolean dynamicSql) {
+            this.putBodyParameter("DynamicSql", dynamicSql);
+            this.dynamicSql = dynamicSql;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T05:38:38Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -214,7 +249,11 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
         }
 
         /**
-         * SQL ID。
+         * <p>SQL ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -223,7 +262,10 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

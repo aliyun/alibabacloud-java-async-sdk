@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableCpuResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableCpuResourceRequest</p>
@@ -96,7 +102,10 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +114,11 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * The CPU resources available.
+         * <p>The CPU resources available.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -114,14 +127,15 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource
-         * &InstanceId=ob317v4uif****
-         * &TenantId=ob2mr3oae0****
-         * &ModifyType=update
-         * &Common request parameters
-         * ```
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;TenantId=ob2mr3oae0****
+         * &amp;ModifyType=update
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
@@ -130,9 +144,10 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **DescribeAvailableCpuResource**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeAvailableCpuResource</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

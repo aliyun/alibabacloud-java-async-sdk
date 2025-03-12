@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOutlineBindingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOutlineBindingResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The binding information.
+         * <p>The binding information.</p>
          */
         public Builder outlineBinding(OutlineBinding outlineBinding) {
             this.outlineBinding = outlineBinding;
@@ -57,7 +63,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOutlineBindingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOutlineBindingResponseBody</p>
+     */
     public static class OutlineBinding extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindIndex")
         private String bindIndex;
@@ -145,7 +160,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The bound index.
+             * <p>The bound index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIMARY</p>
              */
             public Builder bindIndex(String bindIndex) {
                 this.bindIndex = bindIndex;
@@ -153,7 +171,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             }
 
             /**
-             * The bound plan.
+             * <p>The bound plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHY_TABLE_SCAN | bmsql_order_line | 40 ******</p>
              */
             public Builder bindPlan(String bindPlan) {
                 this.bindPlan = bindPlan;
@@ -161,7 +182,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent tasks.
+             * <p>The maximum number of concurrent tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxConcurrent(Integer maxConcurrent) {
                 this.maxConcurrent = maxConcurrent;
@@ -169,7 +193,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             }
 
             /**
-             * OutlineID.
+             * <p>OutlineID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -177,7 +204,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             }
 
             /**
-             * 表名称
+             * <p>The name of the tenant. The tenant name must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>). It cannot be set to sys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster_info</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTenantModesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceTenantModesRequest</p>
@@ -68,7 +74,10 @@ public class DescribeInstanceTenantModesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,9 +86,11 @@ public class DescribeInstanceTenantModesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **DescribeInstanceTenantModes**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeInstanceTenantModes</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

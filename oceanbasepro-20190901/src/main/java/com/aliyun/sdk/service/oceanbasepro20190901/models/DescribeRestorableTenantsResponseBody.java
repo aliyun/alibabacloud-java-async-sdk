@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestorableTenantsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestorableTenantsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tenants")
-    private java.util.List < Tenants> tenants;
+    private java.util.List<Tenants> tenants;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -44,7 +50,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
     /**
      * @return tenants
      */
-    public java.util.List < Tenants> getTenants() {
+    public java.util.List<Tenants> getTenants() {
         return this.tenants;
     }
 
@@ -57,11 +63,14 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tenants> tenants; 
+        private java.util.List<Tenants> tenants; 
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,15 +78,18 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * Tenants.
+         * <p>The information about the tenants.</p>
          */
-        public Builder tenants(java.util.List < Tenants> tenants) {
+        public Builder tenants(java.util.List<Tenants> tenants) {
             this.tenants = tenants;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestorableTenantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestorableTenantsResponseBody</p>
+     */
     public static class BackupSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
@@ -153,7 +171,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             private String tenantId; 
 
             /**
-             * BackupSetId.
+             * <p>The ID of the full backup set used for restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bak-4n****gacpa8</p>
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -161,7 +182,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Checkpoint.
+             * <p>The checkpoint of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01&quot;T&quot;12:10:10.000&quot;Z&quot;</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -169,7 +193,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * SetId.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bak-xxxxx</p>
              */
             public Builder setId(String setId) {
                 this.setId = setId;
@@ -177,7 +204,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t5********</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -191,6 +221,12 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestorableTenantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestorableTenantsResponseBody</p>
+     */
     public static class TimeIntervalList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -254,7 +290,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * EndTime.
+             * <p>The end time of the restorable period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-13T02:43:03Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -262,7 +301,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * FromArchive.
+             * <p>Indicates whether the restore is based on archiving.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fromArchive(Boolean fromArchive) {
                 this.fromArchive = fromArchive;
@@ -270,7 +312,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the restorable period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-20T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -278,7 +323,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type of backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -292,12 +340,18 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestorableTenantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestorableTenantsResponseBody</p>
+     */
     public static class Tenants extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupBucketName")
         private String backupBucketName;
 
         @com.aliyun.core.annotation.NameInMap("BackupSets")
-        private java.util.List < BackupSets> backupSets;
+        private java.util.List<BackupSets> backupSets;
 
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -342,7 +396,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         private String tenantName;
 
         @com.aliyun.core.annotation.NameInMap("TimeIntervalList")
-        private java.util.List < TimeIntervalList> timeIntervalList;
+        private java.util.List<TimeIntervalList> timeIntervalList;
 
         @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Long unitNum;
@@ -390,7 +444,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         /**
          * @return backupSets
          */
-        public java.util.List < BackupSets> getBackupSets() {
+        public java.util.List<BackupSets> getBackupSets() {
             return this.backupSets;
         }
 
@@ -495,7 +549,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         /**
          * @return timeIntervalList
          */
-        public java.util.List < TimeIntervalList> getTimeIntervalList() {
+        public java.util.List<TimeIntervalList> getTimeIntervalList() {
             return this.timeIntervalList;
         }
 
@@ -515,7 +569,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backupBucketName; 
-            private java.util.List < BackupSets> backupSets; 
+            private java.util.List<BackupSets> backupSets; 
             private String clusterId; 
             private String clusterName; 
             private Long cpuNum; 
@@ -530,12 +584,15 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             private String tenantId; 
             private String tenantMode; 
             private String tenantName; 
-            private java.util.List < TimeIntervalList> timeIntervalList; 
+            private java.util.List<TimeIntervalList> timeIntervalList; 
             private Long unitNum; 
             private Long usedDisk; 
 
             /**
-             * BackupBucketName.
+             * <p>The name of the backup directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup</p>
              */
             public Builder backupBucketName(String backupBucketName) {
                 this.backupBucketName = backupBucketName;
@@ -543,15 +600,18 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSets.
+             * <p>The list of backup sets.</p>
              */
-            public Builder backupSets(java.util.List < BackupSets> backupSets) {
+            public Builder backupSets(java.util.List<BackupSets> backupSets) {
                 this.backupSets = backupSets;
                 return this;
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>objnf3b2****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -559,7 +619,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -567,7 +630,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * CpuNum.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuNum(Long cpuNum) {
                 this.cpuNum = cpuNum;
@@ -575,7 +641,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryNum.
+             * <p>The size of memory for the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder memoryNum(Long memoryNum) {
                 this.memoryNum = memoryNum;
@@ -583,7 +652,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>The backup method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logical</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -591,7 +663,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * ObRpmVersion.
+             * <p>The version of the OceanBase Database RPM package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.2.3.1-2022080510****</p>
              */
             public Builder obRpmVersion(String obRpmVersion) {
                 this.obRpmVersion = obRpmVersion;
@@ -599,7 +674,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * ObTenantId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tvd43v****</p>
              */
             public Builder obTenantId(String obTenantId) {
                 this.obTenantId = obTenantId;
@@ -607,7 +685,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * ObVersion.
+             * <p>The major version of OceanBase Database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.2.3.1</p>
              */
             public Builder obVersion(String obVersion) {
                 this.obVersion = obVersion;
@@ -615,7 +696,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRegion.
+             * <p>The region of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder sourceRegion(String sourceRegion) {
                 this.sourceRegion = sourceRegion;
@@ -623,7 +707,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantAlias.
+             * <p>The alias of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder tenantAlias(String tenantAlias) {
                 this.tenantAlias = tenantAlias;
@@ -631,7 +718,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantDataBackupRemainDays.
+             * <p>The remaining validity period, in days, of the backup data of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder tenantDataBackupRemainDays(Integer tenantDataBackupRemainDays) {
                 this.tenantDataBackupRemainDays = tenantDataBackupRemainDays;
@@ -639,7 +729,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ob317v4uif****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -647,7 +740,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantMode.
+             * <p>The mode of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oracle</p>
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -655,7 +751,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sbtest1</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -663,15 +762,18 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeIntervalList.
+             * <p>The list of restorable periods of the tenant.</p>
              */
-            public Builder timeIntervalList(java.util.List < TimeIntervalList> timeIntervalList) {
+            public Builder timeIntervalList(java.util.List<TimeIntervalList> timeIntervalList) {
                 this.timeIntervalList = timeIntervalList;
                 return this;
             }
 
             /**
-             * UnitNum.
+             * <p>The number of nodes of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unitNum(Long unitNum) {
                 this.unitNum = unitNum;
@@ -679,7 +781,10 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedDisk.
+             * <p>The size of disk space for the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder usedDisk(Long usedDisk) {
                 this.usedDisk = usedDisk;

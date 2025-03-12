@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProcessStatsCompositionResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return result.
+         * <p>The return result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
     public static class AllProcessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -265,7 +280,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * ClientIp.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -273,7 +291,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * <p>The type of the SQL statement being executed in the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -281,7 +302,13 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * CpuTime.
+             * <p>The CPU time spent on executing the current SQL statement, in seconds. </p>
+             * <blockquote>
+             * <p>This parameter is introduced since OceanBase Database V3.2.4 BP5.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuTime(Long cpuTime) {
                 this.cpuTime = cpuTime;
@@ -289,7 +316,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -297,7 +327,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * <p>The definition of this parameter varies based on whether the SQL statement is executed.</p>
+             * <ul>
+             * <li>When the request is accepted and the result is not returned to the client, this parameter indicates the time interval between the time when the request is accepted and the current time, in seconds.</li>
+             * <li>When the request is not accepted, this parameter indicates the duration for which the current status lasts, in seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -305,7 +342,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * PlanId.
+             * <p>The ID of the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1898</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -313,7 +353,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * ProxySessId.
+             * <p>The session ID of the client. If an OceanBase Database Proxy (ODP) is used for connection, the session ID of the ODP is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7521015416********</p>
              */
             public Builder proxySessId(String proxySessId) {
                 this.proxySessId = proxySessId;
@@ -321,7 +364,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * ServerIp.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -329,7 +375,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>322441****</p>
              */
             public Builder sessionId(Long sessionId) {
                 this.sessionId = sessionId;
@@ -337,7 +386,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * <p>The ID of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45CCBDC7DEBDCDAXXXXAFC********</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -345,7 +397,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * SqlText.
+             * <p>The SQL text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from c1 where id = 100;</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -353,7 +408,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -361,7 +419,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_mysql</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -369,7 +430,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The ID of the trace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YB420XXX128-00062XXXX8313XXX1-X-X</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -377,7 +441,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The user to which the session belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -391,6 +458,12 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
     public static class DataBaseStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
@@ -454,7 +527,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ActiveCount.
+             * <p>The number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -462,7 +538,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * MetricValue.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_database</p>
              */
             public Builder metricValue(String metricValue) {
                 this.metricValue = metricValue;
@@ -470,7 +549,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -478,7 +560,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The dimension. This value is fixed to database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -492,6 +577,12 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
     public static class SourceStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
@@ -555,7 +646,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ActiveCount.
+             * <p>The number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -563,7 +657,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * MetricValue.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder metricValue(String metricValue) {
                 this.metricValue = metricValue;
@@ -571,7 +668,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -579,7 +679,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The dimension. This value is fixed to client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -593,6 +696,12 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
     public static class UserStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
@@ -656,7 +765,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ActiveCount.
+             * <p>The number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -664,7 +776,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * MetricValue.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder metricValue(String metricValue) {
                 this.metricValue = metricValue;
@@ -672,7 +787,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -680,7 +798,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The dimension. This value is fixed to user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -694,15 +815,21 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
     public static class SessionStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataBaseStatistics")
-        private java.util.List < DataBaseStatistics> dataBaseStatistics;
+        private java.util.List<DataBaseStatistics> dataBaseStatistics;
 
         @com.aliyun.core.annotation.NameInMap("SourceStatistics")
-        private java.util.List < SourceStatistics> sourceStatistics;
+        private java.util.List<SourceStatistics> sourceStatistics;
 
         @com.aliyun.core.annotation.NameInMap("UserStatistics")
-        private java.util.List < UserStatistics> userStatistics;
+        private java.util.List<UserStatistics> userStatistics;
 
         private SessionStatistics(Builder builder) {
             this.dataBaseStatistics = builder.dataBaseStatistics;
@@ -721,49 +848,49 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return dataBaseStatistics
          */
-        public java.util.List < DataBaseStatistics> getDataBaseStatistics() {
+        public java.util.List<DataBaseStatistics> getDataBaseStatistics() {
             return this.dataBaseStatistics;
         }
 
         /**
          * @return sourceStatistics
          */
-        public java.util.List < SourceStatistics> getSourceStatistics() {
+        public java.util.List<SourceStatistics> getSourceStatistics() {
             return this.sourceStatistics;
         }
 
         /**
          * @return userStatistics
          */
-        public java.util.List < UserStatistics> getUserStatistics() {
+        public java.util.List<UserStatistics> getUserStatistics() {
             return this.userStatistics;
         }
 
         public static final class Builder {
-            private java.util.List < DataBaseStatistics> dataBaseStatistics; 
-            private java.util.List < SourceStatistics> sourceStatistics; 
-            private java.util.List < UserStatistics> userStatistics; 
+            private java.util.List<DataBaseStatistics> dataBaseStatistics; 
+            private java.util.List<SourceStatistics> sourceStatistics; 
+            private java.util.List<UserStatistics> userStatistics; 
 
             /**
-             * DataBaseStatistics.
+             * <p>The session data in the database dimension.</p>
              */
-            public Builder dataBaseStatistics(java.util.List < DataBaseStatistics> dataBaseStatistics) {
+            public Builder dataBaseStatistics(java.util.List<DataBaseStatistics> dataBaseStatistics) {
                 this.dataBaseStatistics = dataBaseStatistics;
                 return this;
             }
 
             /**
-             * SourceStatistics.
+             * <p>The session data in the client dimension.</p>
              */
-            public Builder sourceStatistics(java.util.List < SourceStatistics> sourceStatistics) {
+            public Builder sourceStatistics(java.util.List<SourceStatistics> sourceStatistics) {
                 this.sourceStatistics = sourceStatistics;
                 return this;
             }
 
             /**
-             * UserStatistics.
+             * <p>The session data in the user dimension.</p>
              */
-            public Builder userStatistics(java.util.List < UserStatistics> userStatistics) {
+            public Builder userStatistics(java.util.List<UserStatistics> userStatistics) {
                 this.userStatistics = userStatistics;
                 return this;
             }
@@ -775,12 +902,18 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveSessionCount")
         private Integer activeSessionCount;
 
         @com.aliyun.core.annotation.NameInMap("AllProcessList")
-        private java.util.List < AllProcessList> allProcessList;
+        private java.util.List<AllProcessList> allProcessList;
 
         @com.aliyun.core.annotation.NameInMap("IdleSessionCount")
         private Integer idleSessionCount;
@@ -821,7 +954,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return allProcessList
          */
-        public java.util.List < AllProcessList> getAllProcessList() {
+        public java.util.List<AllProcessList> getAllProcessList() {
             return this.allProcessList;
         }
 
@@ -855,14 +988,17 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer activeSessionCount; 
-            private java.util.List < AllProcessList> allProcessList; 
+            private java.util.List<AllProcessList> allProcessList; 
             private Integer idleSessionCount; 
             private String obVersion; 
             private SessionStatistics sessionStatistics; 
             private Integer totalSessionCount; 
 
             /**
-             * ActiveSessionCount.
+             * <p>The number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder activeSessionCount(Integer activeSessionCount) {
                 this.activeSessionCount = activeSessionCount;
@@ -870,15 +1006,18 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * AllProcessList.
+             * <p>The details of all sessions.</p>
              */
-            public Builder allProcessList(java.util.List < AllProcessList> allProcessList) {
+            public Builder allProcessList(java.util.List<AllProcessList> allProcessList) {
                 this.allProcessList = allProcessList;
                 return this;
             }
 
             /**
-             * IdleSessionCount.
+             * <p>The number of sessions in the SLEEP state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder idleSessionCount(Integer idleSessionCount) {
                 this.idleSessionCount = idleSessionCount;
@@ -886,7 +1025,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * ObVersion.
+             * <p>The version of OceanBase Database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.2.4</p>
              */
             public Builder obVersion(String obVersion) {
                 this.obVersion = obVersion;
@@ -894,7 +1036,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatistics.
+             * <p>The session data in different dimensions.</p>
              */
             public Builder sessionStatistics(SessionStatistics sessionStatistics) {
                 this.sessionStatistics = sessionStatistics;
@@ -902,7 +1044,10 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSessionCount.
+             * <p>The total number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSessionCount(Integer totalSessionCount) {
                 this.totalSessionCount = totalSessionCount;

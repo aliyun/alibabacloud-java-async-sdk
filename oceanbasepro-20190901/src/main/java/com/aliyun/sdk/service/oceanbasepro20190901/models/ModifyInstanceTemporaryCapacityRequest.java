@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceTemporaryCapacityRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceTemporaryCapacityRequest</p>
@@ -129,7 +135,10 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
         }
 
         /**
-         * The disk size. Unit: GB.
+         * <p>The disk size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder diskSize(String diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
@@ -138,7 +147,11 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -147,7 +160,11 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
         }
 
         /**
-         * Specification.
+         * <p>Specification.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oceanbase.cluster.i2.small</p>
          */
         public Builder spec(String spec) {
             this.putBodyParameter("Spec", spec);

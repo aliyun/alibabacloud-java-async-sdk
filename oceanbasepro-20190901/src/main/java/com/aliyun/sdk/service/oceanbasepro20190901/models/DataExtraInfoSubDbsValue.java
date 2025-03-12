@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataExtraInfoSubDbsValue} extends {@link TeaModel}
  *
  * <p>DataExtraInfoSubDbsValue</p>
@@ -30,7 +36,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
     private String sourceClientId;
 
     @com.aliyun.core.annotation.NameInMap("Tables")
-    private java.util.List < Tables> tables;
+    private java.util.List<Tables> tables;
 
     private DataExtraInfoSubDbsValue(Builder builder) {
         this.clusterName = builder.clusterName;
@@ -95,7 +101,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.List < Tables> getTables() {
+    public java.util.List<Tables> getTables() {
         return this.tables;
     }
 
@@ -106,7 +112,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
         private String databaseName; 
         private String mappingDatabaseName; 
         private String sourceClientId; 
-        private java.util.List < Tables> tables; 
+        private java.util.List<Tables> tables; 
 
         /**
          * ClusterName.
@@ -159,7 +165,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
         /**
          * Tables.
          */
-        public Builder tables(java.util.List < Tables> tables) {
+        public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
             return this;
         }
@@ -170,6 +176,12 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataExtraInfoSubDbsValue} extends {@link TeaModel}
+     *
+     * <p>DataExtraInfoSubDbsValue</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
@@ -471,6 +483,12 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataExtraInfoSubDbsValue} extends {@link TeaModel}
+     *
+     * <p>DataExtraInfoSubDbsValue</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
@@ -488,7 +506,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
         private String instance;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        private java.util.List<Columns> columns;
 
         private Tables(Builder builder) {
             this.tableId = builder.tableId;
@@ -545,7 +563,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -555,7 +573,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
             private String tableName; 
             private String mappingTableName; 
             private String instance; 
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
 
             /**
              * TableId.
@@ -600,7 +618,7 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }

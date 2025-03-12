@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSecurityConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSecurityConfigsResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
          */
         public Builder instanceSecurityConfigs(InstanceSecurityConfigs instanceSecurityConfigs) {
             this.instanceSecurityConfigs = instanceSecurityConfigs;
@@ -57,7 +63,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSecurityConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSecurityConfigsResponseBody</p>
+     */
     public static class SecurityConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigDescription")
         private String configDescription;
@@ -145,7 +160,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private String riskDescription; 
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check whether the scope of the cluster allowlist is too big</p>
              */
             public Builder configDescription(String configDescription) {
                 this.configDescription = configDescription;
@@ -153,7 +171,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The group of the check.
+             * <p>The group of the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WHITELIST</p>
              */
             public Builder configGroup(String configGroup) {
                 this.configGroup = configGroup;
@@ -161,7 +182,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the specific check item.
+             * <p>The name of the specific check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -169,7 +193,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether a risk is detected.
+             * <p>Specifies whether a risk is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder risk(Boolean risk) {
                 this.risk = risk;
@@ -177,7 +204,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Security recommendations.
+             * <p>Security recommendations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder riskDescription(String riskDescription) {
                 this.riskDescription = riskDescription;
@@ -191,6 +221,12 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSecurityConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSecurityConfigsResponseBody</p>
+     */
     public static class InstanceSecurityConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
@@ -202,7 +238,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityConfigs")
-        private java.util.List < SecurityConfigs> securityConfigs;
+        private java.util.List<SecurityConfigs> securityConfigs;
 
         @com.aliyun.core.annotation.NameInMap("TotalCheckCount")
         private Integer totalCheckCount;
@@ -251,7 +287,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         /**
          * @return securityConfigs
          */
-        public java.util.List < SecurityConfigs> getSecurityConfigs() {
+        public java.util.List<SecurityConfigs> getSecurityConfigs() {
             return this.securityConfigs;
         }
 
@@ -273,12 +309,15 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private String checkId; 
             private String checkTime; 
             private String instanceId; 
-            private java.util.List < SecurityConfigs> securityConfigs; 
+            private java.util.List<SecurityConfigs> securityConfigs; 
             private Integer totalCheckCount; 
             private Integer totalRiskCount; 
 
             /**
-             * The unique identifier of the check.
+             * <p>The unique identifier of the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -286,7 +325,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the check was performed.
+             * <p>The time when the check was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-07 15:30:00</p>
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -294,7 +336,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OceanBase cluster.
+             * <p>The ID of the OceanBase cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ob317v4uif****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -302,15 +347,18 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of check items.
+             * <p>The list of check items.</p>
              */
-            public Builder securityConfigs(java.util.List < SecurityConfigs> securityConfigs) {
+            public Builder securityConfigs(java.util.List<SecurityConfigs> securityConfigs) {
                 this.securityConfigs = securityConfigs;
                 return this;
             }
 
             /**
-             * The total number of security check items for the cluster.
+             * <p>The total number of security check items for the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCheckCount(Integer totalCheckCount) {
                 this.totalCheckCount = totalCheckCount;
@@ -318,7 +366,10 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of detected cluster security risks.
+             * <p>The total number of detected cluster security risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalRiskCount(Integer totalRiskCount) {
                 this.totalRiskCount = totalRiskCount;

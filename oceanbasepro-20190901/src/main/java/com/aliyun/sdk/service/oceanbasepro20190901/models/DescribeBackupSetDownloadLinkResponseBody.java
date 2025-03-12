@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSetDownloadLinkResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupSetDownloadLinkResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupSetDownloadLinkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSetDownloadLinkResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupRestorableTime")
         private String backupRestorableTime;
@@ -181,7 +196,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             private String urlExpiredTime; 
 
             /**
-             * The restorable time of the backup set.
+             * <p>The restorable time of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyy-MM-dd HH:mm:ss</p>
              */
             public Builder backupRestorableTime(String backupRestorableTime) {
                 this.backupRestorableTime = backupRestorableTime;
@@ -189,7 +207,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the target backup set.
+             * <p>The ID of the target backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bak-4n****gacpa8</p>
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -197,7 +218,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the download task corresponding to the target backup set was created.
+             * <p>The time when the download task corresponding to the target backup set was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-22T17:04:18</p>
              */
             public Builder downloadTaskCreateTime(String downloadTaskCreateTime) {
                 this.downloadTaskCreateTime = downloadTaskCreateTime;
@@ -205,7 +229,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the download task corresponding to the target backup set.
+             * <p>The ID of the download task corresponding to the target backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000002</p>
              */
             public Builder downloadTaskId(Long downloadTaskId) {
                 this.downloadTaskId = downloadTaskId;
@@ -213,7 +240,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the download task corresponding to the target backup set.
+             * <p>The status of the download task corresponding to the target backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder downloadTaskStatus(String downloadTaskStatus) {
                 this.downloadTaskStatus = downloadTaskStatus;
@@ -221,7 +251,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL.
+             * <p>The internal URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bucket.oss-region-internal.aliyuncs.com/xxxxx">http://bucket.oss-region-internal.aliyuncs.com/xxxxx</a></p>
              */
             public Builder internalUrl(String internalUrl) {
                 this.internalUrl = internalUrl;
@@ -229,7 +262,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the URL, in seconds.
+             * <p>The validity period of the URL, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder urlAliveTime(Long urlAliveTime) {
                 this.urlAliveTime = urlAliveTime;
@@ -237,7 +273,10 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the URL.
+             * <p>The expiration time of the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-04 17:39:49</p>
              */
             public Builder urlExpiredTime(String urlExpiredTime) {
                 this.urlExpiredTime = urlExpiredTime;

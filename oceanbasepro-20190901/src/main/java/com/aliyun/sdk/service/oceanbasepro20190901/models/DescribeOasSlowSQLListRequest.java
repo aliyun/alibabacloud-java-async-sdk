@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasSlowSQLListRequest} extends {@link RequestModel}
  *
  * <p>DescribeOasSlowSQLListRequest</p>
@@ -281,7 +287,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -290,7 +299,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The language of the response.
+         * <p>The language of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -299,7 +311,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -317,9 +332,11 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The end time of querying slow SQL historical parameters.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of querying slow SQL historical parameters.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T05:38:38Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -328,7 +345,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * All parameters are referenced by the symbol @. For a list of available parameters, refer to the returned parameters in [Query performance indicators of an SQL statement](https://en.oceanbase.com/docs/community-ocp-en-10000000000840290).
+         * <p>All parameters are referenced by the symbol @. For a list of available parameters, refer to the returned parameters in <a href="https://en.oceanbase.com/docs/community-ocp-en-10000000000840290">Query performance indicators of an SQL statement</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@avgCpuTime &gt; 20 and @executions &gt; 100</p>
          */
         public Builder filterCondition(String filterCondition) {
             this.putBodyParameter("FilterCondition", filterCondition);
@@ -337,7 +357,11 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -355,7 +379,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The IP of the database node.
+         * <p>The IP of the database node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp18qljorblo8es*****</p>
          */
         public Builder nodeIp(String nodeIp) {
             this.putBodyParameter("NodeIp", nodeIp);
@@ -364,7 +391,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putBodyParameter("SearchKeyWord", searchKeyWord);
@@ -373,7 +403,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search parameter.
+         * <p>The search parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder searchParam(String searchParam) {
             this.putBodyParameter("SearchParam", searchParam);
@@ -382,7 +415,11 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search rule.
+         * <p>The search rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         public Builder searchRule(String searchRule) {
             this.putBodyParameter("SearchRule", searchRule);
@@ -391,7 +428,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search value.
+         * <p>The search value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder searchValue(String searchValue) {
             this.putBodyParameter("SearchValue", searchValue);
@@ -400,7 +440,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * SQL ID, the unique identifier of the SQL.
+         * <p>SQL ID, the unique identifier of the SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -409,7 +452,10 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * Max length of the returned SQL text.
+         * <p>Max length of the returned SQL text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65535</p>
          */
         public Builder sqlTextLength(Long sqlTextLength) {
             this.putBodyParameter("SqlTextLength", sqlTextLength);
@@ -418,9 +464,11 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The start time of querying slow SQL historical parameters.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of querying slow SQL historical parameters.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -429,7 +477,11 @@ public class DescribeOasSlowSQLListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

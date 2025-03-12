@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDatabaseRequest} extends {@link RequestModel}
  *
  * <p>CreateDatabaseRequest</p>
@@ -164,7 +170,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -173,9 +182,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The encoding standard of the database.
-         * <p>
-         * For more information, see the Charset field returned by the DescribeCharset operation.
+         * <p>The encoding standard of the database.
+         * For more information, see the Charset field returned by the DescribeCharset operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4_general_ci</p>
          */
         public Builder collation(String collation) {
             this.putBodyParameter("Collation", collation);
@@ -184,7 +195,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud CLI
+         * <p>Alibaba Cloud CLI</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms_pre</p>
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -193,9 +208,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **CreateDatabase**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>CreateDatabase</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test database</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -204,7 +220,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
          */
         public Builder encoding(String encoding) {
             this.putBodyParameter("Encoding", encoding);
@@ -213,7 +233,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The collation.
+         * <p>The collation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -222,9 +246,11 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the database.   
-         * <p>
-         * You cannot use reserved keywords, such as test and mysql.
+         * <p>The name of the database.<br>You cannot use reserved keywords, such as test and mysql.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

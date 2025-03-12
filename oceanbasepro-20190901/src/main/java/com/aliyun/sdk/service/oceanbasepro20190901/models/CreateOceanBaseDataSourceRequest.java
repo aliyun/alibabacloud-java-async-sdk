@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOceanBaseDataSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateOceanBaseDataSourceRequest</p>
@@ -354,7 +360,10 @@ public class CreateOceanBaseDataSourceRequest extends Request {
         }
 
         /**
-         * LogProxy IP。
+         * <p>LogProxy IP。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder logProxyIp(String logProxyIp) {
             this.putBodyParameter("LogProxyIp", logProxyIp);
@@ -372,7 +381,10 @@ public class CreateOceanBaseDataSourceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -381,7 +393,10 @@ public class CreateOceanBaseDataSourceRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pass_word</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -399,7 +414,10 @@ public class CreateOceanBaseDataSourceRequest extends Request {
         }
 
         /**
-         * Tenant.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tenant_name</p>
          */
         public Builder tenant(String tenant) {
             this.putBodyParameter("Tenant", tenant);
@@ -408,7 +426,10 @@ public class CreateOceanBaseDataSourceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OB_MYSQL_VPC</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -417,7 +438,10 @@ public class CreateOceanBaseDataSourceRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_name</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

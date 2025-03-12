@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataExtraInfoSubCondsValue} extends {@link TeaModel}
  *
  * <p>DataExtraInfoSubCondsValue</p>
@@ -30,10 +36,10 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
     private String whereClause;
 
     @com.aliyun.core.annotation.NameInMap("FilterColumns")
-    private java.util.List < String > filterColumns;
+    private java.util.List<String> filterColumns;
 
     @com.aliyun.core.annotation.NameInMap("ShardColumns")
-    private java.util.List < String > shardColumns;
+    private java.util.List<String> shardColumns;
 
     @com.aliyun.core.annotation.NameInMap("LogicTableId")
     private String logicTableId;
@@ -111,14 +117,14 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
     /**
      * @return filterColumns
      */
-    public java.util.List < String > getFilterColumns() {
+    public java.util.List<String> getFilterColumns() {
         return this.filterColumns;
     }
 
     /**
      * @return shardColumns
      */
-    public java.util.List < String > getShardColumns() {
+    public java.util.List<String> getShardColumns() {
         return this.shardColumns;
     }
 
@@ -150,8 +156,8 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
         private String tableName; 
         private String destName; 
         private String whereClause; 
-        private java.util.List < String > filterColumns; 
-        private java.util.List < String > shardColumns; 
+        private java.util.List<String> filterColumns; 
+        private java.util.List<String> shardColumns; 
         private String logicTableId; 
         private String sourceEndpointId; 
         private String sourceClientId; 
@@ -207,7 +213,7 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
         /**
          * FilterColumns.
          */
-        public Builder filterColumns(java.util.List < String > filterColumns) {
+        public Builder filterColumns(java.util.List<String> filterColumns) {
             this.filterColumns = filterColumns;
             return this;
         }
@@ -215,7 +221,7 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
         /**
          * ShardColumns.
          */
-        public Builder shardColumns(java.util.List < String > shardColumns) {
+        public Builder shardColumns(java.util.List<String> shardColumns) {
             this.shardColumns = shardColumns;
             return this;
         }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantUserPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyTenantUserPasswordRequest</p>
@@ -136,7 +142,10 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * 加密方式。
+         * <p>加密方式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         public Builder encryptionType(String encryptionType) {
             this.putBodyParameter("EncryptionType", encryptionType);
@@ -145,7 +154,10 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -154,15 +166,17 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=ModifyTenantUserPassword
-         * &UserName=pay_test
-         * &TenantId=ob2mr3oae0****
-         * &UserPassword=!Aliyun4Oceanbase
-         * &InstanceId=ob317v4uif****
-         * &Common request parameters
-         * ```
+         * <pre><code>http(s)://[Endpoint]/?Action=ModifyTenantUserPassword
+         * &amp;UserName=pay_test
+         * &amp;TenantId=ob2mr3oae0****
+         * &amp;UserPassword=!Aliyun4Oceanbase
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;Common request parameters
+         * </code></pre>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -171,7 +185,11 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_test</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -180,7 +198,11 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * You can call this operation to change the logon password of a specified account in a tenant.
+         * <p>You can call this operation to change the logon password of a specified account in a tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>!Aliyun4Oceanbase</p>
          */
         public Builder userPassword(String userPassword) {
             this.putBodyParameter("UserPassword", userPassword);

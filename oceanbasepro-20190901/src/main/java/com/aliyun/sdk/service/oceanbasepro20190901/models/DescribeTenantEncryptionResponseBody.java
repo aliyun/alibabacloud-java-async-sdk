@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantEncryptionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantEncryptionResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TenantEncryptions")
-    private java.util.List < TenantEncryptions> tenantEncryptions;
+    private java.util.List<TenantEncryptions> tenantEncryptions;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -44,7 +50,7 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
     /**
      * @return tenantEncryptions
      */
-    public java.util.List < TenantEncryptions> getTenantEncryptions() {
+    public java.util.List<TenantEncryptions> getTenantEncryptions() {
         return this.tenantEncryptions;
     }
 
@@ -57,7 +63,7 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TenantEncryptions> tenantEncryptions; 
+        private java.util.List<TenantEncryptions> tenantEncryptions; 
         private Integer totalCount; 
 
         /**
@@ -71,7 +77,7 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
         /**
          * TenantEncryptions.
          */
-        public Builder tenantEncryptions(java.util.List < TenantEncryptions> tenantEncryptions) {
+        public Builder tenantEncryptions(java.util.List<TenantEncryptions> tenantEncryptions) {
             this.tenantEncryptions = tenantEncryptions;
             return this;
         }
@@ -90,6 +96,12 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantEncryptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantEncryptionResponseBody</p>
+     */
     public static class TenantEncryptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableEncryption")
         private Boolean enableEncryption;

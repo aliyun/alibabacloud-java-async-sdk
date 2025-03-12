@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasSQLDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOasSQLDetailsResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of the SQL execution plan.
+         * <p>The list of the SQL execution plan.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOasSQLDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasSQLDetailsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
@@ -81,7 +96,7 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
         private String statement;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < String > tables;
+        private java.util.List<String> tables;
 
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
@@ -126,7 +141,7 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
@@ -141,11 +156,14 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
             private String dbName; 
             private String fulltext; 
             private String statement; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
             private String userName; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -153,7 +171,10 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SQL text.
+             * <p>SQL text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select a from b</p>
              */
             public Builder fulltext(String fulltext) {
                 this.fulltext = fulltext;
@@ -161,7 +182,10 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Parameterized text.
+             * <p>Parameterized text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select a from b</p>
              */
             public Builder statement(String statement) {
                 this.statement = statement;
@@ -169,15 +193,18 @@ public class DescribeOasSQLDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The table name related to the SQL.
+             * <p>The table name related to the SQL.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

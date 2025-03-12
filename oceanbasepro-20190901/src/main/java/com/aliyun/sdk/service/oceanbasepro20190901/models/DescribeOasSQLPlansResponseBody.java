@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasSQLPlansResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOasSQLPlansResponseBody</p>
  */
 public class DescribeOasSQLPlansResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +51,22 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The list of SQL execution plan.
+         * <p>The list of SQL execution plan.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOasSQLPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasSQLPlansResponseBody</p>
+     */
     public static class PlanExplain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlanJsonString")
         private String planJsonString;
@@ -97,7 +112,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             private String planJsonString; 
 
             /**
-             * JSON string of the SQL execution plan.
+             * <p>JSON string of the SQL execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;RootOperations&quot;:[{&quot;Children\</p>
              */
             public Builder planJsonString(String planJsonString) {
                 this.planJsonString = planJsonString;
@@ -111,6 +129,12 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOasSQLPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasSQLPlansResponseBody</p>
+     */
     public static class Plans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgApplicationWaitTime")
         private Double avgApplicationWaitTime;
@@ -546,7 +570,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * Average Application event waiting time (in milliseconds) during the execution period.
+             * <p>Average Application event waiting time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgApplicationWaitTime(Double avgApplicationWaitTime) {
                 this.avgApplicationWaitTime = avgApplicationWaitTime;
@@ -554,7 +581,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Average cache read count during the execution period.
+             * <p>Average cache read count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30137.03</p>
              */
             public Builder avgBufferGets(Double avgBufferGets) {
                 this.avgBufferGets = avgBufferGets;
@@ -562,7 +592,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Average Concurrency event waiting time (in milliseconds) during the execution period.
+             * <p>Average Concurrency event waiting time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgConcurrencyWaitTime(Double avgConcurrencyWaitTime) {
                 this.avgConcurrencyWaitTime = avgConcurrencyWaitTime;
@@ -570,7 +603,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Average CPU time (in milliseconds) during the execution period.
+             * <p>Average CPU time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1875.34</p>
              */
             public Builder avgCpuTime(Double avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -578,7 +614,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The average physical read count during the execution period.
+             * <p>The average physical read count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgDiskReads(Double avgDiskReads) {
                 this.avgDiskReads = avgDiskReads;
@@ -586,7 +625,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The average physical write count during the execution period.
+             * <p>The average physical write count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgDiskWrites(Double avgDiskWrites) {
                 this.avgDiskWrites = avgDiskWrites;
@@ -594,7 +636,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Average interval waiting time (in milliseconds) during the execution period.
+             * <p>Average interval waiting time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1876.78</p>
              */
             public Builder avgElapsedTime(Double avgElapsedTime) {
                 this.avgElapsedTime = avgElapsedTime;
@@ -602,7 +647,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Average row processing waiting time (in milliseconds) during the execution period.
+             * <p>Average row processing waiting time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder avgRowProcessed(Double avgRowProcessed) {
                 this.avgRowProcessed = avgRowProcessed;
@@ -610,7 +658,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Average UserIo event waiting time (in milliseconds) during the execution period.
+             * <p>Average UserIo event waiting time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgUserIoWaitTime(Double avgUserIoWaitTime) {
                 this.avgUserIoWaitTime = avgUserIoWaitTime;
@@ -618,7 +669,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Collection time.
+             * <p>Collection time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684368****00000</p>
              */
             public Builder collectTimeUs(Long collectTimeUs) {
                 this.collectTimeUs = collectTimeUs;
@@ -626,7 +680,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage of delayed long-running queries.
+             * <p>Percentage of delayed long-running queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder delayedLargeQueryPercentage(Double delayedLargeQueryPercentage) {
                 this.delayedLargeQueryPercentage = delayedLargeQueryPercentage;
@@ -634,7 +691,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The average execution count per second during the execution period.
+             * <p>The average execution count per second during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.31</p>
              */
             public Builder execPs(Double execPs) {
                 this.execPs = execPs;
@@ -642,7 +702,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of executions during the execution period.
+             * <p>The total number of executions during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -650,7 +713,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * First time to load the plan.
+             * <p>First time to load the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-12T04:46:38Z</p>
              */
             public Builder firstLoadTime(String firstLoadTime) {
                 this.firstLoadTime = firstLoadTime;
@@ -658,7 +724,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * First loading time.
+             * <p>First loading time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1684****03289441</p>
              */
             public Builder firstLoadTimeUs(Long firstLoadTimeUs) {
                 this.firstLoadTimeUs = firstLoadTimeUs;
@@ -666,7 +735,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to hit the diagnosis.
+             * <p>Whether to hit the diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hitDiagnosis(Boolean hitDiagnosis) {
                 this.hitDiagnosis = hitDiagnosis;
@@ -674,7 +746,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Hit rate.
+             * <p>Hit rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder hitPercentage(Double hitPercentage) {
                 this.hitPercentage = hitPercentage;
@@ -682,7 +757,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage of completed long-running queries.
+             * <p>Percentage of completed long-running queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder largeQueryPercentage(Double largeQueryPercentage) {
                 this.largeQueryPercentage = largeQueryPercentage;
@@ -690,7 +768,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Merge version.
+             * <p>Merge version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>513</p>
              */
             public Builder mergedVersion(Long mergedVersion) {
                 this.mergedVersion = mergedVersion;
@@ -698,7 +779,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Database ID.
+             * <p>Database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11006****828</p>
              */
             public Builder obDbId(Long obDbId) {
                 this.obDbId = obDbId;
@@ -706,7 +790,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Server ID.
+             * <p>Server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder obServerId(Long obServerId) {
                 this.obServerId = obServerId;
@@ -714,7 +801,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The outline_data parameter of the SQL execution plan.
+             * <p>The outline_data parameter of the SQL execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/*+ BEGIN_OUTLINE_DATA INDEX(@&quot;SEL$1\</p>
              */
             public Builder outlineData(String outlineData) {
                 this.outlineData = outlineData;
@@ -722,7 +812,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Outline ID.
+             * <p>Outline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -730,7 +823,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The internal identifier of the SQL execution plan in the diagnostic system.
+             * <p>The internal identifier of the SQL execution plan in the diagnostic system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-86290582****886880</p>
              */
             public Builder planHash(String planHash) {
                 this.planHash = planHash;
@@ -738,7 +834,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plan.
+             * <p>The ID of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>590****</p>
              */
             public Builder planId(Long planId) {
                 this.planId = planId;
@@ -746,7 +845,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Plan size.
+             * <p>Plan size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10****</p>
              */
             public Builder planSize(Long planSize) {
                 this.planSize = planSize;
@@ -754,7 +856,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Plan type, including LOCAL, REMOTE, DIST.
+             * <p>Plan type, including LOCAL, REMOTE, DIST.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOCAL</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -762,7 +867,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The internal unique identifier of the SQL execution plan in the diagnostic system.
+             * <p>The internal unique identifier of the SQL execution plan in the diagnostic system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;52c7c53<strong><strong>53e61b3f7586b17</strong></strong>ad&quot;</p>
              */
             public Builder planUnionHash(String planUnionHash) {
                 this.planUnionHash = planUnionHash;
@@ -770,7 +878,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Schema version.
+             * <p>Schema version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16838****3550464</p>
              */
             public Builder schemaVersion(Long schemaVersion) {
                 this.schemaVersion = schemaVersion;
@@ -778,7 +889,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The server where the SQL is executed.
+             * <p>The server where the SQL is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1db1a9us038****jio</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -786,7 +900,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backend server instance.
+             * <p>The ID of the backend server instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder serverId(Long serverId) {
                 this.serverId = serverId;
@@ -794,7 +911,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * <p>SQL ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46939C87ECA<strong><strong>95ED0FF64F44B</strong></strong></p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -802,7 +922,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Whether a full table scan is performed.
+             * <p>Whether a full table scan is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder tableScan(Boolean tableScan) {
                 this.tableScan = tableScan;
@@ -810,7 +933,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage of timeouts.
+             * <p>Percentage of timeouts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder timeoutPercentage(Double timeoutPercentage) {
                 this.timeoutPercentage = timeoutPercentage;
@@ -818,7 +944,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the plan.
+             * <p>The unique identifier of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAAAAAAI<strong><strong>AAFoT2QAF--7W</strong></strong></p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -832,6 +961,12 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOasSQLPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasSQLPlansResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
@@ -873,7 +1008,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         private String planUnionHash;
 
         @com.aliyun.core.annotation.NameInMap("Plans")
-        private java.util.List < Plans> plans;
+        private java.util.List<Plans> plans;
 
         @com.aliyun.core.annotation.NameInMap("QuerySql")
         private String querySql;
@@ -1002,7 +1137,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         /**
          * @return plans
          */
-        public java.util.List < Plans> getPlans() {
+        public java.util.List<Plans> getPlans() {
             return this.plans;
         }
 
@@ -1034,12 +1169,15 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             private String planHash; 
             private String planType; 
             private String planUnionHash; 
-            private java.util.List < Plans> plans; 
+            private java.util.List<Plans> plans; 
             private String querySql; 
             private Boolean tableScan; 
 
             /**
-             * Average CPU time (in milliseconds) during the execution period.
+             * <p>Average CPU time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1875.34</p>
              */
             public Builder avgCpuTime(Double avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -1047,7 +1185,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to bind the execution plan.
+             * <p>Whether to bind the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bounded(Boolean bounded) {
                 this.bounded = bounded;
@@ -1055,7 +1196,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Execution count.
+             * <p>Execution count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -1063,7 +1207,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * First loading time.
+             * <p>First loading time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-12T04:46:38Z</p>
              */
             public Builder firstLoadTime(String firstLoadTime) {
                 this.firstLoadTime = firstLoadTime;
@@ -1071,7 +1218,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to hit the diagnosis.
+             * <p>Whether to hit the diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hitDiagnosis(Boolean hitDiagnosis) {
                 this.hitDiagnosis = hitDiagnosis;
@@ -1079,7 +1229,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Hit rate.
+             * <p>Hit rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder hitPercentage(Double hitPercentage) {
                 this.hitPercentage = hitPercentage;
@@ -1087,7 +1240,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Merge version.
+             * <p>Merge version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>513</p>
              */
             public Builder mergedVersion(Long mergedVersion) {
                 this.mergedVersion = mergedVersion;
@@ -1095,7 +1251,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Outline ID.
+             * <p>The ID of the outline used by the execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3********</p>
              */
             public Builder outlineId(String outlineId) {
                 this.outlineId = outlineId;
@@ -1103,7 +1262,14 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * OutlineStatus.
+             * <p>The outline status of the execution plan. Valid values:</p>
+             * <ul>
+             * <li><strong>Effective</strong>: indicates that the outline_data and outlIne_content fields exactly match with each other. </li>
+             * <li><strong>Unknown</strong>: indicates that the outline status is unknown.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Effective</p>
              */
             public Builder outlineStatus(String outlineStatus) {
                 this.outlineStatus = outlineStatus;
@@ -1111,7 +1277,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Execution plan.
+             * <p>Execution plan.</p>
              */
             public Builder planExplain(PlanExplain planExplain) {
                 this.planExplain = planExplain;
@@ -1119,7 +1285,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The internal identifier of the SQL execution plan in the diagnostic system.
+             * <p>The internal identifier of the SQL execution plan in the diagnostic system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758<strong><strong>24913166</strong></strong></p>
              */
             public Builder planHash(String planHash) {
                 this.planHash = planHash;
@@ -1127,7 +1296,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Execution plan type.
+             * <p>Execution plan type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOCAL</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -1135,7 +1307,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The internal unique identifier of the SQL execution plan in the diagnostic system.
+             * <p>The internal unique identifier of the SQL execution plan in the diagnostic system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;52c7c53<strong><strong>53e61b3f7586b17</strong></strong>ad&quot;</p>
              */
             public Builder planUnionHash(String planUnionHash) {
                 this.planUnionHash = planUnionHash;
@@ -1143,15 +1318,18 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the execution plan.
+             * <p>The list of the execution plan.</p>
              */
-            public Builder plans(java.util.List < Plans> plans) {
+            public Builder plans(java.util.List<Plans> plans) {
                 this.plans = plans;
                 return this;
             }
 
             /**
-             * The SQL for the query.
+             * <p>The SQL for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;select 1 from t&quot;</p>
              */
             public Builder querySql(String querySql) {
                 this.querySql = querySql;
@@ -1159,7 +1337,10 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Whether a full table scan is performed.
+             * <p>Indicates whether full table scan is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder tableScan(Boolean tableScan) {
                 this.tableScan = tableScan;

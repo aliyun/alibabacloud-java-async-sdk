@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTagNameResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTagNameResponseBody</p>
@@ -49,7 +55,10 @@ public class ModifyTagNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The tag group renaming result.
+         * <p>The tag group renaming result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update tag name success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -57,7 +66,10 @@ public class ModifyTagNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C91F7BA-xxxx-xxxx-xxxx-846ECA1A9908</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

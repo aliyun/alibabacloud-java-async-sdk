@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTenantUserResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTenantUserResponseBody</p>
@@ -49,7 +55,10 @@ public class CreateTenantUserResponseBody extends TeaModel {
         private TenantUser tenantUser; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class CreateTenantUserResponseBody extends TeaModel {
         }
 
         /**
-         * The list of database accounts in the tenant.
+         * <p>The list of database accounts in the tenant.</p>
          */
         public Builder tenantUser(TenantUser tenantUser) {
             this.tenantUser = tenantUser;
@@ -70,6 +79,12 @@ public class CreateTenantUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTenantUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTenantUserResponseBody</p>
+     */
     public static class Roles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -131,9 +146,18 @@ public class CreateTenantUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTenantUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTenantUserResponseBody</p>
+     */
     public static class TenantUser extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GlobalPermissions")
+        private String globalPermissions;
+
         @com.aliyun.core.annotation.NameInMap("Roles")
-        private java.util.List < Roles> roles;
+        private java.util.List<Roles> roles;
 
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
@@ -145,6 +169,7 @@ public class CreateTenantUserResponseBody extends TeaModel {
         private String userType;
 
         private TenantUser(Builder builder) {
+            this.globalPermissions = builder.globalPermissions;
             this.roles = builder.roles;
             this.userName = builder.userName;
             this.userStatus = builder.userStatus;
@@ -160,9 +185,16 @@ public class CreateTenantUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return globalPermissions
+         */
+        public String getGlobalPermissions() {
+            return this.globalPermissions;
+        }
+
+        /**
          * @return roles
          */
-        public java.util.List < Roles> getRoles() {
+        public java.util.List<Roles> getRoles() {
             return this.roles;
         }
 
@@ -188,15 +220,24 @@ public class CreateTenantUserResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Roles> roles; 
+            private String globalPermissions; 
+            private java.util.List<Roles> roles; 
             private String userName; 
             private String userStatus; 
             private String userType; 
 
             /**
+             * GlobalPermissions.
+             */
+            public Builder globalPermissions(String globalPermissions) {
+                this.globalPermissions = globalPermissions;
+                return this;
+            }
+
+            /**
              * Roles.
              */
-            public Builder roles(java.util.List < Roles> roles) {
+            public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
                 return this;
             }

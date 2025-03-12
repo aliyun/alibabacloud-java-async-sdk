@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantUserDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyTenantUserDescriptionRequest</p>
@@ -122,9 +128,11 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **ModifyTenantUserDescription**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyTenantUserDescription</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test database</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -133,7 +141,11 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -142,7 +154,11 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -151,7 +167,11 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the database.
+         * <p>The description of the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_test</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIpGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIpGroupsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityIpGroups")
-    private java.util.List < SecurityIpGroups> securityIpGroups;
+    private java.util.List<SecurityIpGroups> securityIpGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -44,7 +50,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     /**
      * @return securityIpGroups
      */
-    public java.util.List < SecurityIpGroups> getSecurityIpGroups() {
+    public java.util.List<SecurityIpGroups> getSecurityIpGroups() {
         return this.securityIpGroups;
     }
 
@@ -57,11 +63,14 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityIpGroups> securityIpGroups; 
+        private java.util.List<SecurityIpGroups> securityIpGroups; 
         private Integer totalCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,13 +80,16 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
         /**
          * SecurityIpGroups.
          */
-        public Builder securityIpGroups(java.util.List < SecurityIpGroups> securityIpGroups) {
+        public Builder securityIpGroups(java.util.List<SecurityIpGroups> securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
             return this;
         }
 
         /**
-         * Example 1
+         * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIpGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpGroupsResponseBody</p>
+     */
     public static class SecurityIpGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityIpGroupName")
         private String securityIpGroupName;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableSpecResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableSpecResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableSpecResponseBody</p>
+     */
     public static class DiskSizeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private Long max;
@@ -151,6 +163,12 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableSpecResponseBody</p>
+     */
     public static class LogDiskSizeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private Long max;
@@ -232,12 +250,18 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableSpecResponseBody</p>
+     */
     public static class AvailableSpecifications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSizeRange")
         private DiskSizeRange diskSizeRange;
 
         @com.aliyun.core.annotation.NameInMap("DiskTypes")
-        private java.util.List < String > diskTypes;
+        private java.util.List<String> diskTypes;
 
         @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
@@ -246,7 +270,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         private LogDiskSizeRange logDiskSizeRange;
 
         @com.aliyun.core.annotation.NameInMap("NodeNum")
-        private java.util.List < Integer > nodeNum;
+        private java.util.List<Integer> nodeNum;
 
         @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
@@ -278,7 +302,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         /**
          * @return diskTypes
          */
-        public java.util.List < String > getDiskTypes() {
+        public java.util.List<String> getDiskTypes() {
             return this.diskTypes;
         }
 
@@ -299,7 +323,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         /**
          * @return nodeNum
          */
-        public java.util.List < Integer > getNodeNum() {
+        public java.util.List<Integer> getNodeNum() {
             return this.nodeNum;
         }
 
@@ -312,10 +336,10 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
         public static final class Builder {
             private DiskSizeRange diskSizeRange; 
-            private java.util.List < String > diskTypes; 
+            private java.util.List<String> diskTypes; 
             private String instanceClass; 
             private LogDiskSizeRange logDiskSizeRange; 
-            private java.util.List < Integer > nodeNum; 
+            private java.util.List<Integer> nodeNum; 
             private String spec; 
 
             /**
@@ -329,7 +353,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
             /**
              * DiskTypes.
              */
-            public Builder diskTypes(java.util.List < String > diskTypes) {
+            public Builder diskTypes(java.util.List<String> diskTypes) {
                 this.diskTypes = diskTypes;
                 return this;
             }
@@ -353,7 +377,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
             /**
              * NodeNum.
              */
-            public Builder nodeNum(java.util.List < Integer > nodeNum) {
+            public Builder nodeNum(java.util.List<Integer> nodeNum) {
                 this.nodeNum = nodeNum;
                 return this;
             }
@@ -373,9 +397,15 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableSpecResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableSpecifications")
-        private java.util.List < AvailableSpecifications> availableSpecifications;
+        private java.util.List<AvailableSpecifications> availableSpecifications;
 
         private Data(Builder builder) {
             this.availableSpecifications = builder.availableSpecifications;
@@ -392,17 +422,17 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         /**
          * @return availableSpecifications
          */
-        public java.util.List < AvailableSpecifications> getAvailableSpecifications() {
+        public java.util.List<AvailableSpecifications> getAvailableSpecifications() {
             return this.availableSpecifications;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableSpecifications> availableSpecifications; 
+            private java.util.List<AvailableSpecifications> availableSpecifications; 
 
             /**
              * AvailableSpecifications.
              */
-            public Builder availableSpecifications(java.util.List < AvailableSpecifications> availableSpecifications) {
+            public Builder availableSpecifications(java.util.List<AvailableSpecifications> availableSpecifications) {
                 this.availableSpecifications = availableSpecifications;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantUserStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyTenantUserStatusRequest</p>
@@ -113,7 +119,10 @@ public class ModifyTenantUserStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,9 +131,11 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **ModifyTenantUserStatus**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyTenantUserStatus</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -133,7 +144,11 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -142,7 +157,11 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * The list of database accounts in the tenant.
+         * <p>The list of database accounts in the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_test</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -151,10 +170,15 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * The status of the database account. Valid values:   
-         * <p>
-         * - Locked: The account is locked. 
-         * - Online: The account is unlocked.
+         * <p>The status of the database account. Valid values:   </p>
+         * <ul>
+         * <li>Locked: The account is locked. </li>
+         * <li>Online: The account is unlocked.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the tenant.</p>
          */
         public Builder userStatus(String userStatus) {
             this.putBodyParameter("UserStatus", userStatus);

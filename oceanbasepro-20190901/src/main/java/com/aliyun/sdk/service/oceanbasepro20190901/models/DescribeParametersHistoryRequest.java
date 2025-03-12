@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersHistoryRequest} extends {@link RequestModel}
  *
  * <p>DescribeParametersHistoryRequest</p>
@@ -166,9 +172,11 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * The type of the parameter.   
-         * <p>
-         * Valid values: CLUSTER and TENANT.
+         * <p>The type of the parameter.<br>Valid values: CLUSTER and TENANT.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
          */
         public Builder dimension(String dimension) {
             this.putBodyParameter("Dimension", dimension);
@@ -177,9 +185,10 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * The resource ID of the parameter type.   
-         * <p>
-         * You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.
+         * <p>The resource ID of the parameter type.<br>You can leave this parameter unspecified when you call this operation to query cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4qx8****</p>
          */
         public Builder dimensionValue(String dimensionValue) {
             this.putBodyParameter("DimensionValue", dimensionValue);
@@ -188,7 +197,11 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * The end time for the query of parameter modification history.
+         * <p>The end time of the time range for querying the SQL execution history.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-13 15:40:43</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -197,7 +210,11 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -206,10 +223,15 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * The number of the page to return.    
-         * <p>
-         * - Start value: 1   
-         * - Default value: 1
+         * <p>The number of the page to return.    </p>
+         * <ul>
+         * <li>Start value: 1   </li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -218,10 +240,15 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.   
-         * <p>
-         * - Maximum value: 100   
-         * - Default value: 10
+         * <p>The number of rows to return on each page.   </p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -230,7 +257,12 @@ public class DescribeParametersHistoryRequest extends Request {
         }
 
         /**
-         * The start time of the time range for querying the parameter modification history.
+         * <p>The start time of querying the slow query execution.
+         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13 15:40:43</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

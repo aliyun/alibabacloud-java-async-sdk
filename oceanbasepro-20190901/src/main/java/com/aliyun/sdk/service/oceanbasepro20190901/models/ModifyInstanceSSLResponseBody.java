@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceSSLResponseBody</p>
@@ -49,7 +55,7 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The SSL setting of the OceanBase cluster instance.
+         * <p>The SSL setting of the OceanBase cluster instance.</p>
          */
         public Builder instanceSSL(InstanceSSL instanceSSL) {
             this.instanceSSL = instanceSSL;
@@ -57,7 +63,10 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceSSLResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceSSLResponseBody</p>
+     */
     public static class InstanceSSL extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableSSL")
         private String enableSSL;
@@ -77,9 +92,13 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("TenantId")
+        private String tenantId;
+
         private InstanceSSL(Builder builder) {
             this.enableSSL = builder.enableSSL;
             this.instanceId = builder.instanceId;
+            this.tenantId = builder.tenantId;
         }
 
         public static Builder builder() {
@@ -104,19 +123,31 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
         public static final class Builder {
             private String enableSSL; 
             private String instanceId; 
+            private String tenantId; 
 
             /**
-             * The operation to modify the SSL status. Valid values:
-             * <p>
+             * <p>The operation to modify the SSL status. Valid values:</p>
+             * <ul>
+             * <li><p>open: Enable SSL encryption.</p>
+             * </li>
+             * <li><p>update: Update the CA certificate.</p>
+             * </li>
+             * <li><p>close: Disable SSL encryption.</p>
+             * </li>
+             * </ul>
              * 
-             * - open: Enable SSL encryption.
-             * 
-             * - update: Update the CA certificate.
-             * 
-             * - close: Disable SSL encryption.
+             * <strong>example:</strong>
+             * <p>open</p>
              */
             public Builder enableSSL(String enableSSL) {
                 this.enableSSL = enableSSL;
@@ -124,10 +155,21 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OceanBase cluster.
+             * <p>The ID of the OceanBase cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ob317v4uif****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * TenantId.
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
                 return this;
             }
 

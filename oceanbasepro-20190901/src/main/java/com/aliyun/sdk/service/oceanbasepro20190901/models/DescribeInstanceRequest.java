@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceRequest</p>
@@ -21,10 +27,6 @@ public class DescribeInstanceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("MaxConnectionLimit")
-    private String maxConnectionLimit;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -32,7 +34,6 @@ public class DescribeInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
-        this.maxConnectionLimit = builder.maxConnectionLimit;
         this.pageNumber = builder.pageNumber;
     }
 
@@ -64,13 +65,6 @@ public class DescribeInstanceRequest extends Request {
     }
 
     /**
-     * @return maxConnectionLimit
-     */
-    public String getMaxConnectionLimit() {
-        return this.maxConnectionLimit;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -80,7 +74,6 @@ public class DescribeInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private String maxConnectionLimit; 
         private Integer pageNumber; 
 
         private Builder() {
@@ -91,7 +84,6 @@ public class DescribeInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
-            this.maxConnectionLimit = request.maxConnectionLimit;
             this.pageNumber = request.pageNumber;
         } 
 
@@ -105,7 +97,11 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * The size of the data disk, in GB.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -114,16 +110,14 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * MaxConnectionLimit.
-         */
-        public Builder maxConnectionLimit(String maxConnectionLimit) {
-            this.putBodyParameter("MaxConnectionLimit", maxConnectionLimit);
-            this.maxConnectionLimit = maxConnectionLimit;
-            return this;
-        }
-
-        /**
-         * The information about the storage resources of the cluster.
+         * <p>The number of the page to return.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);

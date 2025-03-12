@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantUserStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTenantUserStatusResponseBody</p>
@@ -15,7 +21,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TenantUser")
-    private java.util.List < TenantUser> tenantUser;
+    private java.util.List<TenantUser> tenantUser;
 
     private ModifyTenantUserStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,16 +46,19 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
     /**
      * @return tenantUser
      */
-    public java.util.List < TenantUser> getTenantUser() {
+    public java.util.List<TenantUser> getTenantUser() {
         return this.tenantUser;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TenantUser> tenantUser; 
+        private java.util.List<TenantUser> tenantUser; 
 
         /**
-         * Example 1
+         * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -59,7 +68,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
         /**
          * TenantUser.
          */
-        public Builder tenantUser(java.util.List < TenantUser> tenantUser) {
+        public Builder tenantUser(java.util.List<TenantUser> tenantUser) {
             this.tenantUser = tenantUser;
             return this;
         }
@@ -70,6 +79,12 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTenantUserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTenantUserStatusResponseBody</p>
+     */
     public static class TenantUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;

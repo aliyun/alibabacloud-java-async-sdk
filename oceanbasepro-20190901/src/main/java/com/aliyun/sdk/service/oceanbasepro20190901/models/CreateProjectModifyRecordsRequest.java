@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectModifyRecordsRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectModifyRecordsRequest</p>
@@ -18,7 +24,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Databases")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Databases> databases;
+    private java.util.List<Databases> databases;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -55,7 +61,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
     /**
      * @return databases
      */
-    public java.util.List < Databases> getDatabases() {
+    public java.util.List<Databases> getDatabases() {
         return this.databases;
     }
 
@@ -68,7 +74,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateProjectModifyRecordsRequest, Builder> {
         private String regionId; 
-        private java.util.List < Databases> databases; 
+        private java.util.List<Databases> databases; 
         private String id; 
 
         private Builder() {
@@ -92,9 +98,9 @@ public class CreateProjectModifyRecordsRequest extends Request {
         }
 
         /**
-         * Databases.
+         * <p>This parameter is required.</p>
          */
-        public Builder databases(java.util.List < Databases> databases) {
+        public Builder databases(java.util.List<Databases> databases) {
             String databasesShrink = shrink(databases, "Databases", "json");
             this.putBodyParameter("Databases", databasesShrink);
             this.databases = databases;
@@ -102,7 +108,10 @@ public class CreateProjectModifyRecordsRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np_fe****</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -117,9 +126,15 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class AdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
@@ -128,7 +143,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private AdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -148,7 +163,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -169,20 +184,20 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private String partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -206,7 +221,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -218,12 +233,18 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class SpecificTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private AdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -235,7 +256,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -268,7 +289,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -296,7 +317,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -309,11 +330,11 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
         public static final class Builder {
             private AdbTableSchema adbTableSchema; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -327,13 +348,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np_fe****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -359,7 +383,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -379,9 +403,15 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class SpecificViewsAdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
@@ -390,7 +420,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private SpecificViewsAdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -410,7 +440,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -431,20 +461,20 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private String partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -468,7 +498,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -480,12 +510,18 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class SpecificViews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private SpecificViewsAdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -497,7 +533,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -530,7 +566,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -558,7 +594,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -571,11 +607,11 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
         public static final class Builder {
             private SpecificViewsAdbTableSchema adbTableSchema; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -589,13 +625,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np_fe****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -621,7 +660,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -641,9 +680,15 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class TablesAdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
@@ -652,7 +697,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private TablesAdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -672,7 +717,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -693,20 +738,20 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private String partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -730,7 +775,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -742,12 +787,106 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
+    public static class ObkvPartitionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PartitionSize")
+        @com.aliyun.core.annotation.Validation(maximum = 1024, minimum = 1)
+        private Integer partitionSize;
+
+        @com.aliyun.core.annotation.NameInMap("PartitionType")
+        private String partitionType;
+
+        @com.aliyun.core.annotation.NameInMap("VirtualColumn")
+        private String virtualColumn;
+
+        private ObkvPartitionConfig(Builder builder) {
+            this.partitionSize = builder.partitionSize;
+            this.partitionType = builder.partitionType;
+            this.virtualColumn = builder.virtualColumn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ObkvPartitionConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return partitionSize
+         */
+        public Integer getPartitionSize() {
+            return this.partitionSize;
+        }
+
+        /**
+         * @return partitionType
+         */
+        public String getPartitionType() {
+            return this.partitionType;
+        }
+
+        /**
+         * @return virtualColumn
+         */
+        public String getVirtualColumn() {
+            return this.virtualColumn;
+        }
+
+        public static final class Builder {
+            private Integer partitionSize; 
+            private String partitionType; 
+            private String virtualColumn; 
+
+            /**
+             * PartitionSize.
+             */
+            public Builder partitionSize(Integer partitionSize) {
+                this.partitionSize = partitionSize;
+                return this;
+            }
+
+            /**
+             * PartitionType.
+             */
+            public Builder partitionType(String partitionType) {
+                this.partitionType = partitionType;
+                return this;
+            }
+
+            /**
+             * VirtualColumn.
+             */
+            public Builder virtualColumn(String virtualColumn) {
+                this.virtualColumn = virtualColumn;
+                return this;
+            }
+
+            public ObkvPartitionConfig build() {
+                return new ObkvPartitionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private TablesAdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -758,8 +897,11 @@ public class CreateProjectModifyRecordsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("ObkvPartitionConfig")
+        private ObkvPartitionConfig obkvPartitionConfig;
+
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -770,6 +912,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             this.id = builder.id;
             this.mappedName = builder.mappedName;
             this.name = builder.name;
+            this.obkvPartitionConfig = builder.obkvPartitionConfig;
             this.shardColumns = builder.shardColumns;
             this.whereClause = builder.whereClause;
         }
@@ -792,7 +935,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -818,9 +961,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
         }
 
         /**
+         * @return obkvPartitionConfig
+         */
+        public ObkvPartitionConfig getObkvPartitionConfig() {
+            return this.obkvPartitionConfig;
+        }
+
+        /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -833,11 +983,12 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
         public static final class Builder {
             private TablesAdbTableSchema adbTableSchema; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private ObkvPartitionConfig obkvPartitionConfig; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -851,13 +1002,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np_fe****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -881,9 +1035,17 @@ public class CreateProjectModifyRecordsRequest extends Request {
             }
 
             /**
+             * ObkvPartitionConfig.
+             */
+            public Builder obkvPartitionConfig(ObkvPartitionConfig obkvPartitionConfig) {
+                this.obkvPartitionConfig = obkvPartitionConfig;
+                return this;
+            }
+
+            /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -903,9 +1065,15 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class ViewsAdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
@@ -914,7 +1082,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private ViewsAdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -934,7 +1102,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -955,20 +1123,20 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private String partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -992,7 +1160,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -1004,12 +1172,18 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class Views extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private ViewsAdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -1021,7 +1195,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -1054,7 +1228,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -1082,7 +1256,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -1095,11 +1269,11 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
         public static final class Builder {
             private ViewsAdbTableSchema adbTableSchema; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -1113,13 +1287,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np_fe****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1145,7 +1322,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -1165,6 +1342,12 @@ public class CreateProjectModifyRecordsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateProjectModifyRecordsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateProjectModifyRecordsRequest</p>
+     */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -1176,16 +1359,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("SpecificTables")
-        private java.util.List < SpecificTables> specificTables;
+        private java.util.List<SpecificTables> specificTables;
 
         @com.aliyun.core.annotation.NameInMap("SpecificViews")
-        private java.util.List < SpecificViews> specificViews;
+        private java.util.List<SpecificViews> specificViews;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < Tables> tables;
+        private java.util.List<Tables> tables;
 
         @com.aliyun.core.annotation.NameInMap("Views")
-        private java.util.List < Views> views;
+        private java.util.List<Views> views;
 
         private Databases(Builder builder) {
             this.id = builder.id;
@@ -1229,28 +1412,28 @@ public class CreateProjectModifyRecordsRequest extends Request {
         /**
          * @return specificTables
          */
-        public java.util.List < SpecificTables> getSpecificTables() {
+        public java.util.List<SpecificTables> getSpecificTables() {
             return this.specificTables;
         }
 
         /**
          * @return specificViews
          */
-        public java.util.List < SpecificViews> getSpecificViews() {
+        public java.util.List<SpecificViews> getSpecificViews() {
             return this.specificViews;
         }
 
         /**
          * @return tables
          */
-        public java.util.List < Tables> getTables() {
+        public java.util.List<Tables> getTables() {
             return this.tables;
         }
 
         /**
          * @return views
          */
-        public java.util.List < Views> getViews() {
+        public java.util.List<Views> getViews() {
             return this.views;
         }
 
@@ -1258,13 +1441,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < SpecificTables> specificTables; 
-            private java.util.List < SpecificViews> specificViews; 
-            private java.util.List < Tables> tables; 
-            private java.util.List < Views> views; 
+            private java.util.List<SpecificTables> specificTables; 
+            private java.util.List<SpecificViews> specificViews; 
+            private java.util.List<Tables> tables; 
+            private java.util.List<Views> views; 
 
             /**
-             * Id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np_fe****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1290,7 +1476,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * SpecificTables.
              */
-            public Builder specificTables(java.util.List < SpecificTables> specificTables) {
+            public Builder specificTables(java.util.List<SpecificTables> specificTables) {
                 this.specificTables = specificTables;
                 return this;
             }
@@ -1298,7 +1484,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * SpecificViews.
              */
-            public Builder specificViews(java.util.List < SpecificViews> specificViews) {
+            public Builder specificViews(java.util.List<SpecificViews> specificViews) {
                 this.specificViews = specificViews;
                 return this;
             }
@@ -1306,7 +1492,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < Tables> tables) {
+            public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -1314,7 +1500,7 @@ public class CreateProjectModifyRecordsRequest extends Request {
             /**
              * Views.
              */
-            public Builder views(java.util.List < Views> views) {
+            public Builder views(java.util.List<Views> views) {
                 this.views = views;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecommendIndexResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecommendIndexResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the recommended index.
+         * <p>The information about the recommended index.</p>
          */
         public Builder recommendIndex(RecommendIndex recommendIndex) {
             this.recommendIndex = recommendIndex;
@@ -57,10 +63,10 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The tenant mode.   Valid values:  
-         * <p>
-         * Oracle   
-         * MySQL
+         * <p>The tenant mode.   Valid values:<br>Oracle<br>MySQL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -73,6 +79,12 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecommendIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendIndexResponseBody</p>
+     */
     public static class RecommendIndex extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuggestIndex")
         private String suggestIndex;
@@ -124,7 +136,10 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             private String tenantMode; 
 
             /**
-             * Example 1
+             * <p>Example 1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIMARY</p>
              */
             public Builder suggestIndex(String suggestIndex) {
                 this.suggestIndex = suggestIndex;

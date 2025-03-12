@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTopologyResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of CPU cores used by the node.
+         * <p>The topology of the cluster.</p>
          */
         public Builder instanceTopology(InstanceTopology instanceTopology) {
             this.instanceTopology = instanceTopology;
@@ -57,7 +63,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the CPU resources of the node.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Cpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Integer totalCpu;
@@ -109,7 +124,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Integer usedCpu; 
 
             /**
-             * TotalCpu.
+             * <p>The total number of CPU cores of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder totalCpu(Integer totalCpu) {
                 this.totalCpu = totalCpu;
@@ -117,7 +135,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCpu.
+             * <p>The number of CPU cores used by the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder usedCpu(Integer usedCpu) {
                 this.usedCpu = usedCpu;
@@ -131,6 +152,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class DiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Long totalDiskSize;
@@ -170,7 +197,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedDiskSize; 
 
             /**
-             * TotalDiskSize.
+             * <p>The total disk space of the replica, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -178,7 +208,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedDiskSize.
+             * <p>The disk space used by the replica, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder usedDiskSize(Float usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -192,6 +225,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Memory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Long totalMemory;
@@ -231,7 +270,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Long usedMemory; 
 
             /**
-             * TotalMemory.
+             * <p>The total memory size of the replica, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -239,7 +281,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedMemory.
+             * <p>The size of memory used by the replica, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder usedMemory(Long usedMemory) {
                 this.usedMemory = usedMemory;
@@ -253,6 +298,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class ReplicaResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Cpu cpu;
@@ -304,7 +355,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Memory memory; 
 
             /**
-             * Cpu.
+             * <p>The information about the CPU resources of the replica.</p>
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -312,7 +363,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The information about the data disk of the replica.</p>
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -320,7 +371,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The information about the memory resources of the replica.</p>
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -334,12 +385,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Replicas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogicalZone")
         private String logicalZone;
 
         @com.aliyun.core.annotation.NameInMap("NodeNum")
         private Integer nodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyReplicaType")
+        private String readOnlyReplicaType;
 
         @com.aliyun.core.annotation.NameInMap("ReplicaResource")
         private ReplicaResource replicaResource;
@@ -362,6 +422,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private Replicas(Builder builder) {
             this.logicalZone = builder.logicalZone;
             this.nodeNum = builder.nodeNum;
+            this.readOnlyReplicaType = builder.readOnlyReplicaType;
             this.replicaResource = builder.replicaResource;
             this.replicaType = builder.replicaType;
             this.status = builder.status;
@@ -390,6 +451,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          */
         public Integer getNodeNum() {
             return this.nodeNum;
+        }
+
+        /**
+         * @return readOnlyReplicaType
+         */
+        public String getReadOnlyReplicaType() {
+            return this.readOnlyReplicaType;
         }
 
         /**
@@ -437,6 +505,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public static final class Builder {
             private String logicalZone; 
             private Integer nodeNum; 
+            private String readOnlyReplicaType; 
             private ReplicaResource replicaResource; 
             private String replicaType; 
             private String status; 
@@ -445,7 +514,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String zoneRegionName; 
 
             /**
-             * LogicalZone.
+             * <p>The ID of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h-z0</p>
              */
             public Builder logicalZone(String logicalZone) {
                 this.logicalZone = logicalZone;
@@ -453,7 +525,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNum.
+             * <p>The number of nodes of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -461,7 +536,18 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaResource.
+             * <p>The type of the read-only replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROW_STORE</p>
+             */
+            public Builder readOnlyReplicaType(String readOnlyReplicaType) {
+                this.readOnlyReplicaType = readOnlyReplicaType;
+                return this;
+            }
+
+            /**
+             * <p>The information about the replica resources.</p>
              */
             public Builder replicaResource(ReplicaResource replicaResource) {
                 this.replicaResource = replicaResource;
@@ -469,7 +555,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaType.
+             * <p>The type of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL</p>
              */
             public Builder replicaType(String replicaType) {
                 this.replicaType = replicaType;
@@ -477,7 +566,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the replica. Valid values: ACTIVE, INACTIVE, and UNKNOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -485,7 +577,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneLogicalId.
+             * <p>The serial number of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder zoneLogicalId(Integer zoneLogicalId) {
                 this.zoneLogicalId = zoneLogicalId;
@@ -493,7 +588,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneLogicalName.
+             * <p>The region of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneLogicalName(String zoneLogicalName) {
                 this.zoneLogicalName = zoneLogicalName;
@@ -501,7 +599,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneRegionName.
+             * <p>The zone of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneRegionName(String zoneRegionName) {
                 this.zoneRegionName = zoneRegionName;
@@ -515,6 +616,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Units extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableCancelMigrateUnit")
         private Boolean enableCancelMigrateUnit;
@@ -650,9 +757,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String unitStatus; 
 
             /**
-             * Indicates whether the migration can be canceled.   
-             * <p>
-             * This field is valid only for units that are being manually immigrated or emigrated.
+             * <p>Indicates whether the migration can be canceled. This parameter is valid only for resource units that are being manually immigrated or emigrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableCancelMigrateUnit(Boolean enableCancelMigrateUnit) {
                 this.enableCancelMigrateUnit = enableCancelMigrateUnit;
@@ -660,7 +768,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The return result of the request.
+             * <p>Indicates whether the resource unit can be migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMigrateUnit(Boolean enableMigrateUnit) {
                 this.enableMigrateUnit = enableMigrateUnit;
@@ -668,7 +779,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The return result of the request.
+             * <p>Indicates whether the resource unit is manually migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder manualMigrate(Boolean manualMigrate) {
                 this.manualMigrate = manualMigrate;
@@ -676,7 +790,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
+             * <p>The ID of the OBServer node in which the resource unit resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp16niirq4zdmgvm****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -684,7 +801,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaType.
+             * <p>The type of the replica. Node filtering conditions are configured based on the replica type when you query the monitoring data of the OceanBase cluster. </p>
+             * <ul>
+             * <li>By default, the replica type is not specified when you query the monitoring data of OceanBase clusters or the access proxy. If you do not specify the replica type when you query the monitoring data of an OceanBase cluster, the monitoring data of all nodes is queried. </li>
+             * <li>If you set the replica type to FULL when you query the monitoring data of an OceanBase cluster, the monitoring data of only the full-featured replica nodes is queried. </li>
+             * <li>If you set the replica type to READONLY when you query the monitoring data of an OceanBase cluster, the monitoring data of only the read-only replica nodes is queried.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL</p>
              */
             public Builder replicaType(String replicaType) {
                 this.replicaType = replicaType;
@@ -692,7 +817,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Alibaba Cloud CLI
+             * <p>The number of CPU cores of the resource unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
@@ -700,9 +828,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform.   
-             * <p>
-             * Set the value to **DescribeInstanceTopology**.
+             * <p>The data size of the resource unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitDataSize(Long unitDataSize) {
                 this.unitDataSize = unitDataSize;
@@ -710,7 +839,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The topology of the cluster.
+             * <p>The ID of the resource unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1002</p>
              */
             public Builder unitId(String unitId) {
                 this.unitId = unitId;
@@ -718,7 +850,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The memory size of the resource unit, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitMemory(Float unitMemory) {
                 this.unitMemory = unitMemory;
@@ -726,7 +861,18 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to query the topology of an OceanBase cluster.
+             * <p>The status of the resource unit. Valid values: </p>
+             * <ul>
+             * <li>ONLINE: The resource unit is running. </li>
+             * <li>IMMIGRATING: The resource unit is being immigrated. </li>
+             * <li>EMIGRATING: The resource unit is being emigrated. </li>
+             * <li>CANCEL_EMIGRATING: The immigration of the resource unit is being canceled. </li>
+             * <li>CANCEL_EMIGRATING: The emigration of the resource unit is being canceled. </li>
+             * <li>DELETING: The resource unit is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder unitStatus(String unitStatus) {
                 this.unitStatus = unitStatus;
@@ -740,12 +886,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class TenantZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsPrimaryTenantZone")
         private Boolean isPrimaryTenantZone;
 
         @com.aliyun.core.annotation.NameInMap("LogicalZone")
         private String logicalZone;
+
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyReplicaType")
+        private String readOnlyReplicaType;
 
         @com.aliyun.core.annotation.NameInMap("ReplicaType")
         private String replicaType;
@@ -757,11 +912,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private String tenantZoneRole;
 
         @com.aliyun.core.annotation.NameInMap("Units")
-        private java.util.List < Units> units;
+        private java.util.List<Units> units;
 
         private TenantZones(Builder builder) {
             this.isPrimaryTenantZone = builder.isPrimaryTenantZone;
             this.logicalZone = builder.logicalZone;
+            this.readOnlyReplicaType = builder.readOnlyReplicaType;
             this.replicaType = builder.replicaType;
             this.tenantZoneId = builder.tenantZoneId;
             this.tenantZoneRole = builder.tenantZoneRole;
@@ -791,6 +947,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return readOnlyReplicaType
+         */
+        public String getReadOnlyReplicaType() {
+            return this.readOnlyReplicaType;
+        }
+
+        /**
          * @return replicaType
          */
         public String getReplicaType() {
@@ -814,20 +977,24 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return units
          */
-        public java.util.List < Units> getUnits() {
+        public java.util.List<Units> getUnits() {
             return this.units;
         }
 
         public static final class Builder {
             private Boolean isPrimaryTenantZone; 
             private String logicalZone; 
+            private String readOnlyReplicaType; 
             private String replicaType; 
             private String tenantZoneId; 
             private String tenantZoneRole; 
-            private java.util.List < Units> units; 
+            private java.util.List<Units> units; 
 
             /**
-             * The maximum disk usage, in percentage.
+             * <p>Indicates whether the zone is the primary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPrimaryTenantZone(Boolean isPrimaryTenantZone) {
                 this.isPrimaryTenantZone = isPrimaryTenantZone;
@@ -835,7 +1002,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalZone.
+             * <p>The ID of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h-z0</p>
              */
             public Builder logicalZone(String logicalZone) {
                 this.logicalZone = logicalZone;
@@ -843,7 +1013,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaType.
+             * <p>The type of the read-only replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROW_STORE</p>
+             */
+            public Builder readOnlyReplicaType(String readOnlyReplicaType) {
+                this.readOnlyReplicaType = readOnlyReplicaType;
+                return this;
+            }
+
+            /**
+             * <p>The replica type of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL</p>
              */
             public Builder replicaType(String replicaType) {
                 this.replicaType = replicaType;
@@ -851,7 +1035,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The server with the highest disk usage.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder tenantZoneId(String tenantZoneId) {
                 this.tenantZoneId = tenantZoneId;
@@ -859,7 +1046,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information of zones.
+             * <p>The role to access the zone. Valid values: </p>
+             * <ul>
+             * <li>ReadWrite: a role that has the read and write privileges. </li>
+             * <li>ReadOnly: a role that has only the read-only privilege.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder tenantZoneRole(String tenantZoneRole) {
                 this.tenantZoneRole = tenantZoneRole;
@@ -867,9 +1061,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the storage resources.
+             * <p>The information about the resource units.</p>
              */
-            public Builder units(java.util.List < Units> units) {
+            public Builder units(java.util.List<Units> units) {
                 this.units = units;
                 return this;
             }
@@ -881,6 +1075,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Tenants extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrimaryZoneDeployType")
         private String primaryZoneDeployType;
@@ -919,7 +1119,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private Integer tenantUnitNum;
 
         @com.aliyun.core.annotation.NameInMap("TenantZones")
-        private java.util.List < TenantZones> tenantZones;
+        private java.util.List<TenantZones> tenantZones;
 
         private Tenants(Builder builder) {
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
@@ -1032,7 +1232,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return tenantZones
          */
-        public java.util.List < TenantZones> getTenantZones() {
+        public java.util.List<TenantZones> getTenantZones() {
             return this.tenantZones;
         }
 
@@ -1049,10 +1249,17 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float tenantUnitCpu; 
             private Float tenantUnitMemory; 
             private Integer tenantUnitNum; 
-            private java.util.List < TenantZones> tenantZones; 
+            private java.util.List<TenantZones> tenantZones; 
 
             /**
-             * The server with the highest disk usage.
+             * <p>The deployment mode of the primary zone. Valid values: </p>
+             * <ul>
+             * <li>RANDOM. </li>
+             * <li>STATIC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RANDOM</p>
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
@@ -1060,7 +1267,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the memory resources of the node.
+             * <p>The number of CPU cores of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tenantCpu(Float tenantCpu) {
                 this.tenantCpu = tenantCpu;
@@ -1068,7 +1278,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * <p>The deployment type of the tenant. Valid values: </p>
+             * <ul>
+             * <li>multiple: multi-IDC deployment. </li>
+             * <li>single: single-IDC deployment. </li>
+             * <li>dual: dual-IDC deployment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>multiple</p>
              */
             public Builder tenantDeployType(String tenantDeployType) {
                 this.tenantDeployType = tenantDeployType;
@@ -1076,7 +1294,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TenantDiskSize.
+             * <p>The disk space of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tenantDiskSize(Float tenantDiskSize) {
                 this.tenantDiskSize = tenantDiskSize;
@@ -1084,7 +1305,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used memory of the node, in GB.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t33h8y08k****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1092,7 +1316,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The total storage space of the node, in GB.
+             * <p>The memory size of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tenantMemory(Float tenantMemory) {
                 this.tenantMemory = tenantMemory;
@@ -1100,7 +1327,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used storage space of the node, in GB.
+             * <p>The mode of the tenant. Valid values: </p>
+             * <ul>
+             * <li>Oracle  </li>
+             * <li>MySQL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Oracle</p>
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -1108,7 +1342,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The total memory size of the node, in GB.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pay_online</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -1116,7 +1353,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used memory of the node, in GB.
+             * <p>The status of the tenant. Valid values: </p>
+             * <ul>
+             * <li>PENDING_CREATE: The tenant is being created. </li>
+             * <li>RESTORE: The tenant is being restored. </li>
+             * <li>ONLINE: The tenant is running. </li>
+             * <li>SPEC_MODIFYING: The specification of the tenant is being modified. </li>
+             * <li>ALLOCATING_INTERNET_ADDRESS: A public IP address is being allocated to the tenant. </li>
+             * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The public IP address is being disabled. </li>
+             * <li>PRIMARY_ZONE_MODIFYING: The tenant is being switched to a new primary zone. </li>
+             * <li>PARAMETER_MODIFYING: Parameters are being modified. </li>
+             * <li>WHITE_LIST_MODIFYING: The allowlist is being modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder tenantStatus(String tenantStatus) {
                 this.tenantStatus = tenantStatus;
@@ -1124,7 +1375,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TenantUnitCpu.
+             * <p>The number of CPU cores of a single node in the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder tenantUnitCpu(Float tenantUnitCpu) {
                 this.tenantUnitCpu = tenantUnitCpu;
@@ -1132,7 +1386,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * TenantUnitMemory.
+             * <p>The memory size of a single node in the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder tenantUnitMemory(Float tenantUnitMemory) {
                 this.tenantUnitMemory = tenantUnitMemory;
@@ -1140,7 +1397,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores of the tenant.
+             * <p>The number of resource units in the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tenantUnitNum(Integer tenantUnitNum) {
                 this.tenantUnitNum = tenantUnitNum;
@@ -1148,9 +1408,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the storage resources of the node.
+             * <p>The information about the zones.</p>
              */
-            public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
+            public Builder tenantZones(java.util.List<TenantZones> tenantZones) {
                 this.tenantZones = tenantZones;
                 return this;
             }
@@ -1162,6 +1422,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class NodeResourceCpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Integer totalCpu;
@@ -1201,7 +1467,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * TotalCpu.
+             * <p>The total number of CPU cores of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder totalCpu(Integer totalCpu) {
                 this.totalCpu = totalCpu;
@@ -1209,7 +1478,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCpu.
+             * <p>The number of CPU cores used by the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -1223,6 +1495,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class NodeResourceDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Double totalDiskSize;
@@ -1262,7 +1540,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Double usedDiskSize; 
 
             /**
-             * TotalDiskSize.
+             * <p>The total storage space of the node, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalDiskSize(Double totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -1270,7 +1551,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedDiskSize.
+             * <p>The size of storage space used by the node, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder usedDiskSize(Double usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -1284,6 +1568,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class NodeResourceMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Long totalMemory;
@@ -1323,7 +1613,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * TotalMemory.
+             * <p>The total memory size of the node, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -1331,7 +1624,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedMemory.
+             * <p>The size of memory used by the node, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -1345,6 +1641,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class NodeResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private NodeResourceCpu cpu;
@@ -1396,7 +1698,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private NodeResourceMemory memory; 
 
             /**
-             * Cpu.
+             * <p>The information about the CPU resources of the node.</p>
              */
             public Builder cpu(NodeResourceCpu cpu) {
                 this.cpu = cpu;
@@ -1404,7 +1706,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The information about the storage resources of the node.</p>
              */
             public Builder diskSize(NodeResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -1412,7 +1714,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The information about the memory resources of the node.</p>
              */
             public Builder memory(NodeResourceMemory memory) {
                 this.memory = memory;
@@ -1426,6 +1728,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullCopyId")
         private Long fullCopyId;
@@ -1448,6 +1756,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadOnlyCopyId")
         private Long readOnlyCopyId;
 
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyReplicaType")
+        private String readOnlyReplicaType;
+
         @com.aliyun.core.annotation.NameInMap("ReplicaType")
         private String replicaType;
 
@@ -1459,6 +1770,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             this.nodeResource = builder.nodeResource;
             this.nodeStatus = builder.nodeStatus;
             this.readOnlyCopyId = builder.readOnlyCopyId;
+            this.readOnlyReplicaType = builder.readOnlyReplicaType;
             this.replicaType = builder.replicaType;
         }
 
@@ -1520,6 +1832,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return readOnlyReplicaType
+         */
+        public String getReadOnlyReplicaType() {
+            return this.readOnlyReplicaType;
+        }
+
+        /**
          * @return replicaType
          */
         public String getReplicaType() {
@@ -1534,10 +1853,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private NodeResource nodeResource; 
             private String nodeStatus; 
             private Long readOnlyCopyId; 
+            private String readOnlyReplicaType; 
             private String replicaType; 
 
             /**
-             * FullCopyId.
+             * <p>The ID of the full-featured replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fullCopyId(Long fullCopyId) {
                 this.fullCopyId = fullCopyId;
@@ -1545,7 +1868,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalZone.
+             * <p>The ID of the replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h-z0</p>
              */
             public Builder logicalZone(String logicalZone) {
                 this.logicalZone = logicalZone;
@@ -1553,7 +1879,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information of zones.
+             * <p>The ID of the replica node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeCopyId(Long nodeCopyId) {
                 this.nodeCopyId = nodeCopyId;
@@ -1561,7 +1890,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource unit.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp16niirq4zdmgvm****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1569,7 +1901,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The information about node resources.</p>
              */
             public Builder nodeResource(NodeResource nodeResource) {
                 this.nodeResource = nodeResource;
@@ -1577,7 +1909,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OBServer where the resource unit resides.
+             * <p>The status of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -1585,7 +1920,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyCopyId.
+             * <p>The ID of the read-only replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder readOnlyCopyId(Long readOnlyCopyId) {
                 this.readOnlyCopyId = readOnlyCopyId;
@@ -1593,7 +1931,25 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaType.
+             * <p>The type of the read-only replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROW_STORE</p>
+             */
+            public Builder readOnlyReplicaType(String readOnlyReplicaType) {
+                this.readOnlyReplicaType = readOnlyReplicaType;
+                return this;
+            }
+
+            /**
+             * <p>The type of the replica. Valid values: </p>
+             * <ul>
+             * <li>FULL. </li>
+             * <li>READONLY.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL</p>
              */
             public Builder replicaType(String replicaType) {
                 this.replicaType = replicaType;
@@ -1607,9 +1963,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class ZoneResourceDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
-        private java.util.List < String > maxDiskUsedObServer;
+        private java.util.List<String> maxDiskUsedObServer;
 
         @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
         private Double maxDiskUsedPercent;
@@ -1630,7 +1992,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return maxDiskUsedObServer
          */
-        public java.util.List < String > getMaxDiskUsedObServer() {
+        public java.util.List<String> getMaxDiskUsedObServer() {
             return this.maxDiskUsedObServer;
         }
 
@@ -1642,19 +2004,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > maxDiskUsedObServer; 
+            private java.util.List<String> maxDiskUsedObServer; 
             private Double maxDiskUsedPercent; 
 
             /**
-             * MaxDiskUsedObServer.
+             * <p>The IDs of OBServer nodes that use the maximum disk space.</p>
              */
-            public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
+            public Builder maxDiskUsedObServer(java.util.List<String> maxDiskUsedObServer) {
                 this.maxDiskUsedObServer = maxDiskUsedObServer;
                 return this;
             }
 
             /**
-             * DescribeInstanceTopology
+             * <p>The maximum disk usage, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.14</p>
              */
             public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
                 this.maxDiskUsedPercent = maxDiskUsedPercent;
@@ -1668,6 +2033,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class ZoneResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private ZoneResourceDiskSize diskSize;
@@ -1695,7 +2066,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private ZoneResourceDiskSize diskSize; 
 
             /**
-             * DiskSize.
+             * <p>The information about the storage resources of the node.</p>
              */
             public Builder diskSize(ZoneResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -1709,9 +2080,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
@@ -1744,7 +2121,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -1777,22 +2154,25 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String region; 
             private String zoneDisk; 
             private String zoneId; 
             private ZoneResource zoneResource; 
 
             /**
-             * The ID of the region.
+             * <p>The information about the nodes.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
 
             /**
-             * The zone information of the cluster.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1800,7 +2180,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the memory resources of the node.
+             * <p>The storage capacity of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200 GB</p>
              */
             public Builder zoneDisk(String zoneDisk) {
                 this.zoneDisk = zoneDisk;
@@ -1808,7 +2191,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the tenant.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1816,7 +2202,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Example 1
+             * <p>The information about zones.</p>
              */
             public Builder zoneResource(ZoneResource zoneResource) {
                 this.zoneResource = zoneResource;
@@ -1830,15 +2216,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class InstanceTopology extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Replicas")
-        private java.util.List < Replicas> replicas;
+        private java.util.List<Replicas> replicas;
 
         @com.aliyun.core.annotation.NameInMap("Tenants")
-        private java.util.List < Tenants> tenants;
+        private java.util.List<Tenants> tenants;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < Zones> zones;
+        private java.util.List<Zones> zones;
 
         private InstanceTopology(Builder builder) {
             this.replicas = builder.replicas;
@@ -1857,49 +2249,49 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return replicas
          */
-        public java.util.List < Replicas> getReplicas() {
+        public java.util.List<Replicas> getReplicas() {
             return this.replicas;
         }
 
         /**
          * @return tenants
          */
-        public java.util.List < Tenants> getTenants() {
+        public java.util.List<Tenants> getTenants() {
             return this.tenants;
         }
 
         /**
          * @return zones
          */
-        public java.util.List < Zones> getZones() {
+        public java.util.List<Zones> getZones() {
             return this.zones;
         }
 
         public static final class Builder {
-            private java.util.List < Replicas> replicas; 
-            private java.util.List < Tenants> tenants; 
-            private java.util.List < Zones> zones; 
+            private java.util.List<Replicas> replicas; 
+            private java.util.List<Tenants> tenants; 
+            private java.util.List<Zones> zones; 
 
             /**
-             * Replicas.
+             * <p>The information about replicas.</p>
              */
-            public Builder replicas(java.util.List < Replicas> replicas) {
+            public Builder replicas(java.util.List<Replicas> replicas) {
                 this.replicas = replicas;
                 return this;
             }
 
             /**
-             * The total number of CPU cores for the node.
+             * <p>The information about the tenants.</p>
              */
-            public Builder tenants(java.util.List < Tenants> tenants) {
+            public Builder tenants(java.util.List<Tenants> tenants) {
                 this.tenants = tenants;
                 return this;
             }
 
             /**
-             * The information about resource units.
+             * <p>The information about the zones in which the cluster is deployed.</p>
              */
-            public Builder zones(java.util.List < Zones> zones) {
+            public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;
                 return this;
             }

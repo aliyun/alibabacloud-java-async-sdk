@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTagRequest} extends {@link RequestModel}
  *
  * <p>CreateTagRequest</p>
@@ -91,7 +97,10 @@ public class CreateTagRequest extends Request {
         }
 
         /**
-         * The identifier of the client.
+         * <p>The identifier of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -100,7 +109,11 @@ public class CreateTagRequest extends Request {
         }
 
         /**
-         * The name of the tag group.
+         * <p>The name of the tag group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag group 1</p>
          */
         public Builder key(String key) {
             this.putBodyParameter("Key", key);

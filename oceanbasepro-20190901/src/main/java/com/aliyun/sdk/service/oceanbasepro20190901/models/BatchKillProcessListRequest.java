@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchKillProcessListRequest} extends {@link RequestModel}
  *
  * <p>BatchKillProcessListRequest</p>
@@ -98,7 +104,7 @@ public class BatchKillProcessListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +113,11 @@ public class BatchKillProcessListRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,7 +126,11 @@ public class BatchKillProcessListRequest extends Request {
         }
 
         /**
-         * The list of sessions to close.
+         * <p>The list of sessions to close.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ProxySessId&quot;:&quot;752113700739156671&quot;,&quot;SessionId&quot;:3221555062,&quot;ServerIp&quot;:&quot;10.<em><strong>.</strong>.</em>**&quot;}]</p>
          */
         public Builder sessionList(String sessionList) {
             this.putBodyParameter("SessionList", sessionList);
@@ -125,7 +139,11 @@ public class BatchKillProcessListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t33h8y08k****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

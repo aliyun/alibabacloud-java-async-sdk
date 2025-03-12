@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAnomalySQLListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAnomalySQLListRequest</p>
@@ -30,7 +36,7 @@ public class DescribeAnomalySQLListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterCondition")
-    private java.util.Map < String, ? > filterCondition;
+    private java.util.Map<String, ?> filterCondition;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -153,7 +159,7 @@ public class DescribeAnomalySQLListRequest extends Request {
     /**
      * @return filterCondition
      */
-    public java.util.Map < String, ? > getFilterCondition() {
+    public java.util.Map<String, ?> getFilterCondition() {
         return this.filterCondition;
     }
 
@@ -253,7 +259,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         private String acceptLanguage; 
         private String dbName; 
         private String endTime; 
-        private java.util.Map < String, ? > filterCondition; 
+        private java.util.Map<String, ?> filterCondition; 
         private String instanceId; 
         private String nodeIp; 
         private Integer pageNumber; 
@@ -295,7 +301,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -304,9 +313,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The language of the returned data.   
-         * <p>
-         * Default value: CN for a China site and EN for an International site.
+         * <p>The language of the returned data.<br>Default value: CN for a China site and EN for an International site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -315,7 +325,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -324,9 +337,11 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The end time of the time range for querying suspicious SQL statements.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of the time range for querying suspicious SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-13T15:40:43Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -335,11 +350,17 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The filter condition.   
-         * <p>
-         * > <br> - All fields in OceanBase Database support filtering. <br> - You can write the key-value pair of a parameter in a JSON string in the JSON format to filter the parameter.
+         * <p>The filter condition.   </p>
+         * <blockquote>
+         * <p><br> - All fields in OceanBase Database support filtering. <br> - You can write the key-value pair of a parameter in a JSON string in the JSON format to filter the parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;UserName&quot;:testUser
+         * }</p>
          */
-        public Builder filterCondition(java.util.Map < String, ? > filterCondition) {
+        public Builder filterCondition(java.util.Map<String, ?> filterCondition) {
             String filterConditionShrink = shrink(filterCondition, "FilterCondition", "json");
             this.putBodyParameter("FilterCondition", filterConditionShrink);
             this.filterCondition = filterCondition;
@@ -347,7 +368,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obsd23j4f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -356,7 +380,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The IP address of the node.
+         * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19y05uq6xpacyqnlrc</p>
          */
         public Builder nodeIp(String nodeIp) {
             this.putBodyParameter("NodeIp", nodeIp);
@@ -365,10 +392,14 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.    
-         * <p>
-         * - Start value: 1   
-         * - Default value: 1
+         * <p>The number of the page to return.    </p>
+         * <ul>
+         * <li>Start value: 1   </li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -377,10 +408,14 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.    
-         * <p>
-         * - Maximum value: 100   
-         * - Default value: 10
+         * <p>The number of rows to return on each page.    </p>
+         * <ul>
+         * <li>Maximum value: 100   </li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -389,7 +424,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * SQLID.
+         * <p>SQLID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -398,7 +436,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putBodyParameter("SearchKeyWord", searchKeyWord);
@@ -407,7 +448,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search parameter.
+         * <p>The search parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder searchParameter(String searchParameter) {
             this.putBodyParameter("SearchParameter", searchParameter);
@@ -416,9 +460,11 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search rule.   
-         * <p>
-         * Valid values: "=", ">", ">=", "<", and "<="
+         * <p>The search rule.<br>Valid values: &quot;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;, &quot;&lt;&quot;, and &quot;&lt;=&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         public Builder searchRule(String searchRule) {
             this.putBodyParameter("SearchRule", searchRule);
@@ -427,7 +473,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The search value.
+         * <p>The search value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder searchValue(String searchValue) {
             this.putBodyParameter("SearchValue", searchValue);
@@ -436,7 +485,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The sorted column.
+         * <p>The sorted column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder sortColumn(String sortColumn) {
             this.putBodyParameter("SortColumn", sortColumn);
@@ -445,7 +497,10 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The sorting rule.
+         * <p>The sorting rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -454,9 +509,11 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The start time of the time range for querying suspicious SQL statements.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of the time range for querying suspicious SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:40:43Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -465,7 +522,11 @@ public class DescribeAnomalySQLListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

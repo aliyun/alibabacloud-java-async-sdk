@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecurityIpGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSecurityIpGroupResponseBody</p>
@@ -49,9 +55,10 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
         private SecurityIpGroup securityIpGroup; 
 
         /**
-         * The IP addresses or CIDR blocks in the IP address whitelist group.   
-         * <p>
-         * The return values of SecurityIps are strings that are separated with commas (,).
+         * <p>The IP addresses or CIDR blocks in the IP address whitelist group.<br>The return values of SecurityIps are strings that are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -59,9 +66,7 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **CreateSecurityIpGroup**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>CreateSecurityIpGroup</strong>.</p>
          */
         public Builder securityIpGroup(SecurityIpGroup securityIpGroup) {
             this.securityIpGroup = securityIpGroup;
@@ -74,6 +79,12 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSecurityIpGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSecurityIpGroupResponseBody</p>
+     */
     public static class SecurityIpGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -125,14 +136,15 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * ```
-             * <p>
-             * http(s)://[Endpoint]/?Action=CreateSecurityIpGroup
-             * &InstanceId=ob317v4uif****
-             * &SecurityIps=192.168.1.1,192.168.0.0.1/8
-             * &SecurityIpGroupName=pay_online
-             * &Common request parameters
-             * ```
+             * <pre><code>http(s)://[Endpoint]/?Action=CreateSecurityIpGroup
+             * &amp;InstanceId=ob317v4uif****
+             * &amp;SecurityIps=192.168.1.1,192.168.0.0.1/8
+             * &amp;SecurityIpGroupName=pay_online
+             * &amp;Common request parameters
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>ob317v4uif****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -140,7 +152,10 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to create an IP address whitelist group.
+             * <p>You can call this operation to create an IP address whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pay_online</p>
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;

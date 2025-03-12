@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantUserRolesResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTenantUserRolesResponseBody</p>
@@ -57,7 +63,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
          */
         public Builder tenantUser(TenantUser tenantUser) {
             this.tenantUser = tenantUser;
@@ -70,6 +76,12 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTenantUserRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTenantUserRolesResponseBody</p>
+     */
     public static class UserRole extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -133,16 +145,17 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * ```
-             * <p>
-             * http(s)://[Endpoint]/?Action=ModifyTenantUserRoles
-             * &UserName=pay_test
-             * &TenantId=ob2mr3oae0****
-             * &UserRole=[{"Database":"20210824160559","Role":"readwrite"}]
-             * &InstanceId=ob317v4uif****
-             * &ModifyType=update
-             * &Common request parameters
-             * ```
+             * <pre><code>http(s)://[Endpoint]/?Action=ModifyTenantUserRoles
+             * &amp;UserName=pay_test
+             * &amp;TenantId=ob2mr3oae0****
+             * &amp;UserRole=[{&quot;Database&quot;:&quot;20210824160559&quot;,&quot;Role&quot;:&quot;readwrite&quot;}]
+             * &amp;InstanceId=ob317v4uif****
+             * &amp;ModifyType=update
+             * &amp;Common request parameters
+             * </code></pre>
+             * 
+             * <strong>example:</strong>
+             * <p>db_pay1</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -158,7 +171,10 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to modify the database privileges of a specified account in a tenant.
+             * <p>You can call this operation to modify the database privileges of a specified account in a tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -180,6 +196,12 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyTenantUserRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTenantUserRolesResponseBody</p>
+     */
     public static class TenantUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
@@ -188,7 +210,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         private String userName;
 
         @com.aliyun.core.annotation.NameInMap("UserRole")
-        private java.util.List < UserRole> userRole;
+        private java.util.List<UserRole> userRole;
 
         private TenantUser(Builder builder) {
             this.tenantId = builder.tenantId;
@@ -221,14 +243,14 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         /**
          * @return userRole
          */
-        public java.util.List < UserRole> getUserRole() {
+        public java.util.List<UserRole> getUserRole() {
             return this.userRole;
         }
 
         public static final class Builder {
             private String tenantId; 
             private String userName; 
-            private java.util.List < UserRole> userRole; 
+            private java.util.List<UserRole> userRole; 
 
             /**
              * TenantId.
@@ -247,9 +269,12 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database (MySQL mode) or schema (Oracle mode).
+             * <p>The name of the database (MySQL mode) or schema (Oracle mode).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>账号具备的数据库权限信息列表。</p>
              */
-            public Builder userRole(java.util.List < UserRole> userRole) {
+            public Builder userRole(java.util.List<UserRole> userRole) {
                 this.userRole = userRole;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDatabaseUserRolesResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDatabaseUserRolesResponseBody</p>
@@ -57,7 +63,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
          */
         public Builder tenantUser(TenantUser tenantUser) {
             this.tenantUser = tenantUser;
@@ -70,6 +76,12 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDatabaseUserRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDatabaseUserRolesResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
@@ -131,6 +143,12 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyDatabaseUserRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDatabaseUserRolesResponseBody</p>
+     */
     public static class TenantUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -139,7 +157,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         private String tenantId;
 
         @com.aliyun.core.annotation.NameInMap("Users")
-        private java.util.List < Users> users;
+        private java.util.List<Users> users;
 
         private TenantUser(Builder builder) {
             this.databaseName = builder.databaseName;
@@ -172,17 +190,20 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         /**
          * @return users
          */
-        public java.util.List < Users> getUsers() {
+        public java.util.List<Users> getUsers() {
             return this.users;
         }
 
         public static final class Builder {
             private String databaseName; 
             private String tenantId; 
-            private java.util.List < Users> users; 
+            private java.util.List<Users> users; 
 
             /**
-             * Example 1
+             * <p>Example 1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sms_pre</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -200,7 +221,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             /**
              * Users.
              */
-            public Builder users(java.util.List < Users> users) {
+            public Builder users(java.util.List<Users> users) {
                 this.users = users;
                 return this;
             }

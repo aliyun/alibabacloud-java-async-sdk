@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecurityIpGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateSecurityIpGroupRequest</p>
@@ -107,7 +113,11 @@ public class CreateSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,7 +126,11 @@ public class CreateSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The name of the whitelist group.
+         * <p>The name of the whitelist group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_online</p>
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);
@@ -125,7 +139,11 @@ public class CreateSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;192.168.1.1&quot;,&quot;192.168.0.0.1/8&quot;}</p>
          */
         public Builder securityIps(String securityIps) {
             this.putBodyParameter("SecurityIps", securityIps);

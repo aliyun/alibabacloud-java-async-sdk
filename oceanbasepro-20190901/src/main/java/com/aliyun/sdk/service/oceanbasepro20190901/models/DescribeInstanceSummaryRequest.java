@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceSummaryRequest</p>
@@ -90,7 +96,14 @@ public class DescribeInstanceSummaryRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return.    </p>
+         * <ul>
+         * <li>Start value: 1   </li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -99,7 +112,14 @@ public class DescribeInstanceSummaryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

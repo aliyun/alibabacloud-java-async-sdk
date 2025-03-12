@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLDetailsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SQLDetails")
-    private java.util.List < SQLDetails> SQLDetails;
+    private java.util.List<SQLDetails> SQLDetails;
 
     private DescribeSQLDetailsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,18 +46,19 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
     /**
      * @return SQLDetails
      */
-    public java.util.List < SQLDetails> getSQLDetails() {
+    public java.util.List<SQLDetails> getSQLDetails() {
         return this.SQLDetails;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SQLDetails> SQLDetails; 
+        private java.util.List<SQLDetails> SQLDetails; 
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **DescribeSQLDetails**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeSQLDetails</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -59,15 +66,13 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=DescribeSQLDetails
-         * &TenantId=t2mr3oae0****
-         * &SQLId=8D6E84****0B8FB1823D199E2CA1****
-         * &Common request parameters
-         * ```
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeSQLDetails
+         * &amp;TenantId=t2mr3oae0****
+         * &amp;SQLId=8D6E84****0B8FB1823D199E2CA1****
+         * &amp;Common request parameters
+         * </code></pre>
          */
-        public Builder SQLDetails(java.util.List < SQLDetails> SQLDetails) {
+        public Builder SQLDetails(java.util.List<SQLDetails> SQLDetails) {
             this.SQLDetails = SQLDetails;
             return this;
         }
@@ -78,6 +83,12 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLDetailsResponseBody</p>
+     */
     public static class SQLDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
@@ -137,7 +148,10 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * {"name":"DescribeSQLDetails","product":"OceanBasePro","version":"2019-09-01","path":"/","deprecated":0,"method":"POST|GET","protocol":"HTTP|HTTPS","hidden":0,"timeout":10000,"parameter_type":"Single","params":"[{\"name\":\"Action\",\"position\":\"Query\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"DescribeSQLDetails\"},{\"name\":\"TenantId\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"t2mr3oae0****\"},{\"name\":\"SQLId\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"SQLID\",\"description\":\"SQLID。\",\"example\":\"8D6E84****0B8FB1823D199E2CA1****\"}]","response_headers":"[]","response":"{\"type\":\"Object\",\"children\":[{\"name\":\"RequestId\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E\"},{\"name\":\"SQLDetails\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Array\",\"subType\":\"Object\",\"description\":\"  \",\"children\":[{\"name\":\"SQLText\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC\"},{\"name\":\"DbName\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"testdb\"},{\"name\":\"UserName\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"tester\"}],\"title\":\"\"}],\"title\":\"\",\"description\":\"\"}","errors":"{}"}
+             * <p>{&quot;name&quot;:&quot;DescribeSQLDetails&quot;,&quot;product&quot;:&quot;OceanBasePro&quot;,&quot;version&quot;:&quot;2019-09-01&quot;,&quot;path&quot;:&quot;/&quot;,&quot;deprecated&quot;:0,&quot;method&quot;:&quot;POST|GET&quot;,&quot;protocol&quot;:&quot;HTTP|HTTPS&quot;,&quot;hidden&quot;:0,&quot;timeout&quot;:10000,&quot;parameter_type&quot;:&quot;Single&quot;,&quot;params&quot;:&quot;[{&quot;name&quot;:&quot;Action&quot;,&quot;position&quot;:&quot;Query&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;DescribeSQLDetails&quot;},{&quot;name&quot;:&quot;TenantId&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;t2mr3oae0****&quot;},{&quot;name&quot;:&quot;SQLId&quot;,&quot;position&quot;:&quot;Body&quot;,&quot;required&quot;:true,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;SQLID&quot;,&quot;description&quot;:&quot;SQLID。&quot;,&quot;example&quot;:&quot;8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong>&quot;}]&quot;,&quot;response_headers&quot;:&quot;[]&quot;,&quot;response&quot;:&quot;{&quot;type&quot;:&quot;Object&quot;,&quot;children&quot;:[{&quot;name&quot;:&quot;RequestId&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E&quot;},{&quot;name&quot;:&quot;SQLDetails&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;Array&quot;,&quot;subType&quot;:&quot;Object&quot;,&quot;description&quot;:&quot;  &quot;,&quot;children&quot;:[{&quot;name&quot;:&quot;SQLText&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC&quot;},{&quot;name&quot;:&quot;DbName&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;testdb&quot;},{&quot;name&quot;:&quot;UserName&quot;,&quot;required&quot;:false,&quot;checkBlank&quot;:false,&quot;visibility&quot;:&quot;Public&quot;,&quot;deprecated&quot;:false,&quot;type&quot;:&quot;String&quot;,&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;,&quot;example&quot;:&quot;tester&quot;}],&quot;title&quot;:&quot;&quot;}],&quot;title&quot;:&quot;&quot;,&quot;description&quot;:&quot;&quot;}&quot;,&quot;errors&quot;:&quot;{}&quot;}</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;

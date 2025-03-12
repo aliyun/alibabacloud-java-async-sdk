@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOmsMysqlDataSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateOmsMysqlDataSourceRequest</p>
@@ -211,7 +217,10 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -220,10 +229,11 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The description of the data source.   
-         * <p>
+         * <p>The description of the data source.   </p>
+         * <p>It must be 2 to 256 characters in length. The default value is null.</p>
          * 
-         * It must be 2 to 256 characters in length. The default value is null.
+         * <strong>example:</strong>
+         * <p>MySQL data source for OMS testing</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -232,10 +242,13 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The ID of the database gateway instance.   
-         * <p>
+         * <p>The ID of the database gateway instance.   </p>
+         * <blockquote>
+         * <p><br>If Type is set to DG, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > <br>If Type is set to DG, this parameter is required.
+         * <strong>example:</strong>
+         * <p>dg-yhss6sdlaff****</p>
          */
         public Builder dgDatabaseId(String dgDatabaseId) {
             this.putBodyParameter("DgDatabaseId", dgDatabaseId);
@@ -244,10 +257,13 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance of the data source.   
-         * <p>
+         * <p>The ID of the ECS instance of the data source.   </p>
+         * <blockquote>
+         * <p><br>If Type is set to RDS, PolarDB, or DG, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > <br>If Type is set to RDS, PolarDB, or DG, this parameter is required.
+         * <strong>example:</strong>
+         * <p>pc-12ab34cd56******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -256,10 +272,13 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The IP address of the data source.   
-         * <p>
+         * <p>The IP address of the data source.   </p>
+         * <blockquote>
+         * <p><br>If Type is set to INTERNET or VPC, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > <br>If Type is set to INTERNET or VPC, this parameter is required.
+         * <strong>example:</strong>
+         * <p>10.0.****</p>
          */
         public Builder ip(String ip) {
             this.putBodyParameter("Ip", ip);
@@ -268,11 +287,14 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The name of the data source.   
-         * <p>
-         * It must be 2 to 128 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).   
+         * <p>The name of the data source.<br>It must be 2 to 128 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).   </p>
+         * <blockquote>
+         * <p><br>Invalid characters, such as slashes (/), are not allowed.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > <br>Invalid characters, such as slashes (/), are not allowed.
+         * <strong>example:</strong>
+         * <p>oms-mysql</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -281,9 +303,11 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The password of the username that is used to access the database. It must be Base64 encoded.   
-         * <p>
-         * For example, for the password abcd123@!, the Base64-encoded value is YWJjZDEyM0Ah.
+         * <p>The password of the username that is used to access the database. It must be Base64 encoded.<br>For example, for the password abcd123@!, the Base64-encoded value is YWJjZDEyM0Ah.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YWJjZDEyM0Ah</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -292,10 +316,13 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The port number of the data source.   
-         * <p>
+         * <p>The port number of the data source.   </p>
+         * <blockquote>
+         * <p><br>If Type is set to INTERNET or VPC, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > <br>If Type is set to INTERNET or VPC, this parameter is required.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putBodyParameter("Port", port);
@@ -304,10 +331,13 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The name of the database.   
-         * <p>
+         * <p>The name of the database.   </p>
+         * <blockquote>
+         * <p><br>If you specify this parameter, subsequent migration or synchronization operations will take effect on this database only.</p>
+         * </blockquote>
          * 
-         * > <br>If you specify this parameter, subsequent migration or synchronization operations will take effect on this database only.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder schema(String schema) {
             this.putBodyParameter("Schema", schema);
@@ -316,9 +346,11 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The type of the MySQL data source.   
-         * <p>
-         * Valid values: INTERNET, VPC, RDS, PolarDB, and DG.
+         * <p>The type of the MySQL data source.<br>Valid values: INTERNET, VPC, RDS, PolarDB, and DG.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -327,7 +359,11 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The username that is used to access the database.
+         * <p>The username that is used to access the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>omsTestUser</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);
@@ -336,10 +372,13 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the data source belongs.   
-         * <p>
+         * <p>The ID of the VPC to which the data source belongs.   </p>
+         * <blockquote>
+         * <p><br>If Type is set to VPC, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > <br>If Type is set to VPC, this parameter is required.
+         * <strong>example:</strong>
+         * <p>vpc-12345abcde*******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);

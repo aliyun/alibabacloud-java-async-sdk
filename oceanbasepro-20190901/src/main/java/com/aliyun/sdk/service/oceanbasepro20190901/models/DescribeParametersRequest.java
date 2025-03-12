@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersRequest} extends {@link RequestModel}
  *
  * <p>DescribeParametersRequest</p>
@@ -106,7 +112,11 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
+         * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TENANT</p>
          */
         public Builder dimension(String dimension) {
             this.putBodyParameter("Dimension", dimension);
@@ -115,7 +125,10 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud CLI
+         * <p>Alibaba Cloud CLI</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder dimensionValue(String dimensionValue) {
             this.putBodyParameter("DimensionValue", dimensionValue);
@@ -124,7 +137,11 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * 498529
+         * <p>498529</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

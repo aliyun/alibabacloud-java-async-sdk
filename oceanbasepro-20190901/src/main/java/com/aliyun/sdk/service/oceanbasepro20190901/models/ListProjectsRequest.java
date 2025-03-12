@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsRequest} extends {@link RequestModel}
  *
  * <p>ListProjectsRequest</p>
@@ -17,7 +23,7 @@ public class ListProjectsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LabelIds")
-    private java.util.List < String > labelIds;
+    private java.util.List<String> labelIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NeedRelatedInfo")
@@ -42,7 +48,7 @@ public class ListProjectsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SinkEndpointTypes")
-    private java.util.List < String > sinkEndpointTypes;
+    private java.util.List<String> sinkEndpointTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SortField")
@@ -50,11 +56,11 @@ public class ListProjectsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceEndpointTypes")
-    private java.util.List < String > sourceEndpointTypes;
+    private java.util.List<String> sourceEndpointTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -104,7 +110,7 @@ public class ListProjectsRequest extends Request {
     /**
      * @return labelIds
      */
-    public java.util.List < String > getLabelIds() {
+    public java.util.List<String> getLabelIds() {
         return this.labelIds;
     }
 
@@ -146,7 +152,7 @@ public class ListProjectsRequest extends Request {
     /**
      * @return sinkEndpointTypes
      */
-    public java.util.List < String > getSinkEndpointTypes() {
+    public java.util.List<String> getSinkEndpointTypes() {
         return this.sinkEndpointTypes;
     }
 
@@ -160,14 +166,14 @@ public class ListProjectsRequest extends Request {
     /**
      * @return sourceEndpointTypes
      */
-    public java.util.List < String > getSourceEndpointTypes() {
+    public java.util.List<String> getSourceEndpointTypes() {
         return this.sourceEndpointTypes;
     }
 
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
@@ -187,16 +193,16 @@ public class ListProjectsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListProjectsRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > labelIds; 
+        private java.util.List<String> labelIds; 
         private Boolean needRelatedInfo; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String searchKey; 
-        private java.util.List < String > sinkEndpointTypes; 
+        private java.util.List<String> sinkEndpointTypes; 
         private String sortField; 
-        private java.util.List < String > sourceEndpointTypes; 
-        private java.util.List < String > status; 
+        private java.util.List<String> sourceEndpointTypes; 
+        private java.util.List<String> status; 
         private String type; 
         private Boolean visibleSubProject; 
 
@@ -233,7 +239,7 @@ public class ListProjectsRequest extends Request {
         /**
          * LabelIds.
          */
-        public Builder labelIds(java.util.List < String > labelIds) {
+        public Builder labelIds(java.util.List<String> labelIds) {
             String labelIdsShrink = shrink(labelIds, "LabelIds", "json");
             this.putBodyParameter("LabelIds", labelIdsShrink);
             this.labelIds = labelIds;
@@ -288,7 +294,7 @@ public class ListProjectsRequest extends Request {
         /**
          * SinkEndpointTypes.
          */
-        public Builder sinkEndpointTypes(java.util.List < String > sinkEndpointTypes) {
+        public Builder sinkEndpointTypes(java.util.List<String> sinkEndpointTypes) {
             String sinkEndpointTypesShrink = shrink(sinkEndpointTypes, "SinkEndpointTypes", "json");
             this.putBodyParameter("SinkEndpointTypes", sinkEndpointTypesShrink);
             this.sinkEndpointTypes = sinkEndpointTypes;
@@ -307,7 +313,7 @@ public class ListProjectsRequest extends Request {
         /**
          * SourceEndpointTypes.
          */
-        public Builder sourceEndpointTypes(java.util.List < String > sourceEndpointTypes) {
+        public Builder sourceEndpointTypes(java.util.List<String> sourceEndpointTypes) {
             String sourceEndpointTypesShrink = shrink(sourceEndpointTypes, "SourceEndpointTypes", "json");
             this.putBodyParameter("SourceEndpointTypes", sourceEndpointTypesShrink);
             this.sourceEndpointTypes = sourceEndpointTypes;
@@ -317,7 +323,7 @@ public class ListProjectsRequest extends Request {
         /**
          * Status.
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             String statusShrink = shrink(status, "Status", "json");
             this.putBodyParameter("Status", statusShrink);
             this.status = status;

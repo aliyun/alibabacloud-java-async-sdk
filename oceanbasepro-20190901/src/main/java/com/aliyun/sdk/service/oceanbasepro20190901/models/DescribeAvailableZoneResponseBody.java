@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableZoneResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableZoneResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableZoneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZoneResponseBody</p>
+     */
     public static class DiskSizeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Max")
         private Long max;
@@ -151,6 +163,12 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZoneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZoneResponseBody</p>
+     */
     public static class SupportEngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ObVersion")
         private String obVersion;
@@ -159,7 +177,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         private Boolean supportIsolationOptimization;
 
         @com.aliyun.core.annotation.NameInMap("SupportReplicaModes")
-        private java.util.List < String > supportReplicaModes;
+        private java.util.List<String> supportReplicaModes;
 
         private SupportEngineVersions(Builder builder) {
             this.obVersion = builder.obVersion;
@@ -192,14 +210,14 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         /**
          * @return supportReplicaModes
          */
-        public java.util.List < String > getSupportReplicaModes() {
+        public java.util.List<String> getSupportReplicaModes() {
             return this.supportReplicaModes;
         }
 
         public static final class Builder {
             private String obVersion; 
             private Boolean supportIsolationOptimization; 
-            private java.util.List < String > supportReplicaModes; 
+            private java.util.List<String> supportReplicaModes; 
 
             /**
              * ObVersion.
@@ -220,7 +238,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             /**
              * SupportReplicaModes.
              */
-            public Builder supportReplicaModes(java.util.List < String > supportReplicaModes) {
+            public Builder supportReplicaModes(java.util.List<String> supportReplicaModes) {
                 this.supportReplicaModes = supportReplicaModes;
                 return this;
             }
@@ -232,12 +250,18 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZoneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZoneResponseBody</p>
+     */
     public static class SupportSpecifications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSizeRange")
         private DiskSizeRange diskSizeRange;
 
         @com.aliyun.core.annotation.NameInMap("DiskTypes")
-        private java.util.List < String > diskTypes;
+        private java.util.List<String> diskTypes;
 
         @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
@@ -246,7 +270,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         private String spec;
 
         @com.aliyun.core.annotation.NameInMap("SupportEngineVersions")
-        private java.util.List < SupportEngineVersions> supportEngineVersions;
+        private java.util.List<SupportEngineVersions> supportEngineVersions;
 
         private SupportSpecifications(Builder builder) {
             this.diskSizeRange = builder.diskSizeRange;
@@ -274,7 +298,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         /**
          * @return diskTypes
          */
-        public java.util.List < String > getDiskTypes() {
+        public java.util.List<String> getDiskTypes() {
             return this.diskTypes;
         }
 
@@ -295,16 +319,16 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         /**
          * @return supportEngineVersions
          */
-        public java.util.List < SupportEngineVersions> getSupportEngineVersions() {
+        public java.util.List<SupportEngineVersions> getSupportEngineVersions() {
             return this.supportEngineVersions;
         }
 
         public static final class Builder {
             private DiskSizeRange diskSizeRange; 
-            private java.util.List < String > diskTypes; 
+            private java.util.List<String> diskTypes; 
             private String instanceClass; 
             private String spec; 
-            private java.util.List < SupportEngineVersions> supportEngineVersions; 
+            private java.util.List<SupportEngineVersions> supportEngineVersions; 
 
             /**
              * DiskSizeRange.
@@ -317,7 +341,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             /**
              * DiskTypes.
              */
-            public Builder diskTypes(java.util.List < String > diskTypes) {
+            public Builder diskTypes(java.util.List<String> diskTypes) {
                 this.diskTypes = diskTypes;
                 return this;
             }
@@ -341,7 +365,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             /**
              * SupportEngineVersions.
              */
-            public Builder supportEngineVersions(java.util.List < SupportEngineVersions> supportEngineVersions) {
+            public Builder supportEngineVersions(java.util.List<SupportEngineVersions> supportEngineVersions) {
                 this.supportEngineVersions = supportEngineVersions;
                 return this;
             }
@@ -353,6 +377,12 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZoneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZoneResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
@@ -373,7 +403,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         private String series;
 
         @com.aliyun.core.annotation.NameInMap("SupportSpecifications")
-        private java.util.List < SupportSpecifications> supportSpecifications;
+        private java.util.List<SupportSpecifications> supportSpecifications;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
         private String zones;
@@ -442,7 +472,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         /**
          * @return supportSpecifications
          */
-        public java.util.List < SupportSpecifications> getSupportSpecifications() {
+        public java.util.List<SupportSpecifications> getSupportSpecifications() {
             return this.supportSpecifications;
         }
 
@@ -460,7 +490,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             private String instanceType; 
             private String region; 
             private String series; 
-            private java.util.List < SupportSpecifications> supportSpecifications; 
+            private java.util.List<SupportSpecifications> supportSpecifications; 
             private String zones; 
 
             /**
@@ -514,7 +544,7 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
             /**
              * SupportSpecifications.
              */
-            public Builder supportSpecifications(java.util.List < SupportSpecifications> supportSpecifications) {
+            public Builder supportSpecifications(java.util.List<SupportSpecifications> supportSpecifications) {
                 this.supportSpecifications = supportSpecifications;
                 return this;
             }
@@ -534,9 +564,15 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableZoneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableZoneResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZones")
-        private java.util.List < AvailableZones> availableZones;
+        private java.util.List<AvailableZones> availableZones;
 
         private Data(Builder builder) {
             this.availableZones = builder.availableZones;
@@ -553,17 +589,17 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         /**
          * @return availableZones
          */
-        public java.util.List < AvailableZones> getAvailableZones() {
+        public java.util.List<AvailableZones> getAvailableZones() {
             return this.availableZones;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableZones> availableZones; 
+            private java.util.List<AvailableZones> availableZones; 
 
             /**
              * AvailableZones.
              */
-            public Builder availableZones(java.util.List < AvailableZones> availableZones) {
+            public Builder availableZones(java.util.List<AvailableZones> availableZones) {
                 this.availableZones = availableZones;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTenantsRequest</p>
@@ -147,7 +153,11 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The number of used disks of the tenant.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -156,7 +166,13 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
+         * <p>The number of the page to return.<br>Start value: 1</p>
+         * <ul>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -165,7 +181,14 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * You can call this operation to query the tenants in an OceanBase cluster.
+         * <p>The number of rows to return on each page.   </p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -174,7 +197,10 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The primary zone of the tenant.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay</p>
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -183,7 +209,10 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud CLI
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -192,7 +221,10 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The information of tenants.
+         * <p>The name of the tenant.<br>It must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>).  It cannot be set to sys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_online</p>
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantZonesReadResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantZonesReadResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TenantZones")
-    private java.util.List < TenantZones> tenantZones;
+    private java.util.List<TenantZones> tenantZones;
 
     private DescribeTenantZonesReadResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,16 +46,19 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
     /**
      * @return tenantZones
      */
-    public java.util.List < TenantZones> getTenantZones() {
+    public java.util.List<TenantZones> getTenantZones() {
         return this.tenantZones;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TenantZones> tenantZones; 
+        private java.util.List<TenantZones> tenantZones; 
 
         /**
-         * Indicates whether a read-only connection needs to be created for the zone.
+         * <p>Indicates whether a read-only connection needs to be created for the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +66,9 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
          */
-        public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
+        public Builder tenantZones(java.util.List<TenantZones> tenantZones) {
             this.tenantZones = tenantZones;
             return this;
         }
@@ -70,6 +79,12 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantZonesReadResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantZonesReadResponseBody</p>
+     */
     public static class TenantZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsElectable")
         private Boolean isElectable;
@@ -133,7 +148,10 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * Example 1
+             * <p>Example 1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isElectable(Boolean isElectable) {
                 this.isElectable = isElectable;

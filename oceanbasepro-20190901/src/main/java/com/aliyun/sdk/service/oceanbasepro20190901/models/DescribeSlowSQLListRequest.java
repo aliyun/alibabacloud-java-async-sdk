@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowSQLListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlowSQLListRequest</p>
@@ -26,7 +32,7 @@ public class DescribeSlowSQLListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterCondition")
-    private java.util.Map < String, ? > filterCondition;
+    private java.util.Map<String, ?> filterCondition;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NodeIp")
@@ -135,7 +141,7 @@ public class DescribeSlowSQLListRequest extends Request {
     /**
      * @return filterCondition
      */
-    public java.util.Map < String, ? > getFilterCondition() {
+    public java.util.Map<String, ?> getFilterCondition() {
         return this.filterCondition;
     }
 
@@ -227,7 +233,7 @@ public class DescribeSlowSQLListRequest extends Request {
         private String regionId; 
         private String dbName; 
         private String endTime; 
-        private java.util.Map < String, ? > filterCondition; 
+        private java.util.Map<String, ?> filterCondition; 
         private String nodeIp; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -266,7 +272,10 @@ public class DescribeSlowSQLListRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -275,7 +284,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -284,9 +296,11 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The end time of the time range for querying slow SQL statements.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The end time of the time range for querying slow SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-13T15:40:43Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -295,9 +309,12 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The filter condition.
+         * <p>The filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[dbName:sys]</p>
          */
-        public Builder filterCondition(java.util.Map < String, ? > filterCondition) {
+        public Builder filterCondition(java.util.Map<String, ?> filterCondition) {
             String filterConditionShrink = shrink(filterCondition, "FilterCondition", "json");
             this.putBodyParameter("FilterCondition", filterConditionShrink);
             this.filterCondition = filterCondition;
@@ -305,7 +322,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The IP address of the database node.
+         * <p>The IP address of the database node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp18qljorblo8es*****</p>
          */
         public Builder nodeIp(String nodeIp) {
             this.putBodyParameter("NodeIp", nodeIp);
@@ -314,10 +334,14 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.  
-         * <p>
-         * - Maximum value: 100  
-         * - Default value: 10
+         * <p>The number of rows to return on each page.  </p>
+         * <ul>
+         * <li>Maximum value: 100  </li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -326,10 +350,14 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.    
-         * <p>
-         * - Start value: 1   
-         * - Default value: 1
+         * <p>The number of the page to return.    </p>
+         * <ul>
+         * <li>Start value: 1   </li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -338,7 +366,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The SQL ID, which uniquely identifies an SQL statement.
+         * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -347,7 +378,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         public Builder searchKeyWord(String searchKeyWord) {
             this.putBodyParameter("SearchKeyWord", searchKeyWord);
@@ -356,7 +390,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search parameter.
+         * <p>The search parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder searchParameter(String searchParameter) {
             this.putBodyParameter("SearchParameter", searchParameter);
@@ -365,7 +402,11 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search rule.
+         * <p>The search rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         public Builder searchRule(String searchRule) {
             this.putBodyParameter("SearchRule", searchRule);
@@ -374,7 +415,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The search value.
+         * <p>The search value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder searchValue(String searchValue) {
             this.putBodyParameter("SearchValue", searchValue);
@@ -383,7 +427,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The sorted column.
+         * <p>The sorted column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cputime</p>
          */
         public Builder sortColumn(String sortColumn) {
             this.putBodyParameter("SortColumn", sortColumn);
@@ -392,7 +439,10 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The sorting rule.
+         * <p>The sorting rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -401,9 +451,11 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The start time of the time range for querying slow SQL statements.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * <p>The start time of the time range for querying slow SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-13T15:40:43Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -412,7 +464,11 @@ public class DescribeSlowSQLListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

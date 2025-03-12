@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantUsersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantUsersResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TenantUsers")
-    private java.util.List < TenantUsers> tenantUsers;
+    private java.util.List<TenantUsers> tenantUsers;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -44,7 +50,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
     /**
      * @return tenantUsers
      */
-    public java.util.List < TenantUsers> getTenantUsers() {
+    public java.util.List<TenantUsers> getTenantUsers() {
         return this.tenantUsers;
     }
 
@@ -57,11 +63,14 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TenantUsers> tenantUsers; 
+        private java.util.List<TenantUsers> tenantUsers; 
         private Integer totalCount; 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,29 +78,34 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database account. Valid values:    
-         * <p>
-         * - Admin: the super administrator account.   
-         * - NORMAL: a general account.
+         * <p>The type of the database account. Valid values:    </p>
+         * <ul>
+         * <li>Admin: the super administrator account.   </li>
+         * <li>NORMAL: a general account.</li>
+         * </ul>
          */
-        public Builder tenantUsers(java.util.List < TenantUsers> tenantUsers) {
+        public Builder tenantUsers(java.util.List<TenantUsers> tenantUsers) {
             this.tenantUsers = tenantUsers;
             return this;
         }
 
         /**
-         * The role of the account.   
-         * <p>
-         * In Oracle mode, a role is a schema-level role. Valid values:  
-         * - ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  
-         * - ReadOnly: a role that has only the read-only privilege SELECT.
-         * In MySQL mode, a role is a database-level role. Valid values: 
-         * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   
-         * - ReadOnly: a role that has only the read-only privilege SELECT.   
-         * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
-         * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.   
+         * <p>The role of the account.<br>In Oracle mode, a role is a schema-level role. Valid values:  </p>
+         * <ul>
+         * <li>ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  </li>
+         * <li>ReadOnly: a role that has only the read-only privilege SELECT.
+         * In MySQL mode, a role is a database-level role. Valid values: </li>
+         * <li>ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   </li>
+         * <li>ReadOnly: a role that has only the read-only privilege SELECT.   </li>
+         * <li>DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </li>
+         * <li>DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</li>
+         * </ul>
+         * <blockquote>
+         * <p><br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.</p>
+         * </blockquote>
          * 
-         * > <br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -104,6 +118,12 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantUsersResponseBody</p>
+     */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -205,12 +225,21 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantUsersResponseBody</p>
+     */
     public static class TenantUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Databases")
-        private java.util.List < Databases> databases;
+        private java.util.List<Databases> databases;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("GlobalPermissions")
+        private String globalPermissions;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -230,6 +259,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         private TenantUsers(Builder builder) {
             this.databases = builder.databases;
             this.description = builder.description;
+            this.globalPermissions = builder.globalPermissions;
             this.instanceId = builder.instanceId;
             this.tenantId = builder.tenantId;
             this.userName = builder.userName;
@@ -248,7 +278,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         /**
          * @return databases
          */
-        public java.util.List < Databases> getDatabases() {
+        public java.util.List<Databases> getDatabases() {
             return this.databases;
         }
 
@@ -257,6 +287,13 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return globalPermissions
+         */
+        public String getGlobalPermissions() {
+            return this.globalPermissions;
         }
 
         /**
@@ -295,8 +332,9 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Databases> databases; 
+            private java.util.List<Databases> databases; 
             private String description; 
+            private String globalPermissions; 
             private String instanceId; 
             private String tenantId; 
             private String userName; 
@@ -306,7 +344,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             /**
              * Databases.
              */
-            public Builder databases(java.util.List < Databases> databases) {
+            public Builder databases(java.util.List<Databases> databases) {
                 this.databases = databases;
                 return this;
             }
@@ -320,7 +358,18 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 所属集群Id
+             * GlobalPermissions.
+             */
+            public Builder globalPermissions(String globalPermissions) {
+                this.globalPermissions = globalPermissions;
+                return this;
+            }
+
+            /**
+             * <p>所属集群Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obshc32****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -328,7 +377,10 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 所属租户Id
+             * <p>所属租户Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tshfs3****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;

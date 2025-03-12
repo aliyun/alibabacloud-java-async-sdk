@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantResponseBody</p>
@@ -49,7 +55,10 @@ public class DescribeTenantResponseBody extends TeaModel {
         private Tenant tenant; 
 
         /**
-         * The zone information of the tenant.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the zone.
+         * <p>The information about the tenant.</p>
          */
         public Builder tenant(Tenant tenant) {
             this.tenant = tenant;
@@ -70,6 +79,12 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class CapacityUnit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
@@ -121,7 +136,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer usedCapacit; 
 
             /**
-             * MaxCapacityUnit.
+             * <p>The maximum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxCapacityUnit(Integer maxCapacityUnit) {
                 this.maxCapacityUnit = maxCapacityUnit;
@@ -129,7 +147,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * MinCapacityUnit.
+             * <p>The minimum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minCapacityUnit(Integer minCapacityUnit) {
                 this.minCapacityUnit = minCapacityUnit;
@@ -137,7 +158,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacit.
+             * <p>The number of used capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder usedCapacit(Integer usedCapacit) {
                 this.usedCapacit = usedCapacit;
@@ -151,6 +175,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class Cpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Float totalCpu;
@@ -202,7 +232,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * TotalCpu.
+             * <p>The total number of CPU cores of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCpu(Float totalCpu) {
                 this.totalCpu = totalCpu;
@@ -210,7 +243,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UnitCpu.
+             * <p>The number of CPU cores in each resource unit of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
@@ -218,7 +254,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCpu.
+             * <p>The number of CPU cores used by the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -232,6 +271,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class DiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Float usedDiskSize;
@@ -259,7 +304,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedDiskSize; 
 
             /**
-             * UsedDiskSize.
+             * <p>The size of disk space used by the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder usedDiskSize(Float usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -273,6 +321,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class LogDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalLogDisk")
         private Integer totalLogDisk;
@@ -312,7 +366,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer unitLogDisk; 
 
             /**
-             * TotalLogDisk.
+             * <p>The total log disk size of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder totalLogDisk(Integer totalLogDisk) {
                 this.totalLogDisk = totalLogDisk;
@@ -320,7 +377,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UnitLogDisk.
+             * <p>The log disk size of each resource unit of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder unitLogDisk(Integer unitLogDisk) {
                 this.unitLogDisk = unitLogDisk;
@@ -334,6 +394,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class Memory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Float totalMemory;
@@ -385,7 +451,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * TotalMemory.
+             * <p>The total memory size of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -393,7 +462,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UnitMemory.
+             * <p>The memory size of each resource unit of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder unitMemory(Float unitMemory) {
                 this.unitMemory = unitMemory;
@@ -401,7 +473,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UsedMemory.
+             * <p>The size of memory used by the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -415,6 +490,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class ReadOnlyResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private CapacityUnit capacityUnit;
@@ -502,7 +583,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer unitNum; 
 
             /**
-             * CapacityUnit.
+             * <p>The information about capacity units.</p>
              */
             public Builder capacityUnit(CapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -510,7 +591,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of CPU cores of each replica node in the cluster.</p>
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -518,7 +599,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The size of the data disk.</p>
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -526,7 +607,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * LogDiskSize.
+             * <p>The information about the log disk resources of the tenant.</p>
              */
             public Builder logDiskSize(LogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
@@ -534,7 +615,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The information about the memory resources of the cluster.</p>
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -542,7 +623,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UnitNum.
+             * <p>The number of resource units in the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -556,18 +640,24 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantConnections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionLogicalZones")
-        private java.util.List < String > connectionLogicalZones;
+        private java.util.List<String> connectionLogicalZones;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionReplicaType")
         private String connectionReplicaType;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionZones")
-        private java.util.List < String > connectionZones;
+        private java.util.List<String> connectionZones;
 
         @com.aliyun.core.annotation.NameInMap("EnableTransactionSplit")
         private Boolean enableTransactionSplit;
@@ -686,7 +776,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return connectionLogicalZones
          */
-        public java.util.List < String > getConnectionLogicalZones() {
+        public java.util.List<String> getConnectionLogicalZones() {
             return this.connectionLogicalZones;
         }
 
@@ -700,7 +790,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return connectionZones
          */
-        public java.util.List < String > getConnectionZones() {
+        public java.util.List<String> getConnectionZones() {
             return this.connectionZones;
         }
 
@@ -867,9 +957,9 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addressType; 
-            private java.util.List < String > connectionLogicalZones; 
+            private java.util.List<String> connectionLogicalZones; 
             private String connectionReplicaType; 
-            private java.util.List < String > connectionZones; 
+            private java.util.List<String> connectionZones; 
             private Boolean enableTransactionSplit; 
             private String internetAddress; 
             private String internetAddressStatus; 
@@ -895,7 +985,16 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The primary zone of the tenant.
+             * <p>The type of the address.</p>
+             * <ul>
+             * <li>MASTER: the primary address, which supports both data read and write.</li>
+             * <li>READONLY: a read-only address.</li>
+             * <li>READWRITE: a read/write splitting address.</li>
+             * <li>CLOGSERVICE: a clog service address.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>READONLY</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -903,15 +1002,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionLogicalZones.
+             * <p>The logical zones of the endpoints.</p>
              */
-            public Builder connectionLogicalZones(java.util.List < String > connectionLogicalZones) {
+            public Builder connectionLogicalZones(java.util.List<String> connectionLogicalZones) {
                 this.connectionLogicalZones = connectionLogicalZones;
                 return this;
             }
 
             /**
-             * ConnectionReplicaType.
+             * <p>The type of the replica corresponding to the tenant connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL</p>
              */
             public Builder connectionReplicaType(String connectionReplicaType) {
                 this.connectionReplicaType = connectionReplicaType;
@@ -919,15 +1021,21 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet address for accessing the tenant.
+             * <p>The list of zones corresponding to the tenant connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;cn-hangzhou-i&quot;, &quot;cn-hangzhou-j&quot;]</p>
              */
-            public Builder connectionZones(java.util.List < String > connectionZones) {
+            public Builder connectionZones(java.util.List<String> connectionZones) {
                 this.connectionZones = connectionZones;
                 return this;
             }
 
             /**
-             * EnableTransactionSplit.
+             * <p>Specifies whether to enable transaction splitting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableTransactionSplit(Boolean enableTransactionSplit) {
                 this.enableTransactionSplit = enableTransactionSplit;
@@ -935,7 +1043,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The Internet address for accessing the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t32a7ru5u****mo.oceanbase.aliyuncs.com</p>
              */
             public Builder internetAddress(String internetAddress) {
                 this.internetAddress = internetAddress;
@@ -943,7 +1054,16 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 实例系列
+             * <p>The status of the Internet address for accessing the tenant. Valid values:   </p>
+             * <ul>
+             * <li>CLOSED: The address is disabled.   </li>
+             * <li>ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </li>
+             * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </li>
+             * <li>ONLINE: The address is in service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOSED</p>
              */
             public Builder internetAddressStatus(String internetAddressStatus) {
                 this.internetAddressStatus = internetAddressStatus;
@@ -951,7 +1071,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxConnectionLimit.
+             * <p>The upper limit of the maximum number of public connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder internetMaxConnectionLimit(Long internetMaxConnectionLimit) {
                 this.internetMaxConnectionLimit = internetMaxConnectionLimit;
@@ -959,7 +1082,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxConnectionNum.
+             * <p>The current value set for the maximum number of public connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder internetMaxConnectionNum(Long internetMaxConnectionNum) {
                 this.internetMaxConnectionNum = internetMaxConnectionNum;
@@ -967,7 +1093,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 实例类型
+             * <p>The Internet port for accessing the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder internetPort(Integer internetPort) {
                 this.internetPort = internetPort;
@@ -975,7 +1104,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * InternetRpcPort.
+             * <p>The port for direct loads of public connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3307</p>
              */
             public Builder internetRpcPort(Integer internetRpcPort) {
                 this.internetRpcPort = internetRpcPort;
@@ -983,11 +1115,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the cluster. Valid values:  
-             * <p>
-             * - multiple: multi-IDC deployment   
-             * - single: single-IDC deployment   
-             * - dual: dual-IDC deployment
+             * <p>The intranet address for accessing the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t4nunwxr0****.oceanbase.aliyuncs.com</p>
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -995,7 +1126,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * PayCore business database
+             * <p>The primary zone corresponding to the address for accessing the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder intranetAddressMasterZoneId(String intranetAddressMasterZoneId) {
                 this.intranetAddressMasterZoneId = intranetAddressMasterZoneId;
@@ -1003,7 +1137,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPU cores of the tenant.
+             * <p>The standby zone corresponding to the address for accessing the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder intranetAddressSlaveZoneId(String intranetAddressSlaveZoneId) {
                 this.intranetAddressSlaveZoneId = intranetAddressSlaveZoneId;
@@ -1011,7 +1148,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 付费类型
+             * <p>The status of the intranet address for accessing the tenant.<br>The value ONLINE indicates that the address is in service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder intranetAddressStatus(String intranetAddressStatus) {
                 this.intranetAddressStatus = intranetAddressStatus;
@@ -1019,7 +1159,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The intranet port for accessing the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2983</p>
              */
             public Builder intranetPort(Integer intranetPort) {
                 this.intranetPort = intranetPort;
@@ -1027,7 +1170,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetRpcPort.
+             * <p>The port for direct loads of private connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3307</p>
              */
             public Builder intranetRpcPort(Integer intranetRpcPort) {
                 this.intranetRpcPort = intranetRpcPort;
@@ -1035,7 +1181,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetSqlPort.
+             * <p>The port of private SQL connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder intranetSqlPort(Integer intranetSqlPort) {
                 this.intranetSqlPort = intranetSqlPort;
@@ -1043,7 +1192,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConnectionLimit.
+             * <p>The current value set for the maximum number of private connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxConnectionLimit(Long maxConnectionLimit) {
                 this.maxConnectionLimit = maxConnectionLimit;
@@ -1051,7 +1203,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConnectionNum.
+             * <p>The maximum number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder maxConnectionNum(Long maxConnectionNum) {
                 this.maxConnectionNum = maxConnectionNum;
@@ -1059,7 +1214,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * OdpVersion.
+             * <p>The ODP version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.3.1-xxxxxxxxx</p>
              */
             public Builder odpVersion(String odpVersion) {
                 this.odpVersion = odpVersion;
@@ -1067,7 +1225,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ParallelQueryDegree.
+             * <p>The degree of parallelism (DOP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parallelQueryDegree(Long parallelQueryDegree) {
                 this.parallelQueryDegree = parallelQueryDegree;
@@ -1075,7 +1236,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyClusterId.
+             * <p>The ID of the OceanBase Database Proxy (ODP) cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy-xxxxxxx</p>
              */
             public Builder proxyClusterId(String proxyClusterId) {
                 this.proxyClusterId = proxyClusterId;
@@ -1083,7 +1247,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * TenantEndpointId.
+             * <p>The ID of the tenant endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obe-4tw51gp7****</p>
              */
             public Builder tenantEndpointId(String tenantEndpointId) {
                 this.tenantEndpointId = tenantEndpointId;
@@ -1091,7 +1258,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The primary zone corresponding to the address for accessing the tenant.
+             * <p>Specifies whether to enable transaction splitting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder transactionSplit(Boolean transactionSplit) {
                 this.transactionSplit = transactionSplit;
@@ -1099,7 +1269,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The connection access information of the tenant.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1i7b94u2et716yl****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1107,11 +1280,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The service mode of the connection address. Valid values:  
-             * <p>
-             * ReadWrite: provides strong-consistency read and write services.   
-             * ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
-             * Clog: provides transaction log services.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1qiail1asmfe23t****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1125,6 +1297,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantResourceCapacityUnit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
@@ -1176,7 +1354,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer usedCapacit; 
 
             /**
-             * MaxCapacityUnit.
+             * <p>The maximum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxCapacityUnit(Integer maxCapacityUnit) {
                 this.maxCapacityUnit = maxCapacityUnit;
@@ -1184,7 +1365,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * MinCapacityUnit.
+             * <p>The minimum number of capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minCapacityUnit(Integer minCapacityUnit) {
                 this.minCapacityUnit = minCapacityUnit;
@@ -1192,7 +1376,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacit.
+             * <p>The number of used capacity units.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder usedCapacit(Integer usedCapacit) {
                 this.usedCapacit = usedCapacit;
@@ -1206,6 +1393,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantResourceCpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Float totalCpu;
@@ -1257,13 +1450,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * The data replica distribution mode of the tenant.    
-             * <p>
+             * <p>The total number of CPU cores of the tenant.</p>
              * 
-             * - For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.
-             * - For the basic version, N indicates the single-zone mode. 
-             * 
-             * > <br>N represents the number of nodes in a single zone.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCpu(Float totalCpu) {
                 this.totalCpu = totalCpu;
@@ -1271,7 +1461,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The zone corresponding to the tenant connection.
+             * <p>The number of CPU cores in each resource unit of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
@@ -1279,11 +1472,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant mode.   
-             * <p>
-             * Valid values: 
-             * Oracle   
-             * MySQL
+             * <p>The number of used CPU cores of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -1297,6 +1489,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantResourceDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Float usedDiskSize;
@@ -1324,7 +1522,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedDiskSize; 
 
             /**
-             * The total memory size of the tenant, in GB.
+             * <p>The size of used disk space of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder usedDiskSize(Float usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -1338,6 +1539,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantResourceLogDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalLogDisk")
         private Integer totalLogDisk;
@@ -1377,7 +1584,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer unitLogDisk; 
 
             /**
-             * TotalLogDisk.
+             * <p>The total size of log disk of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder totalLogDisk(Integer totalLogDisk) {
                 this.totalLogDisk = totalLogDisk;
@@ -1385,7 +1595,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * UnitLogDisk.
+             * <p>The log disk size of each resource unit of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder unitLogDisk(Integer unitLogDisk) {
                 this.unitLogDisk = unitLogDisk;
@@ -1399,6 +1612,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantResourceMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Float totalMemory;
@@ -1450,7 +1669,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * The information about the memory resources of the tenant.
+             * <p>The total memory size of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -1458,7 +1680,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the tenant was created.
+             * <p>The memory size of each resource unit of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder unitMemory(Float unitMemory) {
                 this.unitMemory = unitMemory;
@@ -1466,12 +1691,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Internet address for accessing the tenant. Valid values:   
-             * <p>
-             * Closed: The address is disabled.   
-             * - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
-             * - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
-             * - ONLINE: The address is in service.
+             * <p>The size of used memory of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -1485,6 +1708,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private TenantResourceCapacityUnit capacityUnit;
@@ -1572,7 +1801,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer unitNum; 
 
             /**
-             * CapacityUnit.
+             * <p>The information about capacity units.</p>
              */
             public Builder capacityUnit(TenantResourceCapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -1580,10 +1809,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The enabling status of the Clog service.  
-             * <p>
-             * CLOSED: The Clog service is disabled.  
-             * - ONLINE: The Clog service is running.
+             * <p>The information about the CPU resources of the tenant.</p>
              */
             public Builder cpu(TenantResourceCpu cpu) {
                 this.cpu = cpu;
@@ -1591,9 +1817,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the intranet address for accessing the tenant.  
-             * <p>
-             * The value ONLINE indicates that the address is in service.
+             * <p>The information about the disk resources of the tenant.</p>
              */
             public Builder diskSize(TenantResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -1601,7 +1825,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * LogDiskSize.
+             * <p>The information about the log disk resources of the tenant.</p>
              */
             public Builder logDiskSize(TenantResourceLogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
@@ -1609,7 +1833,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the tenant.
+             * <p>The information about the memory resources of the tenant.</p>
              */
             public Builder memory(TenantResourceMemory memory) {
                 this.memory = memory;
@@ -1617,7 +1841,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Alibaba Cloud CLI
+             * <p>The number of resource units for the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -1631,6 +1858,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantZoneReplicas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullCopyId")
         private Integer fullCopyId;
@@ -1641,11 +1874,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadOnlyCopyId")
         private String readOnlyCopyId;
 
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyReplicaType")
+        private String readOnlyReplicaType;
+
         @com.aliyun.core.annotation.NameInMap("ZoneCopyId")
         private Integer zoneCopyId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneNodes")
-        private String zoneNodes;
+        private Long zoneNodes;
 
         @com.aliyun.core.annotation.NameInMap("ZoneReplicaType")
         private String zoneReplicaType;
@@ -1654,6 +1890,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.fullCopyId = builder.fullCopyId;
             this.logicZoneName = builder.logicZoneName;
             this.readOnlyCopyId = builder.readOnlyCopyId;
+            this.readOnlyReplicaType = builder.readOnlyReplicaType;
             this.zoneCopyId = builder.zoneCopyId;
             this.zoneNodes = builder.zoneNodes;
             this.zoneReplicaType = builder.zoneReplicaType;
@@ -1689,6 +1926,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return readOnlyReplicaType
+         */
+        public String getReadOnlyReplicaType() {
+            return this.readOnlyReplicaType;
+        }
+
+        /**
          * @return zoneCopyId
          */
         public Integer getZoneCopyId() {
@@ -1698,7 +1942,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return zoneNodes
          */
-        public String getZoneNodes() {
+        public Long getZoneNodes() {
             return this.zoneNodes;
         }
 
@@ -1713,12 +1957,16 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer fullCopyId; 
             private String logicZoneName; 
             private String readOnlyCopyId; 
+            private String readOnlyReplicaType; 
             private Integer zoneCopyId; 
-            private String zoneNodes; 
+            private Long zoneNodes; 
             private String zoneReplicaType; 
 
             /**
-             * FullCopyId.
+             * <p>The ID of the full-featured replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder fullCopyId(Integer fullCopyId) {
                 this.fullCopyId = fullCopyId;
@@ -1726,7 +1974,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * LogicZoneName.
+             * <p>The name of the logical zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-f-z0</p>
              */
             public Builder logicZoneName(String logicZoneName) {
                 this.logicZoneName = logicZoneName;
@@ -1734,7 +1985,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyCopyId.
+             * <p>The ID of the read-only replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder readOnlyCopyId(String readOnlyCopyId) {
                 this.readOnlyCopyId = readOnlyCopyId;
@@ -1742,7 +1996,21 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneCopyId.
+             * <p>The type of the read-only replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROW_STORE</p>
+             */
+            public Builder readOnlyReplicaType(String readOnlyReplicaType) {
+                this.readOnlyReplicaType = readOnlyReplicaType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the zone replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder zoneCopyId(Integer zoneCopyId) {
                 this.zoneCopyId = zoneCopyId;
@@ -1750,15 +2018,21 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneNodes.
+             * <p>The number of nodes in the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder zoneNodes(String zoneNodes) {
+            public Builder zoneNodes(Long zoneNodes) {
                 this.zoneNodes = zoneNodes;
                 return this;
             }
 
             /**
-             * ZoneReplicaType.
+             * <p>The type of the zone replica.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FULL</p>
              */
             public Builder zoneReplicaType(String zoneReplicaType) {
                 this.zoneReplicaType = zoneReplicaType;
@@ -1772,6 +2046,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class TenantZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
@@ -1780,7 +2060,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private String tenantZoneId;
 
         @com.aliyun.core.annotation.NameInMap("TenantZoneReplicas")
-        private java.util.List < TenantZoneReplicas> tenantZoneReplicas;
+        private java.util.List<TenantZoneReplicas> tenantZoneReplicas;
 
         @com.aliyun.core.annotation.NameInMap("TenantZoneRole")
         private String tenantZoneRole;
@@ -1817,7 +2097,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return tenantZoneReplicas
          */
-        public java.util.List < TenantZoneReplicas> getTenantZoneReplicas() {
+        public java.util.List<TenantZoneReplicas> getTenantZoneReplicas() {
             return this.tenantZoneReplicas;
         }
 
@@ -1831,11 +2111,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static final class Builder {
             private String region; 
             private String tenantZoneId; 
-            private java.util.List < TenantZoneReplicas> tenantZoneReplicas; 
+            private java.util.List<TenantZoneReplicas> tenantZoneReplicas; 
             private String tenantZoneRole; 
 
             /**
-             * 是否允许开启读写分离地址
+             * <p>The region where the zone of the tenant resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1843,7 +2126,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The intranet port for accessing the tenant.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder tenantZoneId(String tenantZoneId) {
                 this.tenantZoneId = tenantZoneId;
@@ -1851,15 +2137,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * TenantZoneReplicas.
+             * <p>The zone replicas of the tenant.</p>
              */
-            public Builder tenantZoneReplicas(java.util.List < TenantZoneReplicas> tenantZoneReplicas) {
+            public Builder tenantZoneReplicas(java.util.List<TenantZoneReplicas> tenantZoneReplicas) {
                 this.tenantZoneReplicas = tenantZoneReplicas;
                 return this;
             }
 
             /**
-             * The character set.
+             * <p>The role of the zone of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder tenantZoneRole(String tenantZoneRole) {
                 this.tenantZoneRole = tenantZoneRole;
@@ -1873,9 +2162,15 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantResponseBody</p>
+     */
     public static class Tenant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZones")
-        private java.util.List < String > availableZones;
+        private java.util.List<String> availableZones;
 
         @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
@@ -1937,6 +2232,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OdpVersion")
         private String odpVersion;
 
+        @com.aliyun.core.annotation.NameInMap("ParameterTemplate")
+        private String parameterTemplate;
+
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
@@ -1959,10 +2257,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TenantConnections")
-        private java.util.List < TenantConnections> tenantConnections;
+        private java.util.List<TenantConnections> tenantConnections;
 
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
+
+        @com.aliyun.core.annotation.NameInMap("TenantMaxConnections")
+        private String tenantMaxConnections;
 
         @com.aliyun.core.annotation.NameInMap("TenantMode")
         private String tenantMode;
@@ -1974,7 +2275,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private TenantResource tenantResource;
 
         @com.aliyun.core.annotation.NameInMap("TenantZones")
-        private java.util.List < TenantZones> tenantZones;
+        private java.util.List<TenantZones> tenantZones;
 
         @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
@@ -2007,6 +2308,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
             this.maxParallelQueryDegree = builder.maxParallelQueryDegree;
             this.odpVersion = builder.odpVersion;
+            this.parameterTemplate = builder.parameterTemplate;
             this.payType = builder.payType;
             this.primaryZone = builder.primaryZone;
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
@@ -2016,6 +2318,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.status = builder.status;
             this.tenantConnections = builder.tenantConnections;
             this.tenantId = builder.tenantId;
+            this.tenantMaxConnections = builder.tenantMaxConnections;
             this.tenantMode = builder.tenantMode;
             this.tenantName = builder.tenantName;
             this.tenantResource = builder.tenantResource;
@@ -2036,7 +2339,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return availableZones
          */
-        public java.util.List < String > getAvailableZones() {
+        public java.util.List<String> getAvailableZones() {
             return this.availableZones;
         }
 
@@ -2181,6 +2484,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return parameterTemplate
+         */
+        public String getParameterTemplate() {
+            return this.parameterTemplate;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -2232,7 +2542,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return tenantConnections
          */
-        public java.util.List < TenantConnections> getTenantConnections() {
+        public java.util.List<TenantConnections> getTenantConnections() {
             return this.tenantConnections;
         }
 
@@ -2241,6 +2551,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getTenantId() {
             return this.tenantId;
+        }
+
+        /**
+         * @return tenantMaxConnections
+         */
+        public String getTenantMaxConnections() {
+            return this.tenantMaxConnections;
         }
 
         /**
@@ -2267,7 +2584,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return tenantZones
          */
-        public java.util.List < TenantZones> getTenantZones() {
+        public java.util.List<TenantZones> getTenantZones() {
             return this.tenantZones;
         }
 
@@ -2293,7 +2610,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > availableZones; 
+            private java.util.List<String> availableZones; 
             private String charset; 
             private String clogServiceStatus; 
             private String collation; 
@@ -2314,6 +2631,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String masterIntranetAddressZone; 
             private Long maxParallelQueryDegree; 
             private String odpVersion; 
+            private String parameterTemplate; 
             private String payType; 
             private String primaryZone; 
             private String primaryZoneDeployType; 
@@ -2321,26 +2639,30 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String recycleBinStatus; 
             private String series; 
             private String status; 
-            private java.util.List < TenantConnections> tenantConnections; 
+            private java.util.List<TenantConnections> tenantConnections; 
             private String tenantId; 
+            private String tenantMaxConnections; 
             private String tenantMode; 
             private String tenantName; 
             private TenantResource tenantResource; 
-            private java.util.List < TenantZones> tenantZones; 
+            private java.util.List<TenantZones> tenantZones; 
             private String timeZone; 
             private String version; 
             private String vpcId; 
 
             /**
-             * DescribeTenant
+             * <p>The list of zones.</p>
              */
-            public Builder availableZones(java.util.List < String > availableZones) {
+            public Builder availableZones(java.util.List<String> availableZones) {
                 this.availableZones = availableZones;
                 return this;
             }
 
             /**
-             * The number of CPU cores in each resource unit of the tenant.
+             * <p>The character set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -2348,7 +2670,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 地址类型
+             * <p>The enabling status of the clog service.  </p>
+             * <ul>
+             * <li>CLOSED: The clog service is disabled.  </li>
+             * <li>ONLINE: The clog service is running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOSED</p>
              */
             public Builder clogServiceStatus(String clogServiceStatus) {
                 this.clogServiceStatus = clogServiceStatus;
@@ -2356,7 +2685,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The collation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4_general_ci</p>
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -2364,7 +2696,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to create a single tenant in a specific cluster.
+             * <p>The time when the tenant was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-21 11:15:47.0</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2372,7 +2707,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * DataMergeTime.
+             * <p>The major compaction time of the tenant. This parameter is supported only in OceanBase Database V4.0.0 and later.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:36Z</p>
              */
             public Builder dataMergeTime(String dataMergeTime) {
                 this.dataMergeTime = dataMergeTime;
@@ -2380,7 +2718,17 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The list of zones.
+             * <p>The data replica distribution mode of the tenant.    </p>
+             * <ul>
+             * <li>For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.</li>
+             * <li>For the basic version, N indicates the single-zone mode.</li>
+             * </ul>
+             * <blockquote>
+             * <p><br>N represents the number of nodes in a single zone.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1-1-1</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -2388,7 +2736,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The series of the instance.
+             * <p>The deployment type of the cluster. Valid values:  </p>
+             * <ul>
+             * <li>multiple: multi-IDC deployment   </li>
+             * <li>single: single-IDC deployment   </li>
+             * <li>dual: dual-IDC deployment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>multiple</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -2396,7 +2752,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable read/write splitting endpoint.
+             * <p>The description of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>paycore database</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2404,7 +2763,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to query the information of a specific tenant in a specific cluster.
+             * <p>The type of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd_pl1</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -2412,7 +2774,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可以申请Binlog服务
+             * <p>Indicates whether the binlog service is available for application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableBinlogService(Boolean enableBinlogService) {
                 this.enableBinlogService = enableBinlogService;
@@ -2420,7 +2785,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The intranet address for accessing the tenant.
+             * <p>Indicates whether the clog service is available. To enable the clog service, submit a ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableClogService(Boolean enableClogService) {
                 this.enableClogService = enableClogService;
@@ -2428,7 +2796,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the primary zone.
+             * <p>Indicates whether the Internet address can be enabled for the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableInternetAddressService(Boolean enableInternetAddressService) {
                 this.enableInternetAddressService = enableInternetAddressService;
@@ -2436,7 +2807,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * EnableParallelQuery.
+             * <p>Indicates whether parallel query can be enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableParallelQuery(Boolean enableParallelQuery) {
                 this.enableParallelQuery = enableParallelQuery;
@@ -2444,7 +2818,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * EnableReadOnlyReplica.
+             * <p>Indicates whether read-only replicas are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
                 this.enableReadOnlyReplica = enableReadOnlyReplica;
@@ -2452,7 +2829,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * EnableReadWriteSplit.
+             * <p>Indicates whether to enable read/write splitting endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableReadWriteSplit(Boolean enableReadWriteSplit) {
                 this.enableReadWriteSplit = enableReadWriteSplit;
@@ -2460,64 +2840,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * {
-             * <p>
-             *     "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",
-             *     "Tenant": {
-             *         "TenantId": "t33h8y08k****",
-             *         "TenantName": "pay_online",
-             *         "TenantMode": "Oracle",
-             *         "VpcId": "vpc-bp1d2q3mhg9i23ofi****",
-             *         "Status": "ONLINE",
-             *         "PrimaryZone": "cn-hangzhou-i",
-             *         "DeployType": "multiple",
-             *         "DeployMode": "1-1-1",
-             *         "Description": "PayCore business database",
-             *         "CreateTime": "2021-09-17 15:52:17",
-             *         "TenantResource": {
-             *             "UnitNum": 1,
-             *             "Cpu": {
-             *                 "UsedCpu": 8,
-             *                 "TotalCpu": 10,
-             *                 "UnitCpu": 8
-             *             },
-             *             "Memory": {
-             *                 "UsedMemory": 30,
-             *                 "TotalMemory": 64,
-             *                 "UnitMemory": 32
-             *             },
-             *             "DiskSize": {
-             *                 "UsedDiskSize": 86
-             *             }
-             *         },
-             *         "TenantConnections": [
-             *             {
-             *                 "ConnectionRole": "ReadWrite",
-             *                 "IntranetAddress": "t32a7ru5u****.oceanbase.aliyuncs.com",
-             *                 "IntranetPort": 3306,
-             *                 "InternetAddress": "t32a7ru5u****mo.oceanbase.aliyuncs.com",
-             *                 "InternetPort": 3306,
-             *                 "VpcId": "vpc-bp1qiail1asmfe23t****",
-             *                 "VSwitchId": "vsw-bp11k1aypnzu1l3whi****",
-             *                 "IntranetAddressMasterZoneId": "cn-hangzhou-i",
-             *                 "IntranetAddressSlaveZoneId": "cn-hangzhou-j",
-             *                 "IntranetAddressStatus": "ONLINE",
-             *                 "ConnectionZones": [
-             *                     "cn-hangzhou-i"
-             *                 ],
-             *                 "InternetAddressStatus": "CLOSED"
-             *             }
-             *         ],
-             *         "TenantZones": [
-             *             {
-             *                 "TenantZoneId": "cn-hangzhou-i",
-             *                 "Region": "cn-hangzhou",
-             *                 "TenantZoneRole": "ReadOnly"
-             *             }
-             *         ],
-             *         "ClogServiceStatus": "CLOSED"
-             *     }
-             * }
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KAFKA_PUBLIC</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2525,7 +2851,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * LowerCaseTableNames.
+             * <p>Indicates whether the table name is case-sensitive. Valid values: </p>
+             * <ul>
+             * <li><strong>1</strong>: The table name is case-insensitive. </li>
+             * <li><strong>0</strong>: The table name is case-sensitive.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lowerCaseTableNames(Integer lowerCaseTableNames) {
                 this.lowerCaseTableNames = lowerCaseTableNames;
@@ -2533,13 +2866,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ```
-             * <p>
-             * http(s)://[Endpoint]/?Action=DescribeTenant
-             * &InstanceId=ob317v4uif****
-             * &TenantId=ob2mr3oae0****
-             * &Common request parameters
-             * ```
+             * <p>The zone where the primary node is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
                 this.masterIntranetAddressZone = masterIntranetAddressZone;
@@ -2547,7 +2877,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * MaxParallelQueryDegree.
+             * <p>The maximum value of DOP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder maxParallelQueryDegree(Long maxParallelQueryDegree) {
                 this.maxParallelQueryDegree = maxParallelQueryDegree;
@@ -2555,7 +2888,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * OdpVersion.
+             * <p>The ODP version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.3.1-xxxxxxxxx</p>
              */
             public Builder odpVersion(String odpVersion) {
                 this.odpVersion = odpVersion;
@@ -2563,7 +2899,21 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>express_oltp</p>
+             */
+            public Builder parameterTemplate(String parameterTemplate) {
+                this.parameterTemplate = parameterTemplate;
+                return this;
+            }
+
+            /**
+             * <p>The type of the payment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -2571,7 +2921,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the payment.
+             * <p>The primary zone of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -2579,7 +2932,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Example 1
+             * <p>The deployment type of the primary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RANDOM</p>
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
@@ -2587,7 +2943,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyResource.
+             * <p>The information about read-only resources.</p>
              */
             public Builder readOnlyResource(ReadOnlyResource readOnlyResource) {
                 this.readOnlyResource = readOnlyResource;
@@ -2595,7 +2951,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * RecycleBinStatus.
+             * <p>The status of the recycle bin in the tenant. Valid values: </p>
+             * <ul>
+             * <li>ON: The recycly bin is enabled. </li>
+             * <li>OFF: The recycle bin is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder recycleBinStatus(String recycleBinStatus) {
                 this.recycleBinStatus = recycleBinStatus;
@@ -2603,58 +2966,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * <DescribeTenantResponse>
-             * <p>
-             *     <RequestId>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</RequestId>
-             *     <Tenant>
-             *         <TenantId>t33h8y08k****</TenantId>
-             *         <TenantName>pay_online</TenantName>
-             *         <TenantMode>Oracle</TenantMode>
-             *         <VpcId>vpc-bp1d2q3mhg9i23ofi****</VpcId>
-             *         <Status>ONLINE</Status>
-             *         <PrimaryZone>cn-hangzhou-i</PrimaryZone>
-             *         <DeployType>multiple</DeployType>
-             *         <DeployMode>1-1-1</DeployMode>
-             *         <Description>PayCore business database</Description>
-             *         <CreateTime>2021-09-17 15:52:17</CreateTime>
-             *         <TenantResource>
-             *             <UnitNum>1</UnitNum>
-             *             <Cpu>
-             *                 <UsedCpu>8</UsedCpu>
-             *                 <TotalCpu>10</TotalCpu>
-             *                 <UnitCpu>8</UnitCpu>
-             *             </Cpu>
-             *             <Memory>
-             *                 <UsedMemory>30</UsedMemory>
-             *                 <TotalMemory>64</TotalMemory>
-             *                 <UnitMemory>32</UnitMemory>
-             *             </Memory>
-             *             <DiskSize>
-             *                 <UsedDiskSize>86</UsedDiskSize>
-             *             </DiskSize>
-             *         </TenantResource>
-             *         <TenantConnections>
-             *             <ConnectionRole>ReadWrite</ConnectionRole>
-             *             <IntranetAddress>t32a7ru5u****.oceanbase.aliyuncs.com</IntranetAddress>
-             *             <IntranetPort>3306</IntranetPort>
-             *             <InternetAddress>t32a7ru5u****mo.oceanbase.aliyuncs.com</InternetAddress>
-             *             <InternetPort>3306</InternetPort>
-             *             <VpcId>vpc-bp1qiail1asmfe23t****</VpcId>
-             *             <VSwitchId>vsw-bp11k1aypnzu1l3whi****</VSwitchId>
-             *             <IntranetAddressMasterZoneId>cn-hangzhou-i</IntranetAddressMasterZoneId>
-             *             <IntranetAddressSlaveZoneId>cn-hangzhou-j</IntranetAddressSlaveZoneId>
-             *             <IntranetAddressStatus>ONLINE</IntranetAddressStatus>
-             *             <ConnectionZones>cn-hangzhou-i</ConnectionZones>
-             *             <InternetAddressStatus>CLOSED</InternetAddressStatus>
-             *         </TenantConnections>
-             *         <TenantZones>
-             *             <TenantZoneId>cn-hangzhou-i</TenantZoneId>
-             *             <Region>cn-hangzhou</Region>
-             *             <TenantZoneRole>ReadOnly</TenantZoneRole>
-             *         </TenantZones>
-             *         <ClogServiceStatus>CLOSED</ClogServiceStatus>
-             *     </Tenant>
-             * </DescribeTenantResponse>
+             * <p>The series of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder series(String series) {
                 this.series = series;
@@ -2662,7 +2977,52 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The character set.
+             * <p>The status of the tenant.</p>
+             * <ul>
+             * <li><p>ONLINE: The tenant is running.</p>
+             * </li>
+             * <li><p>PENDING_CREATE: The tenant is being created.</p>
+             * </li>
+             * <li><p>WAITING_ALLOCATE_MASTER_ADDRESS: The standby cluster is waiting for the primary address to be created.</p>
+             * </li>
+             * <li><p>ALLOCATING_MASTER_ADDRESS: The primary address is being created.</p>
+             * </li>
+             * <li><p>DELETING_MASTER_ADDRESS: The primary address is being deleted.</p>
+             * </li>
+             * <li><p>ALLOCATING_INTERNET_ADDRESS: The Internet address is being created.</p>
+             * </li>
+             * <li><p>PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being deleted.</p>
+             * </li>
+             * <li><p>ALLOCATING_READONLY_ADDRESS: The read-only address is being created.</p>
+             * </li>
+             * <li><p>DELETING_READONLY_ADDRESS: The read-only address is being deleted.</p>
+             * </li>
+             * <li><p>ALLOCATING_READWRITE_ADDRESS: The read/write splitting address is being created.</p>
+             * </li>
+             * <li><p>DELETING_READWRITE_ADDRESS: The read/write splitting address is being deleted.</p>
+             * </li>
+             * <li><p>ALLOCATING_CLOGSERVICE_ADDRESS: The clog address is being created.</p>
+             * </li>
+             * <li><p>DELETING_CLOGSERVICE_ADDRESS: The clog address is being deleted.</p>
+             * </li>
+             * <li><p>MODIFYING_ADDRESS: The domain name of the address is being modified.</p>
+             * </li>
+             * <li><p>MODIFYING_PRIMARY_ZONE: The primary zone is being switched.</p>
+             * </li>
+             * <li><p>MODIFYING_READONLY_ADDRESS: The read-only address is being modified.</p>
+             * </li>
+             * <li><p>MODIFYING_READWRITE_ADDRESS: The read/write splitting address is being modified.</p>
+             * </li>
+             * <li><p>SPEC_MODIFYING: The specifications of the tenant are being modified.</p>
+             * </li>
+             * <li><p>WHITE_LIST_MODIFYING: The allowlist is being modified.</p>
+             * </li>
+             * <li><p>CREATING_BINLOG: Binlogs are being created.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2670,25 +3030,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the tenant.   
-             * <p>
-             * - PENDING_CREATE: The tenant is being created.   
-             * - RESTORE: The tenant is being recovered.   
-             * - ONLINE: The tenant is running.   
-             * - SPEC_MODIFYING: The specification of the tenant is being modified.   
-             * - ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.  
-             * - PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.  
-             * - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.  
-             * - PARAMETER_MODIFYING: Parameters are being modified.   
-             * - WHITE_LIST_MODIFYING: The whitelist is being modified.
+             * <p>The connection information of the tenant.</p>
              */
-            public Builder tenantConnections(java.util.List < TenantConnections> tenantConnections) {
+            public Builder tenantConnections(java.util.List<TenantConnections> tenantConnections) {
                 this.tenantConnections = tenantConnections;
                 return this;
             }
 
             /**
-             * The region where the zone of the tenant resides.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t4louaeei****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -2696,10 +3049,26 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The enabling status of the clog service.  
-             * <p>
-             * - CLOSED: The clog service is disabled.  
-             * - ONLINE: The clog service is running.
+             * <p>The maximum number of connections allowed in the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600</p>
+             */
+            public Builder tenantMaxConnections(String tenantMaxConnections) {
+                this.tenantMaxConnections = tenantMaxConnections;
+                return this;
+            }
+
+            /**
+             * <p>The mode of the tenant.
+             * Valid values:</p>
+             * <ul>
+             * <li>Oracle   </li>
+             * <li>MySQL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -2707,7 +3076,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The request type of the zone of the tenant.  ReadWrite: The zone supports data reads and writes. ReadOnly: The zone supports only data reads. For a high availability cluster with multiple IDCs, the primary zone provides ReadWrite services, and the standby zone provides ReadOnly services. For a high availability cluster with a single IDC, all zones provide ReadWrite services.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>forMySQLTenant</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -2715,7 +3087,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
+             * <p>The resource information of the tenant.</p>
              */
             public Builder tenantResource(TenantResource tenantResource) {
                 this.tenantResource = tenantResource;
@@ -2723,15 +3095,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The standby zone corresponding to the address for accessing the tenant.
+             * <p>The information about zones in the tenant.</p>
              */
-            public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
+            public Builder tenantZones(java.util.List<TenantZones> tenantZones) {
                 this.tenantZones = tenantZones;
                 return this;
             }
 
             /**
-             * TimeZone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -2739,7 +3114,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.2.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2747,7 +3125,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the clog service is available. To enable the clog service, submit a ticket.
+             * <p>The Virtual Private Cloud (VPC) ID of the tenant. If no suitable VPC is available, create a VPC as prompted. For more information, see &quot;What is a VPC&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1d2q3mhg9i23ofi****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

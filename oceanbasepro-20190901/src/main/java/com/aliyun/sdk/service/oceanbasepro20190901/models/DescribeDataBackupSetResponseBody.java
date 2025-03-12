@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataBackupSetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataBackupSetResponseBody</p>
  */
 public class DescribeDataBackupSetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -56,14 +62,14 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -90,12 +96,18 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataBackupSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataBackupSetResponseBody</p>
+     */
     public static class DatabaseTablesList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < String > tables;
+        private java.util.List<String> tables;
 
         private DatabaseTablesList(Builder builder) {
             this.database = builder.database;
@@ -120,13 +132,13 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
         public static final class Builder {
             private String database; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
 
             /**
              * Database.
@@ -139,7 +151,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -151,12 +163,18 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataBackupSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataBackupSetResponseBody</p>
+     */
     public static class BackupObjects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseTablesList")
-        private java.util.List < DatabaseTablesList> databaseTablesList;
+        private java.util.List<DatabaseTablesList> databaseTablesList;
 
         @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
@@ -185,7 +203,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         /**
          * @return databaseTablesList
          */
-        public java.util.List < DatabaseTablesList> getDatabaseTablesList() {
+        public java.util.List<DatabaseTablesList> getDatabaseTablesList() {
             return this.databaseTablesList;
         }
 
@@ -198,7 +216,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterName; 
-            private java.util.List < DatabaseTablesList> databaseTablesList; 
+            private java.util.List<DatabaseTablesList> databaseTablesList; 
             private String tenantName; 
 
             /**
@@ -212,7 +230,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             /**
              * DatabaseTablesList.
              */
-            public Builder databaseTablesList(java.util.List < DatabaseTablesList> databaseTablesList) {
+            public Builder databaseTablesList(java.util.List<DatabaseTablesList> databaseTablesList) {
                 this.databaseTablesList = databaseTablesList;
                 return this;
             }
@@ -232,6 +250,12 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataBackupSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataBackupSetResponseBody</p>
+     */
     public static class TableBackupResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -333,12 +357,18 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataBackupSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataBackupSetResponseBody</p>
+     */
     public static class BackupResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
         @com.aliyun.core.annotation.NameInMap("TableBackupResults")
-        private java.util.List < TableBackupResults> tableBackupResults;
+        private java.util.List<TableBackupResults> tableBackupResults;
 
         @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
@@ -367,7 +397,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         /**
          * @return tableBackupResults
          */
-        public java.util.List < TableBackupResults> getTableBackupResults() {
+        public java.util.List<TableBackupResults> getTableBackupResults() {
             return this.tableBackupResults;
         }
 
@@ -380,7 +410,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterName; 
-            private java.util.List < TableBackupResults> tableBackupResults; 
+            private java.util.List<TableBackupResults> tableBackupResults; 
             private String tenantName; 
 
             /**
@@ -394,7 +424,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             /**
              * TableBackupResults.
              */
-            public Builder tableBackupResults(java.util.List < TableBackupResults> tableBackupResults) {
+            public Builder tableBackupResults(java.util.List<TableBackupResults> tableBackupResults) {
                 this.tableBackupResults = tableBackupResults;
                 return this;
             }
@@ -414,15 +444,21 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataBackupSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataBackupSetResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupObjectType")
         private String backupObjectType;
 
         @com.aliyun.core.annotation.NameInMap("BackupObjects")
-        private java.util.List < BackupObjects> backupObjects;
+        private java.util.List<BackupObjects> backupObjects;
 
         @com.aliyun.core.annotation.NameInMap("BackupResults")
-        private java.util.List < BackupResults> backupResults;
+        private java.util.List<BackupResults> backupResults;
 
         @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
@@ -508,14 +544,14 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         /**
          * @return backupObjects
          */
-        public java.util.List < BackupObjects> getBackupObjects() {
+        public java.util.List<BackupObjects> getBackupObjects() {
             return this.backupObjects;
         }
 
         /**
          * @return backupResults
          */
-        public java.util.List < BackupResults> getBackupResults() {
+        public java.util.List<BackupResults> getBackupResults() {
             return this.backupResults;
         }
 
@@ -626,8 +662,8 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String backupObjectType; 
-            private java.util.List < BackupObjects> backupObjects; 
-            private java.util.List < BackupResults> backupResults; 
+            private java.util.List<BackupObjects> backupObjects; 
+            private java.util.List<BackupResults> backupResults; 
             private String checkpoint; 
             private Integer dataSize; 
             private Integer dataVersion; 
@@ -655,7 +691,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             /**
              * BackupObjects.
              */
-            public Builder backupObjects(java.util.List < BackupObjects> backupObjects) {
+            public Builder backupObjects(java.util.List<BackupObjects> backupObjects) {
                 this.backupObjects = backupObjects;
                 return this;
             }
@@ -663,7 +699,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             /**
              * BackupResults.
              */
-            public Builder backupResults(java.util.List < BackupResults> backupResults) {
+            public Builder backupResults(java.util.List<BackupResults> backupResults) {
                 this.backupResults = backupResults;
                 return this;
             }

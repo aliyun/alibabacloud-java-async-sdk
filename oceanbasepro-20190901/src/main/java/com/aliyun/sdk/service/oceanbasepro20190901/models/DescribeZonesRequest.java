@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeZonesRequest</p>
@@ -95,7 +101,10 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -113,9 +122,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **DescribeZones**.
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeZones</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>single</p>
          */
         public Builder deployType(String deployType) {
             this.putBodyParameter("DeployType", deployType);
@@ -124,7 +134,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The deployment mode.
+         * <p>The deployment mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder series(String series) {
             this.putBodyParameter("Series", series);

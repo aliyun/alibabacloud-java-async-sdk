@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceResponseBody</p>
@@ -49,7 +55,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DryRunResult")
         private Boolean dryRunResult;
@@ -133,11 +148,12 @@ public class CreateInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * The result of the dry-run request.
-             * <p>
+             * <p>The result of the dry-run request.</p>
+             * <p>If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
+             * If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</p>
              * 
-             * If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
-             * If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dryRunResult(Boolean dryRunResult) {
                 this.dryRunResult = dryRunResult;
@@ -145,7 +161,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Instance ID.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -153,9 +172,11 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Order ID. The ID of the order that you have placed.
-             * <p>
-             * This parameter returns a value after you create a pre-paid or post-paid cluster.
+             * <p>Order ID. The ID of the order that you have placed.
+             * This parameter returns a value after you create a pre-paid or post-paid cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -163,7 +184,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Resource group ID.
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-***************</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

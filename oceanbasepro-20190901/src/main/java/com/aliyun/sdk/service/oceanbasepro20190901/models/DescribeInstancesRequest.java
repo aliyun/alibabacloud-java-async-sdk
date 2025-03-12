@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
@@ -146,7 +152,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -155,7 +164,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The name of the OceanBase cluster. It must be 1 to 20 characters in length. If this parameter is not specified, the value is the instance ID of the cluster by default.
+         * <p>The name of the OceanBase cluster. It must be 1 to 20 characters in length. If this parameter is not specified, the value is the instance ID of the cluster by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob4prod</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -164,10 +176,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * - Pages start from page 1.
-         * - Default value: 1.
+         * <p>The number of the page to return.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -176,10 +192,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.
-         * <p>
-         * - Maximum value: 100.
-         * - Default value: 10.
+         * <p>The number of rows to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -188,7 +208,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify this parameter, all resources are returned.
+         * <p>The ID of the resource group. If you do not specify this parameter, all resources are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -197,7 +220,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The keyword for fuzzy search, which can be an instance ID, instance name, tenant ID, or tenant name.
+         * <p>The keyword for fuzzy search, which can be an instance ID, instance name, tenant ID, or tenant name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay</p>
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLTuningAdvicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLTuningAdvicesResponseBody</p>
  */
 public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,13 +51,13 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -70,6 +76,12 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLTuningAdvicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLTuningAdvicesResponseBody</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
@@ -157,7 +169,10 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * NDV
+             * <p>NDV</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ndv(Float ndv) {
                 this.ndv = ndv;
@@ -171,6 +186,12 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLTuningAdvicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLTuningAdvicesResponseBody</p>
+     */
     public static class Plan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgApplicationWaitTime")
         private Float avgApplicationWaitTime;
@@ -730,7 +751,10 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * server  ID。
+             * <p>server  ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder obServerId(Long obServerId) {
                 this.obServerId = obServerId;
@@ -746,7 +770,10 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * Outline ID。
+             * <p>Outline ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -832,12 +859,18 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLTuningAdvicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLTuningAdvicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnNames")
         private String columnNames;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        private java.util.List<Columns> columns;
 
         @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
@@ -882,7 +915,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -923,7 +956,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String columnNames; 
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String dbName; 
             private String localityType; 
             private Plan plan; 
@@ -941,7 +974,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasAnomalySQLListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOasAnomalySQLListResponseBody</p>
  */
 public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -56,20 +62,23 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The list of suspicious SQLs.
+         * <p>The information about suspicious SQL statements.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469**-AA6F-4D**-B3DB-A***********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +86,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         }
 
         /**
-         * The total count.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOasAnomalySQLListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasAnomalySQLListResponseBody</p>
+     */
     public static class SqlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
@@ -116,7 +134,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         private String dbName;
 
         @com.aliyun.core.annotation.NameInMap("DiagTypes")
-        private java.util.List < String > diagTypes;
+        private java.util.List<String> diagTypes;
 
         @com.aliyun.core.annotation.NameInMap("Diagnosis")
         private String diagnosis;
@@ -125,7 +143,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         private Double executions;
 
         @com.aliyun.core.annotation.NameInMap("LastExecutedTime")
-        private Double lastExecutedTime;
+        private String lastExecutedTime;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -241,7 +259,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         /**
          * @return diagTypes
          */
-        public java.util.List < String > getDiagTypes() {
+        public java.util.List<String> getDiagTypes() {
             return this.diagTypes;
         }
 
@@ -262,7 +280,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         /**
          * @return lastExecutedTime
          */
-        public Double getLastExecutedTime() {
+        public String getLastExecutedTime() {
             return this.lastExecutedTime;
         }
 
@@ -331,10 +349,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private Float avgRetryCount; 
             private Double cpuTime; 
             private String dbName; 
-            private java.util.List < String > diagTypes; 
+            private java.util.List<String> diagTypes; 
             private String diagnosis; 
             private Double executions; 
-            private Double lastExecutedTime; 
+            private String lastExecutedTime; 
             private String riskLevel; 
             private String sqlId; 
             private String sqlTextShort; 
@@ -345,7 +363,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AvgCpuTime.
+             * <p>The average CPU time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.24</p>
              */
             public Builder avgCpuTime(Double avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -353,7 +374,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgDbTime.
+             * <p>The average DB time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder avgDbTime(Double avgDbTime) {
                 this.avgDbTime = avgDbTime;
@@ -361,7 +385,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgElapsedTime.
+             * <p>The average response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.28</p>
              */
             public Builder avgElapsedTime(Double avgElapsedTime) {
                 this.avgElapsedTime = avgElapsedTime;
@@ -369,7 +396,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgGetPlanTime.
+             * <p>The average plan generation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgGetPlanTime(Double avgGetPlanTime) {
                 this.avgGetPlanTime = avgGetPlanTime;
@@ -377,7 +407,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLogicalReads.
+             * <p>The average number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder avgLogicalReads(Float avgLogicalReads) {
                 this.avgLogicalReads = avgLogicalReads;
@@ -385,7 +418,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRetryCount.
+             * <p>The average number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder avgRetryCount(Float avgRetryCount) {
                 this.avgRetryCount = avgRetryCount;
@@ -393,7 +429,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * CpuTime.
+             * <p>The total CPU time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.23</p>
              */
             public Builder cpuTime(Double cpuTime) {
                 this.cpuTime = cpuTime;
@@ -401,7 +440,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_hsp****eway</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -409,15 +451,23 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * DiagTypes.
+             * <p>The diagnostic types.</p>
              */
-            public Builder diagTypes(java.util.List < String > diagTypes) {
+            public Builder diagTypes(java.util.List<String> diagTypes) {
                 this.diagTypes = diagTypes;
                 return this;
             }
 
             /**
-             * Diagnosis.
+             * <p>The diagnostic details. </p>
+             * <blockquote>
+             * <p>This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder diagnosis(String diagnosis) {
                 this.diagnosis = diagnosis;
@@ -425,7 +475,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Executions.
+             * <p>The total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder executions(Double executions) {
                 this.executions = executions;
@@ -433,15 +486,21 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * LastExecutedTime.
+             * <p>The last execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-12T04:38:38Z</p>
              */
-            public Builder lastExecutedTime(Double lastExecutedTime) {
+            public Builder lastExecutedTime(String lastExecutedTime) {
                 this.lastExecutedTime = lastExecutedTime;
                 return this;
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOW</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -449,7 +508,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * <p>The ID of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3A645<strong><strong>789F13DE0CF6D084FF9</strong></strong></p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -457,7 +519,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlTextShort.
+             * <p>The prefix of the SQL text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test</p>
              */
             public Builder sqlTextShort(String sqlTextShort) {
                 this.sqlTextShort = sqlTextShort;
@@ -465,7 +530,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The suggestion on the suspicious SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Role&quot;: &quot;eSG&quot;, &quot;Result&quot;: &quot;100&quot;, &quot;Suggestion&quot;: &quot;TRACER_OTHER_ERR&quot;}</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -473,7 +541,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SumDbTime.
+             * <p>The total DB time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sumDbTime(Double sumDbTime) {
                 this.sumDbTime = sumDbTime;
@@ -481,7 +552,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SumElapsedTime.
+             * <p>The total response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11452126.36</p>
              */
             public Builder sumElapsedTime(String sumElapsedTime) {
                 this.sumElapsedTime = sumElapsedTime;
@@ -489,7 +563,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SumRetryCount.
+             * <p>The total number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder sumRetryCount(Float sumRetryCount) {
                 this.sumRetryCount = sumRetryCount;
@@ -497,7 +574,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -511,6 +591,12 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOasAnomalySQLListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasAnomalySQLListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
@@ -537,7 +623,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         private String dbName;
 
         @com.aliyun.core.annotation.NameInMap("DiagTypes")
-        private java.util.List < String > diagTypes;
+        private java.util.List<String> diagTypes;
 
         @com.aliyun.core.annotation.NameInMap("Diagnosis")
         private String diagnosis;
@@ -558,7 +644,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         private String sqlId;
 
         @com.aliyun.core.annotation.NameInMap("SqlList")
-        private java.util.List < SqlList> sqlList;
+        private java.util.List<SqlList> sqlList;
 
         @com.aliyun.core.annotation.NameInMap("SqlTextShort")
         private String sqlTextShort;
@@ -670,7 +756,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         /**
          * @return diagTypes
          */
-        public java.util.List < String > getDiagTypes() {
+        public java.util.List<String> getDiagTypes() {
             return this.diagTypes;
         }
 
@@ -719,7 +805,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         /**
          * @return sqlList
          */
-        public java.util.List < SqlList> getSqlList() {
+        public java.util.List<SqlList> getSqlList() {
             return this.sqlList;
         }
 
@@ -774,14 +860,14 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private Float avgRetryCount; 
             private Double cpuTime; 
             private String dbName; 
-            private java.util.List < String > diagTypes; 
+            private java.util.List<String> diagTypes; 
             private String diagnosis; 
             private Boolean dynamicSql; 
             private Double executions; 
             private Double lastExecutedTime; 
             private String riskLevel; 
             private String sqlId; 
-            private java.util.List < SqlList> sqlList; 
+            private java.util.List<SqlList> sqlList; 
             private String sqlTextShort; 
             private String suggestion; 
             private Double sumDbTime; 
@@ -790,7 +876,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * Average CPU time of the suspicious SQL.
+             * <p>Average CPU time of the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.24</p>
              */
             public Builder avgCpuTime(Double avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -798,7 +887,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgDbTime.
+             * <p>The average DB time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder avgDbTime(Double avgDbTime) {
                 this.avgDbTime = avgDbTime;
@@ -806,7 +898,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Average response time of the suspicious SQL.
+             * <p>Average response time of the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.28</p>
              */
             public Builder avgElapsedTime(Double avgElapsedTime) {
                 this.avgElapsedTime = avgElapsedTime;
@@ -814,7 +909,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Average time to obtain the execution plan of the suspicious SQL.
+             * <p>Average time to obtain the execution plan of the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgGetPlanTime(Double avgGetPlanTime) {
                 this.avgGetPlanTime = avgGetPlanTime;
@@ -822,7 +920,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLogicalReads.
+             * <p>The average number of logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder avgLogicalReads(Float avgLogicalReads) {
                 this.avgLogicalReads = avgLogicalReads;
@@ -830,7 +931,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRetryCount.
+             * <p>The average number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder avgRetryCount(Float avgRetryCount) {
                 this.avgRetryCount = avgRetryCount;
@@ -838,7 +942,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * CPU time of the suspicious SQL.
+             * <p>CPU time of the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.23</p>
              */
             public Builder cpuTime(Double cpuTime) {
                 this.cpuTime = cpuTime;
@@ -846,7 +953,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_***</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -854,15 +964,20 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the diagnosis.
+             * <p>The type of the diagnosis.</p>
              */
-            public Builder diagTypes(java.util.List < String > diagTypes) {
+            public Builder diagTypes(java.util.List<String> diagTypes) {
                 this.diagTypes = diagTypes;
                 return this;
             }
 
             /**
-             * The details of diagnosis.
+             * <p>The details of diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder diagnosis(String diagnosis) {
                 this.diagnosis = diagnosis;
@@ -870,7 +985,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicSql.
+             * <p>是否动态SQL</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dynamicSql(Boolean dynamicSql) {
                 this.dynamicSql = dynamicSql;
@@ -878,7 +996,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Total execution count of the suspicious SQL.
+             * <p>Total execution count of the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executions(Double executions) {
                 this.executions = executions;
@@ -886,7 +1007,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Last execution time of the suspicious SQL.
+             * <p>Last execution time of the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-12T04:38:38Z</p>
              */
             public Builder lastExecutedTime(Double lastExecutedTime) {
                 this.lastExecutedTime = lastExecutedTime;
@@ -894,7 +1018,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Risk level.
+             * <p>Risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -902,7 +1029,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SQL ID.
+             * <p>SQL ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -910,15 +1040,15 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SqlList.
+             * <p>The list of SQL statements.</p>
              */
-            public Builder sqlList(java.util.List < SqlList> sqlList) {
+            public Builder sqlList(java.util.List<SqlList> sqlList) {
                 this.sqlList = sqlList;
                 return this;
             }
 
             /**
-             * Prefix of the SQL text.
+             * <p>Prefix of the SQL text.</p>
              */
             public Builder sqlTextShort(String sqlTextShort) {
                 this.sqlTextShort = sqlTextShort;
@@ -926,7 +1056,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion for the suspicious SQL.
+             * <p>Suggestion for the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>review</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -934,7 +1067,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SumDbTime.
+             * <p>The total DB time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sumDbTime(Double sumDbTime) {
                 this.sumDbTime = sumDbTime;
@@ -942,7 +1078,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Total response time of the suspicious SQL.
+             * <p>Total response time of the suspicious SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11452126.36</p>
              */
             public Builder sumElapsedTime(String sumElapsedTime) {
                 this.sumElapsedTime = sumElapsedTime;
@@ -950,7 +1089,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SumRetryCount.
+             * <p>The total number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder sumRetryCount(Float sumRetryCount) {
                 this.sumRetryCount = sumRetryCount;
@@ -958,7 +1100,10 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

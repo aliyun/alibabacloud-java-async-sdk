@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tenants")
-    private java.util.List < Tenants> tenants;
+    private java.util.List<Tenants> tenants;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -44,7 +50,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
     /**
      * @return tenants
      */
-    public java.util.List < Tenants> getTenants() {
+    public java.util.List<Tenants> getTenants() {
         return this.tenants;
     }
 
@@ -57,11 +63,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tenants> tenants; 
+        private java.util.List<Tenants> tenants; 
         private Integer totalCount; 
 
         /**
-         * The ID of the tenant.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,15 +78,18 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The information of tenants.</p>
          */
-        public Builder tenants(java.util.List < Tenants> tenants) {
+        public Builder tenants(java.util.List<Tenants> tenants) {
             this.tenants = tenants;
             return this;
         }
 
         /**
-         * The total memory size of the tenant, in GB.
+         * <p>The total number of tenants in the specified OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeTenantsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantsResponseBody</p>
+     */
     public static class Tenants extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
@@ -117,6 +135,9 @@ public class DescribeTenantsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
+
+        @com.aliyun.core.annotation.NameInMap("ParameterTemplate")
+        private String parameterTemplate;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryZone")
         private String primaryZone;
@@ -158,6 +179,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             this.description = builder.description;
             this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
             this.mem = builder.mem;
+            this.parameterTemplate = builder.parameterTemplate;
             this.primaryZone = builder.primaryZone;
             this.status = builder.status;
             this.tenantId = builder.tenantId;
@@ -242,6 +264,13 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
 
         /**
+         * @return parameterTemplate
+         */
+        public String getParameterTemplate() {
+            return this.parameterTemplate;
+        }
+
+        /**
          * @return primaryZone
          */
         public String getPrimaryZone() {
@@ -321,6 +350,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private String description; 
             private Boolean enableReadOnlyReplica; 
             private Integer mem; 
+            private String parameterTemplate; 
             private String primaryZone; 
             private String status; 
             private String tenantId; 
@@ -333,7 +363,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Charset.
+             * <p>The character set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -341,7 +374,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Collation.
+             * <p>The collation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4_general_ci</p>
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -349,7 +385,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPU cores of the tenant.
+             * <p>The total number of CPU cores of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -357,7 +396,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores in each resource unit of the tenant.
+             * <p>The time when the tenant was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-17 15:52:17.0</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -365,7 +407,17 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The search keyword.
+             * <p>The data replica distribution mode of the tenant.   </p>
+             * <ul>
+             * <li>For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.</li>
+             * <li>For the basic version, N indicates the single-zone mode.</li>
+             * </ul>
+             * <blockquote>
+             * <p><br>N represents the number of nodes in a single zone.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1-1-1</p>
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -373,9 +425,15 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.   
-             * <p>
-             * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
+             * <p>The deployment type of the tenant. <br></p>
+             * <ul>
+             * <li>multiple: multi-IDC deployment</li>
+             * <li>single: single-IDC deployment</li>
+             * <li>dual: dual-IDC deployment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>multiple</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -383,7 +441,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Example 1
+             * <p>The description of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayCore business database</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,7 +452,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableReadOnlyReplica.
+             * <p>Indicates whether read-only replicas are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
                 this.enableReadOnlyReplica = enableReadOnlyReplica;
@@ -399,10 +463,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return.   
-             * <p>
-             * Start value: 1
-             * - Default value: 1
+             * <p>The total memory size of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -410,7 +474,21 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The return result of the request.
+             * <p>The parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>express_oltp</p>
+             */
+            public Builder parameterTemplate(String parameterTemplate) {
+                this.parameterTemplate = parameterTemplate;
+                return this;
+            }
+
+            /**
+             * <p>The primary zone of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -418,17 +496,21 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the tenant.  <br>
-             * <p>
-             * - PENDING_CREATE: The tenant is being created.
-             * - RESTORE: The tenant is being recovered.
-             * - ONLINE: The tenant is running.
-             * - SPEC_MODIFYING: The specification of the tenant is being modified.
+             * <p>The status of the tenant.  <br></p>
+             * <ul>
+             * <li>PENDING_CREATE: The tenant is being created.</li>
+             * <li>RESTORE: The tenant is being recovered.</li>
+             * <li>ONLINE: The tenant is running.</li>
+             * <li>SPEC_MODIFYING: The specification of the tenant is being modified.
              * ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.
-             * PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.
-             * - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.
-             * - PARAMETER_MODIFYING: Parameters are being modified.
-             * - WHITE_LIST_MODIFYING: The whitelist is being modified.
+             * PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.</li>
+             * <li>PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.</li>
+             * <li>PARAMETER_MODIFYING: Parameters are being modified.</li>
+             * <li>WHITE_LIST_MODIFYING: The whitelist is being modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -436,7 +518,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to query the tenants in an OceanBase cluster.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t33h8y08k****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -444,31 +529,11 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * {
-             * <p>
-             *     "TotalCount": 1,
-             *     "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",
-             *     "Tenants": [
-             *         {
-             *             "VpcId": "vpc-bp1d2q3mhg9i23ofi****",
-             *             "Status": "ONLINE",
-             *             "PrimaryZone": "cn-hangzhou-i",
-             *             "DeployType": "multiple",
-             *             "DeployMode": "1-1-1",
-             *             "CreateTime": "2021-09-17 15:52:17.0",
-             *             "TenantName": "pay_online",
-             *             "Mem": 20,
-             *             "Cpu": 10,
-             *             "Description": "PayCore business database",
-             *             "TenantMode": "Oracle",
-             *             "TenantId": "t33h8y08k****",
-             *             "UnitCpu": 5,
-             *             "UnitMem": 10,
-             *             "UnitNum": 2,
-             *             "UsedDiskSize": 10
-             *         }
-             *     ]
-             * }
+             * <p>The tenant mode.<br>Valid values:<br>Oracle
+             * MySQL</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oracle</p>
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -476,7 +541,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The information of tenants.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pay_online</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -484,7 +552,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * UnitCpu.
+             * <p>The number of CPU cores in each resource unit of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder unitCpu(Integer unitCpu) {
                 this.unitCpu = unitCpu;
@@ -492,7 +563,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * UnitMem.
+             * <p>The memory size of each resource unit of the tenant, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unitMem(Integer unitMem) {
                 this.unitMem = unitMem;
@@ -500,7 +574,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * UnitNum.
+             * <p>The number of resource units in the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -508,7 +585,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedDiskSize.
+             * <p>The number of used disks of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedDiskSize(Double usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -516,7 +596,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the tenant was created.
+             * <p>The ID of the VPC.   <br>If no suitable VPC is available, create a VPC as prompted. For more information, see &quot;What is a VPC&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1d2q3mhg9i23ofi****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

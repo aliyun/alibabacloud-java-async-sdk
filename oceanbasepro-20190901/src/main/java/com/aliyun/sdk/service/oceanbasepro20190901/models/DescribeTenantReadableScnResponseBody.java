@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantReadableScnResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantReadableScnResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data in the return result of the request.
+         * <p>The data in the return result of the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8442BB1E-3171-1192-B9DC-F6F4E53B2673</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantReadableScnResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantReadableScnResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadableScn")
         private Long readableScn;
@@ -97,7 +112,10 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
             private Long readableScn; 
 
             /**
-             * The maximum readable timestamp.
+             * <p>The maximum readable timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715329164977</p>
              */
             public Builder readableScn(Long readableScn) {
                 this.readableScn = readableScn;

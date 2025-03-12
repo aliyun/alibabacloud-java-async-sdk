@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProjectStepMetricResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProjectStepMetricResponseBody</p>
@@ -250,6 +256,12 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProjectStepMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectStepMetricResponseBody</p>
+     */
     public static class DataPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
@@ -311,15 +323,21 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProjectStepMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectStepMetricResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataPoints")
-        private java.util.List < DataPoints> dataPoints;
+        private java.util.List<DataPoints> dataPoints;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, String > tags;
+        private java.util.Map<String, String> tags;
 
         private Metrics(Builder builder) {
             this.dataPoints = builder.dataPoints;
@@ -338,7 +356,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         /**
          * @return dataPoints
          */
-        public java.util.List < DataPoints> getDataPoints() {
+        public java.util.List<DataPoints> getDataPoints() {
             return this.dataPoints;
         }
 
@@ -352,19 +370,19 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, String > getTags() {
+        public java.util.Map<String, String> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < DataPoints> dataPoints; 
+            private java.util.List<DataPoints> dataPoints; 
             private String name; 
-            private java.util.Map < String, String > tags; 
+            private java.util.Map<String, String> tags; 
 
             /**
              * DataPoints.
              */
-            public Builder dataPoints(java.util.List < DataPoints> dataPoints) {
+            public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
                 this.dataPoints = dataPoints;
                 return this;
             }
@@ -380,7 +398,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.Map < String, String > tags) {
+            public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -392,12 +410,18 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProjectStepMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectStepMetricResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Aggregator")
         private String aggregator;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         @com.aliyun.core.annotation.NameInMap("ReferenceValue")
         private Long referenceValue;
@@ -426,7 +450,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -439,7 +463,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aggregator; 
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private Long referenceValue; 
 
             /**
@@ -453,7 +477,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             /**
              * Metrics.
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }
@@ -473,12 +497,18 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProjectStepMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProjectStepMetricResponseBody</p>
+     */
     public static class ErrorDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("ExtraContext")
-        private java.util.Map < String, ? > extraContext;
+        private java.util.Map<String, ?> extraContext;
 
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -487,7 +517,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
-        private java.util.Map < String, String > messageMcmsContext;
+        private java.util.Map<String, String> messageMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
@@ -496,7 +526,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         private String proposal;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
-        private java.util.Map < String, String > proposalMcmsContext;
+        private java.util.Map<String, String> proposalMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
@@ -505,7 +535,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         private String reason;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
-        private java.util.Map < String, String > reasonMcmsContext;
+        private java.util.Map<String, String> reasonMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
@@ -547,7 +577,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         /**
          * @return extraContext
          */
-        public java.util.Map < String, ? > getExtraContext() {
+        public java.util.Map<String, ?> getExtraContext() {
             return this.extraContext;
         }
 
@@ -568,7 +598,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         /**
          * @return messageMcmsContext
          */
-        public java.util.Map < String, String > getMessageMcmsContext() {
+        public java.util.Map<String, String> getMessageMcmsContext() {
             return this.messageMcmsContext;
         }
 
@@ -589,7 +619,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         /**
          * @return proposalMcmsContext
          */
-        public java.util.Map < String, String > getProposalMcmsContext() {
+        public java.util.Map<String, String> getProposalMcmsContext() {
             return this.proposalMcmsContext;
         }
 
@@ -610,7 +640,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
         /**
          * @return reasonMcmsContext
          */
-        public java.util.Map < String, String > getReasonMcmsContext() {
+        public java.util.Map<String, String> getReasonMcmsContext() {
             return this.reasonMcmsContext;
         }
 
@@ -630,16 +660,16 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.Map < String, ? > extraContext; 
+            private java.util.Map<String, ?> extraContext; 
             private String level; 
             private String message; 
-            private java.util.Map < String, String > messageMcmsContext; 
+            private java.util.Map<String, String> messageMcmsContext; 
             private String messageMcmsKey; 
             private String proposal; 
-            private java.util.Map < String, String > proposalMcmsContext; 
+            private java.util.Map<String, String> proposalMcmsContext; 
             private String proposalMcmsKey; 
             private String reason; 
-            private java.util.Map < String, String > reasonMcmsContext; 
+            private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
@@ -654,7 +684,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             /**
              * ExtraContext.
              */
-            public Builder extraContext(java.util.Map < String, ? > extraContext) {
+            public Builder extraContext(java.util.Map<String, ?> extraContext) {
                 this.extraContext = extraContext;
                 return this;
             }
@@ -678,7 +708,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             /**
              * MessageMcmsContext.
              */
-            public Builder messageMcmsContext(java.util.Map < String, String > messageMcmsContext) {
+            public Builder messageMcmsContext(java.util.Map<String, String> messageMcmsContext) {
                 this.messageMcmsContext = messageMcmsContext;
                 return this;
             }
@@ -702,7 +732,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             /**
              * ProposalMcmsContext.
              */
-            public Builder proposalMcmsContext(java.util.Map < String, String > proposalMcmsContext) {
+            public Builder proposalMcmsContext(java.util.Map<String, String> proposalMcmsContext) {
                 this.proposalMcmsContext = proposalMcmsContext;
                 return this;
             }
@@ -726,7 +756,7 @@ public class DescribeProjectStepMetricResponseBody extends TeaModel {
             /**
              * ReasonMcmsContext.
              */
-            public Builder reasonMcmsContext(java.util.Map < String, String > reasonMcmsContext) {
+            public Builder reasonMcmsContext(java.util.Map<String, String> reasonMcmsContext) {
                 this.reasonMcmsContext = reasonMcmsContext;
                 return this;
             }

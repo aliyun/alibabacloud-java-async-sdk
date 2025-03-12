@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessStatsCompositionRequest} extends {@link RequestModel}
  *
  * <p>DescribeProcessStatsCompositionRequest</p>
@@ -175,7 +181,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.<em>.</em>.*</p>
          */
         public Builder clientIp(String clientIp) {
             this.putBodyParameter("ClientIp", clientIp);
@@ -184,7 +193,11 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -193,7 +206,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The IP address of the server.
+         * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.<em>.</em>.*</p>
          */
         public Builder serverIp(String serverIp) {
             this.putBodyParameter("ServerIp", serverIp);
@@ -202,7 +218,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The SQL statement. It supports LIKE clauses, and you may specify only part of the clauses in the SQL statement.
+         * <p>The SQL statement, which can contain LIKE clauses. You can specify only part of the clauses in the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC</p>
          */
         public Builder sqlText(String sqlText) {
             this.putBodyParameter("SqlText", sqlText);
@@ -211,7 +230,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The state of the session.
+         * <p>The status of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -220,7 +242,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t33h8y08k****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -229,7 +254,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The user identifier (UID) of OceanBase Database.
+         * <p>The user identifier (UID) of the OceanBase database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139*************</p>
          */
         public Builder uId(String uId) {
             this.putBodyParameter("UId", uId);
@@ -238,7 +266,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * The username that you use to log in to the database.
+         * <p>The username of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;test_user&quot;]</p>
          */
         public Builder users(String users) {
             this.putBodyParameter("Users", users);

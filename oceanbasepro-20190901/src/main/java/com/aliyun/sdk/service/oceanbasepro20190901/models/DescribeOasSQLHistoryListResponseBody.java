@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOasSQLHistoryListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOasSQLHistoryListResponseBody</p>
  */
 public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +51,22 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The list of SQL execution history.
+         * <p>The list of SQL execution history.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOasSQLHistoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasSQLHistoryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgAffectedRows")
         private Long avgAffectedRows;
@@ -275,6 +290,9 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
+        @com.aliyun.core.annotation.NameInMap("WaitEvent")
+        private String waitEvent;
+
         @com.aliyun.core.annotation.NameInMap("WeakConsistencyPercentage")
         private Double weakConsistencyPercentage;
 
@@ -347,6 +365,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             this.tableScanPercentage = builder.tableScanPercentage;
             this.timestamp = builder.timestamp;
             this.userName = builder.userName;
+            this.waitEvent = builder.waitEvent;
             this.weakConsistencyPercentage = builder.weakConsistencyPercentage;
         }
 
@@ -835,6 +854,13 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         }
 
         /**
+         * @return waitEvent
+         */
+        public String getWaitEvent() {
+            return this.waitEvent;
+        }
+
+        /**
          * @return weakConsistencyPercentage
          */
         public Double getWeakConsistencyPercentage() {
@@ -910,10 +936,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             private Double tableScanPercentage; 
             private String timestamp; 
             private String userName; 
+            private String waitEvent; 
             private Double weakConsistencyPercentage; 
 
             /**
-             * Average updated rows during the execution period.
+             * <p>Average updated rows during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9978.75</p>
              */
             public Builder avgAffectedRows(Long avgAffectedRows) {
                 this.avgAffectedRows = avgAffectedRows;
@@ -921,7 +951,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average Application event wait time (in milliseconds) during the client waiting period.
+             * <p>Average Application event wait time (in milliseconds) during the client waiting period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgApplicationWaitTime(Double avgApplicationWaitTime) {
                 this.avgApplicationWaitTime = avgApplicationWaitTime;
@@ -929,7 +962,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average BlockCache hit count during the execution period.
+             * <p>Average BlockCache hit count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgBlockCacheHit(Long avgBlockCacheHit) {
                 this.avgBlockCacheHit = avgBlockCacheHit;
@@ -937,7 +973,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average BlockIndexCache hit count during the execution period.
+             * <p>Average BlockIndexCache hit count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgBlockIndexCacheHit(Long avgBlockIndexCacheHit) {
                 this.avgBlockIndexCacheHit = avgBlockIndexCacheHit;
@@ -945,7 +984,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average BloomFilterCache hit count during the execution period.
+             * <p>Average BloomFilterCache hit count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgBloomFilterCacheHit(Long avgBloomFilterCacheHit) {
                 this.avgBloomFilterCacheHit = avgBloomFilterCacheHit;
@@ -953,7 +995,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average Concurrency event wait time (in milliseconds) during the execution period.
+             * <p>Average Concurrency event wait time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgConcurrencyWaitTime(Double avgConcurrencyWaitTime) {
                 this.avgConcurrencyWaitTime = avgConcurrencyWaitTime;
@@ -961,7 +1006,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average CPU time (in milliseconds) during the execution period.
+             * <p>Average CPU time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1875.34</p>
              */
             public Builder avgCpuTime(Double avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -969,7 +1017,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * AvgDbTime.
+             * <p>The average DB time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder avgDbTime(Double avgDbTime) {
                 this.avgDbTime = avgDbTime;
@@ -977,7 +1028,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average syntax parsing time (in milliseconds) during the execution period.
+             * <p>Average syntax parsing time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgDecodeTime(Double avgDecodeTime) {
                 this.avgDecodeTime = avgDecodeTime;
@@ -985,7 +1039,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average physical read count during the execution period.
+             * <p>Average physical read count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgDiskReads(Long avgDiskReads) {
                 this.avgDiskReads = avgDiskReads;
@@ -993,7 +1050,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average response time (in milliseconds) during the execution period.
+             * <p>Average response time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1876.78</p>
              */
             public Builder avgElapsedTime(Double avgElapsedTime) {
                 this.avgElapsedTime = avgElapsedTime;
@@ -1001,7 +1061,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average plan execution time (in milliseconds) during the execution period.
+             * <p>Average plan execution time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1895.7</p>
              */
             public Builder avgExecuteTime(Double avgExecuteTime) {
                 this.avgExecuteTime = avgExecuteTime;
@@ -1009,7 +1072,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average number of RPC requests executed during the execution period.
+             * <p>Average number of RPC requests executed during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgExecutorRpcCount(Double avgExecutorRpcCount) {
                 this.avgExecutorRpcCount = avgExecutorRpcCount;
@@ -1017,7 +1083,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average degree of parallelism during the execution period.
+             * <p>Average degree of parallelism during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder avgExpectedWorkerCount(Double avgExpectedWorkerCount) {
                 this.avgExpectedWorkerCount = avgExpectedWorkerCount;
@@ -1025,7 +1094,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average plan generation time (in milliseconds) during the execution period.
+             * <p>Average plan generation time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgGetPlanTime(Double avgGetPlanTime) {
                 this.avgGetPlanTime = avgGetPlanTime;
@@ -1033,7 +1105,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average logical reads during the execution period.
+             * <p>Average logical reads during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgLogicalReads(Long avgLogicalReads) {
                 this.avgLogicalReads = avgLogicalReads;
@@ -1041,7 +1116,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average Memstore read rows during the execution period.
+             * <p>Average Memstore read rows during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgMemstoreReadRows(Long avgMemstoreReadRows) {
                 this.avgMemstoreReadRows = avgMemstoreReadRows;
@@ -1049,7 +1127,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average network transmission time (in milliseconds) during the execution period.
+             * <p>Average network transmission time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder avgNetTime(Double avgNetTime) {
                 this.avgNetTime = avgNetTime;
@@ -1057,7 +1138,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average network enqueue time (in milliseconds) during the network waiting period.
+             * <p>Average network enqueue time (in milliseconds) during the network waiting period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgNetWaitTime(Double avgNetWaitTime) {
                 this.avgNetWaitTime = avgNetWaitTime;
@@ -1065,7 +1149,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average number of partition accessed during the execution period.
+             * <p>Average number of partition accessed during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder avgPartitionCount(Double avgPartitionCount) {
                 this.avgPartitionCount = avgPartitionCount;
@@ -1073,7 +1160,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average queueing time (in milliseconds) during the execution period.
+             * <p>Average queueing time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder avgQueueTime(Double avgQueueTime) {
                 this.avgQueueTime = avgQueueTime;
@@ -1081,7 +1171,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average number of rows returned during the execution period.
+             * <p>Average number of rows returned during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgReturnRows(Long avgReturnRows) {
                 this.avgReturnRows = avgReturnRows;
@@ -1089,7 +1182,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average RowCache hit count during the execution period.
+             * <p>Average RowCache hit count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgRowCacheHit(Long avgRowCacheHit) {
                 this.avgRowCacheHit = avgRowCacheHit;
@@ -1097,7 +1193,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average number of RPC sent during the execution.
+             * <p>Average number of RPC sent during the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder avgRpcCount(Long avgRpcCount) {
                 this.avgRpcCount = avgRpcCount;
@@ -1105,7 +1204,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average Schedule event wait time (in milliseconds) during the scheduling period.
+             * <p>Average Schedule event wait time (in milliseconds) during the scheduling period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgScheduleTime(Double avgScheduleTime) {
                 this.avgScheduleTime = avgScheduleTime;
@@ -1113,7 +1215,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average Ssstore read rows during the execution period.
+             * <p>Average Ssstore read rows during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgSsstoreReadRows(Long avgSsstoreReadRows) {
                 this.avgSsstoreReadRows = avgSsstoreReadRows;
@@ -1121,7 +1226,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average number of threads used of the SQL during the execution period.
+             * <p>Average number of threads used of the SQL during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder avgUsedWorkerCount(Double avgUsedWorkerCount) {
                 this.avgUsedWorkerCount = avgUsedWorkerCount;
@@ -1129,7 +1237,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average UserIO event wait time (in milliseconds) during the execution period.
+             * <p>Average UserIO event wait time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgUserIoWaitTime(Double avgUserIoWaitTime) {
                 this.avgUserIoWaitTime = avgUserIoWaitTime;
@@ -1137,7 +1248,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average number of waits during the execution period.
+             * <p>Average number of waits during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder avgWaitCount(Double avgWaitCount) {
                 this.avgWaitCount = avgWaitCount;
@@ -1145,7 +1259,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average wait time (in milliseconds) during the execution period.
+             * <p>Average wait time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1442.49</p>
              */
             public Builder avgWaitTime(Double avgWaitTime) {
                 this.avgWaitTime = avgWaitTime;
@@ -1153,7 +1270,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -1161,7 +1281,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Distributed plan percentage during the execution period.
+             * <p>Distributed plan percentage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder distPlanPercentage(Double distPlanPercentage) {
                 this.distPlanPercentage = distPlanPercentage;
@@ -1169,7 +1292,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Average execution count per second during the execution period.
+             * <p>Average execution count per second during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.31</p>
              */
             public Builder execPs(Double execPs) {
                 this.execPs = execPs;
@@ -1177,7 +1303,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Total number of executions during the execution period.
+             * <p>Total number of executions during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -1185,7 +1314,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of errors during the execution period.
+             * <p>The total number of errors during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Long failCount) {
                 this.failCount = failCount;
@@ -1193,7 +1325,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Error percentage during the execution period.
+             * <p>Error percentage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failPercentage(Double failPercentage) {
                 this.failPercentage = failPercentage;
@@ -1201,7 +1336,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Local plan percentage during the execution period.
+             * <p>Local plan percentage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder localPlanPercentage(Double localPlanPercentage) {
                 this.localPlanPercentage = localPlanPercentage;
@@ -1209,7 +1347,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max updated rows during the execution period.
+             * <p>Max updated rows during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxAffectedRows(Double maxAffectedRows) {
                 this.maxAffectedRows = maxAffectedRows;
@@ -1217,7 +1358,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max Application event wait time (in milliseconds) during the execution period
+             * <p>Max Application event wait time (in milliseconds) during the execution period</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxApplicationWaitTime(Double maxApplicationWaitTime) {
                 this.maxApplicationWaitTime = maxApplicationWaitTime;
@@ -1225,7 +1369,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max Concurrency event wait time (in milliseconds) during the execution period
+             * <p>Max Concurrency event wait time (in milliseconds) during the execution period</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxConcurrencyWaitTime(Double maxConcurrencyWaitTime) {
                 this.maxConcurrencyWaitTime = maxConcurrencyWaitTime;
@@ -1233,7 +1380,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max CPU time.
+             * <p>Max CPU time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13641.9</p>
              */
             public Builder maxCpuTime(Double maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -1241,7 +1391,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max physical read count during the execution period.
+             * <p>Max physical read count during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxDiskReads(Double maxDiskReads) {
                 this.maxDiskReads = maxDiskReads;
@@ -1249,7 +1402,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max response time.
+             * <p>Max response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13643.3</p>
              */
             public Builder maxElapsedTime(Double maxElapsedTime) {
                 this.maxElapsedTime = maxElapsedTime;
@@ -1257,7 +1413,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max returned rows during the execution period.
+             * <p>Max returned rows during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxReturnRows(Double maxReturnRows) {
                 this.maxReturnRows = maxReturnRows;
@@ -1265,7 +1424,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max UserIO event wait time (in milliseconds) during the execution period
+             * <p>Max UserIO event wait time (in milliseconds) during the execution period</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder maxUserIoWaitTime(Double maxUserIoWaitTime) {
                 this.maxUserIoWaitTime = maxUserIoWaitTime;
@@ -1273,7 +1435,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Max wait time (in milliseconds) during the execution period.
+             * <p>Max wait time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.4</p>
              */
             public Builder maxWaitTime(Double maxWaitTime) {
                 this.maxWaitTime = maxWaitTime;
@@ -1281,7 +1446,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Plan hit rage during the execution period.
+             * <p>Plan hit rage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder missPlanPercentage(Double missPlanPercentage) {
                 this.missPlanPercentage = missPlanPercentage;
@@ -1289,7 +1457,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Missed plan count.
+             * <p>Missed plan count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder missPlans(Long missPlans) {
                 this.missPlans = missPlans;
@@ -1297,7 +1468,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Remote plan percentage during the execution period.
+             * <p>Remote plan percentage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remotePlanPercentage(Double remotePlanPercentage) {
                 this.remotePlanPercentage = remotePlanPercentage;
@@ -1305,7 +1479,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Remote plan count.
+             * <p>Remote plan count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remotePlans(Long remotePlans) {
                 this.remotePlans = remotePlans;
@@ -1313,7 +1490,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Number of occurrences of code 4012 during the execution period.
+             * <p>Number of occurrences of code 4012 during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode4012Count(Double retCode4012Count) {
                 this.retCode4012Count = retCode4012Count;
@@ -1321,7 +1501,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Number of occurrences of code 4013 during the execution period.
+             * <p>Number of occurrences of code 4013 during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode4013Count(Double retCode4013Count) {
                 this.retCode4013Count = retCode4013Count;
@@ -1329,7 +1512,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Number of occurrences of code 5001 during the execution period.
+             * <p>Number of occurrences of code 5001 during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode5001Count(Double retCode5001Count) {
                 this.retCode5001Count = retCode5001Count;
@@ -1337,7 +1523,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Number of occurrences of code 5024 during the execution period.
+             * <p>Number of occurrences of code 5024 during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode5024Count(Double retCode5024Count) {
                 this.retCode5024Count = retCode5024Count;
@@ -1345,7 +1534,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Number of occurrences of code 5167 during the execution period.
+             * <p>Number of occurrences of code 5167 during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode5167Count(Double retCode5167Count) {
                 this.retCode5167Count = retCode5167Count;
@@ -1353,7 +1545,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Number of occurrences of code 5217 during the execution period.
+             * <p>Number of occurrences of code 5217 during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode5217Count(Double retCode5217Count) {
                 this.retCode5217Count = retCode5217Count;
@@ -1361,7 +1556,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Number of occurrences of code 6002 during the execution period.
+             * <p>Number of occurrences of code 6002 during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode6002Count(Double retCode6002Count) {
                 this.retCode6002Count = retCode6002Count;
@@ -1369,7 +1567,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Total number of retries during the execution period.
+             * <p>Total number of retries during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
@@ -1377,7 +1578,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * SQL ID.
+             * <p>SQL ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
              */
             public Builder SQLId(String SQLId) {
                 this.SQLId = SQLId;
@@ -1385,7 +1589,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * The server where the SQL is executed.
+             * <p>The server where the SQL is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1db1****8uemejio</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -1393,7 +1600,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Strong consistent transaction percentage during the execution period.
+             * <p>Strong consistent transaction percentage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder strongConsistencyPercentage(Double strongConsistencyPercentage) {
                 this.strongConsistencyPercentage = strongConsistencyPercentage;
@@ -1401,7 +1611,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * SumDbTime.
+             * <p>The total DB time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sumDbTime(Double sumDbTime) {
                 this.sumDbTime = sumDbTime;
@@ -1409,7 +1622,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Total response time (in milliseconds) during the execution period.
+             * <p>Total response time (in milliseconds) during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11452126.36</p>
              */
             public Builder sumElapsedTime(Double sumElapsedTime) {
                 this.sumElapsedTime = sumElapsedTime;
@@ -1417,7 +1633,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Total logical reads.
+             * <p>Total logical reads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sumLogicalReads(Double sumLogicalReads) {
                 this.sumLogicalReads = sumLogicalReads;
@@ -1425,7 +1644,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * The total wait time (in milliseconds) during the internal waiting period.
+             * <p>The total wait time (in milliseconds) during the internal waiting period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9421.73</p>
              */
             public Builder sumWaitTime(Double sumWaitTime) {
                 this.sumWaitTime = sumWaitTime;
@@ -1433,7 +1655,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Table scan percentage during the execution period.
+             * <p>Table scan percentage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tableScanPercentage(Double tableScanPercentage) {
                 this.tableScanPercentage = tableScanPercentage;
@@ -1441,7 +1666,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp for the sample.
+             * <p>Timestamp for the sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-12T04:46:38Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1449,7 +1677,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1457,7 +1688,21 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Eventually consistent transaction percentage during the execution period.
+             * <p>The wait event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder waitEvent(String waitEvent) {
+                this.waitEvent = waitEvent;
+                return this;
+            }
+
+            /**
+             * <p>Eventually consistent transaction percentage during the execution period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder weakConsistencyPercentage(Double weakConsistencyPercentage) {
                 this.weakConsistencyPercentage = weakConsistencyPercentage;

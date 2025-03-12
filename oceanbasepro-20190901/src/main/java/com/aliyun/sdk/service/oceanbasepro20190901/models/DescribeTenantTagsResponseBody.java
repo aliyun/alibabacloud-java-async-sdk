@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantTagsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagResources")
-    private java.util.List < TagResources> tagResources;
+    private java.util.List<TagResources> tagResources;
 
     private DescribeTenantTagsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,16 +46,19 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
     /**
      * @return tagResources
      */
-    public java.util.List < TagResources> getTagResources() {
+    public java.util.List<TagResources> getTagResources() {
         return this.tagResources;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TagResources> tagResources; 
+        private java.util.List<TagResources> tagResources; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +66,9 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
-        public Builder tagResources(java.util.List < TagResources> tagResources) {
+        public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
             return this;
         }
@@ -70,6 +79,12 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantTagsResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -121,7 +136,10 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ob317v4uif****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -129,7 +147,10 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -137,7 +158,10 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the resource.
+             * <p>The tag of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Key&quot;: &quot;xxx&quot;, &quot;Value&quot;, &quot;xxx&quot;},{}]</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

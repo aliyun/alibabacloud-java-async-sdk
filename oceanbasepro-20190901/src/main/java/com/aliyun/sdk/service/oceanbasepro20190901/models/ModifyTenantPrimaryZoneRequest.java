@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTenantPrimaryZoneRequest} extends {@link RequestModel}
  *
  * <p>ModifyTenantPrimaryZoneRequest</p>
@@ -195,7 +201,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -204,9 +213,11 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The primary zone of the tenant.    
-         * <p>
-         * It is one of the zones in which the cluster is deployed.
+         * <p>The primary zone of the tenant.<br>It is one of the zones in which the cluster is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -215,14 +226,15 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone
-         * &TenantId=ob2mr3oae0****
-         * &InstanceId=ob317v4uif****
-         * &PrimaryZone=cn-hangzhou-h
-         * &Common request parameters
-         * ```
+         * <pre><code>http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone
+         * &amp;TenantId=ob2mr3oae0****
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;PrimaryZone=cn-hangzhou-h
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
             this.putBodyParameter("MasterIntranetAddressZone", masterIntranetAddressZone);
@@ -231,7 +243,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder primaryZone(String primaryZone) {
             this.putBodyParameter("PrimaryZone", primaryZone);
@@ -258,7 +273,11 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * <p>The return result of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -276,7 +295,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
          */
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);

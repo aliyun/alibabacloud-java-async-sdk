@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityIpsRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityIpsRequest</p>
@@ -105,7 +111,11 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -114,7 +124,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The information of the IP address whitelist group.
+         * <p>The information of the IP address whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paytest</p>
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);
@@ -123,9 +136,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The list of IP addresses and CIDR blocks in the whitelist.   
-         * <p>
-         * It is a JSON array. Each object in the array is an IP address or CIDR block. You can specify at most 40 IP addresses or CIDR blocks.
+         * <p>The list of IP addresses and CIDR blocks in the whitelist.<br>It is a JSON array. Each object in the array is an IP address or CIDR block. You can specify at most 40 IP addresses or CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;192.168.0.0/20&quot;,&quot;192.169.1.1&quot;]</p>
          */
         public Builder securityIps(String securityIps) {
             this.putBodyParameter("SecurityIps", securityIps);

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KillProcessListResponseBody} extends {@link TeaModel}
  *
  * <p>KillProcessListResponseBody</p>
  */
 public class KillProcessListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class KillProcessListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +51,22 @@ public class KillProcessListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class KillProcessListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link KillProcessListResponseBody} extends {@link TeaModel}
+     *
+     * <p>KillProcessListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -217,7 +232,10 @@ public class KillProcessListResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The client IP address.
+             * <p>The client IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -225,7 +243,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The start command for the container of the application.
+             * <p>The start command for the container of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -233,7 +254,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -241,7 +265,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance not found.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -249,7 +276,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Execution time (UTC+8). If it is left empty, it means to execute immediately.
+             * <p>Execution time (UTC+8). If it is left empty, it means to execute immediately.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>142</p>
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -257,7 +287,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -265,7 +298,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1123</p>
              */
             public Builder sessionId(Long sessionId) {
                 this.sessionId = sessionId;
@@ -273,7 +309,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>:</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -281,7 +320,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLEEP</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -289,7 +331,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t3ogqv07a56n4</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -297,7 +342,10 @@ public class KillProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * The database username.
+             * <p>The database username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oas</p>
              */
             public Builder user(String user) {
                 this.user = user;

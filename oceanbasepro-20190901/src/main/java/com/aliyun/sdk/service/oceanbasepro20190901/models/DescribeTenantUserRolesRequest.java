@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantUserRolesRequest} extends {@link RequestModel}
  *
  * <p>DescribeTenantUserRolesRequest</p>
@@ -16,12 +22,17 @@ public class DescribeTenantUserRolesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
     private DescribeTenantUserRolesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.tenantId = builder.tenantId;
     }
 
@@ -46,6 +57,13 @@ public class DescribeTenantUserRolesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -54,6 +72,7 @@ public class DescribeTenantUserRolesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeTenantUserRolesRequest, Builder> {
         private String regionId; 
+        private String instanceId; 
         private String tenantId; 
 
         private Builder() {
@@ -63,6 +82,7 @@ public class DescribeTenantUserRolesRequest extends Request {
         private Builder(DescribeTenantUserRolesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
             this.tenantId = request.tenantId;
         } 
 
@@ -76,7 +96,22 @@ public class DescribeTenantUserRolesRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the tenant. If you specify the ID of a tenant in MySQL mode, the privilege configuration of the regular user in MySQL mode is returned. If you specify the ID of a tenant in Oracle mode, the privilege configuration of the regular user in Oracle mode is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4pnum****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

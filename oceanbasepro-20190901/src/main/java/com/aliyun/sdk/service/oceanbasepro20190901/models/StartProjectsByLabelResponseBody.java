@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartProjectsByLabelResponseBody} extends {@link TeaModel}
  *
  * <p>StartProjectsByLabelResponseBody</p>
@@ -250,12 +256,18 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartProjectsByLabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartProjectsByLabelResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedProjectIds")
-        private java.util.List < String > failedProjectIds;
+        private java.util.List<String> failedProjectIds;
 
         @com.aliyun.core.annotation.NameInMap("SucceedProjectIds")
-        private java.util.List < String > succeedProjectIds;
+        private java.util.List<String> succeedProjectIds;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
@@ -277,14 +289,14 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         /**
          * @return failedProjectIds
          */
-        public java.util.List < String > getFailedProjectIds() {
+        public java.util.List<String> getFailedProjectIds() {
             return this.failedProjectIds;
         }
 
         /**
          * @return succeedProjectIds
          */
-        public java.util.List < String > getSucceedProjectIds() {
+        public java.util.List<String> getSucceedProjectIds() {
             return this.succeedProjectIds;
         }
 
@@ -296,14 +308,14 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > failedProjectIds; 
-            private java.util.List < String > succeedProjectIds; 
+            private java.util.List<String> failedProjectIds; 
+            private java.util.List<String> succeedProjectIds; 
             private Integer total; 
 
             /**
              * FailedProjectIds.
              */
-            public Builder failedProjectIds(java.util.List < String > failedProjectIds) {
+            public Builder failedProjectIds(java.util.List<String> failedProjectIds) {
                 this.failedProjectIds = failedProjectIds;
                 return this;
             }
@@ -311,7 +323,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
             /**
              * SucceedProjectIds.
              */
-            public Builder succeedProjectIds(java.util.List < String > succeedProjectIds) {
+            public Builder succeedProjectIds(java.util.List<String> succeedProjectIds) {
                 this.succeedProjectIds = succeedProjectIds;
                 return this;
             }
@@ -331,12 +343,18 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartProjectsByLabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartProjectsByLabelResponseBody</p>
+     */
     public static class ErrorDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("ExtraContext")
-        private java.util.Map < String, ? > extraContext;
+        private java.util.Map<String, ?> extraContext;
 
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -345,7 +363,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
-        private java.util.Map < String, String > messageMcmsContext;
+        private java.util.Map<String, String> messageMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
@@ -354,7 +372,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         private String proposal;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
-        private java.util.Map < String, String > proposalMcmsContext;
+        private java.util.Map<String, String> proposalMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
@@ -363,7 +381,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         private String reason;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
-        private java.util.Map < String, String > reasonMcmsContext;
+        private java.util.Map<String, String> reasonMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
@@ -405,7 +423,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         /**
          * @return extraContext
          */
-        public java.util.Map < String, ? > getExtraContext() {
+        public java.util.Map<String, ?> getExtraContext() {
             return this.extraContext;
         }
 
@@ -426,7 +444,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         /**
          * @return messageMcmsContext
          */
-        public java.util.Map < String, String > getMessageMcmsContext() {
+        public java.util.Map<String, String> getMessageMcmsContext() {
             return this.messageMcmsContext;
         }
 
@@ -447,7 +465,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         /**
          * @return proposalMcmsContext
          */
-        public java.util.Map < String, String > getProposalMcmsContext() {
+        public java.util.Map<String, String> getProposalMcmsContext() {
             return this.proposalMcmsContext;
         }
 
@@ -468,7 +486,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
         /**
          * @return reasonMcmsContext
          */
-        public java.util.Map < String, String > getReasonMcmsContext() {
+        public java.util.Map<String, String> getReasonMcmsContext() {
             return this.reasonMcmsContext;
         }
 
@@ -488,16 +506,16 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.Map < String, ? > extraContext; 
+            private java.util.Map<String, ?> extraContext; 
             private String level; 
             private String message; 
-            private java.util.Map < String, String > messageMcmsContext; 
+            private java.util.Map<String, String> messageMcmsContext; 
             private String messageMcmsKey; 
             private String proposal; 
-            private java.util.Map < String, String > proposalMcmsContext; 
+            private java.util.Map<String, String> proposalMcmsContext; 
             private String proposalMcmsKey; 
             private String reason; 
-            private java.util.Map < String, String > reasonMcmsContext; 
+            private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
@@ -512,7 +530,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
             /**
              * ExtraContext.
              */
-            public Builder extraContext(java.util.Map < String, ? > extraContext) {
+            public Builder extraContext(java.util.Map<String, ?> extraContext) {
                 this.extraContext = extraContext;
                 return this;
             }
@@ -536,7 +554,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
             /**
              * MessageMcmsContext.
              */
-            public Builder messageMcmsContext(java.util.Map < String, String > messageMcmsContext) {
+            public Builder messageMcmsContext(java.util.Map<String, String> messageMcmsContext) {
                 this.messageMcmsContext = messageMcmsContext;
                 return this;
             }
@@ -560,7 +578,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
             /**
              * ProposalMcmsContext.
              */
-            public Builder proposalMcmsContext(java.util.Map < String, String > proposalMcmsContext) {
+            public Builder proposalMcmsContext(java.util.Map<String, String> proposalMcmsContext) {
                 this.proposalMcmsContext = proposalMcmsContext;
                 return this;
             }
@@ -584,7 +602,7 @@ public class StartProjectsByLabelResponseBody extends TeaModel {
             /**
              * ReasonMcmsContext.
              */
-            public Builder reasonMcmsContext(java.util.Map < String, String > reasonMcmsContext) {
+            public Builder reasonMcmsContext(java.util.Map<String, String> reasonMcmsContext) {
                 this.reasonMcmsContext = reasonMcmsContext;
                 return this;
             }

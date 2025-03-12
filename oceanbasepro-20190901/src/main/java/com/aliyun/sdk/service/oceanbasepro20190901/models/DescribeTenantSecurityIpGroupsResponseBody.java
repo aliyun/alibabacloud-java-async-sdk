@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTenantSecurityIpGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTenantSecurityIpGroupsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityIpGroups")
-    private java.util.List < SecurityIpGroups> securityIpGroups;
+    private java.util.List<SecurityIpGroups> securityIpGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -44,7 +50,7 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
     /**
      * @return securityIpGroups
      */
-    public java.util.List < SecurityIpGroups> getSecurityIpGroups() {
+    public java.util.List<SecurityIpGroups> getSecurityIpGroups() {
         return this.securityIpGroups;
     }
 
@@ -57,11 +63,14 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityIpGroups> securityIpGroups; 
+        private java.util.List<SecurityIpGroups> securityIpGroups; 
         private Integer totalCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469**-AA6F-4D**-B3DB-A***********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,15 +78,18 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the whitelist groups.
+         * <p>The list of the whitelist groups.</p>
          */
-        public Builder securityIpGroups(java.util.List < SecurityIpGroups> securityIpGroups) {
+        public Builder securityIpGroups(java.util.List<SecurityIpGroups> securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
             return this;
         }
 
         /**
-         * The total number of the whitelist groups.
+         * <p>The total number of the whitelist groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +102,12 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTenantSecurityIpGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTenantSecurityIpGroupsResponseBody</p>
+     */
     public static class SecurityIpGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityIpGroupName")
         private String securityIpGroupName;
@@ -153,7 +171,10 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
             private String tenantId; 
 
             /**
-             * The group name.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -161,10 +182,14 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist group type.
-             * <p>
-             * - instance: the whitelist group from the cluster.
-             * - tenant: the whitelist group of the current tenant.
+             * <p>The whitelist group type.</p>
+             * <ul>
+             * <li>instance: the whitelist group from the cluster.</li>
+             * <li>tenant: the whitelist group of the current tenant.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tenant</p>
              */
             public Builder securityIpGroupType(String securityIpGroupType) {
                 this.securityIpGroupType = securityIpGroupType;
@@ -172,7 +197,10 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist of IP addresses. It is a string separated by commas, and each object is an IP string or a CIDR block.
+             * <p>The whitelist of IP addresses. It is a string separated by commas, and each object is an IP string or a CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.***.<em>.</em>&quot;</p>
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;
@@ -180,7 +208,10 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t4louaeei****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;

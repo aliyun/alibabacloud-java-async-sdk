@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectModifyRecordsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     private String cost;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private ErrorDetail errorDetail;
@@ -90,7 +96,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -147,7 +153,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String advice; 
         private String code; 
         private String cost; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private ErrorDetail errorDetail; 
         private String message; 
         private Integer pageNumber; 
@@ -183,7 +189,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -250,9 +256,15 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class AdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private Integer partitionLifeCycle;
@@ -261,7 +273,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private AdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -281,7 +293,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -302,20 +314,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -339,7 +351,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -351,6 +363,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
@@ -692,15 +710,21 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class SpecificTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private AdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        private java.util.List<Columns> columns;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -712,7 +736,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -746,14 +770,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -781,7 +805,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -794,12 +818,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private AdbTableSchema adbTableSchema; 
-            private java.util.List < Columns> columns; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<Columns> columns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -813,7 +837,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -821,7 +845,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
@@ -853,7 +877,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -873,9 +897,15 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class SpecificViewsAdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private Integer partitionLifeCycle;
@@ -884,7 +914,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private SpecificViewsAdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -904,7 +934,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -925,20 +955,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -962,7 +992,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -974,6 +1004,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class SpecificViewsColumns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
@@ -1315,15 +1351,21 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class SpecificViews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private SpecificViewsAdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < SpecificViewsColumns> columns;
+        private java.util.List<SpecificViewsColumns> columns;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -1335,7 +1377,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -1369,14 +1411,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < SpecificViewsColumns> getColumns() {
+        public java.util.List<SpecificViewsColumns> getColumns() {
             return this.columns;
         }
 
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -1404,7 +1446,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -1417,12 +1459,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private SpecificViewsAdbTableSchema adbTableSchema; 
-            private java.util.List < SpecificViewsColumns> columns; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<SpecificViewsColumns> columns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -1436,7 +1478,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < SpecificViewsColumns> columns) {
+            public Builder columns(java.util.List<SpecificViewsColumns> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -1444,7 +1486,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
@@ -1476,7 +1518,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -1496,9 +1538,15 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class TablesAdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private Integer partitionLifeCycle;
@@ -1507,7 +1555,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private TablesAdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -1527,7 +1575,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -1548,20 +1596,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -1585,7 +1633,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -1597,6 +1645,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class TablesColumns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
@@ -1938,15 +1992,21 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private TablesAdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < TablesColumns> columns;
+        private java.util.List<TablesColumns> columns;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -1958,7 +2018,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -1992,14 +2052,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < TablesColumns> getColumns() {
+        public java.util.List<TablesColumns> getColumns() {
             return this.columns;
         }
 
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -2027,7 +2087,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -2040,12 +2100,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private TablesAdbTableSchema adbTableSchema; 
-            private java.util.List < TablesColumns> columns; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<TablesColumns> columns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -2059,7 +2119,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < TablesColumns> columns) {
+            public Builder columns(java.util.List<TablesColumns> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -2067,7 +2127,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
@@ -2099,7 +2159,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -2119,9 +2179,15 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class ViewsAdbTableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistributedKeys")
-        private java.util.List < String > distributedKeys;
+        private java.util.List<String> distributedKeys;
 
         @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private Integer partitionLifeCycle;
@@ -2130,7 +2196,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String partitionStatement;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
-        private java.util.List < String > primaryKeys;
+        private java.util.List<String> primaryKeys;
 
         private ViewsAdbTableSchema(Builder builder) {
             this.distributedKeys = builder.distributedKeys;
@@ -2150,7 +2216,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return distributedKeys
          */
-        public java.util.List < String > getDistributedKeys() {
+        public java.util.List<String> getDistributedKeys() {
             return this.distributedKeys;
         }
 
@@ -2171,20 +2237,20 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return primaryKeys
          */
-        public java.util.List < String > getPrimaryKeys() {
+        public java.util.List<String> getPrimaryKeys() {
             return this.primaryKeys;
         }
 
         public static final class Builder {
-            private java.util.List < String > distributedKeys; 
+            private java.util.List<String> distributedKeys; 
             private Integer partitionLifeCycle; 
             private String partitionStatement; 
-            private java.util.List < String > primaryKeys; 
+            private java.util.List<String> primaryKeys; 
 
             /**
              * DistributedKeys.
              */
-            public Builder distributedKeys(java.util.List < String > distributedKeys) {
+            public Builder distributedKeys(java.util.List<String> distributedKeys) {
                 this.distributedKeys = distributedKeys;
                 return this;
             }
@@ -2208,7 +2274,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * PrimaryKeys.
              */
-            public Builder primaryKeys(java.util.List < String > primaryKeys) {
+            public Builder primaryKeys(java.util.List<String> primaryKeys) {
                 this.primaryKeys = primaryKeys;
                 return this;
             }
@@ -2220,6 +2286,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class ViewsColumns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
@@ -2561,15 +2633,21 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class Views extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private ViewsAdbTableSchema adbTableSchema;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < ViewsColumns> columns;
+        private java.util.List<ViewsColumns> columns;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -2581,7 +2659,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
@@ -2615,14 +2693,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < ViewsColumns> getColumns() {
+        public java.util.List<ViewsColumns> getColumns() {
             return this.columns;
         }
 
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -2650,7 +2728,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -2663,12 +2741,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private ViewsAdbTableSchema adbTableSchema; 
-            private java.util.List < ViewsColumns> columns; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<ViewsColumns> columns; 
+            private java.util.List<String> filterColumns; 
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String whereClause; 
 
             /**
@@ -2682,7 +2760,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < ViewsColumns> columns) {
+            public Builder columns(java.util.List<ViewsColumns> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -2690,7 +2768,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
@@ -2722,7 +2800,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -2742,6 +2820,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -2753,16 +2837,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("SpecificTables")
-        private java.util.List < SpecificTables> specificTables;
+        private java.util.List<SpecificTables> specificTables;
 
         @com.aliyun.core.annotation.NameInMap("SpecificViews")
-        private java.util.List < SpecificViews> specificViews;
+        private java.util.List<SpecificViews> specificViews;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < Tables> tables;
+        private java.util.List<Tables> tables;
 
         @com.aliyun.core.annotation.NameInMap("Views")
-        private java.util.List < Views> views;
+        private java.util.List<Views> views;
 
         private Databases(Builder builder) {
             this.id = builder.id;
@@ -2806,28 +2890,28 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return specificTables
          */
-        public java.util.List < SpecificTables> getSpecificTables() {
+        public java.util.List<SpecificTables> getSpecificTables() {
             return this.specificTables;
         }
 
         /**
          * @return specificViews
          */
-        public java.util.List < SpecificViews> getSpecificViews() {
+        public java.util.List<SpecificViews> getSpecificViews() {
             return this.specificViews;
         }
 
         /**
          * @return tables
          */
-        public java.util.List < Tables> getTables() {
+        public java.util.List<Tables> getTables() {
             return this.tables;
         }
 
         /**
          * @return views
          */
-        public java.util.List < Views> getViews() {
+        public java.util.List<Views> getViews() {
             return this.views;
         }
 
@@ -2835,10 +2919,10 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String id; 
             private String mappedName; 
             private String name; 
-            private java.util.List < SpecificTables> specificTables; 
-            private java.util.List < SpecificViews> specificViews; 
-            private java.util.List < Tables> tables; 
-            private java.util.List < Views> views; 
+            private java.util.List<SpecificTables> specificTables; 
+            private java.util.List<SpecificViews> specificViews; 
+            private java.util.List<Tables> tables; 
+            private java.util.List<Views> views; 
 
             /**
              * Id.
@@ -2867,7 +2951,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * SpecificTables.
              */
-            public Builder specificTables(java.util.List < SpecificTables> specificTables) {
+            public Builder specificTables(java.util.List<SpecificTables> specificTables) {
                 this.specificTables = specificTables;
                 return this;
             }
@@ -2875,7 +2959,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * SpecificViews.
              */
-            public Builder specificViews(java.util.List < SpecificViews> specificViews) {
+            public Builder specificViews(java.util.List<SpecificViews> specificViews) {
                 this.specificViews = specificViews;
                 return this;
             }
@@ -2883,7 +2967,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < Tables> tables) {
+            public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -2891,7 +2975,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * Views.
              */
-            public Builder views(java.util.List < Views> views) {
+            public Builder views(java.util.List<Views> views) {
                 this.views = views;
                 return this;
             }
@@ -2903,12 +2987,18 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class DataErrorDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("ExtraContext")
-        private java.util.Map < String, ? > extraContext;
+        private java.util.Map<String, ?> extraContext;
 
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -2917,7 +3007,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
-        private java.util.Map < String, String > messageMcmsContext;
+        private java.util.Map<String, String> messageMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
@@ -2926,7 +3016,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String proposal;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
-        private java.util.Map < String, String > proposalMcmsContext;
+        private java.util.Map<String, String> proposalMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
@@ -2935,7 +3025,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String reason;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
-        private java.util.Map < String, String > reasonMcmsContext;
+        private java.util.Map<String, String> reasonMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
@@ -2977,7 +3067,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return extraContext
          */
-        public java.util.Map < String, ? > getExtraContext() {
+        public java.util.Map<String, ?> getExtraContext() {
             return this.extraContext;
         }
 
@@ -2998,7 +3088,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return messageMcmsContext
          */
-        public java.util.Map < String, String > getMessageMcmsContext() {
+        public java.util.Map<String, String> getMessageMcmsContext() {
             return this.messageMcmsContext;
         }
 
@@ -3019,7 +3109,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return proposalMcmsContext
          */
-        public java.util.Map < String, String > getProposalMcmsContext() {
+        public java.util.Map<String, String> getProposalMcmsContext() {
             return this.proposalMcmsContext;
         }
 
@@ -3040,7 +3130,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return reasonMcmsContext
          */
-        public java.util.Map < String, String > getReasonMcmsContext() {
+        public java.util.Map<String, String> getReasonMcmsContext() {
             return this.reasonMcmsContext;
         }
 
@@ -3060,16 +3150,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.Map < String, ? > extraContext; 
+            private java.util.Map<String, ?> extraContext; 
             private String level; 
             private String message; 
-            private java.util.Map < String, String > messageMcmsContext; 
+            private java.util.Map<String, String> messageMcmsContext; 
             private String messageMcmsKey; 
             private String proposal; 
-            private java.util.Map < String, String > proposalMcmsContext; 
+            private java.util.Map<String, String> proposalMcmsContext; 
             private String proposalMcmsKey; 
             private String reason; 
-            private java.util.Map < String, String > reasonMcmsContext; 
+            private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
@@ -3084,7 +3174,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ExtraContext.
              */
-            public Builder extraContext(java.util.Map < String, ? > extraContext) {
+            public Builder extraContext(java.util.Map<String, ?> extraContext) {
                 this.extraContext = extraContext;
                 return this;
             }
@@ -3108,7 +3198,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * MessageMcmsContext.
              */
-            public Builder messageMcmsContext(java.util.Map < String, String > messageMcmsContext) {
+            public Builder messageMcmsContext(java.util.Map<String, String> messageMcmsContext) {
                 this.messageMcmsContext = messageMcmsContext;
                 return this;
             }
@@ -3132,7 +3222,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ProposalMcmsContext.
              */
-            public Builder proposalMcmsContext(java.util.Map < String, String > proposalMcmsContext) {
+            public Builder proposalMcmsContext(java.util.Map<String, String> proposalMcmsContext) {
                 this.proposalMcmsContext = proposalMcmsContext;
                 return this;
             }
@@ -3156,7 +3246,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ReasonMcmsContext.
              */
-            public Builder reasonMcmsContext(java.util.Map < String, String > reasonMcmsContext) {
+            public Builder reasonMcmsContext(java.util.Map<String, String> reasonMcmsContext) {
                 this.reasonMcmsContext = reasonMcmsContext;
                 return this;
             }
@@ -3184,6 +3274,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class MigrationObjectsInfoTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -3245,6 +3341,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class TablesBlack extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -3306,6 +3408,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class MigrationObjectsInfoViews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -3367,6 +3475,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class ViewsBlack extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -3428,18 +3542,24 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class MigrationObjectsInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < MigrationObjectsInfoTables> tables;
+        private java.util.List<MigrationObjectsInfoTables> tables;
 
         @com.aliyun.core.annotation.NameInMap("TablesBlack")
-        private java.util.List < TablesBlack> tablesBlack;
+        private java.util.List<TablesBlack> tablesBlack;
 
         @com.aliyun.core.annotation.NameInMap("Views")
-        private java.util.List < MigrationObjectsInfoViews> views;
+        private java.util.List<MigrationObjectsInfoViews> views;
 
         @com.aliyun.core.annotation.NameInMap("ViewsBlack")
-        private java.util.List < ViewsBlack> viewsBlack;
+        private java.util.List<ViewsBlack> viewsBlack;
 
         @com.aliyun.core.annotation.NameInMap("WildcardMode")
         private Boolean wildcardMode;
@@ -3463,28 +3583,28 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < MigrationObjectsInfoTables> getTables() {
+        public java.util.List<MigrationObjectsInfoTables> getTables() {
             return this.tables;
         }
 
         /**
          * @return tablesBlack
          */
-        public java.util.List < TablesBlack> getTablesBlack() {
+        public java.util.List<TablesBlack> getTablesBlack() {
             return this.tablesBlack;
         }
 
         /**
          * @return views
          */
-        public java.util.List < MigrationObjectsInfoViews> getViews() {
+        public java.util.List<MigrationObjectsInfoViews> getViews() {
             return this.views;
         }
 
         /**
          * @return viewsBlack
          */
-        public java.util.List < ViewsBlack> getViewsBlack() {
+        public java.util.List<ViewsBlack> getViewsBlack() {
             return this.viewsBlack;
         }
 
@@ -3496,16 +3616,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MigrationObjectsInfoTables> tables; 
-            private java.util.List < TablesBlack> tablesBlack; 
-            private java.util.List < MigrationObjectsInfoViews> views; 
-            private java.util.List < ViewsBlack> viewsBlack; 
+            private java.util.List<MigrationObjectsInfoTables> tables; 
+            private java.util.List<TablesBlack> tablesBlack; 
+            private java.util.List<MigrationObjectsInfoViews> views; 
+            private java.util.List<ViewsBlack> viewsBlack; 
             private Boolean wildcardMode; 
 
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < MigrationObjectsInfoTables> tables) {
+            public Builder tables(java.util.List<MigrationObjectsInfoTables> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -3513,7 +3633,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * TablesBlack.
              */
-            public Builder tablesBlack(java.util.List < TablesBlack> tablesBlack) {
+            public Builder tablesBlack(java.util.List<TablesBlack> tablesBlack) {
                 this.tablesBlack = tablesBlack;
                 return this;
             }
@@ -3521,7 +3641,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * Views.
              */
-            public Builder views(java.util.List < MigrationObjectsInfoViews> views) {
+            public Builder views(java.util.List<MigrationObjectsInfoViews> views) {
                 this.views = views;
                 return this;
             }
@@ -3529,7 +3649,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ViewsBlack.
              */
-            public Builder viewsBlack(java.util.List < ViewsBlack> viewsBlack) {
+            public Builder viewsBlack(java.util.List<ViewsBlack> viewsBlack) {
                 this.viewsBlack = viewsBlack;
                 return this;
             }
@@ -3549,6 +3669,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class ColumnMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestName")
         private String destName;
@@ -3650,6 +3776,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class SchemaMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestName")
         private String destName;
@@ -3711,6 +3843,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class TableMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestName")
         private String destName;
@@ -3792,6 +3930,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class ViewMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestName")
         private String destName;
@@ -3873,18 +4017,24 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class OmsProjectMappingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnMappings")
-        private java.util.List < ColumnMappings> columnMappings;
+        private java.util.List<ColumnMappings> columnMappings;
 
         @com.aliyun.core.annotation.NameInMap("SchemaMappings")
-        private java.util.List < SchemaMappings> schemaMappings;
+        private java.util.List<SchemaMappings> schemaMappings;
 
         @com.aliyun.core.annotation.NameInMap("TableMappings")
-        private java.util.List < TableMappings> tableMappings;
+        private java.util.List<TableMappings> tableMappings;
 
         @com.aliyun.core.annotation.NameInMap("ViewMappings")
-        private java.util.List < ViewMappings> viewMappings;
+        private java.util.List<ViewMappings> viewMappings;
 
         private OmsProjectMappingInfo(Builder builder) {
             this.columnMappings = builder.columnMappings;
@@ -3904,41 +4054,41 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return columnMappings
          */
-        public java.util.List < ColumnMappings> getColumnMappings() {
+        public java.util.List<ColumnMappings> getColumnMappings() {
             return this.columnMappings;
         }
 
         /**
          * @return schemaMappings
          */
-        public java.util.List < SchemaMappings> getSchemaMappings() {
+        public java.util.List<SchemaMappings> getSchemaMappings() {
             return this.schemaMappings;
         }
 
         /**
          * @return tableMappings
          */
-        public java.util.List < TableMappings> getTableMappings() {
+        public java.util.List<TableMappings> getTableMappings() {
             return this.tableMappings;
         }
 
         /**
          * @return viewMappings
          */
-        public java.util.List < ViewMappings> getViewMappings() {
+        public java.util.List<ViewMappings> getViewMappings() {
             return this.viewMappings;
         }
 
         public static final class Builder {
-            private java.util.List < ColumnMappings> columnMappings; 
-            private java.util.List < SchemaMappings> schemaMappings; 
-            private java.util.List < TableMappings> tableMappings; 
-            private java.util.List < ViewMappings> viewMappings; 
+            private java.util.List<ColumnMappings> columnMappings; 
+            private java.util.List<SchemaMappings> schemaMappings; 
+            private java.util.List<TableMappings> tableMappings; 
+            private java.util.List<ViewMappings> viewMappings; 
 
             /**
              * ColumnMappings.
              */
-            public Builder columnMappings(java.util.List < ColumnMappings> columnMappings) {
+            public Builder columnMappings(java.util.List<ColumnMappings> columnMappings) {
                 this.columnMappings = columnMappings;
                 return this;
             }
@@ -3946,7 +4096,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * SchemaMappings.
              */
-            public Builder schemaMappings(java.util.List < SchemaMappings> schemaMappings) {
+            public Builder schemaMappings(java.util.List<SchemaMappings> schemaMappings) {
                 this.schemaMappings = schemaMappings;
                 return this;
             }
@@ -3954,7 +4104,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * TableMappings.
              */
-            public Builder tableMappings(java.util.List < TableMappings> tableMappings) {
+            public Builder tableMappings(java.util.List<TableMappings> tableMappings) {
                 this.tableMappings = tableMappings;
                 return this;
             }
@@ -3962,7 +4112,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ViewMappings.
              */
-            public Builder viewMappings(java.util.List < ViewMappings> viewMappings) {
+            public Builder viewMappings(java.util.List<ViewMappings> viewMappings) {
                 this.viewMappings = viewMappings;
                 return this;
             }
@@ -3974,6 +4124,12 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class TableEtlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -3985,13 +4141,13 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String destName;
 
         @com.aliyun.core.annotation.NameInMap("FilterColumns")
-        private java.util.List < String > filterColumns;
+        private java.util.List<String> filterColumns;
 
         @com.aliyun.core.annotation.NameInMap("LogicTableId")
         private String logicTableId;
 
         @com.aliyun.core.annotation.NameInMap("ShardColumns")
-        private java.util.List < String > shardColumns;
+        private java.util.List<String> shardColumns;
 
         @com.aliyun.core.annotation.NameInMap("SourceEndpointId")
         private String sourceEndpointId;
@@ -4050,7 +4206,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return filterColumns
          */
-        public java.util.List < String > getFilterColumns() {
+        public java.util.List<String> getFilterColumns() {
             return this.filterColumns;
         }
 
@@ -4064,7 +4220,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return shardColumns
          */
-        public java.util.List < String > getShardColumns() {
+        public java.util.List<String> getShardColumns() {
             return this.shardColumns;
         }
 
@@ -4100,9 +4256,9 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private String database; 
             private String destDatabase; 
             private String destName; 
-            private java.util.List < String > filterColumns; 
+            private java.util.List<String> filterColumns; 
             private String logicTableId; 
-            private java.util.List < String > shardColumns; 
+            private java.util.List<String> shardColumns; 
             private String sourceEndpointId; 
             private String tableName; 
             private String tenantName; 
@@ -4135,7 +4291,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * FilterColumns.
              */
-            public Builder filterColumns(java.util.List < String > filterColumns) {
+            public Builder filterColumns(java.util.List<String> filterColumns) {
                 this.filterColumns = filterColumns;
                 return this;
             }
@@ -4151,7 +4307,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ShardColumns.
              */
-            public Builder shardColumns(java.util.List < String > shardColumns) {
+            public Builder shardColumns(java.util.List<String> shardColumns) {
                 this.shardColumns = shardColumns;
                 return this;
             }
@@ -4195,9 +4351,15 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Databases")
-        private java.util.List < Databases> databases;
+        private java.util.List<Databases> databases;
 
         @com.aliyun.core.annotation.NameInMap("ErrorDetail")
         private DataErrorDetail errorDetail;
@@ -4224,7 +4386,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String subProjectId;
 
         @com.aliyun.core.annotation.NameInMap("TableEtlList")
-        private java.util.List < TableEtlList> tableEtlList;
+        private java.util.List<TableEtlList> tableEtlList;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -4258,7 +4420,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return databases
          */
-        public java.util.List < Databases> getDatabases() {
+        public java.util.List<Databases> getDatabases() {
             return this.databases;
         }
 
@@ -4321,7 +4483,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return tableEtlList
          */
-        public java.util.List < TableEtlList> getTableEtlList() {
+        public java.util.List<TableEtlList> getTableEtlList() {
             return this.tableEtlList;
         }
 
@@ -4340,7 +4502,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Databases> databases; 
+            private java.util.List<Databases> databases; 
             private DataErrorDetail errorDetail; 
             private String gmtModified; 
             private Long id; 
@@ -4349,14 +4511,14 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             private OmsProjectMappingInfo omsProjectMappingInfo; 
             private String status; 
             private String subProjectId; 
-            private java.util.List < TableEtlList> tableEtlList; 
+            private java.util.List<TableEtlList> tableEtlList; 
             private String type; 
             private Long updateRequestId; 
 
             /**
              * Databases.
              */
-            public Builder databases(java.util.List < Databases> databases) {
+            public Builder databases(java.util.List<Databases> databases) {
                 this.databases = databases;
                 return this;
             }
@@ -4428,7 +4590,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * TableEtlList.
              */
-            public Builder tableEtlList(java.util.List < TableEtlList> tableEtlList) {
+            public Builder tableEtlList(java.util.List<TableEtlList> tableEtlList) {
                 this.tableEtlList = tableEtlList;
                 return this;
             }
@@ -4456,12 +4618,18 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectModifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectModifyRecordsResponseBody</p>
+     */
     public static class ErrorDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("ExtraContext")
-        private java.util.Map < String, ? > extraContext;
+        private java.util.Map<String, ?> extraContext;
 
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -4470,7 +4638,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
-        private java.util.Map < String, String > messageMcmsContext;
+        private java.util.Map<String, String> messageMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
@@ -4479,7 +4647,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String proposal;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
-        private java.util.Map < String, String > proposalMcmsContext;
+        private java.util.Map<String, String> proposalMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
@@ -4488,7 +4656,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         private String reason;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
-        private java.util.Map < String, String > reasonMcmsContext;
+        private java.util.Map<String, String> reasonMcmsContext;
 
         @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
@@ -4530,7 +4698,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return extraContext
          */
-        public java.util.Map < String, ? > getExtraContext() {
+        public java.util.Map<String, ?> getExtraContext() {
             return this.extraContext;
         }
 
@@ -4551,7 +4719,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return messageMcmsContext
          */
-        public java.util.Map < String, String > getMessageMcmsContext() {
+        public java.util.Map<String, String> getMessageMcmsContext() {
             return this.messageMcmsContext;
         }
 
@@ -4572,7 +4740,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return proposalMcmsContext
          */
-        public java.util.Map < String, String > getProposalMcmsContext() {
+        public java.util.Map<String, String> getProposalMcmsContext() {
             return this.proposalMcmsContext;
         }
 
@@ -4593,7 +4761,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         /**
          * @return reasonMcmsContext
          */
-        public java.util.Map < String, String > getReasonMcmsContext() {
+        public java.util.Map<String, String> getReasonMcmsContext() {
             return this.reasonMcmsContext;
         }
 
@@ -4613,16 +4781,16 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.Map < String, ? > extraContext; 
+            private java.util.Map<String, ?> extraContext; 
             private String level; 
             private String message; 
-            private java.util.Map < String, String > messageMcmsContext; 
+            private java.util.Map<String, String> messageMcmsContext; 
             private String messageMcmsKey; 
             private String proposal; 
-            private java.util.Map < String, String > proposalMcmsContext; 
+            private java.util.Map<String, String> proposalMcmsContext; 
             private String proposalMcmsKey; 
             private String reason; 
-            private java.util.Map < String, String > reasonMcmsContext; 
+            private java.util.Map<String, String> reasonMcmsContext; 
             private String reasonMcmsKey; 
             private Object upstreamErrorDetail; 
 
@@ -4637,7 +4805,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ExtraContext.
              */
-            public Builder extraContext(java.util.Map < String, ? > extraContext) {
+            public Builder extraContext(java.util.Map<String, ?> extraContext) {
                 this.extraContext = extraContext;
                 return this;
             }
@@ -4661,7 +4829,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * MessageMcmsContext.
              */
-            public Builder messageMcmsContext(java.util.Map < String, String > messageMcmsContext) {
+            public Builder messageMcmsContext(java.util.Map<String, String> messageMcmsContext) {
                 this.messageMcmsContext = messageMcmsContext;
                 return this;
             }
@@ -4685,7 +4853,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ProposalMcmsContext.
              */
-            public Builder proposalMcmsContext(java.util.Map < String, String > proposalMcmsContext) {
+            public Builder proposalMcmsContext(java.util.Map<String, String> proposalMcmsContext) {
                 this.proposalMcmsContext = proposalMcmsContext;
                 return this;
             }
@@ -4709,7 +4877,7 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
             /**
              * ReasonMcmsContext.
              */
-            public Builder reasonMcmsContext(java.util.Map < String, String > reasonMcmsContext) {
+            public Builder reasonMcmsContext(java.util.Map<String, String> reasonMcmsContext) {
                 this.reasonMcmsContext = reasonMcmsContext;
                 return this;
             }

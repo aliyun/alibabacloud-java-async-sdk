@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProjectStepMetricRequest} extends {@link RequestModel}
  *
  * <p>DescribeProjectStepMetricRequest</p>
@@ -166,7 +172,10 @@ public class DescribeProjectStepMetricRequest extends Request {
         }
 
         /**
-         * Aggregator.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         public Builder aggregator(String aggregator) {
             this.putBodyParameter("Aggregator", aggregator);
@@ -175,7 +184,10 @@ public class DescribeProjectStepMetricRequest extends Request {
         }
 
         /**
-         * BeginTimestamp.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689244696</p>
          */
         public Builder beginTimestamp(Long beginTimestamp) {
             this.putBodyParameter("BeginTimestamp", beginTimestamp);
@@ -184,7 +196,10 @@ public class DescribeProjectStepMetricRequest extends Request {
         }
 
         /**
-         * EndTimestamp.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689254646</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putBodyParameter("EndTimestamp", endTimestamp);
@@ -202,7 +217,10 @@ public class DescribeProjectStepMetricRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RPS</p>
          */
         public Builder metricType(String metricType) {
             this.putBodyParameter("MetricType", metricType);
@@ -211,7 +229,10 @@ public class DescribeProjectStepMetricRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np_dr****</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -220,7 +241,10 @@ public class DescribeProjectStepMetricRequest extends Request {
         }
 
         /**
-         * StepName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FULL_TRANSFER</p>
          */
         public Builder stepName(String stepName) {
             this.putBodyParameter("StepName", stepName);

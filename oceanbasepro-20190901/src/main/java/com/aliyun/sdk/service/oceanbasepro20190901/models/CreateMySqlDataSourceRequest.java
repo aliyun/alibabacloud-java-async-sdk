@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMySqlDataSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateMySqlDataSourceRequest</p>
@@ -270,7 +276,10 @@ public class CreateMySqlDataSourceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -279,7 +288,10 @@ public class CreateMySqlDataSourceRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pass_word</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -306,7 +318,10 @@ public class CreateMySqlDataSourceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -324,7 +339,10 @@ public class CreateMySqlDataSourceRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_name</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecurityIpGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecurityIpGroupRequest</p>
@@ -92,9 +98,11 @@ public class DeleteSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist group.    
-         * <p>
-         * It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).
+         * <p>The name of the IP address whitelist group.<br>It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +111,11 @@ public class DeleteSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The information of the deleted IP whitelist group.
+         * <p>The information of the deleted IP whitelist group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paytest</p>
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSSLRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceSSLRequest</p>
@@ -25,11 +31,16 @@ public class ModifyInstanceSSLRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
     private ModifyInstanceSSLRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.enableSSL = builder.enableSSL;
         this.instanceId = builder.instanceId;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -66,10 +77,18 @@ public class ModifyInstanceSSLRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceSSLRequest, Builder> {
         private String regionId; 
         private String enableSSL; 
         private String instanceId; 
+        private String tenantId; 
 
         private Builder() {
             super();
@@ -80,6 +99,7 @@ public class ModifyInstanceSSLRequest extends Request {
             this.regionId = request.regionId;
             this.enableSSL = request.enableSSL;
             this.instanceId = request.instanceId;
+            this.tenantId = request.tenantId;
         } 
 
         /**
@@ -92,14 +112,19 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * The operation to modify the SSL status. Valid values:
-         * <p>
+         * <p>The operation to modify the SSL status. Valid values:</p>
+         * <ul>
+         * <li><p>open: Enable SSL encryption.</p>
+         * </li>
+         * <li><p>update: Update the CA certificate.</p>
+         * </li>
+         * <li><p>close: Disable SSL encryption.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - open: Enable SSL encryption.
-         * 
-         * - update: Update the CA certificate.
-         * 
-         * - close: Disable SSL encryption.
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder enableSSL(String enableSSL) {
             this.putBodyParameter("EnableSSL", enableSSL);
@@ -108,11 +133,24 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * <p>The ID of the OceanBase cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
