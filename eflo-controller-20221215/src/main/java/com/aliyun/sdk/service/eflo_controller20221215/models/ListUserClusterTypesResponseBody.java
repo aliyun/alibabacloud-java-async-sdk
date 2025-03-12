@@ -67,7 +67,7 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterTypes.
+         * <p>List of cluster types. The number of array elements N ranges from 1 to 100.</p>
          */
         public Builder clusterTypes(java.util.List<ClusterTypes> clusterTypes) {
             this.clusterTypes = clusterTypes;
@@ -75,7 +75,10 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The NextToken for the next page. Include this value when requesting the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a6b93229825ac667104463b56790c91</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -144,7 +147,10 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * AccessType.
+             * <p>访问类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -152,7 +158,10 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>Type name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AckEdgePro</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

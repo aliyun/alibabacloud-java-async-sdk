@@ -110,7 +110,10 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-kvw44e6dn04</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -119,7 +122,12 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * SessionType.
+         * <p>Session type corresponding to the session package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N	两种：
+         * Sol：基于串口[默认]
+         * Assistant：基于云助手</p>
          */
         public Builder sessionType(String sessionType) {
             this.putBodyParameter("SessionType", sessionType);
@@ -128,7 +136,10 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Initiation time, 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669340937156</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

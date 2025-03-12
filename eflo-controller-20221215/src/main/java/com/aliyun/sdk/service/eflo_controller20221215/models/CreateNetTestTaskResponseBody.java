@@ -55,7 +55,7 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
         private String testId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -66,7 +66,10 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TestId.
+         * <p>启动测试任务ID，网络测试任务的唯一标志。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-uf6i0tv2refv8wz*****</p>
          */
         public Builder testId(String testId) {
             this.testId = testId;

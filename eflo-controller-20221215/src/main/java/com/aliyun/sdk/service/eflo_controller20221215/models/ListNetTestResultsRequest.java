@@ -124,7 +124,17 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of items per page in a paginated query. The maximum value is 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li><p>If no value is set or the set value is less than 20, the default is 20.</p>
+         * </li>
+         * <li><p>If the set value is greater than 100, the default is 100.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -133,7 +143,10 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * NetTestType.
+         * <p>Type of network test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DelayTest</p>
          */
         public Builder netTestType(String netTestType) {
             this.putBodyParameter("NetTestType", netTestType);
@@ -142,7 +155,10 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Query token (Token), which should be the value of the NextToken parameter returned from the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a6b93229825ac667104463b56790c91</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -151,7 +167,10 @@ public class ListNetTestResultsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxno4vh5muoq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

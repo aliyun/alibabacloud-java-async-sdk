@@ -32,11 +32,16 @@ public class ChangeResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceRegionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     private ChangeResourceGroupRequest(Builder builder) {
         super(builder);
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
         this.resourceRegionId = builder.resourceRegionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class ChangeResourceGroupRequest extends Request {
         return this.resourceRegionId;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<ChangeResourceGroupRequest, Builder> {
         private String resourceGroupId; 
         private String resourceId; 
         private String resourceRegionId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class ChangeResourceGroupRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
             this.resourceRegionId = request.resourceRegionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -125,6 +139,15 @@ public class ChangeResourceGroupRequest extends Request {
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
             this.resourceRegionId = resourceRegionId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

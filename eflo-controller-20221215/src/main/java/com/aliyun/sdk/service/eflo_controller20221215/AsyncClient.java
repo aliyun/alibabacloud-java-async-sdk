@@ -32,6 +32,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of CloseSession  CloseSessionRequest
      * @return CloseSessionResponse
      */
@@ -50,12 +53,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDiagnosticTaskResponse> createDiagnosticTask(CreateDiagnosticTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of CreateNetTestTask  CreateNetTestTaskRequest
      * @return CreateNetTestTaskResponse
      */
     CompletableFuture<CreateNetTestTaskResponse> createNetTestTask(CreateNetTestTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of CreateSession  CreateSessionRequest
      * @return CreateSessionResponse
      */
@@ -80,6 +89,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of DescribeNetTestResult  DescribeNetTestResultRequest
      * @return DescribeNetTestResultResponse
      */
@@ -134,6 +146,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of ListDiagnosticResults  ListDiagnosticResultsRequest
      * @return ListDiagnosticResultsResponse
      */
@@ -152,6 +167,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of ListMachineNetworkInfo  ListMachineNetworkInfoRequest
      * @return ListMachineNetworkInfoResponse
      */
@@ -164,6 +182,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMachineTypesResponse> listMachineTypes(ListMachineTypesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of ListNetTestResults  ListNetTestResultsRequest
      * @return ListNetTestResultsResponse
      */
@@ -182,6 +203,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of ListUserClusterTypes  ListUserClusterTypesRequest
      * @return ListUserClusterTypesResponse
      */

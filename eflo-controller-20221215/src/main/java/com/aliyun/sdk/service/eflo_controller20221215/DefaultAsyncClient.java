@@ -76,6 +76,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of CloseSession  CloseSessionRequest
      * @return CloseSessionResponse
      */
@@ -130,6 +133,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of CreateNetTestTask  CreateNetTestTaskRequest
      * @return CreateNetTestTaskResponse
      */
@@ -148,6 +154,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of CreateSession  CreateSessionRequest
      * @return CreateSessionResponse
      */
@@ -220,6 +229,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of DescribeNetTestResult  DescribeNetTestResultRequest
      * @return DescribeNetTestResultResponse
      */
@@ -382,6 +394,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of ListDiagnosticResults  ListDiagnosticResultsRequest
      * @return ListDiagnosticResultsResponse
      */
@@ -436,6 +451,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of ListMachineNetworkInfo  ListMachineNetworkInfoRequest
      * @return ListMachineNetworkInfoResponse
      */
@@ -472,6 +490,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</p>
+     * 
      * @param request the request parameters of ListNetTestResults  ListNetTestResultsRequest
      * @return ListNetTestResultsResponse
      */
@@ -526,6 +547,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * @param request the request parameters of ListUserClusterTypes  ListUserClusterTypesRequest
      * @return ListUserClusterTypesResponse
      */

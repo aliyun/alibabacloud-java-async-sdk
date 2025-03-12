@@ -180,7 +180,10 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i119982311660892626523</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -189,7 +192,10 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>Cluster name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Eflo-YJ-Test-Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -198,7 +204,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * CommTest.
+         * <p>Required when the test type is communication library testing</p>
          */
         public Builder commTest(CommTest commTest) {
             String commTestShrink = shrink(commTest, "CommTest", "json");
@@ -208,7 +214,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * DelayTest.
+         * <p>Fill in this field when the network test type is delay testing.</p>
          */
         public Builder delayTest(DelayTest delayTest) {
             String delayTestShrink = shrink(delayTest, "DelayTest", "json");
@@ -218,7 +224,11 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * NetTestType.
+         * <p>Network test type.
+         * For example: DelayTest for latency testing, TrafficTest for traffic testing, CommTest for communication library testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DelayTest</p>
          */
         public Builder netTestType(String netTestType) {
             this.putBodyParameter("NetTestType", netTestType);
@@ -227,7 +237,10 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * NetworkMode.
+         * <p>Network mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder networkMode(String networkMode) {
             this.putBodyParameter("NetworkMode", networkMode);
@@ -236,7 +249,10 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>Test port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23604</p>
          */
         public Builder port(String port) {
             this.putBodyParameter("Port", port);
@@ -245,7 +261,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * TrafficTest.
+         * <p>This field is empty if the TrafficModel is Fullmesh.</p>
          */
         public Builder trafficTest(TrafficTest trafficTest) {
             String trafficTestShrink = shrink(trafficTest, "TrafficTest", "json");
@@ -330,7 +346,10 @@ public class CreateNetTestTaskRequest extends Request {
             private String serverName; 
 
             /**
-             * IP.
+             * <p>IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169.253.253.15</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -338,7 +357,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-tw-bqisacl3z6l</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -346,7 +368,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>Resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i111670831721110797708</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -354,7 +379,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ServerName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VBw</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -437,7 +465,10 @@ public class CreateNetTestTaskRequest extends Request {
             private String type; 
 
             /**
-             * GPUNum.
+             * <p>Number of GPUs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPUNum(Long GPUNum) {
                 this.GPUNum = GPUNum;
@@ -445,7 +476,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * Hosts.
+             * <p>Resource ID</p>
              */
             public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
@@ -453,7 +484,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>Communication library model</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intention_v4</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -461,7 +495,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>Communication library test category: ACCL or NCCL</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACCL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -556,7 +593,10 @@ public class CreateNetTestTaskRequest extends Request {
             private String serverName; 
 
             /**
-             * Bond.
+             * <p>Network interface bond port</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond1</p>
              */
             public Builder bond(String bond) {
                 this.bond = bond;
@@ -564,7 +604,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * IP.
+             * <p>Node IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125.210.225.48</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -572,7 +615,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-fou43an0a05</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -580,7 +626,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>Resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-bcd3u1aee06</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -588,7 +637,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ServerName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NQU</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -635,7 +687,7 @@ public class CreateNetTestTaskRequest extends Request {
             private java.util.List<DelayTestHosts> hosts; 
 
             /**
-             * Hosts.
+             * <p>输入测试节点的hosts</p>
              */
             public Builder hosts(java.util.List<DelayTestHosts> hosts) {
                 this.hosts = hosts;
@@ -730,7 +782,10 @@ public class CreateNetTestTaskRequest extends Request {
             private String serverName; 
 
             /**
-             * Bond.
+             * <p>Network card bond interface</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond1</p>
              */
             public Builder bond(String bond) {
                 this.bond = bond;
@@ -738,7 +793,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * IP.
+             * <p>Node IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -746,7 +804,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-tw-w5elqg7pw18</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -754,7 +815,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>Resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-20s41p6cx01</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -762,7 +826,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ServerName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xMv</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -857,7 +924,10 @@ public class CreateNetTestTaskRequest extends Request {
             private String serverName; 
 
             /**
-             * Bond.
+             * <p>Network card bond interface</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond1</p>
              */
             public Builder bond(String bond) {
                 this.bond = bond;
@@ -865,7 +935,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * IP.
+             * <p>Node IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.121.110.190</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -873,7 +946,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-tw-bqisacl3z6l</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -881,7 +957,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * <p>Resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-wwo3etaqu0b</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -889,7 +968,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * ServerName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xMv</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -1008,7 +1090,7 @@ public class CreateNetTestTaskRequest extends Request {
             private String trafficModel; 
 
             /**
-             * Clients.
+             * <p>Resource ID.</p>
              */
             public Builder clients(java.util.List<Clients> clients) {
                 this.clients = clients;
@@ -1016,7 +1098,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the workflow task in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -1024,7 +1109,11 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * GDR.
+             * <p>Enter True/False when the protocol is RDMA, 
+             * this field is empty when the protocol is TCP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder GDR(Boolean GDR) {
                 this.GDR = GDR;
@@ -1032,7 +1121,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * <p>Network protocol, either RDMA or TCP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1040,7 +1132,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * QP.
+             * <p>Enter the number of concurrent connections when the protocol is TCP, or enter the configured QP value when the protocol is RDMA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder qp(Long qp) {
                 this.qp = qp;
@@ -1048,7 +1143,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * Servers.
+             * <p>Service list</p>
              */
             public Builder servers(java.util.List<Servers> servers) {
                 this.servers = servers;
@@ -1056,7 +1151,10 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * TrafficModel.
+             * <p>Traffic model, either MTON or Fullmesh.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Fullmesh</p>
              */
             public Builder trafficModel(String trafficModel) {
                 this.trafficModel = trafficModel;

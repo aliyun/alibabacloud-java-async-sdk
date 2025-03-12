@@ -91,7 +91,7 @@ public class CreateSessionResponseBody extends TeaModel {
         private String wssEndpoint; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
@@ -102,7 +102,10 @@ public class CreateSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ServerSn.
+         * <p>节点  ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A59143F1</p>
          */
         public Builder serverSn(String serverSn) {
             this.serverSn = serverSn;
@@ -110,7 +113,10 @@ public class CreateSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>Session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i207023871669364793713</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -118,7 +124,10 @@ public class CreateSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SessionToken.
+         * <p>Session token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389c980</p>
          */
         public Builder sessionToken(String sessionToken) {
             this.sessionToken = sessionToken;
@@ -126,7 +135,10 @@ public class CreateSessionResponseBody extends TeaModel {
         }
 
         /**
-         * WssEndpoint.
+         * <p>WebSocket address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws://x.x.x.x:xx/calypso_web_console</p>
          */
         public Builder wssEndpoint(String wssEndpoint) {
             this.wssEndpoint = wssEndpoint;
