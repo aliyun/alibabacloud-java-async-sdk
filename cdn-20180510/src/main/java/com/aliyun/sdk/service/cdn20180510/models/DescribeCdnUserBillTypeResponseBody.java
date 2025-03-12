@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -273,7 +278,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
      */
     public static class BillTypeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillTypeDataItem")
-        private java.util.List < BillTypeDataItem> billTypeDataItem;
+        private java.util.List<BillTypeDataItem> billTypeDataItem;
 
         private BillTypeData(Builder builder) {
             this.billTypeDataItem = builder.billTypeDataItem;
@@ -290,17 +295,17 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
         /**
          * @return billTypeDataItem
          */
-        public java.util.List < BillTypeDataItem> getBillTypeDataItem() {
+        public java.util.List<BillTypeDataItem> getBillTypeDataItem() {
             return this.billTypeDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < BillTypeDataItem> billTypeDataItem; 
+            private java.util.List<BillTypeDataItem> billTypeDataItem; 
 
             /**
              * BillTypeDataItem.
              */
-            public Builder billTypeDataItem(java.util.List < BillTypeDataItem> billTypeDataItem) {
+            public Builder billTypeDataItem(java.util.List<BillTypeDataItem> billTypeDataItem) {
                 this.billTypeDataItem = billTypeDataItem;
                 return this;
             }

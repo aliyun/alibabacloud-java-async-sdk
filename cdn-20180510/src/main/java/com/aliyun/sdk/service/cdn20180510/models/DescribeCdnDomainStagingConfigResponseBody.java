@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainConfigs")
-    private java.util.List < DomainConfigs> domainConfigs;
+    private java.util.List<DomainConfigs> domainConfigs;
 
     @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
@@ -38,7 +43,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     /**
      * @return domainConfigs
      */
-    public java.util.List < DomainConfigs> getDomainConfigs() {
+    public java.util.List<DomainConfigs> getDomainConfigs() {
         return this.domainConfigs;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainConfigs> domainConfigs; 
+        private java.util.List<DomainConfigs> domainConfigs; 
         private String domainName; 
         private String requestId; 
 
         /**
          * <p>The domain name configurations.</p>
          */
-        public Builder domainConfigs(java.util.List < DomainConfigs> domainConfigs) {
+        public Builder domainConfigs(java.util.List<DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
             return this;
         }
@@ -181,7 +186,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         private String configId;
 
         @com.aliyun.core.annotation.NameInMap("FunctionArgs")
-        private java.util.List < FunctionArgs> functionArgs;
+        private java.util.List<FunctionArgs> functionArgs;
 
         @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
@@ -218,7 +223,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         /**
          * @return functionArgs
          */
-        public java.util.List < FunctionArgs> getFunctionArgs() {
+        public java.util.List<FunctionArgs> getFunctionArgs() {
             return this.functionArgs;
         }
 
@@ -245,7 +250,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String configId; 
-            private java.util.List < FunctionArgs> functionArgs; 
+            private java.util.List<FunctionArgs> functionArgs; 
             private String functionName; 
             private String parentId; 
             private String status; 
@@ -264,7 +269,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             /**
              * <p>The description of each feature.</p>
              */
-            public Builder functionArgs(java.util.List < FunctionArgs> functionArgs) {
+            public Builder functionArgs(java.util.List<FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
                 return this;
             }

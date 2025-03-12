@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,7 +58,7 @@ public class AddCdnDomainRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopLevelDomain")
@@ -153,7 +158,7 @@ public class AddCdnDomainRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -174,7 +179,7 @@ public class AddCdnDomainRequest extends Request {
         private String scope; 
         private String securityToken; 
         private String sources; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String topLevelDomain; 
 
         private Builder() {
@@ -321,7 +326,7 @@ public class AddCdnDomainRequest extends Request {
         /**
          * <p>Details about the tags. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

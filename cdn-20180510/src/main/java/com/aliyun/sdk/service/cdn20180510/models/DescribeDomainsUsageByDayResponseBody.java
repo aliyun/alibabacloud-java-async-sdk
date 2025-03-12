@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -451,7 +456,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
      */
     public static class UsageByDays extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageByDay")
-        private java.util.List < UsageByDay> usageByDay;
+        private java.util.List<UsageByDay> usageByDay;
 
         private UsageByDays(Builder builder) {
             this.usageByDay = builder.usageByDay;
@@ -468,17 +473,17 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         /**
          * @return usageByDay
          */
-        public java.util.List < UsageByDay> getUsageByDay() {
+        public java.util.List<UsageByDay> getUsageByDay() {
             return this.usageByDay;
         }
 
         public static final class Builder {
-            private java.util.List < UsageByDay> usageByDay; 
+            private java.util.List<UsageByDay> usageByDay; 
 
             /**
              * UsageByDay.
              */
-            public Builder usageByDay(java.util.List < UsageByDay> usageByDay) {
+            public Builder usageByDay(java.util.List<UsageByDay> usageByDay) {
                 this.usageByDay = usageByDay;
                 return this;
             }

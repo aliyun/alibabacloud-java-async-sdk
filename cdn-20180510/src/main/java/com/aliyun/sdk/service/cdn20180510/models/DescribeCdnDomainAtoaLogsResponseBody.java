@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
      */
     public static class LogInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogInfoDetail")
-        private java.util.List < LogInfoDetail> logInfoDetail;
+        private java.util.List<LogInfoDetail> logInfoDetail;
 
         private LogInfos(Builder builder) {
             this.logInfoDetail = builder.logInfoDetail;
@@ -223,17 +228,17 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         /**
          * @return logInfoDetail
          */
-        public java.util.List < LogInfoDetail> getLogInfoDetail() {
+        public java.util.List<LogInfoDetail> getLogInfoDetail() {
             return this.logInfoDetail;
         }
 
         public static final class Builder {
-            private java.util.List < LogInfoDetail> logInfoDetail; 
+            private java.util.List<LogInfoDetail> logInfoDetail; 
 
             /**
              * LogInfoDetail.
              */
-            public Builder logInfoDetail(java.util.List < LogInfoDetail> logInfoDetail) {
+            public Builder logInfoDetail(java.util.List<LogInfoDetail> logInfoDetail) {
                 this.logInfoDetail = logInfoDetail;
                 return this;
             }
@@ -447,7 +452,7 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
      */
     public static class DomainLogDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainLogDetail")
-        private java.util.List < DomainLogDetail> domainLogDetail;
+        private java.util.List<DomainLogDetail> domainLogDetail;
 
         private DomainLogDetails(Builder builder) {
             this.domainLogDetail = builder.domainLogDetail;
@@ -464,17 +469,17 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         /**
          * @return domainLogDetail
          */
-        public java.util.List < DomainLogDetail> getDomainLogDetail() {
+        public java.util.List<DomainLogDetail> getDomainLogDetail() {
             return this.domainLogDetail;
         }
 
         public static final class Builder {
-            private java.util.List < DomainLogDetail> domainLogDetail; 
+            private java.util.List<DomainLogDetail> domainLogDetail; 
 
             /**
              * DomainLogDetail.
              */
-            public Builder domainLogDetail(java.util.List < DomainLogDetail> domainLogDetail) {
+            public Builder domainLogDetail(java.util.List<DomainLogDetail> domainLogDetail) {
                 this.domainLogDetail = domainLogDetail;
                 return this;
             }

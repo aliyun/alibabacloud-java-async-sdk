@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RealTimeSrcCodeProportionData")
-        private java.util.List < RealTimeSrcCodeProportionData> realTimeSrcCodeProportionData;
+        private java.util.List<RealTimeSrcCodeProportionData> realTimeSrcCodeProportionData;
 
         private Value(Builder builder) {
             this.realTimeSrcCodeProportionData = builder.realTimeSrcCodeProportionData;
@@ -287,17 +292,17 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
         /**
          * @return realTimeSrcCodeProportionData
          */
-        public java.util.List < RealTimeSrcCodeProportionData> getRealTimeSrcCodeProportionData() {
+        public java.util.List<RealTimeSrcCodeProportionData> getRealTimeSrcCodeProportionData() {
             return this.realTimeSrcCodeProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < RealTimeSrcCodeProportionData> realTimeSrcCodeProportionData; 
+            private java.util.List<RealTimeSrcCodeProportionData> realTimeSrcCodeProportionData; 
 
             /**
              * RealTimeSrcCodeProportionData.
              */
-            public Builder realTimeSrcCodeProportionData(java.util.List < RealTimeSrcCodeProportionData> realTimeSrcCodeProportionData) {
+            public Builder realTimeSrcCodeProportionData(java.util.List<RealTimeSrcCodeProportionData> realTimeSrcCodeProportionData) {
                 this.realTimeSrcCodeProportionData = realTimeSrcCodeProportionData;
                 return this;
             }
@@ -387,7 +392,7 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
      */
     public static class RealTimeSrcHttpCodeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        private java.util.List<UsageData> usageData;
 
         private RealTimeSrcHttpCodeData(Builder builder) {
             this.usageData = builder.usageData;
@@ -404,17 +409,17 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

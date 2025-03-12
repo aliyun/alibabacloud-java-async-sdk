@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
      */
     public static class RequestPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestDataModule")
-        private java.util.List < RequestDataModule> requestDataModule;
+        private java.util.List<RequestDataModule> requestDataModule;
 
         private RequestPerInterval(Builder builder) {
             this.requestDataModule = builder.requestDataModule;
@@ -287,17 +292,17 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         /**
          * @return requestDataModule
          */
-        public java.util.List < RequestDataModule> getRequestDataModule() {
+        public java.util.List<RequestDataModule> getRequestDataModule() {
             return this.requestDataModule;
         }
 
         public static final class Builder {
-            private java.util.List < RequestDataModule> requestDataModule; 
+            private java.util.List<RequestDataModule> requestDataModule; 
 
             /**
              * RequestDataModule.
              */
-            public Builder requestDataModule(java.util.List < RequestDataModule> requestDataModule) {
+            public Builder requestDataModule(java.util.List<RequestDataModule> requestDataModule) {
                 this.requestDataModule = requestDataModule;
                 return this;
             }
@@ -466,7 +471,7 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
      */
     public static class TrafficPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficDataModule")
-        private java.util.List < TrafficDataModule> trafficDataModule;
+        private java.util.List<TrafficDataModule> trafficDataModule;
 
         private TrafficPerInterval(Builder builder) {
             this.trafficDataModule = builder.trafficDataModule;
@@ -483,17 +488,17 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         /**
          * @return trafficDataModule
          */
-        public java.util.List < TrafficDataModule> getTrafficDataModule() {
+        public java.util.List<TrafficDataModule> getTrafficDataModule() {
             return this.trafficDataModule;
         }
 
         public static final class Builder {
-            private java.util.List < TrafficDataModule> trafficDataModule; 
+            private java.util.List<TrafficDataModule> trafficDataModule; 
 
             /**
              * TrafficDataModule.
              */
-            public Builder trafficDataModule(java.util.List < TrafficDataModule> trafficDataModule) {
+            public Builder trafficDataModule(java.util.List<TrafficDataModule> trafficDataModule) {
                 this.trafficDataModule = trafficDataModule;
                 return this;
             }

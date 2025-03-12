@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -110,7 +115,10 @@ public class EnableRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * Logstore.
+         * <p>The name of the Logstore where log entries are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogstoreName</p>
          */
         public Builder logstore(String logstore) {
             this.putQueryParameter("Logstore", logstore);
@@ -119,7 +127,10 @@ public class EnableRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * Project.
+         * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectName</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -128,7 +139,10 @@ public class EnableRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The ID of the region where the Log Service project is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

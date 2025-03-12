@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BatchSetCdnDomainServerCertificateResponseBody} extends {@link TeaModel}
+ * {@link PublishGrayDomainConfigResponseBody} extends {@link TeaModel}
  *
- * <p>BatchSetCdnDomainServerCertificateResponseBody</p>
+ * <p>PublishGrayDomainConfigResponseBody</p>
  */
-public class BatchSetCdnDomainServerCertificateResponseBody extends TeaModel {
+public class PublishGrayDomainConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private BatchSetCdnDomainServerCertificateResponseBody(Builder builder) {
+    private PublishGrayDomainConfigResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +28,7 @@ public class BatchSetCdnDomainServerCertificateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static BatchSetCdnDomainServerCertificateResponseBody create() {
+    public static PublishGrayDomainConfigResponseBody create() {
         return builder().build();
     }
 
@@ -38,18 +43,15 @@ public class BatchSetCdnDomainServerCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public BatchSetCdnDomainServerCertificateResponseBody build() {
-            return new BatchSetCdnDomainServerCertificateResponseBody(this);
+        public PublishGrayDomainConfigResponseBody build() {
+            return new PublishGrayDomainConfigResponseBody(this);
         } 
 
     } 

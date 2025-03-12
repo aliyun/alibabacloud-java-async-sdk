@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("IPBlockInfo")
-    private java.util.List < IPBlockInfo> IPBlockInfo;
+    private java.util.List<IPBlockInfo> IPBlockInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -56,7 +61,7 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
     /**
      * @return IPBlockInfo
      */
-    public java.util.List < IPBlockInfo> getIPBlockInfo() {
+    public java.util.List<IPBlockInfo> getIPBlockInfo() {
         return this.IPBlockInfo;
     }
 
@@ -70,7 +75,7 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private String description; 
-        private java.util.List < IPBlockInfo> IPBlockInfo; 
+        private java.util.List<IPBlockInfo> IPBlockInfo; 
         private String requestId; 
 
         /**
@@ -104,7 +109,7 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
         /**
          * <p>The result of the operation.</p>
          */
-        public Builder IPBlockInfo(java.util.List < IPBlockInfo> IPBlockInfo) {
+        public Builder IPBlockInfo(java.util.List<IPBlockInfo> IPBlockInfo) {
             this.IPBlockInfo = IPBlockInfo;
             return this;
         }

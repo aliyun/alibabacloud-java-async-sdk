@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
      */
     public static class FunctionArgs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FunctionArg")
-        private java.util.List < FunctionArg> functionArg;
+        private java.util.List<FunctionArg> functionArg;
 
         private FunctionArgs(Builder builder) {
             this.functionArg = builder.functionArg;
@@ -172,17 +177,17 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         /**
          * @return functionArg
          */
-        public java.util.List < FunctionArg> getFunctionArg() {
+        public java.util.List<FunctionArg> getFunctionArg() {
             return this.functionArg;
         }
 
         public static final class Builder {
-            private java.util.List < FunctionArg> functionArg; 
+            private java.util.List<FunctionArg> functionArg; 
 
             /**
              * FunctionArg.
              */
-            public Builder functionArg(java.util.List < FunctionArg> functionArg) {
+            public Builder functionArg(java.util.List<FunctionArg> functionArg) {
                 this.functionArg = functionArg;
                 return this;
             }
@@ -349,7 +354,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
      */
     public static class DomainConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainConfig")
-        private java.util.List < DomainConfig> domainConfig;
+        private java.util.List<DomainConfig> domainConfig;
 
         private DomainConfigs(Builder builder) {
             this.domainConfig = builder.domainConfig;
@@ -366,17 +371,17 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         /**
          * @return domainConfig
          */
-        public java.util.List < DomainConfig> getDomainConfig() {
+        public java.util.List<DomainConfig> getDomainConfig() {
             return this.domainConfig;
         }
 
         public static final class Builder {
-            private java.util.List < DomainConfig> domainConfig; 
+            private java.util.List<DomainConfig> domainConfig; 
 
             /**
              * DomainConfig.
              */
-            public Builder domainConfig(java.util.List < DomainConfig> domainConfig) {
+            public Builder domainConfig(java.util.List<DomainConfig> domainConfig) {
                 this.domainConfig = domainConfig;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -255,7 +260,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
-        private java.util.List < LockReason> lockReason;
+        private java.util.List<LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
             this.lockReason = builder.lockReason;
@@ -272,12 +277,12 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         /**
          * @return lockReason
          */
-        public java.util.List < LockReason> getLockReason() {
+        public java.util.List<LockReason> getLockReason() {
             return this.lockReason;
         }
 
         public static final class Builder {
-            private java.util.List < LockReason> lockReason; 
+            private java.util.List<LockReason> lockReason; 
 
             /**
              * <p>The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.</p>
@@ -285,7 +290,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>financial</p>
              */
-            public Builder lockReason(java.util.List < LockReason> lockReason) {
+            public Builder lockReason(java.util.List<LockReason> lockReason) {
                 this.lockReason = lockReason;
                 return this;
             }

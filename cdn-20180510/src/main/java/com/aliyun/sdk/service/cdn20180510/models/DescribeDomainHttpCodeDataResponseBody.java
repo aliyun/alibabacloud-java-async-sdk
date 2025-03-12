@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CodeProportionData")
-        private java.util.List < CodeProportionData> codeProportionData;
+        private java.util.List<CodeProportionData> codeProportionData;
 
         private Value(Builder builder) {
             this.codeProportionData = builder.codeProportionData;
@@ -287,17 +292,17 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
         /**
          * @return codeProportionData
          */
-        public java.util.List < CodeProportionData> getCodeProportionData() {
+        public java.util.List<CodeProportionData> getCodeProportionData() {
             return this.codeProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < CodeProportionData> codeProportionData; 
+            private java.util.List<CodeProportionData> codeProportionData; 
 
             /**
              * CodeProportionData.
              */
-            public Builder codeProportionData(java.util.List < CodeProportionData> codeProportionData) {
+            public Builder codeProportionData(java.util.List<CodeProportionData> codeProportionData) {
                 this.codeProportionData = codeProportionData;
                 return this;
             }
@@ -387,7 +392,7 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
      */
     public static class HttpCodeData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        private java.util.List<UsageData> usageData;
 
         private HttpCodeData(Builder builder) {
             this.usageData = builder.usageData;
@@ -404,17 +409,17 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

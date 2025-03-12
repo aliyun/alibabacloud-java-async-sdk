@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
      */
     public static class CdnTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CdnType")
-        private java.util.List < CdnType> cdnType;
+        private java.util.List<CdnType> cdnType;
 
         private CdnTypes(Builder builder) {
             this.cdnType = builder.cdnType;
@@ -172,17 +177,17 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
         /**
          * @return cdnType
          */
-        public java.util.List < CdnType> getCdnType() {
+        public java.util.List<CdnType> getCdnType() {
             return this.cdnType;
         }
 
         public static final class Builder {
-            private java.util.List < CdnType> cdnType; 
+            private java.util.List<CdnType> cdnType; 
 
             /**
              * CdnType.
              */
-            public Builder cdnType(java.util.List < CdnType> cdnType) {
+            public Builder cdnType(java.util.List<CdnType> cdnType) {
                 this.cdnType = cdnType;
                 return this;
             }

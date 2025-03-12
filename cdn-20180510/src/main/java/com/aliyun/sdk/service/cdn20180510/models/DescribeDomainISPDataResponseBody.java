@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -477,7 +482,7 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ISPProportionData")
-        private java.util.List < ISPProportionData> ISPProportionData;
+        private java.util.List<ISPProportionData> ISPProportionData;
 
         private Value(Builder builder) {
             this.ISPProportionData = builder.ISPProportionData;
@@ -494,17 +499,17 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         /**
          * @return ISPProportionData
          */
-        public java.util.List < ISPProportionData> getISPProportionData() {
+        public java.util.List<ISPProportionData> getISPProportionData() {
             return this.ISPProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < ISPProportionData> ISPProportionData; 
+            private java.util.List<ISPProportionData> ISPProportionData; 
 
             /**
              * ISPProportionData.
              */
-            public Builder ISPProportionData(java.util.List < ISPProportionData> ISPProportionData) {
+            public Builder ISPProportionData(java.util.List<ISPProportionData> ISPProportionData) {
                 this.ISPProportionData = ISPProportionData;
                 return this;
             }

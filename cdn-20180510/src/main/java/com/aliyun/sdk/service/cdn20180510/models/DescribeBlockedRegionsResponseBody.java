@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
      */
     public static class InfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InfoItem")
-        private java.util.List < InfoItem> infoItem;
+        private java.util.List<InfoItem> infoItem;
 
         private InfoList(Builder builder) {
             this.infoItem = builder.infoItem;
@@ -195,17 +200,17 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         /**
          * @return infoItem
          */
-        public java.util.List < InfoItem> getInfoItem() {
+        public java.util.List<InfoItem> getInfoItem() {
             return this.infoItem;
         }
 
         public static final class Builder {
-            private java.util.List < InfoItem> infoItem; 
+            private java.util.List<InfoItem> infoItem; 
 
             /**
              * InfoItem.
              */
-            public Builder infoItem(java.util.List < InfoItem> infoItem) {
+            public Builder infoItem(java.util.List<InfoItem> infoItem) {
                 this.infoItem = infoItem;
                 return this;
             }

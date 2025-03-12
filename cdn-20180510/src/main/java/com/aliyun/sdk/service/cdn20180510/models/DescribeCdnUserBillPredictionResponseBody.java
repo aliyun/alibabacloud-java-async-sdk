@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -262,7 +267,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
      */
     public static class BillPredictionData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillPredictionDataItem")
-        private java.util.List < BillPredictionDataItem> billPredictionDataItem;
+        private java.util.List<BillPredictionDataItem> billPredictionDataItem;
 
         private BillPredictionData(Builder builder) {
             this.billPredictionDataItem = builder.billPredictionDataItem;
@@ -279,17 +284,17 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         /**
          * @return billPredictionDataItem
          */
-        public java.util.List < BillPredictionDataItem> getBillPredictionDataItem() {
+        public java.util.List<BillPredictionDataItem> getBillPredictionDataItem() {
             return this.billPredictionDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < BillPredictionDataItem> billPredictionDataItem; 
+            private java.util.List<BillPredictionDataItem> billPredictionDataItem; 
 
             /**
              * BillPredictionDataItem.
              */
-            public Builder billPredictionDataItem(java.util.List < BillPredictionDataItem> billPredictionDataItem) {
+            public Builder billPredictionDataItem(java.util.List<BillPredictionDataItem> billPredictionDataItem) {
                 this.billPredictionDataItem = billPredictionDataItem;
                 return this;
             }

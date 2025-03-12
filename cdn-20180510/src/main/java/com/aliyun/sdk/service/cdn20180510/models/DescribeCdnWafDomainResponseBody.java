@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCdnWafDomainResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OutPutDomains")
-    private java.util.List < OutPutDomains> outPutDomains;
+    private java.util.List<OutPutDomains> outPutDomains;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
     /**
      * @return outPutDomains
      */
-    public java.util.List < OutPutDomains> getOutPutDomains() {
+    public java.util.List<OutPutDomains> getOutPutDomains() {
         return this.outPutDomains;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OutPutDomains> outPutDomains; 
+        private java.util.List<OutPutDomains> outPutDomains; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The information about the accelerated domain name.</p>
          */
-        public Builder outPutDomains(java.util.List < OutPutDomains> outPutDomains) {
+        public Builder outPutDomains(java.util.List<OutPutDomains> outPutDomains) {
             this.outPutDomains = outPutDomains;
             return this;
         }

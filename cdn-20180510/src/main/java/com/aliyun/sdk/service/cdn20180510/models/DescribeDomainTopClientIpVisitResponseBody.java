@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClientIpList")
-    private java.util.List < ClientIpList> clientIpList;
+    private java.util.List<ClientIpList> clientIpList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     /**
      * @return clientIpList
      */
-    public java.util.List < ClientIpList> getClientIpList() {
+    public java.util.List<ClientIpList> getClientIpList() {
         return this.clientIpList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClientIpList> clientIpList; 
+        private java.util.List<ClientIpList> clientIpList; 
         private String requestId; 
 
         /**
          * <p>A list of client IP addresses.</p>
          */
-        public Builder clientIpList(java.util.List < ClientIpList> clientIpList) {
+        public Builder clientIpList(java.util.List<ClientIpList> clientIpList) {
             this.clientIpList = clientIpList;
             return this;
         }

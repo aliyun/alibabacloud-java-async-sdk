@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -477,7 +482,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
      */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionProportionData")
-        private java.util.List < RegionProportionData> regionProportionData;
+        private java.util.List<RegionProportionData> regionProportionData;
 
         private Value(Builder builder) {
             this.regionProportionData = builder.regionProportionData;
@@ -494,17 +499,17 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         /**
          * @return regionProportionData
          */
-        public java.util.List < RegionProportionData> getRegionProportionData() {
+        public java.util.List<RegionProportionData> getRegionProportionData() {
             return this.regionProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < RegionProportionData> regionProportionData; 
+            private java.util.List<RegionProportionData> regionProportionData; 
 
             /**
              * RegionProportionData.
              */
-            public Builder regionProportionData(java.util.List < RegionProportionData> regionProportionData) {
+            public Builder regionProportionData(java.util.List<RegionProportionData> regionProportionData) {
                 this.regionProportionData = regionProportionData;
                 return this;
             }

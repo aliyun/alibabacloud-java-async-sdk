@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ByteHitRateDataModel")
-        private java.util.List < ByteHitRateDataModel> byteHitRateDataModel;
+        private java.util.List<ByteHitRateDataModel> byteHitRateDataModel;
 
         private Data(Builder builder) {
             this.byteHitRateDataModel = builder.byteHitRateDataModel;
@@ -172,17 +177,17 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
         /**
          * @return byteHitRateDataModel
          */
-        public java.util.List < ByteHitRateDataModel> getByteHitRateDataModel() {
+        public java.util.List<ByteHitRateDataModel> getByteHitRateDataModel() {
             return this.byteHitRateDataModel;
         }
 
         public static final class Builder {
-            private java.util.List < ByteHitRateDataModel> byteHitRateDataModel; 
+            private java.util.List<ByteHitRateDataModel> byteHitRateDataModel; 
 
             /**
              * ByteHitRateDataModel.
              */
-            public Builder byteHitRateDataModel(java.util.List < ByteHitRateDataModel> byteHitRateDataModel) {
+            public Builder byteHitRateDataModel(java.util.List<ByteHitRateDataModel> byteHitRateDataModel) {
                 this.byteHitRateDataModel = byteHitRateDataModel;
                 return this;
             }

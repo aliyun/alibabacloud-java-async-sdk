@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
      */
     public static class TopReferList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferList")
-        private java.util.List < ReferList> referList;
+        private java.util.List<ReferList> referList;
 
         private TopReferList(Builder builder) {
             this.referList = builder.referList;
@@ -287,17 +292,17 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         /**
          * @return referList
          */
-        public java.util.List < ReferList> getReferList() {
+        public java.util.List<ReferList> getReferList() {
             return this.referList;
         }
 
         public static final class Builder {
-            private java.util.List < ReferList> referList; 
+            private java.util.List<ReferList> referList; 
 
             /**
              * ReferList.
              */
-            public Builder referList(java.util.List < ReferList> referList) {
+            public Builder referList(java.util.List<ReferList> referList) {
                 this.referList = referList;
                 return this;
             }

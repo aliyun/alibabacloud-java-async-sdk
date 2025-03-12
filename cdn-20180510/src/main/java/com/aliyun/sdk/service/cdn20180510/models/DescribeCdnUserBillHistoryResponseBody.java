@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -240,7 +245,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
      */
     public static class BillingData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillingDataItem")
-        private java.util.List < BillingDataItem> billingDataItem;
+        private java.util.List<BillingDataItem> billingDataItem;
 
         private BillingData(Builder builder) {
             this.billingDataItem = builder.billingDataItem;
@@ -257,17 +262,17 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         /**
          * @return billingDataItem
          */
-        public java.util.List < BillingDataItem> getBillingDataItem() {
+        public java.util.List<BillingDataItem> getBillingDataItem() {
             return this.billingDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < BillingDataItem> billingDataItem; 
+            private java.util.List<BillingDataItem> billingDataItem; 
 
             /**
              * BillingDataItem.
              */
-            public Builder billingDataItem(java.util.List < BillingDataItem> billingDataItem) {
+            public Builder billingDataItem(java.util.List<BillingDataItem> billingDataItem) {
                 this.billingDataItem = billingDataItem;
                 return this;
             }
@@ -403,7 +408,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
      */
     public static class BillHistoryData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BillHistoryDataItem")
-        private java.util.List < BillHistoryDataItem> billHistoryDataItem;
+        private java.util.List<BillHistoryDataItem> billHistoryDataItem;
 
         private BillHistoryData(Builder builder) {
             this.billHistoryDataItem = builder.billHistoryDataItem;
@@ -420,17 +425,17 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         /**
          * @return billHistoryDataItem
          */
-        public java.util.List < BillHistoryDataItem> getBillHistoryDataItem() {
+        public java.util.List<BillHistoryDataItem> getBillHistoryDataItem() {
             return this.billHistoryDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < BillHistoryDataItem> billHistoryDataItem; 
+            private java.util.List<BillHistoryDataItem> billHistoryDataItem; 
 
             /**
              * BillHistoryDataItem.
              */
-            public Builder billHistoryDataItem(java.util.List < BillHistoryDataItem> billHistoryDataItem) {
+            public Builder billHistoryDataItem(java.util.List<BillHistoryDataItem> billHistoryDataItem) {
                 this.billHistoryDataItem = billHistoryDataItem;
                 return this;
             }

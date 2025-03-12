@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEsExecuteDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Contents")
-    private java.util.List < Contents> contents;
+    private java.util.List<Contents> contents;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
     /**
      * @return contents
      */
-    public java.util.List < Contents> getContents() {
+    public java.util.List<Contents> getContents() {
         return this.contents;
     }
 
@@ -46,13 +51,13 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Contents> contents; 
+        private java.util.List<Contents> contents; 
         private String requestId; 
 
         /**
          * <p>The content of the script.</p>
          */
-        public Builder contents(java.util.List < Contents> contents) {
+        public Builder contents(java.util.List<Contents> contents) {
             this.contents = contents;
             return this;
         }
@@ -82,13 +87,13 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
      */
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < String > columns;
+        private java.util.List<String> columns;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Points")
-        private java.util.List < String > points;
+        private java.util.List<String> points;
 
         private Contents(Builder builder) {
             this.columns = builder.columns;
@@ -107,7 +112,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < String > getColumns() {
+        public java.util.List<String> getColumns() {
             return this.columns;
         }
 
@@ -121,19 +126,19 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
         /**
          * @return points
          */
-        public java.util.List < String > getPoints() {
+        public java.util.List<String> getPoints() {
             return this.points;
         }
 
         public static final class Builder {
-            private java.util.List < String > columns; 
+            private java.util.List<String> columns; 
             private String name; 
-            private java.util.List < String > points; 
+            private java.util.List<String> points; 
 
             /**
              * <p>The time and column names in the table that shows the status of the script.</p>
              */
-            public Builder columns(java.util.List < String > columns) {
+            public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -152,7 +157,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
             /**
              * <p>The list of timestamps and values in the corresponding columns of the table that shows the status of the script.</p>
              */
-            public Builder points(java.util.List < String > points) {
+            public Builder points(java.util.List<String> points) {
                 this.points = points;
                 return this;
             }

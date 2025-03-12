@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -253,7 +258,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
      */
     public static class SourceModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceModel")
-        private java.util.List < SourceModel> sourceModel;
+        private java.util.List<SourceModel> sourceModel;
 
         private SourceModels(Builder builder) {
             this.sourceModel = builder.sourceModel;
@@ -270,17 +275,17 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         /**
          * @return sourceModel
          */
-        public java.util.List < SourceModel> getSourceModel() {
+        public java.util.List<SourceModel> getSourceModel() {
             return this.sourceModel;
         }
 
         public static final class Builder {
-            private java.util.List < SourceModel> sourceModel; 
+            private java.util.List<SourceModel> sourceModel; 
 
             /**
              * SourceModel.
              */
-            public Builder sourceModel(java.util.List < SourceModel> sourceModel) {
+            public Builder sourceModel(java.util.List<SourceModel> sourceModel) {
                 this.sourceModel = sourceModel;
                 return this;
             }

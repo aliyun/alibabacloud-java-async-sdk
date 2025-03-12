@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeIpStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IpStatus")
-    private java.util.List < IpStatus> ipStatus;
+    private java.util.List<IpStatus> ipStatus;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeIpStatusResponseBody extends TeaModel {
     /**
      * @return ipStatus
      */
-    public java.util.List < IpStatus> getIpStatus() {
+    public java.util.List<IpStatus> getIpStatus() {
         return this.ipStatus;
     }
 
@@ -46,13 +51,13 @@ public class DescribeIpStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpStatus> ipStatus; 
+        private java.util.List<IpStatus> ipStatus; 
         private String requestId; 
 
         /**
          * <p>The status of the IP addresses of the POPs.</p>
          */
-        public Builder ipStatus(java.util.List < IpStatus> ipStatus) {
+        public Builder ipStatus(java.util.List<IpStatus> ipStatus) {
             this.ipStatus = ipStatus;
             return this;
         }

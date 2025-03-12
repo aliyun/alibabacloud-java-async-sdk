@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -327,7 +332,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
      */
     public static class CertInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertInfo")
-        private java.util.List < CertInfo> certInfo;
+        private java.util.List<CertInfo> certInfo;
 
         private CertInfos(Builder builder) {
             this.certInfo = builder.certInfo;
@@ -344,17 +349,17 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         /**
          * @return certInfo
          */
-        public java.util.List < CertInfo> getCertInfo() {
+        public java.util.List<CertInfo> getCertInfo() {
             return this.certInfo;
         }
 
         public static final class Builder {
-            private java.util.List < CertInfo> certInfo; 
+            private java.util.List<CertInfo> certInfo; 
 
             /**
              * CertInfo.
              */
-            public Builder certInfo(java.util.List < CertInfo> certInfo) {
+            public Builder certInfo(java.util.List<CertInfo> certInfo) {
                 this.certInfo = certInfo;
                 return this;
             }

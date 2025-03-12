@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
      */
     public static class ConfigIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigId")
-        private java.util.List < String > configId;
+        private java.util.List<String> configId;
 
         private ConfigIds(Builder builder) {
             this.configId = builder.configId;
@@ -99,17 +104,17 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
         /**
          * @return configId
          */
-        public java.util.List < String > getConfigId() {
+        public java.util.List<String> getConfigId() {
             return this.configId;
         }
 
         public static final class Builder {
-            private java.util.List < String > configId; 
+            private java.util.List<String> configId; 
 
             /**
              * ConfigId.
              */
-            public Builder configId(java.util.List < String > configId) {
+            public Builder configId(java.util.List<String> configId) {
                 this.configId = configId;
                 return this;
             }

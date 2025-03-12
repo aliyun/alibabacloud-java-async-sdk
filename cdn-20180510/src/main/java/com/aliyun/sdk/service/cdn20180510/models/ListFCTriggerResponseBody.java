@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFCTriggerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FCTriggers")
-    private java.util.List < FCTriggers> FCTriggers;
+    private java.util.List<FCTriggers> FCTriggers;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
     /**
      * @return FCTriggers
      */
-    public java.util.List < FCTriggers> getFCTriggers() {
+    public java.util.List<FCTriggers> getFCTriggers() {
         return this.FCTriggers;
     }
 
@@ -46,13 +51,13 @@ public class ListFCTriggerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FCTriggers> FCTriggers; 
+        private java.util.List<FCTriggers> FCTriggers; 
         private String requestId; 
 
         /**
          * <p>The Function Compute triggers that are set for Alibaba Cloud CDN events.</p>
          */
-        public Builder FCTriggers(java.util.List < FCTriggers> FCTriggers) {
+        public Builder FCTriggers(java.util.List<FCTriggers> FCTriggers) {
             this.FCTriggers = FCTriggers;
             return this;
         }

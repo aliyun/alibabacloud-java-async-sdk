@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -146,7 +151,7 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainContent")
-        private java.util.List < DomainContent> domainContent;
+        private java.util.List<DomainContent> domainContent;
 
         private Content(Builder builder) {
             this.domainContent = builder.domainContent;
@@ -163,17 +168,17 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
         /**
          * @return domainContent
          */
-        public java.util.List < DomainContent> getDomainContent() {
+        public java.util.List<DomainContent> getDomainContent() {
             return this.domainContent;
         }
 
         public static final class Builder {
-            private java.util.List < DomainContent> domainContent; 
+            private java.util.List<DomainContent> domainContent; 
 
             /**
              * DomainContent.
              */
-            public Builder domainContent(java.util.List < DomainContent> domainContent) {
+            public Builder domainContent(java.util.List<DomainContent> domainContent) {
                 this.domainContent = domainContent;
                 return this;
             }

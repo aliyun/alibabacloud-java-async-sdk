@@ -92,19 +92,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchSetCdnDomainConfigResponse> batchSetCdnDomainConfig(BatchSetCdnDomainConfigRequest request);
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * <li>You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)</li>
-     * <li>If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * @param request the request parameters of BatchSetCdnDomainServerCertificate  BatchSetCdnDomainServerCertificateRequest
-     * @return BatchSetCdnDomainServerCertificateResponse
+     * @param request the request parameters of BatchSetGrayDomainFunction  BatchSetGrayDomainFunctionRequest
+     * @return BatchSetGrayDomainFunctionResponse
      */
-    CompletableFuture<BatchSetCdnDomainServerCertificateResponse> batchSetCdnDomainServerCertificate(BatchSetCdnDomainServerCertificateRequest request);
+    CompletableFuture<BatchSetGrayDomainFunctionResponse> batchSetGrayDomainFunction(BatchSetGrayDomainFunctionRequest request);
 
     /**
      * <b>description</b> :
@@ -2226,10 +2217,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserCertificateExpireCountResponse> describeUserCertificateExpireCount(DescribeUserCertificateExpireCountRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeUserConfigs is deprecated  * @param request  the request parameters of DescribeUserConfigs  DescribeUserConfigsRequest
+     * @param request the request parameters of DescribeUserConfigs  DescribeUserConfigsRequest
      * @return DescribeUserConfigsResponse
      */
-    @Deprecated
     CompletableFuture<DescribeUserConfigsResponse> describeUserConfigs(DescribeUserConfigsRequest request);
 
     /**
@@ -2298,7 +2288,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * <p>You can call this operation up to 100 times per second per account.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DisableRealtimeLogDelivery  DisableRealtimeLogDeliveryRequest
@@ -2309,13 +2299,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * <p>You can call this operation up to 100 times per second per account.</p>
      * </blockquote>
      * 
      * @param request the request parameters of EnableRealtimeLogDelivery  EnableRealtimeLogDeliveryRequest
      * @return EnableRealtimeLogDeliveryResponse
      */
     CompletableFuture<EnableRealtimeLogDeliveryResponse> enableRealtimeLogDelivery(EnableRealtimeLogDeliveryRequest request);
+
+    /**
+     * @param request the request parameters of GetGrayDomainFunction  GetGrayDomainFunctionRequest
+     * @return GetGrayDomainFunctionResponse
+     */
+    CompletableFuture<GetGrayDomainFunctionResponse> getGrayDomainFunction(GetGrayDomainFunctionRequest request);
 
     /**
      * <b>description</b> :
@@ -2455,6 +2451,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenCdnServiceResponse> openCdnService(OpenCdnServiceRequest request);
 
     /**
+     * @param request the request parameters of PublishGrayDomainConfig  PublishGrayDomainConfigRequest
+     * @return PublishGrayDomainConfigResponse
+     */
+    CompletableFuture<PublishGrayDomainConfigResponse> publishGrayDomainConfig(PublishGrayDomainConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 30 times per second per account.</p>
@@ -2590,16 +2592,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetCdnFullDomainsBlockIPResponse
      */
     CompletableFuture<SetCdnFullDomainsBlockIPResponse> setCdnFullDomainsBlockIP(SetCdnFullDomainsBlockIPRequest request);
-
-    /**
-     * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.  * @description *   You can call this operation up to 10 times per second per user.
-     * *   Method: POST.
-     * 
-     * @param request the request parameters of SetDomainServerCertificate  SetDomainServerCertificateRequest
-     * @return SetDomainServerCertificateResponse
-     */
-    @Deprecated
-    CompletableFuture<SetDomainServerCertificateResponse> setDomainServerCertificate(SetDomainServerCertificateRequest request);
 
     /**
      * @param request the request parameters of SetReqHeaderConfig  SetReqHeaderConfigRequest

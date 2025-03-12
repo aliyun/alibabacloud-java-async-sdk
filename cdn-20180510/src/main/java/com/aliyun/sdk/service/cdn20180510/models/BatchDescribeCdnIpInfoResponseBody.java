@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IpInfoList")
-    private java.util.List < IpInfoList> ipInfoList;
+    private java.util.List<IpInfoList> ipInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
     /**
      * @return ipInfoList
      */
-    public java.util.List < IpInfoList> getIpInfoList() {
+    public java.util.List<IpInfoList> getIpInfoList() {
         return this.ipInfoList;
     }
 
@@ -46,13 +51,13 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpInfoList> ipInfoList; 
+        private java.util.List<IpInfoList> ipInfoList; 
         private String requestId; 
 
         /**
          * <p>The results about IP addresses returned.</p>
          */
-        public Builder ipInfoList(java.util.List < IpInfoList> ipInfoList) {
+        public Builder ipInfoList(java.util.List<IpInfoList> ipInfoList) {
             this.ipInfoList = ipInfoList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -350,7 +355,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
      */
     public static class AllUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < UrlList> urlList;
+        private java.util.List<UrlList> urlList;
 
         private AllUrlList(Builder builder) {
             this.urlList = builder.urlList;
@@ -367,17 +372,17 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < UrlList> getUrlList() {
+        public java.util.List<UrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < UrlList> urlList; 
+            private java.util.List<UrlList> urlList; 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < UrlList> urlList) {
+            public Builder urlList(java.util.List<UrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -539,7 +544,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url200List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url200ListUrlList> urlList;
+        private java.util.List<Url200ListUrlList> urlList;
 
         private Url200List(Builder builder) {
             this.urlList = builder.urlList;
@@ -556,17 +561,17 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url200ListUrlList> getUrlList() {
+        public java.util.List<Url200ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url200ListUrlList> urlList; 
+            private java.util.List<Url200ListUrlList> urlList; 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url200ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url200ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -728,7 +733,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url300List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url300ListUrlList> urlList;
+        private java.util.List<Url300ListUrlList> urlList;
 
         private Url300List(Builder builder) {
             this.urlList = builder.urlList;
@@ -745,17 +750,17 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url300ListUrlList> getUrlList() {
+        public java.util.List<Url300ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url300ListUrlList> urlList; 
+            private java.util.List<Url300ListUrlList> urlList; 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url300ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url300ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -917,7 +922,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url400List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url400ListUrlList> urlList;
+        private java.util.List<Url400ListUrlList> urlList;
 
         private Url400List(Builder builder) {
             this.urlList = builder.urlList;
@@ -934,17 +939,17 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url400ListUrlList> getUrlList() {
+        public java.util.List<Url400ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url400ListUrlList> urlList; 
+            private java.util.List<Url400ListUrlList> urlList; 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url400ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url400ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }
@@ -1106,7 +1111,7 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
      */
     public static class Url500List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UrlList")
-        private java.util.List < Url500ListUrlList> urlList;
+        private java.util.List<Url500ListUrlList> urlList;
 
         private Url500List(Builder builder) {
             this.urlList = builder.urlList;
@@ -1123,17 +1128,17 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         /**
          * @return urlList
          */
-        public java.util.List < Url500ListUrlList> getUrlList() {
+        public java.util.List<Url500ListUrlList> getUrlList() {
             return this.urlList;
         }
 
         public static final class Builder {
-            private java.util.List < Url500ListUrlList> urlList; 
+            private java.util.List<Url500ListUrlList> urlList; 
 
             /**
              * UrlList.
              */
-            public Builder urlList(java.util.List < Url500ListUrlList> urlList) {
+            public Builder urlList(java.util.List<Url500ListUrlList> urlList) {
                 this.urlList = urlList;
                 return this;
             }

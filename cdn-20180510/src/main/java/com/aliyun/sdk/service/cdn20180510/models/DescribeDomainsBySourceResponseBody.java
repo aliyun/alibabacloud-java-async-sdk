@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -283,7 +288,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
      */
     public static class DomainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainInfo")
-        private java.util.List < DomainInfo> domainInfo;
+        private java.util.List<DomainInfo> domainInfo;
 
         private DomainInfos(Builder builder) {
             this.domainInfo = builder.domainInfo;
@@ -300,17 +305,17 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         /**
          * @return domainInfo
          */
-        public java.util.List < DomainInfo> getDomainInfo() {
+        public java.util.List<DomainInfo> getDomainInfo() {
             return this.domainInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DomainInfo> domainInfo; 
+            private java.util.List<DomainInfo> domainInfo; 
 
             /**
              * domainInfo.
              */
-            public Builder domainInfo(java.util.List < DomainInfo> domainInfo) {
+            public Builder domainInfo(java.util.List<DomainInfo> domainInfo) {
                 this.domainInfo = domainInfo;
                 return this;
             }
@@ -330,7 +335,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
      */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domainNames")
-        private java.util.List < String > domainNames;
+        private java.util.List<String> domainNames;
 
         private Domains(Builder builder) {
             this.domainNames = builder.domainNames;
@@ -347,17 +352,17 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         /**
          * @return domainNames
          */
-        public java.util.List < String > getDomainNames() {
+        public java.util.List<String> getDomainNames() {
             return this.domainNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > domainNames; 
+            private java.util.List<String> domainNames; 
 
             /**
              * domainNames.
              */
-            public Builder domainNames(java.util.List < String > domainNames) {
+            public Builder domainNames(java.util.List<String> domainNames) {
                 this.domainNames = domainNames;
                 return this;
             }
@@ -467,7 +472,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
      */
     public static class DomainsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainsData")
-        private java.util.List < DomainsData> domainsData;
+        private java.util.List<DomainsData> domainsData;
 
         private DomainsList(Builder builder) {
             this.domainsData = builder.domainsData;
@@ -484,17 +489,17 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         /**
          * @return domainsData
          */
-        public java.util.List < DomainsData> getDomainsData() {
+        public java.util.List<DomainsData> getDomainsData() {
             return this.domainsData;
         }
 
         public static final class Builder {
-            private java.util.List < DomainsData> domainsData; 
+            private java.util.List<DomainsData> domainsData; 
 
             /**
              * DomainsData.
              */
-            public Builder domainsData(java.util.List < DomainsData> domainsData) {
+            public Builder domainsData(java.util.List<DomainsData> domainsData) {
                 this.domainsData = domainsData;
                 return this;
             }

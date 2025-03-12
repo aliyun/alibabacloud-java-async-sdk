@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUserTagsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private DescribeUserTagsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUserTagsResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeUserTagsResponseBody extends TeaModel {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -85,7 +90,7 @@ public class DescribeUserTagsResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Tags(Builder builder) {
             this.key = builder.key;
@@ -110,13 +115,13 @@ public class DescribeUserTagsResponseBody extends TeaModel {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The key of a tag.</p>
@@ -132,7 +137,7 @@ public class DescribeUserTagsResponseBody extends TeaModel {
             /**
              * <p>The tag values returned.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

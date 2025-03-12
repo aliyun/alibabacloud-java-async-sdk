@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,6 +35,9 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PathDataPerInterval")
     private PathDataPerInterval pathDataPerInterval;
 
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -43,6 +51,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.pathDataPerInterval = builder.pathDataPerInterval;
+        this.requestId = builder.requestId;
         this.startTime = builder.startTime;
         this.totalCount = builder.totalCount;
     }
@@ -98,6 +107,13 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -118,6 +134,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private PathDataPerInterval pathDataPerInterval; 
+        private String requestId; 
         private String startTime; 
         private Integer totalCount; 
 
@@ -181,6 +198,17 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
          */
         public Builder pathDataPerInterval(PathDataPerInterval pathDataPerInterval) {
             this.pathDataPerInterval = pathDataPerInterval;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>809A6F10-8238-4A49-BE00-4B2D6305686E</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -339,7 +367,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
      */
     public static class PathDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        private java.util.List<UsageData> usageData;
 
         private PathDataPerInterval(Builder builder) {
             this.usageData = builder.usageData;
@@ -356,17 +384,17 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

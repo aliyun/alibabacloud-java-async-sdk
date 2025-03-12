@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
      */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
-        private java.util.List < String > domain;
+        private java.util.List<String> domain;
 
         private Domains(Builder builder) {
             this.domain = builder.domain;
@@ -99,17 +104,17 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < String > getDomain() {
+        public java.util.List<String> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < String > domain; 
+            private java.util.List<String> domain; 
 
             /**
              * Domain.
              */
-            public Builder domain(java.util.List < String > domain) {
+            public Builder domain(java.util.List<String> domain) {
                 this.domain = domain;
                 return this;
             }

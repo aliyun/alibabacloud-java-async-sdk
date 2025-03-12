@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("UrlDetails")
-    private java.util.List < UrlDetails> urlDetails;
+    private java.util.List<UrlDetails> urlDetails;
 
     private DescribePreloadDetailByIdResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     /**
      * @return urlDetails
      */
-    public java.util.List < UrlDetails> getUrlDetails() {
+    public java.util.List<UrlDetails> getUrlDetails() {
         return this.urlDetails;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < UrlDetails> urlDetails; 
+        private java.util.List<UrlDetails> urlDetails; 
 
         /**
          * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
@@ -86,7 +91,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         /**
          * <p>The details of the task, including the task ID, start time, end time, domain name, success rate, status, returned error code, and completion details of all URL resources.</p>
          */
-        public Builder urlDetails(java.util.List < UrlDetails> urlDetails) {
+        public Builder urlDetails(java.util.List<UrlDetails> urlDetails) {
             this.urlDetails = urlDetails;
             return this;
         }
@@ -226,7 +231,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("Urls")
-        private java.util.List < Urls> urls;
+        private java.util.List<Urls> urls;
 
         private UrlDetails(Builder builder) {
             this.creationTime = builder.creationTime;
@@ -299,7 +304,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         /**
          * @return urls
          */
-        public java.util.List < Urls> getUrls() {
+        public java.util.List<Urls> getUrls() {
             return this.urls;
         }
 
@@ -311,7 +316,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             private String retCode; 
             private String status; 
             private String taskId; 
-            private java.util.List < Urls> urls; 
+            private java.util.List<Urls> urls; 
 
             /**
              * <p>The time when the task was created. The time is displayed in UTC.</p>
@@ -400,7 +405,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             /**
              * <p>The completion details of all URL resources in the task.</p>
              */
-            public Builder urls(java.util.List < Urls> urls) {
+            public Builder urls(java.util.List<Urls> urls) {
                 this.urls = urls;
                 return this;
             }

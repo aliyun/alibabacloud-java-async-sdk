@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ActivityLog")
-    private java.util.List < ActivityLog> activityLog;
+    private java.util.List<ActivityLog> activityLog;
 
     @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Long pageIndex;
@@ -46,7 +51,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     /**
      * @return activityLog
      */
-    public java.util.List < ActivityLog> getActivityLog() {
+    public java.util.List<ActivityLog> getActivityLog() {
         return this.activityLog;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ActivityLog> activityLog; 
+        private java.util.List<ActivityLog> activityLog; 
         private Long pageIndex; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         /**
          * <p>The list of rate limiting logs.</p>
          */
-        public Builder activityLog(java.util.List < ActivityLog> activityLog) {
+        public Builder activityLog(java.util.List<ActivityLog> activityLog) {
             this.activityLog = activityLog;
             return this;
         }

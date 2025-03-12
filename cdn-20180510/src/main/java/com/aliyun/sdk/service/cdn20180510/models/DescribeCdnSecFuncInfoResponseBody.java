@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.List < Content> content;
+    private java.util.List<Content> content;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -46,7 +51,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String description; 
         private String httpStatus; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         /**
          * <p>Queried data.</p>
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }

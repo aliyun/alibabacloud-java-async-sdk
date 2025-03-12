@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
      */
     public static class ReatTimeDeliveryAccData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccData")
-        private java.util.List < AccData> accData;
+        private java.util.List<AccData> accData;
 
         private ReatTimeDeliveryAccData(Builder builder) {
             this.accData = builder.accData;
@@ -195,17 +200,17 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         /**
          * @return accData
          */
-        public java.util.List < AccData> getAccData() {
+        public java.util.List<AccData> getAccData() {
             return this.accData;
         }
 
         public static final class Builder {
-            private java.util.List < AccData> accData; 
+            private java.util.List<AccData> accData; 
 
             /**
              * AccData.
              */
-            public Builder accData(java.util.List < AccData> accData) {
+            public Builder accData(java.util.List<AccData> accData) {
                 this.accData = accData;
                 return this;
             }

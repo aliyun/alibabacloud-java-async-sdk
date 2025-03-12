@@ -196,27 +196,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <ul>
-     * <li>You can call this operation up to 10 times per second per account.</li>
-     * <li>You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)</li>
-     * <li>If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.</li>
-     * </ul>
-     * </blockquote>
-     * 
-     * @param request the request parameters of BatchSetCdnDomainServerCertificate  BatchSetCdnDomainServerCertificateRequest
-     * @return BatchSetCdnDomainServerCertificateResponse
+     * @param request the request parameters of BatchSetGrayDomainFunction  BatchSetGrayDomainFunctionRequest
+     * @return BatchSetGrayDomainFunctionResponse
      */
     @Override
-    public CompletableFuture<BatchSetCdnDomainServerCertificateResponse> batchSetCdnDomainServerCertificate(BatchSetCdnDomainServerCertificateRequest request) {
+    public CompletableFuture<BatchSetGrayDomainFunctionResponse> batchSetGrayDomainFunction(BatchSetGrayDomainFunctionRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchSetCdnDomainServerCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchSetCdnDomainServerCertificateResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchSetGrayDomainFunction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchSetGrayDomainFunctionResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<BatchSetCdnDomainServerCertificateResponse> future = new CompletableFuture<>();
+            CompletableFuture<BatchSetGrayDomainFunctionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3854,10 +3845,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeUserConfigs is deprecated  * @param request  the request parameters of DescribeUserConfigs  DescribeUserConfigsRequest
+     * @param request the request parameters of DescribeUserConfigs  DescribeUserConfigsRequest
      * @return DescribeUserConfigsResponse
      */
-    @Deprecated
     @Override
     public CompletableFuture<DescribeUserConfigsResponse> describeUserConfigs(DescribeUserConfigsRequest request) {
         try {
@@ -4010,7 +4000,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * <p>You can call this operation up to 100 times per second per account.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DisableRealtimeLogDelivery  DisableRealtimeLogDeliveryRequest
@@ -4033,7 +4023,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * <p>You can call this operation up to 100 times per second per account.</p>
      * </blockquote>
      * 
      * @param request the request parameters of EnableRealtimeLogDelivery  EnableRealtimeLogDeliveryRequest
@@ -4048,6 +4038,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnableRealtimeLogDeliveryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGrayDomainFunction  GetGrayDomainFunctionRequest
+     * @return GetGrayDomainFunctionResponse
+     */
+    @Override
+    public CompletableFuture<GetGrayDomainFunctionResponse> getGrayDomainFunction(GetGrayDomainFunctionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetGrayDomainFunction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGrayDomainFunctionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGrayDomainFunctionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4359,6 +4367,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PublishGrayDomainConfig  PublishGrayDomainConfigRequest
+     * @return PublishGrayDomainConfigResponse
+     */
+    @Override
+    public CompletableFuture<PublishGrayDomainConfigResponse> publishGrayDomainConfig(PublishGrayDomainConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PublishGrayDomainConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PublishGrayDomainConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PublishGrayDomainConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 30 times per second per account.</p>
@@ -4610,28 +4636,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetCdnFullDomainsBlockIPResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.  * @description *   You can call this operation up to 10 times per second per user.
-     * *   Method: POST.
-     * 
-     * @param request the request parameters of SetDomainServerCertificate  SetDomainServerCertificateRequest
-     * @return SetDomainServerCertificateResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<SetDomainServerCertificateResponse> setDomainServerCertificate(SetDomainServerCertificateRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetDomainServerCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetDomainServerCertificateResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetDomainServerCertificateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

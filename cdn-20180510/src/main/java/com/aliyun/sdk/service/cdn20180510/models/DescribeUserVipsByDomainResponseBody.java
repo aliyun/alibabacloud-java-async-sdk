@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -105,7 +110,7 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
      */
     public static class Vips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vip")
-        private java.util.List < String > vip;
+        private java.util.List<String> vip;
 
         private Vips(Builder builder) {
             this.vip = builder.vip;
@@ -122,17 +127,17 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
         /**
          * @return vip
          */
-        public java.util.List < String > getVip() {
+        public java.util.List<String> getVip() {
             return this.vip;
         }
 
         public static final class Builder {
-            private java.util.List < String > vip; 
+            private java.util.List<String> vip; 
 
             /**
              * Vip.
              */
-            public Builder vip(java.util.List < String > vip) {
+            public Builder vip(java.util.List<String> vip) {
                 this.vip = vip;
                 return this;
             }
