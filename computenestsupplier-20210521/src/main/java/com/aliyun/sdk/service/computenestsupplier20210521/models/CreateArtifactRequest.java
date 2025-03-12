@@ -458,19 +458,31 @@ public class CreateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Branch")
         private String branch;
 
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("OrgId")
+        private String orgId;
+
         @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
         @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
+        @com.aliyun.core.annotation.NameInMap("RepoId")
+        private Long repoId;
+
         @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
         private CodeRepo(Builder builder) {
             this.branch = builder.branch;
+            this.endpoint = builder.endpoint;
+            this.orgId = builder.orgId;
             this.owner = builder.owner;
             this.platform = builder.platform;
+            this.repoId = builder.repoId;
             this.repoName = builder.repoName;
         }
 
@@ -490,6 +502,20 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return orgId
+         */
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        /**
          * @return owner
          */
         public String getOwner() {
@@ -504,6 +530,13 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * @return repoId
+         */
+        public Long getRepoId() {
+            return this.repoId;
+        }
+
+        /**
          * @return repoName
          */
         public String getRepoName() {
@@ -512,8 +545,11 @@ public class CreateArtifactRequest extends Request {
 
         public static final class Builder {
             private String branch; 
+            private String endpoint; 
+            private String orgId; 
             private String owner; 
             private String platform; 
+            private Long repoId; 
             private String repoName; 
 
             /**
@@ -524,6 +560,22 @@ public class CreateArtifactRequest extends Request {
              */
             public Builder branch(String branch) {
                 this.branch = branch;
+                return this;
+            }
+
+            /**
+             * Endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * OrgId.
+             */
+            public Builder orgId(String orgId) {
+                this.orgId = orgId;
                 return this;
             }
 
@@ -555,6 +607,14 @@ public class CreateArtifactRequest extends Request {
              */
             public Builder platform(String platform) {
                 this.platform = platform;
+                return this;
+            }
+
+            /**
+             * RepoId.
+             */
+            public Builder repoId(Long repoId) {
+                this.repoId = repoId;
                 return this;
             }
 
