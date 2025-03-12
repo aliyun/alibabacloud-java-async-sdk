@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUploadPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateUploadPolicyRequest</p>
  */
 public class CreateUploadPolicyRequest extends Request {
-    @Query
-    @NameInMap("Option")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Option")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String option;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateUploadPolicyRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class CreateUploadPolicyRequest extends Request {
         } 
 
         /**
-         * 不同类型对应的参数
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder option(String option) {
             this.putQueryParameter("Option", option);
@@ -79,7 +87,10 @@ public class CreateUploadPolicyRequest extends Request {
         }
 
         /**
-         * 上传类型，值为：scene（场景）、subScene（子场景）、rooms（rooms文件）、hotspot（后处理相关）
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scene</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

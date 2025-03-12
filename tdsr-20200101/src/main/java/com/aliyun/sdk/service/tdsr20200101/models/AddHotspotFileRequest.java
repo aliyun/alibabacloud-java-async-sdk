@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddHotspotFileRequest} extends {@link RequestModel}
  *
  * <p>AddHotspotFileRequest</p>
  */
 public class AddHotspotFileRequest extends Request {
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private AddHotspotFileRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class AddHotspotFileRequest extends Request {
         } 
 
         /**
-         * 文件名
+         * <p>This parameter is required.</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -94,7 +99,10 @@ public class AddHotspotFileRequest extends Request {
         }
 
         /**
-         * 场景Id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -103,7 +111,7 @@ public class AddHotspotFileRequest extends Request {
         }
 
         /**
-         * 文件类型
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

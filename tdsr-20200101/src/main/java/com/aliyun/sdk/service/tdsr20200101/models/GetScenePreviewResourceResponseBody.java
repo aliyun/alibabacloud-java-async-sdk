@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScenePreviewResourceResponseBody} extends {@link TeaModel}
  *
  * <p>GetScenePreviewResourceResponseBody</p>
  */
 public class GetScenePreviewResourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetScenePreviewResourceResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -41,6 +50,13 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
 
     public static GetScenePreviewResourceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,6 +95,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Long code; 
         private Data data; 
         private String message; 
@@ -86,7 +103,15 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 返回码
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +119,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 模型数据
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +127,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +135,10 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8CD0AD9-8A92-455A-A984-A7E4B76*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +146,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 是否请求成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +159,190 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetScenePreviewResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewResourceResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetScenePreviewResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewResourceResponseBody</p>
+     */
     public static class ResourceDirectory extends TeaModel {
-        @NameInMap("HotspotTagConfig")
+        @com.aliyun.core.annotation.NameInMap("HotspotTagConfig")
         private String hotspotTagConfig;
 
-        @NameInMap("ModelConfig")
+        @com.aliyun.core.annotation.NameInMap("ModelConfig")
         private String modelConfig;
 
-        @NameInMap("OrthomapConfig")
+        @com.aliyun.core.annotation.NameInMap("OrthomapConfig")
         private String orthomapConfig;
 
-        @NameInMap("RootPath")
+        @com.aliyun.core.annotation.NameInMap("RootPath")
         private String rootPath;
 
         private ResourceDirectory(Builder builder) {
@@ -194,7 +395,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             private String rootPath; 
 
             /**
-             * 热点文件路径
+             * HotspotTagConfig.
              */
             public Builder hotspotTagConfig(String hotspotTagConfig) {
                 this.hotspotTagConfig = hotspotTagConfig;
@@ -202,7 +403,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 模型配置路径
+             * ModelConfig.
              */
             public Builder modelConfig(String modelConfig) {
                 this.modelConfig = modelConfig;
@@ -210,7 +411,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 小地图数据文件路径
+             * OrthomapConfig.
              */
             public Builder orthomapConfig(String orthomapConfig) {
                 this.orthomapConfig = orthomapConfig;
@@ -218,7 +419,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 模型路径
+             * RootPath.
              */
             public Builder rootPath(String rootPath) {
                 this.rootPath = rootPath;
@@ -232,14 +433,20 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScenePreviewResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewResourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceDirectory")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectory")
         private ResourceDirectory resourceDirectory;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -283,7 +490,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * 模型名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +498,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 资源路径
+             * ResourceDirectory.
              */
             public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
                 this.resourceDirectory = resourceDirectory;
@@ -299,7 +506,7 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             }
 
             /**
-             * 版本
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

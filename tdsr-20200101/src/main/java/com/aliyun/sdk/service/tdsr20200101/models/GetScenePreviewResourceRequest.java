@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScenePreviewResourceRequest} extends {@link RequestModel}
  *
  * <p>GetScenePreviewResourceRequest</p>
  */
 public class GetScenePreviewResourceRequest extends Request {
-    @Query
-    @NameInMap("Draft")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Draft")
     private Boolean draft;
 
-    @Query
-    @NameInMap("PreviewToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreviewToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String previewToken;
 
     private GetScenePreviewResourceRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class GetScenePreviewResourceRequest extends Request {
         } 
 
         /**
-         * 是否草稿预览
+         * Draft.
          */
         public Builder draft(Boolean draft) {
             this.putQueryParameter("Draft", draft);
@@ -78,7 +83,10 @@ public class GetScenePreviewResourceRequest extends Request {
         }
 
         /**
-         * 预览token
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2deb941b3e1****</p>
          */
         public Builder previewToken(String previewToken) {
             this.putQueryParameter("PreviewToken", previewToken);

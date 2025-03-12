@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScenePreviewInfoRequest} extends {@link RequestModel}
  *
  * <p>GetScenePreviewInfoRequest</p>
  */
 public class GetScenePreviewInfoRequest extends Request {
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Query
-    @NameInMap("ModelToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelToken;
 
     private GetScenePreviewInfoRequest(Builder builder) {
@@ -83,7 +88,7 @@ public class GetScenePreviewInfoRequest extends Request {
         } 
 
         /**
-         * 自定义oss域名（可为cdn域名）
+         * Domain.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -92,7 +97,7 @@ public class GetScenePreviewInfoRequest extends Request {
         }
 
         /**
-         * 是否开启自用资源访问
+         * Enabled.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -101,7 +106,10 @@ public class GetScenePreviewInfoRequest extends Request {
         }
 
         /**
-         * 模型token
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A.e.RQJRPYGIJJQP****</p>
          */
         public Builder modelToken(String modelToken) {
             this.putQueryParameter("ModelToken", modelToken);

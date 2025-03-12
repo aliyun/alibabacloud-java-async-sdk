@@ -41,6 +41,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddHotspotFile  AddHotspotFileRequest
+     * @return AddHotspotFileResponse
+     */
     @Override
     public CompletableFuture<AddHotspotFileResponse> addHotspotFile(AddHotspotFileRequest request) {
         try {
@@ -55,6 +59,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddMosaics  AddMosaicsRequest
+     * @return AddMosaicsResponse
+     */
     @Override
     public CompletableFuture<AddMosaicsResponse> addMosaics(AddMosaicsRequest request) {
         try {
@@ -69,6 +77,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddProject  AddProjectRequest
+     * @return AddProjectResponse
+     */
     @Override
     public CompletableFuture<AddProjectResponse> addProject(AddProjectRequest request) {
         try {
@@ -83,6 +95,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @deprecated OpenAPI AddRelativePosition is deprecated  * @param request  the request parameters of AddRelativePosition  AddRelativePositionRequest
+     * @return AddRelativePositionResponse
+     */
+    @Deprecated
     @Override
     public CompletableFuture<AddRelativePositionResponse> addRelativePosition(AddRelativePositionRequest request) {
         try {
@@ -97,6 +114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddRoomPlan  AddRoomPlanRequest
+     * @return AddRoomPlanResponse
+     */
     @Override
     public CompletableFuture<AddRoomPlanResponse> addRoomPlan(AddRoomPlanRequest request) {
         try {
@@ -111,6 +132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddScene  AddSceneRequest
+     * @return AddSceneResponse
+     */
     @Override
     public CompletableFuture<AddSceneResponse> addScene(AddSceneRequest request) {
         try {
@@ -125,6 +150,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddSubScene  AddSubSceneRequest
+     * @return AddSubSceneResponse
+     */
     @Override
     public CompletableFuture<AddSubSceneResponse> addSubScene(AddSubSceneRequest request) {
         try {
@@ -139,6 +168,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckUserProperty  CheckUserPropertyRequest
+     * @return CheckUserPropertyResponse
+     */
     @Override
     public CompletableFuture<CheckUserPropertyResponse> checkUserProperty(CheckUserPropertyRequest request) {
         try {
@@ -153,6 +186,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyScene  CopySceneRequest
+     * @return CopySceneResponse
+     */
     @Override
     public CompletableFuture<CopySceneResponse> copyScene(CopySceneRequest request) {
         try {
@@ -167,6 +204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUploadPolicy  CreateUploadPolicyRequest
+     * @return CreateUploadPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateUploadPolicyResponse> createUploadPolicy(CreateUploadPolicyRequest request) {
         try {
@@ -181,6 +222,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetailProject  DetailProjectRequest
+     * @return DetailProjectResponse
+     */
     @Override
     public CompletableFuture<DetailProjectResponse> detailProject(DetailProjectRequest request) {
         try {
@@ -195,6 +240,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetailScene  DetailSceneRequest
+     * @return DetailSceneResponse
+     */
     @Override
     public CompletableFuture<DetailSceneResponse> detailScene(DetailSceneRequest request) {
         try {
@@ -209,6 +258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetailSubScene  DetailSubSceneRequest
+     * @return DetailSubSceneResponse
+     */
     @Override
     public CompletableFuture<DetailSubSceneResponse> detailSubScene(DetailSubSceneRequest request) {
         try {
@@ -223,6 +276,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DropProject  DropProjectRequest
+     * @return DropProjectResponse
+     */
     @Override
     public CompletableFuture<DropProjectResponse> dropProject(DropProjectRequest request) {
         try {
@@ -237,6 +294,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DropScene  DropSceneRequest
+     * @return DropSceneResponse
+     */
     @Override
     public CompletableFuture<DropSceneResponse> dropScene(DropSceneRequest request) {
         try {
@@ -251,6 +312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DropSubScene  DropSubSceneRequest
+     * @return DropSubSceneResponse
+     */
     @Override
     public CompletableFuture<DropSubSceneResponse> dropSubScene(DropSubSceneRequest request) {
         try {
@@ -265,6 +330,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConnData  GetConnDataRequest
+     * @return GetConnDataResponse
+     */
     @Override
     public CompletableFuture<GetConnDataResponse> getConnData(GetConnDataRequest request) {
         try {
@@ -279,6 +348,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCopySceneTaskStatus  GetCopySceneTaskStatusRequest
+     * @return GetCopySceneTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetCopySceneTaskStatusResponse> getCopySceneTaskStatus(GetCopySceneTaskStatusRequest request) {
         try {
@@ -293,6 +366,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotspotConfig  GetHotspotConfigRequest
+     * @return GetHotspotConfigResponse
+     */
     @Override
     public CompletableFuture<GetHotspotConfigResponse> getHotspotConfig(GetHotspotConfigRequest request) {
         try {
@@ -307,6 +384,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotspotSceneData  GetHotspotSceneDataRequest
+     * @return GetHotspotSceneDataResponse
+     */
     @Override
     public CompletableFuture<GetHotspotSceneDataResponse> getHotspotSceneData(GetHotspotSceneDataRequest request) {
         try {
@@ -321,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotspotTag  GetHotspotTagRequest
+     * @return GetHotspotTagResponse
+     */
     @Override
     public CompletableFuture<GetHotspotTagResponse> getHotspotTag(GetHotspotTagRequest request) {
         try {
@@ -335,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLayoutData  GetLayoutDataRequest
+     * @return GetLayoutDataResponse
+     */
     @Override
     public CompletableFuture<GetLayoutDataResponse> getLayoutData(GetLayoutDataRequest request) {
         try {
@@ -349,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOriginLayoutData  GetOriginLayoutDataRequest
+     * @return GetOriginLayoutDataResponse
+     */
     @Override
     public CompletableFuture<GetOriginLayoutDataResponse> getOriginLayoutData(GetOriginLayoutDataRequest request) {
         try {
@@ -363,6 +456,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOssPolicy  GetOssPolicyRequest
+     * @return GetOssPolicyResponse
+     */
     @Override
     public CompletableFuture<GetOssPolicyResponse> getOssPolicy(GetOssPolicyRequest request) {
         try {
@@ -377,6 +474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPackSceneTaskStatus  GetPackSceneTaskStatusRequest
+     * @return GetPackSceneTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetPackSceneTaskStatusResponse> getPackSceneTaskStatus(GetPackSceneTaskStatusRequest request) {
         try {
@@ -391,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRectifyImage  GetRectifyImageRequest
+     * @return GetRectifyImageResponse
+     */
     @Override
     public CompletableFuture<GetRectifyImageResponse> getRectifyImage(GetRectifyImageRequest request) {
         try {
@@ -405,6 +510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSceneBuildTaskStatus  GetSceneBuildTaskStatusRequest
+     * @return GetSceneBuildTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetSceneBuildTaskStatusResponse> getSceneBuildTaskStatus(GetSceneBuildTaskStatusRequest request) {
         try {
@@ -419,6 +528,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScenePackUrl  GetScenePackUrlRequest
+     * @return GetScenePackUrlResponse
+     */
     @Override
     public CompletableFuture<GetScenePackUrlResponse> getScenePackUrl(GetScenePackUrlRequest request) {
         try {
@@ -433,6 +546,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScenePreviewData  GetScenePreviewDataRequest
+     * @return GetScenePreviewDataResponse
+     */
     @Override
     public CompletableFuture<GetScenePreviewDataResponse> getScenePreviewData(GetScenePreviewDataRequest request) {
         try {
@@ -447,6 +564,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScenePreviewInfo  GetScenePreviewInfoRequest
+     * @return GetScenePreviewInfoResponse
+     */
     @Override
     public CompletableFuture<GetScenePreviewInfoResponse> getScenePreviewInfo(GetScenePreviewInfoRequest request) {
         try {
@@ -461,6 +582,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScenePreviewResource  GetScenePreviewResourceRequest
+     * @return GetScenePreviewResourceResponse
+     */
     @Override
     public CompletableFuture<GetScenePreviewResourceResponse> getScenePreviewResource(GetScenePreviewResourceRequest request) {
         try {
@@ -475,6 +600,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSingleConnData  GetSingleConnDataRequest
+     * @return GetSingleConnDataResponse
+     */
     @Override
     public CompletableFuture<GetSingleConnDataResponse> getSingleConnData(GetSingleConnDataRequest request) {
         try {
@@ -489,6 +618,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSourcePackStatus  GetSourcePackStatusRequest
+     * @return GetSourcePackStatusResponse
+     */
     @Override
     public CompletableFuture<GetSourcePackStatusResponse> getSourcePackStatus(GetSourcePackStatusRequest request) {
         try {
@@ -503,6 +636,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSubSceneTaskStatus  GetSubSceneTaskStatusRequest
+     * @return GetSubSceneTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetSubSceneTaskStatusResponse> getSubSceneTaskStatus(GetSubSceneTaskStatusRequest request) {
         try {
@@ -517,6 +654,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTaskStatus  GetTaskStatusRequest
+     * @return GetTaskStatusResponse
+     */
     @Override
     public CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request) {
         try {
@@ -531,6 +672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWindowConfig  GetWindowConfigRequest
+     * @return GetWindowConfigResponse
+     */
     @Override
     public CompletableFuture<GetWindowConfigResponse> getWindowConfig(GetWindowConfigRequest request) {
         try {
@@ -545,6 +690,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LabelBuild  LabelBuildRequest
+     * @return LabelBuildResponse
+     */
     @Override
     public CompletableFuture<LabelBuildResponse> labelBuild(LabelBuildRequest request) {
         try {
@@ -559,6 +708,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LinkImage  LinkImageRequest
+     * @return LinkImageResponse
+     */
     @Override
     public CompletableFuture<LinkImageResponse> linkImage(LinkImageRequest request) {
         try {
@@ -573,6 +726,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProject  ListProjectRequest
+     * @return ListProjectResponse
+     */
     @Override
     public CompletableFuture<ListProjectResponse> listProject(ListProjectRequest request) {
         try {
@@ -587,6 +744,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListScene  ListSceneRequest
+     * @return ListSceneResponse
+     */
     @Override
     public CompletableFuture<ListSceneResponse> listScene(ListSceneRequest request) {
         try {
@@ -601,6 +762,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSubScene  ListSubSceneRequest
+     * @return ListSubSceneResponse
+     */
     @Override
     public CompletableFuture<ListSubSceneResponse> listSubScene(ListSubSceneRequest request) {
         try {
@@ -615,6 +780,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OptimizeRightAngle  OptimizeRightAngleRequest
+     * @return OptimizeRightAngleResponse
+     */
     @Override
     public CompletableFuture<OptimizeRightAngleResponse> optimizeRightAngle(OptimizeRightAngleRequest request) {
         try {
@@ -629,6 +798,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PackScene  PackSceneRequest
+     * @return PackSceneResponse
+     */
     @Override
     public CompletableFuture<PackSceneResponse> packScene(PackSceneRequest request) {
         try {
@@ -643,6 +816,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PackSource  PackSourceRequest
+     * @return PackSourceResponse
+     */
     @Override
     public CompletableFuture<PackSourceResponse> packSource(PackSourceRequest request) {
         try {
@@ -657,6 +834,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PredImage  PredImageRequest
+     * @return PredImageResponse
+     */
     @Override
     public CompletableFuture<PredImageResponse> predImage(PredImageRequest request) {
         try {
@@ -671,6 +852,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PredictionWallLine  PredictionWallLineRequest
+     * @return PredictionWallLineResponse
+     */
     @Override
     public CompletableFuture<PredictionWallLineResponse> predictionWallLine(PredictionWallLineRequest request) {
         try {
@@ -685,6 +870,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishHotspot  PublishHotspotRequest
+     * @return PublishHotspotResponse
+     */
     @Override
     public CompletableFuture<PublishHotspotResponse> publishHotspot(PublishHotspotRequest request) {
         try {
@@ -699,6 +888,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishHotspotConfig  PublishHotspotConfigRequest
+     * @return PublishHotspotConfigResponse
+     */
     @Override
     public CompletableFuture<PublishHotspotConfigResponse> publishHotspotConfig(PublishHotspotConfigRequest request) {
         try {
@@ -713,6 +906,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishScene  PublishSceneRequest
+     * @return PublishSceneResponse
+     */
     @Override
     public CompletableFuture<PublishSceneResponse> publishScene(PublishSceneRequest request) {
         try {
@@ -727,6 +924,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishStatus  PublishStatusRequest
+     * @return PublishStatusResponse
+     */
     @Override
     public CompletableFuture<PublishStatusResponse> publishStatus(PublishStatusRequest request) {
         try {
@@ -741,6 +942,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecoveryOriginImage  RecoveryOriginImageRequest
+     * @return RecoveryOriginImageResponse
+     */
     @Override
     public CompletableFuture<RecoveryOriginImageResponse> recoveryOriginImage(RecoveryOriginImageRequest request) {
         try {
@@ -755,6 +960,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RectVertical  RectVerticalRequest
+     * @return RectVerticalResponse
+     */
     @Override
     public CompletableFuture<RectVerticalResponse> rectVertical(RectVerticalRequest request) {
         try {
@@ -769,6 +978,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RectifyImage  RectifyImageRequest
+     * @return RectifyImageResponse
+     */
     @Override
     public CompletableFuture<RectifyImageResponse> rectifyImage(RectifyImageRequest request) {
         try {
@@ -783,6 +996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RollbackSubScene  RollbackSubSceneRequest
+     * @return RollbackSubSceneResponse
+     */
     @Override
     public CompletableFuture<RollbackSubSceneResponse> rollbackSubScene(RollbackSubSceneRequest request) {
         try {
@@ -797,6 +1014,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveHotspotConfig  SaveHotspotConfigRequest
+     * @return SaveHotspotConfigResponse
+     */
     @Override
     public CompletableFuture<SaveHotspotConfigResponse> saveHotspotConfig(SaveHotspotConfigRequest request) {
         try {
@@ -811,6 +1032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveHotspotTag  SaveHotspotTagRequest
+     * @return SaveHotspotTagResponse
+     */
     @Override
     public CompletableFuture<SaveHotspotTagResponse> saveHotspotTag(SaveHotspotTagRequest request) {
         try {
@@ -825,6 +1050,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveHotspotTagList  SaveHotspotTagListRequest
+     * @return SaveHotspotTagListResponse
+     */
     @Override
     public CompletableFuture<SaveHotspotTagListResponse> saveHotspotTagList(SaveHotspotTagListRequest request) {
         try {
@@ -839,6 +1068,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveMinimap  SaveMinimapRequest
+     * @return SaveMinimapResponse
+     */
     @Override
     public CompletableFuture<SaveMinimapResponse> saveMinimap(SaveMinimapRequest request) {
         try {
@@ -853,6 +1086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveModelConfig  SaveModelConfigRequest
+     * @return SaveModelConfigResponse
+     */
     @Override
     public CompletableFuture<SaveModelConfigResponse> saveModelConfig(SaveModelConfigRequest request) {
         try {
@@ -867,6 +1104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScenePublish  ScenePublishRequest
+     * @return ScenePublishResponse
+     */
     @Override
     public CompletableFuture<ScenePublishResponse> scenePublish(ScenePublishRequest request) {
         try {
@@ -881,6 +1122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TempPreview  TempPreviewRequest
+     * @return TempPreviewResponse
+     */
     @Override
     public CompletableFuture<TempPreviewResponse> tempPreview(TempPreviewRequest request) {
         try {
@@ -895,6 +1140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TempPreviewStatus  TempPreviewStatusRequest
+     * @return TempPreviewStatusResponse
+     */
     @Override
     public CompletableFuture<TempPreviewStatusResponse> tempPreviewStatus(TempPreviewStatusRequest request) {
         try {
@@ -909,6 +1158,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateConnData  UpdateConnDataRequest
+     * @return UpdateConnDataResponse
+     */
     @Override
     public CompletableFuture<UpdateConnDataResponse> updateConnData(UpdateConnDataRequest request) {
         try {
@@ -923,6 +1176,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLayoutData  UpdateLayoutDataRequest
+     * @return UpdateLayoutDataResponse
+     */
     @Override
     public CompletableFuture<UpdateLayoutDataResponse> updateLayoutData(UpdateLayoutDataRequest request) {
         try {
@@ -937,6 +1194,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProject  UpdateProjectRequest
+     * @return UpdateProjectResponse
+     */
     @Override
     public CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request) {
         try {
@@ -951,6 +1212,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateScene  UpdateSceneRequest
+     * @return UpdateSceneResponse
+     */
     @Override
     public CompletableFuture<UpdateSceneResponse> updateScene(UpdateSceneRequest request) {
         try {
@@ -965,6 +1230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSubScene  UpdateSubSceneRequest
+     * @return UpdateSubSceneResponse
+     */
     @Override
     public CompletableFuture<UpdateSubSceneResponse> updateSubScene(UpdateSubSceneRequest request) {
         try {
@@ -979,6 +1248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSubSceneSeq  UpdateSubSceneSeqRequest
+     * @return UpdateSubSceneSeqResponse
+     */
     @Override
     public CompletableFuture<UpdateSubSceneSeqResponse> updateSubSceneSeq(UpdateSubSceneSeqRequest request) {
         try {

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPackSceneTaskStatusRequest} extends {@link RequestModel}
  *
  * <p>GetPackSceneTaskStatusRequest</p>
  */
 public class GetPackSceneTaskStatusRequest extends Request {
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private GetPackSceneTaskStatusRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class GetPackSceneTaskStatusRequest extends Request {
         } 
 
         /**
-         * 任务ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hjsyuyiuwe7wehg****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -79,7 +87,10 @@ public class GetPackSceneTaskStatusRequest extends Request {
         }
 
         /**
-         * 操作类型：download（下载），sync（同步）
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>download</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScenePreviewDataRequest} extends {@link RequestModel}
  *
  * <p>GetScenePreviewDataRequest</p>
  */
 public class GetScenePreviewDataRequest extends Request {
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Query
-    @NameInMap("PreviewToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreviewToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String previewToken;
 
-    @Query
-    @NameInMap("ShowTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowTag")
     private Boolean showTag;
 
     private GetScenePreviewDataRequest(Builder builder) {
@@ -97,7 +102,7 @@ public class GetScenePreviewDataRequest extends Request {
         } 
 
         /**
-         * 自定义oss域名（可为cdn域名）
+         * Domain.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -106,7 +111,7 @@ public class GetScenePreviewDataRequest extends Request {
         }
 
         /**
-         * 是否开启自用资源访问（默认false）
+         * Enabled.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -115,7 +120,10 @@ public class GetScenePreviewDataRequest extends Request {
         }
 
         /**
-         * 预览token
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2735913e96da44ea8c86f8e777c8****</p>
          */
         public Builder previewToken(String previewToken) {
             this.putQueryParameter("PreviewToken", previewToken);
@@ -124,7 +132,7 @@ public class GetScenePreviewDataRequest extends Request {
         }
 
         /**
-         * 是否返回热点数据（默认false）
+         * ShowTag.
          */
         public Builder showTag(Boolean showTag) {
             this.putQueryParameter("ShowTag", showTag);

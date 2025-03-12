@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveHotspotTagListRequest} extends {@link RequestModel}
  *
  * <p>SaveHotspotTagListRequest</p>
  */
 public class SaveHotspotTagListRequest extends Request {
-    @Query
-    @NameInMap("HotspotListJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HotspotListJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotspotListJson;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private SaveHotspotTagListRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class SaveHotspotTagListRequest extends Request {
         } 
 
         /**
-         * 热点数据，json字符串数组
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{}]</p>
          */
         public Builder hotspotListJson(String hotspotListJson) {
             this.putQueryParameter("HotspotListJson", hotspotListJson);
@@ -79,7 +87,10 @@ public class SaveHotspotTagListRequest extends Request {
         }
 
         /**
-         * 场景Id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tqwiuwetwet****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

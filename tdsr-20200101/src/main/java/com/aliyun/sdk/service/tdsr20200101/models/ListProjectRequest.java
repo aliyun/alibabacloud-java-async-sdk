@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectRequest} extends {@link RequestModel}
  *
  * <p>ListProjectRequest</p>
  */
 public class ListProjectRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNum")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Long pageSize;
 
     private ListProjectRequest(Builder builder) {
@@ -84,7 +89,7 @@ public class ListProjectRequest extends Request {
         } 
 
         /**
-         * 项目名称（使用name%搜索）
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -93,7 +98,10 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * 页码
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -102,7 +110,10 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * 页长
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

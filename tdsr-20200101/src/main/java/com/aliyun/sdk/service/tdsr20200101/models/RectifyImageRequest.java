@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RectifyImageRequest} extends {@link RequestModel}
  *
  * <p>RectifyImageRequest</p>
  */
 public class RectifyImageRequest extends Request {
-    @Query
-    @NameInMap("CameraHeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CameraHeight")
     private Long cameraHeight;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private RectifyImageRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class RectifyImageRequest extends Request {
         } 
 
         /**
-         * 相机高度 单位 cm
+         * CameraHeight.
          */
         public Builder cameraHeight(Long cameraHeight) {
             this.putQueryParameter("CameraHeight", cameraHeight);
@@ -78,7 +83,10 @@ public class RectifyImageRequest extends Request {
         }
 
         /**
-         * 图片地址
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyundoc.com/****.jpg">https://www.aliyundoc.com/****.jpg</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

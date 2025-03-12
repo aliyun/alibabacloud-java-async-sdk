@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RectVerticalRequest} extends {@link RequestModel}
  *
  * <p>RectVerticalRequest</p>
  */
 public class RectVerticalRequest extends Request {
-    @Query
-    @NameInMap("CountDetectDoor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountDetectDoor")
     private Integer countDetectDoor;
 
-    @Query
-    @NameInMap("DetectDoor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectDoor")
     private Boolean detectDoor;
 
-    @Query
-    @NameInMap("SubSceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subSceneId;
 
-    @Query
-    @NameInMap("VerticalRect")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerticalRect")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verticalRect;
 
     private RectVerticalRequest(Builder builder) {
@@ -98,7 +103,7 @@ public class RectVerticalRequest extends Request {
         } 
 
         /**
-         * 需要预测的门的数量
+         * CountDetectDoor.
          */
         public Builder countDetectDoor(Integer countDetectDoor) {
             this.putQueryParameter("CountDetectDoor", countDetectDoor);
@@ -107,7 +112,7 @@ public class RectVerticalRequest extends Request {
         }
 
         /**
-         * 是否开启门预测
+         * DetectDoor.
          */
         public Builder detectDoor(Boolean detectDoor) {
             this.putQueryParameter("DetectDoor", detectDoor);
@@ -116,7 +121,10 @@ public class RectVerticalRequest extends Request {
         }
 
         /**
-         * 子场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder subSceneId(String subSceneId) {
             this.putQueryParameter("SubSceneId", subSceneId);
@@ -125,7 +133,10 @@ public class RectVerticalRequest extends Request {
         }
 
         /**
-         * 矫正数据
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;844946777965268992&quot;:[[0.42418407210144654,0.33625107620738004,0.42620819117478337,0.635753199572695],[0.5158627587152769,0.3071978991900134,0.5177513758740194,0.6312118011104786],[0.582693212445534,0.3733969265933281,0.5807612760319687,0.6139402811250833]]}</p>
          */
         public Builder verticalRect(String verticalRect) {
             this.putQueryParameter("VerticalRect", verticalRect);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddProjectRequest} extends {@link RequestModel}
  *
  * <p>AddProjectRequest</p>
  */
 public class AddProjectRequest extends Request {
-    @Query
-    @NameInMap("BusinessId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessId")
     private Long businessId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private AddProjectRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class AddProjectRequest extends Request {
         } 
 
         /**
-         * 业务id
+         * BusinessId.
          */
         public Builder businessId(Long businessId) {
             this.putQueryParameter("BusinessId", businessId);
@@ -78,7 +83,7 @@ public class AddProjectRequest extends Request {
         }
 
         /**
-         * 项目名称
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

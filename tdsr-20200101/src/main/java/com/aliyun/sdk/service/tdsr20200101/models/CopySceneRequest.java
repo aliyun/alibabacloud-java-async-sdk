@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopySceneRequest} extends {@link RequestModel}
  *
  * <p>CopySceneRequest</p>
  */
 public class CopySceneRequest extends Request {
-    @Query
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Query
-    @NameInMap("SceneName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneName;
 
     private CopySceneRequest(Builder builder) {
@@ -84,7 +89,7 @@ public class CopySceneRequest extends Request {
         } 
 
         /**
-         * 复制到的项目Id，默认为空，复制到当前场景所在的项目
+         * ProjectId.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -93,7 +98,10 @@ public class CopySceneRequest extends Request {
         }
 
         /**
-         * 场景Id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgyuyewyew****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -102,7 +110,7 @@ public class CopySceneRequest extends Request {
         }
 
         /**
-         * 新场景名称
+         * <p>This parameter is required.</p>
          */
         public Builder sceneName(String sceneName) {
             this.putQueryParameter("SceneName", sceneName);

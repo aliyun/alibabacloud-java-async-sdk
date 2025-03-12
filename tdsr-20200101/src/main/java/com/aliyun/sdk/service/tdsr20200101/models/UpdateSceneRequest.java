@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSceneRequest} extends {@link RequestModel}
  *
  * <p>UpdateSceneRequest</p>
  */
 public class UpdateSceneRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private UpdateSceneRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class UpdateSceneRequest extends Request {
         } 
 
         /**
-         * 场景Id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -79,7 +87,10 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * 场景名称
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

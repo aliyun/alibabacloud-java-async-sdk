@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSubSceneRequest} extends {@link RequestModel}
  *
  * <p>UpdateSubSceneRequest</p>
  */
 public class UpdateSubSceneRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("ViewPoint")
-    private java.util.List < Double > viewPoint;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ViewPoint")
+    private java.util.List<Double> viewPoint;
 
     private UpdateSubSceneRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class UpdateSubSceneRequest extends Request {
     /**
      * @return viewPoint
      */
-    public java.util.List < Double > getViewPoint() {
+    public java.util.List<Double> getViewPoint() {
         return this.viewPoint;
     }
 
     public static final class Builder extends Request.Builder<UpdateSubSceneRequest, Builder> {
         private String id; 
         private String name; 
-        private java.util.List < Double > viewPoint; 
+        private java.util.List<Double> viewPoint; 
 
         private Builder() {
             super();
@@ -83,7 +88,10 @@ public class UpdateSubSceneRequest extends Request {
         } 
 
         /**
-         * 子场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -92,7 +100,7 @@ public class UpdateSubSceneRequest extends Request {
         }
 
         /**
-         * 子场景名称
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,9 +109,9 @@ public class UpdateSubSceneRequest extends Request {
         }
 
         /**
-         * 视角坐标，目前支持3元坐标，4元坐标，例如：[0.94005,0.13397,-0.3136,0.782992]
+         * ViewPoint.
          */
-        public Builder viewPoint(java.util.List < Double > viewPoint) {
+        public Builder viewPoint(java.util.List<Double> viewPoint) {
             String viewPointShrink = shrink(viewPoint, "ViewPoint", "json");
             this.putQueryParameter("ViewPoint", viewPointShrink);
             this.viewPoint = viewPoint;

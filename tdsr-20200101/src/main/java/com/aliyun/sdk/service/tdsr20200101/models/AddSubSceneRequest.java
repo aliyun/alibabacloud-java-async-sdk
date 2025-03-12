@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSubSceneRequest} extends {@link RequestModel}
  *
  * <p>AddSubSceneRequest</p>
  */
 public class AddSubSceneRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Query
-    @NameInMap("UploadType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadType")
     private String uploadType;
 
     private AddSubSceneRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class AddSubSceneRequest extends Request {
         } 
 
         /**
-         * 子场景名称
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -93,7 +101,10 @@ public class AddSubSceneRequest extends Request {
         }
 
         /**
-         * 场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -102,7 +113,7 @@ public class AddSubSceneRequest extends Request {
         }
 
         /**
-         * 类型 图片：IMAGE 视频：VIDEO
+         * UploadType.
          */
         public Builder uploadType(String uploadType) {
             this.putQueryParameter("UploadType", uploadType);

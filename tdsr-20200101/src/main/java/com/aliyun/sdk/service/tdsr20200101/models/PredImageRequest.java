@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PredImageRequest} extends {@link RequestModel}
  *
  * <p>PredImageRequest</p>
  */
 public class PredImageRequest extends Request {
-    @Query
-    @NameInMap("CorrectVertical")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorrectVertical")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean correctVertical;
 
-    @Query
-    @NameInMap("CountDetectDoor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountDetectDoor")
     private Long countDetectDoor;
 
-    @Query
-    @NameInMap("DetectDoor")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectDoor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean detectDoor;
 
-    @Query
-    @NameInMap("SubSceneId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSceneId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private String subSceneId;
 
     private PredImageRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class PredImageRequest extends Request {
         } 
 
         /**
-         * 是否垂直矫正
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder correctVertical(Boolean correctVertical) {
             this.putQueryParameter("CorrectVertical", correctVertical);
@@ -108,7 +116,7 @@ public class PredImageRequest extends Request {
         }
 
         /**
-         * 门数量(DetectDoor为false时，可为0)
+         * CountDetectDoor.
          */
         public Builder countDetectDoor(Long countDetectDoor) {
             this.putQueryParameter("CountDetectDoor", countDetectDoor);
@@ -117,7 +125,10 @@ public class PredImageRequest extends Request {
         }
 
         /**
-         * 是否门预测
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder detectDoor(Boolean detectDoor) {
             this.putQueryParameter("DetectDoor", detectDoor);
@@ -126,7 +137,10 @@ public class PredImageRequest extends Request {
         }
 
         /**
-         * 子场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2345****</p>
          */
         public Builder subSceneId(String subSceneId) {
             this.putQueryParameter("SubSceneId", subSceneId);

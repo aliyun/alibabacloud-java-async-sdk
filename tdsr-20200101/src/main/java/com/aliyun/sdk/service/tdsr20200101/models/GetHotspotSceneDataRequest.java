@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotspotSceneDataRequest} extends {@link RequestModel}
  *
  * <p>GetHotspotSceneDataRequest</p>
  */
 public class GetHotspotSceneDataRequest extends Request {
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Query
-    @NameInMap("PreviewToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreviewToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String previewToken;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true, maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
     private Long type;
 
     private GetHotspotSceneDataRequest(Builder builder) {
@@ -98,7 +103,7 @@ public class GetHotspotSceneDataRequest extends Request {
         } 
 
         /**
-         * 自定义oss域名（可为cdn域名）
+         * Domain.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -107,7 +112,7 @@ public class GetHotspotSceneDataRequest extends Request {
         }
 
         /**
-         * 是否开启自用资源访问
+         * Enabled.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -116,7 +121,10 @@ public class GetHotspotSceneDataRequest extends Request {
         }
 
         /**
-         * 预览token
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>344794c32937474a9c59eb130936****</p>
          */
         public Builder previewToken(String previewToken) {
             this.putQueryParameter("PreviewToken", previewToken);
@@ -125,7 +133,10 @@ public class GetHotspotSceneDataRequest extends Request {
         }
 
         /**
-         * 0 未发布， 1 已发布
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Long type) {
             this.putQueryParameter("Type", type);

@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetScenePreviewDataResponseBody</p>
  */
 public class GetScenePreviewDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetScenePreviewDataResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -41,6 +50,13 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
 
     public static GetScenePreviewDataResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,6 +95,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Long code; 
         private Data data; 
         private String message; 
@@ -86,7 +103,15 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 返回码
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -102,7 +127,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         }
 
         /**
-         * 错误消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +135,10 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8CD0AD9-8A92-455A-A984-A7E4B76FF387</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +146,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         }
 
         /**
-         * 是否请求成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,15 +159,188 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
     public static class Position extends TeaModel {
-        @NameInMap("Rotation")
-        private java.util.List < Double > rotation;
+        @com.aliyun.core.annotation.NameInMap("Rotation")
+        private java.util.List<Double> rotation;
 
-        @NameInMap("Spot")
-        private java.util.List < Double > spot;
+        @com.aliyun.core.annotation.NameInMap("Spot")
+        private java.util.List<Double> spot;
 
-        @NameInMap("Viewpoint")
-        private java.util.List < Double > viewpoint;
+        @com.aliyun.core.annotation.NameInMap("Viewpoint")
+        private java.util.List<Double> viewpoint;
 
         private Position(Builder builder) {
             this.rotation = builder.rotation;
@@ -158,49 +359,49 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return rotation
          */
-        public java.util.List < Double > getRotation() {
+        public java.util.List<Double> getRotation() {
             return this.rotation;
         }
 
         /**
          * @return spot
          */
-        public java.util.List < Double > getSpot() {
+        public java.util.List<Double> getSpot() {
             return this.spot;
         }
 
         /**
          * @return viewpoint
          */
-        public java.util.List < Double > getViewpoint() {
+        public java.util.List<Double> getViewpoint() {
             return this.viewpoint;
         }
 
         public static final class Builder {
-            private java.util.List < Double > rotation; 
-            private java.util.List < Double > spot; 
-            private java.util.List < Double > viewpoint; 
+            private java.util.List<Double> rotation; 
+            private java.util.List<Double> spot; 
+            private java.util.List<Double> viewpoint; 
 
             /**
-             * 当前点位在场景中的旋转四元素
+             * Rotation.
              */
-            public Builder rotation(java.util.List < Double > rotation) {
+            public Builder rotation(java.util.List<Double> rotation) {
                 this.rotation = rotation;
                 return this;
             }
 
             /**
-             * 当前点位在场景中的坐标
+             * Spot.
              */
-            public Builder spot(java.util.List < Double > spot) {
+            public Builder spot(java.util.List<Double> spot) {
                 this.spot = spot;
                 return this;
             }
 
             /**
-             * 当前子场景名标签在场景中的坐标
+             * Viewpoint.
              */
-            public Builder viewpoint(java.util.List < Double > viewpoint) {
+            public Builder viewpoint(java.util.List<Double> viewpoint) {
                 this.viewpoint = viewpoint;
                 return this;
             }
@@ -212,47 +413,53 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
     public static class PanoList extends TeaModel {
-        @NameInMap("CurRoomPicList")
-        private java.util.List < String > curRoomPicList;
+        @com.aliyun.core.annotation.NameInMap("CurRoomPicList")
+        private java.util.List<String> curRoomPicList;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("FloorIdx")
+        @com.aliyun.core.annotation.NameInMap("FloorIdx")
         private String floorIdx;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MainImage")
+        @com.aliyun.core.annotation.NameInMap("MainImage")
         private Boolean mainImage;
 
-        @NameInMap("Neighbours")
-        private java.util.List < String > neighbours;
+        @com.aliyun.core.annotation.NameInMap("Neighbours")
+        private java.util.List<String> neighbours;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Position position;
 
-        @NameInMap("RawName")
+        @com.aliyun.core.annotation.NameInMap("RawName")
         private String rawName;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("RoomIdx")
+        @com.aliyun.core.annotation.NameInMap("RoomIdx")
         private String roomIdx;
 
-        @NameInMap("SubSceneId")
+        @com.aliyun.core.annotation.NameInMap("SubSceneId")
         private String subSceneId;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("VirtualId")
+        @com.aliyun.core.annotation.NameInMap("VirtualId")
         private String virtualId;
 
-        @NameInMap("VirtualName")
+        @com.aliyun.core.annotation.NameInMap("VirtualName")
         private String virtualName;
 
         private PanoList(Builder builder) {
@@ -283,7 +490,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return curRoomPicList
          */
-        public java.util.List < String > getCurRoomPicList() {
+        public java.util.List<String> getCurRoomPicList() {
             return this.curRoomPicList;
         }
 
@@ -318,7 +525,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return neighbours
          */
-        public java.util.List < String > getNeighbours() {
+        public java.util.List<String> getNeighbours() {
             return this.neighbours;
         }
 
@@ -379,12 +586,12 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > curRoomPicList; 
+            private java.util.List<String> curRoomPicList; 
             private Boolean enabled; 
             private String floorIdx; 
             private String id; 
             private Boolean mainImage; 
-            private java.util.List < String > neighbours; 
+            private java.util.List<String> neighbours; 
             private Position position; 
             private String rawName; 
             private String resource; 
@@ -395,15 +602,15 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private String virtualName; 
 
             /**
-             * 当前房间的所有点位
+             * CurRoomPicList.
              */
-            public Builder curRoomPicList(java.util.List < String > curRoomPicList) {
+            public Builder curRoomPicList(java.util.List<String> curRoomPicList) {
                 this.curRoomPicList = curRoomPicList;
                 return this;
             }
 
             /**
-             * 当前点位是否渲染，false不渲染，场景无法跳转
+             * Enabled.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -411,7 +618,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 楼层号
+             * FloorIdx.
              */
             public Builder floorIdx(String floorIdx) {
                 this.floorIdx = floorIdx;
@@ -419,7 +626,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 点位ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -427,7 +634,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 单房间多图情况下，是否为主图，默认true
+             * MainImage.
              */
             public Builder mainImage(Boolean mainImage) {
                 this.mainImage = mainImage;
@@ -435,15 +642,15 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 当前房间邻近可视的点位id
+             * Neighbours.
              */
-            public Builder neighbours(java.util.List < String > neighbours) {
+            public Builder neighbours(java.util.List<String> neighbours) {
                 this.neighbours = neighbours;
                 return this;
             }
 
             /**
-             * 位置数据
+             * Position.
              */
             public Builder position(Position position) {
                 this.position = position;
@@ -451,7 +658,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 一个名称，无实际意义
+             * RawName.
              */
             public Builder rawName(String rawName) {
                 this.rawName = rawName;
@@ -459,7 +666,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 全景贴图路径
+             * Resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -467,7 +674,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 房间号
+             * RoomIdx.
              */
             public Builder roomIdx(String roomIdx) {
                 this.roomIdx = roomIdx;
@@ -475,7 +682,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 子场景ID
+             * SubSceneId.
              */
             public Builder subSceneId(String subSceneId) {
                 this.subSceneId = subSceneId;
@@ -483,7 +690,10 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * token
+             * <p>token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sIPGWRGLJHEIQE****</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -491,7 +701,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 图片虚拟ID
+             * VirtualId.
              */
             public Builder virtualId(String virtualId) {
                 this.virtualId = virtualId;
@@ -499,7 +709,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 图片名称
+             * VirtualName.
              */
             public Builder virtualName(String virtualName) {
                 this.virtualName = virtualName;
@@ -513,17 +723,23 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("ModelPath")
+        @com.aliyun.core.annotation.NameInMap("ModelPath")
         private String modelPath;
 
-        @NameInMap("PanoList")
-        private java.util.List < PanoList> panoList;
+        @com.aliyun.core.annotation.NameInMap("PanoList")
+        private java.util.List<PanoList> panoList;
 
-        @NameInMap("TextureModelPath")
+        @com.aliyun.core.annotation.NameInMap("TextureModelPath")
         private String textureModelPath;
 
-        @NameInMap("TexturePanoPath")
+        @com.aliyun.core.annotation.NameInMap("TexturePanoPath")
         private String texturePanoPath;
 
         private Model(Builder builder) {
@@ -551,7 +767,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return panoList
          */
-        public java.util.List < PanoList> getPanoList() {
+        public java.util.List<PanoList> getPanoList() {
             return this.panoList;
         }
 
@@ -571,12 +787,12 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private String modelPath; 
-            private java.util.List < PanoList> panoList; 
+            private java.util.List<PanoList> panoList; 
             private String textureModelPath; 
             private String texturePanoPath; 
 
             /**
-             * 模型地址
+             * ModelPath.
              */
             public Builder modelPath(String modelPath) {
                 this.modelPath = modelPath;
@@ -584,15 +800,15 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 点位数据
+             * PanoList.
              */
-            public Builder panoList(java.util.List < PanoList> panoList) {
+            public Builder panoList(java.util.List<PanoList> panoList) {
                 this.panoList = panoList;
                 return this;
             }
 
             /**
-             * 模型的贴图路径
+             * TextureModelPath.
              */
             public Builder textureModelPath(String textureModelPath) {
                 this.textureModelPath = textureModelPath;
@@ -600,7 +816,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 漫游后预览图片路径
+             * TexturePanoPath.
              */
             public Builder texturePanoPath(String texturePanoPath) {
                 this.texturePanoPath = texturePanoPath;
@@ -614,11 +830,17 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
     public static class ButtonConfig extends TeaModel {
-        @NameInMap("CustomText")
+        @com.aliyun.core.annotation.NameInMap("CustomText")
         private String customText;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ButtonConfig(Builder builder) {
@@ -675,53 +897,59 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("BackgroundColor")
+        @com.aliyun.core.annotation.NameInMap("BackgroundColor")
         private String backgroundColor;
 
-        @NameInMap("ButtonConfig")
+        @com.aliyun.core.annotation.NameInMap("ButtonConfig")
         private ButtonConfig buttonConfig;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("FormImgSize")
-        private java.util.List < Long > formImgSize;
+        @com.aliyun.core.annotation.NameInMap("FormImgSize")
+        private java.util.List<Long> formImgSize;
 
-        @NameInMap("FormJumpType")
+        @com.aliyun.core.annotation.NameInMap("FormJumpType")
         private Boolean formJumpType;
 
-        @NameInMap("FormSelectImgType")
+        @com.aliyun.core.annotation.NameInMap("FormSelectImgType")
         private String formSelectImgType;
 
-        @NameInMap("Images")
-        private java.util.List < String > images;
+        @com.aliyun.core.annotation.NameInMap("Images")
+        private java.util.List<String> images;
 
-        @NameInMap("IsTagVisibleBy3d")
+        @com.aliyun.core.annotation.NameInMap("IsTagVisibleBy3d")
         private Boolean isTagVisibleBy3d;
 
-        @NameInMap("Link")
+        @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
 
-        @NameInMap("PanoId")
+        @com.aliyun.core.annotation.NameInMap("PanoId")
         private String panoId;
 
-        @NameInMap("Position")
-        private java.util.List < Double > position;
+        @com.aliyun.core.annotation.NameInMap("Position")
+        private java.util.List<Double> position;
 
-        @NameInMap("PositionPanoCube")
-        private java.util.List < Double > positionPanoCube;
+        @com.aliyun.core.annotation.NameInMap("PositionPanoCube")
+        private java.util.List<Double> positionPanoCube;
 
-        @NameInMap("RelatedPanoIds")
-        private java.util.List < String > relatedPanoIds;
+        @com.aliyun.core.annotation.NameInMap("RelatedPanoIds")
+        private java.util.List<String> relatedPanoIds;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private Long sceneId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Video")
+        @com.aliyun.core.annotation.NameInMap("Video")
         private String video;
 
         private Config(Builder builder) {
@@ -775,7 +1003,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return formImgSize
          */
-        public java.util.List < Long > getFormImgSize() {
+        public java.util.List<Long> getFormImgSize() {
             return this.formImgSize;
         }
 
@@ -796,7 +1024,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < String > getImages() {
+        public java.util.List<String> getImages() {
             return this.images;
         }
 
@@ -824,21 +1052,21 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return position
          */
-        public java.util.List < Double > getPosition() {
+        public java.util.List<Double> getPosition() {
             return this.position;
         }
 
         /**
          * @return positionPanoCube
          */
-        public java.util.List < Double > getPositionPanoCube() {
+        public java.util.List<Double> getPositionPanoCube() {
             return this.positionPanoCube;
         }
 
         /**
          * @return relatedPanoIds
          */
-        public java.util.List < String > getRelatedPanoIds() {
+        public java.util.List<String> getRelatedPanoIds() {
             return this.relatedPanoIds;
         }
 
@@ -867,22 +1095,22 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private String backgroundColor; 
             private ButtonConfig buttonConfig; 
             private String content; 
-            private java.util.List < Long > formImgSize; 
+            private java.util.List<Long> formImgSize; 
             private Boolean formJumpType; 
             private String formSelectImgType; 
-            private java.util.List < String > images; 
+            private java.util.List<String> images; 
             private Boolean isTagVisibleBy3d; 
             private String link; 
             private String panoId; 
-            private java.util.List < Double > position; 
-            private java.util.List < Double > positionPanoCube; 
-            private java.util.List < String > relatedPanoIds; 
+            private java.util.List<Double> position; 
+            private java.util.List<Double> positionPanoCube; 
+            private java.util.List<String> relatedPanoIds; 
             private Long sceneId; 
             private String title; 
             private String video; 
 
             /**
-             * 背景色
+             * BackgroundColor.
              */
             public Builder backgroundColor(String backgroundColor) {
                 this.backgroundColor = backgroundColor;
@@ -890,7 +1118,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 按钮配置
+             * ButtonConfig.
              */
             public Builder buttonConfig(ButtonConfig buttonConfig) {
                 this.buttonConfig = buttonConfig;
@@ -898,7 +1126,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 内容
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -908,7 +1136,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             /**
              * FormImgSize.
              */
-            public Builder formImgSize(java.util.List < Long > formImgSize) {
+            public Builder formImgSize(java.util.List<Long> formImgSize) {
                 this.formImgSize = formImgSize;
                 return this;
             }
@@ -930,15 +1158,15 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 图片链接
+             * Images.
              */
-            public Builder images(java.util.List < String > images) {
+            public Builder images(java.util.List<String> images) {
                 this.images = images;
                 return this;
             }
 
             /**
-             * 是否在鸟瞰模式下显示
+             * IsTagVisibleBy3d.
              */
             public Builder isTagVisibleBy3d(Boolean isTagVisibleBy3d) {
                 this.isTagVisibleBy3d = isTagVisibleBy3d;
@@ -946,7 +1174,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 超链接
+             * Link.
              */
             public Builder link(String link) {
                 this.link = link;
@@ -954,7 +1182,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 点位ID
+             * PanoId.
              */
             public Builder panoId(String panoId) {
                 this.panoId = panoId;
@@ -962,9 +1190,9 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 坐标
+             * Position.
              */
-            public Builder position(java.util.List < Double > position) {
+            public Builder position(java.util.List<Double> position) {
                 this.position = position;
                 return this;
             }
@@ -972,7 +1200,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             /**
              * PositionPanoCube.
              */
-            public Builder positionPanoCube(java.util.List < Double > positionPanoCube) {
+            public Builder positionPanoCube(java.util.List<Double> positionPanoCube) {
                 this.positionPanoCube = positionPanoCube;
                 return this;
             }
@@ -980,13 +1208,13 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             /**
              * RelatedPanoIds.
              */
-            public Builder relatedPanoIds(java.util.List < String > relatedPanoIds) {
+            public Builder relatedPanoIds(java.util.List<String> relatedPanoIds) {
                 this.relatedPanoIds = relatedPanoIds;
                 return this;
             }
 
             /**
-             * 场景ID
+             * SceneId.
              */
             public Builder sceneId(Long sceneId) {
                 this.sceneId = sceneId;
@@ -994,7 +1222,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1002,7 +1230,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 视频链接
+             * Video.
              */
             public Builder video(String video) {
                 this.video = video;
@@ -1016,20 +1244,26 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private Config config;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Position")
-        private java.util.List < Double > position;
+        @com.aliyun.core.annotation.NameInMap("Position")
+        private java.util.List<Double> position;
 
-        @NameInMap("PositionPanoCube")
-        private java.util.List < Double > positionPanoCube;
+        @com.aliyun.core.annotation.NameInMap("PositionPanoCube")
+        private java.util.List<Double> positionPanoCube;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Tags(Builder builder) {
@@ -1065,14 +1299,14 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return position
          */
-        public java.util.List < Double > getPosition() {
+        public java.util.List<Double> getPosition() {
             return this.position;
         }
 
         /**
          * @return positionPanoCube
          */
-        public java.util.List < Double > getPositionPanoCube() {
+        public java.util.List<Double> getPositionPanoCube() {
             return this.positionPanoCube;
         }
 
@@ -1086,12 +1320,12 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         public static final class Builder {
             private Config config; 
             private String id; 
-            private java.util.List < Double > position; 
-            private java.util.List < Double > positionPanoCube; 
+            private java.util.List<Double> position; 
+            private java.util.List<Double> positionPanoCube; 
             private String type; 
 
             /**
-             * 配置
+             * Config.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -1099,7 +1333,7 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 标签ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1107,9 +1341,9 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 坐标
+             * Position.
              */
-            public Builder position(java.util.List < Double > position) {
+            public Builder position(java.util.List<Double> position) {
                 this.position = position;
                 return this;
             }
@@ -1117,13 +1351,13 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             /**
              * PositionPanoCube.
              */
-            public Builder positionPanoCube(java.util.List < Double > positionPanoCube) {
+            public Builder positionPanoCube(java.util.List<Double> positionPanoCube) {
                 this.positionPanoCube = positionPanoCube;
                 return this;
             }
 
             /**
-             * 热点类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1137,12 +1371,18 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetScenePreviewDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScenePreviewDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Model")
+        @com.aliyun.core.annotation.NameInMap("Model")
         private Model model;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Data(Builder builder) {
             this.model = builder.model;
@@ -1167,16 +1407,16 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private Model model; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * 模型数据
+             * Model.
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -1184,9 +1424,9 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             }
 
             /**
-             * 热点数据
+             * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

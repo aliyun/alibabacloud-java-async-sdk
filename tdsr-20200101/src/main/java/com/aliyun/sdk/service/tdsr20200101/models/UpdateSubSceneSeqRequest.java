@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSubSceneSeqRequest} extends {@link RequestModel}
  *
  * <p>UpdateSubSceneSeqRequest</p>
  */
 public class UpdateSubSceneSeqRequest extends Request {
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Query
-    @NameInMap("SortSubSceneIds")
-    @Validation(required = true)
-    private java.util.List < String > sortSubSceneIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortSubSceneIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> sortSubSceneIds;
 
     private UpdateSubSceneSeqRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class UpdateSubSceneSeqRequest extends Request {
     /**
      * @return sortSubSceneIds
      */
-    public java.util.List < String > getSortSubSceneIds() {
+    public java.util.List<String> getSortSubSceneIds() {
         return this.sortSubSceneIds;
     }
 
     public static final class Builder extends Request.Builder<UpdateSubSceneSeqRequest, Builder> {
         private String sceneId; 
-        private java.util.List < String > sortSubSceneIds; 
+        private java.util.List<String> sortSubSceneIds; 
 
         private Builder() {
             super();
@@ -70,7 +75,10 @@ public class UpdateSubSceneSeqRequest extends Request {
         } 
 
         /**
-         * 子场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgyuyewyew****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -79,9 +87,9 @@ public class UpdateSubSceneSeqRequest extends Request {
         }
 
         /**
-         * SortSubSceneIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder sortSubSceneIds(java.util.List < String > sortSubSceneIds) {
+        public Builder sortSubSceneIds(java.util.List<String> sortSubSceneIds) {
             String sortSubSceneIdsShrink = shrink(sortSubSceneIds, "SortSubSceneIds", "json");
             this.putQueryParameter("SortSubSceneIds", sortSubSceneIdsShrink);
             this.sortSubSceneIds = sortSubSceneIds;

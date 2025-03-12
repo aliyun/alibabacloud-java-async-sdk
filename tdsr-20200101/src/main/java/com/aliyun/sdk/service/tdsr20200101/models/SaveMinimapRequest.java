@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveMinimapRequest} extends {@link RequestModel}
  *
  * <p>SaveMinimapRequest</p>
  */
 public class SaveMinimapRequest extends Request {
-    @Query
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private SaveMinimapRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class SaveMinimapRequest extends Request {
         } 
 
         /**
-         * 小地图数据，json字符串
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -79,7 +87,7 @@ public class SaveMinimapRequest extends Request {
         }
 
         /**
-         * 场景ID
+         * <p>This parameter is required.</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

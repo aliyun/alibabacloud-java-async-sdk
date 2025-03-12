@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotspotConfigRequest} extends {@link RequestModel}
  *
  * <p>GetHotspotConfigRequest</p>
  */
 public class GetHotspotConfigRequest extends Request {
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Query
-    @NameInMap("PreviewToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreviewToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String previewToken;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long type;
 
     private GetHotspotConfigRequest(Builder builder) {
@@ -116,7 +121,10 @@ public class GetHotspotConfigRequest extends Request {
         }
 
         /**
-         * PreviewToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>344794c32937474a9c59eb130936****</p>
          */
         public Builder previewToken(String previewToken) {
             this.putQueryParameter("PreviewToken", previewToken);
@@ -125,7 +133,10 @@ public class GetHotspotConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Long type) {
             this.putQueryParameter("Type", type);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LinkImageRequest} extends {@link RequestModel}
  *
  * <p>LinkImageRequest</p>
  */
 public class LinkImageRequest extends Request {
-    @Query
-    @NameInMap("CameraHeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CameraHeight")
     private Integer cameraHeight;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("SubSceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subSceneId;
 
     private LinkImageRequest(Builder builder) {
@@ -98,7 +103,7 @@ public class LinkImageRequest extends Request {
         } 
 
         /**
-         * 相机高度 单位 cm
+         * CameraHeight.
          */
         public Builder cameraHeight(Integer cameraHeight) {
             this.putQueryParameter("CameraHeight", cameraHeight);
@@ -107,7 +112,10 @@ public class LinkImageRequest extends Request {
         }
 
         /**
-         * 图片或者视频名称xxx.jpg
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****.jpg</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -116,7 +124,7 @@ public class LinkImageRequest extends Request {
         }
 
         /**
-         * 平台标识，默认PC
+         * Platform.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -125,7 +133,10 @@ public class LinkImageRequest extends Request {
         }
 
         /**
-         * 子场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder subSceneId(String subSceneId) {
             this.putQueryParameter("SubSceneId", subSceneId);

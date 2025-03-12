@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddRelativePositionRequest} extends {@link RequestModel}
  *
  * <p>AddRelativePositionRequest</p>
  */
 public class AddRelativePositionRequest extends Request {
-    @Query
-    @NameInMap("RelativePosition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelativePosition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relativePosition;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private AddRelativePositionRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class AddRelativePositionRequest extends Request {
         } 
 
         /**
-         * 相对位置信息
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;：&quot;value&quot;}</p>
          */
         public Builder relativePosition(String relativePosition) {
             this.putQueryParameter("RelativePosition", relativePosition);
@@ -79,7 +87,10 @@ public class AddRelativePositionRequest extends Request {
         }
 
         /**
-         * 场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

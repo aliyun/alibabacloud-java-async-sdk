@@ -1,42 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskStatusResponseBody</p>
  */
 public class GetTaskStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetTaskStatusResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.errorCode = builder.errorCode;
         this.errorMsg = builder.errorMsg;
@@ -53,6 +62,13 @@ public class GetTaskStatusResponseBody extends TeaModel {
 
     public static GetTaskStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -112,6 +128,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Long code; 
         private String errorCode; 
         private String errorMsg; 
@@ -122,7 +139,15 @@ public class GetTaskStatusResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * 返回码
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -130,7 +155,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 任务执行失败错误码
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -138,7 +163,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 任务执行失败错误消息
+         * ErrorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -146,7 +171,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 错误消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +179,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，与入参requestId对应
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +187,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 未开始 :init 处理中 : processing    失败 :failure   完成 :succeed  取消 :canceled
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -170,7 +195,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 是否请求成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +203,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 墙线预测: wall_line 切图: cut_image   重建: build  直角优化：right_angle_optimization  其他：other
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -191,4 +216,171 @@ public class GetTaskStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskStatusResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
 }

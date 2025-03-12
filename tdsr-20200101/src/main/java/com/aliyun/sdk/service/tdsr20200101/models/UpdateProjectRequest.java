@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectRequest} extends {@link RequestModel}
  *
  * <p>UpdateProjectRequest</p>
  */
 public class UpdateProjectRequest extends Request {
-    @Query
-    @NameInMap("BusinessId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessId")
     private String businessId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private UpdateProjectRequest(Builder builder) {
@@ -83,7 +88,7 @@ public class UpdateProjectRequest extends Request {
         } 
 
         /**
-         * 业务Id
+         * BusinessId.
          */
         public Builder businessId(String businessId) {
             this.putQueryParameter("BusinessId", businessId);
@@ -92,7 +97,10 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * 项目id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -101,7 +109,7 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * 项目名称
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

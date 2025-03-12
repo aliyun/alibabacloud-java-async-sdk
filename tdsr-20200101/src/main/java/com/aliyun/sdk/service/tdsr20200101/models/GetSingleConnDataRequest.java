@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSingleConnDataRequest} extends {@link RequestModel}
  *
  * <p>GetSingleConnDataRequest</p>
  */
 public class GetSingleConnDataRequest extends Request {
-    @Query
-    @NameInMap("SubSceneId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSceneId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private String subSceneId;
 
     private GetSingleConnDataRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class GetSingleConnDataRequest extends Request {
         } 
 
         /**
-         * 子场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder subSceneId(String subSceneId) {
             this.putQueryParameter("SubSceneId", subSceneId);

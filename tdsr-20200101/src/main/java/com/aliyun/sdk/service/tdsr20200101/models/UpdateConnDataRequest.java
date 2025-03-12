@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConnDataRequest} extends {@link RequestModel}
  *
  * <p>UpdateConnDataRequest</p>
  */
 public class UpdateConnDataRequest extends Request {
-    @Query
-    @NameInMap("ConnData")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnData")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connData;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private UpdateConnDataRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class UpdateConnDataRequest extends Request {
         } 
 
         /**
-         * 关联数据
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder connData(String connData) {
             this.putQueryParameter("ConnData", connData);
@@ -79,7 +87,10 @@ public class UpdateConnDataRequest extends Request {
         }
 
         /**
-         * 场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

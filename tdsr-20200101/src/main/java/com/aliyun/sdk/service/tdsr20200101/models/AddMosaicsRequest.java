@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMosaicsRequest} extends {@link RequestModel}
  *
  * <p>AddMosaicsRequest</p>
  */
 public class AddMosaicsRequest extends Request {
-    @Query
-    @NameInMap("MarkPosition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MarkPosition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String markPosition;
 
-    @Query
-    @NameInMap("SubSceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subSceneId;
 
     private AddMosaicsRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class AddMosaicsRequest extends Request {
         } 
 
         /**
-         * 马赛克位置数据
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;x&quot;: 504,&quot;y&quot;: 450,&quot;w&quot;: 256,&quot;h&quot;: 153}]</p>
          */
         public Builder markPosition(String markPosition) {
             this.putQueryParameter("MarkPosition", markPosition);
@@ -79,7 +87,10 @@ public class AddMosaicsRequest extends Request {
         }
 
         /**
-         * 子场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skjjskjk****</p>
          */
         public Builder subSceneId(String subSceneId) {
             this.putQueryParameter("SubSceneId", subSceneId);

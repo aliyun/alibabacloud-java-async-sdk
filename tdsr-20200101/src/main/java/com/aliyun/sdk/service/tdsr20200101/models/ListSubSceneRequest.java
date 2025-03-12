@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubSceneRequest} extends {@link RequestModel}
  *
  * <p>ListSubSceneRequest</p>
  */
 public class ListSubSceneRequest extends Request {
-    @Query
-    @NameInMap("PageNum")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Query
-    @NameInMap("ShowLayoutData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowLayoutData")
     private Boolean showLayoutData;
 
-    @Query
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
     private ListSubSceneRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class ListSubSceneRequest extends Request {
         } 
 
         /**
-         * 页码
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -122,7 +130,10 @@ public class ListSubSceneRequest extends Request {
         }
 
         /**
-         * 页长
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -131,7 +142,10 @@ public class ListSubSceneRequest extends Request {
         }
 
         /**
-         * 场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L2omaCMmQZZkEg4pE****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -149,7 +163,7 @@ public class ListSubSceneRequest extends Request {
         }
 
         /**
-         * 排序字段，默认：NAME（名称），SEQUENCE（自定义排序）
+         * SortField.
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);

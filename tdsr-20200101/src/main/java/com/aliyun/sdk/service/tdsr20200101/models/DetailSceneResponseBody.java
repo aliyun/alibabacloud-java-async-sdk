@@ -1,72 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetailSceneResponseBody} extends {@link TeaModel}
  *
  * <p>DetailSceneResponseBody</p>
  */
 public class DetailSceneResponseBody extends TeaModel {
-    @NameInMap("Captures")
-    private java.util.List < Captures> captures;
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Captures")
+    private java.util.List<Captures> captures;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("CoverUrl")
+    @com.aliyun.core.annotation.NameInMap("CoverUrl")
     private String coverUrl;
 
-    @NameInMap("FloorPlans")
-    private java.util.List < FloorPlans> floorPlans;
+    @com.aliyun.core.annotation.NameInMap("FloorPlans")
+    private java.util.List<FloorPlans> floorPlans;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private Long gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private Long gmtModified;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PreviewToken")
+    @com.aliyun.core.annotation.NameInMap("PreviewToken")
     private String previewToken;
 
-    @NameInMap("Published")
+    @com.aliyun.core.annotation.NameInMap("Published")
     private Boolean published;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceNum")
+    @com.aliyun.core.annotation.NameInMap("SourceNum")
     private Long sourceNum;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusName")
+    @com.aliyun.core.annotation.NameInMap("StatusName")
     private String statusName;
 
-    @NameInMap("SubSceneNum")
+    @com.aliyun.core.annotation.NameInMap("SubSceneNum")
     private Long subSceneNum;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DetailSceneResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.captures = builder.captures;
         this.code = builder.code;
         this.coverUrl = builder.coverUrl;
@@ -96,9 +105,16 @@ public class DetailSceneResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
      * @return captures
      */
-    public java.util.List < Captures> getCaptures() {
+    public java.util.List<Captures> getCaptures() {
         return this.captures;
     }
 
@@ -119,7 +135,7 @@ public class DetailSceneResponseBody extends TeaModel {
     /**
      * @return floorPlans
      */
-    public java.util.List < FloorPlans> getFloorPlans() {
+    public java.util.List<FloorPlans> getFloorPlans() {
         return this.floorPlans;
     }
 
@@ -222,10 +238,11 @@ public class DetailSceneResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Captures> captures; 
+        private AccessDeniedDetail accessDeniedDetail; 
+        private java.util.List<Captures> captures; 
         private Long code; 
         private String coverUrl; 
-        private java.util.List < FloorPlans> floorPlans; 
+        private java.util.List<FloorPlans> floorPlans; 
         private Long gmtCreate; 
         private Long gmtModified; 
         private String id; 
@@ -242,15 +259,23 @@ public class DetailSceneResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * 实勘图列表
+         * AccessDeniedDetail.
          */
-        public Builder captures(java.util.List < Captures> captures) {
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Captures.
+         */
+        public Builder captures(java.util.List<Captures> captures) {
             this.captures = captures;
             return this;
         }
 
         /**
-         * 返回码
+         * Code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -258,7 +283,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 封面地址
+         * CoverUrl.
          */
         public Builder coverUrl(String coverUrl) {
             this.coverUrl = coverUrl;
@@ -268,13 +293,13 @@ public class DetailSceneResponseBody extends TeaModel {
         /**
          * FloorPlans.
          */
-        public Builder floorPlans(java.util.List < FloorPlans> floorPlans) {
+        public Builder floorPlans(java.util.List<FloorPlans> floorPlans) {
             this.floorPlans = floorPlans;
             return this;
         }
 
         /**
-         * 创建时间
+         * GmtCreate.
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -282,7 +307,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 最后修改时间
+         * GmtModified.
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -290,7 +315,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 主场景Id
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -298,7 +323,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 错误消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -306,7 +331,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 场景名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -314,7 +339,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 预览Token
+         * PreviewToken.
          */
         public Builder previewToken(String previewToken) {
             this.previewToken = previewToken;
@@ -322,7 +347,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 是否已发布 true：已发布：false：未发布
+         * Published.
          */
         public Builder published(Boolean published) {
             this.published = published;
@@ -330,7 +355,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，与入参requestId对应
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -338,7 +363,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 资源数
+         * SourceNum.
          */
         public Builder sourceNum(Long sourceNum) {
             this.sourceNum = sourceNum;
@@ -346,7 +371,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 场景状态，init：初始化，published：已发布，publishing：发布中，copying：复制中，making：制作中，publishable：构建成功，makeFailed：制作失败
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -354,7 +379,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 状态名称
+         * StatusName.
          */
         public Builder statusName(String statusName) {
             this.statusName = statusName;
@@ -362,7 +387,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 子场景数
+         * SubSceneNum.
          */
         public Builder subSceneNum(Long subSceneNum) {
             this.subSceneNum = subSceneNum;
@@ -370,7 +395,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 是否请求成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -378,7 +403,7 @@ public class DetailSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 场景类型
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -391,11 +416,184 @@ public class DetailSceneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetailSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetailSceneResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DetailSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetailSceneResponseBody</p>
+     */
     public static class Captures extends TeaModel {
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Captures(Builder builder) {
@@ -430,7 +628,7 @@ public class DetailSceneResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * 图片名称
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -438,7 +636,7 @@ public class DetailSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 实勘图url
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -452,17 +650,23 @@ public class DetailSceneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetailSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetailSceneResponseBody</p>
+     */
     public static class FloorPlans extends TeaModel {
-        @NameInMap("ColorMapUrl")
+        @com.aliyun.core.annotation.NameInMap("ColorMapUrl")
         private String colorMapUrl;
 
-        @NameInMap("FloorLabel")
+        @com.aliyun.core.annotation.NameInMap("FloorLabel")
         private String floorLabel;
 
-        @NameInMap("FloorName")
+        @com.aliyun.core.annotation.NameInMap("FloorName")
         private String floorName;
 
-        @NameInMap("MiniMapUrl")
+        @com.aliyun.core.annotation.NameInMap("MiniMapUrl")
         private String miniMapUrl;
 
         private FloorPlans(Builder builder) {
@@ -515,7 +719,7 @@ public class DetailSceneResponseBody extends TeaModel {
             private String miniMapUrl; 
 
             /**
-             * 彩色图地址
+             * ColorMapUrl.
              */
             public Builder colorMapUrl(String colorMapUrl) {
                 this.colorMapUrl = colorMapUrl;
@@ -523,7 +727,7 @@ public class DetailSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 楼层索引
+             * FloorLabel.
              */
             public Builder floorLabel(String floorLabel) {
                 this.floorLabel = floorLabel;
@@ -531,7 +735,7 @@ public class DetailSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 楼层名称
+             * FloorName.
              */
             public Builder floorName(String floorName) {
                 this.floorName = floorName;
@@ -539,7 +743,7 @@ public class DetailSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 黑白图地址
+             * MiniMapUrl.
              */
             public Builder miniMapUrl(String miniMapUrl) {
                 this.miniMapUrl = miniMapUrl;

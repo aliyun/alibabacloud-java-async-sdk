@@ -1,45 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectResponseBody</p>
  */
 public class ListProjectResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
 
-    @NameInMap("HasNext")
+    @com.aliyun.core.annotation.NameInMap("HasNext")
     private Boolean hasNext;
 
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Long totalPage;
 
     private ListProjectResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.count = builder.count;
         this.currentPage = builder.currentPage;
@@ -57,6 +66,13 @@ public class ListProjectResponseBody extends TeaModel {
 
     public static ListProjectResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -90,7 +106,7 @@ public class ListProjectResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -123,18 +139,27 @@ public class ListProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Long code; 
         private Long count; 
         private Long currentPage; 
         private Boolean hasNext; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String message; 
         private String requestId; 
         private Boolean success; 
         private Long totalPage; 
 
         /**
-         * 返回码
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -142,7 +167,10 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * count
+         * <p>count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -150,7 +178,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页
+         * CurrentPage.
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -158,7 +186,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 是否有下一页
+         * HasNext.
          */
         public Builder hasNext(Boolean hasNext) {
             this.hasNext = hasNext;
@@ -166,15 +194,15 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 项目数据
+         * List.
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * 错误消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +210,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，与入参requestId对应
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +218,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 是否请求成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +226,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * 总页数
+         * TotalPage.
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -211,26 +239,199 @@ public class ListProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("BusinessName")
+        @com.aliyun.core.annotation.NameInMap("BusinessName")
         private String businessName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
         private List(Builder builder) {
@@ -310,7 +511,7 @@ public class ListProjectResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * 业务ID
+             * BusinessId.
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -318,7 +519,7 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 业务名称
+             * BusinessName.
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -326,7 +527,7 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -334,7 +535,7 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 项目ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -342,7 +543,7 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 最后修改时间
+             * ModifiedTime.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -350,7 +551,7 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * 项目名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -358,7 +559,10 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Token
+             * <p>Token</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d989623696ab4f87a80b8d5b0b0****</p>
              */
             public Builder token(String token) {
                 this.token = token;

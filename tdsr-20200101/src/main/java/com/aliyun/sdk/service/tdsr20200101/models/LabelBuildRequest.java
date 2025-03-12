@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LabelBuildRequest} extends {@link RequestModel}
  *
  * <p>LabelBuildRequest</p>
  */
 public class LabelBuildRequest extends Request {
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("ModelStyle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelStyle")
     private String modelStyle;
 
-    @Query
-    @NameInMap("OptimizeWallWidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OptimizeWallWidth")
     private String optimizeWallWidth;
 
-    @Query
-    @NameInMap("PlanStyle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanStyle")
     private String planStyle;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Query
-    @NameInMap("WallHeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WallHeight")
     private Long wallHeight;
 
     private LabelBuildRequest(Builder builder) {
@@ -125,7 +130,7 @@ public class LabelBuildRequest extends Request {
         } 
 
         /**
-         * 重建模式：MANUAL：手动（云端），默认，SEMI_AUTOMATIC：半自动（移动端）
+         * Mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -134,7 +139,7 @@ public class LabelBuildRequest extends Request {
         }
 
         /**
-         * 模型效果 PATCH：切片模型（默认） DEPTH：深度模型 VIRTUAL：虚拟模型 MOBILE：移动重建模型
+         * ModelStyle.
          */
         public Builder modelStyle(String modelStyle) {
             this.putQueryParameter("ModelStyle", modelStyle);
@@ -143,7 +148,7 @@ public class LabelBuildRequest extends Request {
         }
 
         /**
-         * 墙宽优化，OFF:关闭（默认） NORMAL：标准 ENHANCED：加强
+         * OptimizeWallWidth.
          */
         public Builder optimizeWallWidth(String optimizeWallWidth) {
             this.putQueryParameter("OptimizeWallWidth", optimizeWallWidth);
@@ -152,7 +157,7 @@ public class LabelBuildRequest extends Request {
         }
 
         /**
-         * 户型图，DEFAULT（默认），STANDARD（标准）
+         * PlanStyle.
          */
         public Builder planStyle(String planStyle) {
             this.putQueryParameter("PlanStyle", planStyle);
@@ -161,7 +166,10 @@ public class LabelBuildRequest extends Request {
         }
 
         /**
-         * 场景ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -170,7 +178,7 @@ public class LabelBuildRequest extends Request {
         }
 
         /**
-         * 墙高，默认0不设置，范围200-1000. 单位cm
+         * WallHeight.
          */
         public Builder wallHeight(Long wallHeight) {
             this.putQueryParameter("WallHeight", wallHeight);

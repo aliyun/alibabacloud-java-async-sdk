@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tdsr20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSceneRequest} extends {@link RequestModel}
  *
  * <p>AddSceneRequest</p>
  */
 public class AddSceneRequest extends Request {
-    @Query
-    @NameInMap("CustomerUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerUid")
     private String customerUid;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private String projectId;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private AddSceneRequest(Builder builder) {
@@ -108,7 +113,10 @@ public class AddSceneRequest extends Request {
         }
 
         /**
-         * 场景名称
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试名称</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -117,7 +125,10 @@ public class AddSceneRequest extends Request {
         }
 
         /**
-         * 项目ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -126,7 +137,10 @@ public class AddSceneRequest extends Request {
         }
 
         /**
-         * 场景类型 3D模型：MODEL_3D  全景图片：PIC  全景视频：VIDEO 混合：MIX
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODEL_3D</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
