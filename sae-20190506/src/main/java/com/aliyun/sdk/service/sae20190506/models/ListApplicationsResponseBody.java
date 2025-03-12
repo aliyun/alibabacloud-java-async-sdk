@@ -347,6 +347,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
+        private String namespaceName;
+
+        @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+        private String newSaeVersion;
+
         @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
         private String programmingLanguage;
 
@@ -377,6 +383,8 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.mem = builder.mem;
             this.mseEnabled = builder.mseEnabled;
             this.namespaceId = builder.namespaceId;
+            this.namespaceName = builder.namespaceName;
+            this.newSaeVersion = builder.newSaeVersion;
             this.programmingLanguage = builder.programmingLanguage;
             this.regionId = builder.regionId;
             this.runningInstances = builder.runningInstances;
@@ -471,6 +479,20 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespaceName
+         */
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+        /**
+         * @return newSaeVersion
+         */
+        public String getNewSaeVersion() {
+            return this.newSaeVersion;
+        }
+
+        /**
          * @return programmingLanguage
          */
         public String getProgrammingLanguage() {
@@ -524,6 +546,8 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Integer mem; 
             private Boolean mseEnabled; 
             private String namespaceId; 
+            private String namespaceName; 
+            private String newSaeVersion; 
             private String programmingLanguage; 
             private String regionId; 
             private Integer runningInstances; 
@@ -616,6 +640,22 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
+                return this;
+            }
+
+            /**
+             * NamespaceName.
+             */
+            public Builder namespaceName(String namespaceName) {
+                this.namespaceName = namespaceName;
+                return this;
+            }
+
+            /**
+             * NewSaeVersion.
+             */
+            public Builder newSaeVersion(String newSaeVersion) {
+                this.newSaeVersion = newSaeVersion;
                 return this;
             }
 
@@ -796,6 +836,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
+        private String namespaceName;
+
+        @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+        private String newSaeVersion;
+
         @com.aliyun.core.annotation.NameInMap("PackageUrl")
         private String packageUrl;
 
@@ -826,6 +872,8 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.mseEnabled = builder.mseEnabled;
             this.mseNamespaceId = builder.mseNamespaceId;
             this.namespaceId = builder.namespaceId;
+            this.namespaceName = builder.namespaceName;
+            this.newSaeVersion = builder.newSaeVersion;
             this.packageUrl = builder.packageUrl;
             this.programmingLanguage = builder.programmingLanguage;
             this.regionId = builder.regionId;
@@ -940,6 +988,20 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespaceName
+         */
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+        /**
+         * @return newSaeVersion
+         */
+        public String getNewSaeVersion() {
+            return this.newSaeVersion;
+        }
+
+        /**
          * @return packageUrl
          */
         public String getPackageUrl() {
@@ -989,6 +1051,8 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Boolean mseEnabled; 
             private String mseNamespaceId; 
             private String namespaceId; 
+            private String namespaceName; 
+            private String newSaeVersion; 
             private String packageUrl; 
             private String programmingLanguage; 
             private String regionId; 
@@ -1153,6 +1217,22 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
+                return this;
+            }
+
+            /**
+             * NamespaceName.
+             */
+            public Builder namespaceName(String namespaceName) {
+                this.namespaceName = namespaceName;
+                return this;
+            }
+
+            /**
+             * NewSaeVersion.
+             */
+            public Builder newSaeVersion(String newSaeVersion) {
+                this.newSaeVersion = newSaeVersion;
                 return this;
             }
 
