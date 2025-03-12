@@ -23,13 +23,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("success")
-    private Boolean success;
-
     private TransitIntegratedDirectionResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -54,17 +50,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
         private Data data; 
         private String requestId; 
-        private Boolean success; 
 
         /**
          * data.
@@ -79,14 +67,6 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
@@ -2090,6 +2070,53 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
      *
      * <p>TransitIntegratedDirectionResponseBody</p>
      */
+    public static class TaxiPolyline extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("polyline")
+        private String polyline;
+
+        private TaxiPolyline(Builder builder) {
+            this.polyline = builder.polyline;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaxiPolyline create() {
+            return builder().build();
+        }
+
+        /**
+         * @return polyline
+         */
+        public String getPolyline() {
+            return this.polyline;
+        }
+
+        public static final class Builder {
+            private String polyline; 
+
+            /**
+             * polyline.
+             */
+            public Builder polyline(String polyline) {
+                this.polyline = polyline;
+                return this;
+            }
+
+            public TaxiPolyline build() {
+                return new TaxiPolyline(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TransitIntegratedDirectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>TransitIntegratedDirectionResponseBody</p>
+     */
     public static class Taxi extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("destinationName")
         private String destinationName;
@@ -2112,6 +2139,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("originPoint")
         private String originPoint;
 
+        @com.aliyun.core.annotation.NameInMap("polyline")
+        private TaxiPolyline polyline;
+
         @com.aliyun.core.annotation.NameInMap("price")
         private String price;
 
@@ -2123,6 +2153,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             this.index = builder.index;
             this.originName = builder.originName;
             this.originPoint = builder.originPoint;
+            this.polyline = builder.polyline;
             this.price = builder.price;
         }
 
@@ -2184,6 +2215,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
 
         /**
+         * @return polyline
+         */
+        public TaxiPolyline getPolyline() {
+            return this.polyline;
+        }
+
+        /**
          * @return price
          */
         public String getPrice() {
@@ -2198,6 +2236,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String index; 
             private String originName; 
             private String originPoint; 
+            private TaxiPolyline polyline; 
             private String price; 
 
             /**
@@ -2253,6 +2292,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
              */
             public Builder originPoint(String originPoint) {
                 this.originPoint = originPoint;
+                return this;
+            }
+
+            /**
+             * polyline.
+             */
+            public Builder polyline(TaxiPolyline polyline) {
+                this.polyline = polyline;
                 return this;
             }
 
