@@ -732,6 +732,12 @@ public class UpdateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
+        @com.aliyun.core.annotation.NameInMap("DatasetVersion")
+        private String datasetVersion;
+
+        @com.aliyun.core.annotation.NameInMap("MountAccess")
+        private String mountAccess;
+
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
@@ -747,6 +753,8 @@ public class UpdateInstanceRequest extends Request {
 
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
+            this.datasetVersion = builder.datasetVersion;
+            this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.optionType = builder.optionType;
             this.options = builder.options;
@@ -766,6 +774,20 @@ public class UpdateInstanceRequest extends Request {
          */
         public String getDatasetId() {
             return this.datasetId;
+        }
+
+        /**
+         * @return datasetVersion
+         */
+        public String getDatasetVersion() {
+            return this.datasetVersion;
+        }
+
+        /**
+         * @return mountAccess
+         */
+        public String getMountAccess() {
+            return this.mountAccess;
         }
 
         /**
@@ -798,6 +820,8 @@ public class UpdateInstanceRequest extends Request {
 
         public static final class Builder {
             private String datasetId; 
+            private String datasetVersion; 
+            private String mountAccess; 
             private String mountPath; 
             private String optionType; 
             private String options; 
@@ -808,6 +832,22 @@ public class UpdateInstanceRequest extends Request {
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
+             * DatasetVersion.
+             */
+            public Builder datasetVersion(String datasetVersion) {
+                this.datasetVersion = datasetVersion;
+                return this;
+            }
+
+            /**
+             * MountAccess.
+             */
+            public Builder mountAccess(String mountAccess) {
+                this.mountAccess = mountAccess;
                 return this;
             }
 

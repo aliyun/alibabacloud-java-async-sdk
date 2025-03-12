@@ -1,3 +1,6 @@
+2025-03-12 Version: 1.1.40
+- Generated java-async 2022-01-01 for pai-dsw.
+
 2025-01-14 Version: 1.1.39
 - Generated java-async 2022-01-01 for pai-dsw.
 

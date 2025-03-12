@@ -1233,6 +1233,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
+        @com.aliyun.core.annotation.NameInMap("DatasetVersion")
+        private String datasetVersion;
+
         @com.aliyun.core.annotation.NameInMap("MountAccess")
         private String mountAccess;
 
@@ -1250,6 +1253,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
+            this.datasetVersion = builder.datasetVersion;
             this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.optionType = builder.optionType;
@@ -1270,6 +1274,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public String getDatasetId() {
             return this.datasetId;
+        }
+
+        /**
+         * @return datasetVersion
+         */
+        public String getDatasetVersion() {
+            return this.datasetVersion;
         }
 
         /**
@@ -1309,6 +1320,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String datasetId; 
+            private String datasetVersion; 
             private String mountAccess; 
             private String mountPath; 
             private String optionType; 
@@ -1320,6 +1332,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
+             * DatasetVersion.
+             */
+            public Builder datasetVersion(String datasetVersion) {
+                this.datasetVersion = datasetVersion;
                 return this;
             }
 
