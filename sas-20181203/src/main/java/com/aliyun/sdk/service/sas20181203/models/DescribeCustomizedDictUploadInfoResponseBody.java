@@ -35,6 +35,9 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
+    private String securityToken;
+
     @com.aliyun.core.annotation.NameInMap("Signature")
     private String signature;
 
@@ -45,6 +48,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         this.key = builder.key;
         this.policy = builder.policy;
         this.requestId = builder.requestId;
+        this.securityToken = builder.securityToken;
         this.signature = builder.signature;
     }
 
@@ -99,6 +103,13 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
      * @return signature
      */
     public String getSignature() {
@@ -112,6 +123,7 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         private String key; 
         private String policy; 
         private String requestId; 
+        private String securityToken; 
         private String signature; 
 
         /**
@@ -177,6 +189,14 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.securityToken = securityToken;
             return this;
         }
 

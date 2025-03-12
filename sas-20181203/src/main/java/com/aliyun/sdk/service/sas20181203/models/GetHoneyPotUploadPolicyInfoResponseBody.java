@@ -197,6 +197,9 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
+        private String securityToken;
+
         @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
@@ -206,6 +209,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             this.host = builder.host;
             this.key = builder.key;
             this.policy = builder.policy;
+            this.securityToken = builder.securityToken;
             this.signature = builder.signature;
         }
 
@@ -253,6 +257,13 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityToken
+         */
+        public String getSecurityToken() {
+            return this.securityToken;
+        }
+
+        /**
          * @return signature
          */
         public String getSignature() {
@@ -265,6 +276,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             private String host; 
             private String key; 
             private String policy; 
+            private String securityToken; 
             private String signature; 
 
             /**
@@ -319,6 +331,14 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
              */
             public Builder policy(String policy) {
                 this.policy = policy;
+                return this;
+            }
+
+            /**
+             * SecurityToken.
+             */
+            public Builder securityToken(String securityToken) {
+                this.securityToken = securityToken;
                 return this;
             }
 
