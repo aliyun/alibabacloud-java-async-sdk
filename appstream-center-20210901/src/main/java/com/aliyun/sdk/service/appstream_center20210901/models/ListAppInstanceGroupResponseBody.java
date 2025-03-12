@@ -940,6 +940,93 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
      *
      * <p>ListAppInstanceGroupResponseBody</p>
      */
+    public static class ResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Scope")
+        private String scope;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ResourceTags(Builder builder) {
+            this.key = builder.key;
+            this.scope = builder.scope;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return scope
+         */
+        public String getScope() {
+            return this.scope;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String scope; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Scope.
+             */
+            public Builder scope(String scope) {
+                this.scope = scope;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ResourceTags build() {
+                return new ResourceTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceGroupResponseBody</p>
+     */
     public static class AppInstanceGroupModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
@@ -1016,6 +1103,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceTags")
+        private java.util.List<ResourceTags> resourceTags;
+
         @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
 
@@ -1063,6 +1153,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             this.reserveMaxAmount = builder.reserveMaxAmount;
             this.reserveMinAmount = builder.reserveMinAmount;
             this.resourceStatus = builder.resourceStatus;
+            this.resourceTags = builder.resourceTags;
             this.scalingDownAfterIdleMinutes = builder.scalingDownAfterIdleMinutes;
             this.scalingStep = builder.scalingStep;
             this.scalingUsageThreshold = builder.scalingUsageThreshold;
@@ -1256,6 +1347,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceTags
+         */
+        public java.util.List<ResourceTags> getResourceTags() {
+            return this.resourceTags;
+        }
+
+        /**
          * @return scalingDownAfterIdleMinutes
          */
         public Integer getScalingDownAfterIdleMinutes() {
@@ -1330,6 +1428,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             private Integer reserveMaxAmount; 
             private Integer reserveMinAmount; 
             private String resourceStatus; 
+            private java.util.List<ResourceTags> resourceTags; 
             private Integer scalingDownAfterIdleMinutes; 
             private Integer scalingStep; 
             private String scalingUsageThreshold; 
@@ -1535,6 +1634,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
+                return this;
+            }
+
+            /**
+             * ResourceTags.
+             */
+            public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
+                this.resourceTags = resourceTags;
                 return this;
             }
 

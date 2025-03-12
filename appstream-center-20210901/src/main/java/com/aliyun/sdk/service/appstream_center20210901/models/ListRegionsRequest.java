@@ -73,7 +73,12 @@ public class ListRegionsRequest extends Request {
         } 
 
         /**
-         * BizSource.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder bizSource(String bizSource) {
             this.putQueryParameter("BizSource", bizSource);

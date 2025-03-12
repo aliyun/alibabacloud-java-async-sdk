@@ -249,6 +249,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MainEthPublicIp")
         private String mainEthPublicIp;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
+        private String networkInterfaceIp;
+
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
@@ -266,6 +269,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.mainEthPublicIp = builder.mainEthPublicIp;
+            this.networkInterfaceIp = builder.networkInterfaceIp;
             this.nodeId = builder.nodeId;
             this.sessionStatus = builder.sessionStatus;
             this.status = builder.status;
@@ -329,6 +333,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkInterfaceIp
+         */
+        public String getNetworkInterfaceIp() {
+            return this.networkInterfaceIp;
+        }
+
+        /**
          * @return nodeId
          */
         public String getNodeId() {
@@ -357,6 +368,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private String mainEthPublicIp; 
+            private String networkInterfaceIp; 
             private String nodeId; 
             private String sessionStatus; 
             private String status; 
@@ -429,6 +441,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
              */
             public Builder mainEthPublicIp(String mainEthPublicIp) {
                 this.mainEthPublicIp = mainEthPublicIp;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceIp.
+             */
+            public Builder networkInterfaceIp(String networkInterfaceIp) {
+                this.networkInterfaceIp = networkInterfaceIp;
                 return this;
             }
 

@@ -247,7 +247,18 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * PerSessionPerApp.
+         * <p>Specifies whether only one application can be opened in a session.</p>
+         * <ul>
+         * <li>After you enable this feature, the system assigns a session to each application if you open multiple applications in a delivery group. This consumes a larger number of sessions.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder perSessionPerApp(Boolean perSessionPerApp) {
             this.putBodyParameter("PerSessionPerApp", perSessionPerApp);
@@ -673,7 +684,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private Boolean userProfileSwitch; 
 
             /**
-             * FileSystemId.
+             * <p>The ID of the File Storage NAS (NAS) file system used to store user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>06ae94****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -681,7 +695,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * UserProfileSwitch.
+             * <p>Specifies whether user data roaming is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder userProfileSwitch(Boolean userProfileSwitch) {
                 this.userProfileSwitch = userProfileSwitch;
@@ -740,7 +762,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private Boolean profileFollowSwitch; 
 
             /**
-             * FileSystemId.
+             * <p>The ID of the File Storage NAS (NAS) file system used to store user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>06ae94****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -827,7 +852,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * UserProfile.
+             * <p>The configurations of user data roaming.</p>
              */
             public Builder userProfile(UserProfile userProfile) {
                 this.userProfile = userProfile;
