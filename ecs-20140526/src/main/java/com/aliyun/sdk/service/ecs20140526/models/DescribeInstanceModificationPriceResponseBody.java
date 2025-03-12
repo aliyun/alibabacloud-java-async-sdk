@@ -125,6 +125,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
             /**
              * <p>The description of the pricing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>If you subscribe to an instance for one year, you can receive a 15% discount off the list price.</p>
              */
             public Builder description(String description) {
                 this.description = description;

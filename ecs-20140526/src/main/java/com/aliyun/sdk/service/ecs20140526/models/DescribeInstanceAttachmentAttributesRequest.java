@@ -215,7 +215,7 @@ public class DescribeInstanceAttachmentAttributesRequest extends Request {
 
         /**
          * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
+         * <p>Page starts from page 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>

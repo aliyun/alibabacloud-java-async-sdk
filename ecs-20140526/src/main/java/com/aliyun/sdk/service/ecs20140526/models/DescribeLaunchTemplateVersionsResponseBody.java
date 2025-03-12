@@ -695,7 +695,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * DeleteOnRelease.
+             * <p>Indicates whether to retain the ENI when the associated instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteOnRelease(Boolean deleteOnRelease) {
                 this.deleteOnRelease = deleteOnRelease;

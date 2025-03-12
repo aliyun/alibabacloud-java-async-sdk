@@ -672,7 +672,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Boolean enableSriov; 
 
             /**
-             * EnableRss.
+             * <blockquote>
+             * <p>This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableRss(Boolean enableRss) {
                 this.enableRss = enableRss;

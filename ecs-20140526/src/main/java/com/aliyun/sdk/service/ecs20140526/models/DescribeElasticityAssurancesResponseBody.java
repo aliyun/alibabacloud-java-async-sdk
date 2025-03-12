@@ -579,7 +579,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private Integer startHour; 
 
             /**
-             * EndHour.
+             * <p>The time when the time-segmented assurance ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -587,7 +590,15 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceType.
+             * <p>The type of the recurrence rule. Valid values:</p>
+             * <ul>
+             * <li>Daily</li>
+             * <li>Weekly</li>
+             * <li>Monthly</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -595,7 +606,15 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceValue.
+             * <p>The recurrence value of the time-segmented assurance. Valid values:</p>
+             * <ul>
+             * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can set RecurrenceValue to two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -603,7 +622,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartHour.
+             * <p>The time when the time-segmented assurance takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;
@@ -1100,7 +1122,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * <p>The type of the elasticity assurance. Valid values:</p>
+             * <ul>
+             * <li>ElasticityAssurance: the general-purpose elasticity assurance.</li>
+             * <li>TimeDivisionElasticityAssurance: the time-segmented assurance of the elasticity assurance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ElasticityAssurance</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -1145,7 +1174,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceRules.
+             * <p>The recurrence rules of the time-segmented assurances.</p>
              */
             public Builder recurrenceRules(RecurrenceRules recurrenceRules) {
                 this.recurrenceRules = recurrenceRules;

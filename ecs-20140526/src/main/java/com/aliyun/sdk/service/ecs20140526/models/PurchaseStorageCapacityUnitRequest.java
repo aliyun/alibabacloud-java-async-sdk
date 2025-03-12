@@ -65,6 +65,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -93,6 +97,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
@@ -190,6 +195,13 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -229,6 +241,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
@@ -251,6 +264,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
@@ -393,6 +407,15 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

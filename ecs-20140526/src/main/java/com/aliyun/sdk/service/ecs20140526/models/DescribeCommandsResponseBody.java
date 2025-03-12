@@ -234,6 +234,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
+        @com.aliyun.core.annotation.NameInMap("PatternRegex")
+        private String patternRegex;
+
         @com.aliyun.core.annotation.NameInMap("PossibleValues")
         private PossibleValues possibleValues;
 
@@ -244,6 +247,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             this.defaultValue = builder.defaultValue;
             this.description = builder.description;
             this.parameterName = builder.parameterName;
+            this.patternRegex = builder.patternRegex;
             this.possibleValues = builder.possibleValues;
             this.required = builder.required;
         }
@@ -278,6 +282,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
+         * @return patternRegex
+         */
+        public String getPatternRegex() {
+            return this.patternRegex;
+        }
+
+        /**
          * @return possibleValues
          */
         public PossibleValues getPossibleValues() {
@@ -295,6 +306,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String defaultValue; 
             private String description; 
             private String parameterName; 
+            private String patternRegex; 
             private PossibleValues possibleValues; 
             private Boolean required; 
 
@@ -328,6 +340,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
+                return this;
+            }
+
+            /**
+             * PatternRegex.
+             */
+            public Builder patternRegex(String patternRegex) {
+                this.patternRegex = patternRegex;
                 return this;
             }
 

@@ -2330,7 +2330,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * DeleteOnRelease.
+             * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only for secondary ENIs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteOnRelease(Boolean deleteOnRelease) {
                 this.deleteOnRelease = deleteOnRelease;
@@ -2417,7 +2428,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in <code>SecurityGroupIds.N</code> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * <p>The IDs of the security groups to which to assign the secondary ENI. The security groups and the secondary ENI must reside in the same VPC. The valid values of N in <code>SecurityGroupIds.N</code> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
              * <blockquote>
              * <p> You cannot specify both <code>NetworkInterface.N.SecurityGroupId</code> and <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
              * </blockquote>

@@ -364,7 +364,15 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -373,7 +381,17 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * AutoRenewPeriod.
+         * <p>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
+         * <ul>
+         * <li>Default value when <code>PeriodUnit</code> is set to Month: 1.</li>
+         * <li>Default value when <code>PeriodUnit</code> is set to Year: 12.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set <code>AutoRenew</code> to <code>true</code>, you must specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -407,8 +425,11 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * <p>The total number of instances for which to reserve capacity of an instance type.</p>
+         * <p>The total number of instances of an instance type for which you want to reserve capacity.</p>
          * <p>Valid values: 1 to 1000.</p>
+         * <blockquote>
+         * <p> You must specify this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -465,10 +486,11 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * <p>The term of the elasticity assurance. The unit of the term is determined by the <code>PeriodUnit</code> value. Valid values:</p>
+         * <p>The term of the elasticity assurance. The unit of the term is determined by the value of <code>PeriodUnit</code>. Valid values:</p>
          * <ul>
-         * <li>When <code>PeriodUnit</code> is set to <code>Month</code>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
-         * <li>When <code>PeriodUnit</code> is set to <code>Year</code>, the valid values are 1, 2, 3, 4, and 5.</li>
+         * <li>When the value of <code>PeriodUnit</code> is <code>Month</code>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>When the value of <code>PeriodUnit</code> is <code>Year</code>, the valid values are 1, 2, 3, 4, and 5.</li>
+         * <li>When the value of <code>PeriodUnit</code> is <code>Day</code>, the valid values are 1 to 365.</li>
          * </ul>
          * <p>Default value: 1.</p>
          * 
@@ -484,8 +506,14 @@ public class CreateElasticityAssuranceRequest extends Request {
         /**
          * <p>The unit of the term of the elasticity assurance. Valid values:</p>
          * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Year</p>
+         * </li>
+         * <li><p>Day</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> If you set <code>PeriodUnit</code> to <code>Day</code>, you must specify RecurrenceRules to create a time-segmented elasticity assurance.</p>
+         * </li>
          * </ul>
          * <p>Default value: Year.</p>
          * 
@@ -499,7 +527,10 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * RecurrenceRules.
+         * <p>The assurance schedules based on which the capacity reservation takes effect.</p>
+         * <blockquote>
+         * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+         * </blockquote>
          */
         public Builder recurrenceRules(java.util.List<RecurrenceRules> recurrenceRules) {
             this.putQueryParameter("RecurrenceRules", recurrenceRules);
@@ -740,7 +771,10 @@ public class CreateElasticityAssuranceRequest extends Request {
             private Integer startHour; 
 
             /**
-             * EndHour.
+             * <p>The end time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -748,7 +782,18 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * RecurrenceType.
+             * <p>The type of the assurance schedule. Valid values:</p>
+             * <ul>
+             * <li>Daily</li>
+             * <li>Weekly</li>
+             * <li>Monthly</li>
+             * </ul>
+             * <blockquote>
+             * <p> You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -756,7 +801,18 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * RecurrenceValue.
+             * <p>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
+             * <ul>
+             * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <code>1-5</code>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</li>
+             * </ul>
+             * <blockquote>
+             * <p> You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -764,7 +820,13 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * StartHour.
+             * <p>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>
+             * <blockquote>
+             * <p> You must specify both <code>StartHour</code> and <code>EndHour</code>. EndHour must be at least four hours later than StartHour.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;

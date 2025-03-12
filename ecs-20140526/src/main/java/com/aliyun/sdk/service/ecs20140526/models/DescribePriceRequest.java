@@ -842,7 +842,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * RecurrenceRules.
+         * <p>Recurrence rules for the time-segmented assurance of the elasticity assurance.</p>
+         * <blockquote>
+         * <p> The time-segmented assurance of the elasticity assurance is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+         * </blockquote>
          */
         public Builder recurrenceRules(java.util.List<RecurrenceRules> recurrenceRules) {
             this.putQueryParameter("RecurrenceRules", recurrenceRules);
@@ -882,14 +885,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Valid values:</p>
+         * <p>The type of the resource. Valid values:</p>
          * <ul>
-         * <li>instance: queries the most recent prices of ECS instances. When this parameter is set to <code>instance</code>, you must specify <code>InstanceType</code>.</li>
-         * <li>disk: queries the most recent prices of cloud disks. When this parameter is set to <code>disk</code>, you must specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code>.</li>
-         * <li>bandwidth: queries the most recent prices of network usage.</li>
+         * <li>instance: queries the most recent prices of ECS instances. If you set this parameter to <code>instance</code>, specify <code>InstanceType</code>.</li>
+         * <li>disk: queries the most recent prices of cloud disks. If you set this parameter to <code>disk</code>, specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code>.</li>
+         * <li>diskperformance: Queries the most recent prices of the provioned performance of the Enterprise SSD (ESSD) AutoPL disk. You must also specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.ProvisionedIops</code>.</li>
+         * <li>bandwidth: queries the most recent prices for network usage.</li>
          * <li>ddh: queries the most recent prices of dedicated hosts.</li>
-         * <li>ElasticityAssurance: queries the most recent prices of elasticity assurances. When this parameter is set to <code>ElasticityAssurance</code>, you must specify <code>InstanceType</code>.</li>
-         * <li>CapacityReservation: queries the most recent prices of capacity reservations. When this parameter is set to <code>CapacityReservation</code>, you must specify <code>InstanceType</code>.</li>
+         * <li>ElasticityAssurance: queries the most recent prices of elasticity assurances. If you set this parameter to <code>ElasticityAssurance</code>, specify <code>InstanceType</code>.</li>
+         * <li>CapacityReservation: queries the most recent prices of capacity reservations. If you set this parameter to <code>CapacityReservation</code>, specify <code>InstanceType</code>.</li>
          * </ul>
          * <p>Default value: instance.</p>
          * 
@@ -961,7 +965,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the time-segmented assurance of the elasticity assurance takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-30T06:32:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -1062,12 +1069,12 @@ public class DescribePriceRequest extends Request {
             /**
              * <p>The category of data disk N. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>ephemeral_ssd: local SSD</li>
-             * <li>cloud_essd: ESSD</li>
-             * <li>cloud_auto: ESSD AutoPL disk</li>
+             * <li>cloud: basic disk.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>ephemeral_ssd: local SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud_auto: ESSD AutoPL disk.</li>
              * </ul>
              * <p>Valid values of N: 1 to 16.</p>
              * 
@@ -1100,23 +1107,23 @@ public class DescribePriceRequest extends Request {
             /**
              * <p>The size of data disk N. Unit: GiB. Valid values:</p>
              * <ul>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+             * <li><p>Valid values if DataDisk.N.Category is set to cloud: 5 to 2000.</p>
              * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+             * <li><p>Valid values if DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
              * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+             * <li><p>Valid values if DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
              * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.</p>
+             * <li><p>Valid values if DataDisk.N.Category is set to cloud_auto: 1 to 32768.</p>
              * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of <code>DataDisk.N.PerformanceLevel</code>.</p>
+             * <li><p>Valid values if DataDisk.N.Category is set to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
              * <ul>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
-             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
+             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
+             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
+             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
              * </ul>
              * </li>
-             * <li><p>Valid values when DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</p>
+             * <li><p>Valid values if DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</p>
              * </li>
              * </ul>
              * <p>Valid values of N: 1 to 16.</p>
@@ -1130,7 +1137,14 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * ProvisionedIops.
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <blockquote>
+             * <p> This parameter is available only if you set <code>DataDisk.N.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>40000</p>
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -1396,7 +1410,10 @@ public class DescribePriceRequest extends Request {
             private Integer startHour; 
 
             /**
-             * EndHour.
+             * <p>The time when the time-segmented assurance ends. The value must be on the hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -1404,7 +1421,18 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * RecurrenceType.
+             * <p>The type of the recurrence rule. Valid values:</p>
+             * <ul>
+             * <li>Daily</li>
+             * <li>Weekly</li>
+             * <li>Monthly</li>
+             * </ul>
+             * <blockquote>
+             * <p> If this parameter is specified, specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -1412,7 +1440,18 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * RecurrenceValue.
+             * <p>The recurrency value of the time-segmented assurance.</p>
+             * <ul>
+             * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can set RecurrenceValue to two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If this parameter is specified, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -1420,7 +1459,13 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * StartHour.
+             * <p>The time when the time-segmented assurance takes effect. The value must be on the hour.</p>
+             * <blockquote>
+             * <p> You must specify both StartHour and EndHour. The EndHour time must be at least 4 hours later than the StartHour time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;

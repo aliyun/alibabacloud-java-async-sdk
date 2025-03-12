@@ -191,7 +191,9 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -203,7 +205,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the capacity reservation.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -233,9 +235,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Maximum value: 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
             private String id; 
 
             /**
-             * <p>The token used to start the next query.</p>
+             * <p>The ID of the capacity reservation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

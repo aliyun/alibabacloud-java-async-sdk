@@ -372,7 +372,17 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * <p>The type of the elasticity assurance. Valid values:</p>
+         * <ul>
+         * <li>ElasticityAssurance: the general-purpose elasticity assurance. RecurrenceRules is not specified for a general-purpose elasticity assurance.</li>
+         * <li>TimeDivisionElasticityAssurance: the time-segmented elasticity assurance. RecurrenceRules is specified for a time-segmented assurance.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The time-segmented assurance of the elasticity assurance is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ElasticityAssurance</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -450,7 +460,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
          * <li>Active: The elasticity assurance is in effect.</li>
          * <li>Released: The elasticity assurance is released.</li>
          * </ul>
-         * <p>Default value: Active.</p>
+         * <p>If you do not specify this parameter, elasticity assurances in states other than Pending and Released are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

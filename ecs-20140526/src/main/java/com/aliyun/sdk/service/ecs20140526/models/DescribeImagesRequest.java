@@ -691,7 +691,7 @@ public class DescribeImagesRequest extends Request {
 
         /**
          * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
+         * <p>Valid values: 1 to 100</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>

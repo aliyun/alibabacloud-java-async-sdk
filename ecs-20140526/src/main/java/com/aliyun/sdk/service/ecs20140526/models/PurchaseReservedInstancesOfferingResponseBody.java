@@ -67,7 +67,10 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
         private ReservedInstanceIdSets reservedInstanceIdSets; 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23841229****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

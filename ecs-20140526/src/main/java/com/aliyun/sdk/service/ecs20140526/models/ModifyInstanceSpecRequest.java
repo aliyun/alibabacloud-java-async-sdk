@@ -365,7 +365,9 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Disk.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          */
         public Builder disk(java.util.List<Disk> disk) {
             this.putQueryParameter("Disk", disk);
@@ -452,6 +454,11 @@ public class ModifyInstanceSpecRequest extends Request {
          * <blockquote>
          * <p> This parameter is not publicly available.</p>
          * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Online</li>
+         * <li>Offline</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -722,17 +729,12 @@ public class ModifyInstanceSpecRequest extends Request {
             private String performanceLevel; 
 
             /**
-             * <p>The new category of the system disk. Valid values:</p>
-             * <ul>
-             * <li>cloud_efficiency: ultra disk</li>
-             * <li>cloud_ssd: standard SSD</li>
-             * </ul>
              * <blockquote>
-             * <p> This parameter takes effect only when you upgrade a non-I/O optimized instance of <a href="https://help.aliyun.com/document_detail/55263.html">a retired instance type</a> to an I/O optimized instance of <a href="https://help.aliyun.com/document_detail/25378.html">an instance type available for purchase</a>.</p>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>cloud_ssd</p>
+             * <p>null</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -740,7 +742,12 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * DiskId.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -748,7 +755,12 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;

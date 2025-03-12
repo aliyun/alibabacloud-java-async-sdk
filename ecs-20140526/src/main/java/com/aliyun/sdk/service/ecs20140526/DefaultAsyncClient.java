@@ -1178,11 +1178,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Elasticity Assurance provides a new way to purchase and use resources with flexibility and assurance. It offers assured resource reservations for pay-as-you-go Elastic Compute Service (ECS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/193630.html">Overview of Elasticity Assurance</a>.</p>
+     * <p>Elasticity Assurance provides a new method to purchase and use guaranteed resources in a flexible manner. Elasticity Assurance is a resource reservation service that provides assured access to resources for pay-as-you-go Elastic Compute Service (ECS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/193630.html">Overview of Elasticity Assurance</a>.</p>
      * <ul>
-     * <li>Elasticity assurances are not refundable after purchase.</li>
-     * <li>Elasticity assurances are applicable to only pay-as-you-go ECS instances.</li>
-     * <li>Elasticity assurances support only the unlimited mode. Therefore, you can set <code>AssuranceTimes</code> only to <code>Unlimited</code>. Elasticity assurances in unlimited mode can be applied an unlimited number of times within their effective period and take effect immediately after they are purchased.</li>
+     * <li>After you purchase an elasticity assurance, you cannot request a refund for the elasticity assurance. For information about the billing of elasticity assurances, see <a href="https://help.aliyun.com/document_detail/432502.html">Resource assurance</a>.</li>
+     * <li>Elasticity assurances can be used to create only pay-as-you-go ECS instances.</li>
+     * <li>Elasticity assurances only support the unlimited mode. You can set <code>AssuranceTimes</code> only to <code>Unlimited</code>. Elasticity assurances in unlimited mode can be used for an unlimited number of times within their terms. Elasticity assurances in unlimited mode take effect immediately after creation.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateElasticityAssurance  CreateElasticityAssuranceRequest
@@ -2006,7 +2006,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteDemand is deprecated, please use Ecs::2014-05-26::ReleaseCapacityReservation instead.  * @description >  This operation is in internal preview and has not been officially released. We recommend that you avoid using this operation.
+     * @deprecated OpenAPI DeleteDemand is deprecated, please use Ecs::2014-05-26::ReleaseCapacityReservation instead.  * @description >  This operation is in invitational preview and is not publicly available.
      * 
      * @param request the request parameters of DeleteDemand  DeleteDemandRequest
      * @return DeleteDemandResponse
@@ -2238,13 +2238,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li><strong>Warning</strong> After you release an instance, the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
      * <li>After you release an instance, manual snapshots of the cloud disks attached to the instance are retained and continue to be billed. You can call the <a href="https://help.aliyun.com/document_detail/2679824.html">DeleteSnapshot</a> operation to delete the snapshots.</li>
      * <li>After you release an instance, whether the cloud disks attached to the instance and the automatic snapshots of the disks are released is determined by the disk attributes. Before you release an instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> and <a href="https://help.aliyun.com/document_detail/2679770.html">ModifyDiskAttribute</a> operations to query and modify disk attributes.<ul>
-     * <li>If <code>DeleteWithInstance</code> is set to false for a cloud disk attached to the instance, the cloud disk is changed to a pay-as-you-go disk and retained after the instance is released. If DeleteWithInstance is set to true for the cloud disk, the disk is released together with the instance.</li>
-     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released together with the instance.</li>
+     * <li>The cloud disks for which <code>DeleteWithInstance</code> is set to false are retained as pay-as-you-go disks after the instance is released. The cloud disks for which DeleteWithInstance is set to true are released along with the instance.</li>
+     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the cloud disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released along with the instance.</li>
      * </ul>
      * </li>
      * <li>Elastic IP addresses (EIPs) are not released together with instances. You can call the <a href="https://help.aliyun.com/document_detail/448702.html">ReleaseEipAddress</a> operation to release EIPs.
      * **
-     * <strong>Note</strong> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released together with the instance even if DeleteWithInstance is set to false for the disks.</li>
+     * <strong>Note</strong> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released even if DeleteWithInstance is set to false.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
@@ -3312,9 +3312,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
-     * Take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
      * <li>Monitoring data of only disks that are in the In Use (<code>In_use</code>) state can be queried. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>.
      * **
@@ -3322,6 +3320,13 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>Up to 400 monitoring data entries can be returned at a time. Make sure that the <code>TotalCount</code> value does not exceed 400. The value is calculated by using the following formula: <code>TotalCount = (EndTime - StartTime)/Period</code>. If the TotalCount value is greater than 400, the <code>InvalidParameter.TooManyDataQueried</code> error is returned.</li>
      * <li>You can query the monitoring data in the last 30 days. If the value of <code>StartTime</code> is more than 30 days earlier than the current time, an error is returned.</li>
      * </ul>
+     * <h2><a href="#"></a>Sample requests</h2>
+     * <p>For example, you want to query the monitoring data of a cloud disk whose ID is <code>d-bp14emm68wx98vjk****</code> in the China (Hangzhou) region every 600 seconds from <code>2025-02-17T00:00:00Z</code> to <code>2025-02-18T10:00:00Z</code>. Request parameters:
+     *     RegionId:&quot;cn-hangzhou&quot;, // Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     DiskId:&quot;d-bp14emm68wx98vjk****&quot;, // Specify the disk ID.
+     *     StartTime:&quot;2025-02-15T00:00:00Z&quot;, // Specify the beginning of the time range to query.
+     *     EndTime:&quot;2025-02-17T00:00:00Z&quot;, // Specify the end of the time range to query.
+     *     Period:&quot;600&quot;, // Specify the interval at which to retrieve the monitoring data.</p>
      * 
      * @param request the request parameters of DescribeDiskMonitorData  DescribeDiskMonitorDataRequest
      * @return DescribeDiskMonitorDataResponse
@@ -4193,10 +4198,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeLaunchTemplateVersions%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * @param request the request parameters of DescribeLaunchTemplateVersions  DescribeLaunchTemplateVersionsRequest
      * @return DescribeLaunchTemplateVersionsResponse
      */
@@ -4454,19 +4455,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
+     * <p>The required parameters vary based on the type of resource whose prices you want to query.</p>
      * <ul>
-     * <li>The required parameters vary based on the types of resources whose prices you want to query.<ul>
-     * <li>When <code>ResourceType</code> is set to instance, you must specify <code>InstanceType</code>.</li>
-     * <li>When <code>ResourceType</code> is set to disk, you must specify both <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code>. When <code>ResourceType</code> is set to disk, only pay-as-you-go prices of cloud disks are returned. In this scenario, <code>PriceUnit</code> can be set only to <code>Hour</code>.</li>
+     * <li>When <code>ResourceType</code> is set to instance, you must specify <code>InstanceType</code>. By default, <code>ChargeType</code> is set to <code>PostPaid</code>. You can specify <code>PriceUnit</code> to query the ECS resource prices in different billing cycles.</li>
+     * <li>When <code>ResourceType</code> is set to disk, you must specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code> in the same request. When <code>ResourceType</code> is set to disk, only pay-as-you-go prices of cloud disks are returned. In this scenario, <code>PriceUnit</code> can be set only to <code>Hour</code>.</li>
+     * <li>When <code>ResourceType</code> is set to diskperformance, you must specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.ProvisionedIops</code>.</li>
      * <li>When <code>ResourceType</code> is set to ddh, you must specify <code>DedicatedHostType</code>.</li>
      * <li>When <code>ResourceType</code> is set to ElasticityAssurance, you must specify <code>InstanceType</code>.</li>
      * <li>When <code>ResourceType</code> is set to CapacityReservation, you must specify <code>InstanceType</code>.</li>
-     * </ul>
-     * </li>
-     * <li>When <code>ResourceType</code> is set to bandwidth, only the pay-by-traffic (<code>PayByTraffic</code>) price for network usage is returned.</li>
-     * <li>When <code>ResourceType</code> is set to instance, the prices of up to four data disks can be queried.</li>
-     * <li>By default, <code>ChargeType</code> is set to <code>PostPaid</code>. You can specify <code>PriceUnit</code> to query prices of ECS resources that have different billing cycles.</li>
+     * <li>When <code>ResourceType</code> is set to bandwidth, only the pay-by-traffic (<code>PayByTraffic</code>) prices for network usage are returned.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribePrice  DescribePriceRequest
@@ -5014,6 +5011,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  This operation is applicable only to I/O optimized preemptible instances.</p>
+     * <ul>
+     * <li>The data returned by the interface may be paginated. If the returned data contains the <code>NextOffset</code> parameter, you can set the <code>Offset</code> parameter in the request to the value of the <code>NextOffset</code> parameter for subsequent data query.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeSpotPriceHistory  DescribeSpotPriceHistoryRequest
      * @return DescribeSpotPriceHistoryResponse
      */
@@ -6372,11 +6375,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <ul>
-     * <li>When you call this operation to modify the attributes of a disk, if you set DeleteWithInstance to false and the instance to which the disk is attached is locked for security reasons, the DeleteWithInstance settings of the disk are ignored and the disk is released together with the instance. If <code>&quot;LockReason&quot; : &quot;security&quot;</code> is displayed in the response when you query the information about an instance, the instance is locked for security reasons.</li>
-     * <li>You can use <code>DiskIds.N</code> to specify multiple block storage devices and batch modify the attributes of the devices, including the names and descriptions of the devices and whether to release the devices together with the associated instances.</li>
-     * </ul>
+     * <p>You can use <code>DiskId</code> to specify a block storage device and modify the attributes of the device, such as the name and description of the device and whether to release the device together with the associated instance. You can use <code>DiskIds.N</code> to specify multiple block storage devices and batch modify the attributes of the devices.</p>
      * 
      * @param request the request parameters of ModifyDiskAttribute  ModifyDiskAttributeRequest
      * @return ModifyDiskAttributeResponse
@@ -6675,19 +6674,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share custom images</a>.
+     * When you call this operation, take note of the following sharing rules:</p>
      * <ul>
-     * <li>You can share only your own custom images to other Alibaba Cloud accounts.</li>
-     * <li>You can share a custom image to up to 10 Alibaba Cloud accounts at a time. You can specify up to 10 Alibaba Cloud account IDs by using AddAccount.N or RemoveAccount.N. If you specify more than 10 account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</li>
-     * <li>You can share a custom image to up to 50 Alibaba Cloud accounts.</li>
+     * <li>You can share only your custom images that were created in your Alibaba Cloud to other accounts.</li>
+     * <li>You can share a custom image to up to 10 Alibaba Cloud accounts at a time. You can specify up to 10 Alibaba Cloud account IDs by using the AddAccount.N or RemoveAccount.N parameter. If you specify more than 10 account IDs, the system processes only the previous 10 account IDs. The excess account IDs are ignored.</li>
+     * <li>You can share a custom image with up to 50 Alibaba Cloud accounts.</li>
      * <li>If an Elastic Compute Service (ECS) instance was created (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>) from a shared image, you cannot re-initialize the instance (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>) after the image owner unshares or deletes the image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>).
      * When you publish or unpublish a community image, take note of the following items:</li>
      * <li>Alibaba Cloud provides only the platform on which community images can be published and managed. The owner of a community image is responsible for the quality and updates of the image. Make sure that you acknowledge and agree to the Community Image Agreement. Otherwise, you cannot publish community images. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</li>
      * <li>You cannot publish encrypted images as community images.</li>
      * <li>Community images are publicly available. A community image is available to all Alibaba Cloud accounts in the region where the image resides.</li>
      * <li>You cannot share, export, or copy community images.</li>
-     * <li>After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared to other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
+     * <li>After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared with other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyImageSharePermission  ModifyImageSharePermissionRequest
@@ -6780,10 +6779,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the billing methods and pricing of Elastic Compute Service (ECS). For more information, see the <a href="https://www.alibabacloud.com/product/ecs#pricing">Elastic Compute Service</a> product page.</p>
+     * <p>*Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://www.alibabacloud.com/product/ecs#pricing">pricing</a> of Elastic Compute Service (ECS)**.</p>
      * <ul>
+     * <li>Make sure that your account balance or credit balance is sufficient.</li>
+     * <li>Only subscription instances are supported. If you call this operation for a pay-as-you-go instance, an error is returned.</li>
      * <li>The payment for auto-renewal of an instance is automatically deducted at 08:00:00 (UTC+8) nine days before the instance expires.</li>
-     * <li>If the deduction fails, Alibaba Cloud attempts to deduct the payment every day until the payment is deducted or until the instance is locked after the nine-day period ends. Make sure that your account balance or credit balance is sufficient.</li>
+     * <li>If the deduction fails, Alibaba Cloud attempts to deduct the payment every day until the payment is deducted or until the instance is locked on expiration.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyInstanceAutoRenewAttribute  ModifyInstanceAutoRenewAttributeRequest
@@ -7518,7 +7519,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>You can archive only standard snapshots that have been retained for at least 14 days.</li>
      * <li>You cannot archive encrypted snapshots.</li>
      * <li>You cannot archive snapshots that are shared to you, snapshots managed by Cloud Backup, or snapshots in cloud boxes.</li>
-     * <li>The Archive Snapshot feature is available only in the China (Hohhot) and Malaysia (Kuala Lumpur) regions. The availability of the feature in other regions is subject to notice.</li>
+     * <li>The archive snapshot feature is available only in the China (Hohhot), Malaysia (Kuala Lumpur), South Korea (Seoul), Philippines (Manila), Thailand (Bangkok), and Mexico regions. The availability of the feature in other regions is subject to notice.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifySnapshotCategory  ModifySnapshotCategoryRequest
@@ -8331,19 +8332,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Before you call this operation to resize a disk, you must check the partition format of the disk. You cannot resize a master boot record (MBR) disk to a size that is larger than 2 TiB. If you resize an MBR disk to a size that is larger than 2 TiB, data may be lost. If you want to resize an MBR disk to a size that is larger than 2 TiB, we recommend that you perform the following steps: Create a new data disk that is larger than 2 TiB in size, partition and format the new data disk by using the GUID Partition Table (GPT) format, and then copy data from the MBR disk to the GPT data disk. For more information, see <a href="https://help.aliyun.com/document_detail/44986.html">Step 1: Resize a disk to extend the capacity of the disk</a>.</p>
+     * <p> Before you call this operation to resize a disk, you must check the partition format of the disk. You cannot resize a master boot record (MBR) disk to a size that is larger than 2 TiB. If you resize an MBR disk to a size that is larger than 2 TiB, data may be lost. If you want to resize an MBR disk to a size that is larger than 2 TiB, we recommend that you perform the following steps: Create a new data disk that is larger than 2 TiB in size, partition and format the new data disk by using the GUID Partition Table (GPT) format, and then copy data from the MBR disk to the GPT data disk. For more information, see <a href="https://help.aliyun.com/document_detail/44986.html">Step 1: Resize a disk to extend the disk capacity</a>.</p>
      * </blockquote>
      * <ul>
      * <li>You can resize disks of the following disk categories: basic disks (<code>cloud</code>), ultra disks (<code>cloud_efficiency</code>), standard SSDs (<code>cloud_ssd</code>), Enterprise SSDs (ESSDs) (<code>cloud_essd</code>), ESSD AutoPL disks (cloud_auto), standard elastic ephemeral disks (elastic_ephemeral_disk_standard), and premium elastic ephemeral disks (elastic_ephemeral_disk_premium).</li>
-     * <li>You cannot resize a disk for which a snapshot is being created. Wait until the snapshot is created before you resize the disk.</li>
-     * <li>You cannot call this operation to resize partitions or file systems on a disk. You must manually resize the partitions and file systems after the disk is resized. For more information, see <a href="https://help.aliyun.com/document_detail/470068.html">Step 2: Resize partitions and file systems</a>.</li>
-     * <li>If the multi-attach feature is enabled for a disk, you can resize the disk online or offline. Make sure that the Elastic Compute Service (ECS) instances to which the disk is attached meet the following requirements:<ul>
+     * <li>You cannot resize a cloud disk when a snapshot is being created for the disk. Wait until the snapshot is created before you resize the cloud disk.</li>
+     * <li>You cannot call this operation to resize partitions or file systems on a cloud disk. You must manually resize the partitions and file systems after the disk is resized. For more information, see <a href="https://help.aliyun.com/document_detail/470068.html">Step 2: Resize partitions and file systems</a>.</li>
+     * <li>If the multi-attach feature is enabled for a cloud disk, you can resize the disk online or offline. Make sure that the Elastic Compute Service (ECS) instances to which the disk is attached meet the following requirements:<ul>
      * <li>If you want to resize the disk online, the ECS instances must be in the <strong>Running</strong> (<code>Running</code>) state.</li>
      * <li>If you want to resize the disk offline, the ECS instances must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * </ul>
      * </li>
-     * <li>The disk that you want to resize must meet the following requirements:<ul>
-     * <li>The disk is in the In_use (In Use) or Available (Unattached) state.</li>
+     * <li>The cloud disk that you want to resize must meet the following requirements:<ul>
+     * <li>The disk is in the In Use (<code>In_use</code>) or Unattached (<code>Available</code>) state.</li>
      * <li>(Recommended) Snapshots are created for the disk to back up disk data. For information about how to create snapshots for a disk, see <a href="https://help.aliyun.com/document_detail/25455.html">Create a snapshot</a>.</li>
      * <li>If the disk is a new data disk, initialize the disk before you resize the disk. For more information, see <a href="https://help.aliyun.com/document_detail/466323.html">Overview</a>.</li>
      * </ul>
@@ -8523,28 +8524,32 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Unlike the <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> and <a href="https://help.aliyun.com/document_detail/64841.html">InvokeCommand</a> operations, the RunCommand operation can be used to create and run a command in a single request.
-     * Take note of the following items:</p>
+     * <p>This operation is an asynchronous operation. After a request is sent, a response that contains a command ID and a command task ID is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/2679916.html">DescribeInvocationResults</a> operation with the command ID or task ID to query the execution results of the command.</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>The instances on which you want to run a command must be in the Running (<code>Running</code>) state. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of instances.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be installed on the instances.</li>
+     * <li>The instances on which you want to create and run a Cloud Assistant command must be in the Running (<code>Running</code>) state. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of instances.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/64921.html">Cloud Assistant Agent</a> must be pre-installed on the instances on which you want to create and run a Cloud Assistant command. You can call the <a href="https://help.aliyun.com/document_detail/2679925.html">InstallCloudAssistant</a> operation to install Cloud Assistant Agent on instances and the <a href="https://help.aliyun.com/document_detail/2679924.html">DescribeCloudAssistantStatus</a> operation to query whether Cloud Assistant Agent is installed on instances.
+     * **
+     * <strong>Note</strong> By default, Cloud Assistant Agent is pre-installed on instances created from public images on or after December 1, 2017.</li>
      * <li>Before you run a PowerShell command on a Windows instance, make sure that the PowerShell module is installed on the instance.</li>
+     * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
+     * <li>You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also request a quota increase. For information about how to view quotas and request a quota increase, see <a href="https://help.aliyun.com/document_detail/184116.html">Manage quotas</a>.</li>
+     * <li>To ensure that scheduled tasks can run as expected, make sure that the Cloud Assistant Agent version is not earlier than the following versions. A scheduled task can run a command at a specific interval, only once at a specific time, or at designated times based on a cron expression in a specific year or time zone. If the <code>ClientNeedUpgrade</code> error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades of Cloud Assistant Agent</a>.
+     * - Linux: 2.2.3.282
+     * - Windows: 2.1.3.282</li>
      * <li>When you use a cron expression to specify a schedule, you can specify a time zone based on your business requirements. If you do not specify a time zone, the schedule is determined by the system time of the instances. Make sure that the time or time zone of the instances meets your business requirements. For information about time zones, see <a href="https://help.aliyun.com/document_detail/92803.html">Configure the NTP service for ECS instances that run CentOS 6</a> or <a href="https://help.aliyun.com/document_detail/51890.html">Configure the NTP service for Windows instances</a>.</li>
-     * <li>You can set <code>Timeout</code> to specify the timeout period for executions of the command on ECS instances. If an execution times out, Cloud Assistant Agent forcefully terminates the command process.<ul>
-     * <li>When the one-time execution of the command times out, the execution state (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command becomes Failed.</li>
-     * <li>For a scheduled task, the timeout period takes effect on each execution of the command. When a command execution times out, the subsequent executions of the command are not affected. When a scheduled execution of the command times out, the execution state (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command becomes Failed.
-     * To ensure that scheduled tasks can run as expected, make sure that the version of Cloud Assistant Agent is not earlier than the following ones. A scheduled task can run a command at a specified interval, only once at a specified time, or at designated times based on a cron expression in a specified year or time zone. If the <code>ClientNeedUpgrade</code> error code is returned, you must update Cloud Assistant Agent to the latest version. For more information, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades of Cloud Assistant Agent</a>.<ul>
-     * <li>Linux: 2.2.3.282.</li>
-     * <li>Windows: 2.1.3.282.</li>
+     * </ul>
+     * <h3><a href="#"></a>Suggestions</h3>
+     * <ul>
+     * <li><strong>Timeout settings</strong>: You can set <code>Timeout</code> to specify the timeout period for command executions on instances. If an execution times out, Cloud Assistant Agent forcefully terminates the command process.<ul>
+     * <li>When the one-time execution of the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command becomes Failed.</li>
+     * <li>For a scheduled task, the timeout period takes effect on every execution of the command. When a command execution times out, the subsequent executions of the command are not affected. When a scheduled execution of the command times out, the execution status (<a href="https://help.aliyun.com/document_detail/64845.html">InvokeRecordStatus</a>) of the command becomes Failed.</li>
      * </ul>
      * </li>
-     * </ul>
-     * </li>
-     * <li>Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see the <a href="https://help.aliyun.com/document_detail/87029.html">Command errors and solutions</a> section in the &quot;Check execution results and troubleshoot common issues&quot; topic.</li>
-     * <li>If you set <code>EnableParameter</code> to true, the custom parameter feature is enabled. When you configure <code>CommandContent</code>, you can define custom parameters in the <code>{{parameter}}</code> format. Then, when the command is run, the key-value pairs of the custom parameters are passed in.</li>
-     * <li>You can retain up to 500 to 50,000 Cloud Assistant commands in each region. You can also apply for a quota increase. For information about how to query and increase quotas, see <a href="https://help.aliyun.com/document_detail/184116.html">Manage quotas</a>.</li>
-     * <li>Before you run a command on instances, especially new instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> operation to query the status of Cloud Assistant Agent on the instances and run the command when the value of CloudAssistantStatus in the response is true for the instances.</li>
+     * <li><strong>Execution failure</strong>: Command executions may fail due to instance status exceptions, network exceptions, or exceptions on Cloud Assistant Agent. If a command execution fails, no execution information is generated. For more information, see <a href="https://help.aliyun.com/document_detail/87029.html">Check execution results and troubleshoot common issues</a>.</li>
+     * <li><strong>Custom parameters</strong>: If you set <code>EnableParameter</code> to true, the custom parameter feature is enabled. When you specify <code>CommandContent</code>, you can define custom parameters in the <code>{{parameter}}</code> format. Then, the key-value pairs of the custom parameters are passed in when you run the command.</li>
      * </ul>
      * 
      * @param request the request parameters of RunCommand  RunCommandRequest

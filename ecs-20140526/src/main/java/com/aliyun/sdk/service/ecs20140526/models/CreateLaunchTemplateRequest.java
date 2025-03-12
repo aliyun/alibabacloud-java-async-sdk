@@ -2366,7 +2366,18 @@ public class CreateLaunchTemplateRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * DeleteOnRelease.
+             * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only for secondary ENIs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteOnRelease(Boolean deleteOnRelease) {
                 this.deleteOnRelease = deleteOnRelease;
@@ -2406,7 +2417,7 @@ public class CreateLaunchTemplateRequest extends Request {
              * <p>Take note of the following items:</p>
              * <ul>
              * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you do not need to set this parameter.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you do not need to specify this parameter.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2438,13 +2449,13 @@ public class CreateLaunchTemplateRequest extends Request {
              * <ul>
              * <li><p>Valid values of N: 1 and 2.</p>
              * <ul>
-             * <li>If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, <code>Amount</code> is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</li>
-             * <li>If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, <code>Amount</code> is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot set <code>NetworkInterface.2.InstanceType</code> to Secondary to attach a secondary ENI.</li>
+             * <li>If the value of N is 1, you can configure a primary or secondary ENI. If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified IP address are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</li>
+             * <li>If the value of N is 2, you must configure a primary ENI and a secondary ENI. If you specify this parameter, set <code>Amount</code> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <code>NetworkInterface.2.InstanceType</code> to Secondary to attach a secondary ENI.</li>
              * </ul>
              * </li>
-             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify both this parameter and <code>PrivateIpAddress</code>.</p>
+             * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, this parameter is equivalent to <code>PrivateIpAddress</code>. You cannot specify both this parameter and <code>PrivateIpAddress</code> in the same request.</p>
              * </li>
-             * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
+             * <li><p>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</p>
              * </li>
              * </ul>
              * <blockquote>
@@ -2464,8 +2475,8 @@ public class CreateLaunchTemplateRequest extends Request {
              * <p>Take note of the following items:</p>
              * <ul>
              * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code>. You cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
-             * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2477,15 +2488,15 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of security group N to which to assign ENI N.</p>
+             * <p>The IDs of security groups to which to assign ENI N.</p>
              * <ul>
              * <li>Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+             * <li>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
              * </ul>
              * <p>Take note of the following items:</p>
              * <ul>
-             * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must specify this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. In this case, this parameter is equivalent to <code>SecurityGroupIds.N</code>. You cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</li>
-             * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. In this case, this parameter is equivalent to <code>SecurityGroupIds.N</code>, and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2501,8 +2512,8 @@ public class CreateLaunchTemplateRequest extends Request {
              * <p>Take note of the following items:</p>
              * <ul>
              * <li>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</li>
-             * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter. In this case, this parameter is equivalent to <code>VSwitchId</code>. You cannot specify both NetworkInterface.N.VSwitchId and <code>VSwitchId</code>.</li>
-             * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. The default value is the VSwitchId value.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>VSwitchId</code>. You cannot specify both NetworkInterface.N.VSwitchId and <code>VSwitchId</code> in the same request.</li>
+             * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the VSwitchId value.</li>
              * </ul>
              * 
              * <strong>example:</strong>

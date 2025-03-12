@@ -207,7 +207,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean enableHighDensityMode; 
 
             /**
-             * EnableHighDensityMode.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableHighDensityMode(Boolean enableHighDensityMode) {
                 this.enableHighDensityMode = enableHighDensityMode;
@@ -3273,7 +3278,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AdditionalInfo.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              */
             public Builder additionalInfo(AdditionalInfo additionalInfo) {
                 this.additionalInfo = additionalInfo;
@@ -3787,6 +3794,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * <p>The private domain name options of the instance.</p>
              * <p>For information about the resolution of ECS private domain names, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the <code>AdditionalAttributes</code> parameter contains <code>PRIVATE_DNS_OPTIONS</code> in the request.</p>
+             * </blockquote>
              */
             public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
                 this.privateDnsNameOptions = privateDnsNameOptions;

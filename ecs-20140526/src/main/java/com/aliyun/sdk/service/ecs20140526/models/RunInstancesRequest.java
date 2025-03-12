@@ -1967,9 +1967,8 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The private domain name options of the instance.</p>
+         * <p>For information about the resolution of ECS private domain names, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</p>
          */
         public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
             this.putQueryParameter("PrivateDnsNameOptions", privateDnsNameOptions);
@@ -2117,7 +2116,7 @@ public class RunInstancesRequest extends Request {
          * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
          * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The preemptible instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -4392,9 +4391,12 @@ public class RunInstancesRequest extends Request {
             private String hostnameType; 
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -4405,9 +4407,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -4418,9 +4423,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>Specifies whether DNS Resolution from the IP Address-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -4431,9 +4439,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>Specifies whether Reverse DNS Resolution from the Instance Primary Private IPv4 Address to the IP Address-based Hostname (PTR Record) is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -4444,9 +4455,13 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>The type of hostname. Valid values:</p>
+             * <ul>
+             * <li>Custom: custom hostname</li>
+             * <li>IpBased: IP address-based hostname</li>
+             * <li>InstanceIdBased: instance ID-based hostname</li>
+             * </ul>
+             * <p>Default value: Custom.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>

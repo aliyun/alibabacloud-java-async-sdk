@@ -180,6 +180,7 @@ public class DescribeElasticityAssuranceAutoRenewAttributeRequest extends Reques
         }
 
         /**
+         * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +250,8 @@ public class DescribeElasticityAssuranceAutoRenewAttributeRequest extends Reques
             private java.util.List<String> id; 
 
             /**
-             * Id.
+             * <p>The IDs of elasticity assurances.</p>
+             * <p><strong>Limits</strong>: You can specify up to 50 elasticity assurance IDs in a single request.</p>
              */
             public Builder id(java.util.List<String> id) {
                 this.id = id;

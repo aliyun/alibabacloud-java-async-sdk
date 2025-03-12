@@ -55,7 +55,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The information of the regions.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -63,7 +63,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ecs.aliyuncs.com</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -148,10 +148,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * <p>cn-qingdao-et2-bo1</p>
+             * <p>The name of the region.</p>
              * 
              * <strong>example:</strong>
-             * <p>DescribeRegions</p>
+             * <p>China (Qingdao)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -159,7 +159,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The endpoint of the region.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.cn-qingdao.aliyuncs.com</p>
@@ -170,7 +170,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -178,7 +181,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>China (Qingdao)</p>
+             * <p>Indicates whether clusters are sold out. 
+             * Valid values:</p>
+             * <ul>
+             * <li>available</li>
+             * <li>soldOut</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>available</p>

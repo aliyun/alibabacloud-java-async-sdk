@@ -219,13 +219,7 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * <p>The total number of instances to reserve for the elasticity assurance. Valid values: Number of created instances to 1000. This parameter cannot be changed at the same time with other parameters.----This parameter is exclusive with other parameters in the same request. ?</p>
-         * <blockquote>
-         * <p> Capacity scale-in, not capacity scale-out, is supported.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The total number of instances for which you want to reserve capacity. Valid values: the number of created instances to 1000. This parameter is mutually exclusive with other parameters in the same request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -255,7 +249,10 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * RecurrenceRules.
+         * <p>The assurance schedules based on which the capacity reservation takes effect.</p>
+         * <blockquote>
+         * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+         * </blockquote>
          */
         public Builder recurrenceRules(java.util.List<RecurrenceRules> recurrenceRules) {
             this.putQueryParameter("RecurrenceRules", recurrenceRules);
@@ -447,7 +444,10 @@ public class ModifyElasticityAssuranceRequest extends Request {
             private Integer startHour; 
 
             /**
-             * EndHour.
+             * <p>The end time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -455,7 +455,18 @@ public class ModifyElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * RecurrenceType.
+             * <p>The type of the assurance schedule. Valid values:</p>
+             * <ul>
+             * <li>Daily</li>
+             * <li>Weekly</li>
+             * <li>Monthly</li>
+             * </ul>
+             * <blockquote>
+             * <p> You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -463,7 +474,18 @@ public class ModifyElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * RecurrenceValue.
+             * <p>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
+             * <ul>
+             * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</li>
+             * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <code>1-5</code>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</li>
+             * </ul>
+             * <blockquote>
+             * <p> You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -471,7 +493,13 @@ public class ModifyElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * StartHour.
+             * <p>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</p>
+             * <blockquote>
+             * <p> You must specify both <code>StartHour</code> and <code>EndHour</code>. EndHour must be at least four hours later than StartHour.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;

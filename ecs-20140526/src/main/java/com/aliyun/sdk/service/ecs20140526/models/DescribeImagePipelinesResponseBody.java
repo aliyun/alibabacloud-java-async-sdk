@@ -91,7 +91,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Details of the image templates.</p>
+         * <p>Details about the image templates.</p>
          */
         public Builder imagePipeline(ImagePipeline imagePipeline) {
             this.imagePipeline = imagePipeline;
@@ -240,7 +240,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private Boolean retainCloudAssistant; 
 
             /**
-             * ImageNameSuffix.
+             * <p>Indicates whether to disable the feature that automatically adds a suffix to the name of the image created based on the image template. Valid value:</p>
+             * <ul>
+             * <li>disable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>disable</p>
              */
             public Builder imageNameSuffix(String imageNameSuffix) {
                 this.imageNameSuffix = imageNameSuffix;
@@ -305,7 +311,15 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String nvmeSupport; 
 
             /**
-             * NvmeSupport.
+             * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
+             * <ul>
+             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * <li>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -364,7 +378,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -372,7 +389,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -514,7 +534,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private ImageTags imageTags; 
 
             /**
-             * Description.
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -522,7 +545,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageFamily.
+             * <p>The image family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>family</p>
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -530,7 +556,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageFeatures.
+             * <p>The feature attributes of the image.</p>
              */
             public Builder imageFeatures(ImageFeatures imageFeatures) {
                 this.imageFeatures = imageFeatures;
@@ -538,7 +564,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The prefix of the image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imageName</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -546,7 +575,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTags.
+             * <p>The tags of the image.</p>
              */
             public Builder imageTags(ImageTags imageTags) {
                 this.imageTags = imageTags;
@@ -938,10 +967,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of disk N from which a custom image is created.</p>
+             * <p>The information of disks from which the custom images are created.</p>
              * <ul>
-             * <li>When N is set to 1, a custom image is created from the system disk.</li>
-             * <li>When N is set to an integer in the range of 2 to 17, a custom image is created from a data disk.</li>
+             * <li>When the value of N is 1, a custom image is created from the system disk.</li>
+             * <li>When the value of N is an integer in the range of 2 to 17, a custom image is created from a data disk.</li>
              * </ul>
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
@@ -950,7 +979,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of the custom image.</p>
+             * <p>The feature attributes of the image.</p>
              */
             public Builder features(Features features) {
                 this.features = features;
@@ -1029,11 +1058,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to retain the imported image. After the image is imported, the system automatically deletes the source image to prevent unnecessary storage costs. You can also choose whether to retain it. Valid values:</p>
-             * <ul>
-             * <li>true: retains the image. After the image is imported, the source image is not deleted even if the image building task is canceled or fails.</li>
-             * <li>false: does not retain the image.</li>
-             * </ul>
+             * <blockquote>
+             * <p> This parameter is in invitational preview.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1619,7 +1646,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image family.</p>
+             * <p>The family of the image created based on the image template.</p>
+             * <blockquote>
+             * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFamily.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -1630,7 +1660,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name prefix of the image to be created based on the image template.</p>
+             * <p>The name prefix of the image created based on the image template.</p>
+             * <blockquote>
+             * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageName.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>testImageName</p>
@@ -1641,7 +1674,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOptions.
+             * <p>The attributes of the image created based on the image template.</p>
              */
             public Builder imageOptions(ImageOptions imageOptions) {
                 this.imageOptions = imageOptions;
@@ -1660,7 +1693,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties and settings of the image template that you import.</p>
+             * <p>The attributes and settings of the imported image.</p>
              */
             public Builder importImageOptions(ImportImageOptions importImageOptions) {
                 this.importImageOptions = importImageOptions;
@@ -1701,12 +1734,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the image created based on the image template supports Non-Volatile Memory Express (NVMe). Valid values:</p>
-             * <ul>
-             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
-             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
-             * <li>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
-             * </ul>
+             * <p>Indicates whether the image created based on the image template supports the Non-Volatile Memory Express (NVMe) protocol.</p>
+             * <blockquote>
+             * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFeatures.NvmeSupport.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>auto</p>
