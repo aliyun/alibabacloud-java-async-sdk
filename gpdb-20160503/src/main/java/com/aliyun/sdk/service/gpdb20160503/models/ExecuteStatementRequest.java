@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ExecuteStatementRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -34,6 +33,10 @@ public class ExecuteStatementRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List<?> parameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RagWorkspaceCollection")
+    private RagWorkspaceCollection ragWorkspaceCollection;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -61,18 +64,24 @@ public class ExecuteStatementRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StatementName")
     private String statementName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ExecuteStatementRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.database = builder.database;
         this.ownerId = builder.ownerId;
         this.parameters = builder.parameters;
+        this.ragWorkspaceCollection = builder.ragWorkspaceCollection;
         this.regionId = builder.regionId;
         this.runType = builder.runType;
         this.secretArn = builder.secretArn;
         this.sql = builder.sql;
         this.sqls = builder.sqls;
         this.statementName = builder.statementName;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -117,6 +126,13 @@ public class ExecuteStatementRequest extends Request {
     }
 
     /**
+     * @return ragWorkspaceCollection
+     */
+    public RagWorkspaceCollection getRagWorkspaceCollection() {
+        return this.ragWorkspaceCollection;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -158,17 +174,26 @@ public class ExecuteStatementRequest extends Request {
         return this.statementName;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ExecuteStatementRequest, Builder> {
         private String DBInstanceId; 
         private String database; 
         private Long ownerId; 
         private java.util.List<?> parameters; 
+        private RagWorkspaceCollection ragWorkspaceCollection; 
         private String regionId; 
         private String runType; 
         private String secretArn; 
         private String sql; 
         private java.util.List<String> sqls; 
         private String statementName; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -180,12 +205,14 @@ public class ExecuteStatementRequest extends Request {
             this.database = request.database;
             this.ownerId = request.ownerId;
             this.parameters = request.parameters;
+            this.ragWorkspaceCollection = request.ragWorkspaceCollection;
             this.regionId = request.regionId;
             this.runType = request.runType;
             this.secretArn = request.secretArn;
             this.sql = request.sql;
             this.sqls = request.sqls;
             this.statementName = request.statementName;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -193,7 +220,6 @@ public class ExecuteStatementRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -233,6 +259,16 @@ public class ExecuteStatementRequest extends Request {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putBodyParameter("Parameters", parametersShrink);
             this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * RagWorkspaceCollection.
+         */
+        public Builder ragWorkspaceCollection(RagWorkspaceCollection ragWorkspaceCollection) {
+            String ragWorkspaceCollectionShrink = shrink(ragWorkspaceCollection, "RagWorkspaceCollection", "json");
+            this.putQueryParameter("RagWorkspaceCollection", ragWorkspaceCollectionShrink);
+            this.ragWorkspaceCollection = ragWorkspaceCollection;
             return this;
         }
 
@@ -315,6 +351,15 @@ public class ExecuteStatementRequest extends Request {
             return this;
         }
 
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
         @Override
         public ExecuteStatementRequest build() {
             return new ExecuteStatementRequest(this);
@@ -322,4 +367,71 @@ public class ExecuteStatementRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteStatementRequest} extends {@link TeaModel}
+     *
+     * <p>ExecuteStatementRequest</p>
+     */
+    public static class RagWorkspaceCollection extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Collection")
+        private String collection;
+
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
+
+        private RagWorkspaceCollection(Builder builder) {
+            this.collection = builder.collection;
+            this.namespace = builder.namespace;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RagWorkspaceCollection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return collection
+         */
+        public String getCollection() {
+            return this.collection;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public static final class Builder {
+            private String collection; 
+            private String namespace; 
+
+            /**
+             * Collection.
+             */
+            public Builder collection(String collection) {
+                this.collection = collection;
+                return this;
+            }
+
+            /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            public RagWorkspaceCollection build() {
+                return new RagWorkspaceCollection(this);
+            } 
+
+        } 
+
+    }
 }

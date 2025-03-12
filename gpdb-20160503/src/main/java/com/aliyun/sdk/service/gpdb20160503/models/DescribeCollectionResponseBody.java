@@ -47,8 +47,14 @@ public class DescribeCollectionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SparseVectorMetrics")
+    private String sparseVectorMetrics;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.NameInMap("SupportSparse")
+    private Boolean supportSparse;
 
     private DescribeCollectionResponseBody(Builder builder) {
         this.DBInstanceId = builder.DBInstanceId;
@@ -61,7 +67,9 @@ public class DescribeCollectionResponseBody extends TeaModel {
         this.parser = builder.parser;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.sparseVectorMetrics = builder.sparseVectorMetrics;
         this.status = builder.status;
+        this.supportSparse = builder.supportSparse;
     }
 
     public static Builder builder() {
@@ -143,10 +151,24 @@ public class DescribeCollectionResponseBody extends TeaModel {
     }
 
     /**
+     * @return sparseVectorMetrics
+     */
+    public String getSparseVectorMetrics() {
+        return this.sparseVectorMetrics;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return supportSparse
+     */
+    public Boolean getSupportSparse() {
+        return this.supportSparse;
     }
 
     public static final class Builder {
@@ -160,7 +182,9 @@ public class DescribeCollectionResponseBody extends TeaModel {
         private String parser; 
         private String regionId; 
         private String requestId; 
+        private String sparseVectorMetrics; 
         private String status; 
+        private Boolean supportSparse; 
 
         /**
          * <p>The instance ID.</p>
@@ -272,6 +296,14 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
+         * SparseVectorMetrics.
+         */
+        public Builder sparseVectorMetrics(String sparseVectorMetrics) {
+            this.sparseVectorMetrics = sparseVectorMetrics;
+            return this;
+        }
+
+        /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li><strong>success</strong></li>
@@ -283,6 +315,14 @@ public class DescribeCollectionResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SupportSparse.
+         */
+        public Builder supportSparse(Boolean supportSparse) {
+            this.supportSparse = supportSparse;
             return this;
         }
 

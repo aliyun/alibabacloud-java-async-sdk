@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeTableRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -51,6 +50,10 @@ public class DescribeTableRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String table;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private DescribeTableRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
@@ -60,6 +63,7 @@ public class DescribeTableRequest extends Request {
         this.schema = builder.schema;
         this.secretArn = builder.secretArn;
         this.table = builder.table;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -124,6 +128,13 @@ public class DescribeTableRequest extends Request {
         return this.table;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeTableRequest, Builder> {
         private String DBInstanceId; 
         private String database; 
@@ -132,6 +143,7 @@ public class DescribeTableRequest extends Request {
         private String schema; 
         private String secretArn; 
         private String table; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -146,6 +158,7 @@ public class DescribeTableRequest extends Request {
             this.schema = request.schema;
             this.secretArn = request.secretArn;
             this.table = request.table;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -153,7 +166,6 @@ public class DescribeTableRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -238,6 +250,15 @@ public class DescribeTableRequest extends Request {
         public Builder table(String table) {
             this.putQueryParameter("Table", table);
             this.table = table;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

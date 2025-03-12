@@ -1458,7 +1458,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAISpec.
+             * <p>The specifications of AI coordinator node resources of the instance. If the coordinator nodes of the instance are not AI nodes, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB.AIMedium.2</p>
              */
             public Builder masterAISpec(String masterAISpec) {
                 this.masterAISpec = masterAISpec;
@@ -1672,7 +1675,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SegmentAISpec.
+             * <p>The specifications of AI compute node resources of the instance. If the compute nodes of the instance are not AI nodes, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB.AIMedium.2</p>
              */
             public Builder segmentAISpec(String segmentAISpec) {
                 this.segmentAISpec = segmentAISpec;

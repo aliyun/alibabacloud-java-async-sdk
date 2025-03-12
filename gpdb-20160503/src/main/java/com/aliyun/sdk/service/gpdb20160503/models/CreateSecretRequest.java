@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateSecretRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -53,6 +52,10 @@ public class CreateSecretRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private CreateSecretRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
@@ -63,6 +66,7 @@ public class CreateSecretRequest extends Request {
         this.secretName = builder.secretName;
         this.testConnection = builder.testConnection;
         this.username = builder.username;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -134,6 +138,13 @@ public class CreateSecretRequest extends Request {
         return this.username;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<CreateSecretRequest, Builder> {
         private String DBInstanceId; 
         private String description; 
@@ -143,6 +154,7 @@ public class CreateSecretRequest extends Request {
         private String secretName; 
         private Boolean testConnection; 
         private String username; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -158,6 +170,7 @@ public class CreateSecretRequest extends Request {
             this.secretName = request.secretName;
             this.testConnection = request.testConnection;
             this.username = request.username;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -165,7 +178,6 @@ public class CreateSecretRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -257,6 +269,15 @@ public class CreateSecretRequest extends Request {
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
             this.username = username;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

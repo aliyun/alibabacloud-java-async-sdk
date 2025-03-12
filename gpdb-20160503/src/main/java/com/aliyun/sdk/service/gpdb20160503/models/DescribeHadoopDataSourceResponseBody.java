@@ -352,7 +352,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Id of External Data Service</p>
+         * <p>The ID of the external data service.</p>
          * 
          * <strong>example:</strong>
          * <p>2988</p>
@@ -433,7 +433,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the service was last modified.</p>
+         * <p>The time when the data source was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-23T02:11:47Z</p>

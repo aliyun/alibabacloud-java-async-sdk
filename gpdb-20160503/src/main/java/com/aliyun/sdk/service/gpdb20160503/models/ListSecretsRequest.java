@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListSecretsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -31,11 +30,16 @@ public class ListSecretsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListSecretsRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -72,10 +76,18 @@ public class ListSecretsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListSecretsRequest, Builder> {
         private String DBInstanceId; 
         private Long ownerId; 
         private String regionId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -86,6 +98,7 @@ public class ListSecretsRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -93,7 +106,6 @@ public class ListSecretsRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -123,6 +135,15 @@ public class ListSecretsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetSecretValueRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -39,6 +38,10 @@ public class GetSecretValueRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecretName")
     private String secretName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private GetSecretValueRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
@@ -46,6 +49,7 @@ public class GetSecretValueRequest extends Request {
         this.regionId = builder.regionId;
         this.secretArn = builder.secretArn;
         this.secretName = builder.secretName;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -96,12 +100,20 @@ public class GetSecretValueRequest extends Request {
         return this.secretName;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<GetSecretValueRequest, Builder> {
         private String DBInstanceId; 
         private Long ownerId; 
         private String regionId; 
         private String secretArn; 
         private String secretName; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -114,6 +126,7 @@ public class GetSecretValueRequest extends Request {
             this.regionId = request.regionId;
             this.secretArn = request.secretArn;
             this.secretName = request.secretName;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -121,7 +134,6 @@ public class GetSecretValueRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-xxxxxxxxx</p>
@@ -181,6 +193,15 @@ public class GetSecretValueRequest extends Request {
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
             this.secretName = secretName;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

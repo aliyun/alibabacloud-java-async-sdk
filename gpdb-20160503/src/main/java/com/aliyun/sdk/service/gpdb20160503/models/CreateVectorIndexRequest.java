@@ -29,7 +29,6 @@ public class CreateVectorIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimension")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer dimension;
 
     @com.aliyun.core.annotation.Query
@@ -76,6 +75,10 @@ public class CreateVectorIndexRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private CreateVectorIndexRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -91,6 +94,7 @@ public class CreateVectorIndexRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pqEnable = builder.pqEnable;
         this.regionId = builder.regionId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -197,6 +201,13 @@ public class CreateVectorIndexRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<CreateVectorIndexRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
@@ -211,6 +222,7 @@ public class CreateVectorIndexRequest extends Request {
         private Long ownerId; 
         private Integer pqEnable; 
         private String regionId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -231,6 +243,7 @@ public class CreateVectorIndexRequest extends Request {
             this.ownerId = request.ownerId;
             this.pqEnable = request.pqEnable;
             this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**
@@ -270,7 +283,6 @@ public class CreateVectorIndexRequest extends Request {
          * <blockquote>
          * <p>This value must be consistent with the length of the vector data (Rows. Vector) uploaded via the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> API.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -425,6 +437,15 @@ public class CreateVectorIndexRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

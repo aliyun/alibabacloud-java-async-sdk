@@ -50,6 +50,10 @@ public class DeleteVectorIndexRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private DeleteVectorIndexRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -59,6 +63,7 @@ public class DeleteVectorIndexRequest extends Request {
         this.namespace = builder.namespace;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -123,6 +128,13 @@ public class DeleteVectorIndexRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<DeleteVectorIndexRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
@@ -131,6 +143,7 @@ public class DeleteVectorIndexRequest extends Request {
         private String namespace; 
         private Long ownerId; 
         private String regionId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -145,6 +158,7 @@ public class DeleteVectorIndexRequest extends Request {
             this.namespace = request.namespace;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**
@@ -242,6 +256,15 @@ public class DeleteVectorIndexRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

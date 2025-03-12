@@ -275,12 +275,82 @@ public class UpsertCollectionDataRequest extends Request {
      *
      * <p>UpsertCollectionDataRequest</p>
      */
+    public static class SparseVector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Indices")
+        private java.util.List<Long> indices;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Double> values;
+
+        private SparseVector(Builder builder) {
+            this.indices = builder.indices;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SparseVector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return indices
+         */
+        public java.util.List<Long> getIndices() {
+            return this.indices;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<Double> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private java.util.List<Long> indices; 
+            private java.util.List<Double> values; 
+
+            /**
+             * Indices.
+             */
+            public Builder indices(java.util.List<Long> indices) {
+                this.indices = indices;
+                return this;
+            }
+
+            /**
+             * Values.
+             */
+            public Builder values(java.util.List<Double> values) {
+                this.values = values;
+                return this;
+            }
+
+            public SparseVector build() {
+                return new SparseVector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpsertCollectionDataRequest} extends {@link TeaModel}
+     *
+     * <p>UpsertCollectionDataRequest</p>
+     */
     public static class Rows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map<String, String> metadata;
+
+        @com.aliyun.core.annotation.NameInMap("SparseVector")
+        private SparseVector sparseVector;
 
         @com.aliyun.core.annotation.NameInMap("Vector")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -289,6 +359,7 @@ public class UpsertCollectionDataRequest extends Request {
         private Rows(Builder builder) {
             this.id = builder.id;
             this.metadata = builder.metadata;
+            this.sparseVector = builder.sparseVector;
             this.vector = builder.vector;
         }
 
@@ -315,6 +386,13 @@ public class UpsertCollectionDataRequest extends Request {
         }
 
         /**
+         * @return sparseVector
+         */
+        public SparseVector getSparseVector() {
+            return this.sparseVector;
+        }
+
+        /**
          * @return vector
          */
         public java.util.List<Double> getVector() {
@@ -324,6 +402,7 @@ public class UpsertCollectionDataRequest extends Request {
         public static final class Builder {
             private String id; 
             private java.util.Map<String, String> metadata; 
+            private SparseVector sparseVector; 
             private java.util.List<Double> vector; 
 
             /**
@@ -339,6 +418,14 @@ public class UpsertCollectionDataRequest extends Request {
              */
             public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * SparseVector.
+             */
+            public Builder sparseVector(SparseVector sparseVector) {
+                this.sparseVector = sparseVector;
                 return this;
             }
 

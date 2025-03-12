@@ -92,6 +92,14 @@ public class CreateCollectionRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SparseVectorIndexConfig")
+    private SparseVectorIndexConfig sparseVectorIndexConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportSparse")
+    private Boolean supportSparse;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -114,6 +122,8 @@ public class CreateCollectionRequest extends Request {
         this.parser = builder.parser;
         this.pqEnable = builder.pqEnable;
         this.regionId = builder.regionId;
+        this.sparseVectorIndexConfig = builder.sparseVectorIndexConfig;
+        this.supportSparse = builder.supportSparse;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -250,6 +260,20 @@ public class CreateCollectionRequest extends Request {
     }
 
     /**
+     * @return sparseVectorIndexConfig
+     */
+    public SparseVectorIndexConfig getSparseVectorIndexConfig() {
+        return this.sparseVectorIndexConfig;
+    }
+
+    /**
+     * @return supportSparse
+     */
+    public Boolean getSupportSparse() {
+        return this.supportSparse;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -274,6 +298,8 @@ public class CreateCollectionRequest extends Request {
         private String parser; 
         private Integer pqEnable; 
         private String regionId; 
+        private SparseVectorIndexConfig sparseVectorIndexConfig; 
+        private Boolean supportSparse; 
         private String workspaceId; 
 
         private Builder() {
@@ -299,6 +325,8 @@ public class CreateCollectionRequest extends Request {
             this.parser = request.parser;
             this.pqEnable = request.pqEnable;
             this.regionId = request.regionId;
+            this.sparseVectorIndexConfig = request.sparseVectorIndexConfig;
+            this.supportSparse = request.supportSparse;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -556,6 +584,25 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
+         * SparseVectorIndexConfig.
+         */
+        public Builder sparseVectorIndexConfig(SparseVectorIndexConfig sparseVectorIndexConfig) {
+            String sparseVectorIndexConfigShrink = shrink(sparseVectorIndexConfig, "SparseVectorIndexConfig", "json");
+            this.putQueryParameter("SparseVectorIndexConfig", sparseVectorIndexConfigShrink);
+            this.sparseVectorIndexConfig = sparseVectorIndexConfig;
+            return this;
+        }
+
+        /**
+         * SupportSparse.
+         */
+        public Builder supportSparse(Boolean supportSparse) {
+            this.putQueryParameter("SupportSparse", supportSparse);
+            this.supportSparse = supportSparse;
+            return this;
+        }
+
+        /**
          * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
          * 
          * <strong>example:</strong>
@@ -574,4 +621,81 @@ public class CreateCollectionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCollectionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCollectionRequest</p>
+     */
+    public static class SparseVectorIndexConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HnswEfConstruction")
+        private Integer hnswEfConstruction;
+
+        @com.aliyun.core.annotation.NameInMap("HnswM")
+        private Integer hnswM;
+
+        private SparseVectorIndexConfig(Builder builder) {
+            this.hnswEfConstruction = builder.hnswEfConstruction;
+            this.hnswM = builder.hnswM;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SparseVectorIndexConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hnswEfConstruction
+         */
+        public Integer getHnswEfConstruction() {
+            return this.hnswEfConstruction;
+        }
+
+        /**
+         * @return hnswM
+         */
+        public Integer getHnswM() {
+            return this.hnswM;
+        }
+
+        public static final class Builder {
+            private Integer hnswEfConstruction; 
+            private Integer hnswM; 
+
+            /**
+             * HnswEfConstruction.
+             */
+            public Builder hnswEfConstruction(Integer hnswEfConstruction) {
+                this.hnswEfConstruction = hnswEfConstruction;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
+             * <blockquote>
+             * <p> We recommend that you configure this parameter based on the value of the Dimension parameter.</p>
+             * </blockquote>
+             * <p>*If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</p>
+             * <p>*If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</p>
+             * <p>*If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</p>
+             * <p>*If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
+             */
+            public Builder hnswM(Integer hnswM) {
+                this.hnswM = hnswM;
+                return this;
+            }
+
+            public SparseVectorIndexConfig build() {
+                return new SparseVectorIndexConfig(this);
+            } 
+
+        } 
+
+    }
 }

@@ -85,6 +85,10 @@ public class QueryCollectionDataRequest extends Request {
     private RelationalTableFilter relationalTableFilter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SparseVector")
+    private SparseVector sparseVector;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopK")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long topK;
@@ -115,6 +119,7 @@ public class QueryCollectionDataRequest extends Request {
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.relationalTableFilter = builder.relationalTableFilter;
+        this.sparseVector = builder.sparseVector;
         this.topK = builder.topK;
         this.vector = builder.vector;
         this.workspaceId = builder.workspaceId;
@@ -246,6 +251,13 @@ public class QueryCollectionDataRequest extends Request {
     }
 
     /**
+     * @return sparseVector
+     */
+    public SparseVector getSparseVector() {
+        return this.sparseVector;
+    }
+
+    /**
      * @return topK
      */
     public Long getTopK() {
@@ -283,6 +295,7 @@ public class QueryCollectionDataRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private RelationalTableFilter relationalTableFilter; 
+        private SparseVector sparseVector; 
         private Long topK; 
         private java.util.List<Double> vector; 
         private String workspaceId; 
@@ -309,6 +322,7 @@ public class QueryCollectionDataRequest extends Request {
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.relationalTableFilter = request.relationalTableFilter;
+            this.sparseVector = request.sparseVector;
             this.topK = request.topK;
             this.vector = request.vector;
             this.workspaceId = request.workspaceId;
@@ -575,6 +589,16 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
+         * SparseVector.
+         */
+        public Builder sparseVector(SparseVector sparseVector) {
+            String sparseVectorShrink = shrink(sparseVector, "SparseVector", "json");
+            this.putQueryParameter("SparseVector", sparseVectorShrink);
+            this.sparseVector = sparseVector;
+            return this;
+        }
+
+        /**
          * <p>Set the number of top results to return.</p>
          * <p>This parameter is required.</p>
          * 
@@ -733,6 +757,73 @@ public class QueryCollectionDataRequest extends Request {
 
             public RelationalTableFilter build() {
                 return new RelationalTableFilter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryCollectionDataRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCollectionDataRequest</p>
+     */
+    public static class SparseVector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Indices")
+        private java.util.List<Long> indices;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Double> values;
+
+        private SparseVector(Builder builder) {
+            this.indices = builder.indices;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SparseVector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return indices
+         */
+        public java.util.List<Long> getIndices() {
+            return this.indices;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<Double> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private java.util.List<Long> indices; 
+            private java.util.List<Double> values; 
+
+            /**
+             * Indices.
+             */
+            public Builder indices(java.util.List<Long> indices) {
+                this.indices = indices;
+                return this;
+            }
+
+            /**
+             * Values.
+             */
+            public Builder values(java.util.List<Double> values) {
+                this.values = values;
+                return this;
+            }
+
+            public SparseVector build() {
+                return new SparseVector(this);
             } 
 
         } 
