@@ -55,7 +55,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The list of AccessKey pairs.</p>
+         * <p>The information about the AccessKey pairs.</p>
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -63,7 +63,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>

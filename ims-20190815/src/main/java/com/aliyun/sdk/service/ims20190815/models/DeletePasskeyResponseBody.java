@@ -43,7 +43,10 @@ public class DeletePasskeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A1673AA-5DB3-5AFB-8758-AF9EC2889259</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

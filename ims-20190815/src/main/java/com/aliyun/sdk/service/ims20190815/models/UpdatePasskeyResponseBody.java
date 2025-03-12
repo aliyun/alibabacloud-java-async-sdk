@@ -43,7 +43,10 @@ public class UpdatePasskeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85836703-8D4F-485F-9726-4D1C730F957E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

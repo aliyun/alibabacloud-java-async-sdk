@@ -334,6 +334,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAccessKeyInRecycleBin  DeleteAccessKeyInRecycleBinRequest
+     * @return DeleteAccessKeyInRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAccessKeyInRecycleBinResponse> deleteAccessKeyInRecycleBin(DeleteAccessKeyInRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAccessKeyInRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAccessKeyInRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAccessKeyInRecycleBinResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAppSecret  DeleteAppSecretRequest
      * @return DeleteAppSecretResponse
      */
@@ -485,6 +503,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteUserInRecycleBin  DeleteUserInRecycleBinRequest
+     * @return DeleteUserInRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<DeleteUserInRecycleBinResponse> deleteUserInRecycleBin(DeleteUserInRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUserInRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUserInRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUserInRecycleBinResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteVirtualMFADevice  DeleteVirtualMFADeviceRequest
      * @return DeleteVirtualMFADeviceResponse
      */
@@ -497,6 +533,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteVirtualMFADeviceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <blockquote>
+     * <p> For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeprovisionApplication  DeprovisionApplicationRequest
+     * @return DeprovisionApplicationResponse
+     */
+    @Override
+    public CompletableFuture<DeprovisionApplicationResponse> deprovisionApplication(DeprovisionApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeprovisionApplication").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeprovisionApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeprovisionApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeprovisionExternalApplication  DeprovisionExternalApplicationRequest
+     * @return DeprovisionExternalApplicationResponse
+     */
+    @Override
+    public CompletableFuture<DeprovisionExternalApplicationResponse> deprovisionExternalApplication(DeprovisionExternalApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeprovisionExternalApplication").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeprovisionExternalApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeprovisionExternalApplicationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -533,6 +611,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateCredentialReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GenerateGovernanceReport  GenerateGovernanceReportRequest
+     * @return GenerateGovernanceReportResponse
+     */
+    @Override
+    public CompletableFuture<GenerateGovernanceReportResponse> generateGovernanceReport(GenerateGovernanceReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateGovernanceReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateGovernanceReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateGovernanceReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAccessKeyInfoInRecycleBin  GetAccessKeyInfoInRecycleBinRequest
+     * @return GetAccessKeyInfoInRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<GetAccessKeyInfoInRecycleBinResponse> getAccessKeyInfoInRecycleBin(GetAccessKeyInfoInRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAccessKeyInfoInRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAccessKeyInfoInRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAccessKeyInfoInRecycleBinResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -650,6 +764,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetApplicationProvisionInfo  GetApplicationProvisionInfoRequest
+     * @return GetApplicationProvisionInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetApplicationProvisionInfoResponse> getApplicationProvisionInfo(GetApplicationProvisionInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetApplicationProvisionInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApplicationProvisionInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApplicationProvisionInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCredentialReport  GetCredentialReportRequest
      * @return GetCredentialReportResponse
      */
@@ -680,6 +812,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDefaultDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetExternalApplication  GetExternalApplicationRequest
+     * @return GetExternalApplicationResponse
+     */
+    @Override
+    public CompletableFuture<GetExternalApplicationResponse> getExternalApplication(GetExternalApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetExternalApplication").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetExternalApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetExternalApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGovernanceItemReport  GetGovernanceItemReportRequest
+     * @return GetGovernanceItemReportResponse
+     */
+    @Override
+    public CompletableFuture<GetGovernanceItemReportResponse> getGovernanceItemReport(GetGovernanceItemReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetGovernanceItemReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGovernanceItemReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGovernanceItemReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGovernanceReportStatus  GetGovernanceReportStatusRequest
+     * @return GetGovernanceReportStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetGovernanceReportStatusResponse> getGovernanceReportStatus(GetGovernanceReportStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetGovernanceReportStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGovernanceReportStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGovernanceReportStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -819,6 +1005,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetUserInRecycleBin  GetUserInRecycleBinRequest
+     * @return GetUserInRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<GetUserInRecycleBinResponse> getUserInRecycleBin(GetUserInRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetUserInRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUserInRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUserInRecycleBinResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUserMFAInfo  GetUserMFAInfoRequest
      * @return GetUserMFAInfoResponse
      */
@@ -891,6 +1095,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAccessKeysInRecycleBin  ListAccessKeysInRecycleBinRequest
+     * @return ListAccessKeysInRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<ListAccessKeysInRecycleBinResponse> listAccessKeysInRecycleBin(ListAccessKeysInRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAccessKeysInRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAccessKeysInRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAccessKeysInRecycleBinResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAppSecretIds  ListAppSecretIdsRequest
      * @return ListAppSecretIdsResponse
      */
@@ -903,6 +1125,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAppSecretIdsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApplicationProvisionInfos  ListApplicationProvisionInfosRequest
+     * @return ListApplicationProvisionInfosResponse
+     */
+    @Override
+    public CompletableFuture<ListApplicationProvisionInfosResponse> listApplicationProvisionInfos(ListApplicationProvisionInfosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListApplicationProvisionInfos").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListApplicationProvisionInfosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListApplicationProvisionInfosResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -924,6 +1164,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListExternalApplications  ListExternalApplicationsRequest
+     * @return ListExternalApplicationsResponse
+     */
+    @Override
+    public CompletableFuture<ListExternalApplicationsResponse> listExternalApplications(ListExternalApplicationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListExternalApplications").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListExternalApplicationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListExternalApplicationsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1024,6 +1282,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRecentGovernanceMetrics  ListRecentGovernanceMetricsRequest
+     * @return ListRecentGovernanceMetricsResponse
+     */
+    @Override
+    public CompletableFuture<ListRecentGovernanceMetricsResponse> listRecentGovernanceMetrics(ListRecentGovernanceMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRecentGovernanceMetrics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecentGovernanceMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecentGovernanceMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListSAMLProviders  ListSAMLProvidersRequest
      * @return ListSAMLProvidersResponse
      */
@@ -1070,7 +1346,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the following API operations to query the information about all RAM users:</p>
+     * <p>You can call the following API operations to query information about all RAM users:</p>
      * <ul>
      * <li>ListUsers: queries the details of all RAM users.</li>
      * <li>ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (<code>UserPrincipalName</code>), display names (<code>DisplayName</code>), and user IDs (<code>UserId</code>).</li>
@@ -1138,6 +1414,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListUsersInRecycleBin  ListUsersInRecycleBinRequest
+     * @return ListUsersInRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<ListUsersInRecycleBinResponse> listUsersInRecycleBin(ListUsersInRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUsersInRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUsersInRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUsersInRecycleBinResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListVirtualMFADevices  ListVirtualMFADevicesRequest
      * @return ListVirtualMFADevicesResponse
      */
@@ -1150,6 +1444,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListVirtualMFADevicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ProvisionApplication  ProvisionApplicationRequest
+     * @return ProvisionApplicationResponse
+     */
+    @Override
+    public CompletableFuture<ProvisionApplicationResponse> provisionApplication(ProvisionApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ProvisionApplication").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ProvisionApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ProvisionApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ProvisionExternalApplication  ProvisionExternalApplicationRequest
+     * @return ProvisionExternalApplicationResponse
+     */
+    @Override
+    public CompletableFuture<ProvisionExternalApplicationResponse> provisionExternalApplication(ProvisionExternalApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ProvisionExternalApplication").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ProvisionExternalApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ProvisionExternalApplicationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1212,6 +1542,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveUserFromGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RestoreAccessKeyFromRecycleBin  RestoreAccessKeyFromRecycleBinRequest
+     * @return RestoreAccessKeyFromRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<RestoreAccessKeyFromRecycleBinResponse> restoreAccessKeyFromRecycleBin(RestoreAccessKeyFromRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestoreAccessKeyFromRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestoreAccessKeyFromRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RestoreAccessKeyFromRecycleBinResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RestoreUserFromRecycleBin  RestoreUserFromRecycleBinRequest
+     * @return RestoreUserFromRecycleBinResponse
+     */
+    @Override
+    public CompletableFuture<RestoreUserFromRecycleBinResponse> restoreUserFromRecycleBin(RestoreUserFromRecycleBinRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestoreUserFromRecycleBin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestoreUserFromRecycleBinResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RestoreUserFromRecycleBinResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1294,6 +1660,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SetVerificationInfo  SetVerificationInfoRequest
+     * @return SetVerificationInfoResponse
+     */
+    @Override
+    public CompletableFuture<SetVerificationInfoResponse> setVerificationInfo(SetVerificationInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetVerificationInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetVerificationInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetVerificationInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -1324,6 +1708,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UnbindMFADeviceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnbindVerification  UnbindVerificationRequest
+     * @return UnbindVerificationResponse
+     */
+    @Override
+    public CompletableFuture<UnbindVerificationResponse> unbindVerification(UnbindVerificationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnbindVerification").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnbindVerificationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnbindVerificationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

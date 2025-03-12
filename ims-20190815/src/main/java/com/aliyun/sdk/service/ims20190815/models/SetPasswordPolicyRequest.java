@@ -300,10 +300,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain lowercase letters. Default value: false. Valid values:</p>
+         * <p>Specifies whether the password must contain lowercase letters. Valid values:</p>
          * <ul>
          * <li>true</li>
-         * <li>false</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -316,10 +316,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain digits. Default value: false. Valid values:</p>
+         * <p>Specifies whether the password must contain digits. Valid values:</p>
          * <ul>
          * <li>true</li>
-         * <li>false</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,10 +332,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain special characters. Default value: false. Valid values:</p>
+         * <p>Specifies whether the password must contain special characters. Valid values:</p>
          * <ul>
          * <li>true</li>
-         * <li>false</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,10 +348,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain uppercase letters. Default value: false. Valid values:</p>
+         * <p>Specifies whether the password must contain uppercase letters. Valid values:</p>
          * <ul>
          * <li>true</li>
-         * <li>false</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>

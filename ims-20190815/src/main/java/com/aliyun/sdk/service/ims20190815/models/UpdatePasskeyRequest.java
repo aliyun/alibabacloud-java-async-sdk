@@ -87,7 +87,10 @@ public class UpdatePasskeyRequest extends Request {
         } 
 
         /**
-         * PasskeyId.
+         * <p>The ID of the passkey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PASSKEY-CuZjEHhWcr7GIQOMGvkS</p>
          */
         public Builder passkeyId(String passkeyId) {
             this.putQueryParameter("PasskeyId", passkeyId);
@@ -96,7 +99,10 @@ public class UpdatePasskeyRequest extends Request {
         }
 
         /**
-         * PasskeyName.
+         * <p>The name of the passkey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device1</p>
          */
         public Builder passkeyName(String passkeyName) {
             this.putQueryParameter("PasskeyName", passkeyName);
@@ -105,7 +111,10 @@ public class UpdatePasskeyRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

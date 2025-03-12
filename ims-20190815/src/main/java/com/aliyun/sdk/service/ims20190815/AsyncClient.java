@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccessKeyResponse> deleteAccessKey(DeleteAccessKeyRequest request);
 
     /**
+     * @param request the request parameters of DeleteAccessKeyInRecycleBin  DeleteAccessKeyInRecycleBinRequest
+     * @return DeleteAccessKeyInRecycleBinResponse
+     */
+    CompletableFuture<DeleteAccessKeyInRecycleBinResponse> deleteAccessKeyInRecycleBin(DeleteAccessKeyInRecycleBinRequest request);
+
+    /**
      * @param request the request parameters of DeleteAppSecret  DeleteAppSecretRequest
      * @return DeleteAppSecretResponse
      */
@@ -189,10 +195,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
     /**
+     * @param request the request parameters of DeleteUserInRecycleBin  DeleteUserInRecycleBinRequest
+     * @return DeleteUserInRecycleBinResponse
+     */
+    CompletableFuture<DeleteUserInRecycleBinResponse> deleteUserInRecycleBin(DeleteUserInRecycleBinRequest request);
+
+    /**
      * @param request the request parameters of DeleteVirtualMFADevice  DeleteVirtualMFADeviceRequest
      * @return DeleteVirtualMFADeviceResponse
      */
     CompletableFuture<DeleteVirtualMFADeviceResponse> deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <blockquote>
+     * <p> For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DeprovisionApplication  DeprovisionApplicationRequest
+     * @return DeprovisionApplicationResponse
+     */
+    CompletableFuture<DeprovisionApplicationResponse> deprovisionApplication(DeprovisionApplicationRequest request);
+
+    /**
+     * @param request the request parameters of DeprovisionExternalApplication  DeprovisionExternalApplicationRequest
+     * @return DeprovisionExternalApplicationResponse
+     */
+    CompletableFuture<DeprovisionExternalApplicationResponse> deprovisionExternalApplication(DeprovisionExternalApplicationRequest request);
 
     /**
      * @param request the request parameters of DisableVirtualMFA  DisableVirtualMFARequest
@@ -205,6 +235,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateCredentialReportResponse
      */
     CompletableFuture<GenerateCredentialReportResponse> generateCredentialReport(GenerateCredentialReportRequest request);
+
+    /**
+     * @param request the request parameters of GenerateGovernanceReport  GenerateGovernanceReportRequest
+     * @return GenerateGovernanceReportResponse
+     */
+    CompletableFuture<GenerateGovernanceReportResponse> generateGovernanceReport(GenerateGovernanceReportRequest request);
+
+    /**
+     * @param request the request parameters of GetAccessKeyInfoInRecycleBin  GetAccessKeyInfoInRecycleBinRequest
+     * @return GetAccessKeyInfoInRecycleBinResponse
+     */
+    CompletableFuture<GetAccessKeyInfoInRecycleBinResponse> getAccessKeyInfoInRecycleBin(GetAccessKeyInfoInRecycleBinRequest request);
 
     /**
      * @param request the request parameters of GetAccessKeyLastUsed  GetAccessKeyLastUsedRequest
@@ -246,6 +288,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
     /**
+     * @param request the request parameters of GetApplicationProvisionInfo  GetApplicationProvisionInfoRequest
+     * @return GetApplicationProvisionInfoResponse
+     */
+    CompletableFuture<GetApplicationProvisionInfoResponse> getApplicationProvisionInfo(GetApplicationProvisionInfoRequest request);
+
+    /**
      * @param request the request parameters of GetCredentialReport  GetCredentialReportRequest
      * @return GetCredentialReportResponse
      */
@@ -256,6 +304,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDefaultDomainResponse
      */
     CompletableFuture<GetDefaultDomainResponse> getDefaultDomain(GetDefaultDomainRequest request);
+
+    /**
+     * @param request the request parameters of GetExternalApplication  GetExternalApplicationRequest
+     * @return GetExternalApplicationResponse
+     */
+    CompletableFuture<GetExternalApplicationResponse> getExternalApplication(GetExternalApplicationRequest request);
+
+    /**
+     * @param request the request parameters of GetGovernanceItemReport  GetGovernanceItemReportRequest
+     * @return GetGovernanceItemReportResponse
+     */
+    CompletableFuture<GetGovernanceItemReportResponse> getGovernanceItemReport(GetGovernanceItemReportRequest request);
+
+    /**
+     * @param request the request parameters of GetGovernanceReportStatus  GetGovernanceReportStatusRequest
+     * @return GetGovernanceReportStatusResponse
+     */
+    CompletableFuture<GetGovernanceReportStatusResponse> getGovernanceReportStatus(GetGovernanceReportStatusRequest request);
 
     /**
      * @param request the request parameters of GetGroup  GetGroupRequest
@@ -307,6 +373,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     /**
+     * @param request the request parameters of GetUserInRecycleBin  GetUserInRecycleBinRequest
+     * @return GetUserInRecycleBinResponse
+     */
+    CompletableFuture<GetUserInRecycleBinResponse> getUserInRecycleBin(GetUserInRecycleBinRequest request);
+
+    /**
      * @param request the request parameters of GetUserMFAInfo  GetUserMFAInfoRequest
      * @return GetUserMFAInfoResponse
      */
@@ -331,10 +403,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAccessKeysResponse> listAccessKeys(ListAccessKeysRequest request);
 
     /**
+     * @param request the request parameters of ListAccessKeysInRecycleBin  ListAccessKeysInRecycleBinRequest
+     * @return ListAccessKeysInRecycleBinResponse
+     */
+    CompletableFuture<ListAccessKeysInRecycleBinResponse> listAccessKeysInRecycleBin(ListAccessKeysInRecycleBinRequest request);
+
+    /**
      * @param request the request parameters of ListAppSecretIds  ListAppSecretIdsRequest
      * @return ListAppSecretIdsResponse
      */
     CompletableFuture<ListAppSecretIdsResponse> listAppSecretIds(ListAppSecretIdsRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationProvisionInfos  ListApplicationProvisionInfosRequest
+     * @return ListApplicationProvisionInfosResponse
+     */
+    CompletableFuture<ListApplicationProvisionInfosResponse> listApplicationProvisionInfos(ListApplicationProvisionInfosRequest request);
 
     /**
      * <b>description</b> :
@@ -344,6 +428,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListApplicationsResponse
      */
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListExternalApplications  ListExternalApplicationsRequest
+     * @return ListExternalApplicationsResponse
+     */
+    CompletableFuture<ListExternalApplicationsResponse> listExternalApplications(ListExternalApplicationsRequest request);
 
     /**
      * @param request the request parameters of ListGroups  ListGroupsRequest
@@ -380,6 +470,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPredefinedScopesResponse> listPredefinedScopes(ListPredefinedScopesRequest request);
 
     /**
+     * @param request the request parameters of ListRecentGovernanceMetrics  ListRecentGovernanceMetricsRequest
+     * @return ListRecentGovernanceMetricsResponse
+     */
+    CompletableFuture<ListRecentGovernanceMetricsResponse> listRecentGovernanceMetrics(ListRecentGovernanceMetricsRequest request);
+
+    /**
      * @param request the request parameters of ListSAMLProviders  ListSAMLProvidersRequest
      * @return ListSAMLProvidersResponse
      */
@@ -402,7 +498,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the following API operations to query the information about all RAM users:</p>
+     * <p>You can call the following API operations to query information about all RAM users:</p>
      * <ul>
      * <li>ListUsers: queries the details of all RAM users.</li>
      * <li>ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (<code>UserPrincipalName</code>), display names (<code>DisplayName</code>), and user IDs (<code>UserId</code>).</li>
@@ -434,10 +530,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUsersForGroupResponse> listUsersForGroup(ListUsersForGroupRequest request);
 
     /**
+     * @param request the request parameters of ListUsersInRecycleBin  ListUsersInRecycleBinRequest
+     * @return ListUsersInRecycleBinResponse
+     */
+    CompletableFuture<ListUsersInRecycleBinResponse> listUsersInRecycleBin(ListUsersInRecycleBinRequest request);
+
+    /**
      * @param request the request parameters of ListVirtualMFADevices  ListVirtualMFADevicesRequest
      * @return ListVirtualMFADevicesResponse
      */
     CompletableFuture<ListVirtualMFADevicesResponse> listVirtualMFADevices(ListVirtualMFADevicesRequest request);
+
+    /**
+     * @param request the request parameters of ProvisionApplication  ProvisionApplicationRequest
+     * @return ProvisionApplicationResponse
+     */
+    CompletableFuture<ProvisionApplicationResponse> provisionApplication(ProvisionApplicationRequest request);
+
+    /**
+     * @param request the request parameters of ProvisionExternalApplication  ProvisionExternalApplicationRequest
+     * @return ProvisionExternalApplicationResponse
+     */
+    CompletableFuture<ProvisionExternalApplicationResponse> provisionExternalApplication(ProvisionExternalApplicationRequest request);
 
     /**
      * <b>description</b> :
@@ -464,6 +578,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveUserFromGroupResponse
      */
     CompletableFuture<RemoveUserFromGroupResponse> removeUserFromGroup(RemoveUserFromGroupRequest request);
+
+    /**
+     * @param request the request parameters of RestoreAccessKeyFromRecycleBin  RestoreAccessKeyFromRecycleBinRequest
+     * @return RestoreAccessKeyFromRecycleBinResponse
+     */
+    CompletableFuture<RestoreAccessKeyFromRecycleBinResponse> restoreAccessKeyFromRecycleBin(RestoreAccessKeyFromRecycleBinRequest request);
+
+    /**
+     * @param request the request parameters of RestoreUserFromRecycleBin  RestoreUserFromRecycleBinRequest
+     * @return RestoreUserFromRecycleBinResponse
+     */
+    CompletableFuture<RestoreUserFromRecycleBinResponse> restoreUserFromRecycleBin(RestoreUserFromRecycleBinRequest request);
 
     /**
      * @param request the request parameters of SetDefaultDomain  SetDefaultDomainRequest
@@ -494,6 +620,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetUserSsoSettingsResponse> setUserSsoSettings(SetUserSsoSettingsRequest request);
 
     /**
+     * @param request the request parameters of SetVerificationInfo  SetVerificationInfoRequest
+     * @return SetVerificationInfoResponse
+     */
+    CompletableFuture<SetVerificationInfoResponse> setVerificationInfo(SetVerificationInfoRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -504,6 +636,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnbindMFADeviceResponse
      */
     CompletableFuture<UnbindMFADeviceResponse> unbindMFADevice(UnbindMFADeviceRequest request);
+
+    /**
+     * @param request the request parameters of UnbindVerification  UnbindVerificationRequest
+     * @return UnbindVerificationResponse
+     */
+    CompletableFuture<UnbindVerificationResponse> unbindVerification(UnbindVerificationRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest

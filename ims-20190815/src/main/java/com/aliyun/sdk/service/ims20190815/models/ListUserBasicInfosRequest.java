@@ -126,7 +126,10 @@ public class ListUserBasicInfosRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the RAM users that you want to query. Valid values: active, freeze, and active,freeze. If you set the value to active,freeze, RAM users in both active and freeze states are queried. If you leave the parameter empty, the value active is used by default. If the Tag parameter is specified, you cannot specify the Status parameter. In this case, RAM users in both states are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -135,7 +138,7 @@ public class ListUserBasicInfosRequest extends Request {
         }
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

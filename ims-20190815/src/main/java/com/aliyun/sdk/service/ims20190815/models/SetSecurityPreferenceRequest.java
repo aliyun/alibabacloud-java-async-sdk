@@ -215,7 +215,13 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * AllowUserToLoginWithPasskey.
+         * <p>Allow direct login using passkey.</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
          */
         public Builder allowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
             this.putQueryParameter("AllowUserToLoginWithPasskey", allowUserToLoginWithPasskey);

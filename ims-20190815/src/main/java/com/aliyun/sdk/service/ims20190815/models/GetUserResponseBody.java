@@ -236,6 +236,9 @@ public class GetUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
+        @com.aliyun.core.annotation.NameInMap("UserName")
+        private String userName;
+
         @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
@@ -250,6 +253,7 @@ public class GetUserResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.updateDate = builder.updateDate;
             this.userId = builder.userId;
+            this.userName = builder.userName;
             this.userPrincipalName = builder.userPrincipalName;
         }
 
@@ -332,6 +336,13 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        /**
          * @return userPrincipalName
          */
         public String getUserPrincipalName() {
@@ -349,6 +360,7 @@ public class GetUserResponseBody extends TeaModel {
             private Tags tags; 
             private String updateDate; 
             private String userId; 
+            private String userName; 
             private String userPrincipalName; 
 
             /**
@@ -466,6 +478,14 @@ public class GetUserResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

@@ -55,7 +55,7 @@ public class ListPasskeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Passkeys.
+         * <p>The information about the passkeys.</p>
          */
         public Builder passkeys(java.util.List<Passkeys> passkeys) {
             this.passkeys = passkeys;
@@ -63,7 +63,10 @@ public class ListPasskeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +148,10 @@ public class ListPasskeysResponseBody extends TeaModel {
             private String passkeyName; 
 
             /**
-             * CreateDate.
+             * <p>The time when the passkey was created. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737450279</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -153,7 +159,10 @@ public class ListPasskeysResponseBody extends TeaModel {
             }
 
             /**
-             * LastUseDate.
+             * <p>The time when the passkey was last used. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737450390</p>
              */
             public Builder lastUseDate(String lastUseDate) {
                 this.lastUseDate = lastUseDate;
@@ -161,7 +170,10 @@ public class ListPasskeysResponseBody extends TeaModel {
             }
 
             /**
-             * PasskeyId.
+             * <p>The ID of the passkey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASSKEY-CuZjEHhWcr7GIQOMGvkS</p>
              */
             public Builder passkeyId(String passkeyId) {
                 this.passkeyId = passkeyId;
@@ -169,7 +181,10 @@ public class ListPasskeysResponseBody extends TeaModel {
             }
 
             /**
-             * PasskeyName.
+             * <p>The name of the passkey.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device1</p>
              */
             public Builder passkeyName(String passkeyName) {
                 this.passkeyName = passkeyName;

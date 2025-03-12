@@ -253,7 +253,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * AllowUserToLoginWithPasskey.
+             * <p>Indicates whether a RAM user can use a passkey for logon. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
                 this.allowUserToLoginWithPasskey = allowUserToLoginWithPasskey;
@@ -434,7 +441,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Integer maxIdleDaysForUsers; 
 
             /**
-             * MaxIdleDaysForAccessKeys.
+             * <p>The maximum number of days that the AccessKey pair of a RAM user can stay unused. If an AccessKey pair is not used in the previous specified number of days, the AccessKey pair is automatically disabled on the next day. The default value is 730. You cannot change the value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>730</p>
              */
             public Builder maxIdleDaysForAccessKeys(Integer maxIdleDaysForAccessKeys) {
                 this.maxIdleDaysForAccessKeys = maxIdleDaysForAccessKeys;
@@ -442,7 +452,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIdleDaysForUsers.
+             * <p>The maximum number of days that a RAM user can stay idle. If a RAM user for whom console logon is enabled does not log on to the console in the previous specified number of days, console logon is automatically disabled for the RAM user on the next day. Single sign-on (SSO) is not involved. The default value is 730. You cannot change the value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>730</p>
              */
             public Builder maxIdleDaysForUsers(Integer maxIdleDaysForUsers) {
                 this.maxIdleDaysForUsers = maxIdleDaysForUsers;
@@ -674,7 +687,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIdleDays.
+             * <p>The maximum idle periods. Unit: days.</p>
              */
             public Builder maxIdleDays(MaxIdleDays maxIdleDays) {
                 this.maxIdleDays = maxIdleDays;

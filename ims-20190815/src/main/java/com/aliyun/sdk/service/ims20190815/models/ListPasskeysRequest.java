@@ -59,7 +59,10 @@ public class ListPasskeysRequest extends Request {
         } 
 
         /**
-         * UserPrincipalName.
+         * <p>The logon name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

@@ -66,7 +66,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The overview information of the Alibaba Cloud account.</p>
+         * <p>The overview information about the Alibaba Cloud account.</p>
          */
         public Builder summaryMap(SummaryMap summaryMap) {
             this.summaryMap = summaryMap;
@@ -453,7 +453,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ConditionsPerAKPolicyQuota.
+             * <p>The number of network access control policies that can be configured for an account or AccessKey pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder conditionsPerAKPolicyQuota(Integer conditionsPerAKPolicyQuota) {
                 this.conditionsPerAKPolicyQuota = conditionsPerAKPolicyQuota;
@@ -494,7 +497,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * IPItemsPerAKPolicyQuota.
+             * <p>The total number of IP addresses that can be configured in a network access control policy of an account or AccessKey pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder IPItemsPerAKPolicyQuota(Integer IPItemsPerAKPolicyQuota) {
                 this.IPItemsPerAKPolicyQuota = IPItemsPerAKPolicyQuota;

@@ -172,7 +172,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * AutoDisableLoginStatus.
+             * <p>Indicates whether console logon is automatically disabled if a RAM user does not log on to the console in the previous specified number of days. The number of days is specified by MaxIdleDaysForUsers. The default value is true, and you cannot change the value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoDisableLoginStatus(String autoDisableLoginStatus) {
                 this.autoDisableLoginStatus = autoDisableLoginStatus;

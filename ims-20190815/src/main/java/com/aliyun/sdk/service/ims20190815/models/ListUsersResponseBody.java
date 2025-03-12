@@ -116,7 +116,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the RAM user.</p>
+         * <p>The information about the RAM users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -502,7 +502,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

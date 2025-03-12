@@ -63,7 +63,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3FB5551F-B2ED-40D4-8392-1E4AC2384EFD</p>
