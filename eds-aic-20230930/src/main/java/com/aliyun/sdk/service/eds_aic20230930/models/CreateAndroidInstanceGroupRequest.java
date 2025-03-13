@@ -427,7 +427,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * EnableIpv6.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -437,9 +442,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable GPU acceleration.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (true)</li>
+         * <li>true: enables GPU acceleration.</li>
+         * <li>false (default): disables GPU acceleration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,7 +473,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         /**
          * <p>The name of the instance group.</p>
          * <blockquote>
-         * <p>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</p>
+         * <p> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -499,7 +505,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * Ipv6Bandwidth.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder ipv6Bandwidth(Integer ipv6Bandwidth) {
             this.putQueryParameter("Ipv6Bandwidth", ipv6Bandwidth);
@@ -508,8 +519,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually call the operation to bind key pairs to individual cloud phone instances.</p>
-         * <p>Take note that binding key pairs to cloud phone instances is currently not supported during instance group resizing.</p>
+         * <p>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually bind key pairs to individual cloud phone instances.</p>
+         * <blockquote>
+         * <p> Binding key pairs to cloud phone instances is currently not supported during instance group resizing.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>kp-7o9xywwfutc1l****</p>
@@ -591,7 +604,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -667,7 +680,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -675,7 +691,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

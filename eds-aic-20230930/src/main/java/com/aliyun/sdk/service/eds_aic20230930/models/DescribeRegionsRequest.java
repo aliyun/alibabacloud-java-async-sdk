@@ -73,7 +73,14 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The display language of the console. Valid values:</p>
+         * <ul>
+         * <li>cn: Simplified Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -82,7 +89,15 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The sales mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Instance: the instance group mode. [Default]</li>
+         * <li>Node: the matrix mode. [Whitelist required]</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);

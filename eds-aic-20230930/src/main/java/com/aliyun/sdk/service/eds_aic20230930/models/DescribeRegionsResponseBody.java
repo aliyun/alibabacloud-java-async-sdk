@@ -63,7 +63,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A87B3769-0D05-5383-B236-5798B455****</p>
@@ -124,7 +124,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -135,7 +135,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
