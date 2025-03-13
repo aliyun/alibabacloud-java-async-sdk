@@ -430,10 +430,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</p>
+     * <p>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</p>
      * <ul>
-     * <li>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</li>
-     * <li>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</li>
+     * <li>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</li>
+     * <li>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDesktopGroup  DeleteDesktopGroupRequest

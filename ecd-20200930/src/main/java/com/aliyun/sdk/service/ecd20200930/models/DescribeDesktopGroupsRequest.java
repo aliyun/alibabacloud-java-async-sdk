@@ -333,7 +333,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * DesktopGroupIds.
+         * <p>The IDs of the cloud computer pool.</p>
          */
         public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -393,7 +393,15 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * MultiResource.
+         * <p>Specifies whether the shared group is a multi-cloud computer type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: a multi-cloud computer type.</li>
+         * <li>false: a single-cloud computer type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder multiResource(Boolean multiResource) {
             this.putQueryParameter("MultiResource", multiResource);

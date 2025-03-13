@@ -55,7 +55,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The price information.</p>
+         * <p>The price details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;

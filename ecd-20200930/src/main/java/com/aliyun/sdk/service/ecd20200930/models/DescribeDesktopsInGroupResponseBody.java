@@ -163,7 +163,8 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private Integer stoppedPrePaidDesktopsCount; 
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.
+         * If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -185,7 +186,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about subscription cloud computers.</p>
+         * <p>The subscription cloud computers.</p>
          */
         public Builder paidDesktops(java.util.List<PaidDesktops> paidDesktops) {
             this.paidDesktops = paidDesktops;
@@ -193,7 +194,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of queried subscription cloud computers.</p>
+         * <p>The total number of subscription cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -204,7 +205,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about pay-as-you-go cloud computers.</p>
+         * <p>The pay-as-you-go cloud computers.</p>
          */
         public Builder postPaidDesktops(java.util.List<PostPaidDesktops> postPaidDesktops) {
             this.postPaidDesktops = postPaidDesktops;
@@ -212,7 +213,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of queried pay-as-you-go cloud computers.</p>
+         * <p>The total number of pay-as-you-go cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -708,7 +709,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the authorized user of the cloud computer.</p>
+             * <p>The ID of the authorized user.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>
@@ -719,7 +720,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
+             * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer share. If no end users are connected, no values are returned for this parameter.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -738,7 +739,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
+             * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer share. If no end users are connected, no values are returned for this parameter.</p>
              */
             public Builder endUserNames(java.util.List<String> endUserNames) {
                 this.endUserNames = endUserNames;
@@ -1272,7 +1273,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the cloud computer.</p>
+             * <p>The retention period. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>4153958447</p>

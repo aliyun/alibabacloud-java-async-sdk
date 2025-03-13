@@ -177,6 +177,273 @@ public class DescribeDesktopsResponseBody extends TeaModel {
      *
      * <p>DescribeDesktopsResponseBody</p>
      */
+    public static class DesktopDurationList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OrderInstanceId")
+        private String orderInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("PackageCreationTime")
+        private String packageCreationTime;
+
+        @com.aliyun.core.annotation.NameInMap("PackageExpiredTime")
+        private String packageExpiredTime;
+
+        @com.aliyun.core.annotation.NameInMap("PackageId")
+        private String packageId;
+
+        @com.aliyun.core.annotation.NameInMap("PackageStatus")
+        private String packageStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PackageType")
+        private String packageType;
+
+        @com.aliyun.core.annotation.NameInMap("PackageUsedUpStrategy")
+        private String packageUsedUpStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodEndTime")
+        private String periodEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodStartTime")
+        private String periodStartTime;
+
+        @com.aliyun.core.annotation.NameInMap("PostPaidLimitFee")
+        private Float postPaidLimitFee;
+
+        @com.aliyun.core.annotation.NameInMap("TotalDuration")
+        private Long totalDuration;
+
+        @com.aliyun.core.annotation.NameInMap("UsedDuration")
+        private Long usedDuration;
+
+        private DesktopDurationList(Builder builder) {
+            this.orderInstanceId = builder.orderInstanceId;
+            this.packageCreationTime = builder.packageCreationTime;
+            this.packageExpiredTime = builder.packageExpiredTime;
+            this.packageId = builder.packageId;
+            this.packageStatus = builder.packageStatus;
+            this.packageType = builder.packageType;
+            this.packageUsedUpStrategy = builder.packageUsedUpStrategy;
+            this.periodEndTime = builder.periodEndTime;
+            this.periodStartTime = builder.periodStartTime;
+            this.postPaidLimitFee = builder.postPaidLimitFee;
+            this.totalDuration = builder.totalDuration;
+            this.usedDuration = builder.usedDuration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DesktopDurationList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return orderInstanceId
+         */
+        public String getOrderInstanceId() {
+            return this.orderInstanceId;
+        }
+
+        /**
+         * @return packageCreationTime
+         */
+        public String getPackageCreationTime() {
+            return this.packageCreationTime;
+        }
+
+        /**
+         * @return packageExpiredTime
+         */
+        public String getPackageExpiredTime() {
+            return this.packageExpiredTime;
+        }
+
+        /**
+         * @return packageId
+         */
+        public String getPackageId() {
+            return this.packageId;
+        }
+
+        /**
+         * @return packageStatus
+         */
+        public String getPackageStatus() {
+            return this.packageStatus;
+        }
+
+        /**
+         * @return packageType
+         */
+        public String getPackageType() {
+            return this.packageType;
+        }
+
+        /**
+         * @return packageUsedUpStrategy
+         */
+        public String getPackageUsedUpStrategy() {
+            return this.packageUsedUpStrategy;
+        }
+
+        /**
+         * @return periodEndTime
+         */
+        public String getPeriodEndTime() {
+            return this.periodEndTime;
+        }
+
+        /**
+         * @return periodStartTime
+         */
+        public String getPeriodStartTime() {
+            return this.periodStartTime;
+        }
+
+        /**
+         * @return postPaidLimitFee
+         */
+        public Float getPostPaidLimitFee() {
+            return this.postPaidLimitFee;
+        }
+
+        /**
+         * @return totalDuration
+         */
+        public Long getTotalDuration() {
+            return this.totalDuration;
+        }
+
+        /**
+         * @return usedDuration
+         */
+        public Long getUsedDuration() {
+            return this.usedDuration;
+        }
+
+        public static final class Builder {
+            private String orderInstanceId; 
+            private String packageCreationTime; 
+            private String packageExpiredTime; 
+            private String packageId; 
+            private String packageStatus; 
+            private String packageType; 
+            private String packageUsedUpStrategy; 
+            private String periodEndTime; 
+            private String periodStartTime; 
+            private Float postPaidLimitFee; 
+            private Long totalDuration; 
+            private Long usedDuration; 
+
+            /**
+             * OrderInstanceId.
+             */
+            public Builder orderInstanceId(String orderInstanceId) {
+                this.orderInstanceId = orderInstanceId;
+                return this;
+            }
+
+            /**
+             * PackageCreationTime.
+             */
+            public Builder packageCreationTime(String packageCreationTime) {
+                this.packageCreationTime = packageCreationTime;
+                return this;
+            }
+
+            /**
+             * PackageExpiredTime.
+             */
+            public Builder packageExpiredTime(String packageExpiredTime) {
+                this.packageExpiredTime = packageExpiredTime;
+                return this;
+            }
+
+            /**
+             * PackageId.
+             */
+            public Builder packageId(String packageId) {
+                this.packageId = packageId;
+                return this;
+            }
+
+            /**
+             * PackageStatus.
+             */
+            public Builder packageStatus(String packageStatus) {
+                this.packageStatus = packageStatus;
+                return this;
+            }
+
+            /**
+             * PackageType.
+             */
+            public Builder packageType(String packageType) {
+                this.packageType = packageType;
+                return this;
+            }
+
+            /**
+             * PackageUsedUpStrategy.
+             */
+            public Builder packageUsedUpStrategy(String packageUsedUpStrategy) {
+                this.packageUsedUpStrategy = packageUsedUpStrategy;
+                return this;
+            }
+
+            /**
+             * PeriodEndTime.
+             */
+            public Builder periodEndTime(String periodEndTime) {
+                this.periodEndTime = periodEndTime;
+                return this;
+            }
+
+            /**
+             * PeriodStartTime.
+             */
+            public Builder periodStartTime(String periodStartTime) {
+                this.periodStartTime = periodStartTime;
+                return this;
+            }
+
+            /**
+             * PostPaidLimitFee.
+             */
+            public Builder postPaidLimitFee(Float postPaidLimitFee) {
+                this.postPaidLimitFee = postPaidLimitFee;
+                return this;
+            }
+
+            /**
+             * TotalDuration.
+             */
+            public Builder totalDuration(Long totalDuration) {
+                this.totalDuration = totalDuration;
+                return this;
+            }
+
+            /**
+             * UsedDuration.
+             */
+            public Builder usedDuration(Long usedDuration) {
+                this.usedDuration = usedDuration;
+                return this;
+            }
+
+            public DesktopDurationList build() {
+                return new DesktopDurationList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopsResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
@@ -783,6 +1050,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private String dataDiskSize;
 
+        @com.aliyun.core.annotation.NameInMap("DesktopDurationList")
+        private java.util.List<DesktopDurationList> desktopDurationList;
+
         @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
@@ -949,6 +1219,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.dataDiskCategory = builder.dataDiskCategory;
             this.dataDiskSize = builder.dataDiskSize;
+            this.desktopDurationList = builder.desktopDurationList;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
@@ -1072,6 +1343,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public String getDataDiskSize() {
             return this.dataDiskSize;
+        }
+
+        /**
+         * @return desktopDurationList
+         */
+        public java.util.List<DesktopDurationList> getDesktopDurationList() {
+            return this.desktopDurationList;
         }
 
         /**
@@ -1448,6 +1726,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String creationTime; 
             private String dataDiskCategory; 
             private String dataDiskSize; 
+            private java.util.List<DesktopDurationList> desktopDurationList; 
             private String desktopGroupId; 
             private String desktopId; 
             private String desktopName; 
@@ -1629,6 +1908,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
+                return this;
+            }
+
+            /**
+             * DesktopDurationList.
+             */
+            public Builder desktopDurationList(java.util.List<DesktopDurationList> desktopDurationList) {
+                this.desktopDurationList = desktopDurationList;
                 return this;
             }
 
