@@ -1260,21 +1260,22 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/172789.html">Overview</a>.
+     * Take note of the following items:</p>
      * <ul>
-     * <li>You can use the created custom image only if the image is in the Available (Available) state.</li>
-     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.</li>
-     * <li>To optimize the image, we recommend that you specify DetectionStrategy when you create the image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a>.
-     * You can call the CreateImage operation to create a custom image by using one of the following methods. The following request parameters are sorted by priority: <code>InstanceId</code> &gt; <code>DiskDeviceMapping</code> &gt; <code>SnapshotId</code>. If your request contains two or more of these parameters, the custom image is created based on the parameter that has a higher priority.</li>
-     * <li><strong>Method 1</strong>: Create a custom image from an instance. You need to only specify the ID of the instance by using <code>InstanceId</code>. The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state. After you call the CreateImage operation, a snapshot is created for each disk of the instance. When you create a custom image from a running instance, cache data may not be written to disks. In this case, the data of the custom image may be slightly different from the data of the instance. We recommend that you stop instances by calling the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation before you create custom images from the instances.</li>
-     * <li><strong>Method 2</strong>: Create a custom image from the system disk snapshot of an instance. You need to only specify the ID of the system disk snapshot by using <code>SnapshotId</code>. The specified system disk snapshot must be created after July 15, 2013.</li>
-     * <li><strong>Method 3</strong>: Create a custom image from multiple disk snapshots. You must specify data mappings between the snapshots and the disks to be created by using the parameters that start with <code>DiskDeviceMapping</code>.
-     * When you use Method 3 to create a custom image, take note of the following items:</li>
-     * <li>You can specify only one snapshot to use to create the system disk in the custom image. The device name of the system disk must be /dev/xvda.</li>
-     * <li>You can specify up to 16 snapshots to use to create data disks in the custom image. The device names of the data disks are unique and range from /dev/xvdb to /dev/xvdz in alphabetical order.</li>
+     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query information about an ECS instance, the instance is locked for security reasons, and you cannot create a custom image from the instance.</li>
+     * <li>To optimize the image, we recommend that you specify <code>DetectionStrategy</code> when you create a custom image. For more information, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a>.</li>
+     * <li>You can use the created custom image only if the image is in the Available (<code>Available</code>) state.
+     * You can call the CreateImage operation to create a custom image by using one of the following methods. The following request parameters are sorted by priority from high to low: <code>InstanceId</code> &gt; <code>DiskDeviceMapping</code> &gt; <code>SnapshotId</code>. If your request contains two or more of the preceding parameters, the custom image is created based on the parameter that has a higher priority.</li>
+     * <li><strong>Create a custom image from an ECS instance</strong>. You need to only specify the instance ID by using <code>InstanceId</code>. The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state. After you call the CreateImage operation, a snapshot is created for each disk of the instance. When you create a custom image from a running ECS instance, cache data may not be written to disks. In this case, the data of the custom image may be slightly different from the data of the instance. Before you create a custom image from the instance, we recommend that you stop the instance by calling the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation.</li>
+     * <li><strong>Create a custom image from a system disk snapshot of an ECS instance</strong>. You need to only specify the ID of the system disk snapshot by using <code>SnapshotId</code>. The specified system disk snapshot must be created after July 15, 2013.</li>
+     * <li><strong>Create a custom image from multiple snapshots</strong>. You must specify data mappings between the snapshots and the disks to be created by using the parameters that start with <code>DiskDeviceMapping</code>. Take note of the following items:<ul>
+     * <li>You can specify only one snapshot to create the system disk in the custom image. The device name of the system disk must be /dev/xvda.</li>
+     * <li>You can specify up to 16 snapshots to create data disks in the custom image. The device names of the data disks must be unique and range from /dev/xvdb to /dev/xvdz in alphabetical order.</li>
      * <li>You can leave <code>SnapshotId</code> empty. In this case, an empty data disk with the specified size is created.</li>
-     * <li>The specified disk snapshot must be created after July 15, 2013.</li>
+     * <li>The specified snapshot must be created after July 15, 2013.</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of CreateImage  CreateImageRequest
