@@ -91,7 +91,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The IDs of the application instances.</p>
+         * <p>The app instances.</p>
          */
         public Builder appInstanceModels(java.util.List<AppInstanceModels> appInstanceModels) {
             this.appInstanceModels = appInstanceModels;
@@ -404,7 +404,17 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method of the app instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription.</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -453,7 +463,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the node on which the app instance runs.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp13********</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

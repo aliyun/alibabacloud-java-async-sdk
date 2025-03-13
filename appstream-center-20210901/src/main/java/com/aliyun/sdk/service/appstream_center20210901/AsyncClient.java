@@ -171,6 +171,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNodeInstanceTypeResponse> listNodeInstanceType(ListNodeInstanceTypeRequest request);
 
     /**
+     * @param request the request parameters of ListNodes  ListNodesRequest
+     * @return ListNodesResponse
+     */
+    CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
+
+    /**
      * @param request the request parameters of ListOtaTask  ListOtaTaskRequest
      * @return ListOtaTaskResponse
      */
@@ -192,6 +198,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSessionPackagesResponse
      */
     CompletableFuture<ListSessionPackagesResponse> listSessionPackages(ListSessionPackagesRequest request);
+
+    /**
+     * @param request the request parameters of ListTagCloudResources  ListTagCloudResourcesRequest
+     * @return ListTagCloudResourcesResponse
+     */
+    CompletableFuture<ListTagCloudResourcesResponse> listTagCloudResources(ListTagCloudResourcesRequest request);
 
     /**
      * @param request the request parameters of ListTenantConfig  ListTenantConfigRequest
@@ -223,6 +235,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAppPolicyResponse> modifyAppPolicy(ModifyAppPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyNodePoolAmount  ModifyNodePoolAmountRequest
+     * @return ModifyNodePoolAmountResponse
+     */
+    CompletableFuture<ModifyNodePoolAmountResponse> modifyNodePoolAmount(ModifyNodePoolAmountRequest request);
+
+    /**
      * @param request the request parameters of ModifyNodePoolAttribute  ModifyNodePoolAttributeRequest
      * @return ModifyNodePoolAttributeResponse
      */
@@ -250,10 +268,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewAppInstanceGroupResponse> renewAppInstanceGroup(RenewAppInstanceGroupRequest request);
 
     /**
+     * @param request the request parameters of TagCloudResources  TagCloudResourcesRequest
+     * @return TagCloudResourcesResponse
+     */
+    CompletableFuture<TagCloudResourcesResponse> tagCloudResources(TagCloudResourcesRequest request);
+
+    /**
      * @param request the request parameters of Unbind  UnbindRequest
      * @return UnbindResponse
      */
     CompletableFuture<UnbindResponse> unbind(UnbindRequest request);
+
+    /**
+     * @param request the request parameters of UntagCloudResources  UntagCloudResourcesRequest
+     * @return UntagCloudResourcesResponse
+     */
+    CompletableFuture<UntagCloudResourcesResponse> untagCloudResources(UntagCloudResourcesRequest request);
 
     /**
      * <b>description</b> :

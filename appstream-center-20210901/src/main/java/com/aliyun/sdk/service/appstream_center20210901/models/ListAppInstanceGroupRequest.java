@@ -276,7 +276,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value cannot be greater than <code>100</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

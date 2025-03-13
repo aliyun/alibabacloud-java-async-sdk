@@ -991,7 +991,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -999,7 +999,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The tag type. Valid values: Custom and System.</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -1007,7 +1007,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1574,7 +1574,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The type of the operating system.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Windows</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1638,7 +1645,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTags.
+             * <p>The tags added to the resources.</p>
              */
             public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
                 this.resourceTags = resourceTags;

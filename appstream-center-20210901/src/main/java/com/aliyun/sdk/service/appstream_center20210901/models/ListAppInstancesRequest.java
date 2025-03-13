@@ -193,7 +193,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the information about deleted application instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</p>
+         * <p>Specifies whether to query the information about deleted app instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>true</li>
@@ -210,7 +210,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <code>1</code>. We recommend that you configure this parameter.</p>
+         * <p>The page number. Default value: <code>1</code>. We recommend that you specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +222,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you configure this parameter.</p>
+         * <p>The number of entries per page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -243,7 +243,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * UserIdList.
+         * <p>The user IDs. You can specify up to 100 IDs.</p>
          */
         public Builder userIdList(java.util.List<String> userIdList) {
             this.putQueryParameter("UserIdList", userIdList);
