@@ -59,6 +59,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchAddDocument  BatchAddDocumentRequest
+     * @return BatchAddDocumentResponse
+     */
+    @Override
+    public CompletableFuture<BatchAddDocumentResponse> batchAddDocument(BatchAddDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchAddDocument").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/knowledge-base/{knowledgeBaseId}/documents").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchAddDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchAddDocumentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchCreateAICoachTask  BatchCreateAICoachTaskRequest
      * @return BatchCreateAICoachTaskResponse
      */
@@ -89,6 +107,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchGetProjectTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchGetTrainTask  BatchGetTrainTaskRequest
+     * @return BatchGetTrainTaskResponse
+     */
+    @Override
+    public CompletableFuture<BatchGetTrainTaskResponse> batchGetTrainTask(BatchGetTrainTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchGetTrainTask").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/train/task/batchGetTrainTaskInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchGetTrainTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchGetTrainTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchGetVideoClipTask  BatchGetVideoClipTaskRequest
+     * @return BatchGetVideoClipTaskResponse
+     */
+    @Override
+    public CompletableFuture<BatchGetVideoClipTaskResponse> batchGetVideoClipTask(BatchGetVideoClipTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchGetVideoClipTask").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/video/clip/batchGetVideoClipTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchGetVideoClipTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchGetVideoClipTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -311,6 +365,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateTrainTask  CreateTrainTaskRequest
+     * @return CreateTrainTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateTrainTaskResponse> createTrainTask(CreateTrainTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateTrainTask").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/train/task/createTrainTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTrainTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTrainTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateVideoClipTask  CreateVideoClipTaskRequest
+     * @return CreateVideoClipTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateVideoClipTaskResponse> createVideoClipTask(CreateVideoClipTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateVideoClipTask").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/video/clip/createVideoClipTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVideoClipTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVideoClipTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteIndividuationProject  DeleteIndividuationProjectRequest
      * @return DeleteIndividuationProjectResponse
      */
@@ -341,6 +431,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteIndividuationTextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDocument  DescribeDocumentRequest
+     * @return DescribeDocumentResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDocumentResponse> describeDocument(DescribeDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeDocument").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/knowledge-base/{knowledgeBaseId}/documents/{documentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDocumentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -609,6 +717,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAgents  ListAgentsRequest
+     * @return ListAgentsResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAgents").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/agent/listAgents").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAnchor  ListAnchorRequest
      * @return ListAnchorResponse
      */
@@ -639,6 +765,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAvatarProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListKnowledgeBase  ListKnowledgeBaseRequest
+     * @return ListKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeBaseResponse> listKnowledgeBase(ListKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListKnowledgeBase").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/knowledge-base").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeBaseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

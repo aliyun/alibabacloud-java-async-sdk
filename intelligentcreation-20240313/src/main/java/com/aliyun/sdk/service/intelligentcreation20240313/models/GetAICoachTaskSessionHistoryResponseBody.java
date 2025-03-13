@@ -246,6 +246,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("audioUrl")
         private String audioUrl;
 
+        @com.aliyun.core.annotation.NameInMap("evaluationFeedback")
+        private String evaluationFeedback;
+
         @com.aliyun.core.annotation.NameInMap("evaluationResult")
         private String evaluationResult;
 
@@ -260,6 +263,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
 
         private ConversationList(Builder builder) {
             this.audioUrl = builder.audioUrl;
+            this.evaluationFeedback = builder.evaluationFeedback;
             this.evaluationResult = builder.evaluationResult;
             this.message = builder.message;
             this.recordId = builder.recordId;
@@ -279,6 +283,13 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
          */
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        /**
+         * @return evaluationFeedback
+         */
+        public String getEvaluationFeedback() {
+            return this.evaluationFeedback;
         }
 
         /**
@@ -311,6 +322,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String audioUrl; 
+            private String evaluationFeedback; 
             private String evaluationResult; 
             private String message; 
             private String recordId; 
@@ -321,6 +333,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
              */
             public Builder audioUrl(String audioUrl) {
                 this.audioUrl = audioUrl;
+                return this;
+            }
+
+            /**
+             * evaluationFeedback.
+             */
+            public Builder evaluationFeedback(String evaluationFeedback) {
+                this.evaluationFeedback = evaluationFeedback;
                 return this;
             }
 

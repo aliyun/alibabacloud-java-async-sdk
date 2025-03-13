@@ -27,10 +27,15 @@ public class GetOssUploadTokenRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("uploadType")
+    private Integer uploadType;
+
     private GetOssUploadTokenRequest(Builder builder) {
         super(builder);
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
+        this.uploadType = builder.uploadType;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class GetOssUploadTokenRequest extends Request {
         return this.fileType;
     }
 
+    /**
+     * @return uploadType
+     */
+    public Integer getUploadType() {
+        return this.uploadType;
+    }
+
     public static final class Builder extends Request.Builder<GetOssUploadTokenRequest, Builder> {
         private String fileName; 
         private String fileType; 
+        private Integer uploadType; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class GetOssUploadTokenRequest extends Request {
             super(request);
             this.fileName = request.fileName;
             this.fileType = request.fileType;
+            this.uploadType = request.uploadType;
         } 
 
         /**
@@ -95,6 +109,15 @@ public class GetOssUploadTokenRequest extends Request {
         public Builder fileType(String fileType) {
             this.putQueryParameter("fileType", fileType);
             this.fileType = fileType;
+            return this;
+        }
+
+        /**
+         * uploadType.
+         */
+        public Builder uploadType(Integer uploadType) {
+            this.putQueryParameter("uploadType", uploadType);
+            this.uploadType = uploadType;
             return this;
         }
 

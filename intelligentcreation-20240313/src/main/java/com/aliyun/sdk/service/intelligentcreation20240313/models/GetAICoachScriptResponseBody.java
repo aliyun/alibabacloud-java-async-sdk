@@ -947,6 +947,12 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("nameList")
+        private java.util.List<String> nameList;
+
+        @com.aliyun.core.annotation.NameInMap("operators")
+        private String operators;
+
         @com.aliyun.core.annotation.NameInMap("parameters")
         private java.util.List<Parameters> parameters;
 
@@ -958,6 +964,8 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
         private AnswerList(Builder builder) {
             this.name = builder.name;
+            this.nameList = builder.nameList;
+            this.operators = builder.operators;
             this.parameters = builder.parameters;
             this.type = builder.type;
             this.weight = builder.weight;
@@ -976,6 +984,20 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return nameList
+         */
+        public java.util.List<String> getNameList() {
+            return this.nameList;
+        }
+
+        /**
+         * @return operators
+         */
+        public String getOperators() {
+            return this.operators;
         }
 
         /**
@@ -1001,6 +1023,8 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
+            private java.util.List<String> nameList; 
+            private String operators; 
             private java.util.List<Parameters> parameters; 
             private String type; 
             private Integer weight; 
@@ -1010,6 +1034,22 @@ public class GetAICoachScriptResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * nameList.
+             */
+            public Builder nameList(java.util.List<String> nameList) {
+                this.nameList = nameList;
+                return this;
+            }
+
+            /**
+             * operators.
+             */
+            public Builder operators(String operators) {
+                this.operators = operators;
                 return this;
             }
 

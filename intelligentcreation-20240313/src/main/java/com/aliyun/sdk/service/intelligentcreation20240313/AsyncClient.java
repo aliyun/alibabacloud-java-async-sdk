@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddTextFeedbackResponse> addTextFeedback(AddTextFeedbackRequest request);
 
     /**
+     * @param request the request parameters of BatchAddDocument  BatchAddDocumentRequest
+     * @return BatchAddDocumentResponse
+     */
+    CompletableFuture<BatchAddDocumentResponse> batchAddDocument(BatchAddDocumentRequest request);
+
+    /**
      * @param request the request parameters of BatchCreateAICoachTask  BatchCreateAICoachTaskRequest
      * @return BatchCreateAICoachTaskResponse
      */
@@ -36,6 +42,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchGetProjectTaskResponse
      */
     CompletableFuture<BatchGetProjectTaskResponse> batchGetProjectTask(BatchGetProjectTaskRequest request);
+
+    /**
+     * @param request the request parameters of BatchGetTrainTask  BatchGetTrainTaskRequest
+     * @return BatchGetTrainTaskResponse
+     */
+    CompletableFuture<BatchGetTrainTaskResponse> batchGetTrainTask(BatchGetTrainTaskRequest request);
+
+    /**
+     * @param request the request parameters of BatchGetVideoClipTask  BatchGetVideoClipTaskRequest
+     * @return BatchGetVideoClipTaskResponse
+     */
+    CompletableFuture<BatchGetVideoClipTaskResponse> batchGetVideoClipTask(BatchGetVideoClipTaskRequest request);
 
     /**
      * @param request the request parameters of BatchQueryIndividuationText  BatchQueryIndividuationTextRequest
@@ -110,6 +128,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTextTaskResponse> createTextTask(CreateTextTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateTrainTask  CreateTrainTaskRequest
+     * @return CreateTrainTaskResponse
+     */
+    CompletableFuture<CreateTrainTaskResponse> createTrainTask(CreateTrainTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateVideoClipTask  CreateVideoClipTaskRequest
+     * @return CreateVideoClipTaskResponse
+     */
+    CompletableFuture<CreateVideoClipTaskResponse> createVideoClipTask(CreateVideoClipTaskRequest request);
+
+    /**
      * @param request the request parameters of DeleteIndividuationProject  DeleteIndividuationProjectRequest
      * @return DeleteIndividuationProjectResponse
      */
@@ -120,6 +150,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteIndividuationTextResponse
      */
     CompletableFuture<DeleteIndividuationTextResponse> deleteIndividuationText(DeleteIndividuationTextRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDocument  DescribeDocumentRequest
+     * @return DescribeDocumentResponse
+     */
+    CompletableFuture<DescribeDocumentResponse> describeDocument(DescribeDocumentRequest request);
 
     /**
      * @param request the request parameters of FinishAICoachTaskSession  FinishAICoachTaskSessionRequest
@@ -208,6 +244,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAICoachTaskPageResponse> listAICoachTaskPage(ListAICoachTaskPageRequest request);
 
     /**
+     * @param request the request parameters of ListAgents  ListAgentsRequest
+     * @return ListAgentsResponse
+     */
+    CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request);
+
+    /**
      * @param request the request parameters of ListAnchor  ListAnchorRequest
      * @return ListAnchorResponse
      */
@@ -218,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAvatarProjectResponse
      */
     CompletableFuture<ListAvatarProjectResponse> listAvatarProject(ListAvatarProjectRequest request);
+
+    /**
+     * @param request the request parameters of ListKnowledgeBase  ListKnowledgeBaseRequest
+     * @return ListKnowledgeBaseResponse
+     */
+    CompletableFuture<ListKnowledgeBaseResponse> listKnowledgeBase(ListKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of ListTextThemes  ListTextThemesRequest

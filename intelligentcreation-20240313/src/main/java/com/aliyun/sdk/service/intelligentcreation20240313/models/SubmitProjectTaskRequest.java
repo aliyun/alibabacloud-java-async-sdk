@@ -694,6 +694,12 @@ public class SubmitProjectTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("audioUrl")
         private String audioUrl;
 
+        @com.aliyun.core.annotation.NameInMap("emotion")
+        private String emotion;
+
+        @com.aliyun.core.annotation.NameInMap("pitchRate")
+        private String pitchRate;
+
         @com.aliyun.core.annotation.NameInMap("speechOpen")
         private Boolean speechOpen;
 
@@ -706,6 +712,9 @@ public class SubmitProjectTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("voiceLanguage")
+        private String voiceLanguage;
+
         @com.aliyun.core.annotation.NameInMap("voiceTemplateId")
         private Long voiceTemplateId;
 
@@ -714,10 +723,13 @@ public class SubmitProjectTaskRequest extends Request {
 
         private VideoScript(Builder builder) {
             this.audioUrl = builder.audioUrl;
+            this.emotion = builder.emotion;
+            this.pitchRate = builder.pitchRate;
             this.speechOpen = builder.speechOpen;
             this.speedRate = builder.speedRate;
             this.textContent = builder.textContent;
             this.type = builder.type;
+            this.voiceLanguage = builder.voiceLanguage;
             this.voiceTemplateId = builder.voiceTemplateId;
             this.volume = builder.volume;
         }
@@ -735,6 +747,20 @@ public class SubmitProjectTaskRequest extends Request {
          */
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        /**
+         * @return emotion
+         */
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        /**
+         * @return pitchRate
+         */
+        public String getPitchRate() {
+            return this.pitchRate;
         }
 
         /**
@@ -766,6 +792,13 @@ public class SubmitProjectTaskRequest extends Request {
         }
 
         /**
+         * @return voiceLanguage
+         */
+        public String getVoiceLanguage() {
+            return this.voiceLanguage;
+        }
+
+        /**
          * @return voiceTemplateId
          */
         public Long getVoiceTemplateId() {
@@ -781,10 +814,13 @@ public class SubmitProjectTaskRequest extends Request {
 
         public static final class Builder {
             private String audioUrl; 
+            private String emotion; 
+            private String pitchRate; 
             private Boolean speechOpen; 
             private String speedRate; 
             private String textContent; 
             private String type; 
+            private String voiceLanguage; 
             private Long voiceTemplateId; 
             private Integer volume; 
 
@@ -793,6 +829,22 @@ public class SubmitProjectTaskRequest extends Request {
              */
             public Builder audioUrl(String audioUrl) {
                 this.audioUrl = audioUrl;
+                return this;
+            }
+
+            /**
+             * emotion.
+             */
+            public Builder emotion(String emotion) {
+                this.emotion = emotion;
+                return this;
+            }
+
+            /**
+             * pitchRate.
+             */
+            public Builder pitchRate(String pitchRate) {
+                this.pitchRate = pitchRate;
                 return this;
             }
 
@@ -825,6 +877,14 @@ public class SubmitProjectTaskRequest extends Request {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * voiceLanguage.
+             */
+            public Builder voiceLanguage(String voiceLanguage) {
+                this.voiceLanguage = voiceLanguage;
                 return this;
             }
 

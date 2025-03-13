@@ -34,6 +34,10 @@ public class ListVoiceModelsRequest extends Request {
     private String useScene;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("voiceLanguage")
+    private String voiceLanguage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("voiceType")
     private String voiceType;
 
@@ -43,6 +47,7 @@ public class ListVoiceModelsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resSpecType = builder.resSpecType;
         this.useScene = builder.useScene;
+        this.voiceLanguage = builder.voiceLanguage;
         this.voiceType = builder.voiceType;
     }
 
@@ -88,6 +93,13 @@ public class ListVoiceModelsRequest extends Request {
     }
 
     /**
+     * @return voiceLanguage
+     */
+    public String getVoiceLanguage() {
+        return this.voiceLanguage;
+    }
+
+    /**
      * @return voiceType
      */
     public String getVoiceType() {
@@ -99,6 +111,7 @@ public class ListVoiceModelsRequest extends Request {
         private Integer pageSize; 
         private String resSpecType; 
         private String useScene; 
+        private String voiceLanguage; 
         private String voiceType; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ListVoiceModelsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resSpecType = request.resSpecType;
             this.useScene = request.useScene;
+            this.voiceLanguage = request.voiceLanguage;
             this.voiceType = request.voiceType;
         } 
 
@@ -147,6 +161,15 @@ public class ListVoiceModelsRequest extends Request {
         public Builder useScene(String useScene) {
             this.putQueryParameter("useScene", useScene);
             this.useScene = useScene;
+            return this;
+        }
+
+        /**
+         * voiceLanguage.
+         */
+        public Builder voiceLanguage(String voiceLanguage) {
+            this.putQueryParameter("voiceLanguage", voiceLanguage);
+            this.voiceLanguage = voiceLanguage;
             return this;
         }
 

@@ -22,6 +22,14 @@ public class SaveAvatarProjectRequest extends Request {
     private String agentId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("bitRate")
+    private String bitRate;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("frameRate")
+    private String frameRate;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("frames")
     private java.util.List<Frames> frames;
 
@@ -49,9 +57,15 @@ public class SaveAvatarProjectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("scaleType")
     private String scaleType;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("synchronizedDisplay")
+    private String synchronizedDisplay;
+
     private SaveAvatarProjectRequest(Builder builder) {
         super(builder);
         this.agentId = builder.agentId;
+        this.bitRate = builder.bitRate;
+        this.frameRate = builder.frameRate;
         this.frames = builder.frames;
         this.operateType = builder.operateType;
         this.projectId = builder.projectId;
@@ -59,6 +73,7 @@ public class SaveAvatarProjectRequest extends Request {
         this.resSpecType = builder.resSpecType;
         this.resolution = builder.resolution;
         this.scaleType = builder.scaleType;
+        this.synchronizedDisplay = builder.synchronizedDisplay;
     }
 
     public static Builder builder() {
@@ -79,6 +94,20 @@ public class SaveAvatarProjectRequest extends Request {
      */
     public String getAgentId() {
         return this.agentId;
+    }
+
+    /**
+     * @return bitRate
+     */
+    public String getBitRate() {
+        return this.bitRate;
+    }
+
+    /**
+     * @return frameRate
+     */
+    public String getFrameRate() {
+        return this.frameRate;
     }
 
     /**
@@ -130,8 +159,17 @@ public class SaveAvatarProjectRequest extends Request {
         return this.scaleType;
     }
 
+    /**
+     * @return synchronizedDisplay
+     */
+    public String getSynchronizedDisplay() {
+        return this.synchronizedDisplay;
+    }
+
     public static final class Builder extends Request.Builder<SaveAvatarProjectRequest, Builder> {
         private String agentId; 
+        private String bitRate; 
+        private String frameRate; 
         private java.util.List<Frames> frames; 
         private String operateType; 
         private String projectId; 
@@ -139,6 +177,7 @@ public class SaveAvatarProjectRequest extends Request {
         private String resSpecType; 
         private String resolution; 
         private String scaleType; 
+        private String synchronizedDisplay; 
 
         private Builder() {
             super();
@@ -147,6 +186,8 @@ public class SaveAvatarProjectRequest extends Request {
         private Builder(SaveAvatarProjectRequest request) {
             super(request);
             this.agentId = request.agentId;
+            this.bitRate = request.bitRate;
+            this.frameRate = request.frameRate;
             this.frames = request.frames;
             this.operateType = request.operateType;
             this.projectId = request.projectId;
@@ -154,6 +195,7 @@ public class SaveAvatarProjectRequest extends Request {
             this.resSpecType = request.resSpecType;
             this.resolution = request.resolution;
             this.scaleType = request.scaleType;
+            this.synchronizedDisplay = request.synchronizedDisplay;
         } 
 
         /**
@@ -162,6 +204,24 @@ public class SaveAvatarProjectRequest extends Request {
         public Builder agentId(String agentId) {
             this.putBodyParameter("agentId", agentId);
             this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * bitRate.
+         */
+        public Builder bitRate(String bitRate) {
+            this.putBodyParameter("bitRate", bitRate);
+            this.bitRate = bitRate;
+            return this;
+        }
+
+        /**
+         * frameRate.
+         */
+        public Builder frameRate(String frameRate) {
+            this.putBodyParameter("frameRate", frameRate);
+            this.frameRate = frameRate;
             return this;
         }
 
@@ -225,6 +285,15 @@ public class SaveAvatarProjectRequest extends Request {
         public Builder scaleType(String scaleType) {
             this.putBodyParameter("scaleType", scaleType);
             this.scaleType = scaleType;
+            return this;
+        }
+
+        /**
+         * synchronizedDisplay.
+         */
+        public Builder synchronizedDisplay(String synchronizedDisplay) {
+            this.putBodyParameter("synchronizedDisplay", synchronizedDisplay);
+            this.synchronizedDisplay = synchronizedDisplay;
             return this;
         }
 
@@ -479,6 +548,9 @@ public class SaveAvatarProjectRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("speedRate")
         private String speedRate;
 
+        @com.aliyun.core.annotation.NameInMap("voiceLanguage")
+        private String voiceLanguage;
+
         @com.aliyun.core.annotation.NameInMap("voiceTemplateId")
         private String voiceTemplateId;
 
@@ -487,6 +559,7 @@ public class SaveAvatarProjectRequest extends Request {
 
         private VideoScript(Builder builder) {
             this.speedRate = builder.speedRate;
+            this.voiceLanguage = builder.voiceLanguage;
             this.voiceTemplateId = builder.voiceTemplateId;
             this.volume = builder.volume;
         }
@@ -507,6 +580,13 @@ public class SaveAvatarProjectRequest extends Request {
         }
 
         /**
+         * @return voiceLanguage
+         */
+        public String getVoiceLanguage() {
+            return this.voiceLanguage;
+        }
+
+        /**
          * @return voiceTemplateId
          */
         public String getVoiceTemplateId() {
@@ -522,6 +602,7 @@ public class SaveAvatarProjectRequest extends Request {
 
         public static final class Builder {
             private String speedRate; 
+            private String voiceLanguage; 
             private String voiceTemplateId; 
             private String volume; 
 
@@ -530,6 +611,14 @@ public class SaveAvatarProjectRequest extends Request {
              */
             public Builder speedRate(String speedRate) {
                 this.speedRate = speedRate;
+                return this;
+            }
+
+            /**
+             * voiceLanguage.
+             */
+            public Builder voiceLanguage(String voiceLanguage) {
+                this.voiceLanguage = voiceLanguage;
                 return this;
             }
 
