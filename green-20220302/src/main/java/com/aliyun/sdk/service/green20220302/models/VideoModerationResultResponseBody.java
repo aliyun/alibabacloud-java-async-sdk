@@ -806,6 +806,267 @@ public class VideoModerationResultResponseBody extends TeaModel {
      *
      * <p>VideoModerationResultResponseBody</p>
      */
+    public static class Location extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("H")
+        private Integer h;
+
+        @com.aliyun.core.annotation.NameInMap("W")
+        private Integer w;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Integer x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Integer y;
+
+        private Location(Builder builder) {
+            this.h = builder.h;
+            this.w = builder.w;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Location create() {
+            return builder().build();
+        }
+
+        /**
+         * @return h
+         */
+        public Integer getH() {
+            return this.h;
+        }
+
+        /**
+         * @return w
+         */
+        public Integer getW() {
+            return this.w;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Integer h; 
+            private Integer w; 
+            private Integer x; 
+            private Integer y; 
+
+            /**
+             * H.
+             */
+            public Builder h(Integer h) {
+                this.h = h;
+                return this;
+            }
+
+            /**
+             * W.
+             */
+            public Builder w(Integer w) {
+                this.w = w;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
+                return this;
+            }
+
+            public Location build() {
+                return new Location(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
+    public static class Logo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("confidence")
+        private Long confidence;
+
+        @com.aliyun.core.annotation.NameInMap("label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Logo(Builder builder) {
+            this.confidence = builder.confidence;
+            this.label = builder.label;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Logo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Long getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long confidence; 
+            private String label; 
+            private String name; 
+
+            /**
+             * confidence.
+             */
+            public Builder confidence(Long confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Logo build() {
+                return new Logo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
+    public static class LogoData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Location")
+        private Location location;
+
+        @com.aliyun.core.annotation.NameInMap("Logo")
+        private java.util.List<Logo> logo;
+
+        private LogoData(Builder builder) {
+            this.location = builder.location;
+            this.logo = builder.logo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogoData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return location
+         */
+        public Location getLocation() {
+            return this.location;
+        }
+
+        /**
+         * @return logo
+         */
+        public java.util.List<Logo> getLogo() {
+            return this.logo;
+        }
+
+        public static final class Builder {
+            private Location location; 
+            private java.util.List<Logo> logo; 
+
+            /**
+             * Location.
+             */
+            public Builder location(Location location) {
+                this.location = location;
+                return this;
+            }
+
+            /**
+             * Logo.
+             */
+            public Builder logo(java.util.List<Logo> logo) {
+                this.logo = logo;
+                return this;
+            }
+
+            public LogoData build() {
+                return new LogoData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class PublicFigure extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
@@ -956,6 +1217,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List<CustomImage> customImage;
 
+        @com.aliyun.core.annotation.NameInMap("LogoData")
+        private java.util.List<LogoData> logoData;
+
         @com.aliyun.core.annotation.NameInMap("PublicFigure")
         private java.util.List<PublicFigure> publicFigure;
 
@@ -970,6 +1234,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         private Results(Builder builder) {
             this.customImage = builder.customImage;
+            this.logoData = builder.logoData;
             this.publicFigure = builder.publicFigure;
             this.result = builder.result;
             this.service = builder.service;
@@ -989,6 +1254,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
          */
         public java.util.List<CustomImage> getCustomImage() {
             return this.customImage;
+        }
+
+        /**
+         * @return logoData
+         */
+        public java.util.List<LogoData> getLogoData() {
+            return this.logoData;
         }
 
         /**
@@ -1021,6 +1293,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CustomImage> customImage; 
+            private java.util.List<LogoData> logoData; 
             private java.util.List<PublicFigure> publicFigure; 
             private java.util.List<Result> result; 
             private String service; 
@@ -1031,6 +1304,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder customImage(java.util.List<CustomImage> customImage) {
                 this.customImage = customImage;
+                return this;
+            }
+
+            /**
+             * LogoData.
+             */
+            public Builder logoData(java.util.List<LogoData> logoData) {
+                this.logoData = logoData;
                 return this;
             }
 
