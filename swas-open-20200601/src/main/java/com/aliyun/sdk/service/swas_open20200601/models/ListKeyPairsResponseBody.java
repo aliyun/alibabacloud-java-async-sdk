@@ -48,6 +48,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyPairs
      */
@@ -89,6 +93,17 @@ public class ListKeyPairsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListKeyPairsResponseBody model) {
+            this.keyPairs = model.keyPairs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details about the queried AccessKey pairs.</p>
@@ -215,6 +230,16 @@ public class ListKeyPairsResponseBody extends TeaModel {
             private java.util.List<String> instanceIds; 
             private String keyPairName; 
             private String publicKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyPairs model) {
+                this.creationTime = model.creationTime;
+                this.instanceIds = model.instanceIds;
+                this.keyPairName = model.keyPairName;
+                this.publicKey = model.publicKey;
+            } 
 
             /**
              * <p>The time when the AccessKey pair was created.</p>

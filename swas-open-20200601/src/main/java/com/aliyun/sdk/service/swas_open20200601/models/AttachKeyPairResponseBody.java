@@ -44,6 +44,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return failCount
      */
@@ -77,6 +81,16 @@ public class AttachKeyPairResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Results> results; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachKeyPairResponseBody model) {
+            this.failCount = model.failCount;
+            this.requestId = model.requestId;
+            this.results = model.results;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The total number of simple application servers to which the key pair failed to be bound.</p>
@@ -192,6 +206,16 @@ public class AttachKeyPairResponseBody extends TeaModel {
             private String instanceId; 
             private String message; 
             private String success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.code = model.code;
+                this.instanceId = model.instanceId;
+                this.message = model.message;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The HTTP status code.</p>

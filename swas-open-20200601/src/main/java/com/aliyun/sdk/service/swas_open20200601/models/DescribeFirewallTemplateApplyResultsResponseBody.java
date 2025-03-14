@@ -48,6 +48,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         private String requestId; 
         private String totalCount; 
         private java.util.List<Data> data; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFirewallTemplateApplyResultsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -191,6 +206,14 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceApplyResults model) {
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the simple application server.</p>
@@ -330,6 +353,19 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.failedCount = model.failedCount;
+                this.firewallTemplateId = model.firewallTemplateId;
+                this.instanceApplyResults = model.instanceApplyResults;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when the firewall template was applied to the simple application servers.</p>

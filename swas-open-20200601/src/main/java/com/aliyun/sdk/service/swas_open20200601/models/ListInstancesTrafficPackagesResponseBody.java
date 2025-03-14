@@ -36,6 +36,10 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTrafficPackageUsages
      */
@@ -53,6 +57,14 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceTrafficPackageUsages> instanceTrafficPackageUsages; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesTrafficPackagesResponseBody model) {
+            this.instanceTrafficPackageUsages = model.instanceTrafficPackageUsages;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data transfers that exceed the quota of the data transfer plan in the current month. Unit: bytes.</p>
@@ -158,6 +170,17 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
             private Long trafficPackageRemaining; 
             private Long trafficPackageTotal; 
             private Long trafficUsed; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTrafficPackageUsages model) {
+                this.instanceId = model.instanceId;
+                this.trafficOverflow = model.trafficOverflow;
+                this.trafficPackageRemaining = model.trafficPackageRemaining;
+                this.trafficPackageTotal = model.trafficPackageTotal;
+                this.trafficUsed = model.trafficUsed;
+            } 
 
             /**
              * <p>The ID of the simple application server.</p>

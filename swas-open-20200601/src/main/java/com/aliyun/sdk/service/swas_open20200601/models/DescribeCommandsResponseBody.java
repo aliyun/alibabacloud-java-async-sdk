@@ -48,6 +48,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commands
      */
@@ -89,6 +93,17 @@ public class DescribeCommandsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommandsResponseBody model) {
+            this.commands = model.commands;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried commands.</p>
@@ -228,6 +243,17 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private java.util.List<String> possibleValues; 
             private Boolean required; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParameterDefinitions model) {
+                this.defaultValue = model.defaultValue;
+                this.description = model.description;
+                this.parameterName = model.parameterName;
+                this.possibleValues = model.possibleValues;
+                this.required = model.required;
+            } 
+
             /**
              * <p>The default value of the custom parameter.</p>
              * 
@@ -335,6 +361,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the command.</p>
@@ -552,6 +586,26 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private Long timeout; 
             private String type; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Commands model) {
+                this.commandContent = model.commandContent;
+                this.commandId = model.commandId;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.enableParameter = model.enableParameter;
+                this.name = model.name;
+                this.parameterDefinitions = model.parameterDefinitions;
+                this.parameterNames = model.parameterNames;
+                this.provider = model.provider;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.timeout = model.timeout;
+                this.type = model.type;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * <p>The content of the command.</p>

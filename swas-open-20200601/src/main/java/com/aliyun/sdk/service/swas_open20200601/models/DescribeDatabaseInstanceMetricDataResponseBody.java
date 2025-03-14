@@ -48,6 +48,10 @@ public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataFormat
      */
@@ -89,6 +93,17 @@ public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
         private String metricName; 
         private String requestId; 
         private String unit; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatabaseInstanceMetricDataResponseBody model) {
+            this.dataFormat = model.dataFormat;
+            this.metricData = model.metricData;
+            this.metricName = model.metricName;
+            this.requestId = model.requestId;
+            this.unit = model.unit;
+        } 
 
         /**
          * <p>The data format. Valid values:</p>

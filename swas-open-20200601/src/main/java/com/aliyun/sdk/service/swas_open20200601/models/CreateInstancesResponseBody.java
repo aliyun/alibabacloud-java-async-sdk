@@ -36,6 +36,10 @@ public class CreateInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceIds
      */
@@ -53,6 +57,14 @@ public class CreateInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> instanceIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateInstancesResponseBody model) {
+            this.instanceIds = model.instanceIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the simple application servers.</p>

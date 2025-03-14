@@ -36,6 +36,10 @@ public class ListImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return images
      */
@@ -54,8 +58,16 @@ public class ListImagesResponseBody extends TeaModel {
         private java.util.List<Images> images; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListImagesResponseBody model) {
+            this.images = model.images;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the image.</p>
+         * <p>Details of the queried images.</p>
          */
         public Builder images(java.util.List<Images> images) {
             this.images = images;
@@ -158,6 +170,17 @@ public class ListImagesResponseBody extends TeaModel {
             private String imageName; 
             private String imageType; 
             private String platform; 
+
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageType = model.imageType;
+                this.platform = model.platform;
+            } 
 
             /**
              * <p>The description of the image.</p>

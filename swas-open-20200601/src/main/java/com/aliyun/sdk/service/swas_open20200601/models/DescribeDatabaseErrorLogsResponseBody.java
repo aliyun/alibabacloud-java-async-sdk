@@ -48,6 +48,10 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorLogs
      */
@@ -89,6 +93,17 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDatabaseErrorLogsResponseBody model) {
+            this.errorLogs = model.errorLogs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The time when the error log entry was generated. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -194,6 +209,14 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String errorInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorLogs model) {
+                this.createTime = model.createTime;
+                this.errorInfo = model.errorInfo;
+            } 
 
             /**
              * <p>The time when the resource was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>

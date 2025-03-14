@@ -48,6 +48,10 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cloudAssistantStatus
      */
@@ -89,6 +93,17 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudAssistantStatusResponseBody model) {
+            this.cloudAssistantStatus = model.cloudAssistantStatus;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Indicates whether the Cloud Assistant client is installed on the server.</p>
@@ -195,6 +210,14 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private Boolean status; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudAssistantStatus model) {
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the simple application server.</p>

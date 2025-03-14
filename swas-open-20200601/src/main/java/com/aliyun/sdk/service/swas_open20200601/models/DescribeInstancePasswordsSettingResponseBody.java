@@ -40,6 +40,10 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instancePasswordSetting
      */
@@ -65,6 +69,15 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         private Boolean instancePasswordSetting; 
         private String requestId; 
         private Boolean vncPasswordSetting; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancePasswordsSettingResponseBody model) {
+            this.instancePasswordSetting = model.instancePasswordSetting;
+            this.requestId = model.requestId;
+            this.vncPasswordSetting = model.vncPasswordSetting;
+        } 
 
         /**
          * <p>Indicates whether a logon password is set for the simple application server.</p>

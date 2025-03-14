@@ -36,6 +36,10 @@ public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientStatus
      */
@@ -53,6 +57,14 @@ public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String clientStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityAgentStatusResponseBody model) {
+            this.clientStatus = model.clientStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the Security Center agent. Valid values:</p>

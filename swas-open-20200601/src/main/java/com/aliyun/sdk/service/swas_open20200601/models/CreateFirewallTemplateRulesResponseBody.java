@@ -36,6 +36,10 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return firewallTemplateRules
      */
@@ -53,6 +57,14 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FirewallTemplateRules> firewallTemplateRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFirewallTemplateRulesResponseBody model) {
+            this.firewallTemplateRules = model.firewallTemplateRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The firewall template rules.</p>
@@ -158,6 +170,17 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
             private String remark; 
             private String ruleProtocol; 
             private String sourceCidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirewallTemplateRules model) {
+                this.firewallTemplateRuleId = model.firewallTemplateRuleId;
+                this.port = model.port;
+                this.remark = model.remark;
+                this.ruleProtocol = model.ruleProtocol;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
 
             /**
              * <p>The ID of the firewall template rule.</p>

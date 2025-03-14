@@ -48,6 +48,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return firewallTemplates
      */
@@ -89,6 +93,17 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFirewallTemplatesResponseBody model) {
+            this.firewallTemplates = model.firewallTemplates;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the queried firewall templates.</p>
@@ -229,6 +244,17 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             private String remark; 
             private String ruleProtocol; 
             private String sourceCidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirewallTemplateRules model) {
+                this.firewallTemplateRuleId = model.firewallTemplateRuleId;
+                this.port = model.port;
+                this.remark = model.remark;
+                this.ruleProtocol = model.ruleProtocol;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
 
             /**
              * <p>The ID of the firewall template rule.</p>
@@ -392,6 +418,18 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             private String firewallTemplateId; 
             private java.util.List<FirewallTemplateRules> firewallTemplateRules; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirewallTemplates model) {
+                this.createTime = model.createTime;
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.firewallTemplateId = model.firewallTemplateId;
+                this.firewallTemplateRules = model.firewallTemplateRules;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The time when the firewall template was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

@@ -48,6 +48,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return customImages
      */
@@ -89,6 +93,17 @@ public class ListCustomImagesResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomImagesResponseBody model) {
+            this.customImages = model.customImages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The array of queried custom images.</p>
@@ -191,6 +206,14 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the custom image.</p>
@@ -516,6 +539,35 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String systemSnapshotName; 
             private java.util.List<Tags> tags; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomImages model) {
+                this.createInstances = model.createInstances;
+                this.creationTime = model.creationTime;
+                this.dataSnapshotId = model.dataSnapshotId;
+                this.dataSnapshotName = model.dataSnapshotName;
+                this.description = model.description;
+                this.imageId = model.imageId;
+                this.inShare = model.inShare;
+                this.inShareUser = model.inShareUser;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.name = model.name;
+                this.osType = model.osType;
+                this.regionId = model.regionId;
+                this.requiredDataDiskSize = model.requiredDataDiskSize;
+                this.requiredSystemDiskSize = model.requiredSystemDiskSize;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sourceImageName = model.sourceImageName;
+                this.sourceImageVersion = model.sourceImageVersion;
+                this.status = model.status;
+                this.systemSnapshotId = model.systemSnapshotId;
+                this.systemSnapshotName = model.systemSnapshotName;
+                this.tags = model.tags;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The simple application servers created from the image.</p>

@@ -36,6 +36,10 @@ public class CreateFirewallRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return firewallId
      */
@@ -53,6 +57,14 @@ public class CreateFirewallRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String firewallId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFirewallRuleResponseBody model) {
+            this.firewallId = model.firewallId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the firewall rule.</p>

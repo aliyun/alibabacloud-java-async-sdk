@@ -48,6 +48,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -90,8 +94,19 @@ public class ListInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>Details about the simple application servers.</p>
+         * <p>Details about the queried simple application servers.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -191,6 +206,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DiskTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -397,6 +420,25 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer size; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.device = model.device;
+                this.diskChargeType = model.diskChargeType;
+                this.diskId = model.diskId;
+                this.diskName = model.diskName;
+                this.diskTags = model.diskTags;
+                this.diskType = model.diskType;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.size = model.size;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The category of the disk. Valid values:</p>
              * <ul>
@@ -477,10 +519,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk type. Valid values:</p>
+             * <p>The type of the disk. Valid values:</p>
              * <ul>
-             * <li>system: system disk</li>
-             * <li>data: data disk</li>
+             * <li>system: system disk.</li>
+             * <li>data: data disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -525,7 +567,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size. Unit: GiB.</p>
+             * <p>The size of the disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -653,6 +695,18 @@ public class ListInstancesResponseBody extends TeaModel {
             private String imageVersion; 
             private String osType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.imageContact = model.imageContact;
+                this.imageIconUrl = model.imageIconUrl;
+                this.imageName = model.imageName;
+                this.imageType = model.imageType;
+                this.imageVersion = model.imageVersion;
+                this.osType = model.osType;
+            } 
+
             /**
              * <p>The image provider.</p>
              * 
@@ -726,6 +780,123 @@ public class ListInstancesResponseBody extends TeaModel {
 
             public Image build() {
                 return new Image(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
+    public static class NetworkAttributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PeakBandwidth")
+        private Integer peakBandwidth;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
+
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
+        private String publicIpAddress;
+
+        @com.aliyun.core.annotation.NameInMap("PublicIpDdosStatus")
+        private String publicIpDdosStatus;
+
+        private NetworkAttributes(Builder builder) {
+            this.peakBandwidth = builder.peakBandwidth;
+            this.privateIpAddress = builder.privateIpAddress;
+            this.publicIpAddress = builder.publicIpAddress;
+            this.publicIpDdosStatus = builder.publicIpDdosStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return peakBandwidth
+         */
+        public Integer getPeakBandwidth() {
+            return this.peakBandwidth;
+        }
+
+        /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        /**
+         * @return publicIpAddress
+         */
+        public String getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+        /**
+         * @return publicIpDdosStatus
+         */
+        public String getPublicIpDdosStatus() {
+            return this.publicIpDdosStatus;
+        }
+
+        public static final class Builder {
+            private Integer peakBandwidth; 
+            private String privateIpAddress; 
+            private String publicIpAddress; 
+            private String publicIpDdosStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAttributes model) {
+                this.peakBandwidth = model.peakBandwidth;
+                this.privateIpAddress = model.privateIpAddress;
+                this.publicIpAddress = model.publicIpAddress;
+                this.publicIpDdosStatus = model.publicIpDdosStatus;
+            } 
+
+            /**
+             * PeakBandwidth.
+             */
+            public Builder peakBandwidth(Integer peakBandwidth) {
+                this.peakBandwidth = peakBandwidth;
+                return this;
+            }
+
+            /**
+             * PrivateIpAddress.
+             */
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            /**
+             * PublicIpAddress.
+             */
+            public Builder publicIpAddress(String publicIpAddress) {
+                this.publicIpAddress = publicIpAddress;
+                return this;
+            }
+
+            /**
+             * PublicIpDdosStatus.
+             */
+            public Builder publicIpDdosStatus(String publicIpDdosStatus) {
+                this.publicIpDdosStatus = publicIpDdosStatus;
+                return this;
+            }
+
+            public NetworkAttributes build() {
+                return new NetworkAttributes(this);
             } 
 
         } 
@@ -823,8 +994,20 @@ public class ListInstancesResponseBody extends TeaModel {
             private Double flow; 
             private Double memory; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.bandwidth = model.bandwidth;
+                this.cpu = model.cpu;
+                this.diskCategory = model.diskCategory;
+                this.diskSize = model.diskSize;
+                this.flow = model.flow;
+                this.memory = model.memory;
+            } 
+
             /**
-             * <p>The bandwidth of the server. Unit: Mbps.</p>
+             * <p>The bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -862,7 +1045,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size. Unit: GiB.</p>
+             * <p>The size of the disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -888,7 +1071,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size of the server. Unit: GiB.</p>
+             * <p>The size of the memory. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -948,6 +1131,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the simple application server.</p>
@@ -1027,6 +1218,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
+        private java.util.List<NetworkAttributes> networkAttributes;
+
         @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
@@ -1066,6 +1260,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.innerIpAddress = builder.innerIpAddress;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.networkAttributes = builder.networkAttributes;
             this.planId = builder.planId;
             this.publicIpAddress = builder.publicIpAddress;
             this.regionId = builder.regionId;
@@ -1183,6 +1378,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkAttributes
+         */
+        public java.util.List<NetworkAttributes> getNetworkAttributes() {
+            return this.networkAttributes;
+        }
+
+        /**
          * @return planId
          */
         public String getPlanId() {
@@ -1253,6 +1455,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String innerIpAddress; 
             private String instanceId; 
             private String instanceName; 
+            private java.util.List<NetworkAttributes> networkAttributes; 
             private String planId; 
             private String publicIpAddress; 
             private String regionId; 
@@ -1261,6 +1464,35 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.businessStatus = model.businessStatus;
+                this.chargeType = model.chargeType;
+                this.combination = model.combination;
+                this.combinationInstanceId = model.combinationInstanceId;
+                this.creationTime = model.creationTime;
+                this.ddosStatus = model.ddosStatus;
+                this.disableReason = model.disableReason;
+                this.disks = model.disks;
+                this.expiredTime = model.expiredTime;
+                this.image = model.image;
+                this.imageId = model.imageId;
+                this.innerIpAddress = model.innerIpAddress;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.networkAttributes = model.networkAttributes;
+                this.planId = model.planId;
+                this.publicIpAddress = model.publicIpAddress;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceSpec = model.resourceSpec;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The status of the server. Valid values:</p>
@@ -1355,7 +1587,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disks that are attached to the simple application server.</p>
+             * <p>The information about the disks on the simple application server.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -1426,6 +1658,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * NetworkAttributes.
+             */
+            public Builder networkAttributes(java.util.List<NetworkAttributes> networkAttributes) {
+                this.networkAttributes = networkAttributes;
+                return this;
+            }
+
+            /**
              * <p>The ID of the instance plan.</p>
              * 
              * <strong>example:</strong>
@@ -1470,7 +1710,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the resource.</p>
+             * <p>The specifications of the resources on the simple application server.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;

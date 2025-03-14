@@ -48,6 +48,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceStatuses
      */
@@ -89,6 +93,17 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceStatusResponseBody model) {
+            this.instanceStatuses = model.instanceStatuses;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the simple application server.</p>
@@ -191,6 +206,14 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatuses model) {
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the simple application server.</p>

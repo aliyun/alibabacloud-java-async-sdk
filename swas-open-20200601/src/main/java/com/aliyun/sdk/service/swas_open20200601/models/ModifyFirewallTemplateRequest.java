@@ -61,7 +61,7 @@ public class ModifyFirewallTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -288,6 +288,17 @@ public class ModifyFirewallTemplateRequest extends Request {
             private String remark; 
             private String ruleProtocol; 
             private String sourceCidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirewallTemplateRule model) {
+                this.firewallTemplateRuleId = model.firewallTemplateRuleId;
+                this.port = model.port;
+                this.remark = model.remark;
+                this.ruleProtocol = model.ruleProtocol;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
 
             /**
              * <p>The ID of the firewall rule.</p>

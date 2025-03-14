@@ -51,7 +51,7 @@ public class CreateFirewallTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -226,6 +226,16 @@ public class CreateFirewallTemplateRequest extends Request {
             private String remark; 
             private String ruleProtocol; 
             private String sourceCidrIp; 
+
+            private Builder() {
+            } 
+
+            private Builder(FirewallRule model) {
+                this.port = model.port;
+                this.remark = model.remark;
+                this.ruleProtocol = model.ruleProtocol;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
 
             /**
              * <p>The port range. Valid values: 1 to 65535. Specify a port range in the format of &lt;start port number&gt;/&lt;end port number&gt;. Example: <code>1024/1055</code>, which indicates that the port range of 1024 to 1055.</p>

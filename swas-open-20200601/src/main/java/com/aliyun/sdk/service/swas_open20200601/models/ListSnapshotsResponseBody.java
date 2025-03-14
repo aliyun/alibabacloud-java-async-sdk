@@ -48,6 +48,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Snapshots> snapshots; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSnapshotsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -191,6 +206,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the snapshot.</p>
@@ -396,6 +419,25 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private String sourceDiskType; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.creationTime = model.creationTime;
+                this.instanceId = model.instanceId;
+                this.progress = model.progress;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.rollbackTime = model.rollbackTime;
+                this.snapshotId = model.snapshotId;
+                this.snapshotName = model.snapshotName;
+                this.sourceDiskId = model.sourceDiskId;
+                this.sourceDiskType = model.sourceDiskType;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

@@ -36,6 +36,10 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceStatusList
      */
@@ -53,6 +57,14 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceStatusList> instanceStatusList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudMonitorAgentStatusesResponseBody model) {
+            this.instanceStatusList = model.instanceStatusList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server.</p>
@@ -134,6 +146,15 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
             private Boolean autoInstall; 
             private String instanceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceStatusList model) {
+                this.autoInstall = model.autoInstall;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:</p>

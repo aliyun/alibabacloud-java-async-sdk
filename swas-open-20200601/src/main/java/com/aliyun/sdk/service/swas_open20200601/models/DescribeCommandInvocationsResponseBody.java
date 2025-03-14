@@ -48,6 +48,10 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commandInvocations
      */
@@ -89,6 +93,17 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommandInvocationsResponseBody model) {
+            this.commandInvocations = model.commandInvocations;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The command executions.</p>
@@ -263,6 +278,20 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
             private String invocationStatus; 
             private String output; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvokeInstances model) {
+                this.errorCode = model.errorCode;
+                this.errorInfo = model.errorInfo;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.invocationStatus = model.invocationStatus;
+                this.output = model.output;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The error code returned if the command failed to be sent or run.</p>
@@ -608,6 +637,25 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
             private Long timeout; 
             private String username; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommandInvocations model) {
+                this.commandContent = model.commandContent;
+                this.commandDescription = model.commandDescription;
+                this.commandId = model.commandId;
+                this.commandName = model.commandName;
+                this.commandType = model.commandType;
+                this.creationTime = model.creationTime;
+                this.invocationStatus = model.invocationStatus;
+                this.invokeId = model.invokeId;
+                this.invokeInstances = model.invokeInstances;
+                this.parameters = model.parameters;
+                this.timeout = model.timeout;
+                this.username = model.username;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * <p>The content of the command.</p>

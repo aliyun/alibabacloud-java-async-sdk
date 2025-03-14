@@ -36,6 +36,10 @@ public class ListPlansResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return plans
      */
@@ -53,6 +57,14 @@ public class ListPlansResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Plans> plans; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPlansResponseBody model) {
+            this.plans = model.plans;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the plans.</p>
@@ -230,6 +242,23 @@ public class ListPlansResponseBody extends TeaModel {
             private String planId; 
             private String planType; 
             private String supportPlatform; 
+
+            private Builder() {
+            } 
+
+            private Builder(Plans model) {
+                this.bandwidth = model.bandwidth;
+                this.core = model.core;
+                this.currency = model.currency;
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+                this.flow = model.flow;
+                this.memory = model.memory;
+                this.originPrice = model.originPrice;
+                this.planId = model.planId;
+                this.planType = model.planType;
+                this.supportPlatform = model.supportPlatform;
+            } 
 
             /**
              * <p>The peak bandwidth. Unit: Mbit/s.</p>

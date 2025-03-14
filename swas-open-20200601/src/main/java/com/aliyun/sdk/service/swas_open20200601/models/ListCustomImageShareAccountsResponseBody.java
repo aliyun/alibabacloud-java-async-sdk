@@ -48,6 +48,10 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageShareUsers
      */
@@ -89,6 +93,17 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCustomImageShareAccountsResponseBody model) {
+            this.imageShareUsers = model.imageShareUsers;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the shared custom images.</p>
@@ -191,6 +206,14 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         public static final class Builder {
             private String sharedTime; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageShareUsers model) {
+                this.sharedTime = model.sharedTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The time when the custom image is shared.</p>

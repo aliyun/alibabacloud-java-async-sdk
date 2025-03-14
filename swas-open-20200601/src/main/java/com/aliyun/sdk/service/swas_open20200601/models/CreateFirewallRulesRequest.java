@@ -56,7 +56,7 @@ public class CreateFirewallRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -248,6 +248,16 @@ public class CreateFirewallRulesRequest extends Request {
             private String ruleProtocol; 
             private String sourceCidrIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(FirewallRules model) {
+                this.port = model.port;
+                this.remark = model.remark;
+                this.ruleProtocol = model.ruleProtocol;
+                this.sourceCidrIp = model.sourceCidrIp;
+            } 
+
             /**
              * <p>The port number.</p>
              * <ul>
@@ -352,6 +362,14 @@ public class CreateFirewallRulesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. Valid values of N: 1 to 20.</p>

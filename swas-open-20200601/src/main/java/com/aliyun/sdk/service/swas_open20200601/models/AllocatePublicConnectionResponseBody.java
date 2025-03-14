@@ -36,6 +36,10 @@ public class AllocatePublicConnectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return publicConnection
      */
@@ -53,6 +57,14 @@ public class AllocatePublicConnectionResponseBody extends TeaModel {
     public static final class Builder {
         private String publicConnection; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AllocatePublicConnectionResponseBody model) {
+            this.publicConnection = model.publicConnection;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The public endpoint that is assigned to the Simple Database Service instance.</p>
