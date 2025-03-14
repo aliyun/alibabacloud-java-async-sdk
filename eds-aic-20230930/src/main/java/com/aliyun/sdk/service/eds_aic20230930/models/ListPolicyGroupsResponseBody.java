@@ -44,6 +44,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         private java.util.List<PolicyGroupModel> policyGroupModel; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPolicyGroupsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.policyGroupModel = model.policyGroupModel;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
@@ -168,6 +182,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String ruleType; 
             private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.ruleType = model.ruleType;
+                this.target = model.target;
+            } 
 
             /**
              * <p>The type of the rule.</p>
@@ -318,6 +340,20 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private String proxyType; 
             private String proxyUserName; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetRedirectPolicy model) {
+                this.customProxy = model.customProxy;
+                this.hostAddr = model.hostAddr;
+                this.netRedirect = model.netRedirect;
+                this.port = model.port;
+                this.proxyPassword = model.proxyPassword;
+                this.proxyType = model.proxyType;
+                this.proxyUserName = model.proxyUserName;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>Indicates whether a custom proxy is manually configured.</p>
@@ -576,6 +612,23 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private String policyGroupName; 
             private Integer sessionResolutionHeight; 
             private Integer sessionResolutionWidth; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyGroupModel model) {
+                this.cameraRedirect = model.cameraRedirect;
+                this.clipboard = model.clipboard;
+                this.gmtCreate = model.gmtCreate;
+                this.html5FileTransfer = model.html5FileTransfer;
+                this.localDrive = model.localDrive;
+                this.lockResolution = model.lockResolution;
+                this.netRedirectPolicy = model.netRedirectPolicy;
+                this.policyGroupId = model.policyGroupId;
+                this.policyGroupName = model.policyGroupName;
+                this.sessionResolutionHeight = model.sessionResolutionHeight;
+                this.sessionResolutionWidth = model.sessionResolutionWidth;
+            } 
 
             /**
              * <p>Specifies whether to enable the webcam redirection feature.</p>

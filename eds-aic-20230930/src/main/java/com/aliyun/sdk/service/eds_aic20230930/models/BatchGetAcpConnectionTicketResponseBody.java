@@ -36,6 +36,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceConnectionModels
      */
@@ -53,6 +57,14 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceConnectionModels> instanceConnectionModels; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchGetAcpConnectionTicketResponseBody model) {
+            this.instanceConnectionModels = model.instanceConnectionModels;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results of the instance connection tasks.</p>
@@ -158,6 +170,17 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             private String taskId; 
             private String taskStatus; 
             private String ticket; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceConnectionModels model) {
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.instanceId = model.instanceId;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.ticket = model.ticket;
+            } 
 
             /**
              * <p>The ID of the delivery group.</p>

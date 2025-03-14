@@ -44,6 +44,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceGroupModel
      */
@@ -77,6 +81,16 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAndroidInstanceGroupsResponseBody model) {
+            this.instanceGroupModel = model.instanceGroupModel;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the instance group.</p>
@@ -169,6 +183,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private Integer diskSize; 
             private String diskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+            } 
+
             /**
              * <p>The size of the disk. Unit: GB.</p>
              * 
@@ -223,6 +245,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List<Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("EnableIpv6")
+        private Boolean enableIpv6;
+
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
@@ -255,6 +280,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InstanceGroupStatus")
         private String instanceGroupStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6Bandwidth")
+        private Integer ipv6Bandwidth;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
@@ -296,6 +324,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
+            this.enableIpv6 = builder.enableIpv6;
             this.errorCode = builder.errorCode;
             this.gmtCreate = builder.gmtCreate;
             this.gmtExpired = builder.gmtExpired;
@@ -307,6 +336,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.instanceGroupSpec = builder.instanceGroupSpec;
             this.instanceGroupSpecDescribe = builder.instanceGroupSpecDescribe;
             this.instanceGroupStatus = builder.instanceGroupStatus;
+            this.ipv6Bandwidth = builder.ipv6Bandwidth;
             this.memory = builder.memory;
             this.numberOfInstances = builder.numberOfInstances;
             this.officeSiteId = builder.officeSiteId;
@@ -368,6 +398,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         public java.util.List<Disks> getDisks() {
             return this.disks;
+        }
+
+        /**
+         * @return enableIpv6
+         */
+        public Boolean getEnableIpv6() {
+            return this.enableIpv6;
         }
 
         /**
@@ -445,6 +482,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         public String getInstanceGroupStatus() {
             return this.instanceGroupStatus;
+        }
+
+        /**
+         * @return ipv6Bandwidth
+         */
+        public Integer getIpv6Bandwidth() {
+            return this.ipv6Bandwidth;
         }
 
         /**
@@ -531,6 +575,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String chargeType; 
             private String cpu; 
             private java.util.List<Disks> disks; 
+            private Boolean enableIpv6; 
             private String errorCode; 
             private String gmtCreate; 
             private String gmtExpired; 
@@ -542,6 +587,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String instanceGroupSpec; 
             private String instanceGroupSpecDescribe; 
             private String instanceGroupStatus; 
+            private Integer ipv6Bandwidth; 
             private Integer memory; 
             private String numberOfInstances; 
             private String officeSiteId; 
@@ -553,6 +599,42 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String saleMode; 
             private String systemVersion; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceGroupModel model) {
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.architectureType = model.architectureType;
+                this.availableInstanceAmount = model.availableInstanceAmount;
+                this.chargeType = model.chargeType;
+                this.cpu = model.cpu;
+                this.disks = model.disks;
+                this.enableIpv6 = model.enableIpv6;
+                this.errorCode = model.errorCode;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtExpired = model.gmtExpired;
+                this.gmtModified = model.gmtModified;
+                this.imageId = model.imageId;
+                this.installedAppList = model.installedAppList;
+                this.instanceGroupId = model.instanceGroupId;
+                this.instanceGroupName = model.instanceGroupName;
+                this.instanceGroupSpec = model.instanceGroupSpec;
+                this.instanceGroupSpecDescribe = model.instanceGroupSpecDescribe;
+                this.instanceGroupStatus = model.instanceGroupStatus;
+                this.ipv6Bandwidth = model.ipv6Bandwidth;
+                this.memory = model.memory;
+                this.numberOfInstances = model.numberOfInstances;
+                this.officeSiteId = model.officeSiteId;
+                this.policyGroupId = model.policyGroupId;
+                this.regionId = model.regionId;
+                this.renderingType = model.renderingType;
+                this.resolutionHeight = model.resolutionHeight;
+                this.resolutionWidth = model.resolutionWidth;
+                this.saleMode = model.saleMode;
+                this.systemVersion = model.systemVersion;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The ID of the delivery group.</p>
@@ -614,6 +696,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
+                return this;
+            }
+
+            /**
+             * EnableIpv6.
+             */
+            public Builder enableIpv6(Boolean enableIpv6) {
+                this.enableIpv6 = enableIpv6;
                 return this;
             }
 
@@ -735,6 +825,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder instanceGroupStatus(String instanceGroupStatus) {
                 this.instanceGroupStatus = instanceGroupStatus;
+                return this;
+            }
+
+            /**
+             * Ipv6Bandwidth.
+             */
+            public Builder ipv6Bandwidth(Integer ipv6Bandwidth) {
+                this.ipv6Bandwidth = ipv6Bandwidth;
                 return this;
             }
 

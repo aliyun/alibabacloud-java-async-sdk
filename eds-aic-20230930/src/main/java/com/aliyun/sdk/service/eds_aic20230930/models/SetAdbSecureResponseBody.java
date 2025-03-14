@@ -36,6 +36,10 @@ public class SetAdbSecureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class SetAdbSecureResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetAdbSecureResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned object.</p>
@@ -134,6 +146,15 @@ public class SetAdbSecureResponseBody extends TeaModel {
             private Integer failCount; 
             private java.util.List<String> instanceIds; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failCount = model.failCount;
+                this.instanceIds = model.instanceIds;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of the cloud phone instances for which the ADB authentication feature failed to be enabled.</p>

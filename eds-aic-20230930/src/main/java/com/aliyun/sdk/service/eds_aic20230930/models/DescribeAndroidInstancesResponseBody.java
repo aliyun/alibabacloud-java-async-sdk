@@ -44,6 +44,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceModel
      */
@@ -77,6 +81,16 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAndroidInstancesResponseBody model) {
+            this.instanceModel = model.instanceModel;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The instances.</p>
@@ -169,6 +183,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private Integer diskSize; 
             private String diskType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Disks model) {
+                this.diskSize = model.diskSize;
+                this.diskType = model.diskType;
+            } 
+
             /**
              * <p>The size of the disk. Unit: GB.</p>
              * 
@@ -241,6 +263,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -326,6 +356,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
+
         @com.aliyun.core.annotation.NameInMap("ImageVersion")
         private String imageVersion;
 
@@ -391,6 +424,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtExpired = builder.gmtExpired;
             this.gmtModified = builder.gmtModified;
+            this.imageId = builder.imageId;
             this.imageVersion = builder.imageVersion;
             this.instanceType = builder.instanceType;
             this.keyPairId = builder.keyPairId;
@@ -530,6 +564,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
          * @return imageVersion
          */
         public String getImageVersion() {
@@ -658,6 +699,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtExpired; 
             private String gmtModified; 
+            private String imageId; 
             private String imageVersion; 
             private String instanceType; 
             private String keyPairId; 
@@ -674,6 +716,45 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String renderingType; 
             private String sessionStatus; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceModel model) {
+                this.androidInstanceGroupId = model.androidInstanceGroupId;
+                this.androidInstanceGroupName = model.androidInstanceGroupName;
+                this.androidInstanceId = model.androidInstanceId;
+                this.androidInstanceName = model.androidInstanceName;
+                this.androidInstanceStatus = model.androidInstanceStatus;
+                this.appInstanceGroupId = model.appInstanceGroupId;
+                this.appInstanceId = model.appInstanceId;
+                this.authorizedUserId = model.authorizedUserId;
+                this.bindUserId = model.bindUserId;
+                this.chargeType = model.chargeType;
+                this.cpu = model.cpu;
+                this.disks = model.disks;
+                this.errorCode = model.errorCode;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtExpired = model.gmtExpired;
+                this.gmtModified = model.gmtModified;
+                this.imageId = model.imageId;
+                this.imageVersion = model.imageVersion;
+                this.instanceType = model.instanceType;
+                this.keyPairId = model.keyPairId;
+                this.memory = model.memory;
+                this.networkInterfaceIp = model.networkInterfaceIp;
+                this.networkInterfaceIpv6Address = model.networkInterfaceIpv6Address;
+                this.officeSiteId = model.officeSiteId;
+                this.persistentAppInstanceId = model.persistentAppInstanceId;
+                this.policyGroupId = model.policyGroupId;
+                this.publicIpAddress = model.publicIpAddress;
+                this.publicIpv6Address = model.publicIpv6Address;
+                this.rate = model.rate;
+                this.regionId = model.regionId;
+                this.renderingType = model.renderingType;
+                this.sessionStatus = model.sessionStatus;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the instance group.</p>
@@ -845,6 +926,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
                 return this;
             }
 

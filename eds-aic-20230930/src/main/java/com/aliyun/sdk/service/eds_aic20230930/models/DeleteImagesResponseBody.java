@@ -36,6 +36,10 @@ public class DeleteImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DeleteImagesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteImagesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The images.</p>
@@ -122,6 +134,14 @@ public class DeleteImagesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> failDeleteImageIds; 
             private java.util.List<String> successDeleteImageIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failDeleteImageIds = model.failDeleteImageIds;
+                this.successDeleteImageIds = model.successDeleteImageIds;
+            } 
 
             /**
              * <p>The IDs of the images that failed to be deleted.</p>

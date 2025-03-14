@@ -48,6 +48,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupFilesResponseBody model) {
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The backup files that are returned.</p>
@@ -395,6 +410,31 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String taskId; 
             private String uploadEndpoint; 
             private String uploadType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.androidInstanceId = model.androidInstanceId;
+                this.androidInstanceName = model.androidInstanceName;
+                this.backupAll = model.backupAll;
+                this.backupFileId = model.backupFileId;
+                this.backupFileName = model.backupFileName;
+                this.backupFilePath = model.backupFilePath;
+                this.description = model.description;
+                this.endUserId = model.endUserId;
+                this.fileSize = model.fileSize;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.instanceGroupId = model.instanceGroupId;
+                this.regionId = model.regionId;
+                this.sourceAppInfoList = model.sourceAppInfoList;
+                this.sourceFilePathList = model.sourceFilePathList;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.uploadEndpoint = model.uploadEndpoint;
+                this.uploadType = model.uploadType;
+            } 
 
             /**
              * <p>The ID of the instance.</p>

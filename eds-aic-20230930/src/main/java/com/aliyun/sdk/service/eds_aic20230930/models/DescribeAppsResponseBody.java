@@ -44,6 +44,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeAppsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppsResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The objects that are returned.</p>
@@ -312,6 +326,26 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String mD5; 
             private String packageName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.androidAppVersion = model.androidAppVersion;
+                this.apkSize = model.apkSize;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.bizRegionId = model.bizRegionId;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.iconUrl = model.iconUrl;
+                this.installationStatus = model.installationStatus;
+                this.instanceGroupList = model.instanceGroupList;
+                this.mD5 = model.mD5;
+                this.packageName = model.packageName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The version of the application.</p>

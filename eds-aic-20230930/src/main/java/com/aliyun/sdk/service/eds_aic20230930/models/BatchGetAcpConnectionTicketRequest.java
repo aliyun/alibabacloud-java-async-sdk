@@ -49,7 +49,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -192,6 +192,14 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         public static final class Builder {
             private String instanceId; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceTasks model) {
+                this.instanceId = model.instanceId;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The ID of the cloud phone instance.</p>

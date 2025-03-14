@@ -74,7 +74,7 @@ public class CreatePolicyGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -356,6 +356,14 @@ public class CreatePolicyGroupRequest extends Request {
             private String ruleType; 
             private String target; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.ruleType = model.ruleType;
+                this.target = model.target;
+            } 
+
             /**
              * <p>The type of the rule.</p>
              * <p>Valid values:</p>
@@ -505,6 +513,20 @@ public class CreatePolicyGroupRequest extends Request {
             private String proxyType; 
             private String proxyUserName; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetRedirectPolicy model) {
+                this.customProxy = model.customProxy;
+                this.hostAddr = model.hostAddr;
+                this.netRedirect = model.netRedirect;
+                this.port = model.port;
+                this.proxyPassword = model.proxyPassword;
+                this.proxyType = model.proxyType;
+                this.proxyUserName = model.proxyUserName;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>Specifies whether to manually configure a custom proxy.</p>

@@ -36,6 +36,10 @@ public class DataImageRegionDistributeMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return distributeStatus
      */
@@ -53,6 +57,14 @@ public class DataImageRegionDistributeMapValue extends TeaModel {
     public static final class Builder {
         private String distributeStatus; 
         private String progress; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataImageRegionDistributeMapValue model) {
+            this.distributeStatus = model.distributeStatus;
+            this.progress = model.progress;
+        } 
 
         /**
          * <p>The status of the image distribution task.</p>

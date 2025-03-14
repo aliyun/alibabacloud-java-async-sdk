@@ -40,6 +40,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInvocationsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The objects that are returned.</p>
@@ -193,6 +206,18 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String invocationStatus; 
             private String output; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.invocationId = model.invocationId;
+                this.invocationStatus = model.invocationStatus;
+                this.output = model.output;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The end time of the command execution.</p>

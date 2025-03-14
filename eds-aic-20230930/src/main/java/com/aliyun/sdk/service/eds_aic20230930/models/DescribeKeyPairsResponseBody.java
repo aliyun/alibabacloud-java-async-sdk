@@ -44,6 +44,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeKeyPairsResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The objects that are returned.</p>
@@ -180,6 +194,15 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String gmtCreated; 
             private String keyPairId; 
             private String keyPairName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreated = model.gmtCreated;
+                this.keyPairId = model.keyPairId;
+                this.keyPairName = model.keyPairName;
+            } 
 
             /**
              * <p>The time when the ADB key pair was created.</p>

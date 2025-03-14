@@ -44,6 +44,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeTasksResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTasksResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The objects that are returned.</p>
@@ -408,6 +422,34 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskStatus; 
             private String taskType; 
             private Integer totalChildCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.failedChildCount = model.failedChildCount;
+                this.finishTime = model.finishTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.instanceStatus = model.instanceStatus;
+                this.invokeId = model.invokeId;
+                this.level = model.level;
+                this.operator = model.operator;
+                this.param = model.param;
+                this.parentTaskId = model.parentTaskId;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.result = model.result;
+                this.runningChildCount = model.runningChildCount;
+                this.startTime = model.startTime;
+                this.successChildCount = model.successChildCount;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+                this.totalChildCount = model.totalChildCount;
+            } 
 
             /**
              * <p>The error code.</p>

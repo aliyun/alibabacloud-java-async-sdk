@@ -44,6 +44,10 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceGroupIds
      */
@@ -77,6 +81,16 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         private java.util.List<InstanceGroupInfos> instanceGroupInfos; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAndroidInstanceGroupResponseBody model) {
+            this.instanceGroupIds = model.instanceGroupIds;
+            this.instanceGroupInfos = model.instanceGroupInfos;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IDs of the instance groups.</p>
@@ -165,6 +179,14 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceGroupId; 
             private java.util.List<String> instanceIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceGroupInfos model) {
+                this.instanceGroupId = model.instanceGroupId;
+                this.instanceIds = model.instanceIds;
+            } 
 
             /**
              * <p>The ID of the instance group.</p>

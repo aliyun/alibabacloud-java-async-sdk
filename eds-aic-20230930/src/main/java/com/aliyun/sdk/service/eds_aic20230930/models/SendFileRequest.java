@@ -28,6 +28,10 @@ public class SendFileRequest extends Request {
     private String sourceFilePath;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetFileName")
+    private String targetFileName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadEndpoint")
     private String uploadEndpoint;
 
@@ -45,6 +49,7 @@ public class SendFileRequest extends Request {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
         this.sourceFilePath = builder.sourceFilePath;
+        this.targetFileName = builder.targetFileName;
         this.uploadEndpoint = builder.uploadEndpoint;
         this.uploadType = builder.uploadType;
         this.uploadUrl = builder.uploadUrl;
@@ -58,7 +63,7 @@ public class SendFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,6 +80,13 @@ public class SendFileRequest extends Request {
      */
     public String getSourceFilePath() {
         return this.sourceFilePath;
+    }
+
+    /**
+     * @return targetFileName
+     */
+    public String getTargetFileName() {
+        return this.targetFileName;
     }
 
     /**
@@ -101,6 +113,7 @@ public class SendFileRequest extends Request {
     public static final class Builder extends Request.Builder<SendFileRequest, Builder> {
         private java.util.List<String> androidInstanceIdList; 
         private String sourceFilePath; 
+        private String targetFileName; 
         private String uploadEndpoint; 
         private String uploadType; 
         private String uploadUrl; 
@@ -113,6 +126,7 @@ public class SendFileRequest extends Request {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
             this.sourceFilePath = request.sourceFilePath;
+            this.targetFileName = request.targetFileName;
             this.uploadEndpoint = request.uploadEndpoint;
             this.uploadType = request.uploadType;
             this.uploadUrl = request.uploadUrl;
@@ -138,6 +152,15 @@ public class SendFileRequest extends Request {
         public Builder sourceFilePath(String sourceFilePath) {
             this.putQueryParameter("SourceFilePath", sourceFilePath);
             this.sourceFilePath = sourceFilePath;
+            return this;
+        }
+
+        /**
+         * TargetFileName.
+         */
+        public Builder targetFileName(String targetFileName) {
+            this.putQueryParameter("TargetFileName", targetFileName);
+            this.targetFileName = targetFileName;
             return this;
         }
 

@@ -40,6 +40,10 @@ public class SendFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class SendFileResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendFileResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The objects that are returned.</p>
@@ -148,6 +161,14 @@ public class SendFileResponseBody extends TeaModel {
         public static final class Builder {
             private String androidInstanceId; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.androidInstanceId = model.androidInstanceId;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * AndroidInstanceId.

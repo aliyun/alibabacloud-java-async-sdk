@@ -36,6 +36,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class CreateKeyPairResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateKeyPairResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The objects that are returned.</p>
@@ -146,6 +158,16 @@ public class CreateKeyPairResponseBody extends TeaModel {
             private String keyPairId; 
             private String keyPairName; 
             private String privateKeyBody; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreated = model.gmtCreated;
+                this.keyPairId = model.keyPairId;
+                this.keyPairName = model.keyPairName;
+                this.privateKeyBody = model.privateKeyBody;
+            } 
 
             /**
              * <p>The time when the key pair was created.</p>

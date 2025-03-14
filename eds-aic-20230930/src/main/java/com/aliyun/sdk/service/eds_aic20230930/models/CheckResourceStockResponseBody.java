@@ -36,6 +36,10 @@ public class CheckResourceStockResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CheckResourceStockResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResourceStockModels> resourceStockModels; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckResourceStockResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceStockModels = model.resourceStockModels;
+        } 
 
         /**
          * <p>Request ID.</p>
@@ -134,6 +146,15 @@ public class CheckResourceStockResponseBody extends TeaModel {
             private String regionId; 
             private String stockStatus; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceStockModels model) {
+                this.regionId = model.regionId;
+                this.stockStatus = model.stockStatus;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Region ID.</p>

@@ -36,6 +36,10 @@ public class RunCommandResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return invokeId
      */
@@ -53,6 +57,14 @@ public class RunCommandResponseBody extends TeaModel {
     public static final class Builder {
         private String invokeId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunCommandResponseBody model) {
+            this.invokeId = model.invokeId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the command execution. You can use the command execution ID to query the output of a command.</p>

@@ -74,7 +74,7 @@ public class CreateAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -401,6 +401,18 @@ public class CreateAppRequest extends Request {
             private String packageName; 
             private String version; 
             private String versionCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomAppInfo model) {
+                this.apkSize = model.apkSize;
+                this.downloadUrl = model.downloadUrl;
+                this.md5 = model.md5;
+                this.packageName = model.packageName;
+                this.version = model.version;
+                this.versionCode = model.versionCode;
+            } 
 
             /**
              * ApkSize.

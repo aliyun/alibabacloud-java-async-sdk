@@ -36,6 +36,10 @@ public class CreateScreenshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateScreenshotResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScreenshotResponseBody model) {
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+        } 
 
         /**
          * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
@@ -122,6 +134,14 @@ public class CreateScreenshotResponseBody extends TeaModel {
         public static final class Builder {
             private String androidInstanceId; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.androidInstanceId = model.androidInstanceId;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The ID of the cloud phone instance.</p>

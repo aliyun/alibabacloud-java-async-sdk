@@ -36,6 +36,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ImportKeyPairResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImportKeyPairResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The object that is returned.</p>
@@ -134,6 +146,15 @@ public class ImportKeyPairResponseBody extends TeaModel {
             private String gmtCreated; 
             private String keyPairId; 
             private String keyPairName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtCreated = model.gmtCreated;
+                this.keyPairId = model.keyPairId;
+                this.keyPairName = model.keyPairName;
+            } 
 
             /**
              * <p>The time when the ADB key pair was created.</p>

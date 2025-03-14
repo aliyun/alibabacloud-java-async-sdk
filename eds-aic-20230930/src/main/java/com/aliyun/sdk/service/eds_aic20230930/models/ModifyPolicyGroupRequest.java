@@ -79,7 +79,7 @@ public class ModifyPolicyGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -441,6 +441,19 @@ public class ModifyPolicyGroupRequest extends Request {
             private String proxyPassword; 
             private String proxyType; 
             private String proxyUserName; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetRedirectPolicy model) {
+                this.customProxy = model.customProxy;
+                this.hostAddr = model.hostAddr;
+                this.netRedirect = model.netRedirect;
+                this.port = model.port;
+                this.proxyPassword = model.proxyPassword;
+                this.proxyType = model.proxyType;
+                this.proxyUserName = model.proxyUserName;
+            } 
 
             /**
              * <p>Specifies whether to manually configure a custom proxy.</p>

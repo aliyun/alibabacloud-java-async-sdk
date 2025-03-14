@@ -44,6 +44,10 @@ public class DescribeImageListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class DescribeImageListResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageListResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The objects that are returned.</p>
@@ -159,6 +173,9 @@ public class DescribeImageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
+        private String imageVersion;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
@@ -184,6 +201,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             this.imageRegionDistributeMap = builder.imageRegionDistributeMap;
             this.imageRegionList = builder.imageRegionList;
             this.imageType = builder.imageType;
+            this.imageVersion = builder.imageVersion;
             this.language = builder.language;
             this.releaseTime = builder.releaseTime;
             this.renderingType = builder.renderingType;
@@ -263,6 +281,13 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageVersion
+         */
+        public String getImageVersion() {
+            return this.imageVersion;
+        }
+
+        /**
          * @return language
          */
         public String getLanguage() {
@@ -307,11 +332,33 @@ public class DescribeImageListResponseBody extends TeaModel {
             private java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap; 
             private java.util.List<String> imageRegionList; 
             private String imageType; 
+            private String imageVersion; 
             private String language; 
             private String releaseTime; 
             private String renderingType; 
             private String status; 
             private String systemType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliUid = model.aliUid;
+                this.description = model.description;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.imageId = model.imageId;
+                this.imageName = model.imageName;
+                this.imageRegionDistributeMap = model.imageRegionDistributeMap;
+                this.imageRegionList = model.imageRegionList;
+                this.imageType = model.imageType;
+                this.imageVersion = model.imageVersion;
+                this.language = model.language;
+                this.releaseTime = model.releaseTime;
+                this.renderingType = model.renderingType;
+                this.status = model.status;
+                this.systemType = model.systemType;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -408,6 +455,14 @@ public class DescribeImageListResponseBody extends TeaModel {
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
+                return this;
+            }
+
+            /**
+             * ImageVersion.
+             */
+            public Builder imageVersion(String imageVersion) {
+                this.imageVersion = imageVersion;
                 return this;
             }
 

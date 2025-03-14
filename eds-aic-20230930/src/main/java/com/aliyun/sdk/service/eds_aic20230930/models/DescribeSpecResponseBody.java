@@ -44,6 +44,10 @@ public class DescribeSpecResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class DescribeSpecResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SpecInfoModel> specInfoModel; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSpecResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.specInfoModel = model.specInfoModel;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Indicates the current read position returned by this call. An empty value means that all data has been read.</p>
@@ -135,8 +149,14 @@ public class DescribeSpecResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Core")
         private Integer core;
 
+        @com.aliyun.core.annotation.NameInMap("MaxPhoneCount")
+        private String maxPhoneCount;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
+
+        @com.aliyun.core.annotation.NameInMap("MinPhoneCount")
+        private String minPhoneCount;
 
         @com.aliyun.core.annotation.NameInMap("PhoneCount")
         private String phoneCount;
@@ -158,7 +178,9 @@ public class DescribeSpecResponseBody extends TeaModel {
 
         private SpecInfoModel(Builder builder) {
             this.core = builder.core;
+            this.maxPhoneCount = builder.maxPhoneCount;
             this.memory = builder.memory;
+            this.minPhoneCount = builder.minPhoneCount;
             this.phoneCount = builder.phoneCount;
             this.resolution = builder.resolution;
             this.specId = builder.specId;
@@ -183,10 +205,24 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxPhoneCount
+         */
+        public String getMaxPhoneCount() {
+            return this.maxPhoneCount;
+        }
+
+        /**
          * @return memory
          */
         public Integer getMemory() {
             return this.memory;
+        }
+
+        /**
+         * @return minPhoneCount
+         */
+        public String getMinPhoneCount() {
+            return this.minPhoneCount;
         }
 
         /**
@@ -233,13 +269,31 @@ public class DescribeSpecResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer core; 
+            private String maxPhoneCount; 
             private Integer memory; 
+            private String minPhoneCount; 
             private String phoneCount; 
             private String resolution; 
             private String specId; 
             private String specStatus; 
             private String specType; 
             private Integer systemDiskSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecInfoModel model) {
+                this.core = model.core;
+                this.maxPhoneCount = model.maxPhoneCount;
+                this.memory = model.memory;
+                this.minPhoneCount = model.minPhoneCount;
+                this.phoneCount = model.phoneCount;
+                this.resolution = model.resolution;
+                this.specId = model.specId;
+                this.specStatus = model.specStatus;
+                this.specType = model.specType;
+                this.systemDiskSize = model.systemDiskSize;
+            } 
 
             /**
              * <p>Number of CPU cores.</p>
@@ -253,6 +307,14 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
+             * MaxPhoneCount.
+             */
+            public Builder maxPhoneCount(String maxPhoneCount) {
+                this.maxPhoneCount = maxPhoneCount;
+                return this;
+            }
+
+            /**
              * <p>Memory size.</p>
              * 
              * <strong>example:</strong>
@@ -260,6 +322,14 @@ public class DescribeSpecResponseBody extends TeaModel {
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
+                return this;
+            }
+
+            /**
+             * MinPhoneCount.
+             */
+            public Builder minPhoneCount(String minPhoneCount) {
+                this.minPhoneCount = minPhoneCount;
                 return this;
             }
 

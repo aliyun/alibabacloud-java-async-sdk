@@ -36,6 +36,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AttachKeyPairResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The object that is returned.</p>
@@ -146,6 +158,16 @@ public class AttachKeyPairResponseBody extends TeaModel {
             private Integer failCount; 
             private String keyPairId; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attachedInstanceIds = model.attachedInstanceIds;
+                this.failCount = model.failCount;
+                this.keyPairId = model.keyPairId;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The IDs of the cloud phone instances to which the ADB key pair is successfully attached.</p>

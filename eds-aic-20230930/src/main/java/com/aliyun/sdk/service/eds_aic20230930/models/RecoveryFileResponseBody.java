@@ -44,6 +44,10 @@ public class RecoveryFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -77,6 +81,16 @@ public class RecoveryFileResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RecoveryFileResponseBody model) {
+            this.count = model.count;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The number of entries.</p>
@@ -171,6 +185,14 @@ public class RecoveryFileResponseBody extends TeaModel {
         public static final class Builder {
             private String androidInstanceId; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.androidInstanceId = model.androidInstanceId;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The instance ID.</p>
