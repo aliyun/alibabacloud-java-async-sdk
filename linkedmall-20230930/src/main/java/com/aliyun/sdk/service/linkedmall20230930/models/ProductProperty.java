@@ -36,6 +36,10 @@ public class ProductProperty extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return text
      */
@@ -53,6 +57,14 @@ public class ProductProperty extends TeaModel {
     public static final class Builder {
         private String text; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductProperty model) {
+            this.text = model.text;
+            this.values = model.values;
+        } 
 
         /**
          * text.

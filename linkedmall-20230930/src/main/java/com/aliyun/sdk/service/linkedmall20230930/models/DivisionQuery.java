@@ -33,6 +33,10 @@ public class DivisionQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return divisionCode
      */
@@ -42,6 +46,13 @@ public class DivisionQuery extends TeaModel {
 
     public static final class Builder {
         private String divisionCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DivisionQuery model) {
+            this.divisionCode = model.divisionCode;
+        } 
 
         /**
          * <p>This parameter is required.</p>

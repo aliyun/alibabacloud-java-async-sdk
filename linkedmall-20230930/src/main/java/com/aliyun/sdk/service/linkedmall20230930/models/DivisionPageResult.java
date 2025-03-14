@@ -36,6 +36,10 @@ public class DivisionPageResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return divisionList
      */
@@ -53,6 +57,14 @@ public class DivisionPageResult extends TeaModel {
     public static final class Builder {
         private java.util.List<Division> divisionList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DivisionPageResult model) {
+            this.divisionList = model.divisionList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * divisionList.

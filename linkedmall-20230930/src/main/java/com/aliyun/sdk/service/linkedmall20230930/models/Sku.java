@@ -108,6 +108,10 @@ public class Sku extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return barcode
      */
@@ -269,6 +273,32 @@ public class Sku extends TeaModel {
         private String skuStatus; 
         private Long suggestedRetailPrice; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(Sku model) {
+            this.barcode = model.barcode;
+            this.canSell = model.canSell;
+            this.discountRetailPrice = model.discountRetailPrice;
+            this.divisionCode = model.divisionCode;
+            this.fuzzyQuantity = model.fuzzyQuantity;
+            this.markPrice = model.markPrice;
+            this.picUrl = model.picUrl;
+            this.platformPrice = model.platformPrice;
+            this.price = model.price;
+            this.productId = model.productId;
+            this.quantity = model.quantity;
+            this.rankValue = model.rankValue;
+            this.shopId = model.shopId;
+            this.skuAlias = model.skuAlias;
+            this.skuId = model.skuId;
+            this.skuSpecs = model.skuSpecs;
+            this.skuSpecsCode = model.skuSpecsCode;
+            this.skuStatus = model.skuStatus;
+            this.suggestedRetailPrice = model.suggestedRetailPrice;
+            this.title = model.title;
+        } 
 
         /**
          * barcode.

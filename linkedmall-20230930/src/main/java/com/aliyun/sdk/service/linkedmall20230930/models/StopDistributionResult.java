@@ -44,6 +44,10 @@ public class StopDistributionResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class StopDistributionResult extends TeaModel {
         private String message; 
         private java.util.List<DistributionProduct> products; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopDistributionResult model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.products = model.products;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * code.

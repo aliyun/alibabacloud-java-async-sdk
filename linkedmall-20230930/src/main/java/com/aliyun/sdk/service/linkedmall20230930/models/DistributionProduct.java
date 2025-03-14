@@ -76,6 +76,10 @@ public class DistributionProduct extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categoryChain
      */
@@ -173,6 +177,24 @@ public class DistributionProduct extends TeaModel {
         private java.util.List<DistributionSku> skus; 
         private String title; 
         private String whiteBackgroundPicUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(DistributionProduct model) {
+            this.categoryChain = model.categoryChain;
+            this.categoryLeafId = model.categoryLeafId;
+            this.categoryLeafName = model.categoryLeafName;
+            this.channelCode = model.channelCode;
+            this.distributeStatus = model.distributeStatus;
+            this.picUrl = model.picUrl;
+            this.productId = model.productId;
+            this.sellerId = model.sellerId;
+            this.shortTitle = model.shortTitle;
+            this.skus = model.skus;
+            this.title = model.title;
+            this.whiteBackgroundPicUrl = model.whiteBackgroundPicUrl;
+        } 
 
         /**
          * categoryChain.

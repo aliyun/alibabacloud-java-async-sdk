@@ -40,6 +40,10 @@ public class CreateAliPayUrlResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountId
      */
@@ -65,6 +69,15 @@ public class CreateAliPayUrlResult extends TeaModel {
         private String accountId; 
         private String memberId; 
         private String zftWithholdSignUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAliPayUrlResult model) {
+            this.accountId = model.accountId;
+            this.memberId = model.memberId;
+            this.zftWithholdSignUrl = model.zftWithholdSignUrl;
+        } 
 
         /**
          * accountId.

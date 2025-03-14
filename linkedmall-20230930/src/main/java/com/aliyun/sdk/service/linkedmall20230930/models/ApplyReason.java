@@ -36,6 +36,10 @@ public class ApplyReason extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reasonTextId
      */
@@ -53,6 +57,14 @@ public class ApplyReason extends TeaModel {
     public static final class Builder {
         private Long reasonTextId; 
         private String reasonTips; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplyReason model) {
+            this.reasonTextId = model.reasonTextId;
+            this.reasonTips = model.reasonTips;
+        } 
 
         /**
          * reasonTextId.

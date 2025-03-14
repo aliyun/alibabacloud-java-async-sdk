@@ -116,6 +116,10 @@ public class RefundResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applyDisputeDesc
      */
@@ -293,6 +297,34 @@ public class RefundResult extends TeaModel {
         private String sellerAgreeMsg; 
         private String sellerRefuseAgreementMessage; 
         private String sellerRefuseReason; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundResult model) {
+            this.applyDisputeDesc = model.applyDisputeDesc;
+            this.applyReason = model.applyReason;
+            this.bizClaimType = model.bizClaimType;
+            this.disputeCreateTime = model.disputeCreateTime;
+            this.disputeDesc = model.disputeDesc;
+            this.disputeEndTime = model.disputeEndTime;
+            this.disputeId = model.disputeId;
+            this.disputeStatus = model.disputeStatus;
+            this.orderId = model.orderId;
+            this.orderLineId = model.orderLineId;
+            this.orderLogisticsStatus = model.orderLogisticsStatus;
+            this.refundFee = model.refundFee;
+            this.refundFeeData = model.refundFeeData;
+            this.refunderAddress = model.refunderAddress;
+            this.refunderName = model.refunderName;
+            this.refunderTel = model.refunderTel;
+            this.refunderZipCode = model.refunderZipCode;
+            this.requestId = model.requestId;
+            this.returnGoodLogisticsStatus = model.returnGoodLogisticsStatus;
+            this.sellerAgreeMsg = model.sellerAgreeMsg;
+            this.sellerRefuseAgreementMessage = model.sellerRefuseAgreementMessage;
+            this.sellerRefuseReason = model.sellerRefuseReason;
+        } 
 
         /**
          * applyDisputeDesc.

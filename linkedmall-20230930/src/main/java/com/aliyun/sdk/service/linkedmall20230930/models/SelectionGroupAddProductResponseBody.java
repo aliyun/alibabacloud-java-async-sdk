@@ -32,6 +32,10 @@ public class SelectionGroupAddProductResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return productIds
      */
@@ -41,6 +45,13 @@ public class SelectionGroupAddProductResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> productIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(SelectionGroupAddProductResponseBody model) {
+            this.productIds = model.productIds;
+        } 
 
         /**
          * productIds.

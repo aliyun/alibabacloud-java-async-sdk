@@ -68,6 +68,10 @@ public class GeneralBillPageQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return asc
      */
@@ -149,6 +153,22 @@ public class GeneralBillPageQuery extends TeaModel {
         private Integer pageSize; 
         private String shopId; 
         private Integer start; 
+
+        private Builder() {
+        } 
+
+        private Builder(GeneralBillPageQuery model) {
+            this.asc = model.asc;
+            this.billId = model.billId;
+            this.billPeriod = model.billPeriod;
+            this.limit = model.limit;
+            this.orderBy = model.orderBy;
+            this.orderDirection = model.orderDirection;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.shopId = model.shopId;
+            this.start = model.start;
+        } 
 
         /**
          * asc.

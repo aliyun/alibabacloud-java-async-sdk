@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SkuSaleInfo</p>
  */
 public class SkuSaleInfo extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("canNotSellReason")
+    private String canNotSellReason;
+
     @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
@@ -51,6 +54,7 @@ public class SkuSaleInfo extends TeaModel {
     private String title;
 
     private SkuSaleInfo(Builder builder) {
+        this.canNotSellReason = builder.canNotSellReason;
         this.canSell = builder.canSell;
         this.divisionCode = builder.divisionCode;
         this.fuzzyQuantity = builder.fuzzyQuantity;
@@ -70,6 +74,17 @@ public class SkuSaleInfo extends TeaModel {
 
     public static SkuSaleInfo create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return canNotSellReason
+     */
+    public String getCanNotSellReason() {
+        return this.canNotSellReason;
     }
 
     /**
@@ -150,6 +165,7 @@ public class SkuSaleInfo extends TeaModel {
     }
 
     public static final class Builder {
+        private String canNotSellReason; 
         private Boolean canSell; 
         private String divisionCode; 
         private String fuzzyQuantity; 
@@ -161,6 +177,32 @@ public class SkuSaleInfo extends TeaModel {
         private String skuId; 
         private String skuStatus; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(SkuSaleInfo model) {
+            this.canNotSellReason = model.canNotSellReason;
+            this.canSell = model.canSell;
+            this.divisionCode = model.divisionCode;
+            this.fuzzyQuantity = model.fuzzyQuantity;
+            this.markPrice = model.markPrice;
+            this.price = model.price;
+            this.productId = model.productId;
+            this.quantity = model.quantity;
+            this.shopId = model.shopId;
+            this.skuId = model.skuId;
+            this.skuStatus = model.skuStatus;
+            this.title = model.title;
+        } 
+
+        /**
+         * canNotSellReason.
+         */
+        public Builder canNotSellReason(String canNotSellReason) {
+            this.canNotSellReason = canNotSellReason;
+            return this;
+        }
 
         /**
          * canSell.

@@ -42,6 +42,10 @@ public class SkuSaleInfoListQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return divisionCode
      */
@@ -67,6 +71,15 @@ public class SkuSaleInfoListQuery extends TeaModel {
         private String divisionCode; 
         private String purchaserId; 
         private java.util.List<SkuQueryParam> skuQueryParams; 
+
+        private Builder() {
+        } 
+
+        private Builder(SkuSaleInfoListQuery model) {
+            this.divisionCode = model.divisionCode;
+            this.purchaserId = model.purchaserId;
+            this.skuQueryParams = model.skuQueryParams;
+        } 
 
         /**
          * divisionCode.

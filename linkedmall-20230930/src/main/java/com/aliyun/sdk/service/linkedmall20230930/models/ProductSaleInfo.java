@@ -76,6 +76,10 @@ public class ProductSaleInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canSell
      */
@@ -173,6 +177,24 @@ public class ProductSaleInfo extends TeaModel {
         private String shopId; 
         private java.util.List<SkuSaleInfo> skus; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductSaleInfo model) {
+            this.canSell = model.canSell;
+            this.divisionCode = model.divisionCode;
+            this.fuzzyQuantity = model.fuzzyQuantity;
+            this.limitRules = model.limitRules;
+            this.lmItemId = model.lmItemId;
+            this.productId = model.productId;
+            this.productStatus = model.productStatus;
+            this.quantity = model.quantity;
+            this.requestId = model.requestId;
+            this.shopId = model.shopId;
+            this.skus = model.skus;
+            this.title = model.title;
+        } 
 
         /**
          * canSell.

@@ -51,6 +51,10 @@ public class ProductPageResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -92,6 +96,17 @@ public class ProductPageResult extends TeaModel {
         private java.util.List<Product> products; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductPageResult model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.products = model.products;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>This parameter is required.</p>

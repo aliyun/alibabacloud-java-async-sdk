@@ -48,6 +48,10 @@ public class Good extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return goodName
      */
@@ -89,6 +93,17 @@ public class Good extends TeaModel {
         private Integer quantity; 
         private String skuId; 
         private String skuTitle; 
+
+        private Builder() {
+        } 
+
+        private Builder(Good model) {
+            this.goodName = model.goodName;
+            this.productId = model.productId;
+            this.quantity = model.quantity;
+            this.skuId = model.skuId;
+            this.skuTitle = model.skuTitle;
+        } 
 
         /**
          * goodName.

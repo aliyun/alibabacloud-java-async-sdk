@@ -48,6 +48,10 @@ public class StopDistributionCommand extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lmShopId
      */
@@ -89,6 +93,17 @@ public class StopDistributionCommand extends TeaModel {
         private String requestId; 
         private String requestTime; 
         private String requestUser; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopDistributionCommand model) {
+            this.lmShopId = model.lmShopId;
+            this.productId = model.productId;
+            this.requestId = model.requestId;
+            this.requestTime = model.requestTime;
+            this.requestUser = model.requestUser;
+        } 
 
         /**
          * lmShopId.

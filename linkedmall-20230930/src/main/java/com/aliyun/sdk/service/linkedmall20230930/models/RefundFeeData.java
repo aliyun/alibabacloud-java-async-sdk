@@ -36,6 +36,10 @@ public class RefundFeeData extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxRefundFee
      */
@@ -53,6 +57,14 @@ public class RefundFeeData extends TeaModel {
     public static final class Builder {
         private Long maxRefundFee; 
         private Long minRefundFee; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundFeeData model) {
+            this.maxRefundFee = model.maxRefundFee;
+            this.minRefundFee = model.minRefundFee;
+        } 
 
         /**
          * maxRefundFee.

@@ -43,6 +43,10 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpCode
      */
@@ -68,6 +72,15 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
         private String cpCode; 
         private String disputeId; 
         private String logisticsNo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GoodsShippingNoticeCreateCmd model) {
+            this.cpCode = model.cpCode;
+            this.disputeId = model.disputeId;
+            this.logisticsNo = model.logisticsNo;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -47,6 +47,10 @@ public class PurchaseOrderRenderQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buyerId
      */
@@ -80,6 +84,16 @@ public class PurchaseOrderRenderQuery extends TeaModel {
         private AddressInfo deliveryAddress; 
         private java.util.Map<String, ?> extInfo; 
         private java.util.List<OrderRenderProductDTO> productList; 
+
+        private Builder() {
+        } 
+
+        private Builder(PurchaseOrderRenderQuery model) {
+            this.buyerId = model.buyerId;
+            this.deliveryAddress = model.deliveryAddress;
+            this.extInfo = model.extInfo;
+            this.productList = model.productList;
+        } 
 
         /**
          * <p>This parameter is required.</p>

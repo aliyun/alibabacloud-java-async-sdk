@@ -44,6 +44,10 @@ public class RefundOrderResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return disputeId
      */
@@ -77,6 +81,16 @@ public class RefundOrderResult extends TeaModel {
         private Integer disputeStatus; 
         private String orderLineId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundOrderResult model) {
+            this.disputeId = model.disputeId;
+            this.disputeStatus = model.disputeStatus;
+            this.orderLineId = model.orderLineId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * disputeId.

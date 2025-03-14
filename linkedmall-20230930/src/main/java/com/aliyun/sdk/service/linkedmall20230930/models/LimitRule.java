@@ -48,6 +48,10 @@ public class LimitRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return beginTime
      */
@@ -89,6 +93,17 @@ public class LimitRule extends TeaModel {
         private Long endTime; 
         private Integer limitNum; 
         private String ruleType; 
+
+        private Builder() {
+        } 
+
+        private Builder(LimitRule model) {
+            this.beginTime = model.beginTime;
+            this.condcase = model.condcase;
+            this.endTime = model.endTime;
+            this.limitNum = model.limitNum;
+            this.ruleType = model.ruleType;
+        } 
 
         /**
          * beginTime.

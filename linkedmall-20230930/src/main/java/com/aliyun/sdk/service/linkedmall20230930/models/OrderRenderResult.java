@@ -48,6 +48,10 @@ public class OrderRenderResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canSell
      */
@@ -89,6 +93,17 @@ public class OrderRenderResult extends TeaModel {
         private java.util.Map<String, ?> extInfo; 
         private String message; 
         private java.util.List<OrderProductResult> productList; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderRenderResult model) {
+            this.canSell = model.canSell;
+            this.deliveryInfoList = model.deliveryInfoList;
+            this.extInfo = model.extInfo;
+            this.message = model.message;
+            this.productList = model.productList;
+        } 
 
         /**
          * canSell.

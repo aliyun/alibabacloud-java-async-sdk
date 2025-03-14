@@ -36,6 +36,10 @@ public class LeavePictureList extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return desc
      */
@@ -53,6 +57,14 @@ public class LeavePictureList extends TeaModel {
     public static final class Builder {
         private String desc; 
         private String picture; 
+
+        private Builder() {
+        } 
+
+        private Builder(LeavePictureList model) {
+            this.desc = model.desc;
+            this.picture = model.picture;
+        } 
 
         /**
          * desc.

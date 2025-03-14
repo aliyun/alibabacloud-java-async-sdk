@@ -56,6 +56,10 @@ public class Money extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return amount
      */
@@ -113,6 +117,19 @@ public class Money extends TeaModel {
         private Currency currency; 
         private String currencyCode; 
         private Boolean positive; 
+
+        private Builder() {
+        } 
+
+        private Builder(Money model) {
+            this.amount = model.amount;
+            this.amountAsString = model.amountAsString;
+            this.amountString = model.amountString;
+            this.cent = model.cent;
+            this.currency = model.currency;
+            this.currencyCode = model.currencyCode;
+            this.positive = model.positive;
+        } 
 
         /**
          * amount.
@@ -255,6 +272,17 @@ public class Money extends TeaModel {
             private String displayName; 
             private Integer numericCode; 
             private String symbol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Currency model) {
+                this.currencyCode = model.currencyCode;
+                this.defaultFractionDigits = model.defaultFractionDigits;
+                this.displayName = model.displayName;
+                this.numericCode = model.numericCode;
+                this.symbol = model.symbol;
+            } 
 
             /**
              * currencyCode.

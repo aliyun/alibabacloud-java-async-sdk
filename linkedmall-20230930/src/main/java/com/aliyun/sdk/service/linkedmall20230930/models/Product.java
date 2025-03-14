@@ -132,6 +132,10 @@ public class Product extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return brandName
      */
@@ -341,6 +345,38 @@ public class Product extends TeaModel {
         private String taxCode; 
         private Integer taxRate; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(Product model) {
+            this.brandName = model.brandName;
+            this.canSell = model.canSell;
+            this.categoryChain = model.categoryChain;
+            this.categoryLeafId = model.categoryLeafId;
+            this.descPath = model.descPath;
+            this.divisionCode = model.divisionCode;
+            this.extendProperties = model.extendProperties;
+            this.fuzzyQuantity = model.fuzzyQuantity;
+            this.images = model.images;
+            this.inGroup = model.inGroup;
+            this.limitRules = model.limitRules;
+            this.lmItemId = model.lmItemId;
+            this.picUrl = model.picUrl;
+            this.productId = model.productId;
+            this.productSpecs = model.productSpecs;
+            this.productStatus = model.productStatus;
+            this.productType = model.productType;
+            this.properties = model.properties;
+            this.quantity = model.quantity;
+            this.requestId = model.requestId;
+            this.shopId = model.shopId;
+            this.skus = model.skus;
+            this.soldQuantity = model.soldQuantity;
+            this.taxCode = model.taxCode;
+            this.taxRate = model.taxRate;
+            this.title = model.title;
+        } 
 
         /**
          * brandName.

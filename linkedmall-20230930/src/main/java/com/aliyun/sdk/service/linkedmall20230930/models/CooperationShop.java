@@ -40,6 +40,10 @@ public class CooperationShop extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cooperationCompanyId
      */
@@ -65,6 +69,15 @@ public class CooperationShop extends TeaModel {
         private String cooperationCompanyId; 
         private String cooperationShopId; 
         private String shopId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CooperationShop model) {
+            this.cooperationCompanyId = model.cooperationCompanyId;
+            this.cooperationShopId = model.cooperationShopId;
+            this.shopId = model.shopId;
+        } 
 
         /**
          * cooperationCompanyId.

@@ -48,6 +48,10 @@ public class RefundRenderResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizClaimType
      */
@@ -89,6 +93,17 @@ public class RefundRenderResult extends TeaModel {
         private String orderLineId; 
         private java.util.List<RefundReason> refundReasonList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundRenderResult model) {
+            this.bizClaimType = model.bizClaimType;
+            this.maxRefundFeeData = model.maxRefundFeeData;
+            this.orderLineId = model.orderLineId;
+            this.refundReasonList = model.refundReasonList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * bizClaimType.

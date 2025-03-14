@@ -44,6 +44,10 @@ public class DeliveryInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return displayName
      */
@@ -77,6 +81,16 @@ public class DeliveryInfo extends TeaModel {
         private String id; 
         private Long postFee; 
         private Long serviceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeliveryInfo model) {
+            this.displayName = model.displayName;
+            this.id = model.id;
+            this.postFee = model.postFee;
+            this.serviceType = model.serviceType;
+        } 
 
         /**
          * displayName.

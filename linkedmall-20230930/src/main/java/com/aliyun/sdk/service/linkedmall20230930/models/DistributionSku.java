@@ -84,6 +84,10 @@ public class DistributionSku extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliasTitle
      */
@@ -197,6 +201,26 @@ public class DistributionSku extends TeaModel {
         private String taxCode; 
         private Integer taxRate; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(DistributionSku model) {
+            this.aliasTitle = model.aliasTitle;
+            this.barCode = model.barCode;
+            this.creditPeriod = model.creditPeriod;
+            this.dxPrice = model.dxPrice;
+            this.hasCredit = model.hasCredit;
+            this.hasInvoice = model.hasInvoice;
+            this.jxPrice = model.jxPrice;
+            this.picUrl = model.picUrl;
+            this.quantity = model.quantity;
+            this.skuId = model.skuId;
+            this.skuStatus = model.skuStatus;
+            this.taxCode = model.taxCode;
+            this.taxRate = model.taxRate;
+            this.title = model.title;
+        } 
 
         /**
          * aliasTitle.

@@ -68,6 +68,10 @@ public class Shop extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cooperationShops
      */
@@ -149,6 +153,22 @@ public class Shop extends TeaModel {
         private String shopType; 
         private String startDate; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(Shop model) {
+            this.cooperationShops = model.cooperationShops;
+            this.distributorId = model.distributorId;
+            this.endDate = model.endDate;
+            this.purchaserId = model.purchaserId;
+            this.requestId = model.requestId;
+            this.shopId = model.shopId;
+            this.shopName = model.shopName;
+            this.shopType = model.shopType;
+            this.startDate = model.startDate;
+            this.status = model.status;
+        } 
 
         /**
          * cooperationShops.

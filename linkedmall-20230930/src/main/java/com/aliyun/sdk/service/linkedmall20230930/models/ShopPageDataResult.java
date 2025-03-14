@@ -60,6 +60,10 @@ public class ShopPageDataResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cooperationShops
      */
@@ -125,6 +129,20 @@ public class ShopPageDataResult extends TeaModel {
         private String shopType; 
         private String startDate; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ShopPageDataResult model) {
+            this.cooperationShops = model.cooperationShops;
+            this.endDate = model.endDate;
+            this.purchaserId = model.purchaserId;
+            this.shopId = model.shopId;
+            this.shopName = model.shopName;
+            this.shopType = model.shopType;
+            this.startDate = model.startDate;
+            this.status = model.status;
+        } 
 
         /**
          * cooperationShops.

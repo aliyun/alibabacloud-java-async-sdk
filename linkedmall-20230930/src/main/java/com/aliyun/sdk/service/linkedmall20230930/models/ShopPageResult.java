@@ -40,6 +40,10 @@ public class ShopPageResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ShopPageResult extends TeaModel {
         private String requestId; 
         private java.util.List<ShopPageDataResult> shopList; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ShopPageResult model) {
+            this.requestId = model.requestId;
+            this.shopList = model.shopList;
+            this.total = model.total;
+        } 
 
         /**
          * requestId.

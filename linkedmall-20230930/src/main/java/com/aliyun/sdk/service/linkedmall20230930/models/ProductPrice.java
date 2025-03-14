@@ -32,6 +32,10 @@ public class ProductPrice extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fundAmountMoney
      */
@@ -41,6 +45,13 @@ public class ProductPrice extends TeaModel {
 
     public static final class Builder {
         private String fundAmountMoney; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductPrice model) {
+            this.fundAmountMoney = model.fundAmountMoney;
+        } 
 
         /**
          * fundAmountMoney.

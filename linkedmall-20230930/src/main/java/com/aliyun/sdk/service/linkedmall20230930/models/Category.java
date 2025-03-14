@@ -48,6 +48,10 @@ public class Category extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categoryId
      */
@@ -89,6 +93,17 @@ public class Category extends TeaModel {
         private Integer level; 
         private String name; 
         private Long parentId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Category model) {
+            this.categoryId = model.categoryId;
+            this.isLeaf = model.isLeaf;
+            this.level = model.level;
+            this.name = model.name;
+            this.parentId = model.parentId;
+        } 
 
         /**
          * categoryId.

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SkuQueryParam</p>
  */
 public class SkuQueryParam extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("buyAmount")
+    private Integer buyAmount;
+
     @com.aliyun.core.annotation.NameInMap("productId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
@@ -26,6 +29,7 @@ public class SkuQueryParam extends TeaModel {
     private String skuId;
 
     private SkuQueryParam(Builder builder) {
+        this.buyAmount = builder.buyAmount;
         this.productId = builder.productId;
         this.skuId = builder.skuId;
     }
@@ -36,6 +40,17 @@ public class SkuQueryParam extends TeaModel {
 
     public static SkuQueryParam create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return buyAmount
+     */
+    public Integer getBuyAmount() {
+        return this.buyAmount;
     }
 
     /**
@@ -53,8 +68,26 @@ public class SkuQueryParam extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer buyAmount; 
         private String productId; 
         private String skuId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SkuQueryParam model) {
+            this.buyAmount = model.buyAmount;
+            this.productId = model.productId;
+            this.skuId = model.skuId;
+        } 
+
+        /**
+         * buyAmount.
+         */
+        public Builder buyAmount(Integer buyAmount) {
+            this.buyAmount = buyAmount;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

@@ -72,6 +72,10 @@ public class OrderProductResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canSell
      */
@@ -161,6 +165,23 @@ public class OrderProductResult extends TeaModel {
         private Integer quantity; 
         private String skuId; 
         private String skuTitle; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderProductResult model) {
+            this.canSell = model.canSell;
+            this.features = model.features;
+            this.message = model.message;
+            this.price = model.price;
+            this.productId = model.productId;
+            this.productPicUrl = model.productPicUrl;
+            this.productTitle = model.productTitle;
+            this.purchaserId = model.purchaserId;
+            this.quantity = model.quantity;
+            this.skuId = model.skuId;
+            this.skuTitle = model.skuTitle;
+        } 
 
         /**
          * canSell.

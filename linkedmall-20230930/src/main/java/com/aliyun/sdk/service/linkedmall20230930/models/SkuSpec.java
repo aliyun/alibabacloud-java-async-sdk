@@ -48,6 +48,10 @@ public class SkuSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -89,6 +93,17 @@ public class SkuSpec extends TeaModel {
         private String value; 
         private String valueAlias; 
         private Long valueId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SkuSpec model) {
+            this.key = model.key;
+            this.keyId = model.keyId;
+            this.value = model.value;
+            this.valueAlias = model.valueAlias;
+            this.valueId = model.valueId;
+        } 
 
         /**
          * key.

@@ -52,6 +52,10 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buyerId
      */
@@ -93,6 +97,17 @@ public class PurchaseOrderCreateCmd extends TeaModel {
         private java.util.Map<String, ?> extInfo; 
         private String outerPurchaseOrderId; 
         private java.util.List<ProductDTO> productList; 
+
+        private Builder() {
+        } 
+
+        private Builder(PurchaseOrderCreateCmd model) {
+            this.buyerId = model.buyerId;
+            this.deliveryAddress = model.deliveryAddress;
+            this.extInfo = model.extInfo;
+            this.outerPurchaseOrderId = model.outerPurchaseOrderId;
+            this.productList = model.productList;
+        } 
 
         /**
          * <p>This parameter is required.</p>

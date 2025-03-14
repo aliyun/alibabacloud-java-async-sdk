@@ -36,6 +36,10 @@ public class SearchProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return products
      */
@@ -53,6 +57,14 @@ public class SearchProductsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Products> products; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchProductsResponseBody model) {
+            this.products = model.products;
+            this.total = model.total;
+        } 
 
         /**
          * products.
@@ -143,6 +155,16 @@ public class SearchProductsResponseBody extends TeaModel {
             private Boolean level; 
             private String name; 
             private Long parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CategoryChain model) {
+                this.categoryId = model.categoryId;
+                this.level = model.level;
+                this.name = model.name;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * categoryId.
@@ -514,6 +536,38 @@ public class SearchProductsResponseBody extends TeaModel {
             private String taxCode; 
             private Long taxRate; 
             private String tradeMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Products model) {
+                this.bandName = model.bandName;
+                this.canNotSellReason = model.canNotSellReason;
+                this.canSell = model.canSell;
+                this.categoryChain = model.categoryChain;
+                this.credit = model.credit;
+                this.diffPrice = model.diffPrice;
+                this.distributionPrice = model.distributionPrice;
+                this.distributionPriceRatio = model.distributionPriceRatio;
+                this.externalPlatformType = model.externalPlatformType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.inGroup = model.inGroup;
+                this.inGroupTime = model.inGroupTime;
+                this.inventoryRiskLevel = model.inventoryRiskLevel;
+                this.invoiceType = model.invoiceType;
+                this.lmItemId = model.lmItemId;
+                this.picUrl = model.picUrl;
+                this.platformPrice = model.platformPrice;
+                this.platformReservePrice = model.platformReservePrice;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.shopName = model.shopName;
+                this.soldQuantity = model.soldQuantity;
+                this.taxCode = model.taxCode;
+                this.taxRate = model.taxRate;
+                this.tradeMode = model.tradeMode;
+            } 
 
             /**
              * bandName.

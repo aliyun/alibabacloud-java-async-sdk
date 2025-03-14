@@ -32,6 +32,10 @@ public class ShopStatusChangeResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operate
      */
@@ -41,6 +45,13 @@ public class ShopStatusChangeResult extends TeaModel {
 
     public static final class Builder {
         private Boolean operate; 
+
+        private Builder() {
+        } 
+
+        private Builder(ShopStatusChangeResult model) {
+            this.operate = model.operate;
+        } 
 
         /**
          * operate.

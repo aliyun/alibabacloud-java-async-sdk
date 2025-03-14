@@ -52,6 +52,10 @@ public class ProductDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return price
      */
@@ -93,6 +97,17 @@ public class ProductDTO extends TeaModel {
         private String purchaserId; 
         private Integer quantity; 
         private String skuId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductDTO model) {
+            this.price = model.price;
+            this.productId = model.productId;
+            this.purchaserId = model.purchaserId;
+            this.quantity = model.quantity;
+            this.skuId = model.skuId;
+        } 
 
         /**
          * price.

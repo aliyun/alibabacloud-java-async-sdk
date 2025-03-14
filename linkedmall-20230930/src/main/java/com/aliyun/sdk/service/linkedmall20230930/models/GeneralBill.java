@@ -68,6 +68,10 @@ public class GeneralBill extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return billId
      */
@@ -149,6 +153,22 @@ public class GeneralBill extends TeaModel {
         private String shopName; 
         private String startTime; 
         private Money totalAmount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GeneralBill model) {
+            this.billId = model.billId;
+            this.billPeriod = model.billPeriod;
+            this.downloadUrl = model.downloadUrl;
+            this.endTime = model.endTime;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.shopId = model.shopId;
+            this.shopName = model.shopName;
+            this.startTime = model.startTime;
+            this.totalAmount = model.totalAmount;
+        } 
 
         /**
          * billId.

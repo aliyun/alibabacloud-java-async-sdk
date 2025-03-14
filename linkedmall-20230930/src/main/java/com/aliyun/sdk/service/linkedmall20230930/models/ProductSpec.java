@@ -40,6 +40,10 @@ public class ProductSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -65,6 +69,15 @@ public class ProductSpec extends TeaModel {
         private String key; 
         private Long keyId; 
         private java.util.List<ProductSpecValue> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductSpec model) {
+            this.key = model.key;
+            this.keyId = model.keyId;
+            this.values = model.values;
+        } 
 
         /**
          * key.

@@ -40,6 +40,10 @@ public class OrderListResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderList
      */
@@ -65,6 +69,15 @@ public class OrderListResult extends TeaModel {
         private java.util.List<OrderResult> orderList; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderListResult model) {
+            this.orderList = model.orderList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * orderList.

@@ -36,6 +36,10 @@ public class PurchaseOrderStatusResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class PurchaseOrderStatusResult extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(PurchaseOrderStatusResult model) {
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * requestId.

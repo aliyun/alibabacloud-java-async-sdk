@@ -36,6 +36,10 @@ public class ConfirmDisburseCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -53,6 +57,14 @@ public class ConfirmDisburseCmd extends TeaModel {
     public static final class Builder {
         private String orderId; 
         private String purchaseOrderId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfirmDisburseCmd model) {
+            this.orderId = model.orderId;
+            this.purchaseOrderId = model.purchaseOrderId;
+        } 
 
         /**
          * orderId.

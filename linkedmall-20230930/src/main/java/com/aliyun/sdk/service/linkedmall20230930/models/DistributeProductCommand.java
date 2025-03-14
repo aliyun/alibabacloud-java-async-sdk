@@ -48,6 +48,10 @@ public class DistributeProductCommand extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lmShopId
      */
@@ -89,6 +93,17 @@ public class DistributeProductCommand extends TeaModel {
         private String requestId; 
         private String requestTime; 
         private String requestUser; 
+
+        private Builder() {
+        } 
+
+        private Builder(DistributeProductCommand model) {
+            this.lmShopId = model.lmShopId;
+            this.products = model.products;
+            this.requestId = model.requestId;
+            this.requestTime = model.requestTime;
+            this.requestUser = model.requestUser;
+        } 
 
         /**
          * lmShopId.

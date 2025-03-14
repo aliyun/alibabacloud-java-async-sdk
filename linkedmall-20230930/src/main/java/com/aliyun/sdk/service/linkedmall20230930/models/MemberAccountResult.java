@@ -36,6 +36,10 @@ public class MemberAccountResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountNo
      */
@@ -53,6 +57,14 @@ public class MemberAccountResult extends TeaModel {
     public static final class Builder {
         private java.util.List<String> accountNo; 
         private String shopId; 
+
+        private Builder() {
+        } 
+
+        private Builder(MemberAccountResult model) {
+            this.accountNo = model.accountNo;
+            this.shopId = model.shopId;
+        } 
 
         /**
          * accountNo.

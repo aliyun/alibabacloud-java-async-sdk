@@ -55,6 +55,10 @@ public class AddressInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressDetail
      */
@@ -104,6 +108,18 @@ public class AddressInfo extends TeaModel {
         private String receiver; 
         private String receiverPhone; 
         private String townDivisionCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddressInfo model) {
+            this.addressDetail = model.addressDetail;
+            this.addressId = model.addressId;
+            this.divisionCode = model.divisionCode;
+            this.receiver = model.receiver;
+            this.receiverPhone = model.receiverPhone;
+            this.townDivisionCode = model.townDivisionCode;
+        } 
 
         /**
          * <p>This parameter is required.</p>

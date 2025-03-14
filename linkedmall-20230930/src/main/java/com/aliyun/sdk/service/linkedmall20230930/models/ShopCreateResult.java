@@ -36,6 +36,10 @@ public class ShopCreateResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return shopId
      */
@@ -53,6 +57,14 @@ public class ShopCreateResult extends TeaModel {
     public static final class Builder {
         private String shopId; 
         private String shopStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(ShopCreateResult model) {
+            this.shopId = model.shopId;
+            this.shopStatus = model.shopStatus;
+        } 
 
         /**
          * shopId.

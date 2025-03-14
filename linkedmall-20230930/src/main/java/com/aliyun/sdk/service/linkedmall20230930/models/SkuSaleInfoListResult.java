@@ -36,6 +36,10 @@ public class SkuSaleInfoListResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SkuSaleInfoListResult extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SkuSaleInfo> skuSaleInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(SkuSaleInfoListResult model) {
+            this.requestId = model.requestId;
+            this.skuSaleInfos = model.skuSaleInfos;
+        } 
 
         /**
          * requestId.

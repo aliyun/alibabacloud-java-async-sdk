@@ -56,6 +56,10 @@ public class PurchaseOrderRenderResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addressList
      */
@@ -113,6 +117,19 @@ public class PurchaseOrderRenderResult extends TeaModel {
         private java.util.List<OrderRenderResult> orderList; 
         private String requestId; 
         private java.util.List<OrderRenderResult> unsellableOrderList; 
+
+        private Builder() {
+        } 
+
+        private Builder(PurchaseOrderRenderResult model) {
+            this.addressList = model.addressList;
+            this.canSell = model.canSell;
+            this.extInfo = model.extInfo;
+            this.message = model.message;
+            this.orderList = model.orderList;
+            this.requestId = model.requestId;
+            this.unsellableOrderList = model.unsellableOrderList;
+        } 
 
         /**
          * addressList.

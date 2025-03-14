@@ -43,6 +43,10 @@ public class RefundRenderCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bizClaimType
      */
@@ -68,6 +72,15 @@ public class RefundRenderCmd extends TeaModel {
         private Integer bizClaimType; 
         private Integer goodsStatus; 
         private String orderLineId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundRenderCmd model) {
+            this.bizClaimType = model.bizClaimType;
+            this.goodsStatus = model.goodsStatus;
+            this.orderLineId = model.orderLineId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

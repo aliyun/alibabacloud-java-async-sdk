@@ -64,6 +64,10 @@ public class OrderResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createDate
      */
@@ -137,6 +141,21 @@ public class OrderResult extends TeaModel {
         private java.util.List<OrderLineResult> orderLineList; 
         private String orderStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderResult model) {
+            this.createDate = model.createDate;
+            this.distributorId = model.distributorId;
+            this.logisticsStatus = model.logisticsStatus;
+            this.orderAmount = model.orderAmount;
+            this.orderClosedReason = model.orderClosedReason;
+            this.orderId = model.orderId;
+            this.orderLineList = model.orderLineList;
+            this.orderStatus = model.orderStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * createDate.

@@ -37,6 +37,10 @@ public class ProductQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return distributorShopId
      */
@@ -54,6 +58,14 @@ public class ProductQuery extends TeaModel {
     public static final class Builder {
         private String distributorShopId; 
         private String divisionCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductQuery model) {
+            this.distributorShopId = model.distributorShopId;
+            this.divisionCode = model.divisionCode;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -70,6 +70,10 @@ public class RefundOrderCmd extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applyReasonTextId
      */
@@ -143,6 +147,21 @@ public class RefundOrderCmd extends TeaModel {
         private String leaveMessage; 
         private java.util.List<LeavePictureList> leavePictureLists; 
         private String orderLineId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundOrderCmd model) {
+            this.applyReasonTextId = model.applyReasonTextId;
+            this.applyReasonTips = model.applyReasonTips;
+            this.applyRefundCount = model.applyRefundCount;
+            this.applyRefundFee = model.applyRefundFee;
+            this.bizClaimType = model.bizClaimType;
+            this.goodsStatus = model.goodsStatus;
+            this.leaveMessage = model.leaveMessage;
+            this.leavePictureLists = model.leavePictureLists;
+            this.orderLineId = model.orderLineId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

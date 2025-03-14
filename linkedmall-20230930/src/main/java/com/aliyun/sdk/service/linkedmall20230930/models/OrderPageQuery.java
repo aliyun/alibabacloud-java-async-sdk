@@ -46,6 +46,10 @@ public class OrderPageQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderIdList
      */
@@ -79,6 +83,16 @@ public class OrderPageQuery extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String purchaseOrderId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderPageQuery model) {
+            this.orderIdList = model.orderIdList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.purchaseOrderId = model.purchaseOrderId;
+        } 
 
         /**
          * orderIdList.

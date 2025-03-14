@@ -36,6 +36,10 @@ public class CategoryListQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categoryIds
      */
@@ -53,6 +57,14 @@ public class CategoryListQuery extends TeaModel {
     public static final class Builder {
         private java.util.List<Long> categoryIds; 
         private Long parentCategoryId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CategoryListQuery model) {
+            this.categoryIds = model.categoryIds;
+            this.parentCategoryId = model.parentCategoryId;
+        } 
 
         /**
          * categoryIds.

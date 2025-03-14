@@ -36,6 +36,10 @@ public class ProductSaleInfoListResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return productSaleInfos
      */
@@ -53,6 +57,14 @@ public class ProductSaleInfoListResult extends TeaModel {
     public static final class Builder {
         private java.util.List<ProductSaleInfo> productSaleInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductSaleInfoListResult model) {
+            this.productSaleInfos = model.productSaleInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * productSaleInfos.

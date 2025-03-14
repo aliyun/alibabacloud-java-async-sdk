@@ -64,6 +64,10 @@ public class LogisticsInformationData extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logisticsStatus
      */
@@ -137,6 +141,21 @@ public class LogisticsInformationData extends TeaModel {
         private String trackingCompanyCode; 
         private String trackingCompanyName; 
         private String trackingNumber; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogisticsInformationData model) {
+            this.logisticsStatus = model.logisticsStatus;
+            this.modifiedTime = model.modifiedTime;
+            this.orderId = model.orderId;
+            this.orderLineId = model.orderLineId;
+            this.outerPurchaseOrderId = model.outerPurchaseOrderId;
+            this.purchaserId = model.purchaserId;
+            this.trackingCompanyCode = model.trackingCompanyCode;
+            this.trackingCompanyName = model.trackingCompanyName;
+            this.trackingNumber = model.trackingNumber;
+        } 
 
         /**
          * logisticsStatus.

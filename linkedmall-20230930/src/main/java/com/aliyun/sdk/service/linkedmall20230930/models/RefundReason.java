@@ -44,6 +44,10 @@ public class RefundReason extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return proofRequired
      */
@@ -77,6 +81,16 @@ public class RefundReason extends TeaModel {
         private String reasonTextId; 
         private String reasonTips; 
         private Boolean refundDescRequired; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundReason model) {
+            this.proofRequired = model.proofRequired;
+            this.reasonTextId = model.reasonTextId;
+            this.reasonTips = model.reasonTips;
+            this.refundDescRequired = model.refundDescRequired;
+        } 
 
         /**
          * proofRequired.

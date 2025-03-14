@@ -56,6 +56,10 @@ public class LogisticsOrderResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataProvider
      */
@@ -113,6 +117,19 @@ public class LogisticsOrderResult extends TeaModel {
         private String logisticsCompanyName; 
         private java.util.List<LogisticsDetail> logisticsDetailList; 
         private String mailNo; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogisticsOrderResult model) {
+            this.dataProvider = model.dataProvider;
+            this.dataProviderTitle = model.dataProviderTitle;
+            this.goods = model.goods;
+            this.logisticsCompanyCode = model.logisticsCompanyCode;
+            this.logisticsCompanyName = model.logisticsCompanyName;
+            this.logisticsDetailList = model.logisticsDetailList;
+            this.mailNo = model.mailNo;
+        } 
 
         /**
          * dataProvider.

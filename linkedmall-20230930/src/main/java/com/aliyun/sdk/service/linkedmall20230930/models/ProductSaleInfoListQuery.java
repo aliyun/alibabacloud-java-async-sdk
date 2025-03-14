@@ -42,6 +42,10 @@ public class ProductSaleInfoListQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return divisionCode
      */
@@ -67,6 +71,15 @@ public class ProductSaleInfoListQuery extends TeaModel {
         private String divisionCode; 
         private java.util.List<String> productIds; 
         private String purchaserId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProductSaleInfoListQuery model) {
+            this.divisionCode = model.divisionCode;
+            this.productIds = model.productIds;
+            this.purchaserId = model.purchaserId;
+        } 
 
         /**
          * divisionCode.

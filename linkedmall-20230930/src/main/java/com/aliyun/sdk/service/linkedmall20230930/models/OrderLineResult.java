@@ -72,6 +72,10 @@ public class OrderLineResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logisticsStatus
      */
@@ -161,6 +165,23 @@ public class OrderLineResult extends TeaModel {
         private String productTitle; 
         private String skuId; 
         private String skuTitle; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderLineResult model) {
+            this.logisticsStatus = model.logisticsStatus;
+            this.number = model.number;
+            this.orderId = model.orderId;
+            this.orderLineId = model.orderLineId;
+            this.orderLineStatus = model.orderLineStatus;
+            this.payFee = model.payFee;
+            this.productId = model.productId;
+            this.productPic = model.productPic;
+            this.productTitle = model.productTitle;
+            this.skuId = model.skuId;
+            this.skuTitle = model.skuTitle;
+        } 
 
         /**
          * logisticsStatus.

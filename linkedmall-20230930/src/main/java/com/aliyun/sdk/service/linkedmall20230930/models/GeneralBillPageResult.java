@@ -48,6 +48,10 @@ public class GeneralBillPageResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return generalBills
      */
@@ -89,6 +93,17 @@ public class GeneralBillPageResult extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(GeneralBillPageResult model) {
+            this.generalBills = model.generalBills;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * generalBills.

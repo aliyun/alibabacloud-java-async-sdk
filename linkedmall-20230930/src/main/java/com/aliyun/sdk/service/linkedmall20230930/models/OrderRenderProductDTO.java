@@ -48,6 +48,10 @@ public class OrderRenderProductDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return productId
      */
@@ -81,6 +85,16 @@ public class OrderRenderProductDTO extends TeaModel {
         private String purchaserId; 
         private Integer quantity; 
         private String skuId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderRenderProductDTO model) {
+            this.productId = model.productId;
+            this.purchaserId = model.purchaserId;
+            this.quantity = model.quantity;
+            this.skuId = model.skuId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

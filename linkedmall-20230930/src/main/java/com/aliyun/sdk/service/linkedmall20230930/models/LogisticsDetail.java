@@ -36,6 +36,10 @@ public class LogisticsDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ocurrTimeStr
      */
@@ -53,6 +57,14 @@ public class LogisticsDetail extends TeaModel {
     public static final class Builder {
         private String ocurrTimeStr; 
         private String standerdDesc; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogisticsDetail model) {
+            this.ocurrTimeStr = model.ocurrTimeStr;
+            this.standerdDesc = model.standerdDesc;
+        } 
 
         /**
          * ocurrTimeStr.

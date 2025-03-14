@@ -48,6 +48,10 @@ public class Division extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return divisionCode
      */
@@ -89,6 +93,17 @@ public class Division extends TeaModel {
         private String divisionName; 
         private Long parentId; 
         private String pinyin; 
+
+        private Builder() {
+        } 
+
+        private Builder(Division model) {
+            this.divisionCode = model.divisionCode;
+            this.divisionLevel = model.divisionLevel;
+            this.divisionName = model.divisionName;
+            this.parentId = model.parentId;
+            this.pinyin = model.pinyin;
+        } 
 
         /**
          * divisionCode.
