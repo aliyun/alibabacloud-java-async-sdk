@@ -68,6 +68,10 @@ public class DescribeSellerInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -149,6 +153,22 @@ public class DescribeSellerInstancesResponseBody extends TeaModel {
         private java.util.List<Result> result; 
         private Boolean success; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSellerInstancesResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.fatal = model.fatal;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+            this.version = model.version;
+        } 
 
         /**
          * Code.
@@ -366,6 +386,21 @@ public class DescribeSellerInstancesResponseBody extends TeaModel {
             private Long instanceId; 
             private String instanceStatus; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appInfo = model.appInfo;
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.createdOn = model.createdOn;
+                this.hostInfo = model.hostInfo;
+                this.info = model.info;
+                this.instanceId = model.instanceId;
+                this.instanceStatus = model.instanceStatus;
+                this.userId = model.userId;
+            } 
 
             /**
              * AppInfo.

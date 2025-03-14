@@ -56,6 +56,10 @@ public class PushMeteringDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class PushMeteringDataResponseBody extends TeaModel {
         private String requestId; 
         private Boolean result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PushMeteringDataResponseBody model) {
+            this.code = model.code;
+            this.dynamicMessage = model.dynamicMessage;
+            this.forceFatal = model.forceFatal;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * Code.

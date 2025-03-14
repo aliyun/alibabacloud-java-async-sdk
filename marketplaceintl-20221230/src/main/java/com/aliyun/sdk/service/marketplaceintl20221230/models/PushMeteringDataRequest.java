@@ -39,7 +39,7 @@ public class PushMeteringDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -176,6 +176,17 @@ public class PushMeteringDataRequest extends Request {
             private String meteringAssist; 
             private String meteringEntity; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(MeteringData model) {
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.meteringAssist = model.meteringAssist;
+                this.meteringEntity = model.meteringEntity;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * EndTime.
