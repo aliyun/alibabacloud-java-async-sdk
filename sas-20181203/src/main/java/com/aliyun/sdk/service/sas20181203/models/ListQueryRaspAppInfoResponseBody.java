@@ -52,6 +52,10 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListQueryRaspAppInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -254,6 +270,17 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
             private String raspStatus; 
             private String result; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.raspAppName = model.raspAppName;
+                this.raspOnlineStatus = model.raspOnlineStatus;
+                this.raspStatus = model.raspStatus;
+                this.result = model.result;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The name of the RASP-enabled application.</p>

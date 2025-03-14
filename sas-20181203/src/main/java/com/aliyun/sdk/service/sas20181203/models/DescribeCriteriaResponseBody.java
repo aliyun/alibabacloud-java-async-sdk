@@ -36,6 +36,10 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return criteriaList
      */
@@ -53,6 +57,14 @@ public class DescribeCriteriaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CriteriaList> criteriaList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCriteriaResponseBody model) {
+            this.criteriaList = model.criteriaList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the search conditions of assets.</p>
@@ -146,6 +158,16 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String values; 
+
+            private Builder() {
+            } 
+
+            private Builder(CriteriaList model) {
+                this.multiValues = model.multiValues;
+                this.name = model.name;
+                this.type = model.type;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</p>

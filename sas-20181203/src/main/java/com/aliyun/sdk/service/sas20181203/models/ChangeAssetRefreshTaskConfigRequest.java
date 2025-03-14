@@ -39,7 +39,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,6 +179,17 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             private Integer status; 
             private Long targetId; 
             private Integer vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetRefreshConfigs model) {
+                this.refreshConfigType = model.refreshConfigType;
+                this.schedulePeriod = model.schedulePeriod;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>The type of the configuration. Valid values:</p>

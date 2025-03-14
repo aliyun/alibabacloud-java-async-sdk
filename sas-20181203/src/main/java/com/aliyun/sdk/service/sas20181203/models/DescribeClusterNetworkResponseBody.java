@@ -36,6 +36,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterNetwork
      */
@@ -53,6 +57,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterNetwork clusterNetwork; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterNetworkResponseBody model) {
+            this.clusterNetwork = model.clusterNetwork;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Information about the network topology edge in the cluster.</p>
@@ -170,6 +182,18 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private String port; 
             private String srcNodeId; 
             private String srcNodeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Edge model) {
+                this.dstNodeId = model.dstNodeId;
+                this.dstNodeType = model.dstNodeType;
+                this.id = model.id;
+                this.port = model.port;
+                this.srcNodeId = model.srcNodeId;
+                this.srcNodeType = model.srcNodeType;
+            } 
 
             /**
              * <p>The ID of the destination node.</p>
@@ -355,6 +379,19 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private String riskLevel; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Node model) {
+                this.cnnfSwitch = model.cnnfSwitch;
+                this.id = model.id;
+                this.interceptionType = model.interceptionType;
+                this.name = model.name;
+                this.netTopoSwitch = model.netTopoSwitch;
+                this.riskLevel = model.riskLevel;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The status of the microsegmentation switch. Valid values:</p>
              * <ul>
@@ -505,6 +542,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Edge> edge; 
             private java.util.List<Node> node; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterNetwork model) {
+                this.edge = model.edge;
+                this.node = model.node;
+            } 
 
             /**
              * <p>An array that consists of information about the topology edge.</p>

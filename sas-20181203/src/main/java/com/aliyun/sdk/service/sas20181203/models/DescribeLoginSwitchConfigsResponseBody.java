@@ -40,6 +40,10 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configList
      */
@@ -65,6 +69,15 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         private java.util.List<ConfigList> configList; 
         private Integer count; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoginSwitchConfigsResponseBody model) {
+            this.configList = model.configList;
+            this.count = model.count;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration item returned.</p>
@@ -145,6 +158,14 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private String item; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.item = model.item;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The type of the alert that you enabled or disabled. Valid values:</p>

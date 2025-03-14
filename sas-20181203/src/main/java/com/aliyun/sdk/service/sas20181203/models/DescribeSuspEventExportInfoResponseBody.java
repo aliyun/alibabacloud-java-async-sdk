@@ -72,6 +72,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exportStatus
      */
@@ -161,6 +165,23 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSuspEventExportInfoResponseBody model) {
+            this.exportStatus = model.exportStatus;
+            this.fileName = model.fileName;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.link = model.link;
+            this.progress = model.progress;
+            this.properties = model.properties;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The handling status for the exception. Valid values:</p>

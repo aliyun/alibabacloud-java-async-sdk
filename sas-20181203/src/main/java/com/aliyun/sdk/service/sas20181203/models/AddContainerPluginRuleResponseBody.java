@@ -36,6 +36,10 @@ public class AddContainerPluginRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class AddContainerPluginRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddContainerPluginRuleResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -134,6 +146,15 @@ public class AddContainerPluginRuleResponseBody extends TeaModel {
             private Long ruleId; 
             private String ruleName; 
             private String switchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.switchId = model.switchId;
+            } 
 
             /**
              * <p>The ID of the rule.</p>

@@ -45,7 +45,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -282,6 +282,23 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             private String includeFileType; 
             private Long pathConfId; 
             private java.util.List<String> processPathList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathConfDTOList model) {
+                this.backupPath = model.backupPath;
+                this.defenseMode = model.defenseMode;
+                this.defensePath = model.defensePath;
+                this.excludeFile = model.excludeFile;
+                this.excludeFilePath = model.excludeFilePath;
+                this.excludeFileType = model.excludeFileType;
+                this.guardType = model.guardType;
+                this.includeFile = model.includeFile;
+                this.includeFileType = model.includeFileType;
+                this.pathConfId = model.pathConfId;
+                this.processPathList = model.processPathList;
+            } 
 
             /**
              * <p>The backup paths.</p>

@@ -36,6 +36,10 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBackupAutoConfigStatusResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -110,6 +122,13 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canConfigAuto; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.canConfigAuto = model.canConfigAuto;
+            } 
 
             /**
              * <p>Indicates whether the anti-ransomware policy for servers can be automatically configured by the managed anti-ransomware feature. Valid values:</p>

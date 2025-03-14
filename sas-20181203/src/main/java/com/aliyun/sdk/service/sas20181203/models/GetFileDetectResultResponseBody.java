@@ -36,6 +36,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<ResultList> resultList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileDetectResultResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultList = model.resultList;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -194,6 +206,20 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             private Integer result; 
             private Integer score; 
             private String virusType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultList model) {
+                this.code = model.code;
+                this.compress = model.compress;
+                this.ext = model.ext;
+                this.hashKey = model.hashKey;
+                this.message = model.message;
+                this.result = model.result;
+                this.score = model.score;
+                this.virusType = model.virusType;
+            } 
 
             /**
              * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>

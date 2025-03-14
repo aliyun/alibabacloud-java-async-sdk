@@ -40,6 +40,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -65,6 +69,15 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentlessRiskUuidResponseBody model) {
+            this.list = model.list;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the hosts.</p>
@@ -251,6 +264,23 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             private String uuid; 
             private Integer vulCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.baselineCount = model.baselineCount;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.maliciousCount = model.maliciousCount;
+                this.scanTime = model.scanTime;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.uuid = model.uuid;
+                this.vulCount = model.vulCount;
+            } 
+
             /**
              * <p>The number of baseline risks.</p>
              * 
@@ -434,6 +464,15 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

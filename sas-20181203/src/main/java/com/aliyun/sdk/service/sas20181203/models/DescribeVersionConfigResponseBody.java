@@ -196,6 +196,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentlessCapacity
      */
@@ -533,6 +537,54 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long vulFixCapacity; 
         private Integer webLock; 
         private Long webLockAuthCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVersionConfigResponseBody model) {
+            this.agentlessCapacity = model.agentlessCapacity;
+            this.allowPartialBuy = model.allowPartialBuy;
+            this.antiRansomwareService = model.antiRansomwareService;
+            this.appWhiteList = model.appWhiteList;
+            this.appWhiteListAuthCount = model.appWhiteListAuthCount;
+            this.assetLevel = model.assetLevel;
+            this.cspmCapacity = model.cspmCapacity;
+            this.highestVersion = model.highestVersion;
+            this.honeypotCapacity = model.honeypotCapacity;
+            this.imageScanCapacity = model.imageScanCapacity;
+            this.instanceId = model.instanceId;
+            this.isNewContainerVersion = model.isNewContainerVersion;
+            this.isNewMultiVersion = model.isNewMultiVersion;
+            this.isOverBalance = model.isOverBalance;
+            this.isPostpay = model.isPostpay;
+            this.isTrialVersion = model.isTrialVersion;
+            this.lastTrailEndTime = model.lastTrailEndTime;
+            this.MVAuthCount = model.MVAuthCount;
+            this.MVUnusedAuthCount = model.MVUnusedAuthCount;
+            this.mergedVersion = model.mergedVersion;
+            this.newThreatAnalysis = model.newThreatAnalysis;
+            this.openTime = model.openTime;
+            this.postPayHostVersion = model.postPayHostVersion;
+            this.postPayInstanceId = model.postPayInstanceId;
+            this.postPayModuleSwitch = model.postPayModuleSwitch;
+            this.postPayOpenTime = model.postPayOpenTime;
+            this.postPayStatus = model.postPayStatus;
+            this.raspCapacity = model.raspCapacity;
+            this.releaseTime = model.releaseTime;
+            this.requestId = model.requestId;
+            this.sasLog = model.sasLog;
+            this.sasScreen = model.sasScreen;
+            this.sdkCapacity = model.sdkCapacity;
+            this.slsCapacity = model.slsCapacity;
+            this.threatAnalysisCapacity = model.threatAnalysisCapacity;
+            this.threatAnalysisFlow = model.threatAnalysisFlow;
+            this.userDefinedAlarms = model.userDefinedAlarms;
+            this.version = model.version;
+            this.vmCores = model.vmCores;
+            this.vulFixCapacity = model.vulFixCapacity;
+            this.webLock = model.webLock;
+            this.webLockAuthCount = model.webLockAuthCount;
+        } 
 
         /**
          * <p>The quota for agentless detection.</p>

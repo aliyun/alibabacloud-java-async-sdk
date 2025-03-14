@@ -52,6 +52,10 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetContainerDefenseRuleDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -231,6 +247,15 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             private String clusterId; 
             private java.util.List<String> namespaces; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.allNamespace = model.allNamespace;
+                this.clusterId = model.clusterId;
+                this.namespaces = model.namespaces;
+            } 
+
             /**
              * <p>Indicates whether all namespaces are included. Valid values:</p>
              * <ul>
@@ -328,6 +353,15 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             private java.util.List<String> hash; 
             private java.util.List<String> image; 
             private java.util.List<String> path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Whitelist model) {
+                this.hash = model.hash;
+                this.image = model.image;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The hash values of the files that are added to the whitelist.</p>
@@ -514,6 +548,23 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             private String ruleType; 
             private java.util.List<Scope> scope; 
             private Whitelist whitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliUid = model.aliUid;
+                this.description = model.description;
+                this.eventName = model.eventName;
+                this.eventType = model.eventType;
+                this.id = model.id;
+                this.ruleAction = model.ruleAction;
+                this.ruleName = model.ruleName;
+                this.ruleSwitch = model.ruleSwitch;
+                this.ruleType = model.ruleType;
+                this.scope = model.scope;
+                this.whitelist = model.whitelist;
+            } 
 
             /**
              * <p>The user ID.</p>

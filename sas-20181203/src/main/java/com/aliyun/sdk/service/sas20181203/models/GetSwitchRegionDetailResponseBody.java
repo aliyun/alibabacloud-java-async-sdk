@@ -36,6 +36,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSwitchRegionDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -146,6 +158,16 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private Long gmtPlanSwitchTime; 
             private String regionId; 
             private Integer status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionStatus model) {
+                this.ecsCount = model.ecsCount;
+                this.gmtPlanSwitchTime = model.gmtPlanSwitchTime;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The number of ECS instances.</p>
@@ -281,6 +303,17 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private String isAgree; 
             private String isNoticed; 
             private java.util.List<RegionStatus> regionStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.gmtIsAgreeModified = model.gmtIsAgreeModified;
+                this.gmtNoticed = model.gmtNoticed;
+                this.isAgree = model.isAgree;
+                this.isNoticed = model.isNoticed;
+                this.regionStatus = model.regionStatus;
+            } 
 
             /**
              * <p>The time when the permissions were modified.</p>

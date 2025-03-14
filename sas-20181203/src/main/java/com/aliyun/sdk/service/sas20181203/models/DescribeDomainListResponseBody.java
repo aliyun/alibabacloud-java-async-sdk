@@ -40,6 +40,10 @@ public class DescribeDomainListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainListResponseList
      */
@@ -65,6 +69,15 @@ public class DescribeDomainListResponseBody extends TeaModel {
         private java.util.List<DomainListResponseList> domainListResponseList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainListResponseBody model) {
+            this.domainListResponseList = model.domainListResponseList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about domain names.</p>
@@ -142,6 +155,14 @@ public class DescribeDomainListResponseBody extends TeaModel {
         public static final class Builder {
             private String domain; 
             private String ipList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainListResponseList model) {
+                this.domain = model.domain;
+                this.ipList = model.ipList;
+            } 
 
             /**
              * <p>The name of the domain or website.</p>
@@ -239,6 +260,16 @@ public class DescribeDomainListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

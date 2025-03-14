@@ -36,6 +36,10 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return handleSecurityEventsResponse
      */
@@ -53,6 +57,14 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
     public static final class Builder {
         private HandleSecurityEventsResponse handleSecurityEventsResponse; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(HandleSecurityEventsResponseBody model) {
+            this.handleSecurityEventsResponse = model.handleSecurityEventsResponse;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The handling result of the alert events.</p>
@@ -110,6 +122,13 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HandleSecurityEventsResponse model) {
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The ID of the task to handle the alert events.</p>

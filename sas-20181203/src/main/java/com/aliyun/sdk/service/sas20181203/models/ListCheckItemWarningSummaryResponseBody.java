@@ -40,6 +40,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -65,6 +69,15 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCheckItemWarningSummaryResponseBody model) {
+            this.list = model.list;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of check item risk statistics.</p>
@@ -286,6 +299,26 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private String riskType; 
             private Integer status; 
             private Integer warningMachineCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.advice = model.advice;
+                this.affiliatedRiskTypes = model.affiliatedRiskTypes;
+                this.affiliatedRisks = model.affiliatedRisks;
+                this.alias = model.alias;
+                this.checkId = model.checkId;
+                this.checkItem = model.checkItem;
+                this.checkLevel = model.checkLevel;
+                this.checkType = model.checkType;
+                this.containerCheckItem = model.containerCheckItem;
+                this.description = model.description;
+                this.enableRisks = model.enableRisks;
+                this.riskType = model.riskType;
+                this.status = model.status;
+                this.warningMachineCount = model.warningMachineCount;
+            } 
 
             /**
              * <p>The suggestion on the check item.</p>
@@ -520,6 +553,16 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

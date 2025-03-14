@@ -40,6 +40,10 @@ public class ListOperationTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationTasks
      */
@@ -65,6 +69,15 @@ public class ListOperationTaskResponseBody extends TeaModel {
         private java.util.List<OperationTasks> operationTasks; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationTaskResponseBody model) {
+            this.operationTasks = model.operationTasks;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>操作任务的详细实例信息列表。</p>
@@ -322,6 +335,29 @@ public class ListOperationTaskResponseBody extends TeaModel {
             private Boolean supportRollBack; 
             private String taskId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationTasks model) {
+                this.checkId = model.checkId;
+                this.checkShowName = model.checkShowName;
+                this.dealTime = model.dealTime;
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.instanceFreed = model.instanceFreed;
+                this.instanceId = model.instanceId;
+                this.lastCheckTime = model.lastCheckTime;
+                this.regionId = model.regionId;
+                this.repairSupportType = model.repairSupportType;
+                this.riskLevel = model.riskLevel;
+                this.rootTaskId = model.rootTaskId;
+                this.status = model.status;
+                this.statusShowName = model.statusShowName;
+                this.supportRollBack = model.supportRollBack;
+                this.taskId = model.taskId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>检查项的ID。</p>
@@ -628,6 +664,16 @@ public class ListOperationTaskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

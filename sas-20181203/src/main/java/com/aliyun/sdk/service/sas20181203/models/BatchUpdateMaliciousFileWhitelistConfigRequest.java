@@ -34,7 +34,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -189,6 +189,20 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             private String source; 
             private String targetType; 
             private String targetValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.configId = model.configId;
+                this.eventName = model.eventName;
+                this.field = model.field;
+                this.fieldValue = model.fieldValue;
+                this.operator = model.operator;
+                this.source = model.source;
+                this.targetType = model.targetType;
+                this.targetValue = model.targetValue;
+            } 
 
             /**
              * <p>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</p>

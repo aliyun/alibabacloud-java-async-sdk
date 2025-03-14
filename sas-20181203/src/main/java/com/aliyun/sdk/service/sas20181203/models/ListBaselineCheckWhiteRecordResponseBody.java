@@ -40,6 +40,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -65,6 +69,15 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListBaselineCheckWhiteRecordResponseBody model) {
+            this.list = model.list;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The whitelist rules.</p>
@@ -238,6 +251,22 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             private String source; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.checkId = model.checkId;
+                this.checkItem = model.checkItem;
+                this.checkType = model.checkType;
+                this.checkTypeDisName = model.checkTypeDisName;
+                this.lang = model.lang;
+                this.reason = model.reason;
+                this.recordId = model.recordId;
+                this.source = model.source;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The ID of the check item.</p>
@@ -435,6 +464,16 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

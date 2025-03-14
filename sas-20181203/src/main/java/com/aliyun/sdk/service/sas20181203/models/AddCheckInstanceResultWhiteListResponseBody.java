@@ -40,6 +40,10 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class AddCheckInstanceResultWhiteListResponseBody extends TeaModel {
         private java.util.Map<String, ?> data; 
         private String requestId; 
         private String ruleId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddCheckInstanceResultWhiteListResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+        } 
 
         /**
          * <p>The data returned. This parameter is deprecated.</p>

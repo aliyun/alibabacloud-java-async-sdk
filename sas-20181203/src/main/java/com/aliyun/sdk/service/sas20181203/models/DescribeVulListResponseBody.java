@@ -52,6 +52,10 @@ public class DescribeVulListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -101,6 +105,18 @@ public class DescribeVulListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<VulRecords> vulRecords; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulListResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.nextToken = model.nextToken;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vulRecords = model.vulRecords;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -274,6 +290,19 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String status; 
             private String timeFactor; 
             private String totalScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Necessity model) {
+                this.assetsFactor = model.assetsFactor;
+                this.cvssFactor = model.cvssFactor;
+                this.enviromentFactor = model.enviromentFactor;
+                this.isCalc = model.isCalc;
+                this.status = model.status;
+                this.timeFactor = model.timeFactor;
+                this.totalScore = model.totalScore;
+            } 
 
             /**
              * <p>The asset importance score. Valid values:</p>
@@ -530,6 +559,23 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String pid; 
             private String updateCmd; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(RpmEntityList model) {
+                this.containerName = model.containerName;
+                this.extendField = model.extendField;
+                this.fullVersion = model.fullVersion;
+                this.imageName = model.imageName;
+                this.matchDetail = model.matchDetail;
+                this.matchList = model.matchList;
+                this.name = model.name;
+                this.path = model.path;
+                this.pid = model.pid;
+                this.updateCmd = model.updateCmd;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the container.</p>
@@ -855,6 +901,27 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String tag; 
             private String target; 
             private java.util.List<String> cveList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendContentJson model) {
+                this.absolutePath = model.absolutePath;
+                this.aliasName = model.aliasName;
+                this.description = model.description;
+                this.emgProof = model.emgProof;
+                this.ip = model.ip;
+                this.lastTs = model.lastTs;
+                this.necessity = model.necessity;
+                this.os = model.os;
+                this.osRelease = model.osRelease;
+                this.primaryId = model.primaryId;
+                this.rpmEntityList = model.rpmEntityList;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.target = model.target;
+                this.cveList = model.cveList;
+            } 
 
             /**
              * <p>The path to the package of the software that has the vulnerability.</p>
@@ -1485,6 +1552,48 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String tag; 
             private String type; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulRecords model) {
+                this.aliasName = model.aliasName;
+                this.authVersion = model.authVersion;
+                this.bind = model.bind;
+                this.extendContentJson = model.extendContentJson;
+                this.firstTs = model.firstTs;
+                this.groupId = model.groupId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.k8sClusterId = model.k8sClusterId;
+                this.k8sNamespace = model.k8sNamespace;
+                this.k8sNodeId = model.k8sNodeId;
+                this.k8sNodeName = model.k8sNodeName;
+                this.k8sPodName = model.k8sPodName;
+                this.lastTs = model.lastTs;
+                this.modifyTs = model.modifyTs;
+                this.name = model.name;
+                this.necessity = model.necessity;
+                this.online = model.online;
+                this.osName = model.osName;
+                this.osVersion = model.osVersion;
+                this.primaryId = model.primaryId;
+                this.progress = model.progress;
+                this.raspDefend = model.raspDefend;
+                this.raspStatus = model.raspStatus;
+                this.realRisk = model.realRisk;
+                this.regionId = model.regionId;
+                this.related = model.related;
+                this.repairTs = model.repairTs;
+                this.resultCode = model.resultCode;
+                this.resultMessage = model.resultMessage;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.type = model.type;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The name of the vulnerability.</p>

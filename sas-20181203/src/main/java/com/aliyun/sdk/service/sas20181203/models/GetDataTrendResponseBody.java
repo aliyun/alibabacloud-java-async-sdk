@@ -36,6 +36,10 @@ public class GetDataTrendResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDataTrendResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDataTrendResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -122,6 +134,14 @@ public class GetDataTrendResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Long> countList; 
             private String keyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItemList model) {
+                this.countList = model.countList;
+                this.keyName = model.keyName;
+            } 
 
             /**
              * <p>The statistical values of the trend data.</p>
@@ -212,6 +232,15 @@ public class GetDataTrendResponseBody extends TeaModel {
             private java.util.List<Integer> dateList; 
             private java.util.List<String> dateStrList; 
             private java.util.List<ItemList> itemList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dateList = model.dateList;
+                this.dateStrList = model.dateStrList;
+                this.itemList = model.itemList;
+            } 
 
             /**
              * <p>The statistical timestamps of the trend data.</p>

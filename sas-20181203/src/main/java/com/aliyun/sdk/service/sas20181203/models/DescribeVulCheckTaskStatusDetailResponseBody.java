@@ -40,6 +40,10 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<TaskStatuses> taskStatuses; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulCheckTaskStatusDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskStatuses = model.taskStatuses;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -157,6 +170,15 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             private String code; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskStatusList model) {
+                this.code = model.code;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The error code returned.</p>
@@ -254,6 +276,14 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String taskId; 
             private java.util.List<TaskStatusList> taskStatusList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskStatuses model) {
+                this.taskId = model.taskId;
+                this.taskStatusList = model.taskStatusList;
+            } 
 
             /**
              * <p>The ID of the main task.</p>

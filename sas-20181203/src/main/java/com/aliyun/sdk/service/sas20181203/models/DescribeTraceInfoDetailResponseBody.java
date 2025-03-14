@@ -40,6 +40,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private TraceInfoDetail traceInfoDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTraceInfoDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceInfoDetail = model.traceInfoDetail;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -185,6 +198,17 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String startId; 
             private String time; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdgeList model) {
+                this.count = model.count;
+                this.endId = model.endId;
+                this.startId = model.startId;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of times.</p>
@@ -400,6 +424,23 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String namespace; 
             private Integer offset; 
 
+            private Builder() {
+            } 
+
+            private Builder(EntityTypeList model) {
+                this.dbId = model.dbId;
+                this.displayColor = model.displayColor;
+                this.displayIcon = model.displayIcon;
+                this.displayTemplate = model.displayTemplate;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.limit = model.limit;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.offset = model.offset;
+            } 
+
             /**
              * <p>This parameter is deprecated.</p>
              * 
@@ -610,6 +651,17 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String relationTypeId; 
             private String showType; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationTypeList model) {
+                this.directed = model.directed;
+                this.displayColor = model.displayColor;
+                this.name = model.name;
+                this.relationTypeId = model.relationTypeId;
+                this.showType = model.showType;
+            } 
+
             /**
              * <p>Indicates whether the edge is a directional edge. Valid values:</p>
              * <ul>
@@ -731,6 +783,15 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private Integer count; 
             private Boolean hasMore; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(NeighborList model) {
+                this.count = model.count;
+                this.hasMore = model.hasMore;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of neighbor nodes.</p>
@@ -863,6 +924,18 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private java.util.List<NeighborList> neighborList; 
             private String time; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(VertexList model) {
+                this.count = model.count;
+                this.id = model.id;
+                this.name = model.name;
+                this.neighborList = model.neighborList;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of times.</p>
@@ -1001,6 +1074,16 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private java.util.List<EntityTypeList> entityTypeList; 
             private java.util.List<RelationTypeList> relationTypeList; 
             private java.util.List<VertexList> vertexList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceInfoDetail model) {
+                this.edgeList = model.edgeList;
+                this.entityTypeList = model.entityTypeList;
+                this.relationTypeList = model.relationTypeList;
+                this.vertexList = model.vertexList;
+            } 
 
             /**
              * <p>An array that consists of the edges of the tracing diagram.</p>

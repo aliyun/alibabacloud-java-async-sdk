@@ -36,6 +36,10 @@ public class DescribeStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Strategies> strategies; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStrategyResponseBody model) {
+            this.requestId = model.requestId;
+            this.strategies = model.strategies;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -134,6 +146,15 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private String flag; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigTargets model) {
+                this.flag = model.flag;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>Indicates whether the baseline check policy is applied to the asset group. Valid values:</p>
@@ -394,6 +415,28 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private String startTime; 
             private Integer type; 
             private Long userModifyTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Strategies model) {
+                this.configTargets = model.configTargets;
+                this.customType = model.customType;
+                this.cycleDays = model.cycleDays;
+                this.cycleStartTime = model.cycleStartTime;
+                this.ecsCount = model.ecsCount;
+                this.endTime = model.endTime;
+                this.execStatus = model.execStatus;
+                this.id = model.id;
+                this.name = model.name;
+                this.passRate = model.passRate;
+                this.percent = model.percent;
+                this.processRate = model.processRate;
+                this.riskCount = model.riskCount;
+                this.startTime = model.startTime;
+                this.type = model.type;
+                this.userModifyTime = model.userModifyTime;
+            } 
 
             /**
              * <p>The details of the assets to which the baseline check policy is applied.</p>

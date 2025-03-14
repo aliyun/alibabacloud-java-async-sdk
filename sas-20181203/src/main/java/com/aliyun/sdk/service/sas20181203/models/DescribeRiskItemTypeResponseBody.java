@@ -36,6 +36,10 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -53,6 +57,14 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<List> list; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRiskItemTypeResponseBody model) {
+            this.list = model.list;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of information about the type of the check item.</p>
@@ -122,6 +134,14 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.id = model.id;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The ID of the check item.</p>

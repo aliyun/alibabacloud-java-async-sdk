@@ -48,6 +48,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dealedRiskNum
      */
@@ -89,6 +93,17 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalTaskNum; 
         private Long userNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeScanTaskStatisticsResponseBody model) {
+            this.dealedRiskNum = model.dealedRiskNum;
+            this.personalTaskNum = model.personalTaskNum;
+            this.requestId = model.requestId;
+            this.totalTaskNum = model.totalTaskNum;
+            this.userNum = model.userNum;
+        } 
 
         /**
          * <p>The number of risks that are handled for the user.</p>

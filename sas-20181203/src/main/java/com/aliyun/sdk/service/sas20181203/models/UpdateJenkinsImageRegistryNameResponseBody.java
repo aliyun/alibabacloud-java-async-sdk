@@ -44,6 +44,10 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Long timeCost; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateJenkinsImageRegistryNameResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.timeCost = model.timeCost;
+        } 
 
         /**
          * <p>The result of the operation. Valid values:</p>

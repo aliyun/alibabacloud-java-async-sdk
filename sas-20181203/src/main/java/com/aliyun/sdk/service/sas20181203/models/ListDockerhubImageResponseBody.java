@@ -36,6 +36,10 @@ public class ListDockerhubImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageList
      */
@@ -53,6 +57,14 @@ public class ListDockerhubImageResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ImageList> imageList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDockerhubImageResponseBody model) {
+            this.imageList = model.imageList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of image information.</p>
@@ -218,6 +230,22 @@ public class ListDockerhubImageResponseBody extends TeaModel {
             private String tag; 
             private String uuid; 
             private Integer vulCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageList model) {
+                this.digest = model.digest;
+                this.hcCount = model.hcCount;
+                this.imageId = model.imageId;
+                this.imageSize = model.imageSize;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.riskLevelDetail = model.riskLevelDetail;
+                this.tag = model.tag;
+                this.uuid = model.uuid;
+                this.vulCount = model.vulCount;
+            } 
 
             /**
              * <p>Image digest value.</p>

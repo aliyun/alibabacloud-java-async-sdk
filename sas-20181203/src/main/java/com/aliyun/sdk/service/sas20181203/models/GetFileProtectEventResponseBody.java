@@ -36,6 +36,10 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetFileProtectEventResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileProtectEventResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the returned data.</p>
@@ -326,6 +338,31 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             private String ruleName; 
             private Integer status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertLevel = model.alertLevel;
+                this.cmdLine = model.cmdLine;
+                this.filePath = model.filePath;
+                this.filePermission = model.filePermission;
+                this.firstTime = model.firstTime;
+                this.handleTime = model.handleTime;
+                this.id = model.id;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.latestTime = model.latestTime;
+                this.operation = model.operation;
+                this.platform = model.platform;
+                this.procPath = model.procPath;
+                this.processId = model.processId;
+                this.remark = model.remark;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The severity of alerts. Valid values:</p>

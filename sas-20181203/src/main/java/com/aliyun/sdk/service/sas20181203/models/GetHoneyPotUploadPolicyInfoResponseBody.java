@@ -52,6 +52,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHoneyPotUploadPolicyInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -279,6 +295,19 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             private String securityToken; 
             private String signature; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessid = model.accessid;
+                this.expire = model.expire;
+                this.host = model.host;
+                this.key = model.key;
+                this.policy = model.policy;
+                this.securityToken = model.securityToken;
+                this.signature = model.signature;
+            } 
+
             /**
              * <p>The key ID that is required for the file upload.</p>
              * 
@@ -335,7 +364,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

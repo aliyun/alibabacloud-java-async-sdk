@@ -40,6 +40,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageInfos
      */
@@ -65,6 +69,15 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         private java.util.List<ImageInfos> imageInfos; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageListWithBaselineNameResponseBody model) {
+            this.imageInfos = model.imageInfos;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the images.</p>
@@ -515,6 +528,45 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private Integer totalItemCount; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageInfos model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.containerId = model.containerId;
+                this.digest = model.digest;
+                this.firstScanTime = model.firstScanTime;
+                this.highRiskImage = model.highRiskImage;
+                this.image = model.image;
+                this.imageCreate = model.imageCreate;
+                this.imageId = model.imageId;
+                this.imageSize = model.imageSize;
+                this.imageUpdate = model.imageUpdate;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.lastScanTime = model.lastScanTime;
+                this.lowRiskImage = model.lowRiskImage;
+                this.middleRiskImage = model.middleRiskImage;
+                this.namespace = model.namespace;
+                this.noRiskImage = model.noRiskImage;
+                this.pod = model.pod;
+                this.regionId = model.regionId;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.repoType = model.repoType;
+                this.riskStatus = model.riskStatus;
+                this.tag = model.tag;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+                this.totalItemCount = model.totalItemCount;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * <p>The ID of the cluster.</p>
              * 
@@ -960,6 +1012,16 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of the images returned on the current page.</p>

@@ -40,6 +40,10 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.Map<String, Integer> tracingJudge; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryIncidentTracingJudgeResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tracingJudge = model.tracingJudge;
+        } 
 
         /**
          * <p>The request ID.</p>

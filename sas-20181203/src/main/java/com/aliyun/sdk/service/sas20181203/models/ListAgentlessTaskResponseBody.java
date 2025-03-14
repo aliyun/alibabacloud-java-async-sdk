@@ -40,6 +40,10 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -65,6 +69,15 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAgentlessTaskResponseBody model) {
+            this.list = model.list;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The tasks.</p>
@@ -334,6 +347,30 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.measureSpace = model.measureSpace;
+                this.progress = model.progress;
+                this.progressByProject = model.progressByProject;
+                this.reportDownloadUrl = model.reportDownloadUrl;
+                this.reportStatus = model.reportStatus;
+                this.result = model.result;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The end timestamp of the task. Unit: milliseconds.</p>
@@ -612,6 +649,15 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

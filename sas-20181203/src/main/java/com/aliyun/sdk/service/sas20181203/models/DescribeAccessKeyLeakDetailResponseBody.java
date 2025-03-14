@@ -116,6 +116,10 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accesskeyId
      */
@@ -293,6 +297,34 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         private String type; 
         private String whitelistStatus; 
         private Long whitelistTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessKeyLeakDetailResponseBody model) {
+            this.accesskeyId = model.accesskeyId;
+            this.asset = model.asset;
+            this.code = model.code;
+            this.dealTime = model.dealTime;
+            this.dealType = model.dealType;
+            this.githubFileName = model.githubFileName;
+            this.githubFileType = model.githubFileType;
+            this.githubFileUpdateTime = model.githubFileUpdateTime;
+            this.githubFileUrl = model.githubFileUrl;
+            this.githubRepoName = model.githubRepoName;
+            this.githubRepoUrl = model.githubRepoUrl;
+            this.githubUser = model.githubUser;
+            this.githubUserPicUrl = model.githubUserPicUrl;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.source = model.source;
+            this.tokenValid = model.tokenValid;
+            this.type = model.type;
+            this.whitelistStatus = model.whitelistStatus;
+            this.whitelistTime = model.whitelistTime;
+        } 
 
         /**
          * <p>The ID of the AccessKey pair that is leaked.</p>

@@ -40,6 +40,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -65,6 +69,15 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCheckItemWarningMachineResponseBody model) {
+            this.list = model.list;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The servers on which the alerts are generated.</p>
@@ -143,6 +156,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private Long riskId; 
             private String riskName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FixList model) {
+                this.riskId = model.riskId;
+                this.riskName = model.riskName;
+            } 
+
             /**
              * <p>The ID of the baseline.</p>
              * 
@@ -180,9 +201,11 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
      */
     public static class WarningRiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskId")
+        @Deprecated
         private Long riskId;
 
         @com.aliyun.core.annotation.NameInMap("RiskName")
+        @Deprecated
         private String riskName;
 
         private WarningRiskList(Builder builder) {
@@ -215,6 +238,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public static final class Builder {
             private Long riskId; 
             private String riskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarningRiskList model) {
+                this.riskId = model.riskId;
+                this.riskName = model.riskName;
+            } 
 
             /**
              * <p>The ID of the baseline.</p>
@@ -313,6 +344,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         private String uuid;
 
         @com.aliyun.core.annotation.NameInMap("WarningRiskList")
+        @Deprecated
         private java.util.List<WarningRiskList> warningRiskList;
 
         private List(Builder builder) {
@@ -516,6 +548,33 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String targetType; 
             private String uuid; 
             private java.util.List<WarningRiskList> warningRiskList; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.authVersion = model.authVersion;
+                this.bind = model.bind;
+                this.containerId = model.containerId;
+                this.containerName = model.containerName;
+                this.fixList = model.fixList;
+                this.fixStatus = model.fixStatus;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.lastHandleTime = model.lastHandleTime;
+                this.lastScanTime = model.lastScanTime;
+                this.portOpen = model.portOpen;
+                this.prompt = model.prompt;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+                this.uuid = model.uuid;
+                this.warningRiskList = model.warningRiskList;
+            } 
 
             /**
              * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
@@ -847,6 +906,16 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of affected assets returned on the current page.</p>

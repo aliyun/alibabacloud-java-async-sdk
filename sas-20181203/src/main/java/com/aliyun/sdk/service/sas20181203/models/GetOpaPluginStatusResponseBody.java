@@ -36,6 +36,10 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return installStatus
      */
@@ -53,6 +57,14 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstallStatus> installStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOpaPluginStatusResponseBody model) {
+            this.installStatus = model.installStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The installation status of the components that are required for clusters protected by proactive defense for containers.</p>
@@ -122,6 +134,14 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterId; 
             private Boolean installStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstallStatus model) {
+                this.clusterId = model.clusterId;
+                this.installStatus = model.installStatus;
+            } 
 
             /**
              * <p>The cluster ID.</p>

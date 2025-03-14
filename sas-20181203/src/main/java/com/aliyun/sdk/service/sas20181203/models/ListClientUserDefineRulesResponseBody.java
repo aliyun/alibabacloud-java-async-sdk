@@ -40,6 +40,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<UserDefineRuleList> userDefineRuleList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClientUserDefineRulesResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.userDefineRuleList = model.userDefineRuleList;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -154,6 +167,15 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>
@@ -286,6 +308,18 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private String platform; 
             private String switchId; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserDefineRuleList model) {
+                this.actionType = model.actionType;
+                this.id = model.id;
+                this.name = model.name;
+                this.platform = model.platform;
+                this.switchId = model.switchId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The action of the rule. Valid values:</p>

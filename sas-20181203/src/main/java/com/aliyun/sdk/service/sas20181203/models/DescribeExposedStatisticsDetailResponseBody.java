@@ -40,6 +40,10 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<StatisticsDetails> statisticsDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExposedStatisticsDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.statisticsDetails = model.statisticsDetails;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -333,6 +356,20 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
             private String exposureTypeId; 
             private String exposureTypeInstanceName; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatisticsDetails model) {
+                this.exposedCount = model.exposedCount;
+                this.exposureComponent = model.exposureComponent;
+                this.exposureIp = model.exposureIp;
+                this.exposurePort = model.exposurePort;
+                this.exposureType = model.exposureType;
+                this.exposureTypeId = model.exposureTypeId;
+                this.exposureTypeInstanceName = model.exposureTypeInstanceName;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The total number of system vulnerabilities that are detected on your server and are exposed on the Internet.</p>

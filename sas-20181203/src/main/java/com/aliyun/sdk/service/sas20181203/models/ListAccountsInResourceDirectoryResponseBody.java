@@ -36,6 +36,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
@@ -53,6 +57,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Accounts> accounts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAccountsInResourceDirectoryResponseBody model) {
+            this.accounts = model.accounts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The members in the resource directory.</p>
@@ -206,6 +218,21 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             private String isSiemControlAccount; 
             private String isSiemDaAccount; 
             private String sasVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.accountId = model.accountId;
+                this.displayName = model.displayName;
+                this.folderId = model.folderId;
+                this.isMaAccount = model.isMaAccount;
+                this.isMarked = model.isMarked;
+                this.isSasDaAccount = model.isSasDaAccount;
+                this.isSiemControlAccount = model.isSiemControlAccount;
+                this.isSiemDaAccount = model.isSiemDaAccount;
+                this.sasVersion = model.sasVersion;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>

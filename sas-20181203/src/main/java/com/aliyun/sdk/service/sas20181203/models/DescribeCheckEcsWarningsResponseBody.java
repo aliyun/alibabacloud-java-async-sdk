@@ -44,6 +44,10 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canTry
      */
@@ -77,6 +81,16 @@ public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
         private String requestId; 
         private String sasVersion; 
         private String weakPasswordCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCheckEcsWarningsResponseBody model) {
+            this.canTry = model.canTry;
+            this.requestId = model.requestId;
+            this.sasVersion = model.sasVersion;
+            this.weakPasswordCount = model.weakPasswordCount;
+        } 
 
         /**
          * <p>Indicates whether you use the free trial of Security Center. Valid values:</p>

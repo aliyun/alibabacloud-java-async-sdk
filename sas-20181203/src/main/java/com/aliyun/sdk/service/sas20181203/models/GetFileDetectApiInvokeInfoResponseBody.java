@@ -36,6 +36,10 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetFileDetectApiInvokeInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returns the response body.</p>
@@ -170,6 +182,18 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             private Long remainAuthCount; 
             private Integer saleVersion; 
             private String timeUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authCount = model.authCount;
+                this.expire = model.expire;
+                this.flowRate = model.flowRate;
+                this.remainAuthCount = model.remainAuthCount;
+                this.saleVersion = model.saleVersion;
+                this.timeUnit = model.timeUnit;
+            } 
 
             /**
              * <p>The total number of authorizations.</p>

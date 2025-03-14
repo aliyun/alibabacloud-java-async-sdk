@@ -36,6 +36,10 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return criteriaList
      */
@@ -53,6 +57,14 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CriteriaList> criteriaList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageRepoCriteriaResponseBody model) {
+            this.criteriaList = model.criteriaList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array consisting of the filter conditions that are supported by the image repository.</p>
@@ -134,6 +146,15 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String values; 
+
+            private Builder() {
+            } 
+
+            private Builder(CriteriaList model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The name of the search condition. Valid values:</p>

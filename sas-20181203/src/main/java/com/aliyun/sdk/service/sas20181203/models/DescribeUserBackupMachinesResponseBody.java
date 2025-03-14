@@ -36,6 +36,10 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return machines
      */
@@ -53,6 +57,14 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Machines> machines; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserBackupMachinesResponseBody model) {
+            this.machines = model.machines;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array consisting of the servers to which the anti-ransomware policy is applied.</p>
@@ -134,6 +146,15 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
             private Long id; 
             private String policyName; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Machines model) {
+                this.id = model.id;
+                this.policyName = model.policyName;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the anti-ransomware policy that is applied to the server.</p>

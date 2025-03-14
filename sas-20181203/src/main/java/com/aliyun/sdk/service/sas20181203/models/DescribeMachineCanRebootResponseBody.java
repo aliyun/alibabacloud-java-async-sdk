@@ -36,6 +36,10 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canReboot
      */
@@ -53,6 +57,14 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean canReboot; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMachineCanRebootResponseBody model) {
+            this.canReboot = model.canReboot;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the server can be restarted. Valid values:</p>

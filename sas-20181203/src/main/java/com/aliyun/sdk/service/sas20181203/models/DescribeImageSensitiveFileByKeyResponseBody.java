@@ -56,6 +56,10 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SensitiveFileList> sensitiveFileList; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageSensitiveFileByKeyResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.sensitiveFileList = model.sensitiveFileList;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. If the 200 status code is returned, the request was successful.</p>
@@ -274,6 +291,17 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             private String lastRowKey; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.lastRowKey = model.lastRowKey;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -488,6 +516,23 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             private String riskLevel; 
             private String sensitiveFileKey; 
             private String sensitiveFileName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SensitiveFileList model) {
+                this.advice = model.advice;
+                this.description = model.description;
+                this.filePath = model.filePath;
+                this.firstScanTime = model.firstScanTime;
+                this.lastScanTime = model.lastScanTime;
+                this.layerDigest = model.layerDigest;
+                this.md5 = model.md5;
+                this.promt = model.promt;
+                this.riskLevel = model.riskLevel;
+                this.sensitiveFileKey = model.sensitiveFileKey;
+                this.sensitiveFileName = model.sensitiveFileName;
+            } 
 
             /**
              * <p>The suggestion.</p>

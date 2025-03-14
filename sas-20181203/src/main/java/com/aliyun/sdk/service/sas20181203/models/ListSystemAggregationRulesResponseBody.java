@@ -40,6 +40,10 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregationList
      */
@@ -65,6 +69,15 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
         private java.util.List<AggregationList> aggregationList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSystemAggregationRulesResponseBody model) {
+            this.aggregationList = model.aggregationList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the details about the aggregation types.</p>
@@ -154,6 +167,15 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             private Integer id; 
             private String name; 
             private Integer ruleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AggregationList model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.ruleCount = model.ruleCount;
+            } 
 
             /**
              * <p>The ID of the aggregation type.</p>
@@ -250,6 +272,15 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

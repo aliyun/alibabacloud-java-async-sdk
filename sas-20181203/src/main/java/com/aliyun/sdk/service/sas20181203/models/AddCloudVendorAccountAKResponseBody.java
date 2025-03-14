@@ -36,6 +36,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddCloudVendorAccountAKResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the AccessKey pair that is added.</p>
@@ -170,6 +182,18 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             private String moduleDisp; 
             private Integer moduleServiceStatus; 
             private String moduleStatement; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthModules model) {
+                this.message = model.message;
+                this.module = model.module;
+                this.moduleAssetType = model.moduleAssetType;
+                this.moduleDisp = model.moduleDisp;
+                this.moduleServiceStatus = model.moduleServiceStatus;
+                this.moduleStatement = model.moduleStatement;
+            } 
 
             /**
              * <p>The error message of the module.</p>
@@ -383,6 +407,21 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             private Integer status; 
             private String vendor; 
             private String vendorAuthAlias; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.akType = model.akType;
+                this.authId = model.authId;
+                this.authModules = model.authModules;
+                this.message = model.message;
+                this.secretId = model.secretId;
+                this.serviceStatus = model.serviceStatus;
+                this.status = model.status;
+                this.vendor = model.vendor;
+                this.vendorAuthAlias = model.vendorAuthAlias;
+            } 
 
             /**
              * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>

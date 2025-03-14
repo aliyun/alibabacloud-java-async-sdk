@@ -40,6 +40,10 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return affectedMaliciousFileImagesResponse
      */
@@ -65,6 +69,15 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         private java.util.List<AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAffectedMaliciousFileImagesResponseBody model) {
+            this.affectedMaliciousFileImagesResponse = model.affectedMaliciousFileImagesResponse;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array consisting of the images that have malicious image samples.</p>
@@ -490,6 +503,43 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private String targetName; 
             private String targetType; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(AffectedMaliciousFileImagesResponse model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.containerId = model.containerId;
+                this.digest = model.digest;
+                this.downloadUrl = model.downloadUrl;
+                this.filePath = model.filePath;
+                this.firstScanTimestamp = model.firstScanTimestamp;
+                this.highLight = model.highLight;
+                this.id = model.id;
+                this.image = model.image;
+                this.imageUuid = model.imageUuid;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.latestScanTimestamp = model.latestScanTimestamp;
+                this.latestVerifyTimestamp = model.latestVerifyTimestamp;
+                this.layer = model.layer;
+                this.level = model.level;
+                this.maliciousMd5 = model.maliciousMd5;
+                this.namespace = model.namespace;
+                this.pod = model.pod;
+                this.repoId = model.repoId;
+                this.repoInstanceId = model.repoInstanceId;
+                this.repoName = model.repoName;
+                this.repoRegionId = model.repoRegionId;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the cluster.</p>
@@ -921,6 +971,16 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of images that have malicious image samples returned on the current page.</p>

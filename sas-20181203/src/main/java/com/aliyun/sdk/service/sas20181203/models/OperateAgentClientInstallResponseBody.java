@@ -36,6 +36,10 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aegisCelintInstallResposeList
      */
@@ -53,6 +57,14 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AegisCelintInstallResposeList> aegisCelintInstallResposeList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperateAgentClientInstallResponseBody model) {
+            this.aegisCelintInstallResposeList = model.aegisCelintInstallResposeList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the returned results.</p>
@@ -134,6 +146,15 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
             private String instanceId; 
             private Long recordId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(AegisCelintInstallResposeList model) {
+                this.instanceId = model.instanceId;
+                this.recordId = model.recordId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the server.</p>

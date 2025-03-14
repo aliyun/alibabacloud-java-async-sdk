@@ -36,6 +36,10 @@ public class GetPublishCronResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetPublishCronResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPublishCronResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Publish scheduling configuration information.</p>
@@ -158,6 +170,17 @@ public class GetPublishCronResponseBody extends TeaModel {
             private Long cronTime; 
             private String cronType; 
             private Integer duration; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cron = model.cron;
+                this.cronDay = model.cronDay;
+                this.cronTime = model.cronTime;
+                this.cronType = model.cronType;
+                this.duration = model.duration;
+            } 
 
             /**
              * <p>Cron expression for the start time of the upgrade.</p>

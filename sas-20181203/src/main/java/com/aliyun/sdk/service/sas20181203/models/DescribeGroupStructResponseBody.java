@@ -64,6 +64,10 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupFather
      */
@@ -137,6 +141,21 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         private java.util.List<String> groups; 
         private Integer machineNum; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupStructResponseBody model) {
+            this.groupFather = model.groupFather;
+            this.groupFlag = model.groupFlag;
+            this.groupId = model.groupId;
+            this.groupIndex = model.groupIndex;
+            this.groupLevel = model.groupLevel;
+            this.groupName = model.groupName;
+            this.groups = model.groups;
+            this.machineNum = model.machineNum;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The parent node of the group.</p>

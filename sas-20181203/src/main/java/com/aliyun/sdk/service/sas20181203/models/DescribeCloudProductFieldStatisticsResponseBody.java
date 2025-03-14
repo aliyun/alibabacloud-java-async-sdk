@@ -36,6 +36,10 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupedFields
      */
@@ -53,6 +57,14 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private GroupedFields groupedFields; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudProductFieldStatisticsResponseBody model) {
+            this.groupedFields = model.groupedFields;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics of cloud services that are protected by Security Center.</p>
@@ -134,6 +146,15 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
             private String categoryCount; 
             private Integer instanceCount; 
             private Integer riskInstanceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupedFields model) {
+                this.categoryCount = model.categoryCount;
+                this.instanceCount = model.instanceCount;
+                this.riskInstanceCount = model.riskInstanceCount;
+            } 
 
             /**
              * <p>The statistics of different types of assets. <strong>MachineType</strong> indicates the type of the asset. <strong>Count</strong> indicates the number of assets of a specific type.</p>

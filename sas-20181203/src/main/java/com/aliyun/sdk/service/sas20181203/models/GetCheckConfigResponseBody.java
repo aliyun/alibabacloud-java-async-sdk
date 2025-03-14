@@ -60,6 +60,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cycleDays
      */
@@ -125,6 +129,20 @@ public class GetCheckConfigResponseBody extends TeaModel {
         private java.util.List<SelectedChecks> selectedChecks; 
         private java.util.List<Standards> standards; 
         private Integer startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCheckConfigResponseBody model) {
+            this.cycleDays = model.cycleDays;
+            this.enableAddCheck = model.enableAddCheck;
+            this.enableAutoCheck = model.enableAutoCheck;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.selectedChecks = model.selectedChecks;
+            this.standards = model.standards;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The days in a week on which an automatic check is performed.</p>
@@ -269,6 +287,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
             private Long checkId; 
             private Long sectionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SelectedChecks model) {
+                this.checkId = model.checkId;
+                this.sectionId = model.sectionId;
+            } 
+
             /**
              * <p>The ID of the check item.</p>
              * 
@@ -365,6 +391,16 @@ public class GetCheckConfigResponseBody extends TeaModel {
             private String showName; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Standards model) {
+                this.id = model.id;
+                this.showName = model.showName;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the check item.</p>

@@ -52,6 +52,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attackEvent
      */
@@ -101,6 +105,18 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         private SecurityEvent securityEvent; 
         private Boolean success; 
         private Vulnerability vulnerability; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityStatInfoResponseBody model) {
+            this.attackEvent = model.attackEvent;
+            this.healthCheck = model.healthCheck;
+            this.requestId = model.requestId;
+            this.securityEvent = model.securityEvent;
+            this.success = model.success;
+            this.vulnerability = model.vulnerability;
+        } 
 
         /**
          * <p>The detailed statistics of attacks.</p>
@@ -221,6 +237,15 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List<String> dateArray; 
             private Integer totalCount; 
             private java.util.List<String> valueArray; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttackEvent model) {
+                this.dateArray = model.dateArray;
+                this.totalCount = model.totalCount;
+                this.valueArray = model.valueArray;
+            } 
 
             /**
              * <p>The points in time when the number of attacks is collected in the trend chart.</p>
@@ -407,6 +432,23 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List<String> timeArray; 
             private Integer totalCount; 
             private java.util.List<String> valueArray; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheck model) {
+                this.dateArray = model.dateArray;
+                this.highCount = model.highCount;
+                this.highList = model.highList;
+                this.levelsOn = model.levelsOn;
+                this.lowCount = model.lowCount;
+                this.lowList = model.lowList;
+                this.mediumCount = model.mediumCount;
+                this.mediumList = model.mediumList;
+                this.timeArray = model.timeArray;
+                this.totalCount = model.totalCount;
+                this.valueArray = model.valueArray;
+            } 
 
             /**
              * <p>The points in time when data of baseline risk items is collected in the trend chart.</p>
@@ -667,6 +709,23 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private Integer totalCount; 
             private java.util.List<String> valueArray; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityEvent model) {
+                this.dateArray = model.dateArray;
+                this.levelsOn = model.levelsOn;
+                this.remindCount = model.remindCount;
+                this.remindList = model.remindList;
+                this.seriousCount = model.seriousCount;
+                this.seriousList = model.seriousList;
+                this.suspiciousCount = model.suspiciousCount;
+                this.suspiciousList = model.suspiciousList;
+                this.timeArray = model.timeArray;
+                this.totalCount = model.totalCount;
+                this.valueArray = model.valueArray;
+            } 
+
             /**
              * <p>The points in time when data of unhandled alerts is collected in the trend chart.</p>
              */
@@ -925,6 +984,23 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List<String> timeArray; 
             private Integer totalCount; 
             private java.util.List<String> valueArray; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vulnerability model) {
+                this.asapCount = model.asapCount;
+                this.asapList = model.asapList;
+                this.dateArray = model.dateArray;
+                this.laterCount = model.laterCount;
+                this.laterList = model.laterList;
+                this.levelsOn = model.levelsOn;
+                this.nntfCount = model.nntfCount;
+                this.nntfList = model.nntfList;
+                this.timeArray = model.timeArray;
+                this.totalCount = model.totalCount;
+                this.valueArray = model.valueArray;
+            } 
 
             /**
              * <p>The number of <strong>high-risk</strong> unfixed vulnerabilities on the current day.</p>

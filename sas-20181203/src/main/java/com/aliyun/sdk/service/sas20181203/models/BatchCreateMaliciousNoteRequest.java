@@ -34,7 +34,7 @@ public class BatchCreateMaliciousNoteRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,6 +117,14 @@ public class BatchCreateMaliciousNoteRequest extends Request {
         public static final class Builder {
             private Long eventId; 
             private String note; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageMaliciousFileList model) {
+                this.eventId = model.eventId;
+                this.note = model.note;
+            } 
 
             /**
              * <p>The ID of the alert.</p>

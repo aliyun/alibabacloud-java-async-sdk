@@ -39,6 +39,10 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
+    private ProtocolType protocolType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -61,6 +65,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         this.forbiddenTime = builder.forbiddenTime;
         this.id = builder.id;
         this.name = builder.name;
+        this.protocolType = builder.protocolType;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIp = builder.sourceIp;
         this.span = builder.span;
@@ -75,7 +80,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,6 +121,13 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
     }
 
     /**
+     * @return protocolType
+     */
+    public ProtocolType getProtocolType() {
+        return this.protocolType;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -149,6 +161,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         private Integer forbiddenTime; 
         private Long id; 
         private String name; 
+        private ProtocolType protocolType; 
         private Long resourceOwnerId; 
         private String sourceIp; 
         private Integer span; 
@@ -165,6 +178,7 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
             this.forbiddenTime = request.forbiddenTime;
             this.id = request.id;
             this.name = request.name;
+            this.protocolType = request.protocolType;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIp = request.sourceIp;
             this.span = request.span;
@@ -259,6 +273,16 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
+         * ProtocolType.
+         */
+        public Builder protocolType(ProtocolType protocolType) {
+            String protocolTypeShrink = shrink(protocolType, "ProtocolType", "json");
+            this.putQueryParameter("ProtocolType", protocolTypeShrink);
+            this.protocolType = protocolType;
+            return this;
+        }
+
+        /**
          * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
@@ -317,4 +341,100 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAntiBruteForceRuleRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAntiBruteForceRuleRequest</p>
+     */
+    public static class ProtocolType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Rdp")
+        private String rdp;
+
+        @com.aliyun.core.annotation.NameInMap("SqlServer")
+        private String sqlServer;
+
+        @com.aliyun.core.annotation.NameInMap("Ssh")
+        private String ssh;
+
+        private ProtocolType(Builder builder) {
+            this.rdp = builder.rdp;
+            this.sqlServer = builder.sqlServer;
+            this.ssh = builder.ssh;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProtocolType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rdp
+         */
+        public String getRdp() {
+            return this.rdp;
+        }
+
+        /**
+         * @return sqlServer
+         */
+        public String getSqlServer() {
+            return this.sqlServer;
+        }
+
+        /**
+         * @return ssh
+         */
+        public String getSsh() {
+            return this.ssh;
+        }
+
+        public static final class Builder {
+            private String rdp; 
+            private String sqlServer; 
+            private String ssh; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolType model) {
+                this.rdp = model.rdp;
+                this.sqlServer = model.sqlServer;
+                this.ssh = model.ssh;
+            } 
+
+            /**
+             * Rdp.
+             */
+            public Builder rdp(String rdp) {
+                this.rdp = rdp;
+                return this;
+            }
+
+            /**
+             * SqlServer.
+             */
+            public Builder sqlServer(String sqlServer) {
+                this.sqlServer = sqlServer;
+                return this;
+            }
+
+            /**
+             * Ssh.
+             */
+            public Builder ssh(String ssh) {
+                this.ssh = ssh;
+                return this;
+            }
+
+            public ProtocolType build() {
+                return new ProtocolType(this);
+            } 
+
+        } 
+
+    }
 }

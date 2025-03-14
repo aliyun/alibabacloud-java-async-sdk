@@ -48,6 +48,10 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bindList
      */
@@ -89,6 +93,17 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebLockBindListResponseBody model) {
+            this.bindList = model.bindList;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the servers that have web tamper proofing enabled.</p>
@@ -323,6 +338,25 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
             private String serviceStatus; 
             private String status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindList model) {
+                this.auditCount = model.auditCount;
+                this.blockCount = model.blockCount;
+                this.dirCount = model.dirCount;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.os = model.os;
+                this.percent = model.percent;
+                this.serviceCode = model.serviceCode;
+                this.serviceDetail = model.serviceDetail;
+                this.serviceStatus = model.serviceStatus;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The number of alerts.</p>

@@ -39,7 +39,7 @@ public class GetCloudAssetCriteriaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,6 +143,14 @@ public class GetCloudAssetCriteriaRequest extends Request {
         public static final class Builder {
             private Integer assetSubType; 
             private Integer assetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudAssetTypes model) {
+                this.assetSubType = model.assetSubType;
+                this.assetType = model.assetType;
+            } 
 
             /**
              * <p>The subtype of the cloud service or asset. Valid values:</p>

@@ -52,6 +52,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmCount
      */
@@ -101,6 +105,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private String requestId; 
         private String rootDomain; 
         private Integer vulCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainDetailResponseBody model) {
+            this.alarmCount = model.alarmCount;
+            this.domain = model.domain;
+            this.domainDetailItems = model.domainDetailItems;
+            this.requestId = model.requestId;
+            this.rootDomain = model.rootDomain;
+            this.vulCount = model.vulCount;
+        } 
 
         /**
          * <p>The total number of alerts in your website assets.</p>
@@ -262,6 +278,18 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainDetailItems model) {
+                this.assetType = model.assetType;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The type of the domain asset. Valid values:</p>

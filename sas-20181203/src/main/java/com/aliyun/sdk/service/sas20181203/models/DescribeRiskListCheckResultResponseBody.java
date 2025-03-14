@@ -36,6 +36,10 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -53,6 +57,14 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<List> list; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRiskListCheckResultResponseBody model) {
+            this.list = model.list;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of risk items for each cloud service.</p>
@@ -122,6 +134,14 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private Long riskCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.instanceId = model.instanceId;
+                this.riskCount = model.riskCount;
+            } 
 
             /**
              * <p>The instance ID of the cloud service.</p>

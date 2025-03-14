@@ -40,6 +40,10 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Propertys> propertys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyScaDetailResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertys = model.propertys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -585,6 +608,41 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             private String uuid; 
             private String version; 
             private String webPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(Propertys model) {
+                this.bizType = model.bizType;
+                this.bizTypeDispaly = model.bizTypeDispaly;
+                this.cmdline = model.cmdline;
+                this.configPath = model.configPath;
+                this.containerName = model.containerName;
+                this.createTimestamp = model.createTimestamp;
+                this.imageName = model.imageName;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ip = model.ip;
+                this.listenIp = model.listenIp;
+                this.listenProtocol = model.listenProtocol;
+                this.listenStatus = model.listenStatus;
+                this.name = model.name;
+                this.path = model.path;
+                this.pid = model.pid;
+                this.podName = model.podName;
+                this.port = model.port;
+                this.ppid = model.ppid;
+                this.processStarted = model.processStarted;
+                this.processUser = model.processUser;
+                this.proof = model.proof;
+                this.runtimeEnvVersion = model.runtimeEnvVersion;
+                this.type = model.type;
+                this.uuid = model.uuid;
+                this.version = model.version;
+                this.webPath = model.webPath;
+            } 
 
             /**
              * <p>The type of the middleware, database, or web service. Valid values:</p>

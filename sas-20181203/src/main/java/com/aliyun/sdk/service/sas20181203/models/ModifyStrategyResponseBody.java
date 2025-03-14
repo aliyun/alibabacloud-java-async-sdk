@@ -44,6 +44,10 @@ public class ModifyStrategyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return httpStatusCode
      */
@@ -77,6 +81,16 @@ public class ModifyStrategyResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyStrategyResponseBody model) {
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -160,6 +174,13 @@ public class ModifyStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.strategyId = model.strategyId;
+            } 
 
             /**
              * <p>The ID of the baseline check policy.</p>

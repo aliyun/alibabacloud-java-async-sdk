@@ -40,6 +40,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return batchList
      */
@@ -65,6 +69,15 @@ public class ListPublishBatchResponseBody extends TeaModel {
         private java.util.List<BatchList> batchList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPublishBatchResponseBody model) {
+            this.batchList = model.batchList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the release batches.</p>
@@ -226,6 +239,21 @@ public class ListPublishBatchResponseBody extends TeaModel {
             private Integer operationBase; 
             private Integer status; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(BatchList model) {
+                this.batchId = model.batchId;
+                this.batchInterval = model.batchInterval;
+                this.batchName = model.batchName;
+                this.batchNo = model.batchNo;
+                this.batchProcess = model.batchProcess;
+                this.batchTotal = model.batchTotal;
+                this.operationBase = model.operationBase;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The ID of the release batch.</p>
@@ -400,6 +428,15 @@ public class ListPublishBatchResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

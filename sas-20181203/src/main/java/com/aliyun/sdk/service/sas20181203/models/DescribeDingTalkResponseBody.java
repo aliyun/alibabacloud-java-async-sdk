@@ -40,6 +40,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionList
      */
@@ -65,6 +69,15 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         private java.util.List<ActionList> actionList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDingTalkResponseBody model) {
+            this.actionList = model.actionList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of details of notifications.</p>
@@ -250,6 +263,23 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             private Integer intervalTime; 
             private Integer status; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActionList model) {
+                this.actionName = model.actionName;
+                this.aliUid = model.aliUid;
+                this.configList = model.configList;
+                this.dingTalkLang = model.dingTalkLang;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.groupIdList = model.groupIdList;
+                this.id = model.id;
+                this.intervalTime = model.intervalTime;
+                this.status = model.status;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The name of the notification.</p>
@@ -442,6 +472,15 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

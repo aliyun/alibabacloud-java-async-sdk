@@ -52,6 +52,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHoneypotAttackStatisticsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -219,6 +235,14 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             private Integer statisticsCount; 
             private String statisticsValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(HoneypotAttackStatistics model) {
+                this.statisticsCount = model.statisticsCount;
+                this.statisticsValue = model.statisticsValue;
+            } 
+
             /**
              * <p>The number of times the value is counted.</p>
              * 
@@ -303,6 +327,15 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             private Integer count; 
             private java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics; 
             private String statisticsType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.honeypotAttackStatistics = model.honeypotAttackStatistics;
+                this.statisticsType = model.statisticsType;
+            } 
 
             /**
              * <p>The number of entries on the current page.</p>

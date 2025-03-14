@@ -40,6 +40,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIdcProbeScanResultListResponseBody model) {
+            this.instances = model.instances;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instances.</p>
@@ -262,6 +275,24 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             private Long scanResultId; 
             private String scannedIp; 
             private String validPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.clientStatus = model.clientStatus;
+                this.idcName = model.idcName;
+                this.ipSegment = model.ipSegment;
+                this.lastScanTime = model.lastScanTime;
+                this.os = model.os;
+                this.probeInternetIp = model.probeInternetIp;
+                this.probeIntranetIp = model.probeIntranetIp;
+                this.probeMachineName = model.probeMachineName;
+                this.probeUuid = model.probeUuid;
+                this.scanResultId = model.scanResultId;
+                this.scannedIp = model.scannedIp;
+                this.validPort = model.validPort;
+            } 
 
             /**
              * <p>The status of the client of the instance on which the probe is installed. Valid values:</p>
@@ -477,6 +508,16 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -80,6 +80,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appCnt
      */
@@ -185,6 +189,25 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         private Integer vulDealedTotalNum; 
         private Integer vulLaterSum; 
         private Integer vulNntfSum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulNumStatisticsResponseBody model) {
+            this.appCnt = model.appCnt;
+            this.appNum = model.appNum;
+            this.cmsDealedTotalNum = model.cmsDealedTotalNum;
+            this.cmsNum = model.cmsNum;
+            this.cveNum = model.cveNum;
+            this.emgNum = model.emgNum;
+            this.requestId = model.requestId;
+            this.scaNum = model.scaNum;
+            this.sysNum = model.sysNum;
+            this.vulAsapSum = model.vulAsapSum;
+            this.vulDealedTotalNum = model.vulDealedTotalNum;
+            this.vulLaterSum = model.vulLaterSum;
+            this.vulNntfSum = model.vulNntfSum;
+        } 
 
         /**
          * <p>The number of application vulnerabilities that are detected on the asset by using the web scanner.</p>

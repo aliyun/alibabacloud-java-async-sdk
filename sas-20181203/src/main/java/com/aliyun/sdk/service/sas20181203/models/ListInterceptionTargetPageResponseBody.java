@@ -40,6 +40,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<RuleTargetList> ruleTargetList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInterceptionTargetPageResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.ruleTargetList = model.ruleTargetList;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -154,6 +167,15 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>
@@ -334,6 +356,22 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private Long targetId; 
             private String targetName; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleTargetList model) {
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.imageList = model.imageList;
+                this.namespace = model.namespace;
+                this.ruleType = model.ruleType;
+                this.tagList = model.tagList;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The name of the application of the network object.</p>

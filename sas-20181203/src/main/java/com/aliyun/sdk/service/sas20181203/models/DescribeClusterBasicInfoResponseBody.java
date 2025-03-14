@@ -36,6 +36,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterInfo
      */
@@ -53,6 +57,14 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
     public static final class Builder {
         private ClusterInfo clusterInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeClusterBasicInfoResponseBody model) {
+            this.clusterInfo = model.clusterInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed information about the cluster.</p>
@@ -206,6 +218,21 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             private String regionId; 
             private String state; 
             private Boolean targetResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterInfo model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.createTime = model.createTime;
+                this.currentVersion = model.currentVersion;
+                this.instanceCount = model.instanceCount;
+                this.regionId = model.regionId;
+                this.state = model.state;
+                this.targetResult = model.targetResult;
+            } 
 
             /**
              * <p>The ID of cluster.</p>

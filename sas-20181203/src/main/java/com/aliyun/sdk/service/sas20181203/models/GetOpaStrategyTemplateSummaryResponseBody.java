@@ -48,6 +48,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOpaStrategyTemplateSummaryResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -219,6 +234,16 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             private String description; 
             private Long templateId; 
             private String templateName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.description = model.description;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
 
             /**
              * <p>The number of times that the template is used.</p>

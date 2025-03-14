@@ -36,6 +36,10 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceRiskLevels
      */
@@ -53,6 +57,14 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InstanceRiskLevels> instanceRiskLevels; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceRiskLevelsResponseBody model) {
+            this.instanceRiskLevels = model.instanceRiskLevels;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The risk levels of instances.</p>
@@ -134,6 +146,15 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
             private String instanceId; 
             private String level; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceRiskLevels model) {
+                this.instanceId = model.instanceId;
+                this.level = model.level;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the server.</p>

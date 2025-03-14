@@ -40,6 +40,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return binarySecurityPolicies
      */
@@ -65,6 +69,15 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         private java.util.List<BinarySecurityPolicies> binarySecurityPolicies; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBinarySecurityPoliciesResponseBody model) {
+            this.binarySecurityPolicies = model.binarySecurityPolicies;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about security policies.</p>
@@ -142,6 +155,14 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterId; 
             private java.util.List<String> namespaces; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterId = model.clusterId;
+                this.namespaces = model.namespaces;
+            } 
 
             /**
              * <p>The ID of the cluster.</p>
@@ -248,6 +269,17 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             private java.util.Map<String, ?> policy; 
             private String remark; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(BinarySecurityPolicies model) {
+                this.clusters = model.clusters;
+                this.name = model.name;
+                this.policy = model.policy;
+                this.remark = model.remark;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The information about clusters.</p>
@@ -383,6 +415,16 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on each page.</p>

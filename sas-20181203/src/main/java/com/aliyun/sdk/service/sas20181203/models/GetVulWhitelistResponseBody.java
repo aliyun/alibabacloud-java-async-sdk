@@ -36,6 +36,10 @@ public class GetVulWhitelistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetVulWhitelistResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private VulWhitelist vulWhitelist; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVulWhitelistResponseBody model) {
+            this.requestId = model.requestId;
+            this.vulWhitelist = model.vulWhitelist;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -182,6 +194,19 @@ public class GetVulWhitelistResponseBody extends TeaModel {
             private String target; 
             private String type; 
             private String whitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulWhitelist model) {
+                this.aliasName = model.aliasName;
+                this.id = model.id;
+                this.name = model.name;
+                this.reason = model.reason;
+                this.target = model.target;
+                this.type = model.type;
+                this.whitelist = model.whitelist;
+            } 
 
             /**
              * <p>The alias of the vulnerability.</p>

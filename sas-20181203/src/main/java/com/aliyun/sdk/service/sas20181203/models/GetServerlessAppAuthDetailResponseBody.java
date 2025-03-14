@@ -40,6 +40,10 @@ public class GetServerlessAppAuthDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class GetServerlessAppAuthDetailResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetServerlessAppAuthDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Data details.</p>
@@ -245,6 +258,22 @@ public class GetServerlessAppAuthDetailResponseBody extends TeaModel {
             private Long postPaidOpenTime; 
             private Integer postPaidStatus; 
             private String postpaidInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.coreCount = model.coreCount;
+                this.instanceCount = model.instanceCount;
+                this.isBind = model.isBind;
+                this.isPostPaid = model.isPostPaid;
+                this.isServerlessPostPaidValid = model.isServerlessPostPaidValid;
+                this.postPaidModuleSwitch = model.postPaidModuleSwitch;
+                this.postPaidOpenTime = model.postPaidOpenTime;
+                this.postPaidStatus = model.postPaidStatus;
+                this.postpaidInstanceId = model.postpaidInstanceId;
+            } 
 
             /**
              * <p>Application ID.</p>

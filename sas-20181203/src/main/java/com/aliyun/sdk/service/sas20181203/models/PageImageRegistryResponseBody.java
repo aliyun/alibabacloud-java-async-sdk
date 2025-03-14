@@ -40,6 +40,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return list
      */
@@ -65,6 +69,15 @@ public class PageImageRegistryResponseBody extends TeaModel {
         private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PageImageRegistryResponseBody model) {
+            this.list = model.list;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of image repositories.</p>
@@ -358,6 +371,32 @@ public class PageImageRegistryResponseBody extends TeaModel {
             private String userName; 
             private String vpcId; 
             private String whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.blackList = model.blackList;
+                this.domainName = model.domainName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.imageCount = model.imageCount;
+                this.jenkinsEnv = model.jenkinsEnv;
+                this.netType = model.netType;
+                this.password = model.password;
+                this.persistenceDay = model.persistenceDay;
+                this.protocolType = model.protocolType;
+                this.regionId = model.regionId;
+                this.registryHostIp = model.registryHostIp;
+                this.registryName = model.registryName;
+                this.registryType = model.registryType;
+                this.token = model.token;
+                this.transPerHour = model.transPerHour;
+                this.userName = model.userName;
+                this.vpcId = model.vpcId;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * <p>The IP address blacklist.</p>
@@ -667,6 +706,16 @@ public class PageImageRegistryResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

@@ -52,6 +52,10 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logstore
      */
@@ -101,6 +105,18 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         private Integer ttl; 
         private Long used; 
         private String userProject; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogstoreStorageResponseBody model) {
+            this.logstore = model.logstore;
+            this.preserve = model.preserve;
+            this.requestId = model.requestId;
+            this.ttl = model.ttl;
+            this.used = model.used;
+            this.userProject = model.userProject;
+        } 
 
         /**
          * <p>The name of the dedicated Logstore that is used to store full logs of Security Center. The value is fixed as <strong>sas-log</strong>.</p>

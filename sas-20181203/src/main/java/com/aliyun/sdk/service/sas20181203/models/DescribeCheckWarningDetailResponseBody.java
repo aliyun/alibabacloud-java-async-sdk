@@ -68,6 +68,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return advice
      */
@@ -149,6 +153,22 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         private String prompt; 
         private String requestId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCheckWarningDetailResponseBody model) {
+            this.advice = model.advice;
+            this.checkDetailAssetInfo = model.checkDetailAssetInfo;
+            this.checkDetailColumns = model.checkDetailColumns;
+            this.checkId = model.checkId;
+            this.description = model.description;
+            this.item = model.item;
+            this.level = model.level;
+            this.prompt = model.prompt;
+            this.requestId = model.requestId;
+            this.type = model.type;
+        } 
 
         /**
          * <p>The suggestion for the management of the risk item.</p>
@@ -327,6 +347,15 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             private String showName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Grids model) {
+                this.key = model.key;
+                this.showName = model.showName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Key to detect content.</p>
              * 
@@ -438,6 +467,16 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             private String key; 
             private String showName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckDetailColumns model) {
+                this.grids = model.grids;
+                this.key = model.key;
+                this.showName = model.showName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Detection content list.</p>

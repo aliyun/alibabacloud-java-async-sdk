@@ -40,6 +40,10 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkFixDetails
      */
@@ -65,6 +69,15 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         private java.util.List<CheckFixDetails> checkFixDetails; 
         private Integer count; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCheckFixDetailsResponseBody model) {
+            this.checkFixDetails = model.checkFixDetails;
+            this.count = model.count;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the parameters.</p>
@@ -229,6 +242,21 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private Integer paramType; 
             private String ruleId; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ParamList model) {
+                this.enumValue = model.enumValue;
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.paramDefaultValue = model.paramDefaultValue;
+                this.paramDesc = model.paramDesc;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.ruleId = model.ruleId;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.</p>
@@ -456,6 +484,20 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private Integer value; 
             private String varName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.checkId = model.checkId;
+                this.defaultValue = model.defaultValue;
+                this.optional = model.optional;
+                this.paramList = model.paramList;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleId = model.ruleId;
+                this.value = model.value;
+                this.varName = model.varName;
+            } 
+
             /**
              * <p>The ID of the risk item.</p>
              * 
@@ -619,6 +661,16 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private Long checkId; 
             private String checkItem; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckFixDetails model) {
+                this.checkDesc = model.checkDesc;
+                this.checkId = model.checkId;
+                this.checkItem = model.checkItem;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The detailed description of the risk item.</p>

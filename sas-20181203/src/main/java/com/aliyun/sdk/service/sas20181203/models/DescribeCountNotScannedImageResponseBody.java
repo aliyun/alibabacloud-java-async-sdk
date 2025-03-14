@@ -36,6 +36,10 @@ public class DescribeCountNotScannedImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return notScannedCnt
      */
@@ -53,6 +57,14 @@ public class DescribeCountNotScannedImageResponseBody extends TeaModel {
     public static final class Builder {
         private Integer notScannedCnt; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCountNotScannedImageResponseBody model) {
+            this.notScannedCnt = model.notScannedCnt;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of images that are not scanned.</p>

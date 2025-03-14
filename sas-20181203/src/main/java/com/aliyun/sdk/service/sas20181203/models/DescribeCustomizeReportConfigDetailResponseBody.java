@@ -116,6 +116,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chartIds
      */
@@ -293,6 +297,34 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         private String targetGroups; 
         private String targetUids; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizeReportConfigDetailResponseBody model) {
+            this.chartIds = model.chartIds;
+            this.groupType = model.groupType;
+            this.isDefault = model.isDefault;
+            this.pinnedTime = model.pinnedTime;
+            this.recipients = model.recipients;
+            this.reportDays = model.reportDays;
+            this.reportEndDate = model.reportEndDate;
+            this.reportId = model.reportId;
+            this.reportLang = model.reportLang;
+            this.reportSendType = model.reportSendType;
+            this.reportStartDate = model.reportStartDate;
+            this.reportStatus = model.reportStatus;
+            this.reportType = model.reportType;
+            this.requestId = model.requestId;
+            this.sendEndTime = model.sendEndTime;
+            this.sendPeriodDays = model.sendPeriodDays;
+            this.sendPeriodType = model.sendPeriodType;
+            this.sendStartTime = model.sendStartTime;
+            this.sendTime = model.sendTime;
+            this.targetGroups = model.targetGroups;
+            this.targetUids = model.targetUids;
+            this.title = model.title;
+        } 
 
         /**
          * <p>The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).</p>

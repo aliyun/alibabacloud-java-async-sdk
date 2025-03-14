@@ -65,7 +65,7 @@ public class IgnoreCheckItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -284,6 +284,14 @@ public class IgnoreCheckItemsRequest extends Request {
         public static final class Builder {
             private Long checkId; 
             private String riskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckAndRiskTypeList model) {
+                this.checkId = model.checkId;
+                this.riskType = model.riskType;
+            } 
 
             /**
              * <p>The ID of the check item.</p>

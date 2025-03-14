@@ -36,6 +36,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bruteForceSummary
      */
@@ -53,6 +57,14 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private BruteForceSummary bruteForceSummary; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBruteForceSummaryResponseBody model) {
+            this.bruteForceSummary = model.bruteForceSummary;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics of IP address blocking policies.</p>
@@ -182,6 +194,19 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             private Integer effectiveCount; 
             private String systemEffectiveCount; 
             private String systemRecordCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(BruteForceSummary model) {
+                this.allStrategyCount = model.allStrategyCount;
+                this.antiBruteForceRuleCount = model.antiBruteForceRuleCount;
+                this.customEffectiveCount = model.customEffectiveCount;
+                this.customRecordCount = model.customRecordCount;
+                this.effectiveCount = model.effectiveCount;
+                this.systemEffectiveCount = model.systemEffectiveCount;
+                this.systemRecordCount = model.systemRecordCount;
+            } 
 
             /**
              * <p>The number of anti-brute force IP blocking policies.</p>

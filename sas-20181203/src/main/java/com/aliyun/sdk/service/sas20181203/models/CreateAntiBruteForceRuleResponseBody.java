@@ -36,6 +36,10 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createAntiBruteForceRule
      */
@@ -53,6 +57,14 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
     public static final class Builder {
         private CreateAntiBruteForceRule createAntiBruteForceRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAntiBruteForceRuleResponseBody model) {
+            this.createAntiBruteForceRule = model.createAntiBruteForceRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the defense rule.</p>
@@ -110,6 +122,13 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateAntiBruteForceRule model) {
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * <p>The ID of the defense rule.</p>

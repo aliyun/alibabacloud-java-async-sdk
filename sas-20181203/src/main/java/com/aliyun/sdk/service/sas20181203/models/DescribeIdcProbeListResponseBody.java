@@ -40,6 +40,10 @@ public class DescribeIdcProbeListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return idcProbes
      */
@@ -65,6 +69,15 @@ public class DescribeIdcProbeListResponseBody extends TeaModel {
         private java.util.List<IdcProbes> idcProbes; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIdcProbeListResponseBody model) {
+            this.idcProbes = model.idcProbes;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>IDC probe list.</p>
@@ -286,6 +299,26 @@ public class DescribeIdcProbeListResponseBody extends TeaModel {
             private Integer status; 
             private String uuid; 
             private String winPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(IdcProbes model) {
+                this.idcName = model.idcName;
+                this.idcRegion = model.idcRegion;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intervalPeriod = model.intervalPeriod;
+                this.intranetIp = model.intranetIp;
+                this.ipSegments = model.ipSegments;
+                this.linuxPort = model.linuxPort;
+                this.periodUnit = model.periodUnit;
+                this.serviceStatus = model.serviceStatus;
+                this.status = model.status;
+                this.uuid = model.uuid;
+                this.winPort = model.winPort;
+            } 
 
             /**
              * <p>IDC data center name.</p>
@@ -527,6 +560,16 @@ public class DescribeIdcProbeListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of data entries displayed on the current page in a paginated query.</p>

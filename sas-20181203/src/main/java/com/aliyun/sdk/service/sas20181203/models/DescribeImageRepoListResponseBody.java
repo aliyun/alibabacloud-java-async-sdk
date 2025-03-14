@@ -52,6 +52,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return addTargetCount
      */
@@ -101,6 +105,18 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         private java.util.List<ImageRepoList> imageRepoList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageRepoListResponseBody model) {
+            this.addTargetCount = model.addTargetCount;
+            this.allTargetCount = model.allTargetCount;
+            this.delTargetCount = model.delTargetCount;
+            this.imageRepoList = model.imageRepoList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of image repositories that are added to Security Center.</p>
@@ -224,6 +240,15 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             private String repoName; 
             private String repoNamespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageRepoList model) {
+                this.flag = model.flag;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+            } 
+
             /**
              * <p>Indicates whether the feature takes effect on the image repository. Valid values:</p>
              * <ul>
@@ -335,6 +360,16 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

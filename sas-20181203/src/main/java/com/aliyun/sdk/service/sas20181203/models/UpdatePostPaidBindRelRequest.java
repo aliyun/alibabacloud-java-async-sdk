@@ -44,7 +44,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -192,6 +192,15 @@ public class UpdatePostPaidBindRelRequest extends Request {
             private Boolean bindAll; 
             private java.util.List<String> uuidList; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindAction model) {
+                this.bindAll = model.bindAll;
+                this.uuidList = model.uuidList;
+                this.version = model.version;
+            } 
 
             /**
              * <p>Whether to bind all. Default is <strong>false</strong>. Values:</p>

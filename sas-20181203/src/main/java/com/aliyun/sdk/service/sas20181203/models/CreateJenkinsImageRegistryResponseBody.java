@@ -44,6 +44,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -77,6 +81,16 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Long timeCost; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateJenkinsImageRegistryResponseBody model) {
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.timeCost = model.timeCost;
+        } 
 
         /**
          * <p>The result of creating the image repository.</p>
@@ -360,6 +374,30 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             private String userName; 
             private String vpcId; 
             private String whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.blackList = model.blackList;
+                this.domainName = model.domainName;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.netType = model.netType;
+                this.password = model.password;
+                this.persistenceDay = model.persistenceDay;
+                this.protocolType = model.protocolType;
+                this.regionId = model.regionId;
+                this.registryHostIp = model.registryHostIp;
+                this.registryName = model.registryName;
+                this.registryType = model.registryType;
+                this.token = model.token;
+                this.transPerHour = model.transPerHour;
+                this.userName = model.userName;
+                this.vpcId = model.vpcId;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * <p>The blacklist.</p>

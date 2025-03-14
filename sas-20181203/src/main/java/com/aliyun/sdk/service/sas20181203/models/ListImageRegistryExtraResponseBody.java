@@ -36,6 +36,10 @@ public class ListImageRegistryExtraResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageRegistryExtraInfos
      */
@@ -53,6 +57,14 @@ public class ListImageRegistryExtraResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ImageRegistryExtraInfos> imageRegistryExtraInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListImageRegistryExtraResponseBody model) {
+            this.imageRegistryExtraInfos = model.imageRegistryExtraInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Additional configuration information for the image registry.</p>
@@ -170,6 +182,18 @@ public class ListImageRegistryExtraResponseBody extends TeaModel {
             private String namespace; 
             private Long registryId; 
             private String registryType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageRegistryExtraInfos model) {
+                this.aliUid = model.aliUid;
+                this.authToken = model.authToken;
+                this.id = model.id;
+                this.namespace = model.namespace;
+                this.registryId = model.registryId;
+                this.registryType = model.registryType;
+            } 
 
             /**
              * <p>Alibaba Cloud account ID.</p>

@@ -40,6 +40,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterList
      */
@@ -65,6 +69,15 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         private java.util.List<ClusterList> clusterList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridProxyClusterListResponseBody model) {
+            this.clusterList = model.clusterList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The proxy clusters.</p>
@@ -238,6 +251,22 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             private Integer proxyCount; 
             private String remark; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClusterList model) {
+                this.authKey = model.authKey;
+                this.authKeySecret = model.authKeySecret;
+                this.clientCount = model.clientCount;
+                this.clusterName = model.clusterName;
+                this.installCommand = model.installCommand;
+                this.ip = model.ip;
+                this.lastHeartTime = model.lastHeartTime;
+                this.proxyCount = model.proxyCount;
+                this.remark = model.remark;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the credential that is used for cluster authentication.</p>
@@ -423,6 +452,16 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries on the current page.</p>

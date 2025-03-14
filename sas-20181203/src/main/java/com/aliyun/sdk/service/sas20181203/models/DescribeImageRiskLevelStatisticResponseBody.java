@@ -36,6 +36,10 @@ public class DescribeImageRiskLevelStatisticResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageRiskLevelList
      */
@@ -53,6 +57,14 @@ public class DescribeImageRiskLevelStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ImageRiskLevelList> imageRiskLevelList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageRiskLevelStatisticResponseBody model) {
+            this.imageRiskLevelList = model.imageRiskLevelList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Risk information at the image level, including risks from vulnerability, baseline, and malicious file detection.</p>
@@ -122,6 +134,14 @@ public class DescribeImageRiskLevelStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private Integer cnt; 
             private String imageRiskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageRiskLevelList model) {
+                this.cnt = model.cnt;
+                this.imageRiskLevel = model.imageRiskLevel;
+            } 
 
             /**
              * <p>The count of images for this risk level.</p>

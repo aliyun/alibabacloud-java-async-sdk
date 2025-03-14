@@ -59,7 +59,7 @@ public class ListContainerDefenseRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -261,6 +261,14 @@ public class ListContainerDefenseRuleRequest extends Request {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The condition type. Valid values:</p>

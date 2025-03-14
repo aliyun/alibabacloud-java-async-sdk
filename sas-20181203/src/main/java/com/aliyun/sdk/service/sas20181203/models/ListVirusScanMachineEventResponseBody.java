@@ -40,6 +40,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVirusScanMachineEventResponseBody model) {
+            this.data = model.data;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the alert event.</p>
@@ -166,6 +179,16 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private String nameDisplay; 
             private String type; 
             private String valueDisplay; 
+
+            private Builder() {
+            } 
+
+            private Builder(Details model) {
+                this.infoType = model.infoType;
+                this.nameDisplay = model.nameDisplay;
+                this.type = model.type;
+                this.valueDisplay = model.valueDisplay;
+            } 
 
             /**
              * <p>The display type of the value for ValueDisplay. Valid value:</p>
@@ -342,6 +365,20 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private Long lastTimeStamp; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.details = model.details;
+                this.eventId = model.eventId;
+                this.eventName = model.eventName;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.lastTimeStamp = model.lastTimeStamp;
+                this.level = model.level;
+            } 
+
             /**
              * <p>The details of the exception.</p>
              */
@@ -494,6 +531,15 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number.</p>

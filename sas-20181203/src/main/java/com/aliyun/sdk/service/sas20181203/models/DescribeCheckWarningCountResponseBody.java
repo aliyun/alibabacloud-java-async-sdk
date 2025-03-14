@@ -36,6 +36,10 @@ public class DescribeCheckWarningCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -53,6 +57,14 @@ public class DescribeCheckWarningCountResponseBody extends TeaModel {
     public static final class Builder {
         private Integer count; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCheckWarningCountResponseBody model) {
+            this.count = model.count;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The total number of entries returned.</p>

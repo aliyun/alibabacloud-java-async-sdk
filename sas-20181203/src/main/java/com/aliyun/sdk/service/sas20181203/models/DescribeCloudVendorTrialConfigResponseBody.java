@@ -36,6 +36,10 @@ public class DescribeCloudVendorTrialConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeCloudVendorTrialConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudVendorTrialConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returned data.</p>
@@ -134,6 +146,15 @@ public class DescribeCloudVendorTrialConfigResponseBody extends TeaModel {
             private String authInfo; 
             private String message; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authInfo = model.authInfo;
+                this.message = model.message;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Multi-cloud configuration information:</p>

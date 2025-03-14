@@ -52,6 +52,10 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateHoneypotResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -278,6 +294,19 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             private String nodeId; 
             private String presetId; 
             private java.util.List<String> state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.honeypotId = model.honeypotId;
+                this.honeypotImageDisplayName = model.honeypotImageDisplayName;
+                this.honeypotImageName = model.honeypotImageName;
+                this.honeypotName = model.honeypotName;
+                this.nodeId = model.nodeId;
+                this.presetId = model.presetId;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The ID of the honeypot.</p>

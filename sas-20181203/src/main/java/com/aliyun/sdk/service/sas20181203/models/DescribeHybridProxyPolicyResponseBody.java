@@ -40,6 +40,10 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<PolicyList> policyList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridProxyPolicyResponseBody model) {
+            this.count = model.count;
+            this.policyList = model.policyList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of entries on the current page.</p>
@@ -158,6 +171,15 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
             private String fileName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.config = model.config;
+                this.fileName = model.fileName;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The value of the policy configurations.</p>
              * 
@@ -246,6 +268,14 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Info> info; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyList model) {
+                this.info = model.info;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * <p>The information about the policy.</p>

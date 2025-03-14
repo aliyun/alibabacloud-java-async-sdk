@@ -36,6 +36,10 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceStatisticsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The risk information about assets.</p>
@@ -350,6 +362,33 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private String uuid; 
             private Integer vul; 
             private Integer weakPWNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.account = model.account;
+                this.agentlessAll = model.agentlessAll;
+                this.agentlessBaseline = model.agentlessBaseline;
+                this.agentlessMalicious = model.agentlessMalicious;
+                this.agentlessSensitiveFile = model.agentlessSensitiveFile;
+                this.agentlessVulCve = model.agentlessVulCve;
+                this.agentlessVulSca = model.agentlessVulSca;
+                this.agentlessVulSys = model.agentlessVulSys;
+                this.appNum = model.appNum;
+                this.cmsNum = model.cmsNum;
+                this.cspmNum = model.cspmNum;
+                this.cveNum = model.cveNum;
+                this.emgNum = model.emgNum;
+                this.health = model.health;
+                this.scaNum = model.scaNum;
+                this.suspicious = model.suspicious;
+                this.sysNum = model.sysNum;
+                this.trojan = model.trojan;
+                this.uuid = model.uuid;
+                this.vul = model.vul;
+                this.weakPWNum = model.weakPWNum;
+            } 
 
             /**
              * <p>The number of unusual logons to the asset.</p>

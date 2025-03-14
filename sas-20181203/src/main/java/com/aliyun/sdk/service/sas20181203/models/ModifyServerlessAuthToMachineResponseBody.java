@@ -36,6 +36,10 @@ public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyServerlessAuthToMachineResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details of the returned data.</p>
@@ -110,6 +122,13 @@ public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer resultCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resultCode = model.resultCode;
+            } 
 
             /**
              * <p>Result code. Values:</p>

@@ -99,7 +99,7 @@ public class ChangeCheckConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -476,6 +476,14 @@ public class ChangeCheckConfigRequest extends Request {
             private Long checkId; 
             private Long sectionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddedCheck model) {
+                this.checkId = model.checkId;
+                this.sectionId = model.sectionId;
+            } 
+
             /**
              * <p>The ID of the check item.</p>
              * <blockquote>
@@ -552,6 +560,14 @@ public class ChangeCheckConfigRequest extends Request {
             private java.util.List<Long> addIds; 
             private java.util.List<Long> removeIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigRequirementIds model) {
+                this.addIds = model.addIds;
+                this.removeIds = model.removeIds;
+            } 
+
             /**
              * <p>The requirement IDs that you want to add to the policy.</p>
              */
@@ -619,6 +635,14 @@ public class ChangeCheckConfigRequest extends Request {
             private java.util.List<Long> addIds; 
             private java.util.List<Long> removeIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigStandardIds model) {
+                this.addIds = model.addIds;
+                this.removeIds = model.removeIds;
+            } 
+
             /**
              * <p>The standard IDs that you want to add to the policy.</p>
              */
@@ -685,6 +709,14 @@ public class ChangeCheckConfigRequest extends Request {
         public static final class Builder {
             private Long checkId; 
             private Long sectionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemovedCheck model) {
+                this.checkId = model.checkId;
+                this.sectionId = model.sectionId;
+            } 
 
             /**
              * <p>The ID of the check item.</p>

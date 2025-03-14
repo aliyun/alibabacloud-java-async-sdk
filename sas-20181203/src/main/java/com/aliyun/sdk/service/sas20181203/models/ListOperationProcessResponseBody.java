@@ -40,6 +40,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class ListOperationProcessResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Processes> processes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationProcessResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.processes = model.processes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class ListOperationProcessResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -333,6 +356,20 @@ public class ListOperationProcessResponseBody extends TeaModel {
             private String taskId; 
             private String taskType; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Processes model) {
+                this.createTime = model.createTime;
+                this.endTime = model.endTime;
+                this.finishCount = model.finishCount;
+                this.startTime = model.startTime;
+                this.statusCode = model.statusCode;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The time when the task was created. Unit: milliseconds.</p>

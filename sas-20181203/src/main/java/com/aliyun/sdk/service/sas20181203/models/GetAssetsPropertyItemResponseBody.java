@@ -40,6 +40,10 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<PropertyItems> propertyItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAssetsPropertyItemResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertyItems = model.propertyItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -285,6 +308,16 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
             private String domain; 
             private String moduleName; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyItems model) {
+                this.count = model.count;
+                this.domain = model.domain;
+                this.moduleName = model.moduleName;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The number of servers related to the asset fingerprints.</p>

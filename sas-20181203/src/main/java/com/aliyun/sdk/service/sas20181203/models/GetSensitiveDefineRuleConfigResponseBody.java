@@ -48,6 +48,10 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSensitiveDefineRuleConfigResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -208,6 +223,15 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             private String ruleName; 
             private Boolean selected; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleList model) {
+                this.ruleKey = model.ruleKey;
+                this.ruleName = model.ruleName;
+                this.selected = model.selected;
+            } 
+
             /**
              * <p>The keyword of the check rule.</p>
              * 
@@ -307,6 +331,15 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             private String classKey; 
             private String className; 
             private java.util.List<RuleList> ruleList; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleTree model) {
+                this.classKey = model.classKey;
+                this.className = model.className;
+                this.ruleList = model.ruleList;
+            } 
 
             /**
              * <p>The category keyword of the check rule.</p>
@@ -424,6 +457,17 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             private Integer ruleCount; 
             private java.util.List<RuleTree> ruleTree; 
             private Integer selectedCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableNewRule = model.enableNewRule;
+                this.id = model.id;
+                this.ruleCount = model.ruleCount;
+                this.ruleTree = model.ruleTree;
+                this.selectedCount = model.selectedCount;
+            } 
 
             /**
              * <p>Indicates whether the new rule is enabled for automatic check only on agentless detection. Valid values:</p>

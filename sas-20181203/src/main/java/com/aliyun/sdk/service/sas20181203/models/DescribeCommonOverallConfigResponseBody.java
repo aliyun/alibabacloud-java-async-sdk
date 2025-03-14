@@ -36,6 +36,10 @@ public class DescribeCommonOverallConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return overallConfig
      */
@@ -53,6 +57,14 @@ public class DescribeCommonOverallConfigResponseBody extends TeaModel {
     public static final class Builder {
         private OverallConfig overallConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommonOverallConfigResponseBody model) {
+            this.overallConfig = model.overallConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the feature.</p>
@@ -122,6 +134,14 @@ public class DescribeCommonOverallConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String config; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverallConfig model) {
+                this.config = model.config;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The status of the feature. Valid values:</p>

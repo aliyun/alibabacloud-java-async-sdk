@@ -44,6 +44,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return overallItemStatistic
      */
@@ -77,6 +81,16 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         private OverallStatistic overallStatistic; 
         private String requestId; 
         private java.util.List<Summarys> summarys; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCheckSummaryResponseBody model) {
+            this.overallItemStatistic = model.overallItemStatistic;
+            this.overallStatistic = model.overallStatistic;
+            this.requestId = model.requestId;
+            this.summarys = model.summarys;
+        } 
 
         /**
          * <p>The statistics about the number of check items.</p>
@@ -162,6 +176,14 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer releaseCount; 
             private Integer resultCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverallItemStatistic model) {
+                this.releaseCount = model.releaseCount;
+                this.resultCount = model.resultCount;
+            } 
 
             /**
              * <p>The number of check items supported by the system.</p>
@@ -355,6 +377,24 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer passHighCount; 
             private Integer passLowCount; 
             private Integer passMediumCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(OverallStatistic model) {
+                this.notCheckCount = model.notCheckCount;
+                this.notCheckHighCount = model.notCheckHighCount;
+                this.notCheckLowCount = model.notCheckLowCount;
+                this.notCheckMediumCount = model.notCheckMediumCount;
+                this.notPassCount = model.notPassCount;
+                this.notPassHighCount = model.notPassHighCount;
+                this.notPassLowCount = model.notPassLowCount;
+                this.notPassMediumCount = model.notPassMediumCount;
+                this.passCount = model.passCount;
+                this.passHighCount = model.passHighCount;
+                this.passLowCount = model.passLowCount;
+                this.passMediumCount = model.passMediumCount;
+            } 
 
             /**
              * <p>The number of unchecked check items.</p>
@@ -659,6 +699,24 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer passLowCount; 
             private Integer passMediumCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(StandardStatistic model) {
+                this.notCheckCount = model.notCheckCount;
+                this.notCheckHighCount = model.notCheckHighCount;
+                this.notCheckLowCount = model.notCheckLowCount;
+                this.notCheckMediumCount = model.notCheckMediumCount;
+                this.notPassCount = model.notPassCount;
+                this.notPassHighCount = model.notPassHighCount;
+                this.notPassLowCount = model.notPassLowCount;
+                this.notPassMediumCount = model.notPassMediumCount;
+                this.passCount = model.passCount;
+                this.passHighCount = model.passHighCount;
+                this.passLowCount = model.passLowCount;
+                this.passMediumCount = model.passMediumCount;
+            } 
+
             /**
              * <p>The number of unchecked check items.</p>
              * 
@@ -913,6 +971,20 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer riskLevelMediumCount; 
             private String showName; 
             private StandardStatistic standardStatistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Standards model) {
+                this.failCount = model.failCount;
+                this.id = model.id;
+                this.passCount = model.passCount;
+                this.riskLevelHighCount = model.riskLevelHighCount;
+                this.riskLevelLowCount = model.riskLevelLowCount;
+                this.riskLevelMediumCount = model.riskLevelMediumCount;
+                this.showName = model.showName;
+                this.standardStatistic = model.standardStatistic;
+            } 
 
             /**
              * <p>The number of check items that failed to pass the check.</p>
@@ -1170,6 +1242,24 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer passLowCount; 
             private Integer passMediumCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(TypeStatistic model) {
+                this.notCheckCount = model.notCheckCount;
+                this.notCheckHighCount = model.notCheckHighCount;
+                this.notCheckLowCount = model.notCheckLowCount;
+                this.notCheckMediumCount = model.notCheckMediumCount;
+                this.notPassCount = model.notPassCount;
+                this.notPassHighCount = model.notPassHighCount;
+                this.notPassLowCount = model.notPassLowCount;
+                this.notPassMediumCount = model.notPassMediumCount;
+                this.passCount = model.passCount;
+                this.passHighCount = model.passHighCount;
+                this.passLowCount = model.passLowCount;
+                this.passMediumCount = model.passMediumCount;
+            } 
+
             /**
              * <p>The number of unchecked check items.</p>
              * 
@@ -1388,6 +1478,17 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private java.util.List<Standards> standards; 
             private String type; 
             private TypeStatistic typeStatistic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Summarys model) {
+                this.failCount = model.failCount;
+                this.passCount = model.passCount;
+                this.standards = model.standards;
+                this.type = model.type;
+                this.typeStatistic = model.typeStatistic;
+            } 
 
             /**
              * <p>The number of detected risk items.</p>

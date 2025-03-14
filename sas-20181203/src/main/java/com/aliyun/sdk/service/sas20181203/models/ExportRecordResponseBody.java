@@ -40,6 +40,10 @@ public class ExportRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileName
      */
@@ -65,6 +69,15 @@ public class ExportRecordResponseBody extends TeaModel {
         private String fileName; 
         private Long id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportRecordResponseBody model) {
+            this.fileName = model.fileName;
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the exported file.</p>

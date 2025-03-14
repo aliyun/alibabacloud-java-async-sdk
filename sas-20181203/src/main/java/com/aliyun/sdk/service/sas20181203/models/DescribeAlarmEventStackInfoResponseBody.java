@@ -36,6 +36,10 @@ public class DescribeAlarmEventStackInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeAlarmEventStackInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String stackInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlarmEventStackInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.stackInfo = model.stackInfo;
+        } 
 
         /**
          * <p>The ID of the request.</p>

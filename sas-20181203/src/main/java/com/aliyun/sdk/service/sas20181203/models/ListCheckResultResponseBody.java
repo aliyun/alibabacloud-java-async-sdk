@@ -40,6 +40,10 @@ public class ListCheckResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checks
      */
@@ -65,6 +69,15 @@ public class ListCheckResultResponseBody extends TeaModel {
         private java.util.List<Checks> checks; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCheckResultResponseBody model) {
+            this.checks = model.checks;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The check items.</p>
@@ -190,6 +203,18 @@ public class ListCheckResultResponseBody extends TeaModel {
             private String sectionShowName; 
             private Long standardId; 
             private String standardShowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckPolicies model) {
+                this.requirementId = model.requirementId;
+                this.requirementShowName = model.requirementShowName;
+                this.sectionId = model.sectionId;
+                this.sectionShowName = model.sectionShowName;
+                this.standardId = model.standardId;
+                this.standardShowName = model.standardShowName;
+            } 
 
             /**
              * <p>The ID of the requirement item for the check item.</p>
@@ -511,6 +536,31 @@ public class ListCheckResultResponseBody extends TeaModel {
             private Integer trialPermissionType; 
             private String vendor; 
             private String vendorShowName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Checks model) {
+                this.assetSubType = model.assetSubType;
+                this.assetType = model.assetType;
+                this.assetVendor = model.assetVendor;
+                this.checkId = model.checkId;
+                this.checkPolicies = model.checkPolicies;
+                this.checkSaleType = model.checkSaleType;
+                this.checkShowName = model.checkShowName;
+                this.instanceSubType = model.instanceSubType;
+                this.instanceType = model.instanceType;
+                this.lastCheckTime = model.lastCheckTime;
+                this.operationType = model.operationType;
+                this.riskLevel = model.riskLevel;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.taskId = model.taskId;
+                this.trialPermission = model.trialPermission;
+                this.trialPermissionType = model.trialPermissionType;
+                this.vendor = model.vendor;
+                this.vendorShowName = model.vendorShowName;
+            } 
 
             /**
              * <p>The subtype of the cloud service.</p>
@@ -890,6 +940,16 @@ public class ListCheckResultResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

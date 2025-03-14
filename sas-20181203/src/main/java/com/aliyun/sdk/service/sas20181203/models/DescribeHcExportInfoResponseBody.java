@@ -64,6 +64,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentCount
      */
@@ -137,6 +141,21 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         private String requestId; 
         private String resultStatus; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHcExportInfoResponseBody model) {
+            this.currentCount = model.currentCount;
+            this.fileName = model.fileName;
+            this.gmtCreate = model.gmtCreate;
+            this.id = model.id;
+            this.link = model.link;
+            this.progress = model.progress;
+            this.requestId = model.requestId;
+            this.resultStatus = model.resultStatus;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of exported entries.</p>

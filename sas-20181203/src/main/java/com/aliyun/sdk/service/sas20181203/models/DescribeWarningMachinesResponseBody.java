@@ -52,6 +52,10 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -101,6 +105,18 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
         private java.util.List<WarningMachines> warningMachines; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWarningMachinesResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.warningMachines = model.warningMachines;
+        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -382,6 +398,28 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             private String regionId; 
             private Integer status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarningMachines model) {
+                this.authVersion = model.authVersion;
+                this.bind = model.bind;
+                this.containerId = model.containerId;
+                this.containerName = model.containerName;
+                this.highWarningCount = model.highWarningCount;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.lowWarningCount = model.lowWarningCount;
+                this.mediumWarningCount = model.mediumWarningCount;
+                this.passCount = model.passCount;
+                this.portOpen = model.portOpen;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>

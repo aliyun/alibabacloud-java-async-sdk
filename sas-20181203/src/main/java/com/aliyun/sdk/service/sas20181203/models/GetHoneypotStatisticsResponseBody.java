@@ -52,6 +52,10 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHoneypotStatisticsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -278,6 +294,19 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             private Integer usedHostProbeCount; 
             private Integer usedProbeCount; 
             private Integer usedVpcProbeCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.totalHoneypotCount = model.totalHoneypotCount;
+                this.totalNodeStatus = model.totalNodeStatus;
+                this.totalProbeCount = model.totalProbeCount;
+                this.usedHoneypotCount = model.usedHoneypotCount;
+                this.usedHostProbeCount = model.usedHostProbeCount;
+                this.usedProbeCount = model.usedProbeCount;
+                this.usedVpcProbeCount = model.usedVpcProbeCount;
+            } 
 
             /**
              * <p>The total number of honeypots.</p>

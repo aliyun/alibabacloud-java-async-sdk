@@ -40,6 +40,10 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAssetCleanConfigResponseBody model) {
+            this.count = model.count;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of cleanup configurations.</p>
@@ -157,6 +170,15 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
             private Integer cleanDays; 
             private Integer status; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cleanDays = model.cleanDays;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.</p>

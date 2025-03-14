@@ -36,6 +36,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return k8sAccessInfos
      */
@@ -53,6 +57,14 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<K8sAccessInfos> k8sAccessInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListK8sAccessInfoResponseBody model) {
+            this.k8sAccessInfos = model.k8sAccessInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the Kubernetes clusters.</p>
@@ -242,6 +254,24 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             private Long id; 
             private String installKey; 
             private String vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(K8sAccessInfos model) {
+                this.aliUid = model.aliUid;
+                this.auditLogStore = model.auditLogStore;
+                this.auditProject = model.auditProject;
+                this.auditRegionId = model.auditRegionId;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.expireDate = model.expireDate;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.installKey = model.installKey;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

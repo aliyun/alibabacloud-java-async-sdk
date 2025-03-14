@@ -52,6 +52,10 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmCount
      */
@@ -101,6 +105,18 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         private Integer riskCount; 
         private Integer totalDomainCount; 
         private Integer vulCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainSecureStatisticsResponseBody model) {
+            this.alarmCount = model.alarmCount;
+            this.noSslCount = model.noSslCount;
+            this.requestId = model.requestId;
+            this.riskCount = model.riskCount;
+            this.totalDomainCount = model.totalDomainCount;
+            this.vulCount = model.vulCount;
+        } 
 
         /**
          * <p>The number of domain names that trigger security alerts.</p>

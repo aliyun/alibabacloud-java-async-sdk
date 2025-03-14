@@ -40,6 +40,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<ProxyList> proxyList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHybridProxyListResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.proxyList = model.proxyList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries on the current page.</p>
@@ -345,6 +368,21 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             private String proxyUuid; 
             private String status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProxyList model) {
+                this.clientCount = model.clientCount;
+                this.currentVersion = model.currentVersion;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.proxyUuid = model.proxyUuid;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The number of servers that are connected to the proxy instance.</p>

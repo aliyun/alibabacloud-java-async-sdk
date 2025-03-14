@@ -40,6 +40,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<Rules> rules; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAntiBruteForceRulesResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -167,6 +180,16 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of entries returned on the current page.</p>
              * 
@@ -224,6 +247,102 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
      *
      * <p>DescribeAntiBruteForceRulesResponseBody</p>
      */
+    public static class ProtocolType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Rdp")
+        private String rdp;
+
+        @com.aliyun.core.annotation.NameInMap("SqlServer")
+        private String sqlServer;
+
+        @com.aliyun.core.annotation.NameInMap("Ssh")
+        private String ssh;
+
+        private ProtocolType(Builder builder) {
+            this.rdp = builder.rdp;
+            this.sqlServer = builder.sqlServer;
+            this.ssh = builder.ssh;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProtocolType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rdp
+         */
+        public String getRdp() {
+            return this.rdp;
+        }
+
+        /**
+         * @return sqlServer
+         */
+        public String getSqlServer() {
+            return this.sqlServer;
+        }
+
+        /**
+         * @return ssh
+         */
+        public String getSsh() {
+            return this.ssh;
+        }
+
+        public static final class Builder {
+            private String rdp; 
+            private String sqlServer; 
+            private String ssh; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolType model) {
+                this.rdp = model.rdp;
+                this.sqlServer = model.sqlServer;
+                this.ssh = model.ssh;
+            } 
+
+            /**
+             * Rdp.
+             */
+            public Builder rdp(String rdp) {
+                this.rdp = rdp;
+                return this;
+            }
+
+            /**
+             * SqlServer.
+             */
+            public Builder sqlServer(String sqlServer) {
+                this.sqlServer = sqlServer;
+                return this;
+            }
+
+            /**
+             * Ssh.
+             */
+            public Builder ssh(String ssh) {
+                this.ssh = ssh;
+                return this;
+            }
+
+            public ProtocolType build() {
+                return new ProtocolType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAntiBruteForceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAntiBruteForceRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
@@ -249,6 +368,9 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
+        private ProtocolType protocolType;
+
         @com.aliyun.core.annotation.NameInMap("Span")
         private Integer span;
 
@@ -264,6 +386,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             this.id = builder.id;
             this.machineCount = builder.machineCount;
             this.name = builder.name;
+            this.protocolType = builder.protocolType;
             this.span = builder.span;
             this.uuidList = builder.uuidList;
         }
@@ -333,6 +456,13 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocolType
+         */
+        public ProtocolType getProtocolType() {
+            return this.protocolType;
+        }
+
+        /**
          * @return span
          */
         public Integer getSpan() {
@@ -355,8 +485,26 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private Long id; 
             private Integer machineCount; 
             private String name; 
+            private ProtocolType protocolType; 
             private Integer span; 
             private java.util.List<String> uuidList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.createTimestamp = model.createTimestamp;
+                this.defaultRule = model.defaultRule;
+                this.enableSmartRule = model.enableSmartRule;
+                this.failCount = model.failCount;
+                this.forbiddenTime = model.forbiddenTime;
+                this.id = model.id;
+                this.machineCount = model.machineCount;
+                this.name = model.name;
+                this.protocolType = model.protocolType;
+                this.span = model.span;
+                this.uuidList = model.uuidList;
+            } 
 
             /**
              * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
@@ -450,6 +598,14 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * ProtocolType.
+             */
+            public Builder protocolType(ProtocolType protocolType) {
+                this.protocolType = protocolType;
                 return this;
             }
 

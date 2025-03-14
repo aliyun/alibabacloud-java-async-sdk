@@ -84,6 +84,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exposedAsapVulCount
      */
@@ -197,6 +201,26 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         private Integer exposedWeekPasswordMachineCount; 
         private Integer gatewayAssetCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExposedStatisticsResponseBody model) {
+            this.exposedAsapVulCount = model.exposedAsapVulCount;
+            this.exposedComponentCount = model.exposedComponentCount;
+            this.exposedDdsCount = model.exposedDdsCount;
+            this.exposedEcsCount = model.exposedEcsCount;
+            this.exposedInstanceCount = model.exposedInstanceCount;
+            this.exposedIpCount = model.exposedIpCount;
+            this.exposedKvstoreCount = model.exposedKvstoreCount;
+            this.exposedLaterVulCount = model.exposedLaterVulCount;
+            this.exposedNntfVulCount = model.exposedNntfVulCount;
+            this.exposedPortCount = model.exposedPortCount;
+            this.exposedRdsCount = model.exposedRdsCount;
+            this.exposedWeekPasswordMachineCount = model.exposedWeekPasswordMachineCount;
+            this.gatewayAssetCount = model.gatewayAssetCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>

@@ -36,6 +36,10 @@ public class GetAttackTypeListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attackTypeList
      */
@@ -53,6 +57,14 @@ public class GetAttackTypeListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AttackTypeList> attackTypeList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAttackTypeListResponseBody model) {
+            this.attackTypeList = model.attackTypeList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The attack types.</p>
@@ -134,6 +146,15 @@ public class GetAttackTypeListResponseBody extends TeaModel {
             private String label; 
             private String statusType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttackTypeList model) {
+                this.label = model.label;
+                this.statusType = model.statusType;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the attack type.</p>

@@ -40,6 +40,10 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return raspDefendedCount
      */
@@ -65,6 +69,15 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         private Integer raspDefendedCount; 
         private Integer raspDefensibleCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVulDefendCountStatisticsResponseBody model) {
+            this.raspDefendedCount = model.raspDefendedCount;
+            this.raspDefensibleCount = model.raspDefensibleCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of defended vulnerabilities.</p>

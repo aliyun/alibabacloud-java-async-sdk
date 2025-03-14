@@ -40,6 +40,10 @@ public class SubmitCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class SubmitCheckResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubmitCheckResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The data returned if the call is successful.</p>
@@ -145,6 +158,14 @@ public class SubmitCheckResponseBody extends TeaModel {
         public static final class Builder {
             private String operateCode; 
             private Integer throttlingTimeSecond; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.operateCode = model.operateCode;
+                this.throttlingTimeSecond = model.throttlingTimeSecond;
+            } 
 
             /**
              * <p>The operation code of the configuration assessment task.</p>

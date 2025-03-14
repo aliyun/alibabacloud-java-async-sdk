@@ -48,6 +48,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SoarStrategyTasks> soarStrategyTasks; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSoarStrategyTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.soarStrategyTasks = model.soarStrategyTasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number. Pages start from page 1.</p>
@@ -299,6 +314,23 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             private Long strategyId; 
             private Integer successNum; 
             private Integer totalNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(SoarStrategyTasks model) {
+                this.failedNum = model.failedNum;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtFinish = model.gmtFinish;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.name = model.name;
+                this.runMode = model.runMode;
+                this.status = model.status;
+                this.strategyId = model.strategyId;
+                this.successNum = model.successNum;
+                this.totalNum = model.totalNum;
+            } 
 
             /**
              * <p>The number of execution failures.</p>

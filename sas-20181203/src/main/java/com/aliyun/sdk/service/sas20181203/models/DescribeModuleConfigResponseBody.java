@@ -48,6 +48,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -89,6 +93,17 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         private java.util.List<ModuleConfigList> moduleConfigList; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeModuleConfigResponseBody model) {
+            this.count = model.count;
+            this.httpStatusCode = model.httpStatusCode;
+            this.moduleConfigList = model.moduleConfigList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The number of configurations for the module.</p>
@@ -244,6 +259,18 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             private String region; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.groupId = model.groupId;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.ip = model.ip;
+                this.region = model.region;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * <p>The ID of the server group.</p>
              * 
@@ -372,6 +399,15 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             private String configName; 
             private java.util.List<Items> items; 
             private String moduleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModuleConfigList model) {
+                this.configName = model.configName;
+                this.items = model.items;
+                this.moduleName = model.moduleName;
+            } 
 
             /**
              * <p>The name of the configuration.</p>

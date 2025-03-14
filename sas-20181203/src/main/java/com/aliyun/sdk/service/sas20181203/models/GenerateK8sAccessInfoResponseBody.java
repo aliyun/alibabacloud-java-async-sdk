@@ -36,6 +36,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GenerateK8sAccessInfoResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -206,6 +218,21 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             private Long expireDate; 
             private String groupId; 
             private String installKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliUid = model.aliUid;
+                this.auditLogStore = model.auditLogStore;
+                this.auditProject = model.auditProject;
+                this.auditRegionId = model.auditRegionId;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.expireDate = model.expireDate;
+                this.groupId = model.groupId;
+                this.installKey = model.installKey;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

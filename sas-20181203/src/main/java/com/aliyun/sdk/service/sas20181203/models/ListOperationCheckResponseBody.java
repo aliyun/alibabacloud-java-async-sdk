@@ -36,6 +36,10 @@ public class ListOperationCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationTaskInstanceDetails
      */
@@ -53,6 +57,14 @@ public class ListOperationCheckResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<OperationTaskInstanceDetails> operationTaskInstanceDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOperationCheckResponseBody model) {
+            this.operationTaskInstanceDetails = model.operationTaskInstanceDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Detailed information about the operation instances.</p>
@@ -158,6 +170,17 @@ public class ListOperationCheckResponseBody extends TeaModel {
             private String showName; 
             private String typeDefine; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RepairConfigs model) {
+                this.flowId = model.flowId;
+                this.name = model.name;
+                this.showName = model.showName;
+                this.typeDefine = model.typeDefine;
+                this.value = model.value;
+            } 
 
             /**
              * <p>ID of the repair process during the repair operation.</p>
@@ -301,6 +324,17 @@ public class ListOperationCheckResponseBody extends TeaModel {
             private String statusShowName; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Repair model) {
+                this.operateTime = model.operateTime;
+                this.repairConfigs = model.repairConfigs;
+                this.status = model.status;
+                this.statusShowName = model.statusShowName;
+                this.taskId = model.taskId;
+            } 
+
             /**
              * <p>Timestamp for processing the risk. Unit: milliseconds.</p>
              * 
@@ -439,6 +473,17 @@ public class ListOperationCheckResponseBody extends TeaModel {
             private String regionId; 
             private java.util.List<Repair> repair; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationTaskInstanceDetails model) {
+                this.checkId = model.checkId;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.repair = model.repair;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Check item ID.</p>

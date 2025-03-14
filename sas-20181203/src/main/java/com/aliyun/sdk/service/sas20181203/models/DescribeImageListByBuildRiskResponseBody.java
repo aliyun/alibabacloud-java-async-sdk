@@ -48,6 +48,10 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageListByBuildRiskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -304,6 +319,23 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             private String tag; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.digest = model.digest;
+                this.firstScanTime = model.firstScanTime;
+                this.instanceId = model.instanceId;
+                this.lastScanTime = model.lastScanTime;
+                this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.riskLevel = model.riskLevel;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.uuid = model.uuid;
+            } 
+
             /**
              * <p>The digest value of the image.</p>
              * 
@@ -498,6 +530,15 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The page number. Default value: <strong>1</strong>.</p>
              * 
@@ -584,6 +625,14 @@ public class DescribeImageListByBuildRiskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private PageInfo pageInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageInfo = model.pageInfo;
+            } 
 
             /**
              * <p>The images.</p>

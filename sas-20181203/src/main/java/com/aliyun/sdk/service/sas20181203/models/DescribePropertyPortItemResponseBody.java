@@ -40,6 +40,10 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<PropertyItems> propertyItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyPortItemResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.propertyItems = model.propertyItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -273,6 +296,15 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
             private Integer count; 
             private String port; 
             private String proto; 
+
+            private Builder() {
+            } 
+
+            private Builder(PropertyItems model) {
+                this.count = model.count;
+                this.port = model.port;
+                this.proto = model.proto;
+            } 
 
             /**
              * <p>The number of servers that use the port.</p>

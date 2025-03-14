@@ -40,6 +40,10 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return machineList
      */
@@ -65,6 +69,15 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         private java.util.List<MachineList> machineList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBruteForceRecordsResponseBody model) {
+            this.machineList = model.machineList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IP addresses.</p>
@@ -286,6 +299,26 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             private String source; 
             private Integer status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(MachineList model) {
+                this.aliNetOnline = model.aliNetOnline;
+                this.blockExpireDate = model.blockExpireDate;
+                this.blockIp = model.blockIp;
+                this.blockType = model.blockType;
+                this.errorCode = model.errorCode;
+                this.id = model.id;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.port = model.port;
+                this.ruleName = model.ruleName;
+                this.source = model.source;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The status of the host network extension. Valid values:</p>
@@ -532,6 +565,16 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

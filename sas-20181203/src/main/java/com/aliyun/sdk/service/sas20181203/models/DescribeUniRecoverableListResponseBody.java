@@ -56,6 +56,10 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -113,6 +117,19 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         private java.util.List<RecoverableInfoList> recoverableInfoList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUniRecoverableListResponseBody model) {
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.database = model.database;
+            this.pageSize = model.pageSize;
+            this.recoverableInfoList = model.recoverableInfoList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -273,6 +290,17 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
             private String resetScn; 
             private Long resetTime; 
             private String restoreInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecoverableInfoList model) {
+                this.firstTime = model.firstTime;
+                this.lastTime = model.lastTime;
+                this.resetScn = model.resetScn;
+                this.resetTime = model.resetTime;
+                this.restoreInfo = model.restoreInfo;
+            } 
 
             /**
              * <p>The timestamp of the first backup. Unit: milliseconds.</p>

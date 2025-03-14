@@ -48,6 +48,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return baseConfigs
      */
@@ -89,6 +93,17 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLoginBaseConfigsResponseBody model) {
+            this.baseConfigs = model.baseConfigs;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The description of the configuration.</p>
@@ -191,6 +206,14 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetList model) {
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The UUID or group ID of the server.</p>
@@ -353,6 +376,21 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             private java.util.List<TargetList> targetList; 
             private Integer totalCount; 
             private Integer uuidCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaseConfigs model) {
+                this.account = model.account;
+                this.endTime = model.endTime;
+                this.ip = model.ip;
+                this.location = model.location;
+                this.remark = model.remark;
+                this.startTime = model.startTime;
+                this.targetList = model.targetList;
+                this.totalCount = model.totalCount;
+                this.uuidCount = model.uuidCount;
+            } 
 
             /**
              * <p>The common logon account.</p>

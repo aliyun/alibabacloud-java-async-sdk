@@ -36,6 +36,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerGroupedFieldDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -302,6 +314,29 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             private String podIp; 
             private String regionId; 
             private Integer vulCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alarmCount = model.alarmCount;
+                this.appName = model.appName;
+                this.clusterCurrentVersion = model.clusterCurrentVersion;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterState = model.clusterState;
+                this.clusterType = model.clusterType;
+                this.containerCount = model.containerCount;
+                this.createTime = model.createTime;
+                this.instanceCount = model.instanceCount;
+                this.namespace = model.namespace;
+                this.nodeName = model.nodeName;
+                this.pod = model.pod;
+                this.podCount = model.podCount;
+                this.podIp = model.podIp;
+                this.regionId = model.regionId;
+                this.vulCount = model.vulCount;
+            } 
 
             /**
              * <p>The number of alerts.</p>

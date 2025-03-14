@@ -36,6 +36,10 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserDefineRuleAddResult userDefineRuleAddResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddClientUserDefineRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.userDefineRuleAddResult = model.userDefineRuleAddResult;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -134,6 +146,15 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
             private Long id; 
             private String platform; 
             private String switchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserDefineRuleAddResult model) {
+                this.id = model.id;
+                this.platform = model.platform;
+                this.switchId = model.switchId;
+            } 
 
             /**
              * <p>The ID of the rule.</p>

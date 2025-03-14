@@ -40,6 +40,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private java.util.List<Policies> policies; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPoliciesResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -465,6 +488,31 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private String status; 
             private String upgradeStatus; 
             private java.util.List<String> uuidList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.clientErrorCount = model.clientErrorCount;
+                this.clientErrorUuidList = model.clientErrorUuidList;
+                this.clientStatus = model.clientStatus;
+                this.healthClientCount = model.healthClientCount;
+                this.healthClientUuidList = model.healthClientUuidList;
+                this.id = model.id;
+                this.lastStatusSyncTime = model.lastStatusSyncTime;
+                this.name = model.name;
+                this.policy = model.policy;
+                this.policyRegionId = model.policyRegionId;
+                this.policyVersion = model.policyVersion;
+                this.preStatus = model.preStatus;
+                this.remarkedUuidList = model.remarkedUuidList;
+                this.serverType = model.serverType;
+                this.serviceErrorCount = model.serviceErrorCount;
+                this.serviceErrorUuidList = model.serviceErrorUuidList;
+                this.status = model.status;
+                this.upgradeStatus = model.upgradeStatus;
+                this.uuidList = model.uuidList;
+            } 
 
             /**
              * <p>The number of the servers on which the anti-ransomware agent is in an abnormal state.</p>

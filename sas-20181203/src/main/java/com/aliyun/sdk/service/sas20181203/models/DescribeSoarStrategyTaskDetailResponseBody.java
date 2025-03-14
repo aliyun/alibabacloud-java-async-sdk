@@ -36,6 +36,10 @@ public class DescribeSoarStrategyTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSoarStrategyTaskDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TaskDetail taskDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSoarStrategyTaskDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskDetail = model.taskDetail;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class DescribeSoarStrategyTaskDetailResponseBody extends TeaModel {
             private String params; 
             private String processInfo; 
             private String taskName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskDetail model) {
+                this.logInfo = model.logInfo;
+                this.params = model.params;
+                this.processInfo = model.processInfo;
+                this.taskName = model.taskName;
+            } 
 
             /**
              * <p>The operational log information of the task.</p>

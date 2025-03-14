@@ -56,6 +56,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadUrl
      */
@@ -113,6 +117,19 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         private String requestId; 
         private String tag; 
         private String uuid; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeQuaraFileDownloadInfoResponseBody model) {
+            this.downloadUrl = model.downloadUrl;
+            this.md5 = model.md5;
+            this.path = model.path;
+            this.quaraFileId = model.quaraFileId;
+            this.requestId = model.requestId;
+            this.tag = model.tag;
+            this.uuid = model.uuid;
+        } 
 
         /**
          * <p>The URL that is used to download the file. The URL is valid for five minutes.</p>

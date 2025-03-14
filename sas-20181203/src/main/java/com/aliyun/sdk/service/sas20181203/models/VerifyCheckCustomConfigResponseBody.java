@@ -40,6 +40,10 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCheckConfigs
      */
@@ -65,6 +69,15 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
         private java.util.List<ErrorCheckConfigs> errorCheckConfigs; 
         private java.util.List<ErrorRepairConfigs> errorRepairConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyCheckCustomConfigResponseBody model) {
+            this.errorCheckConfigs = model.errorCheckConfigs;
+            this.errorRepairConfigs = model.errorRepairConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>List of check parameters with configuration errors.</p>
@@ -154,6 +167,15 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
             private String showName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(LinkErrorConfigs model) {
+                this.name = model.name;
+                this.showName = model.showName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Name of the check item configuration, unique within the same check item.</p>
@@ -291,6 +313,18 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ErrorCheckConfigs model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.linkErrorConfigs = model.linkErrorConfigs;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Error code.</p>
              * 
@@ -419,6 +453,15 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
             private String showName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorRepairConfigsLinkErrorConfigs model) {
+                this.name = model.name;
+                this.showName = model.showName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Name of the check item&quot;s configuration, unique within the same check item.</p>
@@ -555,6 +598,18 @@ public class VerifyCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorRepairConfigs model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.linkErrorConfigs = model.linkErrorConfigs;
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Error code.</p>

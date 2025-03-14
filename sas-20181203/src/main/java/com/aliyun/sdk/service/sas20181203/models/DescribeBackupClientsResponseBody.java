@@ -36,6 +36,10 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clients
      */
@@ -53,6 +57,14 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Clients> clients; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupClientsResponseBody model) {
+            this.clients = model.clients;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about the anti-ransomware agent.</p>
@@ -158,6 +170,17 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private String clientVersion; 
             private String instanceId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.clientId = model.clientId;
+                this.clientStatus = model.clientStatus;
+                this.clientVersion = model.clientVersion;
+                this.instanceId = model.instanceId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The ID of the anti-ransomware agent.</p>

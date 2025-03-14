@@ -52,6 +52,10 @@ public class QueryAttackCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class QueryAttackCountResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryAttackCountResponseBody model) {
+            this.code = model.code;
+            this.count = model.count;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -230,6 +246,15 @@ public class QueryAttackCountResponseBody extends TeaModel {
             private Integer eventCount; 
             private String tacticId; 
             private String tacticType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventCount = model.eventCount;
+                this.tacticId = model.tacticId;
+                this.tacticType = model.tacticType;
+            } 
 
             /**
              * <p>The number of times that the alert is triggered.</p>

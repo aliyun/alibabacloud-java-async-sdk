@@ -76,6 +76,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autorun
      */
@@ -173,6 +177,24 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         private Integer user; 
         private Integer web; 
         private Integer webserver; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePropertyCountResponseBody model) {
+            this.autorun = model.autorun;
+            this.cron = model.cron;
+            this.database = model.database;
+            this.lkm = model.lkm;
+            this.port = model.port;
+            this.process = model.process;
+            this.requestId = model.requestId;
+            this.sca = model.sca;
+            this.software = model.software;
+            this.user = model.user;
+            this.web = model.web;
+            this.webserver = model.webserver;
+        } 
 
         /**
          * <p>The number of startup items.</p>

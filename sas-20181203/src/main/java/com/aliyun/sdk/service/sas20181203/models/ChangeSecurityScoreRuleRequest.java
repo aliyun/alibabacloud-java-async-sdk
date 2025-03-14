@@ -39,7 +39,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -160,6 +160,15 @@ public class ChangeSecurityScoreRuleRequest extends Request {
             private Integer score; 
             private Integer scoreThreshold; 
             private String subRuleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityScoreItemList model) {
+                this.score = model.score;
+                this.scoreThreshold = model.scoreThreshold;
+                this.subRuleType = model.subRuleType;
+            } 
 
             /**
              * <p>The penalty point of the deduction item.</p>
@@ -306,6 +315,15 @@ public class ChangeSecurityScoreRuleRequest extends Request {
             private String ruleType; 
             private Integer score; 
             private java.util.List<SecurityScoreItemList> securityScoreItemList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityScoreRuleList model) {
+                this.ruleType = model.ruleType;
+                this.score = model.score;
+                this.securityScoreItemList = model.securityScoreItemList;
+            } 
 
             /**
              * <p>The deduction module that is supported by the security score feature. Valid values:</p>

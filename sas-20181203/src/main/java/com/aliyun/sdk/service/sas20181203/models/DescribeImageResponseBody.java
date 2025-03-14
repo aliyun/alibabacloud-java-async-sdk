@@ -36,6 +36,10 @@ public class DescribeImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeImageResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the image digest.</p>
@@ -110,6 +122,13 @@ public class DescribeImageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String digest; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.digest = model.digest;
+            } 
 
             /**
              * <p>The digest value of the image.</p>

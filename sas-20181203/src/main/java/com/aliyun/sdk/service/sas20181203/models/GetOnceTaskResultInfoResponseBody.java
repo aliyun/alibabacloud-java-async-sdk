@@ -52,6 +52,10 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectTime
      */
@@ -101,6 +105,18 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
         private Long taskId; 
         private TaskInfo taskInfo; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOnceTaskResultInfoResponseBody model) {
+            this.collectTime = model.collectTime;
+            this.finishCount = model.finishCount;
+            this.requestId = model.requestId;
+            this.taskId = model.taskId;
+            this.taskInfo = model.taskInfo;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The execution time of the task.</p>
@@ -202,6 +218,13 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.status = model.status;
+            } 
 
             /**
              * <p>The status of the task. Valid values:</p>

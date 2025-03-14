@@ -60,6 +60,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return downloadUrl
      */
@@ -125,6 +129,20 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         private Long reportId; 
         private String requestId; 
         private Long urlExpiredTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExportCustomizeReportResponseBody model) {
+            this.downloadUrl = model.downloadUrl;
+            this.exportDate = model.exportDate;
+            this.exportId = model.exportId;
+            this.exportStatus = model.exportStatus;
+            this.fileName = model.fileName;
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+            this.urlExpiredTime = model.urlExpiredTime;
+        } 
 
         /**
          * <p>The download URL of the security report.</p>

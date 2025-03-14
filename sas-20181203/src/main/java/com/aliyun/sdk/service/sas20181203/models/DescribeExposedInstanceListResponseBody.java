@@ -40,6 +40,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exposedInstances
      */
@@ -65,6 +69,15 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         private java.util.List<ExposedInstances> exposedInstances; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExposedInstanceListResponseBody model) {
+            this.exposedInstances = model.exposedInstances;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the exposures.</p>
@@ -370,6 +383,33 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private String regionId; 
             private Integer totalVulCount; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExposedInstances model) {
+                this.asapVulCount = model.asapVulCount;
+                this.assetType = model.assetType;
+                this.cloudAssetInfo = model.cloudAssetInfo;
+                this.cspmAlarmCount = model.cspmAlarmCount;
+                this.exploitHealthCount = model.exploitHealthCount;
+                this.exposureComponent = model.exposureComponent;
+                this.exposureIp = model.exposureIp;
+                this.exposurePort = model.exposurePort;
+                this.exposureType = model.exposureType;
+                this.exposureTypeId = model.exposureTypeId;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.laterVulCount = model.laterVulCount;
+                this.nntfVulCount = model.nntfVulCount;
+                this.regionId = model.regionId;
+                this.totalVulCount = model.totalVulCount;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The number of high-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
@@ -710,6 +750,16 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

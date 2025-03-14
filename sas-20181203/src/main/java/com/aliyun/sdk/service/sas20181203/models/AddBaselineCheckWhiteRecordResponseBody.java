@@ -36,6 +36,10 @@ public class AddBaselineCheckWhiteRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class AddBaselineCheckWhiteRecordResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddBaselineCheckWhiteRecordResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -182,6 +194,19 @@ public class AddBaselineCheckWhiteRecordResponseBody extends TeaModel {
             private String source; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.checkId = model.checkId;
+                this.lang = model.lang;
+                this.reason = model.reason;
+                this.recordId = model.recordId;
+                this.source = model.source;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The ID of the check item.</p>

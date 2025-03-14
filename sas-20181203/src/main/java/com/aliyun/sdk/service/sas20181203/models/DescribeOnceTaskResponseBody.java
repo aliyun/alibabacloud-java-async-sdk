@@ -40,6 +40,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<TaskManageResponseList> taskManageResponseList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOnceTaskResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.taskManageResponseList = model.taskManageResponseList;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>
@@ -381,6 +404,24 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             private Integer taskStatus; 
             private String taskStatusText; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskManageResponseList model) {
+                this.detailData = model.detailData;
+                this.failCount = model.failCount;
+                this.progress = model.progress;
+                this.resultInfo = model.resultInfo;
+                this.successCount = model.successCount;
+                this.taskEndTime = model.taskEndTime;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskStartTime = model.taskStartTime;
+                this.taskStatus = model.taskStatus;
+                this.taskStatusText = model.taskStatusText;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The execution details of the task. The value of this parameter is in the JSON format.</p>

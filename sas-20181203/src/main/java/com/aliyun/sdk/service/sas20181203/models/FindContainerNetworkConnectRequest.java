@@ -64,7 +64,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -327,6 +327,18 @@ public class FindContainerNetworkConnectRequest extends Request {
             private String nodeType; 
             private String podName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DstNode model) {
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
+                this.namespace = model.namespace;
+                this.nodeIds = model.nodeIds;
+                this.nodeType = model.nodeType;
+                this.podName = model.podName;
+            } 
+
             /**
              * <p>The name of the container application.</p>
              * 
@@ -494,6 +506,18 @@ public class FindContainerNetworkConnectRequest extends Request {
             private java.util.List<String> nodeIds; 
             private String nodeType; 
             private String podName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SrcNode model) {
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
+                this.namespace = model.namespace;
+                this.nodeIds = model.nodeIds;
+                this.nodeType = model.nodeType;
+                this.podName = model.podName;
+            } 
 
             /**
              * <p>The name of the container application.</p>

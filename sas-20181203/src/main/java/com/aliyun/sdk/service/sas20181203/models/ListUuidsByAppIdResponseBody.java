@@ -40,6 +40,10 @@ public class ListUuidsByAppIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListUuidsByAppIdResponseBody extends TeaModel {
         private Integer count; 
         private String requestId; 
         private java.util.List<String> uuids; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUuidsByAppIdResponseBody model) {
+            this.count = model.count;
+            this.requestId = model.requestId;
+            this.uuids = model.uuids;
+        } 
 
         /**
          * <p>Total number of data entries.</p>

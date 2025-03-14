@@ -40,6 +40,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -65,6 +69,15 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List<TaskRecords> taskRecords; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSyncAssetTaskListResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+            this.taskRecords = model.taskRecords;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -166,6 +179,16 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of IDC scan tasks on the current page.</p>
@@ -345,6 +368,21 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             private Long taskStartTime; 
             private String taskStatus; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskRecords model) {
+                this.assetCount = model.assetCount;
+                this.ipSegments = model.ipSegments;
+                this.processRate = model.processRate;
+                this.rootTaskId = model.rootTaskId;
+                this.taskEndTime = model.taskEndTime;
+                this.taskName = model.taskName;
+                this.taskStartTime = model.taskStartTime;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The number of assets that are detected by the task.</p>

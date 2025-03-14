@@ -36,6 +36,10 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<StrategyTargets> strategyTargets; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStrategyTargetResponseBody model) {
+            this.requestId = model.requestId;
+            this.strategyTargets = model.strategyTargets;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -146,6 +158,16 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             private String flag; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StrategyTargets model) {
+                this.bindUuidCount = model.bindUuidCount;
+                this.flag = model.flag;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The number of the assets that belong to the asset group.</p>

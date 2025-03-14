@@ -44,6 +44,10 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return noSslCount
      */
@@ -77,6 +81,16 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         private String requestId; 
         private Integer riskCount; 
         private java.util.List<RiskList> riskList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainSecureRiskListResponseBody model) {
+            this.noSslCount = model.noSslCount;
+            this.requestId = model.requestId;
+            this.riskCount = model.riskCount;
+            this.riskList = model.riskList;
+        } 
 
         /**
          * <p>The number of the websites for which no certificates are installed.</p>
@@ -216,6 +230,18 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
             private Integer sslStatus; 
             private java.util.List<String> uuidList; 
             private Integer vulCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskList model) {
+                this.alarmCount = model.alarmCount;
+                this.domain = model.domain;
+                this.sslBrand = model.sslBrand;
+                this.sslStatus = model.sslStatus;
+                this.uuidList = model.uuidList;
+                this.vulCount = model.vulCount;
+            } 
 
             /**
              * <p>The number of alerts.</p>

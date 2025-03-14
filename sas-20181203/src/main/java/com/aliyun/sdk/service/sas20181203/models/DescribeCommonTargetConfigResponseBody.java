@@ -36,6 +36,10 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TargetList> targetList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommonTargetConfigResponseBody model) {
+            this.requestId = model.requestId;
+            this.targetList = model.targetList;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -134,6 +146,15 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
             private String flag; 
             private String target; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetList model) {
+                this.flag = model.flag;
+                this.target = model.target;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The mode in which the configuration takes effect. Valid values:</p>

@@ -44,7 +44,7 @@ public class VerifyCheckCustomConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,6 +179,15 @@ public class VerifyCheckCustomConfigRequest extends Request {
             private String operation; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomConfigs model) {
+                this.name = model.name;
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Name of the custom configuration item for the check item, unique within the same check item.</p>
              * 
@@ -286,6 +295,16 @@ public class VerifyCheckCustomConfigRequest extends Request {
             private String name; 
             private String operation; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RepairConfigs model) {
+                this.flowId = model.flowId;
+                this.name = model.name;
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
 
             /**
              * <p>ID of the repair process during the repair.</p>

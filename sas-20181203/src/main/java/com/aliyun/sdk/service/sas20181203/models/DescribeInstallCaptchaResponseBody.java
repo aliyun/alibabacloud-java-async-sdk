@@ -40,6 +40,10 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return captchaCode
      */
@@ -65,6 +69,15 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         private String captchaCode; 
         private String deadline; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstallCaptchaResponseBody model) {
+            this.captchaCode = model.captchaCode;
+            this.deadline = model.deadline;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The installation verification code for you to manually install the Security Center agent.</p>

@@ -40,6 +40,10 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMatchedMaliciousNamesResponseBody model) {
+            this.count = model.count;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of entries on the current page.</p>
@@ -145,6 +158,14 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         public static final class Builder {
             private String displayName; 
             private String key; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.displayName = model.displayName;
+                this.key = model.key;
+            } 
 
             /**
              * <p>The display name of the malicious image sample type.</p>

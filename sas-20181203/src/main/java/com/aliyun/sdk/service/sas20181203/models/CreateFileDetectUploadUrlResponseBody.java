@@ -36,6 +36,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<UploadUrlList> uploadUrlList; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFileDetectUploadUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.uploadUrlList = model.uploadUrlList;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -146,6 +158,16 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             private String ossKey; 
             private String policy; 
             private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Context model) {
+                this.accessId = model.accessId;
+                this.ossKey = model.ossKey;
+                this.policy = model.policy;
+                this.signature = model.signature;
+            } 
 
             /**
              * <p>The AccessKey ID that is used to access the OSS bucket.</p>
@@ -313,6 +335,20 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             private String internalUrl; 
             private String message; 
             private String publicUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadUrlList model) {
+                this.code = model.code;
+                this.context = model.context;
+                this.expire = model.expire;
+                this.fileExist = model.fileExist;
+                this.hashKey = model.hashKey;
+                this.internalUrl = model.internalUrl;
+                this.message = model.message;
+                this.publicUrl = model.publicUrl;
+            } 
 
             /**
              * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>

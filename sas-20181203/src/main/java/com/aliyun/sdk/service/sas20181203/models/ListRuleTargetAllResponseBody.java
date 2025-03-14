@@ -36,6 +36,10 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<RuleTargetList> ruleTargetList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRuleTargetAllResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleTargetList = model.ruleTargetList;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -134,6 +146,15 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             private Long targetId; 
             private String targetName; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleTargetList model) {
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The ID of the network object.</p>

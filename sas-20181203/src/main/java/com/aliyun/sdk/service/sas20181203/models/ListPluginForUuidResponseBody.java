@@ -44,6 +44,10 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aegisUuidTargetPluginConfigList
      */
@@ -77,6 +81,16 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPluginForUuidResponseBody model) {
+            this.aegisUuidTargetPluginConfigList = model.aegisUuidTargetPluginConfigList;
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about the plug-ins.</p>
@@ -192,6 +206,16 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             private String msg; 
             private Boolean overallConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AegisSuspiciousConfigList model) {
+                this.config = model.config;
+                this.msg = model.msg;
+                this.overallConfig = model.overallConfig;
+                this.type = model.type;
+            } 
 
             /**
              * <p>Indicates whether the plug-in is enabled. Valid values:</p>
@@ -354,6 +378,18 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             private Boolean pluginOnlineInstalled; 
             private Boolean pluginOnlineStatus; 
             private String pluginVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(AegisUuidTargetPluginConfigList model) {
+                this.aegisSuspiciousConfigList = model.aegisSuspiciousConfigList;
+                this.pluginInstallCode = model.pluginInstallCode;
+                this.pluginName = model.pluginName;
+                this.pluginOnlineInstalled = model.pluginOnlineInstalled;
+                this.pluginOnlineStatus = model.pluginOnlineStatus;
+                this.pluginVersion = model.pluginVersion;
+            } 
 
             /**
              * <p>An array that consists of the configurations of plug-ins.</p>

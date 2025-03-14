@@ -40,6 +40,10 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configList
      */
@@ -65,6 +69,15 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
         private java.util.List<ConfigList> configList; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebLockConfigListResponseBody model) {
+            this.configList = model.configList;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The configurations of web tamper proofing.</p>
@@ -253,6 +266,23 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             private String localBackupDir; 
             private String mode; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigList model) {
+                this.defenceMode = model.defenceMode;
+                this.dir = model.dir;
+                this.exclusiveDir = model.exclusiveDir;
+                this.exclusiveFile = model.exclusiveFile;
+                this.exclusiveFileType = model.exclusiveFileType;
+                this.id = model.id;
+                this.inclusiveFile = model.inclusiveFile;
+                this.inclusiveFileType = model.inclusiveFileType;
+                this.localBackupDir = model.localBackupDir;
+                this.mode = model.mode;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The prevention mode. Valid values:</p>

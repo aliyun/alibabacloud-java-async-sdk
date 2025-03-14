@@ -40,6 +40,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containerWebDefenseRuleList
      */
@@ -65,6 +69,15 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         private java.util.List<ContainerWebDefenseRuleList> containerWebDefenseRuleList; 
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSasContainerWebDefenseRuleResponseBody model) {
+            this.containerWebDefenseRuleList = model.containerWebDefenseRuleList;
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The rules for container tamper-proofing.</p>
@@ -238,6 +251,22 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private String includeFile; 
             private String includeFileType; 
             private java.util.List<String> processPathList; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathConfDTOList model) {
+                this.backupPath = model.backupPath;
+                this.defenseMode = model.defenseMode;
+                this.defensePath = model.defensePath;
+                this.excludeFile = model.excludeFile;
+                this.excludeFilePath = model.excludeFilePath;
+                this.excludeFileType = model.excludeFileType;
+                this.guardType = model.guardType;
+                this.includeFile = model.includeFile;
+                this.includeFileType = model.includeFileType;
+                this.processPathList = model.processPathList;
+            } 
 
             /**
              * <p>The backup paths.</p>
@@ -477,6 +506,20 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private String ruleName; 
             private Integer ruleStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerWebDefenseRuleList model) {
+                this.aliUid = model.aliUid;
+                this.apptotalCount = model.apptotalCount;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.pathConfDTOList = model.pathConfDTOList;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+            } 
+
             /**
              * <p>The user ID.</p>
              * 
@@ -640,6 +683,16 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.count = model.count;
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The number of entries returned on the current page.</p>

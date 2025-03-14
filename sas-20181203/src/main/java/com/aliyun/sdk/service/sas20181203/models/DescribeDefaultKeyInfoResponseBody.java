@@ -40,6 +40,10 @@ public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainList
      */
@@ -65,6 +69,15 @@ public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
         private java.util.List<String> domainList; 
         private String names; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDefaultKeyInfoResponseBody model) {
+            this.domainList = model.domainList;
+            this.names = model.names;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The domain names.</p>

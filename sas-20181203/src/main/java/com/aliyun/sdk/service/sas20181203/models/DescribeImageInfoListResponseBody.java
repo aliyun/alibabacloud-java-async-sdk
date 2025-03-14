@@ -36,6 +36,10 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageInfos
      */
@@ -53,6 +57,14 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ImageInfos> imageInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageInfoListResponseBody model) {
+            this.imageInfos = model.imageInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array that consists of the information about images.</p>
@@ -362,6 +374,34 @@ public class DescribeImageInfoListResponseBody extends TeaModel {
             private String uuid; 
             private Integer vulCount; 
             private String vulStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageInfos model) {
+                this.alarmCount = model.alarmCount;
+                this.alarmStatus = model.alarmStatus;
+                this.digest = model.digest;
+                this.endpoints = model.endpoints;
+                this.imageCreate = model.imageCreate;
+                this.imageId = model.imageId;
+                this.imageSize = model.imageSize;
+                this.imageUpdate = model.imageUpdate;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+                this.registryType = model.registryType;
+                this.repoId = model.repoId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
+                this.repoType = model.repoType;
+                this.riskStatus = model.riskStatus;
+                this.status = model.status;
+                this.tag = model.tag;
+                this.tagImmutable = model.tagImmutable;
+                this.uuid = model.uuid;
+                this.vulCount = model.vulCount;
+                this.vulStatus = model.vulStatus;
+            } 
 
             /**
              * <p>The number of alerts that are generated on the current pod, application, namespace, or cluster.</p>
